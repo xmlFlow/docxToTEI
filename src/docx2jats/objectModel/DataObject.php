@@ -1,0 +1,112 @@
+<?php namespace docx2jats\objectModel;
+
+
+
+use docx2jats\objectModel\Document;
+use docx2jats\objectModel\body\Text;
+use docx2jats\objectModel\body\Par;
+
+abstract class DataObject {
+
+	private $domElement;
+	private $xpath;
+
+
+	private $flatSectionId;
+
+
+	private $dimensionalSectionId = array();
+
+	public function __construct(\DOMElement $domElement)   {
+		$this->domElement = $domElement;
+		$this->xpath = Document::$xpath;
+	}
+
+	protected function getXpath(): \DOMXPath {
+		return $this->xpath;
+	}
+
+	protected function setProperties(string $xpathExpression): array {
+		$styleNodes = $this->getXpath()->evaluate($xpathExpression, $this->domElement);
+		$properties = $this->extractPropertyRecursion($styleNodes);
+
+		return $properties;
+	}
+
+
+	protected function getDomElement(): \DOMElement {
+		return $this->domElement;
+	}
+
+
+	protected function isOnlyChildNode(\DOMNodeList $domNodeList): bool {
+		if ($domNodeList->count() === 1) {
+			return true;
+		}
+		return false;
+	}
+
+
+	private function extractPropertyRecursion($styleNodes): array
+	{
+		$properties = array();
+		foreach ($styleNodes as $styleNode) {
+			if ($styleNode->hasAttributes()) {
+				foreach ($styleNode->attributes as $attr) {
+					$properties[$styleNode->nodeName][$attr->nodeName] = $attr->nodeValue;
+				}
+			} elseif  ($styleNode->hasChildNodes()) {
+				$children = $this->getXpath()->query('child::node()', $styleNode);
+				$rPr = $this->extractPropertyRecursion($children);
+				$properties[$styleNode->nodeName] = $rPr;
+			}
+		}
+		return $properties;
+	}
+
+
+	protected function setParagraphs(): array {
+		$content = array();
+
+		$parNodes = $this->getXpath()->query('w:p', $this->getDomElement());
+		foreach ($parNodes as $parNode) {
+			$par = new Par($parNode);
+			$content[] = $par;
+		}
+
+		return $content;
+	}
+
+
+	public function setFlatSectionId($flatSectionId): void {
+		$this->flatSectionId = intval($flatSectionId);
+	}
+
+
+	public function getFlatSectionId(): int {
+		return $this->flatSectionId;
+	}
+
+
+	public function setDimensionalSectionId(array $dimensionalSectionId): void {
+		$this->dimensionalSectionId = array_filter($dimensionalSectionId);
+	}
+
+
+	public function getDimensionalSectionId(): array {
+		return $this->dimensionalSectionId;
+	}
+
+
+	public function getFirstElementByXpath(string $xpath, \DOMElement $parentElement = null): ?\DOMElement {
+		$element = null;
+
+		if ($parentElement) {
+			$element = $this->getXpath()->query($xpath, $parentElement)[0];
+		} else {
+			$element = $this->getXpath()->query($xpath)[0];
+		}
+
+		return $element;
+	}
+}
