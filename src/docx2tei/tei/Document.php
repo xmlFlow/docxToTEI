@@ -22,7 +22,7 @@ class Document extends \DOMDocument {
 	var $teiHeader;
 
 
-	var $body;
+	var $text;
 
 
 	var $back;
@@ -71,11 +71,10 @@ class Document extends \DOMDocument {
 		$this->teiHeader = $this->createElement('teiHeader');
 		$this->tei->appendChild($this->teiHeader);
 
-		$this->body = $this->createElement('body');
-		$this->tei->appendChild($this->body);
+		$this->text = $this->createElement('text');
+		$this->tei->appendChild($this->text);
 
-		$this->back = $this->createElement('back');
-		$this->tei->appendChild($this->back);
+
 	}
 
 	private function extractContent() {
@@ -97,7 +96,7 @@ class Document extends \DOMDocument {
 					$sectionNode->setAttribute('id', $contentId);
 					$this->sections[$contentId] = $sectionNode;
 					if (count($content->getDimensionalSectionId()) === 1) {
-						$this->body->appendChild($sectionNode);
+						$this->text->appendChild($sectionNode);
 						$latestSections[0] = $sectionNode;
 					} elseif (count($content->getDimensionalSectionId()) === 2) {
 						$latestSections[0]->appendChild($sectionNode);
@@ -117,7 +116,7 @@ class Document extends \DOMDocument {
 
 				// If there aren't any sections, append content to the body
 				if (empty($this->sections)) {
-					$sectionsOrBody = array($this->body);
+					$sectionsOrBody = array($this->text);
 				} else {
 					$sectionsOrBody = $this->sections;
 				}
