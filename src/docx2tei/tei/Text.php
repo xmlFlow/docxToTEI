@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\objectModel\body\Text as ObjectText;
+use docx2tei\objectModel\DataObject;
+use docx2tei\objectModel\body\Text as ObjectText;
 
 class Text {
 

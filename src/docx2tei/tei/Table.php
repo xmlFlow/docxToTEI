@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\jats\Row as JatsRow;
+use docx2tei\objectModel\DataObject;
+use docx2tei\tei\Row as JatsRow;
 
 class Table extends Element {
 

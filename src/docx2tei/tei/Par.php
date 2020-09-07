@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\jats\Text as JatsText;
+use docx2tei\objectModel\DataObject;
+use docx2tei\tei\Text as JatsText;
 
 class Par extends Element {
 

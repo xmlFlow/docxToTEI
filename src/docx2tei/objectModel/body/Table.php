@@ -1,9 +1,9 @@
-<?php namespace docx2jats\objectModel\body;
+<?php namespace docx2tei\objectModel\body;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\objectModel\body\Row;
+use docx2tei\objectModel\DataObject;
+use docx2tei\objectModel\body\Row;
 
 class Table extends DataObject {
 

@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\jats\Cell as JatsCell;
+use docx2tei\objectModel\DataObject;
+use docx2tei\tei\Cell as JatsCell;
 
 class Row extends Element {
 	public function __construct(DataObject $dataObject) {

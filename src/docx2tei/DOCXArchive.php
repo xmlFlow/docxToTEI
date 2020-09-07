@@ -1,8 +1,8 @@
-<?php namespace docx2jats;
+<?php namespace docx2tei;
 
 
 
-use docx2jats\objectModel\Document;
+use docx2tei\objectModel\Document;
 
 class DOCXArchive extends \ZipArchive {
 

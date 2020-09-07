@@ -4,8 +4,8 @@
 
 require_once (__DIR__ . "/vendor/autoload.php");
 
-use docx2jats\DOCXArchive;
-use docx2jats\jats\Document;
+use docx2tei\DOCXArchive;
+use docx2tei\tei\Document;
 
 $inputPath = null;
 $outputPath = null;

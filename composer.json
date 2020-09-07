@@ -1,12 +1,11 @@
 {
-    "name": "doc/docx2jats",
+    "name": "doc/docx2tei",
     "description": "DOCX to JATS XML converter",
     "type": "library",
-    "license": "GPLv3",
     "authors": [
         {
-            "name": "Vitaliy Bezsheiko",
-            "email": "vitaliybezsh@gmail.com"
+            "name": "Dulip Withanage",
+            "email": "dulip.withanage@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -17,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "docx2jats\\": "src/docx2jats"
+            "docx2tei\\": "src/docx2tei"
         }
     }
 }

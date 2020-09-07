@@ -1,10 +1,10 @@
-<?php namespace docx2jats\objectModel;
+<?php namespace docx2tei\objectModel;
 
 
 
-use docx2jats\objectModel\Document;
-use docx2jats\objectModel\body\Text;
-use docx2jats\objectModel\body\Par;
+use docx2tei\objectModel\Document;
+use docx2tei\objectModel\body\Text;
+use docx2tei\objectModel\body\Par;
 
 abstract class DataObject {
 

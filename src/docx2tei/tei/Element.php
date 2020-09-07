@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\objectModel\body\Par;
+use docx2tei\objectModel\DataObject;
+use docx2tei\objectModel\body\Par;
 
 abstract class Element extends \DOMElement {
 
@@ -16,7 +16,7 @@ abstract class Element extends \DOMElement {
 		// Determing element name
 		$name = '';
 		switch (get_class($dataObject)) {
-			case "docx2jats\objectModel\body\Par":
+			case "docx2tei\objectModel\body\Par":
 
 
 				$types = $dataObject->getType();
@@ -26,16 +26,16 @@ abstract class Element extends \DOMElement {
 					$name = "p";
 				}
 				break;
-			case "docx2jats\objectModel\body\Table":
+			case "docx2tei\objectModel\body\Table":
 				$name = 'table-wrap';
 				break;
-			case "docx2jats\objectModel\body\Row":
+			case "docx2tei\objectModel\body\Row":
 				$name = 'tr';
 				break;
-			case "docx2jats\objectModel\body\Cell":
+			case "docx2tei\objectModel\body\Cell":
 				$name = 'td';
 				break;
-			case "docx2jats\objectModel\body\Image":
+			case "docx2tei\objectModel\body\Image":
 				$name = 'fig';
 		}
 

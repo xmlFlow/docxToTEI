@@ -1,8 +1,8 @@
-<?php namespace docx2jats\objectModel\body;
+<?php namespace docx2tei\objectModel\body;
 
 
 
-use docx2jats\objectModel\DataObject;
+use docx2tei\objectModel\DataObject;
 
 class Cell extends DataObject {
 

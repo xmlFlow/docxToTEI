@@ -1,15 +1,15 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\DOCXArchive;
-use docx2jats\jats\Par as JatsPar;
-use docx2jats\objectModel\body\Par;
-use docx2jats\jats\Table as JatsTable;
-use docx2jats\jats\Figure as JatsFigure;
-use docx2jats\objectModel\body\Table;
-use docx2jats\objectModel\DataObject;
-use docx2jats\objectModel\Document as DOCXDocument;
+use docx2tei\DOCXArchive;
+use docx2tei\tei\Par as JatsPar;
+use docx2tei\objectModel\body\Par;
+use docx2tei\tei\Table as JatsTable;
+use docx2tei\tei\Figure as JatsFigure;
+use docx2tei\objectModel\body\Table;
+use docx2tei\objectModel\DataObject;
+use docx2tei\objectModel\Document as DOCXDocument;
 
 class Document extends \DOMDocument {
 
@@ -41,7 +41,7 @@ class Document extends \DOMDocument {
 
 		// Doctype
 		$impl = new \DOMImplementation();
-		$this->appendChild($impl->createDocumentType("article", "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN", "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"));
+		$this->appendChild($impl->createDocumentType("article", "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN", "https://tei.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"));
 
 		$this->setBasicStructure();
 		$this->extractContent();
@@ -119,7 +119,7 @@ class Document extends \DOMDocument {
 
 				switch (get_class($content)) {
 
-					case "docx2jats\objectModel\body\Par":
+					case "docx2tei\objectModel\body\Par":
 
 						$jatsPar = new JatsPar($content);
 
@@ -179,7 +179,7 @@ class Document extends \DOMDocument {
 							}
 						}
 						break;
-					case "docx2jats\objectModel\body\Table":
+					case "docx2tei\objectModel\body\Table":
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
 								$table = new JatsTable($content);
@@ -189,7 +189,7 @@ class Document extends \DOMDocument {
 							}
 						}
 						break;
-					case "docx2jats\objectModel\body\Image":
+					case "docx2tei\objectModel\body\Image":
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
 								$figure = new JatsFigure($content);

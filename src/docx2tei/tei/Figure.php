@@ -1,9 +1,9 @@
-<?php namespace docx2jats\jats;
+<?php namespace docx2tei\tei;
 
 
 
-use docx2jats\objectModel\DataObject;
-use docx2jats\objectModel\body\Image as FigureObject;
+use docx2tei\objectModel\DataObject;
+use docx2tei\objectModel\body\Image as FigureObject;
 
 class Figure extends Element {
 
