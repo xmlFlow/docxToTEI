@@ -16,7 +16,7 @@ class Document extends \DOMDocument {
 	private $docxArchive;
 
 
-	var $article;
+	var $tei;
 
 
 	var $front;
@@ -54,23 +54,28 @@ class Document extends \DOMDocument {
 	}
 
 	private function setBasicStructure() {
-		$this->article = $this->createElement('article');
-		$this->article->setAttributeNS(
+		$this->tei = $this->createElement('TEI');
+        $this->tei->setAttributeNS(
+            "http://www.w3.org/2000/xmlns/",
+            "xmlns",
+            "http://www.tei-c.org/ns/1.0"
+        );
+		$this->tei->setAttributeNS(
 			"http://www.w3.org/2000/xmlns/",
 			"xmlns:xlink",
 			"http://www.w3.org/1999/xlink"
 		);
 
-		$this->appendChild($this->article);
+		$this->appendChild($this->tei);
 
 		$this->front = $this->createElement('front');
-		$this->article->appendChild($this->front);
+		$this->tei->appendChild($this->front);
 
 		$this->body = $this->createElement('body');
-		$this->article->appendChild($this->body);
+		$this->tei->appendChild($this->body);
 
 		$this->back = $this->createElement('back');
-		$this->article->appendChild($this->back);
+		$this->tei->appendChild($this->back);
 	}
 
 	private function extractContent() {
