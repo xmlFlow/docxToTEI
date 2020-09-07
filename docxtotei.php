@@ -65,13 +65,15 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 	}
 
 	if (!$isDir) {
-		$teiXML->getTeiFile($outputDir . $filename . ".xml");
-		$docxArchive->getMediaFiles($outputDir);
+        $filePath = $outputDir . $filename . ".xml";
+        $teiXML->getTeiFile($filePath);
+        $docxArchive->getMediaFiles($outputDir);
 	} else {
 		if (!is_dir($outputDir . $filename)) {
 			mkdir($outputDir . $filename);
 		}
-		$teiXML->getTeiFile($outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml");
+        $dirFilePath = $outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml";
+        $teiXML->getTeiFile($dirFilePath);
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}
 }

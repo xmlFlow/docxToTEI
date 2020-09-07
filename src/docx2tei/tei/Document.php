@@ -41,7 +41,7 @@ class Document extends \DOMDocument {
 
 		// Doctype
 		$impl = new \DOMImplementation();
-		$this->appendChild($impl->createDocumentType("article", "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN", "https://tei.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"));
+		//$this->appendChild($impl->createDocumentType("article", "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN", "https://tei.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"));
 
 		$this->setBasicStructure();
 		$this->extractContent();
@@ -54,17 +54,14 @@ class Document extends \DOMDocument {
 	}
 
 	private function setBasicStructure() {
+
 		$this->tei = $this->createElement('TEI');
         $this->tei->setAttributeNS(
             "http://www.w3.org/2000/xmlns/",
             "xmlns",
             "http://www.tei-c.org/ns/1.0"
         );
-		$this->tei->setAttributeNS(
-			"http://www.w3.org/2000/xmlns/",
-			"xmlns:xlink",
-			"http://www.w3.org/1999/xlink"
-		);
+		// $this->tei->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
 
 		$this->appendChild($this->tei);
 
@@ -73,7 +70,6 @@ class Document extends \DOMDocument {
 
 		$this->text = $this->createElement('text');
 		$this->tei->appendChild($this->text);
-
 
 	}
 
