@@ -56,7 +56,7 @@ if (array_key_exists("singleFile", $inputs)) {
 function writeOutput(string $inputFilePath, array $outputPathParts, array $inputPathParts, string $outputDir, bool $isDir): void
 {
 	$docxArchive = new DOCXArchive($inputFilePath);
-	$jatsXML = new Document($docxArchive);
+	$teiXML = new Document($docxArchive);
 
 	if (array_key_exists("extension", $outputPathParts) && !$isDir) {
 		$filename = $outputPathParts["filename"];
@@ -65,13 +65,13 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 	}
 
 	if (!$isDir) {
-		$jatsXML->getJatsFile($outputDir . $filename . ".xml");
+		$teiXML->getJatsFile($outputDir . $filename . ".xml");
 		$docxArchive->getMediaFiles($outputDir);
 	} else {
 		if (!is_dir($outputDir . $filename)) {
 			mkdir($outputDir . $filename);
 		}
-		$jatsXML->getJatsFile($outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml");
+		$teiXML->getJatsFile($outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml");
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}
 }

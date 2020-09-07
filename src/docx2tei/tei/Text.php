@@ -7,14 +7,14 @@ use docx2tei\objectModel\body\Text as ObjectText;
 
 class Text {
 
-	public static function extractText(ObjectText $jatsText, \DOMElement $domElement) : void {
+	public static function extractText(ObjectText $teiText, \DOMElement $domElement) : void {
 
 		// Get DOMDocument
 		$domDocument = $domElement->ownerDocument;
 		// Dealing with simple text (without any properties)
-		$nodeTypes = $jatsText->getType();
+		$nodeTypes = $teiText->getType();
 		if (empty($nodeTypes)) {
-			$textNode = $domDocument->createTextNode($jatsText->getContent());
+			$textNode = $domDocument->createTextNode($teiText->getContent());
 			$domElement->appendChild($textNode);
 			unset($nodeTypes);
 		}
@@ -46,15 +46,15 @@ class Text {
 			foreach ($typeArray as $typeKey => $type) {
 				if (!is_array($type)) {
 					$nodeElement = $domDocument->createElement($type);
-					$nodeElement->nodeValue = htmlspecialchars($jatsText->getContent());
+					$nodeElement->nodeValue = htmlspecialchars($teiText->getContent());
 					$domElement->appendChild($nodeElement);
 					if ($type == "ext-link") {
-						$nodeElement->setAttribute("xlink:href", $jatsText->getLink());
+						$nodeElement->setAttribute("xlink:href", $teiText->getLink());
 					}
 				} else {
 					foreach ($type as $insideKey => $insideType) {
 						$nodeElement = $domDocument->createElement($insideKey);
-						$nodeElement->nodeValue = htmlspecialchars(trim($jatsText->getContent()));
+						$nodeElement->nodeValue = htmlspecialchars(trim($teiText->getContent()));
 						$domElement->appendChild($nodeElement);
 					}
 				}
@@ -74,9 +74,9 @@ class Text {
 					$domElement->appendChild($prevElements[0]);
 				} elseif (($key === (count($typeArray) - 1))) {
 
-					$nodeElement->nodeValue = htmlspecialchars($jatsText->getContent());
+					$nodeElement->nodeValue = htmlspecialchars($teiText->getContent());
 					if ($type == "ext-link"){
-						$nodeElement->setAttribute("xlink:href", $jatsText->getLink());
+						$nodeElement->setAttribute("xlink:href", $teiText->getLink());
 					}
 
 					foreach ($prevElements as $prevKey => $prevElement) {

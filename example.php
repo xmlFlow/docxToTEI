@@ -28,8 +28,8 @@ foreach ($contents as $content) {
 }
 
 // Creating JATS XML
-$jatsXML = new Document($docxArchive);
+$teiXML = new Document($docxArchive);
 $filename = basename($path, ".docx");
 $outputDir = "samples/output/";
-$jatsXML->getJatsFile($outputDir . $filename . ".xml");
+$teiXML->getJatsFile($outputDir . $filename . ".xml");
 $docxArchive->getMediaFiles($outputDir);

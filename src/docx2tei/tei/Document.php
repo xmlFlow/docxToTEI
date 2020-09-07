@@ -121,13 +121,13 @@ class Document extends \DOMDocument {
 
 					case "docx2tei\objectModel\body\Par":
 
-						$jatsPar = new JatsPar($content);
+						$teiPar = new JatsPar($content);
 
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
 								if (!in_array(Par::DOCX_PAR_LIST, $content->getType())) {
-									$section->appendChild($jatsPar);
-									$jatsPar->setContent();
+									$section->appendChild($teiPar);
+									$teiPar->setContent();
 								} elseif (!in_array(Par::DOCX_PAR_HEADING, $content->getType())) {
 									$itemId = $content->getNumberingItemProp()[Par::DOCX_LIST_ITEM_ID];
 									$hasSublist = $content->getNumberingItemProp()[Par::DOCX_LIST_HAS_SUBLIST];
@@ -150,8 +150,8 @@ class Document extends \DOMDocument {
 									// appends nested lists and list items based on their level
 									if (count($itemId) === $content->getNumberingLevel()+1) {
 										$listItem = $this->createElement('list-item');
-										$listItem->appendChild($jatsPar);
-										$jatsPar->setContent();
+										$listItem->appendChild($teiPar);
+										$teiPar->setContent();
 
 										if ($content->getNumberingLevel() === 0) {
 											$this->lists[$content->getNumberingId()]->appendChild($listItem);
