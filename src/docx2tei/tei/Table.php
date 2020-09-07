@@ -3,7 +3,7 @@
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Row as JatsRow;
+use docx2tei\tei\Row as TeiRow;
 
 class Table extends Element {
 
@@ -19,7 +19,7 @@ class Table extends Element {
 		$this->appendChild($tableNode);
 
 		foreach ($this->getDataObject()->getContent() as $content) {
-			$row = new JatsRow($content);
+			$row = new TeiRow($content);
 			$tableNode->appendChild($row);
 			$row->setContent();
 		}

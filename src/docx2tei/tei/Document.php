@@ -3,10 +3,10 @@
 
 
 use docx2tei\DOCXArchive;
-use docx2tei\tei\Par as JatsPar;
+use docx2tei\tei\Par as TeiPar;
 use docx2tei\objectModel\body\Par;
-use docx2tei\tei\Table as JatsTable;
-use docx2tei\tei\Figure as JatsFigure;
+use docx2tei\tei\Table as TeiTable;
+use docx2tei\tei\Figure as TeiFigure;
 use docx2tei\objectModel\body\Table;
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document as DOCXDocument;
@@ -49,7 +49,7 @@ class Document extends \DOMDocument {
 		$this->extractMetadata();
 	}
 
-	public function getJatsFile(string $pathToFile) {
+	public function getTeiFile(string $pathToFile) {
 		$this->save($pathToFile);
 	}
 
@@ -121,7 +121,7 @@ class Document extends \DOMDocument {
 
 					case "docx2tei\objectModel\body\Par":
 
-						$teiPar = new JatsPar($content);
+						$teiPar = new TeiPar($content);
 
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
@@ -182,7 +182,7 @@ class Document extends \DOMDocument {
 					case "docx2tei\objectModel\body\Table":
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
-								$table = new JatsTable($content);
+								$table = new TeiTable($content);
 								$section->appendChild($table);
 								$table->setContent();
 
@@ -192,7 +192,7 @@ class Document extends \DOMDocument {
 					case "docx2tei\objectModel\body\Image":
 						foreach ($sectionsOrBody as $section) {
 							if ($contentId === $section->getAttribute('id') || $section->nodeName === "body") {
-								$figure = new JatsFigure($content);
+								$figure = new TeiFigure($content);
 								$section->appendChild($figure);
 								$figure->setContent();
 							}

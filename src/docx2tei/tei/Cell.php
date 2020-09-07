@@ -3,7 +3,7 @@
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Par as JatsPar;
+use docx2tei\tei\Par as TeiPar;
 
 class Cell extends Element {
 	public function __construct(DataObject $dataObject) {

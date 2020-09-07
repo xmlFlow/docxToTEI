@@ -3,7 +3,7 @@
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Text as JatsText;
+use docx2tei\tei\Text as TeiText;
 
 class Par extends Element {
 
@@ -16,7 +16,7 @@ class Par extends Element {
 	public function setContent() {
 
 		foreach ($this->getDataObject()->getContent() as $content) {
-			JatsText::extractText($content, $this);
+			TeiText::extractText($content, $this);
 		}
 	}
 }
