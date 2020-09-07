@@ -19,7 +19,7 @@ class Document extends \DOMDocument {
 	var $tei;
 
 
-	var $front;
+	var $teiHeader;
 
 
 	var $body;
@@ -68,8 +68,8 @@ class Document extends \DOMDocument {
 
 		$this->appendChild($this->tei);
 
-		$this->front = $this->createElement('front');
-		$this->tei->appendChild($this->front);
+		$this->teiHeader = $this->createElement('teiHeader');
+		$this->tei->appendChild($this->teiHeader);
 
 		$this->body = $this->createElement('body');
 		$this->tei->appendChild($this->body);
@@ -222,14 +222,14 @@ class Document extends \DOMDocument {
 
 		// Needed to make JATS XML document valid
 		$journalMetaNode = $this->createElement("journal-meta");
-		$this->front->appendChild($journalMetaNode);
+		$this->teiHeader->appendChild($journalMetaNode);
 		$journalIdNode = $this->createElement("journal-id");
 		$journalMetaNode->appendChild($journalIdNode);
 		$issnNode = $this->createElement("issn");
 		$journalMetaNode->appendChild($issnNode);
 
 		$articleMetaNode = $this->createElement("article-meta");
-		$this->front->appendChild($articleMetaNode);
+		$this->teiHeader->appendChild($articleMetaNode);
 		$titleGroupNode = $this->createElement("title-group");
 		$articleMetaNode->appendChild($titleGroupNode);
 		$articleTitleNode = $this->createElement("article-title");
