@@ -213,9 +213,6 @@ class Document extends \DOMDocument {
 	}
 
 	private function extractMetadata() {
-		//TODO find and extract OOXML metadata
-
-		// Needed to make JATS XML document valid
 		$journalMetaNode = $this->createElement("journal-meta");
 		$this->teiHeader->appendChild($journalMetaNode);
 		$journalIdNode = $this->createElement("journal-id");

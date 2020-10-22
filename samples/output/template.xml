@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <journal-meta>
+      <journal-id/>
+      <issn/>
+    </journal-meta>
+    <article-meta>
+      <title-group>
+        <article-title/>
+      </title-group>
+    </article-meta>
+  </teiHeader>
+  <text>
+    <sec id="sec-1">
+      <title>Document metadata</title>
+      <table-wrap>
+        <table>
+          <row>
+            <cell>
+              <p>
+                <bold>Field name</bold>
+              </p>
+            </cell>
+            <cell>
+              <p>
+                <bold>Value</bold>
+              </p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Document ID</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Main title of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Author/issuer of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of editor(s)</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of collaborator(s)</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Place of deposit / current location of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Holding institution</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Inventory number assigned by holding institution</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Alternative manifestation/inventory</p>
+              <p>Type of manifestation </p>
+            </cell>
+            <cell>
+              <p></p>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Location </p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Holding institution</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Inventory number</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Main language of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Other languages</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Link to catalogue entry</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Date of origin of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Place of origin of document</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of image file</p>
+            </cell>
+            <cell>
+              <p></p>
+            </cell>
+          </row>
+        </table>
+      </table-wrap>
+      <p></p>
+      <sec id="sec-1_1">
+        <title></title>
+      </sec>
+    </sec>
+    <sec id="sec-2">
+      <title>Title</title>
+      <p>
+        <bold>Edited Inscription - LAL1920 Su Bāhāḥ, inscription from 1700 CE</bold>
+      </p>
+    </sec>
+    <sec id="sec-3">
+      <title>Short title</title>
+      <p>
+        <bold>An inscription recording installation of Lokeśvara image on a </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+      </p>
+    </sec>
+    <sec id="sec-4">
+      <title>Facsimiles</title>
+      <sec id="sec-4_1">
+        <title>surface1</title>
+        <table-wrap>
+          <table>
+            <row>
+              <cell>
+                <p>URL</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>invocatio</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>space</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>seal</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>main_text</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+          </table>
+        </table-wrap>
+        <p></p>
+      </sec>
+      <sec id="sec-4_2">
+        <title>surface2</title>
+        <table-wrap>
+          <table>
+            <row>
+              <cell>
+                <p>URL</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>invocatio</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>space</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>seal</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>main_text</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+              <cell>
+                <p>0</p>
+              </cell>
+            </row>
+          </table>
+        </table-wrap>
+        <p></p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title></title>
+    </sec>
+    <sec id="sec-6">
+      <title>Abstract</title>
+      <p>
+        <bold>This inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold> and setting up a </bold>
+        <bold>
+          <italic>guṭhī</italic>
+        </bold>
+        <bold> to observe its anniversary.</bold>
+      </p>
+      <p></p>
+    </sec>
+    <sec id="sec-7">
+      <title>Text edition/ Inscription</title>
+      <p>
+        <bold>नमो रत्नंत्रयाय [रत्न˚] ।। धर्म्मेश्वर: सकलपापविनाशहे-</bold>
+      </p>
+      <p>
+        <bold>तुः सौखावतीगतिमहाजनमार्थहे[तुः] दुःखाधिपारगमनो</bold>
+      </p>
+      <p>
+        <bold>त्तमकर्ण्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। ।। श्रेयोऽस्तु</bold>
+      </p>
+      <p>
+        <bold>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे पञ्चम्यान्तिथौ मृगशिर-</bold>
+      </p>
+      <p>
+        <bold>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</bold>
+      </p>
+      <p>
+        <bold>तिष्ठा दिन जुरो ।। ।। दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</bold>
+      </p>
+      <p>
+        <bold>भार्य्या रुकमणि [? - 12 characters] ति केहें व &amp;&amp;ब्लाब्ला&amp;&amp; in</bold>
+      </p>
+      <p>
+        <bold>न्हाय थुति समुहन दुन्ता । [? - 3 characters] बु रोव ‹८› । थ्वतिया वरसानन</bold>
+      </p>
+      <p>
+        <bold>दवथ्य जुरो । [? - 5 characters] चैत्यभ‹रा›र गजुरि थ्वतिया-</bold>
+      </p>
+      <p>
+        <bold>त जुरो । मेष संक्रान्ति ‹कुन्हु दान वियमार› । फं २ सियाब-</bold>
+      </p>
+      <p>
+        <bold>जि फं २ थ्व [? - 12 characters] ति फरेस</bold>
+      </p>
+      <p>
+        <bold>दान बिय जुरो । भुय [? - 14 characters] फं २ सष्वा-</bold>
+      </p>
+      <p>
+        <bold>र थुति याय रश [? - 9 characters] ‹इक्षा›भोजन</bold>
+      </p>
+      <p>
+        <bold>याय जुरो । गुथि‹जन› [? - 9 characters] ‹ज्यो›तिजु मणि-</bold>
+      </p>
+      <p>
+        <bold>देवजु कोवाहार दे [? - 8 characters] वराजजु वं-</bold>
+      </p>
+      <p>
+        <bold>कुवाहर कुतुजु थुति [? - 6 characters] यायमार । सेल्हो-</bold>
+      </p>
+      <p>
+        <bold>यात दम शुकि तय न [? - 6 characters] ग्वम्हनसे</bold>
+      </p>
+      <p>
+        <bold>नकर वम्हन प [? - 15 characters] नकम थ्वया</bold>
+      </p>
+      <p>
+        <bold>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</bold>
+      </p>
+      <p></p>
+    </sec>
+    <sec id="sec-8">
+      <title>English Translation</title>
+      <p>
+        <bold>Namo Ratnantraya [Ratna]. Dharmeshwar: Sakalpapvinashhe-</bold>
+      </p>
+      <p>
+        <bold>तुः सौखावतीगतिमहाजनमार्थहे [तुः] दुख्खाधिपारगमनो</bold>
+      </p>
+      <p>
+        <bold>त्तमकर्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। .. Thank you</bold>
+      </p>
+      <p>
+        <bold>Samvat 820 Vaishashshuklachaturthya: Beyond Panchamyantithau Mrigashir-</bold>
+      </p>
+      <p>
+        <bold>Nakshatra atigandayoge shukravasare thvakunhu srilokeshwar phale p-</bold>
+      </p>
+      <p>
+        <bold>Thirty days. .. Danpati Salko [? - 4 characters] Thavir Shri Dhanjotiju</bold>
+      </p>
+      <p>
+        <bold>Wife Rukmani [? - 12 characters] ति केहें व &amp;&amp; ब्लाब्ला &amp;&amp; in</bold>
+      </p>
+      <p>
+        <bold>Nhay Thuti Samuhan Dunta. [? - 3 characters] Bu Row ‹8›. Thvatia Varsanan</bold>
+      </p>
+      <p>
+        <bold>Davathya Juro. [? - 5 characters] चैत्यभ ‹रा› र गजुरि थ्वतिया-</bold>
+      </p>
+      <p>
+        <bold>So Juro. Aries Sankranti ‹Kunhu Dan Viymar. फं २ सियाब-</bold>
+      </p>
+      <p>
+        <bold>जि फं २ थ्व [? - 12 characters] ति फरेस</bold>
+      </p>
+      <p>
+        <bold>Dan Biyo Juro. भूय [? - 14 characters] फं २ सष्वा-</bold>
+      </p>
+      <p>
+        <bold>And thuti yay rush [? - 9 characters] ‹Iksha› food</bold>
+      </p>
+      <p>
+        <bold>Yay Juro. गुथि ‹जन› [? - 9 characters] ‹ज्यो› तिजु मणि-</bold>
+      </p>
+      <p>
+        <bold>Devju Kovahar De [? - 8 characters] वराजजु वं-</bold>
+      </p>
+      <p>
+        <bold>कुवाहर कुतुजु थुति [? - 6 characters] Yaymar. Celho-</bold>
+      </p>
+      <p>
+        <bold>Dum Shuki Tay Na [? - 6 characters] ग्वम्हनसे</bold>
+      </p>
+      <p>
+        <bold>नकर वम्हन प [? - 15 characters] नकम थ्वया</bold>
+      </p>
+      <p><bold>Sahasr Punya Rak Juro. Good luck always.</bold></p>
+      <p></p>
+      <p></p>
+    </sec>
+    <sec id="sec-9">
+      <title>Commentry</title>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </sec>
+    <sec id="sec-10">
+      <title>Translation/Synopsis</title>
+      <p>
+        <bold>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of </bold>
+        <bold>
+          <italic>Lokeśvara</italic>
+        </bold>
+        <bold> was installed on the </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold>
+          <italic>
+            <sup>1</sup>
+          </italic>
+        </bold>
+        <bold>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 </bold>
+        <bold>
+          <italic>ropanī</italic>
+        </bold>
+        <bold>s</bold>
+        <bold>
+          <sup>2</sup>
+        </bold>
+        <bold> of land in …</bold>
+        <bold>
+          <sup>3</sup>
+        </bold>
+        <bold>
+          <ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link>
+        </bold>
+        <bold> </bold>
+        <bold>
+          <italic>guṭhī</italic>
+        </bold>
+        <bold>
+          <italic>
+            <sup>4</sup>
+          </italic>
+        </bold>
+        <bold> to observe the anniversary. From the income of the land, an offering of 2 </bold>
+        <bold>
+          <italic>pāthī</italic>
+        </bold>
+        <bold>s of dry-fried puffed rice (</bold>
+        <bold>
+          <italic>syāḥbaji</italic>
+        </bold>
+        <bold>), 2 </bold>
+        <bold>
+          <italic>pāthī</italic>
+        </bold>
+        <bold>s of </bold>
+        <bold>
+          <italic>thvã</italic>
+        </bold>
+        <bold>…</bold>
+        <bold>
+          <sup>5</sup>
+        </bold>
+        <bold> shall be made at the </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold> as charity (</bold>
+        <bold>
+          <italic>dāna</italic>
+        </bold>
+        <bold>) on </bold>
+        <bold>
+          <italic>meṣa saṃkrānti</italic>
+        </bold>
+        <bold>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 </bold>
+        <bold>
+          <italic>pāthī</italic>
+        </bold>
+        <bold>s of lime and … shall be fed food items of their choice</bold>
+        <bold>
+          <sup>6</sup>
+        </bold>
+        <bold>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju</bold>
+        <bold>
+          <sup>7</sup>
+        </bold>
+        <bold> of Ko Bāhāḥ, </bold>
+        <bold>
+          <italic>Kutuju</italic>
+        </bold>
+        <bold>
+          <italic>
+            <sup>8</sup>
+          </italic>
+        </bold>
+        <bold> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the </bold>
+        <bold>
+          <italic>guṭhī</italic>
+        </bold>
+        <bold>, shall …</bold>
+        <bold>
+          <sup>9</sup>
+        </bold>
+        <bold> . A certain amount has been allocated for renovation of the </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold>. The person who feeds shall receive a thousandfold merit.</bold>
+      </p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </sec>
+    <sec id="sec-11">
+      <title>Commentary</title>
+      <p>
+        <bold>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of </bold>
+        <bold>
+          <italic>Lokeśvara</italic>
+        </bold>
+        <bold> at a </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual</bold>
+        <bold>
+          <sup>10</sup>
+        </bold>
+        <bold> location of the </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold> in which the image was installed is not clear, as the inscription is no longer at its original location. The </bold>
+        <bold>
+          <italic>phalcā</italic>
+        </bold>
+        <bold> probably is the one to the east of the monastery.</bold>
+        <bold>
+          <sup>11</sup>
+        </bold>
+      </p>
+      <p>
+        <bold>1 [New.] var. </bold>
+        <bold>
+          <italic>phale</italic>
+        </bold>
+        <bold>, </bold>
+        <bold>
+          <italic>phalacā</italic>
+        </bold>
+        <bold>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</bold>
+      </p>
+      <p>
+        <bold>2 [fr. S.] var. </bold>
+        <bold>
+          <italic>ropani</italic>
+        </bold>
+        <bold>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four </bold>
+        <bold>
+          <italic>murīs</italic>
+        </bold>
+        <bold>. The area may vary according to the grade, but current standard area for a </bold>
+        <bold>
+          <italic>ropanī</italic>
+        </bold>
+        <bold> comprises 5,476 square feet.</bold>
+      </p>
+      <p>
+        <bold>3 The three unreadable letters here are perhaps the name of the place where the donated land was situated.</bold>
+      </p>
+      <p>
+        <bold>4 [fr. S. </bold>
+        <bold>
+          <italic>goṣṭhī</italic>
+        </bold>
+        <bold>] var. </bold>
+        <bold>
+          <italic>guṭh</italic>
+        </bold>
+        <bold>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</bold>
+      </p>
+      <p>
+        <bold>5 The letters inscribed after </bold>
+        <bold>
+          <italic>thva</italic>
+        </bold>
+        <bold> have already faded. But it probably means </bold>
+        <bold>
+          <italic>thvã</italic>
+        </bold>
+        <bold> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</bold>
+      </p>
+      <p>
+        <bold>6 As few letters have faded, we do not know the persons to be fed the items of their choice.</bold>
+      </p>
+      <p>
+        <bold>7 The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</bold>
+      </p>
+      <p>
+        <bold>8 He probably is </bold>
+        <bold>
+          <italic>kutu bhāju</italic>
+        </bold>
+        <bold>, a government official (Malla 2000: 53).</bold>
+      </p>
+      <p>
+        <bold>9 It is not clear what the members of the </bold>
+        <bold>
+          <italic>guṭhī</italic>
+        </bold>
+        <bold> were instructed to do, as the letters here in the inscription have faded.</bold>
+      </p>
+      <p>
+        <bold>10 Test Endnote 1</bold>
+      </p>
+      <p>
+        <bold>11 TestEndnote 2</bold>
+      </p>
+      <p></p>
+    </sec>
+  </text>
+</TEI>

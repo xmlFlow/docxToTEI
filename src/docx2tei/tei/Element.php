@@ -30,10 +30,10 @@ abstract class Element extends \DOMElement {
 				$name = 'table-wrap';
 				break;
 			case "docx2tei\objectModel\body\Row":
-				$name = 'tr';
+				$name = 'row';
 				break;
 			case "docx2tei\objectModel\body\Cell":
-				$name = 'td';
+				$name = 'cell';
 				break;
 			case "docx2tei\objectModel\body\Image":
 				$name = 'fig';
