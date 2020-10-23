@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
-    <journal-meta>
-      <journal-id/>
-      <issn/>
-    </journal-meta>
-    <article-meta>
-      <title-group>
-        <article-title/>
-      </title-group>
-    </article-meta>
-  </teiHeader>
+  <teiHeader/>
   <text>
-    <sec id="sec-1">
+    <div id="div-1">
       <title>Document metadata</title>
       <table-wrap>
         <table>
@@ -177,362 +167,110 @@
         </table>
       </table-wrap>
       <p></p>
-      <sec id="sec-1_1">
-        <title></title>
-      </sec>
-    </sec>
-    <sec id="sec-2">
+      <p></p>
+    </div>
+    <div id="div-2">
       <title>Title</title>
-      <p>
-        <bold>Edited Inscription - LAL1920 Su Bāhāḥ, inscription from 1700 CE</bold>
-      </p>
-    </sec>
-    <sec id="sec-3">
+      <p>Edited Inscription - LAL1920 Su Bāhāḥ, inscription from 1700 CE</p>
+    </div>
+    <div id="div-3">
       <title>Short title</title>
-      <p>
-        <bold>An inscription recording installation of Lokeśvara image on a </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-      </p>
-    </sec>
-    <sec id="sec-4">
+      <p>An inscription recording installation of Lokeśvara image on a <italic>phalcā</italic></p>
+    </div>
+    <div id="div-4">
       <title>Facsimiles</title>
-      <sec id="sec-4_1">
-        <title>surface1</title>
-        <table-wrap>
-          <table>
-            <row>
-              <cell>
-                <p>URL</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>invocatio</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>space</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>seal</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>main_text</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-          </table>
-        </table-wrap>
-        <p></p>
-      </sec>
-      <sec id="sec-4_2">
-        <title>surface2</title>
-        <table-wrap>
-          <table>
-            <row>
-              <cell>
-                <p>URL</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>invocatio</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>space</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>seal</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <p>main_text</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-              <cell>
-                <p>0</p>
-              </cell>
-            </row>
-          </table>
-        </table-wrap>
-        <p></p>
-      </sec>
-    </sec>
-    <sec id="sec-5">
-      <title></title>
-    </sec>
-    <sec id="sec-6">
+      <div id="div-4_1">
+        <title>surface1:E_2253_0532.png:1r</title>
+        <p>&lt;surface  xml:id="surface1" facs:” &gt;</p>
+        <p>   &lt;zone xml:id=”space1”/&gt;</p>
+        <p>&lt;/surface&gt;</p>
+      </div>
+      <div id="div-4_2">
+        <title>surface2:1v</title>
+      </div>
+    </div>
+    <div id="div-5">
       <title>Abstract</title>
-      <p>
-        <bold>This inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold> and setting up a </bold>
-        <bold>
-          <italic>guṭhī</italic>
-        </bold>
-        <bold> to observe its anniversary.</bold>
-      </p>
+      <p>This inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <italic>phalcā</italic> and setting up a <italic>guṭhī</italic> to observe its anniversary.</p>
       <p></p>
-    </sec>
-    <sec id="sec-7">
-      <title>Text edition/ Inscription</title>
-      <p>
-        <bold>नमो रत्नंत्रयाय [रत्न˚] ।। धर्म्मेश्वर: सकलपापविनाशहे-</bold>
-      </p>
-      <p>
-        <bold>तुः सौखावतीगतिमहाजनमार्थहे[तुः] दुःखाधिपारगमनो</bold>
-      </p>
-      <p>
-        <bold>त्तमकर्ण्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। ।। श्रेयोऽस्तु</bold>
-      </p>
-      <p>
-        <bold>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे पञ्चम्यान्तिथौ मृगशिर-</bold>
-      </p>
-      <p>
-        <bold>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</bold>
-      </p>
-      <p>
-        <bold>तिष्ठा दिन जुरो ।। ।। दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</bold>
-      </p>
-      <p>
-        <bold>भार्य्या रुकमणि [? - 12 characters] ति केहें व &amp;&amp;ब्लाब्ला&amp;&amp; in</bold>
-      </p>
-      <p>
-        <bold>न्हाय थुति समुहन दुन्ता । [? - 3 characters] बु रोव ‹८› । थ्वतिया वरसानन</bold>
-      </p>
-      <p>
-        <bold>दवथ्य जुरो । [? - 5 characters] चैत्यभ‹रा›र गजुरि थ्वतिया-</bold>
-      </p>
-      <p>
-        <bold>त जुरो । मेष संक्रान्ति ‹कुन्हु दान वियमार› । फं २ सियाब-</bold>
-      </p>
-      <p>
-        <bold>जि फं २ थ्व [? - 12 characters] ति फरेस</bold>
-      </p>
-      <p>
-        <bold>दान बिय जुरो । भुय [? - 14 characters] फं २ सष्वा-</bold>
-      </p>
-      <p>
-        <bold>र थुति याय रश [? - 9 characters] ‹इक्षा›भोजन</bold>
-      </p>
-      <p>
-        <bold>याय जुरो । गुथि‹जन› [? - 9 characters] ‹ज्यो›तिजु मणि-</bold>
-      </p>
-      <p>
-        <bold>देवजु कोवाहार दे [? - 8 characters] वराजजु वं-</bold>
-      </p>
-      <p>
-        <bold>कुवाहर कुतुजु थुति [? - 6 characters] यायमार । सेल्हो-</bold>
-      </p>
-      <p>
-        <bold>यात दम शुकि तय न [? - 6 characters] ग्वम्हनसे</bold>
-      </p>
-      <p>
-        <bold>नकर वम्हन प [? - 15 characters] नकम थ्वया</bold>
-      </p>
-      <p>
-        <bold>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</bold>
-      </p>
-      <p></p>
-    </sec>
-    <sec id="sec-8">
+    </div>
+    <div id="div-6">
+      <title>Edition</title>
+      <div id="div-6_1">
+        <title>Page:1r</title>
+        <div id="div-6_1_1">
+          <title>block:space:space1 (due to the page1r , i am creating the  zone inside facsimile Surface1, zone @xml:id=”space1”) What kind of bock,  to which zone it corresponds, zone name</title>
+          <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++ characters# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>page:2r</p>
+          <p>block:space2</p>
+          <p>A line break follows me</p>
+          <p></p>
+          <p>Two line breaks without a break follows me.</p>
+          <p>-</p>
+          <p>-</p>
+          <p>Text with 4 illegible characters</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++ characters# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p></p>
+          <p>Text with a personal name</p>
+          <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
+          <p>Text with a place name </p>
+          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+          <p>Text with a geographical name</p>
+          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
+          <p>Only for edition: All the lines with an ending -  has attribute break &lt;lb break="no"/&gt;</p>
+          <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
+          <p>This line includes a ़</p>
+          <p>तिष्ठा दिन जुरो ।। ।। ़ दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</p>
+          <p>भार्य्या रुकमणि [? - 12 characters] ति केहें व &amp;&amp;ब्लाब्ला&amp;&amp; in</p>
+          <p>न्हाय थुति समुहन दुन्ता । [? - 3 characters] बु रोव ‹८› । थ्वतिया वरसानन</p>
+          <p>दवथ्य जुरो । [? - 5 characters] चैत्यभ‹रा›र गजुरि थ्वतिया-</p>
+          <p>त जुरो । मेष संक्रान्ति ‹कुन्हु दान वियमार› । फं २ सियाब-</p>
+          <p>जि फं २ थ्व [? - 12 characters] ति फरेस</p>
+          <p>दान बिय जुरो । भुय [? - 14 characters] फं २ सष्वा-</p>
+          <p>र थुति याय रश [? - 9 characters] ‹इक्षा›भोजन</p>
+          <p>याय जुरो । गुथि‹जन› [? - 9 characters] ‹ज्यो›तिजु मणि-</p>
+          <p>देवजु कोवाहार दे [? - 8 characters] वराजजु वं-</p>
+          <p>कुवाहर कुतुजु थुति [? - 6 characters] यायमार । सेल्हो-</p>
+          <p>यात दम शुकि तय न [? - 6 characters] ग्वम्हनसे</p>
+          <p>नकर वम्हन प [? - 15 characters] नकम थ्वया</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="div-7">
       <title>English Translation</title>
-      <p>
-        <bold>Namo Ratnantraya [Ratna]. Dharmeshwar: Sakalpapvinashhe-</bold>
-      </p>
-      <p>
-        <bold>तुः सौखावतीगतिमहाजनमार्थहे [तुः] दुख्खाधिपारगमनो</bold>
-      </p>
-      <p>
-        <bold>त्तमकर्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। .. Thank you</bold>
-      </p>
-      <p>
-        <bold>Samvat 820 Vaishashshuklachaturthya: Beyond Panchamyantithau Mrigashir-</bold>
-      </p>
-      <p>
-        <bold>Nakshatra atigandayoge shukravasare thvakunhu srilokeshwar phale p-</bold>
-      </p>
-      <p>
-        <bold>Thirty days. .. Danpati Salko [? - 4 characters] Thavir Shri Dhanjotiju</bold>
-      </p>
-      <p>
-        <bold>Wife Rukmani [? - 12 characters] ति केहें व &amp;&amp; ब्लाब्ला &amp;&amp; in</bold>
-      </p>
-      <p>
-        <bold>Nhay Thuti Samuhan Dunta. [? - 3 characters] Bu Row ‹8›. Thvatia Varsanan</bold>
-      </p>
-      <p>
-        <bold>Davathya Juro. [? - 5 characters] चैत्यभ ‹रा› र गजुरि थ्वतिया-</bold>
-      </p>
-      <p>
-        <bold>So Juro. Aries Sankranti ‹Kunhu Dan Viymar. फं २ सियाब-</bold>
-      </p>
-      <p>
-        <bold>जि फं २ थ्व [? - 12 characters] ति फरेस</bold>
-      </p>
-      <p>
-        <bold>Dan Biyo Juro. भूय [? - 14 characters] फं २ सष्वा-</bold>
-      </p>
-      <p>
-        <bold>And thuti yay rush [? - 9 characters] ‹Iksha› food</bold>
-      </p>
-      <p>
-        <bold>Yay Juro. गुथि ‹जन› [? - 9 characters] ‹ज्यो› तिजु मणि-</bold>
-      </p>
-      <p>
-        <bold>Devju Kovahar De [? - 8 characters] वराजजु वं-</bold>
-      </p>
-      <p>
-        <bold>कुवाहर कुतुजु थुति [? - 6 characters] Yaymar. Celho-</bold>
-      </p>
-      <p>
-        <bold>Dum Shuki Tay Na [? - 6 characters] ग्वम्हनसे</bold>
-      </p>
-      <p>
-        <bold>नकर वम्हन प [? - 15 characters] नकम थ्वया</bold>
-      </p>
-      <p><bold>Sahasr Punya Rak Juro. Good luck always.</bold></p>
+      <p>Namo Ratnantraya [Ratna]. Dharmeshwar: Sakalpapvinashhe-</p>
+      <p>तुः सौखावतीगतिमहाजनमार्थहे [तुः] दुख्खाधिपारगमनो</p>
+      <p>त्तमकर्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। .. Thank you</p>
+      <p>Samvat 820 Vaishashshuklachaturthya: Beyond Panchamyantithau Mrigashir-</p>
+      <p>Nakshatra atigandayoge shukravasare thvakunhu srilokeshwar phale p-</p>
+      <p>Thirty days. .. Danpati Salko [? - 4 characters] Thavir Shri Dhanjotiju</p>
+      <p>Wife Rukmani [? - 12 characters] ति केहें व &amp;&amp; ब्लाब्ला &amp;&amp; in</p>
+      <p>Nhay Thuti Samuhan Dunta. [? - 3 characters] Bu Row ‹8›. Thvatia Varsanan</p>
+      <p>Davathya Juro. [? - 5 characters] चैत्यभ ‹रा› र गजुरि थ्वतिया-</p>
+      <p>So Juro. Aries Sankranti ‹Kunhu Dan Viymar. फं २ सियाब-</p>
+      <p>जि फं २ थ्व [? - 12 characters] ति फरेस</p>
+      <p>Dan Biyo Juro. भूय [? - 14 characters] फं २ सष्वा-</p>
+      <p>And thuti yay rush [? - 9 characters] ‹Iksha› food</p>
+      <p>Yay Juro. गुथि ‹जन› [? - 9 characters] ‹ज्यो› तिजु मणि-</p>
+      <p>Devju Kovahar De [? - 8 characters] वराजजु वं-</p>
+      <p>कुवाहर कुतुजु थुति [? - 6 characters] Yaymar. Celho-</p>
+      <p>Dum Shuki Tay Na [? - 6 characters] ग्वम्हनसे</p>
+      <p>नकर वम्हन प [? - 15 characters] नकम थ्वया</p>
+      <p>Sahasr Punya Rak Juro. Good luck always.</p>
       <p></p>
       <p></p>
-    </sec>
-    <sec id="sec-9">
+    </div>
+    <div id="div-8">
       <title>Commentry</title>
       <p></p>
       <p></p>
       <p></p>
       <p></p>
       <p></p>
-    </sec>
-    <sec id="sec-10">
+    </div>
+    <div id="div-9">
       <title>Translation/Synopsis</title>
       <p>
         <bold>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of </bold>
@@ -645,8 +383,8 @@
       <p></p>
       <p></p>
       <p></p>
-    </sec>
-    <sec id="sec-11">
+    </div>
+    <div id="div-10">
       <title>Commentary</title>
       <p>
         <bold>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of </bold>
@@ -752,6 +490,6 @@
         <bold>11 TestEndnote 2</bold>
       </p>
       <p></p>
-    </sec>
+    </div>
   </text>
 </TEI>

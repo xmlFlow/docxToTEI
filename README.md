@@ -13,43 +13,109 @@
  * Order of the arttributes is important and will be read from let to right.
  * Content for XML or attributes is written in {}, always at the end of the markup. 
  
- ### Questions ?
-  1.
- 3. `<unclear>`  did I miss any use-case here ?
- 4. :interrobang: combined  both `<sic>` and `<corr>` together to `crt`. `crt` is arbitrary and can be changed. 
- 5.  Did I forget to include  any use-case in DEL ?
- 6. :interrobang:  combined  both `<orig>` and `<corr>` together to `orig{text}{text}`. `orig`  is arbitrary and can be changed.  If there is no  correction, correction text  is left out and we can use it for `-<orig>: alone: #{orignal}#`
- 7. :interrobang:  SRP{} instead of (()) ,  the original idea, we can do that way.
- 8. :interrobang: When ENTER key is typed, we being new text division, I feel may be users will add more than necessary enters or it is not easy to count. May be #LB# is better  and they can copy and paste.
- 9. :interrobang: ~~For the sentence, I suggested s.~~ original suggestion with SB and SE. For @xml:lang, what about SB@language-code ?
- 10. :interrobang: SPL{} instead of [[]], if this is a text block which , which is used frequently, we can decide.   
- 11. :interrobang:  ~~w as #w#~~  Wrong assumption. Corrected and example updated with original suggestion. :black_square_button:
- 12. Each ediction `ab` block followed by a paragraph block as a rule `</ab><pb>`
+ ### Discussion
+
+> `<add>` I propose place="above the line" hand="first" as default. @Dulip: Can we do "@@second" to get place="above the line" hand="second" or would this result in place="" hand="second"? (below in the list the entry "#&&@place:place content#" .... can be deleted)
+
+:thinking: I think may be we change the order or the attributes , e.g.  #&@hand@place{}# then, for the second we can  use only one &  (&@second), I can default the place to "above the line" and we can save one @ 
+
+> -<pb>: I think we can simplify it: #pb@n@facs# and take as default for facs "surface1" (most of the document have only one page). Thus "#pb@1r" would be <pb n="1r" facs="#surface1"/>.
+[[@all: should we also define "1r" as default for @n? Thus if we type "#pb" we get <pb n="1r" facs="#surface1"/>?]]
+
+:thinking:  When I talked with Manik there to get the zones information as in [google doc](https://docs.google.com/document/d/1vUsRn0wUryExGf8AOFbvqUCT9XFHZ6lWN3lNeouKSEU/edit#heading=h.2q9tj211wfsd).
+The idea there is to work with  Word headers, to get the structure,For me technically both solutions possible. We can disucss what is easier for the researchers.   
+
+> `<s>` how to mark the end of a sentence "SE#" or "#SE"? For #SB we would also need in some cases @xml:lang but the default option should be that there is no @.
+
+:thinking:  Changing the default place of # the  style will be a little tricky and can be error phone. What about that we support both #SB my sentence #SE and #SB{} for special cases.
+
+>  --for "edition": <div xml:id="ed" type="edition" xml:lang="nep-san">; @Dulip: since the language can be different here (e.g. new-san) could be have a field for "language" beside "edition" in the template whose content would overwrite the default value in xml:lang?
+
+:thinking:  What  about we write the Langauge in brackets for non-default ones ? Edition (isocode of other-language)  ?
+
+> `<orig>/<reg>` in `<choice>`, maybe better #reg instead of #orig? @Dulip please change in "Tei example" "corr" to "reg". For for <orig> alone: #orig{}? @Dulip, we mark e.g. the nukta sign ( ़) used inside words as <orig>. If this is done by the editors in the word edition its nasty. Could your tool automatically replace all " ़" in the edition by "<orig> ़</orig>"? That would be a great help!
+
+:heavy_check_mark: I have changed `orig` to `reg`.   I added a new line to replace `.` with a `<orig>.</orig>`  
+
+> in <gap>: shouldn't it be ....@agent instead of ...#agent? As default value for extent we can use "characters", the number is taken from the amount of +-s or /-s.
  
+:heavy_check_mark: I have corrected the mistake and took characters as default. 
+  
+> `<unclear>` default value for @cert should be "high"
+
+:heavy_check_mark:
+
+> `<sic>/<corr> `in `<choice>`: can we use "#cor" instead of "#crt" 
+
+:heavy_check_mark:
+
+
+> surplus: Maybe better "#sur" instead of "#srp"
+
+:heavy_check_mark:
+
+> `<ab> `could the tool add `<p/>` after `</ab>` (Manik needs it for the stylesheet)
+
+:heavy_check_mark: Sure, I have added i  a todo for me. 
+
+> div: as discussed, we use a field or a heading in the template. default values are:
+  --for "abstract": <div xml:id="abs" type="abstract" xml:lang="eng">
+
+:heavy_check_mark:
+ 
+>  --for "translation": `<div xml:id="et" type="english_translation" corresp="#ed" xml:lang="eng">`
+
+:heavy_check_mark:
+  
+> --or for "synopsis": `<div xml:id="syn" type="synopsis" corresp="#ed" xml:lang="eng">`
+
+:heavy_check_mark:
+
+> @Dulip: the file will have either a translation or a synopsis and depending on what occurs the TEI header needs to be modified (see Simon's list). In DN we simply use two different xml templates, one for edions with translation and another for editions with synopsis. Should we do the same for the word template(s)? Or can you programm that the header is automatically modified according to what div is used?]]
+--for "commentary": `<div xml:id="commentary" type="commentary" xml:lang="eng">`
+
+:heavy_check_mark:  We can work with one template, I can modify the header values, depending on whether translation or synopsis available.
+
+ 
+> <space>: default for @unit: "chars"
+
+:heavy_check_mark:
+
+> `<supplied>` maybe better "#sup" instead of "#spl". Default for @reason: lost
+
+:heavy_check_mark:
+
+> `<w>` @MANIK: If you have not done so yet, please send Dulip your regex
+ 
+:heavy_check_mark:
+  
     
  ### Formal annotations (div, ab, pb, lb, w, s, space, table, row, cell, add, del, gap, unclear)
  
- Markup  | Markup Example | TEI Example | S|  Remarks |
-| --- | ---- | --- | --- |  --- | 
-| - | `-` | `<lb @break=no>` |:ok: | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
-|Empty line | `` | `<lb>` | :ok: | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | |
-| #++++@extent@agent# | `#++++@line#` | `<gap @reason=“illegible“ extent=“4 lines“> ` | :construction: | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
-| #///@extent@agent# | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | :construction: | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
-| #&@hand@place# | `#&@first@above the line#` | `<add place="above the line" hand="first"/>` | :ok:| [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
-| #?@cert{text}# | `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` | ?3?|  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
-| #crt{text}{text}# | `#crt{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :ok: |  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
-| #del@rend{text}# | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` | ?5?|  [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
-| #orig{text}# | `#orig{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>` | ?6? |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
-| #srp{text}# | `#srp@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | ?7? | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
-| #&&@place:place content# | `#&&@place: this is a place&#` | `<add place="this is a place"/>` | ?8? |  [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
-| #ab@type@correspond# | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` | |  [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
-| #div@id@type@lang# | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` | |  [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
-| #pb@p:page-number@facs# | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` | | [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
-| #SB Content SE# | `#SB{A short affair}#` | `<s>A short affair</s>` | ?9? |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
-| #sp{@extenty@unit}# | `#sp{@3@lines}` | `<space quantity="3" unit="chars"/>` | | [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
-| #spl@reason{text}# | `#spl@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | ?10?|  [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
-| #Word1 word2 # | `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` | ?11? |  [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
-
+| S | Markup | Default | Markup Example | TEI Example | Remarks |
+| ---- | ---- | ---- | ---- | ---- |  ---- |
+|  | #++++@extent@agent# |`extent=characters` | `#++++@line#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+|  | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+| :construction: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
+| :construction: | #SB Content SE# | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+| :construction: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
+| :construction: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
+| :construction: | #pb@p:page-number@facs#|  | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
+| :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
+| :ok: | #Word1 word2 # | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
+| :ok: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
+| :ok:  | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | 
+| :ok:  | #&@hand@place{}# |`place="above the line" hand="first"` |`#&@first@above the line#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
+| :ok:  | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
+| :ok:  | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
+| :ok: | #reg{text}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
+| :ok: | #sur{text}# | |  `#sur@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
+| :ok: | #sp{@extenty@unit}# |@unit=chars | `#sp{@3@lines}` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
+| :ok: | #sup@reason{text}# | @reason=lost| `#spl@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
+ 
+ 1.  Add `<p/>` after each `<ab>`
+ 1.  Abstract defaults to `<div xml:id="abs" type="abstract" xml:lang="eng">`
+ 1.  Edition defaults to `<div xml:id="ed" type="edition" xml:lang="nep-san">`
 
 ### Content annotation (persName, placeName, geogName)
 | Markup  | Markup Example | TEI Example | Status|  Remarks |
@@ -69,12 +135,3 @@ footnotes are created inside note.
 italic in english has to converted to foreign
 ignore term ref and biblio comes later.
 
-
-
-
- 
-
-
-
-
- 
