@@ -46,7 +46,7 @@ class Document extends \DOMDocument {
 		$this->setBasicStructure();
 		$this->extractContent();
 		$this->cleanContent();
-		$this->extractMetadata();
+		//$this->extractMetadata();
 	}
 
 	public function getTeiFile(string $pathToFile) {
@@ -84,11 +84,11 @@ class Document extends \DOMDocument {
 			$listItem = null; // temporary container for previous list item
 			$listCounter = -1; // temporary container for current list ID
 			foreach ($document->getContent() as $key => $content) {
-				$contentId = 'sec-' . implode('_', $content->getDimensionalSectionId());
+				$contentId = 'div-' . implode('_', $content->getDimensionalSectionId());
 
 				// Appending section, must correspond section nested level; TODO optimize with recursion
 				if ($content->getDimensionalSectionId() !== $latestSectionId) {
-					$sectionNode = $this->createElement("sec");
+					$sectionNode = $this->createElement("div");
 					$sectionNode->setAttribute('id', $contentId);
 					$this->sections[$contentId] = $sectionNode;
 					if (count($content->getDimensionalSectionId()) === 1) {

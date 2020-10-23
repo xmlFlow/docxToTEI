@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="E_2253_0015A" xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to
+               Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma
+               Guṭhī [VS 1859]</title>
+            <title type="short">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to
+               Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma
+               Guṭhī</title>
+            <title type="sub">E_2253_0015A</title>
+
+            <author role="issuer">[Rāmānanda Bā̃ḍā]</author>
+
+            <respStmt>
+               <resp>main editor and translator</resp>
+               <name type="main_editor">Manik Bajracharya</name>
+            </respStmt>
+
+            <respStmt>
+               <resp>collaborator</resp>
+               <name type="collaborator"/>
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of
+               Religion and Law of Pre-modern Nepal</publisher>
+            <pubPlace>Heidelberg, Germany</pubPlace>
+            <date>2020</date>
+            <availability status="restricted">
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a
+                  Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+               <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of
+                  the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives,
+                  Government of Nepal).</p>
+            </availability>
+         </publicationStmt>
+
+         <notesStmt>
+            <note>This file is based on the template v2_2</note>
+            <note/>
+         </notesStmt>
+
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement>Kathmandu</settlement>
+                  <repository>Manoja Rājopādhyāya</repository>
+                  <idno>Private</idno>
+
+                  <altIdentifier type="microfilm">
+                     <settlement>Kathmandu, Berlin</settlement>
+                     <collection>Nepal German Manuscript Preservation Project</collection>
+                     <idno>NGMPP E 2253/15A</idno>
+                  </altIdentifier>
+               </msIdentifier>
+
+               <msContents>
+                  <textLang mainLang="nep"/>
+               </msContents>
+
+               <physDesc>
+                  <p>For details see <ref
+                        target="https://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/18745/"
+                        >entry in database</ref></p>
+               </physDesc>
+
+               <history>
+                  <origin>
+                     <p>Issued in <origDate>[VS 1859]</origDate>
+                     </p>
+                  </origin>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+
+      <encodingDesc>
+         <editorialDecl>
+            <p>The original document from which this e-text was formed is in the Devanāgarī script.
+               The electronic text below contains the following parts: abstract, edition in
+               Devanāgarī, English translation and optionally commentary.</p>
+            <p>The text as it appears in the original document is reproduced as faithfully as
+               possible, including diacritic marks, such as the nukta (़); format features, such as
+               line breaks; and graphical features, such as the middle dot (•) sporadically employed
+               to mark word separation, or macrons and lines of various shapes, often used as
+               placeholders or structuring elements. The editorial techniques applied introduce
+               minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in
+                  <gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in
+                  <gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is
+               used in the original documents. Furthermore, <gi>s</gi> is employed to indicate
+               sentence like text units.</p>
+         </editorialDecl>
+      </encodingDesc>
+
+      <profileDesc>
+         <creation>
+            <date>2020.08.16</date>
+         </creation>
+      </profileDesc>
+
+      <revisionDesc>
+         <listChange>
+            <change type="internal" when="2020-08-13" who="#MB">Edition created</change>
+            <change type="internal" when="2020-08-31" who="#MB">translation and commentary
+               added</change>
+            <change type="internal" when="2020-09-02" who="#MB">some corrections made to translation
+               and commentary</change>
+            <change type="internal" when="2020-10-05" who="#MB">Philip's corrections applied,
+               revised and sent back to Philip</change>
+            <change type="internal" when="2020-10-20" who="#MB">Philip's second corrections applied,
+               revised and sent back to Philip</change>
+            <change type="internal" when="2020-10-22" who="#MB">Philip's third corrections applied,
+               uploaded, names indexed</change>
+         </listChange>
+      </revisionDesc>
+   </teiHeader>
+
+   <facsimile>
+      <!--The coordinates refer to picture(s) with the shorter side having 1600 pixels. -->
+      <surface xml:id="surface1" facs="E_2253_0532.png" ulx="134" uly="157" lrx="1463" lry="822">
+         <zone xml:id="space1" ulx="672" uly="229" lrx="854" lry="276"/>
+         <zone xml:id="space2" ulx="678" uly="266" lrx="867" lry="310"/>
+         <zone xml:id="main_text" ulx="286" uly="316" lrx="1396" lry="694"/>
+      </surface>
+   </facsimile>
+
+   <text>
+      <body>
+
+         <div xml:id="abs" type="abstract" xml:lang="eng">
+            <ab>The document of this which is a copy is an account made to an unknown addressee by
+               Rāmānanda Bā̃ḍā describing how in VS 1859 control of the Luthāma Guṭhī, a
+               Matsyendranātha-related trust, had been misused by Bhājudhana Jaisi, and how the
+               sender had petitioned Rudravīra Sāha and Bam Sāha to regain control of the
+                  <foreign>guṭhī</foreign>.</ab>
+         </div>
+
+         <div xml:id="ed" type="edition" xml:lang="nep">
+            <pb n="1r" facs="#surface1"/>
+            <ab type="space" corresp="#space1">
+               <lb n="1"/><w>श्री</w><w>३</w><w>मत्स्येन्द्रनाथ</w><w>१</w>
+            </ab>
+            <p/>
+            <ab type="space" corresp="#space2">
+               <lb n="1"/><w>श्री</w><w>५</w><w>महाराजा</w><w>२</w>
+            </ab>
+            <p/>
+            <ab type="maintext" corresp="#main_text">
+               <lb n="1"/>
+               <s><w>लुथाम्&#x200c;</w>
+                  <w>गूठ</w>
+                  <w>भन्याको</w>
+                  <w>हाम्रा</w>
+                  <w>पुरुषा</w>
+                  <persName n="1"><w>जीवराज</w>
+                     <w>वांडाले</w></persName>
+                  <w><orig>¯ ¯</orig>१<orig>¯ ¯</orig>को</w>
+                  <w>रथमाँहां</w>
+                  <orig>•</orig>
+                  <w>विमान</w>
+                  <w>चढाई</w>
+                  <w>राष्याको</w>
+                  <w>हो</w></s>
+               <s><w>१९२</w>
+                  <w>वर्ष</w>
+                  <w>भयो</w>
+                  <orig>•</orig>
+                  <w>तस्को</w>
+                  <w>टह<lb n="2" break="no"/>ल्&#x200c;</w>
+                  <w>उनका</w>
+                  <w>संतानले</w>
+                  <orig>•</orig>
+                  <w>गरिआयाको</w>
+                  <w>हो</w></s>
+               <orig>•</orig>
+               <s><w> वीचमंहां</w>
+                  <gap agent="ink" extent="1 character"/>
+                  <w>वर्ष</w>
+                  <w>२४</w>
+                  <w>गोर्षाको</w>
+                  <w>राज्य</w>
+                  <w>भई</w>
+                  <orig>•</orig>
+                  <w>इजारा</w>
+                  <w>पर्दा</w>
+                  <orig>•</orig>
+                  <w>धर्मार्थ</w>
+                  <w>राष्याको</w>
+                  <w>गूठ</w>
+                  <orig>•</orig>
+                  <w>इजारा</w>
+                  <lb n="3"/>
+                  <w>हालि</w>
+                  <w>खाञौन</w></s>
+               <orig>•</orig>
+               <s><w>पुरुषावाट</w>
+                  <w>गरिआयाको</w>
+                  <w>टहल</w>
+                  <w>भन्या</w>
+                  <w>छोड्यौन</w></s>
+               <orig>•</orig>
+               <s><w>५९का</w>
+                  <w>सालमंहां</w>
+                  <orig>•</orig>
+                  <persName n="2"><w>भाजुधन</w>
+                     <w>जैसिले</w></persName>
+                  <orig>•</orig>
+                  <w>इजारा</w>
+                  <w>माफ</w>
+                  <orig>•</orig>
+                  <w>ग<lb n="4" break="no"/>राया</w>
+                  <w>भंदा</w>
+                  <w>सुंदा</w>
+                  <orig>•</orig>
+                  <w>श्री</w>
+                  <persName n="3"><w>रूद्रवीर</w>
+                     <w>साहथि</w></persName>
+                  <w>गञौं</w></s>
+               <orig>•</orig>
+               <s><w><orig>¯ ¯</orig>२<orig>¯ ¯</orig>ले</w>
+                  <orig>•</orig>
+                  <w>देवताको</w>
+                  <w>धन</w>
+                  <w>हर्दा</w>
+                  <orig>•</orig>
+                  <w>हाम्रो</w>
+                  <w>केहि</w>
+                  <w>लाग्दैन</w></s>
+               <orig>•</orig>
+               <s><w><orig>¯ ¯</orig>२<orig>¯ ¯</orig>ले</w>
+                  <orig>•</orig>
+                  <w>देवताको</w>
+                  <w>खेत</w>
+                  <lb n="5"/>
+                  <w>देवतालाई</w>
+                  <orig>•</orig>
+                  <w>वक्स्याप्रांत</w>
+                  <orig>•</orig>
+                  <w>तिन</w>
+                  <w>सहरका</w>
+                  <w>शिरिस्ताले</w>
+                  <orig>•</orig>
+                  <w>हामिले</w>
+                  <w>पाउन्या</w>
+                  <w>हो</w>
+                  <orig>•</orig>
+                  <w>वाँडाँको</w>
+                  <w>गूठ</w>
+                  <w>जैसिले</w>
+                  <w>कसो</w>
+                  <w>गरि</w>
+                  <w>लैगयो</w>
+                  <orig>•</orig>
+                  <w>अ<lb n="6" break="no"/>न्याय</w>
+                  <w>पर्यो</w>
+                  <w>भनि</w>
+                  <orig>•</orig>
+                  <w>विंति</w>
+                  <w>गर्दा</w>
+                  <orig>•</orig>
+                  <w>गुठिहारलाई</w>
+                  <orig>•</orig>
+                  <w>हरिदियाको</w>
+                  <w>छैनं</w>
+                  <orig>•</orig>
+                  <w>इजाराप</w>
+                  <w>माफ</w>
+                  <w>गरिदियाको</w>
+                  <w>छ</w>
+                  <w>भनि</w>
+                  <orig>•</orig>
+                  <w>आज्ञा</w>
+                  <w>भयो</w></s>
+               <orig>•</orig>
+               <s><w>भाजुध<lb n="7" break="no"/>नलाई</w>
+                  <orig>•</orig>
+                  <w>खै</w>
+                  <w>गरिदिउंला</w>
+                  <w>भन्नुभयो</w></s>
+               <orig>•</orig>
+               <s><w>रूवरू</w>
+                  <w>भाजुधन</w>
+                  <w>जैसिलाई</w>
+                  <orig>•</orig>
+                  <w>दिहाल्&#x200c;</w>
+                  <w>भनिदिनु</w>
+                  <w>भयो</w></s>
+               <orig>•</orig>
+               <s><w>दिउंला</w>
+                  <w>पनि</w>
+                  <w>भन्यो</w></s>
+               <orig>•</orig>
+               <s><w>घर</w>
+                  <w>माग्न</w>
+                  <w>जाँ<lb n="8" break="no"/>दाँ</w>
+                  <orig>•</orig>
+                  <w>कोहि</w>
+                  <w>वर्ष</w>
+                  <orig>•</orig>
+                  <w>मैले</w>
+                  <w>खायर</w>
+                  <orig>•</orig>
+                  <w>दिउंला</w>
+                  <orig>•</orig>
+                  <w>आज</w>
+                  <w>र</w>
+                  <w>श्री</w>
+                  <persName n="4"><w>वंव</w>
+                     <w>साहथि</w></persName>
+                  <orig>•</orig>
+                  <w>हामिलाई</w>
+                  <orig>•</orig>
+                  <w>भाजुधनले</w>
+                  <w>गूठ</w>
+                  <w>सुप्यो</w>
+                  <w>भन</w>
+                  <w>भन्यो</w></s>
+               <orig>•</orig>
+               <s><w>तसमंहां</w>
+                  <lb n="9"/>
+                  <w>चित्त</w>
+                  <w>वुझेन</w>
+                  <w>र</w>
+                  <orig>•</orig>
+                  <w>श्री</w>
+                  <w>वंव</w>
+                  <w>साहथि</w>
+                  <orig>•</orig>
+                  <w>विंति</w>
+                  <w>गर्न</w>
+                  <w>गञौं</w>
+               </s>
+               <orig>•</orig>
+               <s><w>उन्&#x200c;ले</w>
+                  <w>दियाको</w>
+                  <orig>•</orig>
+                  <w>दसखतको</w>
+                  <w>नकल्</w></s>
+               <orig>¯¯¯¯¯¯ ¯¯¯¯ ¯¯ ¯¯</orig>
+            </ab>
+         </div>
+
+         <div xml:id="et" type="english_translation" corresp="#ed" xml:lang="eng">
+            <pb n="1r"/>
+            <p>Thrice glorious Matsyendranātha - 1</p>
+            <p>His Fivefold Venerable Majesty<note place="end">From the date of the document, it is
+                  evident that the unnamed king was <persName n="5">Gīrvāṇayuddha Vikrama Śāha</persName>
+                  (r. 1799-1816).</note> - 2</p>
+            <p>The Luthāma <term ref="932">Guṭha</term> was established by our ancestor
+                  <persName n="6">Jīvarāja Bā̃ḍā</persName><note place="end">The document spells the name
+                  as Bāṃḍā.</note> when he offered the <foreign>vimāna</foreign><note place="end"
+                     ><foreign>Vimāna</foreign> here refers to the structure consisting of gilt
+                  metal panels placed around the sanctum of the Buṅgadyo chariot.</note> to the
+               chariot of 1 [i.e., Matsyendranātha]. His descendants have been serving this
+                  [<foreign>guṭha</foreign>] for 192 years. When in the meantime, after 24 years of
+               Gorkha rule, the <term ref="1838">ijārā</term> [system] was instituted, we did not
+               bid for and enjoy [the physical benefit of] the <foreign>ijārā</foreign> [contract]
+               for the <foreign>guṭha</foreign>, since it was established for the purpose of
+               [accumulating] religious merit. [However,] we did not discontinue the services
+               carried out by our ancestors. When in the year [VS 18]59 (1802 CE) we heard that
+                  <persName n="7">Bhājudhana Jaisi</persName> had had <foreign>ijārā</foreign>
+               [obligations on the part of the <foreign>guṭha</foreign>] forgiven, we went to
+                  <persName n="8">Rudravīra Sāha</persName><note place="end">Rudravīra Sāha was a son of
+                     <persName n="9">Vīrabāhu Sāha</persName> and a younger brother of <term ref="901"
+                     >Cautariyā</term> Bam Sāha. He held administrative positions at the district
+                  level at the end of the eighteenth century and during the early years of the
+                  nineteenth century (see RRS 19(1): 6). His posts include <term ref="1109"
+                     >subba</term> of <placeName n="10">Kumaun</placeName> at least until VS 1863 and of
+                     <placeName n="11">Salyan</placeName> in VS 1866.</note>. We petitioned him, saying:
+               "If 2 [i.e., the king] confiscates the deity's property, there is nothing we can do.
+               Since the king [now] has returned the deity's land to the deity, [and since] the
+                  <foreign>Śiristā</foreign>s<note place="end">The Śreṣṭhas, a high-caste Newar
+                  clan.</note> of the three cities have said that we should receive [charge of the
+                  <foreign>guṭha</foreign>], how is it that a Jaisi has seized control of a
+                  <foreign>guṭha</foreign> of the Bā̃ḍās? Injustice is being done [to us]," and he
+               told us: "We haven't removed the <foreign>guṭhī</foreign> members
+                  (<foreign>guṭhīhāra</foreign>); only <foreign>ijārā</foreign> [obligations] have
+               been forgiven." He said that he would take Bhājudhana to task. He, being face to face
+                  (<foreign>rubaru</foreign>) with Bhājudhana, told him to return [charge of the
+                  <foreign>guṭha</foreign>] immediately. He said, too, that he (i.e., Bhājudhana)
+               would return it. [However,] when we went to his house to ask for it back, he said: "I
+               will return it [only] after enjoying it for some [more] years. Tell <persName n="12">Baṃba
+                  Sāha</persName><note place="end">Cautariyā Baṃba Sāha (generally spelled as
+                     <persName n="13">Bam Sāha</persName>) was a son of Vīrabāhu Sāha and an elder brother
+                  of Rudravīra Sāha. He was appointed as the <foreign>subbā</foreign> of Kumaun in
+                  1797 (see RRS 4(4): 64). The Nepalese troops there fought the Anglo-Nepalese war of
+                  1814-1816 under his leadership.</note> today that [I,] Bhājudhana,
+               [have] handed the <foreign>guṭha</foreign> over." We were not satisfied with this
+               [proposition] and went to make petition to Baṃba Sāha.</p>
+            <p>A copy of the letter sent by him (i.e., Bam Sāha).<note place="end">This refers to
+                  E_2253_0015B, the following document in the collection.</note></p>
+         </div>
+
+         <div xml:id="commentary" type="commentary" xml:lang="eng">
+            <p>This document is the first in a series of documents concerning a legal issue that
+               arose in 1802 over the ownership of the Luthāma (lit. golden pillars) Guṭha.
+               According to the NGMPP catalogue card, these copied documents were in the collection
+               of <persName n="14">Manoj Rajopadhyaya</persName> of <placeName n="15">Kathmandu</placeName>. In
+               the current document, Rāmānanda Bā̃ḍā explains how in the year VS 1859 he realized
+               that Bhājudhana Jaisi was misusing his authority over the Luthāma Guṭha, and how he made
+               petition to Rudravīra Sāha, wherein he justified his claim to regain control of the
+                  <foreign>guṭhī</foreign>. Rudravīra's order to Bhājudhana to immediately return
+               charge of the <foreign>guṭhī</foreign> went unheeded, and Rāmānanda had to make
+               petition to Bam Sāha instead.</p>
+            <p>The document omits dates and the name of the writer. However, it mentions the
+               year VS (18)59 in its main body, and since document E_2253_0015B, which is
+               Cautariyā Bam Sāha's response to the writer's petition, is dated Śrāvaṇa of that year,
+               we can safely assume that the period this document covers lies within the first four
+               months of the year. Similarly, the writer can be determined to have been
+                  <persName n="16">Rāmānanda Bā̃ḍā</persName>, as E_2253_0015B is addressed to him.</p>
+            <p>As the document mentions, the disputed Luthāma Guṭhī was established when Jīvarāja
+               Bā̃ḍā donated the <foreign>vimāna</foreign> to the chariot of Matsyendranātha. Jīvarāja, with whom the
+               writer of the document claimed ancestry, was a resident of Okubāhāl in Patan and
+               is credited with completing Mahābuddha Temple. According to the
+                  <foreign>vaṃśāvalī</foreign>s, Jīvarāja received some gold from the Lāmā of Sikkim
+               when he finished building it. He then later used this gold to produce the
+               gilt metal panels and donated them to the chariot (<bibl corresp="489">Bajracharya and
+                  Michaels 2016/1</bibl>: 88). Hemarāja Śākya gives the date of the donation as
+               Wednesday, the 4th of the bright fortnight of Vaiśākha in NS 774 (1654 CE).<note
+                  place="end">See <bibl corresp="899">Śākya VS 2045</bibl>: 11. John Locke
+                  reiterates the date and adds that the information is contained in a manuscript in
+                  the possession of <foreign>guṭhī</foreign> members (<bibl corresp="398">Locke
+                     1980</bibl>: 304).</note> This dating, however, is be problematic. If
+               Jīvarāja completed Mahābuddha Temple in NS 721 (<bibl corresp="899">Śākya VS
+                  2045</bibl>: 10), and the Luthāma Guṭhī was created by the same Jīvarāja in
+               connection with the temple, it is unrealistic to believe that
+               there would be a gap of 53 years between the two events. Moreover, the document
+               states that the ancestors of the writer had served the <foreign>guṭhī</foreign> for
+               192 years. This would allow us to assume that the <foreign>guṭhī</foreign> was
+               established in VS 1667 (1859-192=1667). This would correspond to NS 730 or around.</p>
+            <p>Luthāma is variously spelled as Lusā, Lusāhāpau<note place="end">Śākya (VS
+                  2045)</note>, and Lhusā<note place="end">Owens (1989).</note>. The
+                  <foreign>guṭhī</foreign> maintains the panels, provides for transporting and
+               fitting the panels to the Matsyendranātha chariot each year, and manages storage of
+               the dismantled panels throughout the year after the festival is over. The members of
+               the <foreign>guṭhī</foreign> come from the <foreign>saṅgha</foreign> of Mahābuddha
+               Bāhā. Bruce Owens in the 1980s observed that the <foreign>guṭhī</foreign> had only one
+               member, though there used to be seven or eight (Owens 1989: 274).</p>
+            <p>The document mentions the Luthāma Guṭha's falling under the <foreign>ijārā</foreign> system of contractual management, and that this system was instituted after 24 years of Gorkha rule. Patan
+               came under Gorkha rule in 1768. Therefore, this transition of the <foreign>guṭhī</foreign>'s management
+               to the <foreign>ijārā</foreign> system occurred in or around 1792.
+               It is further learned from the document that the government later removed the Luthāma Guṭhī
+               from the <foreign>ijārā</foreign> form of control, and Bhājudhana then somehow
+               managed to tighten his control of the <foreign>guṭhī</foreign>. The document thus
+               announces that Cautariyā Bam Sāha was petitioned by Rāmānanda Bā̃ḍā to have the
+                  <foreign>guṭhī</foreign> returned to the original overseers.</p>
+         </div>
+      </body>
+   </text>
+</TEI>
