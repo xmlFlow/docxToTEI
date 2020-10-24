@@ -181,12 +181,15 @@
       <title>Facsimiles</title>
       <div id="div-4_1">
         <title>surface1:E_2253_0532.png:1r</title>
-        <p>&lt;surface  xml:id="surface1" facs:” &gt;</p>
-        <p>   &lt;zone xml:id=”space1”/&gt;</p>
-        <p>&lt;/surface&gt;</p>
       </div>
       <div id="div-4_2">
-        <title>surface2:1v</title>
+        <title>surface2:E_2253_0533.png:1v</title>
+      </div>
+      <div id="div-4_3">
+        <title>surface2:E_2253_0534.png:3r</title>
+      </div>
+      <div id="div-4_4">
+        <title></title>
       </div>
     </div>
     <div id="div-5">
@@ -196,47 +199,28 @@
     </div>
     <div id="div-6">
       <title>Edition</title>
-      <div id="div-6_1">
-        <title>Page:1r</title>
-        <div id="div-6_1_1">
-          <title>block:space:space1 (due to the page1r , i am creating the  zone inside facsimile Surface1, zone @xml:id=”space1”) What kind of bock,  to which zone it corresponds, zone name</title>
-          <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++ characters# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-          <p>page:2r</p>
-          <p>block:space2</p>
-          <p>A line break follows me</p>
-          <p></p>
-          <p>Two line breaks without a break follows me.</p>
-          <p>-</p>
-          <p>-</p>
-          <p>Text with 4 illegible characters</p>
-          <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++ characters# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-          <p></p>
-          <p>Text with a personal name</p>
-          <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
-          <p>Text with a place name </p>
-          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
-          <p>Text with a geographical name</p>
-          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
-          <p>Only for edition: All the lines with an ending -  has attribute break &lt;lb break="no"/&gt;</p>
-          <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
-          <p>This line includes a ़</p>
-          <p>तिष्ठा दिन जुरो ।। ।। ़ दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</p>
-          <p>भार्य्या रुकमणि [? - 12 characters] ति केहें व &amp;&amp;ब्लाब्ला&amp;&amp; in</p>
-          <p>न्हाय थुति समुहन दुन्ता । [? - 3 characters] बु रोव ‹८› । थ्वतिया वरसानन</p>
-          <p>दवथ्य जुरो । [? - 5 characters] चैत्यभ‹रा›र गजुरि थ्वतिया-</p>
-          <p>त जुरो । मेष संक्रान्ति ‹कुन्हु दान वियमार› । फं २ सियाब-</p>
-          <p>जि फं २ थ्व [? - 12 characters] ति फरेस</p>
-          <p>दान बिय जुरो । भुय [? - 14 characters] फं २ सष्वा-</p>
-          <p>र थुति याय रश [? - 9 characters] ‹इक्षा›भोजन</p>
-          <p>याय जुरो । गुथि‹जन› [? - 9 characters] ‹ज्यो›तिजु मणि-</p>
-          <p>देवजु कोवाहार दे [? - 8 characters] वराजजु वं-</p>
-          <p>कुवाहर कुतुजु थुति [? - 6 characters] यायमार । सेल्हो-</p>
-          <p>यात दम शुकि तय न [? - 6 characters] ग्वम्हनसे</p>
-          <p>नकर वम्हन प [? - 15 characters] नकम थ्वया</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</p>
-          <p></p>
-        </div>
-      </div>
+      <p>#pb@1r@surface1 ( to be discussed to default  to 1r and sufrace1 as default)</p>
+      <p>An empty line break follows me</p>
+      <p></p>
+      <p>Two line breaks without a break follows me.</p>
+      <p>-</p>
+      <p>-</p>
+      <p>Text with 4 illegible characters</p>
+      <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+      <p></p>
+      <p>Text with a personal name</p>
+      <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
+      <p>Text with a place name </p>
+      <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+      <p>Text with a geographical name</p>
+      <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
+      <p>Only for edition: All the lines with an ending -  has attribute break &lt;lb break="no"/&gt;</p>
+      <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
+      <p>This line includes a .</p>
+      <p>तिष्ठा दिन जुरो ।। ।। <bold>.</bold>  दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</p>
+      <p>नकर वम्हन प [? - 15 characters] नकम थ्वया</p>
+      <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</p>
+      <p></p>
     </div>
     <div id="div-7">
       <title>English Translation</title>
@@ -261,9 +245,13 @@
       <p>Sahasr Punya Rak Juro. Good luck always.</p>
       <p></p>
       <p></p>
+      <p></p>
+      <p></p>
     </div>
     <div id="div-8">
-      <title>Commentry</title>
+      <title>Translation/Synopsis</title>
+      <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of <italic>Lokeśvara</italic> was installed on the <italic>phalcā</italic><italic><sup>1</sup></italic>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 <italic>ropanī</italic>s<sup>2</sup> of land in …<sup>3</sup><ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link> <italic>guṭhī</italic><italic><sup>4</sup></italic> to observe the anniversary. From the income of the land, an offering of 2 <italic>pāthī</italic>s of dry-fried puffed rice (<italic>syāḥbaji</italic>), 2 <italic>pāthī</italic>s of <italic>thvã</italic>…<sup>5</sup> shall be made at the <italic>phalcā</italic> as charity (<italic>dāna</italic>) on <italic>meṣa saṃkrānti</italic>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 <italic>pāthī</italic>s of lime and … shall be fed food items of their choice<sup>6</sup>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju<sup>7</sup> of Ko Bāhāḥ, <italic>Kutuju</italic><italic><sup>8</sup></italic> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the <italic>guṭhī</italic>, shall …<sup>9</sup> . A certain amount has been allocated for renovation of the <italic>phalcā</italic>. The person who feeds shall receive a thousandfold merit.</p>
+      <p></p>
       <p></p>
       <p></p>
       <p></p>
@@ -271,224 +259,19 @@
       <p></p>
     </div>
     <div id="div-9">
-      <title>Translation/Synopsis</title>
-      <p>
-        <bold>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of </bold>
-        <bold>
-          <italic>Lokeśvara</italic>
-        </bold>
-        <bold> was installed on the </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold>
-          <italic>
-            <sup>1</sup>
-          </italic>
-        </bold>
-        <bold>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 </bold>
-        <bold>
-          <italic>ropanī</italic>
-        </bold>
-        <bold>s</bold>
-        <bold>
-          <sup>2</sup>
-        </bold>
-        <bold> of land in …</bold>
-        <bold>
-          <sup>3</sup>
-        </bold>
-        <bold>
-          <ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link>
-        </bold>
-        <bold> </bold>
-        <bold>
-          <italic>guṭhī</italic>
-        </bold>
-        <bold>
-          <italic>
-            <sup>4</sup>
-          </italic>
-        </bold>
-        <bold> to observe the anniversary. From the income of the land, an offering of 2 </bold>
-        <bold>
-          <italic>pāthī</italic>
-        </bold>
-        <bold>s of dry-fried puffed rice (</bold>
-        <bold>
-          <italic>syāḥbaji</italic>
-        </bold>
-        <bold>), 2 </bold>
-        <bold>
-          <italic>pāthī</italic>
-        </bold>
-        <bold>s of </bold>
-        <bold>
-          <italic>thvã</italic>
-        </bold>
-        <bold>…</bold>
-        <bold>
-          <sup>5</sup>
-        </bold>
-        <bold> shall be made at the </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold> as charity (</bold>
-        <bold>
-          <italic>dāna</italic>
-        </bold>
-        <bold>) on </bold>
-        <bold>
-          <italic>meṣa saṃkrānti</italic>
-        </bold>
-        <bold>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 </bold>
-        <bold>
-          <italic>pāthī</italic>
-        </bold>
-        <bold>s of lime and … shall be fed food items of their choice</bold>
-        <bold>
-          <sup>6</sup>
-        </bold>
-        <bold>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju</bold>
-        <bold>
-          <sup>7</sup>
-        </bold>
-        <bold> of Ko Bāhāḥ, </bold>
-        <bold>
-          <italic>Kutuju</italic>
-        </bold>
-        <bold>
-          <italic>
-            <sup>8</sup>
-          </italic>
-        </bold>
-        <bold> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the </bold>
-        <bold>
-          <italic>guṭhī</italic>
-        </bold>
-        <bold>, shall …</bold>
-        <bold>
-          <sup>9</sup>
-        </bold>
-        <bold> . A certain amount has been allocated for renovation of the </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold>. The person who feeds shall receive a thousandfold merit.</bold>
-      </p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
-    </div>
-    <div id="div-10">
       <title>Commentary</title>
-      <p>
-        <bold>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of </bold>
-        <bold>
-          <italic>Lokeśvara</italic>
-        </bold>
-        <bold> at a </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual</bold>
-        <bold>
-          <sup>10</sup>
-        </bold>
-        <bold> location of the </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold> in which the image was installed is not clear, as the inscription is no longer at its original location. The </bold>
-        <bold>
-          <italic>phalcā</italic>
-        </bold>
-        <bold> probably is the one to the east of the monastery.</bold>
-        <bold>
-          <sup>11</sup>
-        </bold>
-      </p>
-      <p>
-        <bold>1 [New.] var. </bold>
-        <bold>
-          <italic>phale</italic>
-        </bold>
-        <bold>, </bold>
-        <bold>
-          <italic>phalacā</italic>
-        </bold>
-        <bold>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</bold>
-      </p>
-      <p>
-        <bold>2 [fr. S.] var. </bold>
-        <bold>
-          <italic>ropani</italic>
-        </bold>
-        <bold>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four </bold>
-        <bold>
-          <italic>murīs</italic>
-        </bold>
-        <bold>. The area may vary according to the grade, but current standard area for a </bold>
-        <bold>
-          <italic>ropanī</italic>
-        </bold>
-        <bold> comprises 5,476 square feet.</bold>
-      </p>
-      <p>
-        <bold>3 The three unreadable letters here are perhaps the name of the place where the donated land was situated.</bold>
-      </p>
-      <p>
-        <bold>4 [fr. S. </bold>
-        <bold>
-          <italic>goṣṭhī</italic>
-        </bold>
-        <bold>] var. </bold>
-        <bold>
-          <italic>guṭh</italic>
-        </bold>
-        <bold>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</bold>
-      </p>
-      <p>
-        <bold>5 The letters inscribed after </bold>
-        <bold>
-          <italic>thva</italic>
-        </bold>
-        <bold> have already faded. But it probably means </bold>
-        <bold>
-          <italic>thvã</italic>
-        </bold>
-        <bold> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</bold>
-      </p>
-      <p>
-        <bold>6 As few letters have faded, we do not know the persons to be fed the items of their choice.</bold>
-      </p>
-      <p>
-        <bold>7 The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</bold>
-      </p>
-      <p>
-        <bold>8 He probably is </bold>
-        <bold>
-          <italic>kutu bhāju</italic>
-        </bold>
-        <bold>, a government official (Malla 2000: 53).</bold>
-      </p>
-      <p>
-        <bold>9 It is not clear what the members of the </bold>
-        <bold>
-          <italic>guṭhī</italic>
-        </bold>
-        <bold> were instructed to do, as the letters here in the inscription have faded.</bold>
-      </p>
-      <p>
-        <bold>10 Test Endnote 1</bold>
-      </p>
-      <p>
-        <bold>11 TestEndnote 2</bold>
-      </p>
+      <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of <italic>Lokeśvara</italic> at a <italic>phalcā</italic> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual<sup>10</sup> location of the <italic>phalcā</italic> in which the image was installed is not clear, as the inscription is no longer at its original location. The <italic>phalcā</italic> probably is the one to the east of the monastery.<sup>11</sup></p>
+      <p>1 [New.] var. <italic>phale</italic>, <italic>phalacā</italic>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</p>
+      <p>2 [fr. S.] var. <italic>ropani</italic>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four <italic>murīs</italic>. The area may vary according to the grade, but current standard area for a <italic>ropanī</italic> comprises 5,476 square feet.</p>
+      <p>3 The three unreadable letters here are perhaps the name of the place where the donated land was situated.</p>
+      <p>4 [fr. S. <italic>goṣṭhī</italic>] var. <italic>guṭh</italic>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</p>
+      <p>5 The letters inscribed after <italic>thva</italic> have already faded. But it probably means <italic>thvã</italic> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</p>
+      <p>6 As few letters have faded, we do not know the persons to be fed the items of their choice.</p>
+      <p>7 The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</p>
+      <p>8 He probably is <italic>kutu bhāju</italic>, a government official (Malla 2000: 53).</p>
+      <p>9 It is not clear what the members of the <italic>guṭhī</italic> were instructed to do, as the letters here in the inscription have faded.</p>
+      <p>10 Test Endnote 1</p>
+      <p>11 TestEndnote 2</p>
       <p></p>
     </div>
   </text>
