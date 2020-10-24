@@ -22,9 +22,8 @@
 > -<pb>: I think we can simplify it: #pb@n@facs# and take as default for facs "surface1" (most of the document have only one page). Thus "#pb@1r" would be <pb n="1r" facs="#surface1"/>.
 [[@all: should we also define "1r" as default for @n? Thus if we type "#pb" we get <pb n="1r" facs="#surface1"/>?]]
 
-:thinking:  When I talked with Manik there to get the zones information as in [google doc](https://docs.google.com/document/d/1vUsRn0wUryExGf8AOFbvqUCT9XFHZ6lWN3lNeouKSEU/edit#heading=h.2q9tj211wfsd).
-The idea there is to work with  Word headers, to get the structure,For me technically both solutions possible. We can disucss what is easier for the researchers.   
-
+:thinking:  When I talked with Manik we also added a proposal to the zones under section Facsimiles  in [google doc](https://docs.google.com/document/d/1vUsRn0wUryExGf8AOFbvqUCT9XFHZ6lWN3lNeouKSEU/edit#heading=h.2q9tj211wfsd).
+  
 > `<s>` how to mark the end of a sentence "SE#" or "#SE"? For #SB we would also need in some cases @xml:lang but the default option should be that there is no @.
 
 :thinking:  Changing the default place of # the  style will be a little tricky and can be error phone. What about that we support both #SB my sentence #SE and #SB{} for special cases.
@@ -94,13 +93,13 @@ The idea there is to work with  Word headers, to get the structure,For me techni
  
 | S | Markup | Default | Markup Example | TEI Example | Remarks |
 | ---- | ---- | ---- | ---- | ---- |  ---- |
-|  | #++++@extent@agent# |`extent=characters` | `#++++@line#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
-|  | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
 | :construction: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
 | :construction: | #SB Content SE# | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
-| :construction: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
 | :construction: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
-| :construction: | #pb@p:page-number@facs#|  | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
+| :ok: | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+| :ok: | #++++@extent@agent# |`extent=characters` | `#++++@line#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+| :ok: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
+| :ok: | #pb@p:page-number@facs#|  | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
 | :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
 | :ok: | #Word1 word2 # | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
 | :ok: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
@@ -125,13 +124,13 @@ The idea there is to work with  Word headers, to get the structure,For me techni
 | #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
 
 
-div ed : nep 
-page break is always the first <pb n:1r>
-<ab> : #AB{}#
-person,place,geog has no attribute n is  not needed.
-meaningless text. :orig   <orig> ddsf </orig>
-create error for : add hand and place mandatory. add hand="second" place="in the upper margin">नं.६६</add>
-footnotes are created inside note.
-italic in english has to converted to foreign
-ignore term ref and biblio comes later.
+* div ed : nep 
+* page break is always the first <pb n:1r>
+* <ab> : #AB{}#
+* person,place,geog has no attribute n is  not needed.
+* meaningless text. :orig   <orig> ddsf </orig>
+* create error for : add hand and place mandatory. add hand="second" place="in the upper margin">नं.६६</add>
+* footnotes are created inside note.
+* italic in english has to converted to foreign
+* ignore term ref and biblio comes later.
 
