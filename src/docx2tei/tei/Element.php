@@ -13,7 +13,6 @@ abstract class Element extends \DOMElement {
 
 		$this->dataObject = $dataObject;
 
-		// Determing element name
 		$name = '';
 		switch (get_class($dataObject)) {
 			case "docx2tei\objectModel\body\Par":
