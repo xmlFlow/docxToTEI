@@ -9,7 +9,7 @@ use docx2tei\structure\Table as TeiTable;
 
 class Document extends \DOMDocument {
 
-    var $tei;
+    var $root;
     var $teiHeader;
     var $text;
     var $back;
@@ -23,31 +23,21 @@ class Document extends \DOMDocument {
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
 
-        $impl = new \DOMImplementation();
-
         $this->setBasicStructure();
         $this->extractContent();
         $this->cleanContent();
-        //$this->createHEIHeader();
     }
 
     private function setBasicStructure() {
 
-        $this->tei = $this->createElement('TEI');
-        $this->tei->setAttributeNS(
-            "http://www.w3.org/2000/xmlns/",
-            "xmlns",
-            "http://www.structure-c.org/ns/1.0"
-        );
+        $this->root = $this->createElement('root');
+
         // $this->structure->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
 
-        $this->appendChild($this->tei);
-
-        $this->teiHeader = $this->createElement('teiHeader');
-        $this->tei->appendChild($this->teiHeader);
+        $this->appendChild($this->root);
 
         $this->text = $this->createElement('text');
-        $this->tei->appendChild($this->text);
+        $this->root->appendChild($this->text);
 
     }
 
@@ -188,31 +178,6 @@ class Document extends \DOMDocument {
         }
     }
 
-    private function createHEIHeader() {
-        $fileDesc = $this->createElement("fileDesc");
-        $this->teiHeader->appendChild($fileDesc);
-        $titleStmt = $this->createElement("titleStmt");
-        $fileDesc->appendChild($titleStmt);
-        //<title type="main"></title>
-        $mainTitle = $this->createElement("title", "default");
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'main';
-        $mainTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($mainTitle);
-        //<title type="short"></title>
-        $shortTitle = $this->createElement("title", "default");
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'short';
-        $shortTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($shortTitle);
-
-        //<title type="sub"></title>
-        $subTitle = $this->createElement("title", "default");
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'sub';
-        $subTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($subTitle);
-    }
 
 
 
