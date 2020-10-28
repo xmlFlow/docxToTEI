@@ -1,0 +1,20 @@
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 35
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP Stack trace:
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   3. docx2tei\tei\TEIDocument->__construct() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   4. docx2tei\tei\TEIDocument->checkStructure() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:23
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   5. preg_match() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:35
+[28-Oct-2020 21:54:53 Europe/Berlin] :: Section missing or wrong : Edition (nep-san)
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP Warning:  preg_match(): Delimiter must not be alphanumeric or backslash in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 35
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP Stack trace:
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   3. docx2tei\tei\TEIDocument->__construct() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   4. docx2tei\tei\TEIDocument->checkStructure() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:23
+[28-Oct-2020 21:54:53 Europe/Berlin] PHP   5. preg_match() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:35
+[28-Oct-2020 21:54:53 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
+[28-Oct-2020 21:55:29 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
+[28-Oct-2020 21:56:09 Europe/Berlin] :: Section missing or wrong : Edition (nep-san)
+[28-Oct-2020 21:56:09 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
+[28-Oct-2020 21:56:27 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis

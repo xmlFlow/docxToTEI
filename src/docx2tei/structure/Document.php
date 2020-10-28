@@ -52,11 +52,11 @@ class Document extends \DOMDocument {
             $listItem = null; // temporary container for previous list item
             $listCounter = -1; // temporary container for current list ID
             foreach ($document->getContent() as $key => $content) {
-                $contentId = 'div-' . implode('_', $content->getDimensionalSectionId());
+                $contentId = 'sec-' . implode('_', $content->getDimensionalSectionId());
 
                 // Appending section, must correspond section nested level; TODO optimize with recursion
                 if ($content->getDimensionalSectionId() !== $latestSectionId) {
-                    $sectionNode = $this->createElement("div");
+                    $sectionNode = $this->createElement("sec");
                     $sectionNode->setAttribute('id', $contentId);
                     $this->sections[$contentId] = $sectionNode;
                     if (count($content->getDimensionalSectionId()) === 1) {

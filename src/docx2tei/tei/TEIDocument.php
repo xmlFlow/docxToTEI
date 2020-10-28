@@ -4,20 +4,39 @@
 use docx2tei\structure\Document;
 
 class TEIDocument extends \DOMDocument {
-
+    var $cfg;
     var $root;
     var $teiHeader;
     var $text;
     var $back;
     var $structuredDocument;
+    var $xpath;
 
-    public function __construct(Document $structuredDocument) {
+    public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
-
+        $this->xpath = new \DOMXPath($structuredDocument);
+        $this->cfg = $config;
+        $tmpStr = $this->structuredDocument->saveXML();
         parent::__construct('1.0', 'utf-8');
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
+        $this->checkStructure();
         $this->setBasicStructure();
+        $this->createHEIHeader();
+
+
+    }
+
+    private function checkStructure() {
+        $sectionNodes = $this->xpath->query("//root/text/sec/title");
+        foreach($sectionNodes as $section) {
+            if (!in_array($section->nodeValue,$this->cfg->sections)){
+                // specially handle Editions
+                if (!preg_match("/Edition(\s)*\((.)*\)/i",$section->nodeValue)) {
+                    $this->print_error("Section missing or wrong : " . $section->nodeValue);
+                }
+            };
+        }
 
 
     }
@@ -71,5 +90,13 @@ class TEIDocument extends \DOMDocument {
     public function getDocument(string $pathToFile) {
         $this->save($pathToFile);
         }
+
+    /**
+     * @param $value
+     */
+    private function print_error($message): void {
+        error_log(":: ".$message);
+        echo "".$message."\n";
+    }
 
 }

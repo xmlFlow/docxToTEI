@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.structure-c.org/ns/1.0">
-  <teiHeader/>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">default</title>
+        <title type="short">default</title>
+        <title type="sub">default</title>
+      </titleStmt>
+    </fileDesc>
+  </teiHeader>
   <text/>
 </TEI>
