@@ -1,9 +1,9 @@
-<?php namespace docx2tei\tei;
+<?php namespace docx2tei\structure;
 
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Cell as TeiCell;
+use docx2tei\structure\Cell as TeiCell;
 
 class Row extends Element {
 	public function __construct(DataObject $dataObject) {

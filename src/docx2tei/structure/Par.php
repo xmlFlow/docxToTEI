@@ -1,9 +1,9 @@
-<?php namespace docx2tei\tei;
+<?php namespace docx2tei\structure;
 
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Text as TeiText;
+use docx2tei\structure\Text as TeiText;
 
 class Par extends Element {
 

@@ -5,7 +5,7 @@
 require_once (__DIR__ . "/vendor/autoload.php");
 
 use docx2tei\DOCXArchive;
-use docx2tei\tei\Document;
+use docx2tei\structure\Document;
 
 $inputPath = null;
 $outputPath = null;
@@ -56,7 +56,8 @@ if (array_key_exists("singleFile", $inputs)) {
 function writeOutput(string $inputFilePath, array $outputPathParts, array $inputPathParts, string $outputDir, bool $isDir): void
 {
 	$docxArchive = new DOCXArchive($inputFilePath);
-	$teiXML = new Document($docxArchive);
+	$structuredXML = new Document($docxArchive);
+	$teiDocument = new docx2tei\tei\TEIDocument($structuredXML);
 
 	if (array_key_exists("extension", $outputPathParts) && !$isDir) {
 		$filename = $outputPathParts["filename"];
@@ -66,14 +67,16 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 
 	if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
-        $teiXML->getTeiFile($filePath);
+        //$structuredXML->getTeiFile($filePath);
+        $teiDocument->getDocument($filePath);
         $docxArchive->getMediaFiles($outputDir);
 	} else {
 		if (!is_dir($outputDir . $filename)) {
 			mkdir($outputDir . $filename);
 		}
         $dirFilePath = $outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml";
-        $teiXML->getTeiFile($dirFilePath);
+        //$structuredXML->getTeiFile($dirFilePath);
+        $teiDocument->getDocument($dirFilePath);
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}
 }

@@ -1,9 +1,9 @@
-<?php namespace docx2tei\tei;
+<?php namespace docx2tei\structure;
 
 
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\tei\Row as TeiRow;
+use docx2tei\structure\Row as TeiRow;
 
 class Table extends Element {
 

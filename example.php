@@ -5,7 +5,7 @@
 require_once (__DIR__ . "/vendor/autoload.php");
 
 use docx2tei\DOCXArchive;
-use docx2tei\tei\Document;
+use docx2tei\structure\Document;
 
 // Parsing DOCX
 $path = "samples/input/example.docx";

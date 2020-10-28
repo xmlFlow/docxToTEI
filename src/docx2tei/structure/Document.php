@@ -1,11 +1,11 @@
-<?php namespace docx2tei\tei;
+<?php namespace docx2tei\structure;
 
 
 use docx2tei\DOCXArchive;
 use docx2tei\objectModel\body\Par;
-use docx2tei\tei\Figure as TeiFigure;
-use docx2tei\tei\Par as TeiPar;
-use docx2tei\tei\Table as TeiTable;
+use docx2tei\structure\Figure as TeiFigure;
+use docx2tei\structure\Par as TeiPar;
+use docx2tei\structure\Table as TeiTable;
 
 class Document extends \DOMDocument {
 
@@ -28,7 +28,7 @@ class Document extends \DOMDocument {
         $this->setBasicStructure();
         $this->extractContent();
         $this->cleanContent();
-        $this->createHEIHeader();
+        //$this->createHEIHeader();
     }
 
     private function setBasicStructure() {
@@ -37,9 +37,9 @@ class Document extends \DOMDocument {
         $this->tei->setAttributeNS(
             "http://www.w3.org/2000/xmlns/",
             "xmlns",
-            "http://www.tei-c.org/ns/1.0"
+            "http://www.structure-c.org/ns/1.0"
         );
-        // $this->tei->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+        // $this->structure->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
 
         $this->appendChild($this->tei);
 
@@ -212,15 +212,9 @@ class Document extends \DOMDocument {
         $typeAttrib->value = 'sub';
         $subTitle->appendChild($typeAttrib);
         $titleStmt->appendChild($subTitle);
-
-
-        $articleMetaNode = $this->createElement("article-meta");
-        $this->teiHeader->appendChild($articleMetaNode);
-        $titleGroupNode = $this->createElement("title-group");
-        $articleMetaNode->appendChild($titleGroupNode);
-        $articleTitleNode = $this->createElement("article-title");
-        $titleGroupNode->appendChild($articleTitleNode);
     }
+
+
 
     public function getTeiFile(string $pathToFile) {
         $this->save($pathToFile);

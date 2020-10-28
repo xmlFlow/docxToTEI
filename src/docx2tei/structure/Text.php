@@ -1,4 +1,4 @@
-<?php namespace docx2tei\tei;
+<?php namespace docx2tei\structure;
 
 
 

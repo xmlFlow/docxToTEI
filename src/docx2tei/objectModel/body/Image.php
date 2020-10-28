@@ -1,7 +1,5 @@
 <?php namespace docx2tei\objectModel\body;
 
-
-
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
 
