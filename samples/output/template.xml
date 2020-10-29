@@ -49,7 +49,7 @@
       </editorialDecl>
     </encodingDesc>
     <profileDesc><creation> <date>2020-10-29</date> </creation> </profileDesc>
-    <revisionDesc> <listChange> <change type="internal" when="2020-10-29" who="#XX">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-10-29" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
   </teiHeader>
   <text/>
 </TEI>

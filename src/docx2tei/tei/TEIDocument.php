@@ -14,18 +14,19 @@ class TEIDocument extends DOMDocument {
     var $structuredDocument;
     var $xpath;
     var $headers = array();
+    var $currentDate ;
+
 
     public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
         $this->xpath = new DOMXPath($structuredDocument);
         $this->cfg = $config;
+        $this->currentDate = date("Y-m-d");
         parent::__construct('1.0', 'utf-8');
-        $this->preserveWhiteSpace = false;
+        $this->preserveWhiteSpace = true;
         $this->formatOutput = true;
         $this->isCorrectStructure();
-
         $this->getHeaders();
-
         $this->setBasicStructure();
         $this->setHeaders();
 
@@ -310,13 +311,13 @@ class TEIDocument extends DOMDocument {
     }
     private function setProfileDescription(): void {
         $profileDesc = $this->createDocumentFragment();
-        $profileDesc->appendXML("<profileDesc><creation> <date>" . date("Y-m-d") . "</date> </creation> </profileDesc>");
+        $profileDesc->appendXML("<profileDesc><creation> <date>" . $this->currentDate . "</date> </creation> </profileDesc>");
         $this->teiHeader->appendChild($profileDesc);
     }
 
     private function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
-        $revisionDesc->appendXML('<revisionDesc> <listChange> <change type="internal" when="'.date("Y-m-d").'" who="#XX">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="'.$this->currentDate.'" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->teiHeader->appendChild($revisionDesc);
     }
 
