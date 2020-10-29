@@ -1,18 +1,36 @@
 ## Tokens used in xml and possible pseudocodes in Word
 
 ### TODO
-| status| Issued|
+| status| Issue|
 |--- | ---|
-| :ok: | Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
-| :ok: | Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
-| :ok: | TEI: Document ID|
-| :ok: | TEI: Main title of document| 
-/ :ok: / TEI: Short title of document |  
-/:ok: :repeat: / TEI: Sub of document |  
-/:ok:  / TEI: Author/issuer of document|
-/:ok:  / TEI: Name of editor(s)|
-/:ok:  / TEI: Name of collaborator(s))|
-/:ok:  :question: Changed the name to be unique in the table / TEI: Deposit holding institution|
+| :ok: | Tei Header   Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
+| :ok: | Tei Header   Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
+| :ok: | Tei Header   ( Document ID|
+| :ok: | Tei Header   ( Main title of document) | 
+| :ok: | Tei Header   ( Short title of document)|  
+| :ok: | Tei Header ( Sub of document) |  
+| :ok: | Tei Header   ( Author/issuer of document)|
+| :ok: | Tei Header   ( Name of editor(s)|
+| :ok: | Tei Header   ( Name of collaborator(s))|
+| :ok: | Tei Header   ( :question: Changed the name to be unique in the table / ( Deposit holding institution)|
+| :ok: | Tei Header   (Place of deposit / current location of document)|
+| :ok: | Tei Header   (Deposit holding institution )|
+| :ok: | Tei Header   (Inventory number assigned by holding institution )|
+| :ok: | Tei Header   (Location )|
+| :ok: | Tei Header   (Alternative manifestation(/inventory Type of manifestation) |
+| :ok: | Tei Header   (Inventory number) |
+| :ok: | Tei Header   (Main language of document) |
+| :ok: | Tei Header   (Other languages) |
+| :ok: | Tei Header   :question: `ref target (Link to catalogue entry) |
+| :ok: | Tei Header   (Date of origin of document) |
+| :ok: | Tei Header   (Place of origin of document) |
+| :question: | Is it needed now ??Tei Header   (Name of image file(s)) |
+
+
+
+
+
+
   
  
 | Word: header metadata   block user edits of the header| :todo: 

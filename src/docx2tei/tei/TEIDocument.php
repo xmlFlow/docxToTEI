@@ -38,12 +38,12 @@ class TEIDocument extends DOMDocument {
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
-                $key = $cells->item(0)->nodeValue;
-                $value = $cells->item(1)->textContent;
+                $key = trim($cells->item(0)->nodeValue);
+                $value = trim($cells->item(1)->textContent);
                 if (!in_array($key, $this->cfg->headers)) {
                     $this->print_error("Unallowed header in the metadata " . $key);
                 } else {
-                    $this->headers[$key.""]=$value;
+                    $this->headers[$key]=$value;
                 }
 
             } else {
@@ -213,28 +213,91 @@ class TEIDocument extends DOMDocument {
         $sourceDesc = $this->createElement("sourceDesc");
         $this->teiHeader->appendChild($sourceDesc);
         $msDesc = $this->createElement("msDesc");
+
         $sourceDesc->appendChild($msDesc);
+        $this->setMsIdentifier($msDesc);
+        $this->setAltIdentifier($msDesc);
+        $this->setMsContents($msDesc);
+        $this->createPhysicalDescription($msDesc);
+        $this->createHistoryDescription($msDesc);
+
+    }
+
+    /**
+     * @param \DOMElement $msDesc
+     * @return array
+     */
+    private function setMsIdentifier(\DOMElement $msDesc): array {
         $msIdentifier = $this->createElement("msIdentifier");
-        $settlement = $this->createElement("settlement",$this->headers["Place of deposit / current location of document"]);
-        $repository = $this->createElement("repository",$this->headers["Deposit holding institution"]);
-        $idno = $this->createElement("idno",$this->headers["Inventory number assigned by holding institution"]);
+        $settlement = $this->createElement("settlement", $this->headers["Place of deposit / current location of document"]);
+        $repository = $this->createElement("repository", $this->headers["Deposit holding institution"]);
+        $idno = $this->createElement("idno", $this->headers["Inventory number assigned by holding institution"]);
         $msIdentifier->appendChild($settlement);
         $msIdentifier->appendChild($repository);
         $msDesc->appendChild($msIdentifier);
         $msIdentifier->appendChild($idno);
+        return array($settlement, $idno);
+    }
 
+    /**
+     * @param \DOMElement $msDesc
+     */
+    private function setAltIdentifier(\DOMElement $msDesc): void {
         $altIdentifier = $this->createElement("altIdentifier");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'microfilm';
         $altIdentifier->appendChild($typeAttrib);
-        $settlement = $this->createElement("settlement",$this->headers["Location"]);
-        $collection = $this->createElement("collection",$this->headers["Alternative manifestation/inventory Type of manifestation"]);
-        $idno = $this->createElement("idno",$this->headers["Inventory number"]);
+        $settlement = $this->createElement("settlement", $this->headers["Location"]);
+        $collection = $this->createElement("collection", $this->headers["Alternative manifestation/inventory Type of manifestation"]);
+        $idno = $this->createElement("idno", $this->headers["Inventory number"]);
         $altIdentifier->appendChild($settlement);
         $altIdentifier->appendChild($collection);
         $msDesc->appendChild($altIdentifier);
         $altIdentifier->appendChild($idno);
+    }
 
+    /**
+     * @param \DOMElement $msDesc
+     * @return array
+     */
+    private function setMsContents(\DOMElement $msDesc): array {
+        $msContents = $this->createElement("msContents");
+        $textLang = $this->createElement("textLang");
+        $msContents->appendChild($textLang);
+        $mainLang = $this->createAttribute('mainLang');
+        $mainLang->value = $this->headers["Main language of document"];
+        $textLang->appendChild($mainLang);
+        $otherLangs = $this->createAttribute('otherLangs');
+        $otherLangs->value = $this->headers["Other languages"];
+        $textLang->appendChild($otherLangs);
+        $msDesc->appendChild($msContents);
+        return array($msContents, $textLang, $mainLang, $otherLangs);
+    }
+
+    /**
+     * @param \DOMElement $msDesc
+     * @return array
+     */
+    private function createPhysicalDescription(\DOMElement $msDesc): array {
+        $phsyDesc = $this->createElement("phsyDesc");
+        $p = $this->createDocumentFragment();
+        $p->appendXML('<p>For details see <ref target="..">' . $this->headers["Link to catalogue entry"] . '</ref></p>');
+        $phsyDesc->appendChild($p);
+        $msDesc->appendChild($phsyDesc);
+        return array($phsyDesc, $p);
+    }
+
+    /**
+     * @param \DOMElement $msDesc
+     */
+    private function createHistoryDescription(\DOMElement $msDesc): void {
+        $history = $this->createElement("history");
+        $origin = $this->createElement("origin");
+        $history->appendChild($origin);
+        $p = $this->createDocumentFragment();
+        $p->appendXML('<p>Issued in <origDate>' . $this->headers["Date of origin of document"] . '</origDate> from <origPlace>' . $this->headers["Place of origin of document"] . '</origPlace></p>');
+        $origin->appendChild($p);
+        $msDesc->appendChild($history);
     }
 
 }

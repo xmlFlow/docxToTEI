@@ -25,10 +25,21 @@
           <idno>Inventory number assigned by holding institution</idno>
         </msIdentifier>
         <altIdentifier type="microfilm">
-          <settlement>Location </settlement>
+          <settlement>Location</settlement>
           <collection>Alternative manifestation/inventory Type of manifestation</collection>
           <idno>Inventory number</idno>
         </altIdentifier>
+        <msContents>
+          <textLang mainLang="Main language of document" otherLangs="Other languages"/>
+        </msContents>
+        <phsyDesc>
+          <p>For details see <ref target="..">Link to catalogue entry</ref></p>
+        </phsyDesc>
+        <history>
+          <origin>
+            <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p>
+          </origin>
+        </history>
       </msDesc>
     </sourceDesc>
   </teiHeader>
