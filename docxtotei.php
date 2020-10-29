@@ -76,7 +76,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 	$structuredXML = new Document($docxArchive);
 
     $teiDocument = new docx2tei\tei\TEIDocument($structuredXML, $config);
-    $teiDocument = new Document($docxArchive);
+    //$teiDocument = new Document($docxArchive);
 	if (array_key_exists("extension", $outputPathParts) && !$isDir) {
 		$filename = $outputPathParts["filename"];
 	} else {

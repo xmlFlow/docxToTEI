@@ -1,10 +1,22 @@
 ## Tokens used in xml and possible pseudocodes in Word
 
 ### TODO
-|Issue | status|
+| status| Issued|
 |--- | ---|
-| Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] | :ok: |
-| Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] | :ok: |
+| :ok: | Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
+| :ok: | Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
+| :ok: | TEI: Document ID|
+| :ok: | TEI: Main title of document| 
+/ :ok: / TEI: Short title of document |  
+/:ok: :repeat: / TEI: Sub of document |  
+/:ok:  / TEI: Author/issuer of document|
+/:ok:  / TEI: Name of editor(s)|
+/:ok:  / TEI: Name of collaborator(s))|
+/:ok:  :question: Changed the name to be unique in the table / TEI: Deposit holding institution|
+  
+ 
+| Word: header metadata   block user edits of the header| :todo: 
+
 
   
 

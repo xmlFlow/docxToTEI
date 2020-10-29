@@ -14,11 +14,12 @@
     "Author/issuer of document",
     "Date of origin of document",
     "Document ID",
+    "Deposit holding institution",
     "Holding institution",
     "Inventory number",
     "Inventory number assigned by holding institution",
     "Link to catalogue entry",
-    "Location ",
+    "Location",
     "Main language of document",
     "Main title of document",
     "Name of editor(s)",
@@ -27,6 +28,7 @@
     "Other languages",
     "Place of deposit / current location of document",
     "Place of origin of document",
-    "Holding institution"
+    "Holding institution",
+    "Short title of document"
   ]
 }
