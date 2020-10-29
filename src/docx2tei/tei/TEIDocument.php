@@ -16,29 +16,67 @@ class TEIDocument extends \DOMDocument {
         $this->structuredDocument = $structuredDocument;
         $this->xpath = new \DOMXPath($structuredDocument);
         $this->cfg = $config;
-        $tmpStr = $this->structuredDocument->saveXML();
         parent::__construct('1.0', 'utf-8');
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
-        $this->checkStructure();
+        $this->isCorrectStructure();
         $this->setBasicStructure();
-        $this->createHEIHeader();
+        $this->setHeader();
 
 
     }
 
-    private function checkStructure() {
+    private function isCorrectStructure(): bool {
+        $correct = true;
+        $correct = $this->isCorrectSections();
+        $correct = $this->isCorrectHeader();
+
+        return $correct;
+
+    }
+
+    /**
+     * @return bool
+     */
+    private function isCorrectSections(): bool {
         $sectionNodes = $this->xpath->query("//root/text/sec/title");
-        foreach($sectionNodes as $section) {
-            if (!in_array($section->nodeValue,$this->cfg->sections)){
+        foreach ($sectionNodes as $section) {
+            if (!in_array($section->nodeValue, $this->cfg->sections)) {
                 // specially handle Editions
-                if (!preg_match("/Edition(\s)*\((.)*\)/i",$section->nodeValue)) {
+                if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
                     $this->print_error("Section missing or wrong : " . $section->nodeValue);
+                    return false;
                 }
             };
         }
+        return true;
+    }
+
+    /**
+     * @param $value
+     */
+    private function print_error($message): void {
+        echo("" . $message . "\n");
+        //error_log($message."\n");
+    }
+
+    private function getHeader() {
+        $metadataFields = $this->xpath->query("//root/text/sec[@id='sec-1']/table-wrap/table/row");
+        foreach ($metadataFields as $metadata) {
+            $cells = $metadata->getElementsByTagName("p");
+            if (count($cells) == 2) {
+               $key = $cells->item(0)->textContent;
+               $value = $cells->item(1)->textContent;
+
+            } else {
+                $this->print_error("Metadata table should be 2 columns wide");
+            }
+        }
+    }
 
 
+    private function isCorrectHeader(): bool {
+        return true;
     }
 
     private function setBasicStructure() {
@@ -60,7 +98,9 @@ class TEIDocument extends \DOMDocument {
         $this->root->appendChild($this->text);
 
     }
-    private function createHEIHeader() {
+
+    private function setHeader() {
+        $headers = $this->getHeader();
         $fileDesc = $this->createElement("fileDesc");
         $this->teiHeader->appendChild($fileDesc);
         $titleStmt = $this->createElement("titleStmt");
@@ -86,17 +126,8 @@ class TEIDocument extends \DOMDocument {
         $titleStmt->appendChild($subTitle);
     }
 
-
-    public function getDocument(string $pathToFile) {
+    public function getTeiFile(string $pathToFile) {
         $this->save($pathToFile);
-        }
-
-    /**
-     * @param $value
-     */
-    private function print_error($message): void {
-        error_log(":: ".$message);
-        echo "".$message."\n";
     }
 
 }

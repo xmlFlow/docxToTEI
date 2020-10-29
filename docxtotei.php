@@ -8,7 +8,8 @@ use docx2tei\DOCXArchive;
 use docx2tei\structure\Document;
 
 
-ini_set('error_log', 'errors.log');
+//ini_set('error_log', 'errors.log');
+
 $configFile = 'config.json';
 $config = null;
 
@@ -75,7 +76,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 	$structuredXML = new Document($docxArchive);
 
     $teiDocument = new docx2tei\tei\TEIDocument($structuredXML, $config);
-
+    $teiDocument = new Document($docxArchive);
 	if (array_key_exists("extension", $outputPathParts) && !$isDir) {
 		$filename = $outputPathParts["filename"];
 	} else {
@@ -85,7 +86,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 	if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
         //$structuredXML->getTeiFile($filePath);
-        $teiDocument->getDocument($filePath);
+        $teiDocument->getTeiFile($filePath);
         $docxArchive->getMediaFiles($outputDir);
 	} else {
 		if (!is_dir($outputDir . $filename)) {
@@ -93,7 +94,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 		}
         $dirFilePath = $outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml";
         //$structuredXML->getTeiFile($dirFilePath);
-        $teiDocument->getDocument($dirFilePath);
+        $teiDocument->save($dirFilePath);
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}
 }

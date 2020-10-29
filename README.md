@@ -1,6 +1,11 @@
 ## Tokens used in xml and possible pseudocodes in Word
 
 ### TODO
+|Issue | status|
+|--- | ---|
+| Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] | :ok: |
+| Check: header metadata ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] | :ok: |
+  
 
 * `<ab>` : #AB{}# is only for edition block. Rest blocks will have a `<p>` 
 * Add _iso_ language list and  add it to define  the default language  { nep, san, new, hin, tib, eng}

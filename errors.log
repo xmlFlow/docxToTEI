@@ -18,3 +18,302 @@
 [28-Oct-2020 21:56:09 Europe/Berlin] :: Section missing or wrong : Edition (nep-san)
 [28-Oct-2020 21:56:09 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
 [28-Oct-2020 21:56:27 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
+[29-Oct-2020 08:57:33 Europe/Berlin] :: Section missing or wrong : Translation/Synopsis
+[29-Oct-2020 08:59:55 Europe/Berlin] <tr><td>Section missing or wrong : Translation/Synopsis</td></tr>
+[29-Oct-2020 09:02:39 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:03:06 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:21:41 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:21:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:36
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 36
+[29-Oct-2020 09:22:06 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP Warning:  DOMXPath::query(): Invalid expression in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 115
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   3. docx2tei\tei\TEIDocument->__construct($structuredDocument = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   4. docx2tei\tei\TEIDocument->structureCorrect() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:23
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   5. docx2tei\tei\TEIDocument->headerCorrect() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:33
+[29-Oct-2020 09:22:06 Europe/Berlin] PHP   6. DOMXPath->query(*uninitialized*) /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:115
+[29-Oct-2020 09:22:35 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:23:17 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP Warning:  DOMXPath::query(): Invalid expression in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 115
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   3. docx2tei\tei\TEIDocument->__construct($structuredDocument = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   4. docx2tei\tei\TEIDocument->structureCorrect() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:23
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   5. docx2tei\tei\TEIDocument->headerCorrect() /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:33
+[29-Oct-2020 09:23:17 Europe/Berlin] PHP   6. DOMXPath->query(*uninitialized*) /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:115
+[29-Oct-2020 09:23:54 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:37:59 Europe/Berlin] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 125
+[29-Oct-2020 09:38:01 Europe/Berlin] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 125
+[29-Oct-2020 09:38:20 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:40:18 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:43:08 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:43:08 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:44:03 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:44:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:44:28 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:44:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:44:54 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:44:54 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:45:09 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:45:09 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:45:16 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:45:16 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP   3. spl_autoload_call() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP   5. Composer\Autoload\includeFile() /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:45:46 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:45:46 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP   3. spl_autoload_call() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP   5. Composer\Autoload\includeFile() /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:46:28 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:46:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:34 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:46:34 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:46:39 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP   3. spl_autoload_call() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP   5. Composer\Autoload\includeFile() /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:46:52 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:46:52 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:46:55 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:46:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:47:24 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:47:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Return value of docx2tei\tei\TEIDocument::structureCorrect() must be of the type bool, none returned in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:37
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(23): docx2tei\tei\TEIDocument->structureCorrect()
+#1 /home/withanage/projects/docxToTEI/docxtotei.php(77): docx2tei\tei\TEIDocument->__construct()
+#2 /home/withanage/projects/docxToTEI/docxtotei.php(60): writeOutput()
+#3 {main}
+  thrown in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 37
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:47:52 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:47:52 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:48:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:85
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#1 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#2 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#3 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#4 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#5 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#6 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#7 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocumen in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:48:17 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:48:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:85
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#1 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#2 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#3 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#4 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#5 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#6 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocument->save()
+#7 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(86): docx2tei\tei\TEIDocumen in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 85
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP   3. spl_autoload_call() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP   5. Composer\Autoload\includeFile() /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:49:00 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:49:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:84
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#1 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#2 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#3 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#4 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#5 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#6 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#7 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocumen in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:49:11 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:49:11 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP   2. writeOutput($inputFilePath = *uninitialized*, $outputPathParts = *uninitialized*, $inputPathParts = *uninitialized*, $outputDir = *uninitialized*, $isDir = *uninitialized*, $config = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP   3. spl_autoload_call(*uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass($class = *uninitialized*) /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP   5. Composer\Autoload\includeFile($file = *uninitialized*) /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:50:05 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:50:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:84
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#1 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#2 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#3 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#4 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#5 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#6 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#7 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocumen in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP Warning:  Declaration of docx2tei\tei\TEIDocument::save(string $pathToFile) should be compatible with DOMDocument::save($file) in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP Stack trace:
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP   1. {main}() /home/withanage/projects/docxToTEI/docxtotei.php:0
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP   2. writeOutput() /home/withanage/projects/docxToTEI/docxtotei.php:60
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP   3. spl_autoload_call() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP   4. Composer\Autoload\ClassLoader->loadClass() /home/withanage/projects/docxToTEI/docxtotei.php:77
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP   5. Composer\Autoload\includeFile() /home/withanage/projects/docxToTEI/vendor/composer/ClassLoader.php:322
+[29-Oct-2020 09:50:43 Europe/Berlin] Section missing or wrong : Translation/Synopsis
+
+[29-Oct-2020 09:50:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Maximum function nesting level of '256' reached, aborting! in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php:84
+Stack trace:
+#0 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#1 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#2 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#3 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#4 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#5 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#6 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocument->save()
+#7 /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php(85): docx2tei\tei\TEIDocumen in /home/withanage/projects/docxToTEI/src/docx2tei/tei/TEIDocument.php on line 84

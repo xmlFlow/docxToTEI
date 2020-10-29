@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
   <text>
-    <div id="div-1">
+    <sec id="sec-1">
       <title>Document metadata</title>
       <table-wrap>
         <table>
@@ -167,31 +167,31 @@
       </table-wrap>
       <p></p>
       <p></p>
-    </div>
-    <div id="div-2">
+    </sec>
+    <sec id="sec-2">
       <title>Facsimiles</title>
-      <div id="div-2_1">
+      <sec id="sec-2_1">
         <title>surface1:E_2253_0532.png:1r</title>
-      </div>
-      <div id="div-2_2">
+      </sec>
+      <sec id="sec-2_2">
         <title>surface2:E_2253_0533.png:1v</title>
-      </div>
-      <div id="div-2_3">
+      </sec>
+      <sec id="sec-2_3">
         <title>surface2:E_2253_0534.png:3r</title>
-      </div>
-      <div id="div-2_4">
+      </sec>
+      <sec id="sec-2_4">
         <title></title>
-      </div>
-    </div>
-    <div id="div-3">
+      </sec>
+    </sec>
+    <sec id="sec-3">
       <title>Abstract</title>
       <p>This inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <italic>phalcā</italic> and setting up a <italic>guṭhī</italic> to observe its anniversary.</p>
       <p></p>
-    </div>
-    <div id="div-4">
+    </sec>
+    <sec id="sec-4">
       <title>Edition (nep-san)</title>
       <p>#pb@1r@surface1 ( to be discussed to default  to 1r and surface as default)</p>
-      <div id="div-4_1">
+      <sec id="sec-4_1">
         <title>Block (@type @corres)</title>
         <p></p>
         <p>(1)  An empty line break follows me </p>
@@ -290,9 +290,9 @@
         <p></p>
         <p></p>
         <p></p>
-      </div>
-    </div>
-    <div id="div-5">
+      </sec>
+    </sec>
+    <sec id="sec-5">
       <title>English Translation</title>
       <p>Namo Ratnantraya [Ratna]. Dharmeshwar: Sakalpapvinashhe-</p>
       <p>तुः सौखावतीगतिमहाजनमार्थहे [तुः] दुख्खाधिपारगमनो</p>
@@ -365,8 +365,8 @@
       <p></p>
       <p></p>
       <p></p>
-    </div>
-    <div id="div-6">
+    </sec>
+    <sec id="sec-6">
       <title>Translation/Synopsis</title>
       <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of <italic>Lokeśvara</italic> was installed on the <italic>phalcā</italic><italic><sup>1</sup></italic>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 <italic>ropanī</italic>s<sup>2</sup> of land in …<sup>3</sup><ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link> <italic>guṭhī</italic><italic><sup>4</sup></italic> to observe the anniversary. From the income of the land, an offering of 2 <italic>pāthī</italic>s of dry-fried puffed rice (<italic>syāḥbaji</italic>), 2 <italic>pāthī</italic>s of <italic>thvã</italic>…<sup>5</sup> shall be made at the <italic>phalcā</italic> as charity (<italic>dāna</italic>) on <italic>meṣa saṃkrānti</italic>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 <italic>pāthī</italic>s of lime and … shall be fed food items of their choice<sup>6</sup>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju<sup>7</sup> of Ko Bāhāḥ, <italic>Kutuju</italic><italic><sup>8</sup></italic> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the <italic>guṭhī</italic>, shall …<sup>9</sup> . A certain amount has been allocated for renovation of the <italic>phalcā</italic>. The person who feeds shall receive  a thousandfold merit.</p>
       <p></p>
@@ -375,8 +375,8 @@
       <p></p>
       <p></p>
       <p></p>
-    </div>
-    <div id="div-7">
+    </sec>
+    <sec id="sec-7">
       <title>Commentary</title>
       <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of <italic>Lokeśvara</italic> at a <italic>phalcā</italic> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual<sup>10</sup> location of the <italic>phalcā</italic> in which the image was installed is not clear, as the inscription is no longer at its original location. The <italic>phalcā</italic> probably is the one to the east of the monastery.<sup>11</sup></p>
       <p>1 [New.] var. <italic>phale</italic>, <italic>phalacā</italic>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</p>
@@ -391,6 +391,6 @@
       <p>10 Test Endnote 1</p>
       <p>11 TestEndnote 2</p>
       <p></p>
-    </div>
+    </sec>
   </text>
 </root>

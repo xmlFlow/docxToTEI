@@ -1,3 +1,33 @@
 {
-  "sections": ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"]
+  "sections": [
+    "Abstract",
+    "Commentary",
+    "Document metadata",
+    "Edition",
+    "English Translation",
+    "Facsimiles",
+    "Synopsis",
+    "Translation"
+  ],
+  "header": [
+    "Alternative manifestation/inventory",
+    "Author/issuer of document",
+    "Date of origin of document",
+    "Document ID",
+    "Holding institution",
+    "Inventory number",
+    "Inventory number assigned by holding institution",
+    "Link to catalogue entry",
+    "Location ",
+    "Main language of document",
+    "Main title of document",
+    "Name of editor(s)",
+    "Name of collaborator(s)",
+    "Name of image file(s)",
+    "Other languages",
+    "Place of deposit / current location of document",
+    "Place of origin of document",
+    "Type of manifestation ",
+    "Holding institution"
+  ]
 }
