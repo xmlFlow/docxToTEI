@@ -181,7 +181,7 @@ class Document extends \DOMDocument {
 
 
 
-    public function getTeiFile(string $pathToFile) {
+    public function saveToFile(string $pathToFile) {
         $this->save($pathToFile);
     }
 }

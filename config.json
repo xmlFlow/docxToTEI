@@ -9,8 +9,8 @@
     "Synopsis",
     "Translation"
   ],
-  "header": [
-    "Alternative manifestation/inventory",
+  "headers": [
+    "Alternative manifestation/inventory Type of manifestation",
     "Author/issuer of document",
     "Date of origin of document",
     "Document ID",
@@ -27,7 +27,6 @@
     "Other languages",
     "Place of deposit / current location of document",
     "Place of origin of document",
-    "Type of manifestation ",
     "Holding institution"
   ]
 }

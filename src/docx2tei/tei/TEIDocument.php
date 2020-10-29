@@ -2,8 +2,10 @@
 
 
 use docx2tei\structure\Document;
+use DOMDocument;
+use DOMXPath;
 
-class TEIDocument extends \DOMDocument {
+class TEIDocument extends DOMDocument {
     var $cfg;
     var $root;
     var $teiHeader;
@@ -14,25 +16,45 @@ class TEIDocument extends \DOMDocument {
 
     public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
-        $this->xpath = new \DOMXPath($structuredDocument);
+        $this->xpath = new DOMXPath($structuredDocument);
         $this->cfg = $config;
         parent::__construct('1.0', 'utf-8');
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
         $this->isCorrectStructure();
         $this->setBasicStructure();
-        $this->setHeader();
+        $this->setHeaders();
 
 
     }
 
-    private function isCorrectStructure(): bool {
-        $correct = true;
-        $correct = $this->isCorrectSections();
-        $correct = $this->isCorrectHeader();
+    private function getHeaders() :array {
+        $headers = array();
+        $metadataFields = $this->xpath->query("//root/text/sec[@id='sec-1']/table-wrap/table/row");
+        foreach ($metadataFields as $metadata) {
+            $cells = $metadata->getElementsByTagName("cell");
+            if (count($cells) == 2) {
+                $key = $cells->item(0)->nodeValue;
+                $value = $cells->item(1)->textContent;
+                if (!in_array($key, $this->cfg->headers)) {
+                    $this->print_error("Unallowed header in the metadata " . $key);
+                } else {
+                    $headers[] [$key] = $value;
+                }
 
-        return $correct;
+            } else {
+                $this->print_error("Metadata table should be 2 columns wide");
+            }
+        }
+        return $headers;
+    }
 
+    public function saveToFile(string $pathToFile) {
+        $this->save($pathToFile);
+    }
+
+    private function isCorrectHeaders(): bool {
+        return true;
     }
 
     /**
@@ -47,9 +69,18 @@ class TEIDocument extends \DOMDocument {
                     $this->print_error("Section missing or wrong : " . $section->nodeValue);
                     return false;
                 }
-            };
+            }
         }
         return true;
+    }
+
+    private function isCorrectStructure(): bool {
+        $correct = true;
+        $correct = $this->isCorrectSections();
+        $correct = $this->isCorrectHeaders();
+
+        return $correct;
+
     }
 
     /**
@@ -60,25 +91,6 @@ class TEIDocument extends \DOMDocument {
         //error_log($message."\n");
     }
 
-    private function getHeader() {
-        $metadataFields = $this->xpath->query("//root/text/sec[@id='sec-1']/table-wrap/table/row");
-        foreach ($metadataFields as $metadata) {
-            $cells = $metadata->getElementsByTagName("p");
-            if (count($cells) == 2) {
-               $key = $cells->item(0)->textContent;
-               $value = $cells->item(1)->textContent;
-
-            } else {
-                $this->print_error("Metadata table should be 2 columns wide");
-            }
-        }
-    }
-
-
-    private function isCorrectHeader(): bool {
-        return true;
-    }
-
     private function setBasicStructure() {
 
         $this->root = $this->createElement('TEI');
@@ -87,8 +99,6 @@ class TEIDocument extends \DOMDocument {
             "xmlns",
             "http://www.structure-c.org/ns/1.0"
         );
-        // $this->structure->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-
         $this->appendChild($this->root);
 
         $this->teiHeader = $this->createElement('teiHeader');
@@ -99,8 +109,8 @@ class TEIDocument extends \DOMDocument {
 
     }
 
-    private function setHeader() {
-        $headers = $this->getHeader();
+    private function setHeaders() {
+        $headers = $this->getHeaders();
         $fileDesc = $this->createElement("fileDesc");
         $this->teiHeader->appendChild($fileDesc);
         $titleStmt = $this->createElement("titleStmt");
@@ -124,10 +134,6 @@ class TEIDocument extends \DOMDocument {
         $typeAttrib->value = 'sub';
         $subTitle->appendChild($typeAttrib);
         $titleStmt->appendChild($subTitle);
-    }
-
-    public function getTeiFile(string $pathToFile) {
-        $this->save($pathToFile);
     }
 
 }

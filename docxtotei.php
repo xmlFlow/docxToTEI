@@ -85,15 +85,15 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 
 	if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
-        //$structuredXML->getTeiFile($filePath);
-        $teiDocument->getTeiFile($filePath);
+        //$structuredXML->saveToFile($filePath);
+        $teiDocument->saveToFile($filePath);
         $docxArchive->getMediaFiles($outputDir);
 	} else {
 		if (!is_dir($outputDir . $filename)) {
 			mkdir($outputDir . $filename);
 		}
         $dirFilePath = $outputDir . $filename . DIRECTORY_SEPARATOR . $filename . ".xml";
-        //$structuredXML->getTeiFile($dirFilePath);
+        //$structuredXML->saveToFile($dirFilePath);
         $teiDocument->save($dirFilePath);
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}

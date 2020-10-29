@@ -31,5 +31,5 @@ foreach ($contents as $content) {
 $teiXML = new Document($docxArchive);
 $filename = basename($path, ".docx");
 $outputDir = "samples/output/";
-$teiXML->getTeiFile($outputDir . $filename . ".xml");
+$teiXML->saveToFile($outputDir . $filename . ".xml");
 $docxArchive->getMediaFiles($outputDir);
