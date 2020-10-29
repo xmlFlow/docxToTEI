@@ -118,6 +118,9 @@ class TEIDocument extends DOMDocument {
 
         $this->setFileDescription();
         $this->setSourceDescription();
+        $this->setEncodingDescription();
+        $this->setProfileDescription();
+        $this->setRevisionDescription();
 
     }
 
@@ -298,6 +301,23 @@ class TEIDocument extends DOMDocument {
         $p->appendXML('<p>Issued in <origDate>' . $this->headers["Date of origin of document"] . '</origDate> from <origPlace>' . $this->headers["Place of origin of document"] . '</origPlace></p>');
         $origin->appendChild($p);
         $msDesc->appendChild($history);
+    }
+
+    private function setEncodingDescription(): void {
+        $encodingDesc = $this->createDocumentFragment();
+        $encodingDesc->appendXML("<encodingDesc><editorialDecl><p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p><p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p></editorialDecl></encodingDesc>");
+        $this->teiHeader->appendChild($encodingDesc);
+    }
+    private function setProfileDescription(): void {
+        $profileDesc = $this->createDocumentFragment();
+        $profileDesc->appendXML("<profileDesc><creation> <date>" . date("Y-m-d") . "</date> </creation> </profileDesc>");
+        $this->teiHeader->appendChild($profileDesc);
+    }
+
+    private function setRevisionDescription(): void {
+        $revisionDesc = $this->createDocumentFragment();
+        $revisionDesc->appendXML('<revisionDesc> <listChange> <change type="internal" when="'.date("Y-m-d").'" who="#XX">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $this->teiHeader->appendChild($revisionDesc);
     }
 
 }

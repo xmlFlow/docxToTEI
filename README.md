@@ -5,7 +5,7 @@
 |--- | ---|
 | :ok: | Tei Header   Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
 | :ok: | Tei Header   Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
-| :ok: | Tei Header   ( Document ID|
+| :ok: | Tei Header   ( Document ID)|
 | :ok: | Tei Header   ( Main title of document) | 
 | :ok: | Tei Header   ( Short title of document)|  
 | :ok: | Tei Header ( Sub of document) |  
@@ -25,18 +25,11 @@
 | :ok: | Tei Header   (Date of origin of document) |
 | :ok: | Tei Header   (Place of origin of document) |
 | :question: | Is it needed now ??Tei Header   (Name of image file(s)) |
-
-
-
-
-
-
-  
+|:question:  |  Word: header metadata   block user edits of the header| 
+| :ok: | Tei Header   (encoding description), default text |
+| :ok: | Tei Header   (profile description), default text |
+| :question: | How to define the user  e.fg #AZ? Tei Header   (revision description), default text |
  
-| Word: header metadata   block user edits of the header| :todo: 
-
-
-  
 
 * `<ab>` : #AB{}# is only for edition block. Rest blocks will have a `<p>` 
 * Add _iso_ language list and  add it to define  the default language  { nep, san, new, hin, tib, eng}
@@ -52,7 +45,7 @@
 * `italic` in english has to converted to `foreign`
 * ignore term ref and biblio comes later.
 * Each word is wrapped with `<word></word>`
-* Eight translation or synopsis is used. A rule  has to be written.
+* Either translation or synopsis is used. A rule  has to be written.
 * Joiner and non-joiners will be added  directly into the templates: [Zero Width Non-Joiner &#x200c;](https://www.codetable.net/hex/8204) ,  [Zero Width Joiner &#x200d;](https://www.codetable.net/decimal/8205)   
 * Tables are held simple for the formatting.
 * Check for macros to auto-complete.
