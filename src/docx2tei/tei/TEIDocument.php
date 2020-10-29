@@ -29,6 +29,8 @@ class TEIDocument extends DOMDocument {
         $this->getHeaders();
         $this->setBasicStructure();
         $this->setHeaders();
+        //TODO  first replace all the small entries, then SB
+        $tokens = explode('#','त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');
         $facsimiles = $this->xpath->query('//root/text/sec/title[text()="Facsimiles"]/parent::sec');
         $abstract = $this->xpath->query('//root/text/sec/title[text()="Abstract"]/parent::sec');
         $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"Edition")]/parent::sec');
