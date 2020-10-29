@@ -29,13 +29,19 @@ class TEIDocument extends DOMDocument {
         $this->getHeaders();
         $this->setBasicStructure();
         $this->setHeaders();
+        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="Facsimiles"]/parent::sec');
+        $abstract = $this->xpath->query('//root/text/sec/title[text()="Abstract"]/parent::sec');
+        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"Edition")]/parent::sec');
+        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="English Translation"]/parent::sec');
+        $synopsis = $this->xpath->query('//root/text/sec/title[text()="Synopsis"]/parent::sec');
+        $translation = $this->xpath->query('//root/text/sec/title[text()="Translation"]/parent::sec');
+        $commentry = $this->xpath->query('//root/text/sec/title[text()="Commentry"]/parent::sec');
 
 
     }
 
     private function getHeaders() : void {
-
-        $metadataFields = $this->xpath->query("//root/text/sec[@id='sec-1']/table-wrap/table/row");
+        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="Document metadata"]/parent::sec/table-wrap/table/row');
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
