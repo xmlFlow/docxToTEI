@@ -6,7 +6,7 @@
         <title type="main">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to  Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma  Guṭhī [VS 1859]</title>
         <title type="short">Short title of document</title>
         <title type="sub">E_2253_0015A</title>
-        <author role="issuer">Badarībāṇa Sāhī, [Rāmānanda Bā̃ḍā]</author>
+        <author role="issuer">Badarībāṇa Sāhī]</author>
         <respStmt>
           <resp>main_editor</resp>
           <name type="main_editor">Name of editor(s)</name>
@@ -24,16 +24,16 @@
           <repository>National Archives</repository>
           <idno>Inventory number assigned by holding institution</idno>
         </msIdentifier>
-        <altIdentifier type="microfilm">
-          <settlement>Inventory number</settlement>
-          <collection>Kathmandu</collection>
+        <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
+          <settlement>Location</settlement>
+          <collection>Holding institution</collection>
           <idno>Inventory number</idno>
         </altIdentifier>
         <msContents>
           <textLang mainLang="Main language of document" otherLangs="Other languages"/>
         </msContents>
         <phsyDesc>
-          <p>For details see <ref target="..">Link to catalogue entry</ref></p>
+          <p>For details see <ref target="..">entry in database</ref></p>
         </phsyDesc>
         <history>
           <origin>

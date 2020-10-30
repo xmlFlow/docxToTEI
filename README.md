@@ -16,9 +16,10 @@
 | :ok: | Tei Header   (Place of deposit / current location of document)|
 | :ok: | Tei Header   (Deposit holding institution )|
 | :ok: | Tei Header   (Inventory number assigned by holding institution )|
-| :ok: | Tei Header   (Location )|
+| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Location )|
 | :ok: | Tei Header   (Alternative manifestation(/inventory Type of manifestation) |
-| :ok: | Tei Header   (Inventory number) |
+| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Inventory number) |
+| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Holding institution) |
 | :ok: | Tei Header   (Main language of document) |
 | :ok: | Tei Header   (Other languages) |
 | :ok: | Tei Header   :question: `ref target (Link to catalogue entry) |

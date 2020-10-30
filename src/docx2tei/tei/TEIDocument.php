@@ -62,7 +62,7 @@ class TEIDocument extends DOMDocument {
             if (!in_array($section->nodeValue, (array)$this->cfg->sections)) {
                 // specially handle Editions
                 if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
-                    $this->print_error("Section missing or wrong : " . $section->nodeValue);
+                    $this->print_error("[Error] Section missing or wrong : " . $section->nodeValue);
                     return false;
                 }
             }
@@ -87,14 +87,14 @@ class TEIDocument extends DOMDocument {
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
-                $headerName = trim($cells->item(0)->nodeValue);
+                $headerName = trim($cells->item(0)->textContent);
                 $value = trim($cells->item(1)->textContent);
                 $config_headers = get_object_vars($this->cfg->headers);
                 $key = array_search($headerName, array_values($config_headers));
-                if ($key) {
+                if ($key >= 0) {
                     $this->headers[array_keys($config_headers)[$key]] = $value;
                 } else {
-                    $this->print_error("Not allowed header in the metadata " . $headerName);
+                    $this->print_error("[Error] Not allowed header in the metadata: " . $headerName);
 
                 }
 
@@ -260,10 +260,10 @@ class TEIDocument extends DOMDocument {
     private function setAltIdentifier(DOMElement $msDesc): void {
         $altIdentifier = $this->createElement("altIdentifier");
         $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'microfilm';
+        $typeAttrib->value = $this->headers["h1"] ?? "";
         $altIdentifier->appendChild($typeAttrib);
-        $settlement = $this->createElement("settlement", $this->headers["h7"] ?? "");
-        $collection = $this->createElement("collection", $this->headers["h17"] ?? "");
+        $settlement = $this->createElement("settlement", $this->headers["h10"] ?? "");
+        $collection = $this->createElement("collection", $this->headers["h19"] ?? "");
         $idno = $this->createElement("idno", $this->headers["h7"] ?? "");
         $altIdentifier->appendChild($settlement);
         $altIdentifier->appendChild($collection);
