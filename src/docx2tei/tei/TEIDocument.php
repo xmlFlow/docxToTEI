@@ -40,15 +40,14 @@ class TEIDocument extends DOMDocument {
             if ($facsimile->tagName !== "title") {
                 $this->print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ");
             }
-            $text = (string) $facsimile->textContent;
+            $text = (string)$facsimile->textContent;
             if (strlen($text) == 0) {
                 $this->print_error("[Error]  Content of facsimile is not defined or Formatting error");
             } else {
                 $surfaceParts = explode(":", $text);
                 if (count($surfaceParts) < 3) {
                     $this->print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r");
-                }
-                else {
+                } else {
                     list($xml_id, $facs, $page) = $surfaceParts;
                     $facsimile = $this->createElement("facsimile");
                     $surface = $this->createElement("surface");
@@ -58,7 +57,7 @@ class TEIDocument extends DOMDocument {
                     $facsAttrib = $this->createAttribute('facs');
                     $facsAttrib->value = $facs;
                     $surface->appendChild($facsAttrib);
-                    foreach (["ulx","uly","lrx","lry"] as $attr) {
+                    foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
                         $coord = $this->createAttribute($attr);
                         $coord->value = 0;
                         $surface->appendChild($coord);
