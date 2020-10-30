@@ -31,13 +31,13 @@ class TEIDocument extends DOMDocument {
         $this->setHeaders();
         //TODO  first replace all the small entries, then SB
         $tokens = explode('#','त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');
-        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="Facsimiles"]/parent::sec');
-        $abstract = $this->xpath->query('//root/text/sec/title[text()="Abstract"]/parent::sec');
-        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"Edition")]/parent::sec');
-        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="English Translation"]/parent::sec');
-        $synopsis = $this->xpath->query('//root/text/sec/title[text()="Synopsis"]/parent::sec');
-        $translation = $this->xpath->query('//root/text/sec/title[text()="Translation"]/parent::sec');
-        $commentry = $this->xpath->query('//root/text/sec/title[text()="Commentry"]/parent::sec');
+        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->facsimiles.'"]/parent::sec');
+        $abstract = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->abstract.'"]/parent::sec');
+        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"'.$this->cfg->sections->edition.'")]/parent::sec');
+        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->et.'"]/parent::sec');
+        $synopsis = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->synopsis.'"]/parent::sec');
+        $translation = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->translation.'"]/parent::sec');
+        $commentry = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->commentry.'"]/parent::sec');
 
 
     }
