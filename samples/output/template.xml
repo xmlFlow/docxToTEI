@@ -50,6 +50,15 @@
     </encodingDesc>
     <profileDesc><creation> <date>2020-10-30</date> </creation> </profileDesc>
     <revisionDesc><listChange> <change type="internal" when="2020-10-30" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <facsimile>
+      <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
+    <facsimile>
+      <surface xml:id="surface2" facs="E_2253_0533.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
+    <facsimile>
+      <surface xml:id="surface2" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
   </teiHeader>
   <text/>
 </TEI>

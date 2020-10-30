@@ -31,9 +31,49 @@ class TEIDocument extends DOMDocument {
         $this->setBasicStructure();
         $this->setHeaders();
         //TODO  first replace all the small entries, then SB
-        $abstract = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec');
 
-        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->facsimiles . '"]/parent::sec');
+        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
+        if (count($facsimiles) == 0) {
+            $this->print_error("[Error] No facsimiles defined");
+        }
+        foreach ($facsimiles as $facsimile) {
+            if ($facsimile->tagName !== "title") {
+                $this->print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ");
+            }
+            $text = (string) $facsimile->textContent;
+            if (strlen($text) == 0) {
+                $this->print_error("[Error]  Content of facsimile is not defined or Formatting error");
+            } else {
+                $surfaceParts = explode(":", $text);
+                if (count($surfaceParts) < 3) {
+                    $this->print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r");
+                }
+                else {
+                    list($xml_id, $facs, $page) = $surfaceParts;
+                    $facsimile = $this->createElement("facsimile");
+                    $surface = $this->createElement("surface");
+                    $idAttrib = $this->createAttribute('xml:id');
+                    $idAttrib->value = $xml_id;
+                    $surface->appendChild($idAttrib);
+                    $facsAttrib = $this->createAttribute('facs');
+                    $facsAttrib->value = $facs;
+                    $surface->appendChild($facsAttrib);
+                    foreach (["ulx","uly","lrx","lry"] as $attr) {
+                        $coord = $this->createAttribute($attr);
+                        $coord->value = 0;
+                        $surface->appendChild($coord);
+                    }
+
+                    $facsimile->appendChild($surface);
+                    $this->teiHeader->appendChild($facsimile);
+                }
+            }
+
+
+        }
+
+
+        $abstract = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec');
         $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->cfg->sections->edition . '")]/parent::sec');
         $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
         $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
@@ -139,19 +179,19 @@ class TEIDocument extends DOMDocument {
         $this->teiHeader->appendChild($fileDesc);
         $titleStmt = $this->createElement("titleStmt");
         $fileDesc->appendChild($titleStmt);
-        $this->createHeaderTitle($titleStmt);
-        $this->createShortTitle($titleStmt);
-        $this->createSub($titleStmt);
-        $this->createAuthor($titleStmt);
-        $this->createMainEditor($titleStmt);
-        $this->createCollaborator($titleStmt);
+        $this->setHeaderTitle($titleStmt);
+        $this->setShortTitle($titleStmt);
+        $this->setSub($titleStmt);
+        $this->setAuthor($titleStmt);
+        $this->setMainEditor($titleStmt);
+        $this->setCollaborator($titleStmt);
     }
 
     /**
      * @param DOMElement $titleStmt
      *//**/
 
-    private function createHeaderTitle(DOMElement $titleStmt): void {
+    private function setHeaderTitle(DOMElement $titleStmt): void {
         $mainTitle = $this->createElement("title", $this->headers["h12"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'main';
@@ -162,7 +202,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $titleStmt
      */
-    private function createShortTitle(DOMElement $titleStmt): void {
+    private function setShortTitle(DOMElement $titleStmt): void {
         $shortTitle = $this->createElement("title", $this->headers["h6"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'short';
@@ -174,7 +214,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $titleStmt
      */
-    private function createSub(DOMElement $titleStmt): void {
+    private function setSub(DOMElement $titleStmt): void {
         $subTitle = $this->createElement("title", $this->headers["h4"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'sub';
@@ -186,7 +226,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $titleStmt
      */
-    private function createAuthor(DOMElement $titleStmt): void {
+    private function setAuthor(DOMElement $titleStmt): void {
         $subTitle = $this->createElement("author", $this->headers["h2"] ?? "");
         $typeAttrib = $this->createAttribute('role');
         $typeAttrib->value = 'issuer';
@@ -197,7 +237,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $titleStmt
      */
-    private function createMainEditor(DOMElement $titleStmt): void {
+    private function setMainEditor(DOMElement $titleStmt): void {
         $respStmt = $this->createElement("respStmt");
         $resp = $this->createElement("resp", "main_editor");
         $respStmt->appendChild($resp);
@@ -212,7 +252,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $titleStmt
      */
-    private function createCollaborator(DOMElement $titleStmt): void {
+    private function setCollaborator(DOMElement $titleStmt): void {
         $respStmt = $this->createElement("respStmt");
         $resp = $this->createElement("resp", "collaborator");
         $respStmt->appendChild($resp);
@@ -233,8 +273,8 @@ class TEIDocument extends DOMDocument {
         $this->setMsIdentifier($msDesc);
         $this->setAltIdentifier($msDesc);
         $this->setMsContents($msDesc);
-        $this->createPhysicalDescription($msDesc);
-        $this->createHistoryDescription($msDesc);
+        $this->setPhysicalDescription($msDesc);
+        $this->setHistoryDescription($msDesc);
 
     }
 
@@ -293,7 +333,7 @@ class TEIDocument extends DOMDocument {
      * @param DOMElement $msDesc
      * @return array
      */
-    private function createPhysicalDescription(DOMElement $msDesc): array {
+    private function setPhysicalDescription(DOMElement $msDesc): array {
         $phsyDesc = $this->createElement("phsyDesc");
         $p = $this->createDocumentFragment();
         $catalogueEntry = $this->headers["h9"] ?? "";
@@ -306,7 +346,7 @@ class TEIDocument extends DOMDocument {
     /**
      * @param DOMElement $msDesc
      */
-    private function createHistoryDescription(DOMElement $msDesc): void {
+    private function setHistoryDescription(DOMElement $msDesc): void {
         $history = $this->createElement("history");
         $origin = $this->createElement("origin");
         $history->appendChild($origin);
