@@ -7,22 +7,10 @@
         <table>
           <row>
             <cell>
-              <p>
-                <bold>Field name</bold>
-              </p>
-            </cell>
-            <cell>
-              <p>
-                <bold>Value</bold>
-              </p>
-            </cell>
-          </row>
-          <row>
-            <cell>
               <p>Document ID</p>
             </cell>
             <cell>
-              <p></p>
+              <p>E_2253_0015A</p>
             </cell>
           </row>
           <row>
@@ -30,7 +18,17 @@
               <p>Main title of document</p>
             </cell>
             <cell>
+              <p>A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to  Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma</p>
+              <p>  Guṭhī [VS 1859]</p>
               <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Short title of document</p>
+            </cell>
+            <cell>
+              <p>Short title of document</p>
             </cell>
           </row>
           <row>
@@ -38,6 +36,7 @@
               <p>Author/issuer of document</p>
             </cell>
             <cell>
+              <p>Badarībāṇa Sāhī]</p>
               <p></p>
             </cell>
           </row>
@@ -46,7 +45,7 @@
               <p>Name of editor(s)</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Name of editor(s)</p>
             </cell>
           </row>
           <row>
@@ -54,7 +53,7 @@
               <p>Name of collaborator(s)</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Name of collaborator(s)</p>
             </cell>
           </row>
           <row>
@@ -62,15 +61,15 @@
               <p>Place of deposit / current location of document</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Kathmandu</p>
             </cell>
           </row>
           <row>
             <cell>
-              <p>Holding institution</p>
+              <p>Deposit holding institution</p>
             </cell>
             <cell>
-              <p></p>
+              <p>National Archives</p>
             </cell>
           </row>
           <row>
@@ -78,25 +77,23 @@
               <p>Inventory number assigned by holding institution</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Inventory number assigned by holding institution</p>
             </cell>
           </row>
           <row>
             <cell>
-              <p>Alternative manifestation/inventory</p>
-              <p>Type of manifestation </p>
+              <p>Alternative manifestation/inventory Type of manifestation</p>
             </cell>
             <cell>
-              <p></p>
-              <p></p>
+              <p>Alternative manifestation/inventory Type of manifestation</p>
             </cell>
           </row>
           <row>
+            <cell>
+              <p>Location</p>
+            </cell>
             <cell>
               <p>Location </p>
-            </cell>
-            <cell>
-              <p></p>
             </cell>
           </row>
           <row>
@@ -104,7 +101,7 @@
               <p>Holding institution</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Holding institution</p>
             </cell>
           </row>
           <row>
@@ -112,7 +109,7 @@
               <p>Inventory number</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Inventory number</p>
             </cell>
           </row>
           <row>
@@ -120,7 +117,7 @@
               <p>Main language of document</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Main language of document</p>
             </cell>
           </row>
           <row>
@@ -128,7 +125,7 @@
               <p>Other languages</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Other languages</p>
             </cell>
           </row>
           <row>
@@ -136,7 +133,7 @@
               <p>Link to catalogue entry</p>
             </cell>
             <cell>
-              <p></p>
+              <p>entry in database</p>
             </cell>
           </row>
           <row>
@@ -144,7 +141,7 @@
               <p>Date of origin of document</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Date of origin of document</p>
             </cell>
           </row>
           <row>
@@ -152,7 +149,7 @@
               <p>Place of origin of document</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Place of origin of document</p>
             </cell>
           </row>
           <row>
@@ -160,12 +157,11 @@
               <p>Name of image file(s)</p>
             </cell>
             <cell>
-              <p></p>
+              <p>Name of image file(s)</p>
             </cell>
           </row>
         </table>
       </table-wrap>
-      <p></p>
       <p></p>
     </sec>
     <sec id="sec-2">
@@ -179,13 +175,11 @@
       <sec id="sec-2_3">
         <title>surface2:E_2253_0534.png:3r</title>
       </sec>
-      <sec id="sec-2_4">
-        <title></title>
-      </sec>
     </sec>
     <sec id="sec-3">
       <title>Abstract</title>
-      <p>This inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <italic>phalcā</italic> and setting up a <italic>guṭhī</italic> to observe its anniversary.</p>
+      <p>First inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+      <p>Second inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
       <p></p>
     </sec>
     <sec id="sec-4">
@@ -368,7 +362,7 @@
     </sec>
     <sec id="sec-6">
       <title>Translation/Synopsis</title>
-      <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of <italic>Lokeśvara</italic> was installed on the <italic>phalcā</italic><italic><sup>1</sup></italic>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 <italic>ropanī</italic>s<sup>2</sup> of land in …<sup>3</sup><ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link> <italic>guṭhī</italic><italic><sup>4</sup></italic> to observe the anniversary. From the income of the land, an offering of 2 <italic>pāthī</italic>s of dry-fried puffed rice (<italic>syāḥbaji</italic>), 2 <italic>pāthī</italic>s of <italic>thvã</italic>…<sup>5</sup> shall be made at the <italic>phalcā</italic> as charity (<italic>dāna</italic>) on <italic>meṣa saṃkrānti</italic>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 <italic>pāthī</italic>s of lime and … shall be fed food items of their choice<sup>6</sup>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju<sup>7</sup> of Ko Bāhāḥ, <italic>Kutuju</italic><italic><sup>8</sup></italic> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the <italic>guṭhī</italic>, shall …<sup>9</sup> . A certain amount has been allocated for renovation of the <italic>phalcā</italic>. The person who feeds shall receive  a thousandfold merit.</p>
+      <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of <foreign>Lokeśvara</foreign> was installed on the <foreign>phalcā</foreign><foreign><sup>1</sup></foreign>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 <foreign>ropanī</foreign>s<sup>2</sup> of land in …<sup>3</sup><ext-link xlink:href="https://nhdp-test.kjc.uni-heidelberg.de/report/5a5e4ba4-a4c6-11ea-9766-0242ac130005#_ftn3"> and established a</ext-link> <foreign>guṭhī</foreign><foreign><sup>4</sup></foreign> to observe the anniversary. From the income of the land, an offering of 2 <foreign>pāthī</foreign>s of dry-fried puffed rice (<foreign>syāḥbaji</foreign>), 2 <foreign>pāthī</foreign>s of <foreign>thvã</foreign>…<sup>5</sup> shall be made at the <foreign>phalcā</foreign> as charity (<foreign>dāna</foreign>) on <foreign>meṣa saṃkrānti</foreign>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 <foreign>pāthī</foreign>s of lime and … shall be fed food items of their choice<sup>6</sup>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju<sup>7</sup> of Ko Bāhāḥ, <foreign>Kutuju</foreign><foreign><sup>8</sup></foreign> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the <foreign>guṭhī</foreign>, shall …<sup>9</sup> . A certain amount has been allocated for renovation of the <foreign>phalcā</foreign>. The person who feeds shall receive  a thousandfold merit.</p>
       <p></p>
       <p></p>
       <p></p>
@@ -378,16 +372,16 @@
     </sec>
     <sec id="sec-7">
       <title>Commentary</title>
-      <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of <italic>Lokeśvara</italic> at a <italic>phalcā</italic> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual<sup>10</sup> location of the <italic>phalcā</italic> in which the image was installed is not clear, as the inscription is no longer at its original location. The <italic>phalcā</italic> probably is the one to the east of the monastery.<sup>11</sup></p>
-      <p>1 [New.] var. <italic>phale</italic>, <italic>phalacā</italic>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</p>
-      <p>2 [fr. S.] var. <italic>ropani</italic>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four <italic>murīs</italic>. The area may vary according to the grade, but current standard area for a <italic>ropanī</italic> comprises 5,476 square feet.</p>
+      <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of <foreign>Lokeśvara</foreign> at a <foreign>phalcā</foreign> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual<sup>10</sup> location of the <foreign>phalcā</foreign> in which the image was installed is not clear, as the inscription is no longer at its original location. The <foreign>phalcā</foreign> probably is the one to the east of the monastery.<sup>11</sup></p>
+      <p>1 [New.] var. <foreign>phale</foreign>, <foreign>phalacā</foreign>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</p>
+      <p>2 [fr. S.] var. <foreign>ropani</foreign>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four <foreign>murīs</foreign>. The area may vary according to the grade, but current standard area for a <foreign>ropanī</foreign> comprises 5,476 square feet.</p>
       <p>3 The three unreadable letters here are perhaps the name of the place where the donated land was situated.</p>
-      <p>4 [fr. S. <italic>goṣṭhī</italic>] var. <italic>guṭh</italic>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</p>
-      <p>5 The letters inscribed after <italic>thva</italic> have already faded. But it probably means <italic>thvã</italic> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</p>
+      <p>4 [fr. S. <foreign>goṣṭhī</foreign>] var. <foreign>guṭh</foreign>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</p>
+      <p>5 The letters inscribed after <foreign>thva</foreign> have already faded. But it probably means <foreign>thvã</foreign> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</p>
       <p>6 As few letters have faded, we do not know the persons to be fed the items of their choice.</p>
       <p>7 The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</p>
-      <p>8 He probably is <italic>kutu bhāju</italic>, a government official (Malla 2000: 53).</p>
-      <p>9 It is not clear what the members of the <italic>guṭhī</italic> were instructed to do, as the letters here in the inscription have faded.</p>
+      <p>8 He probably is <foreign>kutu bhāju</foreign>, a government official (Malla 2000: 53).</p>
+      <p>9 It is not clear what the members of the <foreign>guṭhī</foreign> were instructed to do, as the letters here in the inscription have faded.</p>
       <p>10 Test Endnote 1</p>
       <p>11 TestEndnote 2</p>
       <p></p>

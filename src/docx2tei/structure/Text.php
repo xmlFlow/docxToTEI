@@ -24,7 +24,7 @@ class Text {
 			foreach ($nodeTypes as $nodeType) {
 				switch ($nodeType) {
 					case ObjectText::DOCX_TEXT_ITALIC:
-						$typeArray[] = "italic";
+						$typeArray[] = "foreign";
 						break;
 					case ObjectText::DOCX_TEXT_BOLD:
 						$typeArray[] = "bold";

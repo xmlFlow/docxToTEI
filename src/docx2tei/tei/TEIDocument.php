@@ -11,7 +11,7 @@ class TEIDocument extends DOMDocument {
     var $root;
     var $teiHeader;
     var $text;
-    var $back;
+    var $body;
     var $structuredDocument;
     var $xpath;
     var $headers = array();
@@ -28,51 +28,41 @@ class TEIDocument extends DOMDocument {
         $this->formatOutput = true;
         $this->isCorrectStructure();
         $this->getHeaders();
-        $this->setBasicStructure();
+        $this->setStructure();
         $this->setHeaders();
+        $this->setFacsimiles();
         //TODO  first replace all the small entries, then SB
 
-        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
-        if (count($facsimiles) == 0) {
-            $this->print_error("[Error] No facsimiles defined");
-        }
-        foreach ($facsimiles as $facsimile) {
-            if ($facsimile->tagName !== "title") {
-                $this->print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ");
-            }
-            $text = (string)$facsimile->textContent;
-            if (strlen($text) == 0) {
-                $this->print_error("[Error]  Content of facsimile is not defined or Formatting error");
-            } else {
-                $surfaceParts = explode(":", $text);
-                if (count($surfaceParts) < 3) {
-                    $this->print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r");
-                } else {
-                    list($xml_id, $facs, $page) = $surfaceParts;
-                    $facsimile = $this->createElement("facsimile");
-                    $surface = $this->createElement("surface");
-                    $idAttrib = $this->createAttribute('xml:id');
-                    $idAttrib->value = $xml_id;
-                    $surface->appendChild($idAttrib);
-                    $facsAttrib = $this->createAttribute('facs');
-                    $facsAttrib->value = $facs;
-                    $surface->appendChild($facsAttrib);
-                    foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
-                        $coord = $this->createAttribute($attr);
-                        $coord->value = 0;
-                        $surface->appendChild($coord);
-                    }
+        $tmp = $structuredDocument->saveXML();
+        $abstractSec = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec/p');
+        if (count($abstractSec) == 0) {
+            $this->print_error("[Error] Abstract text not defined");
+        } else {
+            $div = $this->createElement("div");
+            $idAttrib = $this->createAttribute('xml:id');
+            $idAttrib->value = "abs";
+            $div->appendChild($idAttrib);
+            $typeAttr = $this->createAttribute('type');
+            $typeAttr->value = "abstract";
+            $div->appendChild($typeAttr);
+            $langAttr = $this->createAttribute('xml:lang');
+            $langAttr->value = "eng";
+            $div->appendChild($langAttr);
+            foreach ($abstractSec as $abstract) {
+                if (strlen($abstract->textContent)>0) {
+                $content = $abstract->ownerDocument->saveXML($abstract);
 
-                    $facsimile->appendChild($surface);
-                    $this->teiHeader->appendChild($facsimile);
+                    // replace all <p>s to <ab> s
+                    $content = preg_replace('/<p>/i', '<ab>', $content);
+                    $content = preg_replace('/<\/p>/i', '</ab>', $content);
+                    $ab = $this->createDocumentFragment();
+                    $ab->appendXML($content);
+                    $div->appendChild($ab);
                 }
             }
-
-
+            $this->body->appendChild($div);
         }
 
-
-        $abstract = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec');
         $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->cfg->sections->edition . '")]/parent::sec');
         $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
         $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
@@ -82,6 +72,31 @@ class TEIDocument extends DOMDocument {
 
 
     }
+    function renameElement($element, $newName) {
+        $newElement = $element->ownerDocument->createElement($newName);
+        $parentElement = $element->parentNode;
+        $parentElement->insertBefore($newElement, $element);
+
+        $childNodes = $element->childNodes;
+        while ($childNodes->length > 0) {
+            $newElement->appendChild($childNodes->item(0));
+        }
+
+        $attributes = $element->attributes;
+        while ($attributes->length > 0) {
+            $attribute = $attributes->item(0);
+            if (!is_null($attribute->namespaceURI)) {
+                $newElement->setAttributeNS('http://www.w3.org/2000/xmlns/',
+                    'xmlns:'.$attribute->prefix,
+                    $attribute->namespaceURI);
+            }
+            $newElement->setAttributeNode($attribute);
+        }
+
+        $parentElement->removeChild($element);
+        return $newElement;
+    }
+
 
     private function isCorrectStructure(): bool {
         $correct = true;
@@ -144,7 +159,7 @@ class TEIDocument extends DOMDocument {
 
     }
 
-    private function setBasicStructure() {
+    private function setStructure() {
 
         $this->root = $this->createElement('TEI');
         $this->root->setAttributeNS(
@@ -159,6 +174,8 @@ class TEIDocument extends DOMDocument {
         $this->root->appendChild($this->teiHeader);
 
         $this->text = $this->createElement('text');
+        $this->body = $this->createElement('body');
+        $this->text->appendChild($this->body);
         $this->root->appendChild($this->text);
 
     }
@@ -372,6 +389,48 @@ class TEIDocument extends DOMDocument {
         $revisionDesc = $this->createDocumentFragment();
         $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->teiHeader->appendChild($revisionDesc);
+    }
+
+    private function setFacsimiles(): void {
+        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
+        if (count($facsimiles) == 0) {
+            $this->print_error("[Error] No facsimiles defined");
+        } else {
+            foreach ($facsimiles as $facsimile) {
+                if ($facsimile->tagName !== "title") {
+                    $this->print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ");
+                }
+                $text = (string)$facsimile->textContent;
+                if (strlen($text) == 0) {
+                    $this->print_error("[Error]  Content of facsimile is not defined or Formatting error");
+                } else {
+                    $surfaceParts = explode(":", $text);
+                    if (count($surfaceParts) < 3) {
+                        $this->print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r");
+                    } else {
+                        list($xml_id, $facs, $page) = $surfaceParts;
+                        $facsimile = $this->createElement("facsimile");
+                        $surface = $this->createElement("surface");
+                        $idAttrib = $this->createAttribute('xml:id');
+                        $idAttrib->value = $xml_id;
+                        $surface->appendChild($idAttrib);
+                        $facsAttrib = $this->createAttribute('facs');
+                        $facsAttrib->value = $facs;
+                        $surface->appendChild($facsAttrib);
+                        foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
+                            $coord = $this->createAttribute($attr);
+                            $coord->value = 0;
+                            $surface->appendChild($coord);
+                        }
+
+                        $facsimile->appendChild($surface);
+                        $this->teiHeader->appendChild($facsimile);
+                    }
+                }
+
+
+            }
+        }
     }
 
     public function saveToFile(string $pathToFile) {
