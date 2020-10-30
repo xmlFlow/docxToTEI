@@ -1,14 +1,14 @@
 {
-  "sections": [
-    "Abstract",
-    "Commentary",
-    "Document metadata",
-    "Edition",
-    "English Translation",
-    "Facsimiles",
-    "Synopsis",
-    "Translation"
-  ],
+  "sections": {
+    "metadata": "Document metadata",
+    "Abstract": "Abstract",
+    "commentary": "Commentary",
+    "edition": "Edition",
+    "et": "English Translation",
+    "facsimiles": "Facsimiles",
+    "synopsis": "Synopsis",
+    "translation": "Translation"
+  },
   "headers": [
     "Alternative manifestation/inventory Type of manifestation",
     "Author/issuer of document",

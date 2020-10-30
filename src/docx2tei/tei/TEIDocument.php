@@ -43,7 +43,7 @@ class TEIDocument extends DOMDocument {
     }
 
     private function getHeaders() : void {
-        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="Document metadata"]/parent::sec/table-wrap/table/row');
+        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->metadata.'"]/parent::sec/table-wrap/table/row');
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
@@ -76,7 +76,7 @@ class TEIDocument extends DOMDocument {
     private function isCorrectSections(): bool {
         $sectionNodes = $this->xpath->query("//root/text/sec/title");
         foreach ($sectionNodes as $section) {
-            if (!in_array($section->nodeValue, $this->cfg->sections)) {
+            if (!in_array($section->nodeValue, get_object_vars($this->cfg->sections))) {
                 // specially handle Editions
                 if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
                     $this->print_error("Section missing or wrong : " . $section->nodeValue);
