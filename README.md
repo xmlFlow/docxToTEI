@@ -31,10 +31,12 @@
 | :ok: | Tei Header   (profile description), default text |
 | :question: | How to define the user  e.fg #AZ? Tei Header   (revision description), default text |
 | :ok: | Validation   Error message, if metadata values aren't set |
+| :ok: | Facsimile    (Create surfaces)|
+| :ok: | Abstract    (Create  Abstract )|
 
  
 
-* `<ab>` : #AB{}# is only for edition block. Rest blocks will have a `<p>` 
+* `<ab>` : #AB{}# is only for edition block and :question:  abstract Rest blocks will have a `<p>` 
 * Add _iso_ language list and  add it to define  the default language  { nep, san, new, hin, tib, eng}
 * New attributes can be introduced using @newAtrtirb=newValue
 * User errors in tags  e.g. `#abc {}` should be captured. 

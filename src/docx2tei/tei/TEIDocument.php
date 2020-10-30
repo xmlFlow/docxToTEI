@@ -24,7 +24,7 @@ class TEIDocument extends DOMDocument {
         $this->cfg = $config;
         $this->currentDate = date("Y-m-d");
         parent::__construct('1.0', 'utf-8');
-        $this->preserveWhiteSpace = true;
+        $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
         $this->isCorrectStructure();
         $this->getHeaders();
@@ -55,6 +55,7 @@ class TEIDocument extends DOMDocument {
                     // replace all <p>s to <ab> s
                     $content = preg_replace('/<p>/i', '<ab>', $content);
                     $content = preg_replace('/<\/p>/i', '</ab>', $content);
+                    $content = preg_replace('/\s+/i', ' ', $content);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($content);
                     $div->appendChild($ab);
