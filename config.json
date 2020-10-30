@@ -1,7 +1,7 @@
 {
   "sections": {
     "metadata": "Document metadata",
-    "Abstract": "Abstract",
+    "abstract": "Abstract",
     "commentary": "Commentary",
     "edition": "Edition",
     "et": "English Translation",
@@ -9,26 +9,24 @@
     "synopsis": "Synopsis",
     "translation": "Translation"
   },
-  "headers": [
-    "Alternative manifestation/inventory Type of manifestation",
-    "Author/issuer of document",
-    "Date of origin of document",
-    "Document ID",
-    "Deposit holding institution",
-    "Holding institution",
-    "Inventory number",
-    "Inventory number assigned by holding institution",
-    "Link to catalogue entry",
-    "Location",
-    "Main language of document",
-    "Main title of document",
-    "Name of editor(s)",
-    "Name of collaborator(s)",
-    "Name of image file(s)",
-    "Other languages",
-    "Place of deposit / current location of document",
-    "Place of origin of document",
-    "Holding institution",
-    "Short title of document"
-  ]
+  "headers": {
+    "h1": "Alternative manifestation/inventory Type of manifestation",
+    "h2": "Author/issuer of document",
+    "h3": "Date of origin of document",
+    "h4": "Document ID",
+    "h5": "Deposit holding institution",
+    "h6": "Short title of document",
+    "h7": "Inventory number",
+    "h8": "Inventory number assigned by holding institution",
+    "h9": "Link to catalogue entry",
+    "h10": "Location",
+    "h11": "Main language of document",
+    "h12": "Main title of document",
+    "h13": "Name of editor(s)",
+    "h14": "Name of collaborator(s)",
+    "h15": "Name of image file(s)",
+    "h16": "Other languages",
+    "h17": "Place of deposit / current location of document",
+    "h18": "Place of origin of document"
+  }
 }

@@ -3,6 +3,7 @@
 
 use docx2tei\structure\Document;
 use DOMDocument;
+use DOMElement;
 use DOMXPath;
 
 class TEIDocument extends DOMDocument {
@@ -14,7 +15,7 @@ class TEIDocument extends DOMDocument {
     var $structuredDocument;
     var $xpath;
     var $headers = array();
-    var $currentDate ;
+    var $currentDate;
 
 
     public function __construct(Document $structuredDocument, $config) {
@@ -30,61 +31,17 @@ class TEIDocument extends DOMDocument {
         $this->setBasicStructure();
         $this->setHeaders();
         //TODO  first replace all the small entries, then SB
-        $tokens = explode('#','त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');
-        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->facsimiles.'"]/parent::sec');
-        $abstract = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->abstract.'"]/parent::sec');
-        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"'.$this->cfg->sections->edition.'")]/parent::sec');
-        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->et.'"]/parent::sec');
-        $synopsis = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->synopsis.'"]/parent::sec');
-        $translation = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->translation.'"]/parent::sec');
-        $commentry = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->commentry.'"]/parent::sec');
+        $abstract = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec');
+
+        $facsimiles = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->facsimiles . '"]/parent::sec');
+        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->cfg->sections->edition . '")]/parent::sec');
+        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
+        $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
+        $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
+        $commentary = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->commentary . '"]/parent::sec');
+        $tokens = explode('#', 'त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');
 
 
-    }
-
-    private function getHeaders() : void {
-        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="'.$this->cfg->sections->metadata.'"]/parent::sec/table-wrap/table/row');
-        foreach ($metadataFields as $metadata) {
-            $cells = $metadata->getElementsByTagName("cell");
-            if (count($cells) == 2) {
-                $key = trim($cells->item(0)->nodeValue);
-                $value = trim($cells->item(1)->textContent);
-                if (!in_array($key, $this->cfg->headers)) {
-                    $this->print_error("Unallowed header in the metadata " . $key);
-                } else {
-                    $this->headers[$key]=$value;
-                }
-
-            } else {
-                $this->print_error("Metadata table should be 2 columns wide");
-            }
-        }
-
-    }
-
-    public function saveToFile(string $pathToFile) {
-        $this->save($pathToFile);
-    }
-
-    private function isCorrectHeaders(): bool {
-        return true;
-    }
-
-    /**
-     * @return bool
-     */
-    private function isCorrectSections(): bool {
-        $sectionNodes = $this->xpath->query("//root/text/sec/title");
-        foreach ($sectionNodes as $section) {
-            if (!in_array($section->nodeValue, get_object_vars($this->cfg->sections))) {
-                // specially handle Editions
-                if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
-                    $this->print_error("Section missing or wrong : " . $section->nodeValue);
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     private function isCorrectStructure(): bool {
@@ -97,11 +54,55 @@ class TEIDocument extends DOMDocument {
     }
 
     /**
+     * @return bool
+     */
+    private function isCorrectSections(): bool {
+        $sectionNodes = $this->xpath->query("//root/text/sec/title");
+        foreach ($sectionNodes as $section) {
+            if (!in_array($section->nodeValue, (array)$this->cfg->sections)) {
+                // specially handle Editions
+                if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
+                    $this->print_error("Section missing or wrong : " . $section->nodeValue);
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    /**
      * @param $value
      */
     private function print_error($message): void {
         echo("" . $message . "\n");
         //error_log($message."\n");
+    }
+
+    private function isCorrectHeaders(): bool {
+        return true;
+    }
+
+    private function getHeaders(): void {
+        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
+        foreach ($metadataFields as $metadata) {
+            $cells = $metadata->getElementsByTagName("cell");
+            if (count($cells) == 2) {
+                $headerName = trim($cells->item(0)->nodeValue);
+                $value = trim($cells->item(1)->textContent);
+                $config_headers = get_object_vars($this->cfg->headers);
+                $key = array_search($headerName, array_values($config_headers));
+                if ($key) {
+                    $this->headers[array_keys($config_headers)[$key]] = $value;
+                } else {
+                    $this->print_error("Not allowed header in the metadata " . $headerName);
+
+                }
+
+            } else {
+                $this->print_error("Metadata table should be 2 columns wide");
+            }
+        }
+
     }
 
     private function setBasicStructure() {
@@ -112,7 +113,7 @@ class TEIDocument extends DOMDocument {
             "xmlns",
             "http://www.tei-c.org/ns/1.0"
         );
-        $this->root->setAttribute('xml:id',$this->headers["Document ID"]);
+        $this->root->setAttribute('xml:id', $this->headers["h4"] ?? "");
         $this->appendChild($this->root);
 
         $this->teiHeader = $this->createElement('teiHeader');
@@ -133,81 +134,6 @@ class TEIDocument extends DOMDocument {
 
     }
 
-    /**
-     * @param \DOMElement $titleStmt
-     *//**/
-    private function createHeaderTitle(\DOMElement $titleStmt): void {
-        $mainTitle = $this->createElement("title", $this->headers["Main title of document"]);
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'main';
-        $mainTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($mainTitle);
-    }
-
-    /**
-     * @param \DOMElement $titleStmt
-     */
-    private function createShortTitle(\DOMElement $titleStmt): void {
-        $shortTitle = $this->createElement("title", $this->headers["Short title of document"]);
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'short';
-        $shortTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($shortTitle);
-
-    }
-
-    /**
-     * @param \DOMElement $titleStmt
-     */
-    private function createSub(\DOMElement $titleStmt): void {
-        $subTitle = $this->createElement("title", $this->headers["Document ID"]);
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'sub';
-        $subTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($subTitle);
-
-    }
-
-    /**
-     * @param \DOMElement $titleStmt
-     */
-    private function createAuthor(\DOMElement $titleStmt): void {
-        $subTitle = $this->createElement("author", $this->headers["Author/issuer of document"]);
-        $typeAttrib = $this->createAttribute('role');
-        $typeAttrib->value = 'issuer';
-        $subTitle->appendChild($typeAttrib);
-        $titleStmt->appendChild($subTitle);
-    }
-
-    /**
-     * @param \DOMElement $titleStmt
-     */
-    private function createMainEditor(\DOMElement $titleStmt): void {
-        $respStmt = $this->createElement("respStmt");
-        $resp = $this->createElement("resp", "main_editor");
-        $respStmt->appendChild($resp);
-        $name = $this->createElement("name", $this->headers["Name of editor(s)"]);
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'main_editor';
-        $name->appendChild($typeAttrib);
-        $respStmt->appendChild($name);
-        $titleStmt->appendChild($respStmt);
-    }
-    /**
-     * @param \DOMElement $titleStmt
-     */
-    private function createCollaborator(\DOMElement $titleStmt): void {
-        $respStmt = $this->createElement("respStmt");
-        $resp = $this->createElement("resp", "collaborator");
-        $respStmt->appendChild($resp);
-        $name = $this->createElement("name", $this->headers["Name of collaborator(s)"]);
-        $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'collaborator';
-        $name->appendChild($typeAttrib);
-        $respStmt->appendChild($name);
-        $titleStmt->appendChild($respStmt);
-    }
-
     private function setFileDescription(): void {
         $fileDesc = $this->createElement("fileDesc");
         $this->teiHeader->appendChild($fileDesc);
@@ -219,6 +145,83 @@ class TEIDocument extends DOMDocument {
         $this->createAuthor($titleStmt);
         $this->createMainEditor($titleStmt);
         $this->createCollaborator($titleStmt);
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     *//**/
+
+    private function createHeaderTitle(DOMElement $titleStmt): void {
+        $mainTitle = $this->createElement("title", $this->headers["h12"] ?? "");
+        $typeAttrib = $this->createAttribute('type');
+        $typeAttrib->value = 'main';
+        $mainTitle->appendChild($typeAttrib);
+        $titleStmt->appendChild($mainTitle);
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     */
+    private function createShortTitle(DOMElement $titleStmt): void {
+        $shortTitle = $this->createElement("title", $this->headers["h6"] ?? "");
+        $typeAttrib = $this->createAttribute('type');
+        $typeAttrib->value = 'short';
+        $shortTitle->appendChild($typeAttrib);
+        $titleStmt->appendChild($shortTitle);
+
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     */
+    private function createSub(DOMElement $titleStmt): void {
+        $subTitle = $this->createElement("title", $this->headers["h4"] ?? "");
+        $typeAttrib = $this->createAttribute('type');
+        $typeAttrib->value = 'sub';
+        $subTitle->appendChild($typeAttrib);
+        $titleStmt->appendChild($subTitle);
+
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     */
+    private function createAuthor(DOMElement $titleStmt): void {
+        $subTitle = $this->createElement("author", $this->headers["h2"] ?? "");
+        $typeAttrib = $this->createAttribute('role');
+        $typeAttrib->value = 'issuer';
+        $subTitle->appendChild($typeAttrib);
+        $titleStmt->appendChild($subTitle);
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     */
+    private function createMainEditor(DOMElement $titleStmt): void {
+        $respStmt = $this->createElement("respStmt");
+        $resp = $this->createElement("resp", "main_editor");
+        $respStmt->appendChild($resp);
+        $name = $this->createElement("name", $this->headers["h13"] ?? "");
+        $typeAttrib = $this->createAttribute('type');
+        $typeAttrib->value = 'main_editor';
+        $name->appendChild($typeAttrib);
+        $respStmt->appendChild($name);
+        $titleStmt->appendChild($respStmt);
+    }
+
+    /**
+     * @param DOMElement $titleStmt
+     */
+    private function createCollaborator(DOMElement $titleStmt): void {
+        $respStmt = $this->createElement("respStmt");
+        $resp = $this->createElement("resp", "collaborator");
+        $respStmt->appendChild($resp);
+        $name = $this->createElement("name", $this->headers["h14"] ?? "");
+        $typeAttrib = $this->createAttribute('type');
+        $typeAttrib->value = 'collaborator';
+        $name->appendChild($typeAttrib);
+        $respStmt->appendChild($name);
+        $titleStmt->appendChild($respStmt);
     }
 
     private function setSourceDescription(): void {
@@ -236,14 +239,14 @@ class TEIDocument extends DOMDocument {
     }
 
     /**
-     * @param \DOMElement $msDesc
+     * @param DOMElement $msDesc
      * @return array
      */
-    private function setMsIdentifier(\DOMElement $msDesc): array {
+    private function setMsIdentifier(DOMElement $msDesc): array {
         $msIdentifier = $this->createElement("msIdentifier");
-        $settlement = $this->createElement("settlement", $this->headers["Place of deposit / current location of document"]);
-        $repository = $this->createElement("repository", $this->headers["Deposit holding institution"]);
-        $idno = $this->createElement("idno", $this->headers["Inventory number assigned by holding institution"]);
+        $settlement = $this->createElement("settlement", $this->headers["h17"] ?? "");
+        $repository = $this->createElement("repository", $this->headers["h5"] ?? "");
+        $idno = $this->createElement("idno", $this->headers["h8"] ?? "");
         $msIdentifier->appendChild($settlement);
         $msIdentifier->appendChild($repository);
         $msDesc->appendChild($msIdentifier);
@@ -252,16 +255,16 @@ class TEIDocument extends DOMDocument {
     }
 
     /**
-     * @param \DOMElement $msDesc
+     * @param DOMElement $msDesc
      */
-    private function setAltIdentifier(\DOMElement $msDesc): void {
+    private function setAltIdentifier(DOMElement $msDesc): void {
         $altIdentifier = $this->createElement("altIdentifier");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'microfilm';
         $altIdentifier->appendChild($typeAttrib);
-        $settlement = $this->createElement("settlement", $this->headers["Location"]);
-        $collection = $this->createElement("collection", $this->headers["Alternative manifestation/inventory Type of manifestation"]);
-        $idno = $this->createElement("idno", $this->headers["Inventory number"]);
+        $settlement = $this->createElement("settlement", $this->headers["h7"] ?? "");
+        $collection = $this->createElement("collection", $this->headers["h17"] ?? "");
+        $idno = $this->createElement("idno", $this->headers["h7"] ?? "");
         $altIdentifier->appendChild($settlement);
         $altIdentifier->appendChild($collection);
         $msDesc->appendChild($altIdentifier);
@@ -269,45 +272,47 @@ class TEIDocument extends DOMDocument {
     }
 
     /**
-     * @param \DOMElement $msDesc
+     * @param DOMElement $msDesc
      * @return array
      */
-    private function setMsContents(\DOMElement $msDesc): array {
+    private function setMsContents(DOMElement $msDesc): array {
         $msContents = $this->createElement("msContents");
         $textLang = $this->createElement("textLang");
         $msContents->appendChild($textLang);
         $mainLang = $this->createAttribute('mainLang');
-        $mainLang->value = $this->headers["Main language of document"];
+        $mainLang->value = $this->headers["h11"] ?? "";
         $textLang->appendChild($mainLang);
         $otherLangs = $this->createAttribute('otherLangs');
-        $otherLangs->value = $this->headers["Other languages"];
+        $otherLangs->value = $this->headers["h16"] ?? "";
         $textLang->appendChild($otherLangs);
         $msDesc->appendChild($msContents);
         return array($msContents, $textLang, $mainLang, $otherLangs);
     }
 
     /**
-     * @param \DOMElement $msDesc
+     * @param DOMElement $msDesc
      * @return array
      */
-    private function createPhysicalDescription(\DOMElement $msDesc): array {
+    private function createPhysicalDescription(DOMElement $msDesc): array {
         $phsyDesc = $this->createElement("phsyDesc");
         $p = $this->createDocumentFragment();
-        $p->appendXML('<p>For details see <ref target="..">' . $this->headers["Link to catalogue entry"] . '</ref></p>');
+        $catalogueEntry = $this->headers["h9"] ?? "";
+        $p->appendXML('<p>For details see <ref target="..">' . $catalogueEntry . '</ref></p>');
         $phsyDesc->appendChild($p);
         $msDesc->appendChild($phsyDesc);
         return array($phsyDesc, $p);
     }
 
     /**
-     * @param \DOMElement $msDesc
+     * @param DOMElement $msDesc
      */
-    private function createHistoryDescription(\DOMElement $msDesc): void {
+    private function createHistoryDescription(DOMElement $msDesc): void {
         $history = $this->createElement("history");
         $origin = $this->createElement("origin");
         $history->appendChild($origin);
-        $p = $this->createDocumentFragment();
-        $p->appendXML('<p>Issued in <origDate>' . $this->headers["Date of origin of document"] . '</origDate> from <origPlace>' . $this->headers["Place of origin of document"] . '</origPlace></p>');
+        $p = $this->createDocumentFragment() ?? "";
+        $dateOfOrigin = $this->headers["h3"] . '</origDate> from <origPlace>' . $this->headers["h18"];
+        $p->appendXML('<p>Issued in <origDate>' . $dateOfOrigin . '</origPlace></p>');
         $origin->appendChild($p);
         $msDesc->appendChild($history);
     }
@@ -317,6 +322,7 @@ class TEIDocument extends DOMDocument {
         $encodingDesc->appendXML("<encodingDesc><editorialDecl><p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p><p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p></editorialDecl></encodingDesc>");
         $this->teiHeader->appendChild($encodingDesc);
     }
+
     private function setProfileDescription(): void {
         $profileDesc = $this->createDocumentFragment();
         $profileDesc->appendXML("<profileDesc><creation> <date>" . $this->currentDate . "</date> </creation> </profileDesc>");
@@ -325,8 +331,12 @@ class TEIDocument extends DOMDocument {
 
     private function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
-        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="'.$this->currentDate.'" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->teiHeader->appendChild($revisionDesc);
+    }
+
+    public function saveToFile(string $pathToFile) {
+        $this->save($pathToFile);
     }
 
 }

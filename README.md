@@ -29,6 +29,8 @@
 | :ok: | Tei Header   (encoding description), default text |
 | :ok: | Tei Header   (profile description), default text |
 | :question: | How to define the user  e.fg #AZ? Tei Header   (revision description), default text |
+| :ok: | Validation   Error message, if metadata values aren't set |
+
  
 
 * `<ab>` : #AB{}# is only for edition block. Rest blocks will have a `<p>` 
