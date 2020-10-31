@@ -17,7 +17,6 @@ class TEIDocument extends DOMDocument {
     var $headers = array();
 
 
-
     public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
         $this->xpath = new DOMXPath($structuredDocument);
@@ -35,7 +34,6 @@ class TEIDocument extends DOMDocument {
         $edition = new Edition($this);
 
 
-
         $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
         $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
         $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
@@ -44,6 +42,7 @@ class TEIDocument extends DOMDocument {
 
 
     }
+
     function renameElement($element, $newName) {
         $newElement = $element->ownerDocument->createElement($newName);
         $parentElement = $element->parentNode;
@@ -59,7 +58,7 @@ class TEIDocument extends DOMDocument {
             $attribute = $attributes->item(0);
             if (!is_null($attribute->namespaceURI)) {
                 $newElement->setAttributeNS('http://www.w3.org/2000/xmlns/',
-                    'xmlns:'.$attribute->prefix,
+                    'xmlns:' . $attribute->prefix,
                     $attribute->namespaceURI);
             }
             $newElement->setAttributeNode($attribute);
@@ -109,7 +108,6 @@ class TEIDocument extends DOMDocument {
     }
 
 
-
     function setStructure() {
 
         $this->root = $this->createElement('TEI');
@@ -132,11 +130,9 @@ class TEIDocument extends DOMDocument {
     }
 
 
-
     public function saveToFile(string $pathToFile) {
         $this->save($pathToFile);
     }
-
 
 
 }

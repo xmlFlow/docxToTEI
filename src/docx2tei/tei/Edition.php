@@ -4,7 +4,11 @@
 namespace docx2tei\tei;
 
 
-class Edition extends \DOMDocument {
+use docx2tei\XMLUtils;
+use DOMDocument;
+use DOMElement;
+
+class Edition extends DOMDocument {
     var $document;
 
     public function __construct(TEIDocument $document) {
@@ -14,13 +18,11 @@ class Edition extends \DOMDocument {
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
 
         if (count($edition) == 0) {
-            $this->print_error("[Error]  Edition section not found");
+            $this->print_error("[Error] Edition section not found");
         } else {
-            #<div xml:id="ed" type="edition" xml:lang="nep">
+            #<div xml:id="ed" type="edition" xml:lang="nep">#
             $div = $this->createDiv();
-
             $this->createEditionSections($div);
-
 
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
@@ -52,24 +54,24 @@ class Edition extends \DOMDocument {
         return $div;
     }
 
-    private function norm(string $s) {
-
-    }
 
     /**
-     * @param \DOMElement $div
+     * @param DOMElement $div
      */
-    private function createEditionSections(\DOMElement $div): void {
+    private function createEditionSections(DOMElement $div): void {
         $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
         foreach ($sections as $section) {
-            $this->createEditionSectionBeginning($section, $div);
+            $ab = $this->createEditionSectionBeginning($section, $div);
             $contents = $this->document->xpath->query('./p', $section);
             if ($contents) {
                 foreach ($contents as $content) {
-                   $sectionContent = $content->ownerDocument->saveXML($content);;
-                    $docFrag = $this->createDocumentFragment();
-                    $docFrag->appendXML($sectionContent);
-                    $div->appendChild($docFrag);
+                    $sectionContent = $content->ownerDocument->saveXML($content);
+                    $sectionContent = XMLUtils::clean($sectionContent);
+                    $frag = $this->createDocumentFragment();
+                    $frag->appendXML($sectionContent);
+                    if (!is_null($ab)) {
+                        $ab->appendChild($frag);
+                    }
                 }
             }
 
@@ -78,18 +80,20 @@ class Edition extends \DOMDocument {
 
     /**
      * @param $section
-     * @param \DOMElement $div
+     * @param DOMElement $div
      */
-    private function createEditionSectionBeginning($section, \DOMElement $div): void {
+    private function createEditionSectionBeginning($section, DOMElement $div): ?DOMElement {
+        $ab = null;
+        $type = "";
         $title = $this->document->xpath->query('./title', $section)->item(0);
         if ($title) {
-            $titleContent = $section->ownerDocument->saveXML($title);;
+            $titleContent = $section->ownerDocument->saveXML($title);
             # Clean xml tags
             $titleContent = preg_replace('/<(\/)*title>/', '', $titleContent);
             $titleAttribs = explode("@", $titleContent);
             if (count($titleAttribs) >= 3) {
                 list ($type, $value1, $value2) = $titleAttribs;
-                $ab = null;
+
                 $type = trim(strtolower($type));
 
                 if ($type == "pb") {
@@ -120,7 +124,7 @@ class Edition extends \DOMDocument {
                         if (count($parts) == 2) {
                             $extraAttr = $this->createAttribute($parts[0]);
                             $extraAttr->value = $parts[1];
-                            #$ab->appendChild($extraAttr);
+                            $ab->appendChild($extraAttr);
                         }
 
                     }
@@ -133,5 +137,6 @@ class Edition extends \DOMDocument {
         } else {
             $this->document->print_error("[Error]  In edition block, section header not defined ");
         }
+        return $ab;
     }
 }

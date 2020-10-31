@@ -4,7 +4,9 @@
 namespace docx2tei\tei;
 
 
-class Headers extends \DOMDocument {
+use DOMDocument;
+
+class Headers extends DOMDocument {
     var $document;
     var $headers;
     var $currentDate;

@@ -4,10 +4,13 @@
 namespace docx2tei\tei;
 
 
-class Abstracts extends \DOMDocument {
+use docx2tei\XMLUtils;
+use DOMDocument;
+
+class Abstracts extends DOMDocument {
     var $document;
 
-    public function __construct(TEIDocument  $document) {
+    public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $this->setAbstract();
@@ -34,9 +37,8 @@ class Abstracts extends \DOMDocument {
                     $content = $abstract->ownerDocument->saveXML($abstract);
 
                     // replace all <p>s to <ab> s and multiple whitespaces
-                    $content = preg_replace('/<p>/i', '<ab>', $content);
-                    $content = preg_replace('/<\/p>/i', '</ab>', $content);
-                    $content = preg_replace('/\s+/i', ' ', $content);
+                    $content = $this->tagReplace($content, 'p', 'ab');
+                    $content = XMLUtils::clean($content);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($content);
                     $div->appendChild($ab);
@@ -44,5 +46,13 @@ class Abstracts extends \DOMDocument {
             }
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
+    }
+
+    /**
+     * @param string $content
+     * @return string|string[]|null
+     */
+    protected function tagReplace(string $content, string $tag, string $replace) {
+        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/i', '<' . $replace . '>$1</' . $replace . '>', $content);
     }
 }

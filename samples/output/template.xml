@@ -67,64 +67,68 @@
       </div>
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="#surface1" facs="1r"/>
-        <ab type="invocatio" corresp="#invocatio"/>
-        <p>श्रीः\</p>
-        <ab type="space" corresp="#space1"/>
-        <p>नं.६६</p>
-        <ab type="space" corresp="#space2"/>
-        <p>श्रीमालीका</p>
-        <ab type="maintext" corresp="#main_text"/>
-        <p>(1)  An empty line break follows me </p>
-        <p/>
-        <p>( 2)Two line breaks without a break follows me.</p>
-        <p>-</p>
-        <p>-</p>
-        <p>(3) Text with 5 illegible characters</p>
-        <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-        <p/>
-        <p>(4) Text with a personal name</p>
-        <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
-        <p>(5) Text with a place name </p>
-        <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
-        <p>(6) Text with a geographical name</p>
-        <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
-        <p>(7)  All the lines with an ending -  has attribute break &lt;lb break="no"/&gt;</p>
-        <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
-        <p>(8) This line includes a .</p>
-        <p>तिष्ठा दिन जुरो ।। ।। <bold>.</bold>  दानपति सलको  थविर श्री धनजोतिजु</p>
-        <p>(9) This line includes a gap of  5 <bold>lost </bold>lines with default extent type characters</p>
-        <p>नकर वम्हन प #////@lines#  नकम थ्वया</p>
-        <p>(10) This line includes a gap of  5 <bold>illegible</bold> lines with default extent type characters</p>
-        <p>नकर वम्हन प #++++@lines#  नकम थ्वया</p>
-        <p>(11)  This line includes an addition to the text. default is : hand=first , place = above the line.</p>
-        <p>नकर वम्हन प #&amp;@second{}#  नकम थ्वया </p>
-        <p>(12)  Some unclear text inside a text block default cert=high</p>
-        <p>तिष्ठा दिन जुरो ।। ।। #?{शुभमस्तु }# दानपति सलको  थविर श्री धनजोतिजु</p>
-        <p>(13) sic: reproduced text with corrections</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #cor{¯¯¯¯}{- - -}# दानपति सलको  थविर श्री धनजोतिजु</p>
-        <p>(13): orig: this line  contains a text marked as original , rather than being normalized.</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #orig{सर्वदा}# दानपति सलको </p>
-        <p>(14): reg: this line  contains a text marked  as being normalized/corrected</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #reg{सर्वदा}{सर्वदा}# दानपति सलको </p>
-        <p>(15):  This line contains unnecessary , repeated text</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sur{सर्वदा}# दानपति सलको x</p>
-        <p>(16):  This line includes 4 spaces , default unit=chars</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #....# दानपति सलको </p>
-        <p>(17) This line includes text supplied by editor, default reason is lost</p>
-        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
-        <p>(18)  After this line, table begins</p>
-        <p/>
-        <p>Sentence begin after table ends</p>
-        <p>(19) Experimental sentence with line  beginning and ending</p>
-        <p/>
-        <p>(20) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
-        <p>भो#orig{•}##-#ग्&amp;#8205;य </p>
-        <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
-        <p>भो#orig{•}##-#ग्&amp;#x200c;य "</p>
-        <p/>
-        <p/>
-        <p/>
-        <p/>
+        <ab type="invocatio" corresp="#invocatio">
+          <p>श्रीः\</p>
+        </ab>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue">
+          <p>नं.६६</p>
+        </ab>
+        <ab type="space" corresp="#space2">
+          <p>श्रीमालीका</p>
+        </ab>
+        <ab type="maintext" corresp="#main_text" key="valEdi">
+          <p>(1) An empty line break follows me </p>
+          <p/>
+          <p>( 2)Two line breaks without a break follows me.</p>
+          <p>-</p>
+          <p>-</p>
+          <p>(3) Text with 5 illegible characters</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p/>
+          <p>(4) Text with a personal name</p>
+          <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
+          <p>(5) Text with a place name </p>
+          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+          <p>(6) Text with a geographical name</p>
+          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
+          <p>(7) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
+          <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
+          <p>(8) This line includes a .</p>
+          <p>तिष्ठा दिन जुरो ।। ।। <bold>.</bold> दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>(9) This line includes a gap of 5 <bold>lost </bold>lines with default extent type characters</p>
+          <p>नकर वम्हन प #////@lines# नकम थ्वया</p>
+          <p>(10) This line includes a gap of 5 <bold>illegible</bold> lines with default extent type characters</p>
+          <p>नकर वम्हन प #++++@lines# नकम थ्वया</p>
+          <p>(11) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
+          <p>नकर वम्हन प #&amp;@second{}# नकम थ्वया </p>
+          <p>(12) Some unclear text inside a text block default cert=high</p>
+          <p>तिष्ठा दिन जुरो ।। ।। #?{शुभमस्तु }# दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>(13) sic: reproduced text with corrections</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #cor{¯¯¯¯}{- - -}# दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>(13): orig: this line contains a text marked as original , rather than being normalized.</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #orig{सर्वदा}# दानपति सलको </p>
+          <p>(14): reg: this line contains a text marked as being normalized/corrected</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #reg{सर्वदा}{सर्वदा}# दानपति सलको </p>
+          <p>(15): This line contains unnecessary , repeated text</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sur{सर्वदा}# दानपति सलको x</p>
+          <p>(16): This line includes 4 spaces , default unit=chars</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #....# दानपति सलको </p>
+          <p>(17) This line includes text supplied by editor, default reason is lost</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
+          <p>(18) After this line, table begins</p>
+          <p/>
+          <p>Sentence begin after table ends</p>
+          <p>(19) Experimental sentence with line beginning and ending</p>
+          <p/>
+          <p>(20) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
+          <p>भो#orig{•}##-#ग्&amp;#8205;य </p>
+          <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
+          <p>भो#orig{•}##-#ग्&amp;#x200c;य "</p>
+          <p/>
+          <p/>
+          <p/>
+          <p/>
+        </ab>
       </div>
     </body>
   </text>
