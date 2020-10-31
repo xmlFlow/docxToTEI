@@ -44,12 +44,12 @@ class Edition extends \DOMDocument {
                         }
                         elseif ($type == "ab") {
                             $ab = $this->createElement("ab");
-                            $facsAttr = $this->createAttribute('corresp');
-                            $facsAttr->value = $value1;
-                            $n = $this->createAttribute('type');
-                            $n->value = $value2;
-                            $ab->appendChild($n);
+                            $facsAttr = $this->createAttribute('type');
+                            $facsAttr->value = $value2;
+                            $n = $this->createAttribute('corresp');
+                            $n->value = $value1;
                             $ab->appendChild($facsAttr);
+                            $ab->appendChild($n);
 
                         } else {
                             $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");

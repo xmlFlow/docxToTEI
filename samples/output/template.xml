@@ -67,10 +67,10 @@
       </div>
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="#surface1" facs="1r"/>
-        <ab corresp="invocatio" type="#invocatio"/>
-        <ab corresp="" type="#space1"/>
-        <ab corresp="" type="#space2"/>
-        <ab corresp="#main_text" type="maintext"/>
+        <ab type="invocatio" corresp="#invocatio"/>
+        <ab type="" corresp="#space1"/>
+        <ab type="" corresp="#space2"/>
+        <ab type="maintext" corresp="#main_text"/>
       </div>
     </body>
   </text>
