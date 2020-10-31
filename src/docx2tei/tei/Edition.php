@@ -67,6 +67,10 @@ class Edition extends DOMDocument {
                 foreach ($contents as $content) {
                     $sectionContent = $content->ownerDocument->saveXML($content);
                     $sectionContent = XMLUtils::clean($sectionContent);
+                    #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
+                    $sectionContent = XMLUtils::createLineBegin($sectionContent);
+                    $sectionContent = XMLUtils::createLineBeginNoBreak($sectionContent);
+
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($sectionContent);
                     if (!is_null($ab)) {

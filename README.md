@@ -80,12 +80,15 @@
  
  ### Formal annotations (div, ab, pb, lb, w, s, space, table, row, cell, add, del, gap, unclear)
   
- | S | Markup | Default | Markup Example | TEI Example | Remarks |
+ | Status | Markup | Default | Markup Example | TEI Example | Remarks |
  | ---- | ---- | ---- | ---- | ---- |  ---- |
- | :ok: | &#x200c; | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
- | :ok: | &#8205; | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
+ | 1. :question:  | #SB Content #SE | | `#SBA long affairSE#` | `<s>A long affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+ | 2. :heavy_check_mark: | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | 
+ | 3. :heavy_check_mark: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
+ |  :ok:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+ | :ok: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
+ | :ok: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
  | :ok: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
- | :ok: | #SB Content #SE | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
  | :ok: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
  | :ok: | #@place&@hand{}# |`place="above the line" hand="first"` e.g. @@second" |`#&@above the line@first#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
  | :ok: | #...# |@unit=chars | `#...#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
@@ -95,8 +98,6 @@
  | :ok: | #++++@extent@agent# |`extent=characters` | `#++++@agent#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
  | :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | :ok: | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
- | :ok: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
- | :ok: | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | 
  | :ok: | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
  | :ok: | #orig{text}# | | `#orig{Tall}#` | `<orig>Tall</orig>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html)|
  | :ok: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |

@@ -77,14 +77,21 @@
           <p>श्रीमालीका</p>
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
-          <p>(1) An empty line break follows me </p>
-          <p/>
-          <p>( 2)Two line breaks without a break follows me.</p>
-          <p>-</p>
-          <p>-</p>
+          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं </p>
+          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर- #SE</p>
+          <p>(2) An empty line break follows me </p>
+          <lb/>
+          <p>( 3)Two line breaks without a break follows me.</p>
+          <lb break="no"/>
+          <lb break="no"/>
+          <lb/>
+          <p>(2) sentence Block with empty line inside #sB{नकर वम्हन प #////@lines# </p>
+          <lb/>
+          <p>नकम थ्वया}#</p>
+          <lb/>
           <p>(3) Text with 5 illegible characters</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-          <p/>
+          <lb/>
           <p>(4) Text with a personal name</p>
           <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
           <p>(5) Text with a place name </p>
@@ -116,18 +123,18 @@
           <p>(17) This line includes text supplied by editor, default reason is lost</p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
           <p>(18) After this line, table begins</p>
-          <p/>
+          <lb/>
           <p>Sentence begin after table ends</p>
           <p>(19) Experimental sentence with line beginning and ending</p>
-          <p/>
+          <lb/>
           <p>(20) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
           <p>भो#orig{•}##-#ग्&amp;#8205;य </p>
           <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
           <p>भो#orig{•}##-#ग्&amp;#x200c;य "</p>
-          <p/>
-          <p/>
-          <p/>
-          <p/>
+          <lb/>
+          <lb/>
+          <lb/>
+          <lb/>
         </ab>
       </div>
     </body>

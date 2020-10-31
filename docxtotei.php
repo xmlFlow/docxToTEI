@@ -1,7 +1,7 @@
 <?php
 
 
-
+$time_start = microtime(true);
 require_once (__DIR__ . "/vendor/autoload.php");
 
 use docx2tei\DOCXArchive;
@@ -72,7 +72,8 @@ if (array_key_exists("singleFile", $inputs)) {
 
 function writeOutput(string $inputFilePath, array $outputPathParts, array $inputPathParts, string $outputDir, bool $isDir,  $config): void
 {
-	$docxArchive = new DOCXArchive($inputFilePath);
+    $time_start = microtime(true);
+    $docxArchive = new DOCXArchive($inputFilePath);
 	$structuredXML = new Document($docxArchive);
 
     $teiDocument = new docx2tei\tei\TEIDocument($structuredXML, $config);
@@ -97,4 +98,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
         $teiDocument->save($dirFilePath);
 		$docxArchive->getMediaFiles($outputDir . $filename . DIRECTORY_SEPARATOR);
 	}
+
 }
+$time_end = microtime(true);
+print("Execution Time: ".round(($time_end - $time_start),4)." ms");
