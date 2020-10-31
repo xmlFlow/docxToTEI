@@ -34,35 +34,8 @@ class TEIDocument extends DOMDocument {
         //TODO  first replace all the small entries, then SB
 
         $tmp = $structuredDocument->saveXML();
-        $abstractSec = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->abstract . '"]/parent::sec/p');
-        if (count($abstractSec) == 0) {
-            $this->print_error("[Error] Abstract text not defined");
-        } else {
-            $div = $this->createElement("div");
-            $idAttrib = $this->createAttribute('xml:id');
-            $idAttrib->value = "abs";
-            $div->appendChild($idAttrib);
-            $typeAttr = $this->createAttribute('type');
-            $typeAttr->value = "abstract";
-            $div->appendChild($typeAttr);
-            $langAttr = $this->createAttribute('xml:lang');
-            $langAttr->value = "eng";
-            $div->appendChild($langAttr);
-            foreach ($abstractSec as $abstract) {
-                if (strlen($abstract->textContent)>0) {
-                $content = $abstract->ownerDocument->saveXML($abstract);
+        $abstract = new Abstracts($this);
 
-                    // replace all <p>s to <ab> s
-                    $content = preg_replace('/<p>/i', '<ab>', $content);
-                    $content = preg_replace('/<\/p>/i', '</ab>', $content);
-                    $content = preg_replace('/\s+/i', ' ', $content);
-                    $ab = $this->createDocumentFragment();
-                    $ab->appendXML($content);
-                    $div->appendChild($ab);
-                }
-            }
-            $this->body->appendChild($div);
-        }
 
         $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->cfg->sections->edition . '")]/parent::sec');
         $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
@@ -437,5 +410,7 @@ class TEIDocument extends DOMDocument {
     public function saveToFile(string $pathToFile) {
         $this->save($pathToFile);
     }
+
+
 
 }
