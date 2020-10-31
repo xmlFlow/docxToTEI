@@ -63,6 +63,16 @@ class Edition extends \DOMDocument {
         $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
         foreach ($sections as $section) {
             $this->createEditionSectionBeginning($section, $div);
+            $contents = $this->document->xpath->query('./p', $section);
+            if ($contents) {
+                foreach ($contents as $content) {
+                   $sectionContent = $content->ownerDocument->saveXML($content);;
+                    $docFrag = $this->createDocumentFragment();
+                    $docFrag->appendXML($sectionContent);
+                    $div->appendChild($docFrag);
+                }
+            }
+
         }
     }
 
