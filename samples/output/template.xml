@@ -68,8 +68,8 @@
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="#surface1" facs="1r"/>
         <ab type="invocatio" corresp="#invocatio"/>
-        <ab type="" corresp="#space1"/>
-        <ab type="" corresp="#space2"/>
+        <ab type="space" corresp="#space1"/>
+        <ab type="space" corresp="#space2"/>
         <ab type="maintext" corresp="#main_text"/>
       </div>
     </body>

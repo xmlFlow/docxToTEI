@@ -19,62 +19,7 @@ class Edition extends \DOMDocument {
             #<div xml:id="ed" type="edition" xml:lang="nep">
             $div = $this->createDiv();
 
-            $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
-            foreach ($sections as $section) {
-                $title = $this->document->xpath->query('./title', $section)->item(0);
-                if ($title) {
-                    $titleContent = $section->ownerDocument->saveXML($title);;
-                    # Clean xml tags
-                    $titleContent = preg_replace('/<(\/)*title>/', '', $titleContent);
-                    $titleAttribs = explode("@", $titleContent);
-                    if (count($titleAttribs)>=3) {
-                        list ($type, $value1, $value2) = $titleAttribs;
-                        $ab = null;
-                        $type = trim(strtolower($type));
-
-                        if ($type == "pb") {
-                            //<pb n="1r" facs="#surface1"/>
-                            $ab = $this->createElement("pb");
-                            $typeAttr = $this->createAttribute('n');
-                            $typeAttr->value = $value1;
-                            $ab->appendChild($typeAttr);
-                            $facs = $this->createAttribute('facs');
-                            $facs->value = $value2;
-                            $ab->appendChild($facs);
-                        }
-                        elseif ($type == "ab") {
-                            $ab = $this->createElement("ab");
-                            $facsAttr = $this->createAttribute('type');
-                            $facsAttr->value = $value2;
-                            $n = $this->createAttribute('corresp');
-                            $n->value = $value1;
-                            $ab->appendChild($facsAttr);
-                            $ab->appendChild($n);
-
-                        } else {
-                            $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");
-                        }
-                        foreach ($titleAttribs as $attribute) {
-                            if (strpos($attribute, "=") > 0) {
-                                $parts = explode('=', $attribute);
-                                if (count($parts) == 2) {
-                                    $extraAttr = $this->createAttribute($parts[0]);
-                                    $extraAttr->value = $parts[1];
-                                    #$ab->appendChild($extraAttr);
-                                }
-
-                            }
-                        }
-                        $div->appendChild($ab);
-                    }
-                    else {
-                        $this->document->print_error("[Error] not enough information in ".$titleContent);
-                    }
-
-                } else {
-                    $this->document->print_error("[Error]  In edition block, section header not defined ");
-                }
-            }
+            $this->createEditionSections($div);
 
 
             $this->document->body->appendChild($this->document->importNode($div, true));
@@ -109,5 +54,66 @@ class Edition extends \DOMDocument {
 
     private function norm(string $s) {
 
+    }
+
+    /**
+     * @param \DOMElement $div
+     */
+    private function createEditionSections(\DOMElement $div): void {
+        $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
+        foreach ($sections as $section) {
+            $title = $this->document->xpath->query('./title', $section)->item(0);
+            if ($title) {
+                $titleContent = $section->ownerDocument->saveXML($title);;
+                # Clean xml tags
+                $titleContent = preg_replace('/<(\/)*title>/', '', $titleContent);
+                $titleAttribs = explode("@", $titleContent);
+                if (count($titleAttribs) >= 3) {
+                    list ($type, $value1, $value2) = $titleAttribs;
+                    $ab = null;
+                    $type = trim(strtolower($type));
+
+                    if ($type == "pb") {
+                        //<pb n="1r" facs="#surface1"/>
+                        $ab = $this->createElement("pb");
+                        $typeAttr = $this->createAttribute('n');
+                        $typeAttr->value = $value1;
+                        $ab->appendChild($typeAttr);
+                        $facs = $this->createAttribute('facs');
+                        $facs->value = $value2;
+                        $ab->appendChild($facs);
+                    } elseif ($type == "ab") {
+                        //<ab type="invocatio" corresp="#invocatio"/>
+                        $ab = $this->createElement("ab");
+                        $facsAttr = $this->createAttribute('type');
+                        $facsAttr->value = $value2;
+                        $n = $this->createAttribute('corresp');
+                        $n->value = $value1;
+                        $ab->appendChild($facsAttr);
+                        $ab->appendChild($n);
+
+                    } else {
+                        $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");
+                    }
+                    foreach ($titleAttribs as $attribute) {
+                        if (strpos($attribute, "=") > 0) {
+                            $parts = explode('=', $attribute);
+                            if (count($parts) == 2) {
+                                $extraAttr = $this->createAttribute($parts[0]);
+                                $extraAttr->value = $parts[1];
+                                #$ab->appendChild($extraAttr);
+                            }
+
+                        }
+                    }
+                    $div->appendChild($ab);
+                } else {
+                    $this->document->print_error("[Error] not enough information in " . $titleContent);
+                }
+
+            } else {
+                $this->document->print_error("[Error]  In edition block, section header not defined ");
+            }
+        }
     }
 }
