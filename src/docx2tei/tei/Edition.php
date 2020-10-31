@@ -7,74 +7,85 @@ namespace docx2tei\tei;
 class Edition extends \DOMDocument {
     var $document;
 
-    public function __construct(TEIDocument  $document) {
+    public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
 
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
 
-        if (count($edition)==0){
+        if (count($edition) == 0) {
             $this->print_error("[Error]  Edition section not found");
-        }
-        else {
+        } else {
             #<div xml:id="ed" type="edition" xml:lang="nep">
-            $this->createDiv();
+            $div = $this->createDiv();
 
-            $sections= $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
+            $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
             foreach ($sections as $section) {
-                $title = $this->document->xpath->query('./title',$section)->item(0);
-                if($title) {
+                $title = $this->document->xpath->query('./title', $section)->item(0);
+                if ($title) {
                     $titleContent = $section->ownerDocument->saveXML($title);;
                     # Clean xml tags
                     $titleContent = preg_replace('/<(\/)*title>/', '', $titleContent);
                     $titleAttribs = explode("@", $titleContent);
-                    list ($type, $value1, $value2) = $titleAttribs;
-                    $ab = null;
-                    $extraAttributes  = array_slice($titleAttribs,3);
-                    if ($type="pb") {
-                        //<pb n="1r" facs="#surface1"/>
-                        $ab = $this->createElement("pb");
-                        $typeAttr = $this->createAttribute('n');
-                        $typeAttr->value = $value1;
-                        $ab->appendChild($typeAttr);
-                        $facs = $this->createAttribute('facs');
-                        $facs->value = $value2;
-                        $ab->appendChild($facs);
-                    }
-                    elseif ($type="ab") {
-                        $ab = $this->createElement("ab");
-                        $facsAttr = $this->createAttribute('facs');
-                        $facsAttr->value = $value1;
-                        $n = $this->createAttribute('n');
-                        $n->value = $value2;
-                        $ab->appendChild($n);
-                        $ab->appendChild($facsAttr);
+                    if (count($titleAttribs)>=3) {
+                        list ($type, $value1, $value2) = $titleAttribs;
+                        $ab = null;
+                        $type = trim(strtolower($type));
 
+                        if ($type == "pb") {
+                            //<pb n="1r" facs="#surface1"/>
+                            $ab = $this->createElement("pb");
+                            $typeAttr = $this->createAttribute('n');
+                            $typeAttr->value = $value1;
+                            $ab->appendChild($typeAttr);
+                            $facs = $this->createAttribute('facs');
+                            $facs->value = $value2;
+                            $ab->appendChild($facs);
+                        }
+                        elseif ($type == "ab") {
+                            $ab = $this->createElement("ab");
+                            $facsAttr = $this->createAttribute('corresp');
+                            $facsAttr->value = $value1;
+                            $n = $this->createAttribute('type');
+                            $n->value = $value2;
+                            $ab->appendChild($n);
+                            $ab->appendChild($facsAttr);
+
+                        } else {
+                            $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");
+                        }
+                        foreach ($titleAttribs as $attribute) {
+                            if (strpos($attribute, "=") > 0) {
+                                $parts = explode('=', $attribute);
+                                if (count($parts) == 2) {
+                                    $extraAttr = $this->createAttribute($parts[0]);
+                                    $extraAttr->value = $parts[1];
+                                    #$ab->appendChild($extraAttr);
+                                }
+
+                            }
+                        }
+                        $div->appendChild($ab);
                     }
                     else {
-                        $this->print_error("[Error]  Edition blocks should be define as  ab or pb");
+                        $this->document->print_error("[Error] not enough information in ".$titleContent);
                     }
 
-                    $x = 5;
-                }
-                else {
-                    $this->print_error("[Error]  In edition block, section header not defined ");
+                } else {
+                    $this->document->print_error("[Error]  In edition block, section header not defined ");
                 }
             }
 
 
-
+            $this->document->body->appendChild($this->document->importNode($div, true));
         }
         $tmp = $this->document->structuredDocument->saveXML();
-        $y=1;
+        $y = 1;
 
 
     }
-    private  function norm(string $s) {
 
-    }
-
-    private function createDiv(): void {
+    private function createDiv() {
         $div = $this->createElement("div");
         $idAttrib = $this->createAttribute('xml:id');
         $idAttrib->value = "ed";
@@ -93,6 +104,10 @@ class Edition extends \DOMDocument {
 
         $langAttr->value = $lang;
         $div->appendChild($langAttr);
-        $this->document->body->appendChild($this->document->importNode($div, true));
+        return $div;
+    }
+
+    private function norm(string $s) {
+
     }
 }
