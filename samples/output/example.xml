@@ -178,16 +178,26 @@
     </sec>
     <sec id="sec-3">
       <title>Abstract</title>
-      <p>First inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+      <p>First inscription records donors Dhanajyoti    and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
       <p>Second inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
       <p></p>
     </sec>
     <sec id="sec-4">
       <title>Edition (nep-san)</title>
-      <p>#pb@1r@surface1 ( to be discussed to default  to 1r and surface as default)</p>
       <sec id="sec-4_1">
-        <title>Block (@type @corres)</title>
-        <p></p>
+        <title>#ab  {@invocatio@invocatio}</title>
+        <p>श्रीः\</p>
+      </sec>
+      <sec id="sec-4_2">
+        <title>#ab {@space1}</title>
+        <p>नं.६६</p>
+      </sec>
+      <sec id="sec-4_3">
+        <title>#ab {@space2}</title>
+        <p>श्रीमालीका</p>
+      </sec>
+      <sec id="sec-4_4">
+        <title>#ab {@maintext@maintext}</title>
         <p>(1)  An empty line break follows me </p>
         <p></p>
         <p>( 2)Two line breaks without a break follows me.</p>
@@ -281,6 +291,15 @@
         <p>भो#orig{•}##-#ग्&amp;#8205;य </p>
         <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
         <p>भो#orig{•}##-#ग्&amp;#x200c;य "</p>
+      </sec>
+      <sec id="sec-4_5">
+        <title>surface2(@type @corres)</title>
+        <p>Surface 2  text</p>
+      </sec>
+      <sec id="sec-4_6">
+        <title>surface3 (@type @corres)</title>
+        <p>Surface 23 text</p>
+        <p></p>
         <p></p>
         <p></p>
         <p></p>

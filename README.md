@@ -33,6 +33,8 @@
 | :ok: | Validation   Error message, if metadata values aren't set |
 | :ok: | Facsimile    (Create surfaces)|
 | :ok: | Abstract    (Create  Abstract )|
+| :question: | Needs an example of a table|
+
 
  
 

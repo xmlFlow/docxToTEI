@@ -29,14 +29,13 @@ class TEIDocument extends DOMDocument {
         $this->isCorrectStructure();
         $headers = new Headers($this);
 
-
         //TODO  first replace all the small entries, then SB
         $facsimiles = new Facsimiles($this);
         $abstract = new Abstracts($this);
+        $edition = new Edition($this);
 
-        $tmp = $structuredDocument->saveXML();
 
-        $edition = $this->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->cfg->sections->edition . '")]/parent::sec');
+
         $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
         $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
         $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
