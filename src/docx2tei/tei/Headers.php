@@ -6,8 +6,12 @@ namespace docx2tei\tei;
 
 class Headers extends \DOMDocument {
     var $document;
-    public function __construct(TEIDocument  $document) {
+    var $headers;
+    var $currentDate;
+
+    public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
+        $this->currentDate = date("Y-m-d");
         $this->document = $document;
         $this->getHeaders();
         $this->setHeaders();
@@ -16,13 +20,13 @@ class Headers extends \DOMDocument {
     }
 
     function getHeaders(): void {
-        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
+        $metadataFields = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
                 $headerName = trim($cells->item(0)->textContent);
                 $value = trim($cells->item(1)->textContent);
-                $config_headers = get_object_vars($this->cfg->headers);
+                $config_headers = get_object_vars($this->document->cfg->headers);
                 $key = array_search($headerName, array_values($config_headers));
                 if ($key >= 0) {
                     $this->headers[array_keys($config_headers)[$key]] = $value;
@@ -37,6 +41,7 @@ class Headers extends \DOMDocument {
         }
 
     }
+
     function setHeaders() {
 
         $this->setFileDescription();
@@ -49,7 +54,6 @@ class Headers extends \DOMDocument {
 
     function setFileDescription(): void {
         $fileDesc = $this->createElement("fileDesc");
-        $this->teiHeader->appendChild($fileDesc);
         $titleStmt = $this->createElement("titleStmt");
         $fileDesc->appendChild($titleStmt);
         $this->setHeaderTitle($titleStmt);
@@ -58,13 +62,14 @@ class Headers extends \DOMDocument {
         $this->setAuthor($titleStmt);
         $this->setMainEditor($titleStmt);
         $this->setCollaborator($titleStmt);
+        $this->document->teiHeader->appendChild($this->document->importNode($fileDesc, true));
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      *//**/
 
-    function setHeaderTitle(DOMElement $titleStmt): void {
+    function setHeaderTitle($titleStmt): void {
         $mainTitle = $this->createElement("title", $this->headers["h12"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'main';
@@ -73,9 +78,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      */
-    function setShortTitle(DOMElement $titleStmt): void {
+    function setShortTitle($titleStmt): void {
         $shortTitle = $this->createElement("title", $this->headers["h6"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'short';
@@ -85,9 +90,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      */
-    function setSub(DOMElement $titleStmt): void {
+    function setSub($titleStmt): void {
         $subTitle = $this->createElement("title", $this->headers["h4"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'sub';
@@ -97,9 +102,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      */
-    function setAuthor(DOMElement $titleStmt): void {
+    function setAuthor($titleStmt): void {
         $subTitle = $this->createElement("author", $this->headers["h2"] ?? "");
         $typeAttrib = $this->createAttribute('role');
         $typeAttrib->value = 'issuer';
@@ -108,9 +113,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      */
-    function setMainEditor(DOMElement $titleStmt): void {
+    function setMainEditor($titleStmt): void {
         $respStmt = $this->createElement("respStmt");
         $resp = $this->createElement("resp", "main_editor");
         $respStmt->appendChild($resp);
@@ -123,9 +128,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $titleStmt
+     * @param  $titleStmt
      */
-    function setCollaborator(DOMElement $titleStmt): void {
+    function setCollaborator($titleStmt): void {
         $respStmt = $this->createElement("respStmt");
         $resp = $this->createElement("resp", "collaborator");
         $respStmt->appendChild($resp);
@@ -139,7 +144,7 @@ class Headers extends \DOMDocument {
 
     function setSourceDescription(): void {
         $sourceDesc = $this->createElement("sourceDesc");
-        $this->teiHeader->appendChild($sourceDesc);
+        $this->document->teiHeader->appendChild($this->document->importNode($sourceDesc, true));
         $msDesc = $this->createElement("msDesc");
 
         $sourceDesc->appendChild($msDesc);
@@ -148,14 +153,15 @@ class Headers extends \DOMDocument {
         $this->setMsContents($msDesc);
         $this->setPhysicalDescription($msDesc);
         $this->setHistoryDescription($msDesc);
+        $this->document->teiHeader->appendChild($this->document->importNode($msDesc, true));
 
     }
 
     /**
-     * @param DOMElement $msDesc
+     * @param  $msDesc
      * @return array
      */
-    function setMsIdentifier(DOMElement $msDesc): array {
+    function setMsIdentifier($msDesc): array {
         $msIdentifier = $this->createElement("msIdentifier");
         $settlement = $this->createElement("settlement", $this->headers["h17"] ?? "");
         $repository = $this->createElement("repository", $this->headers["h5"] ?? "");
@@ -166,10 +172,11 @@ class Headers extends \DOMDocument {
         $msIdentifier->appendChild($idno);
         return array($settlement, $idno);
     }
+
     /**
-     * @param DOMElement $msDesc
+     * @param  $msDesc
      */
-    function setAltIdentifier(DOMElement $msDesc): void {
+    function setAltIdentifier($msDesc): void {
         $altIdentifier = $this->createElement("altIdentifier");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = $this->headers["h1"] ?? "";
@@ -184,10 +191,10 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $msDesc
+     * @param  $msDesc
      * @return array
      */
-    function setMsContents(DOMElement $msDesc): array {
+    function setMsContents($msDesc): array {
         $msContents = $this->createElement("msContents");
         $textLang = $this->createElement("textLang");
         $msContents->appendChild($textLang);
@@ -202,10 +209,10 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $msDesc
+     * @param  $msDesc
      * @return array
      */
-    function setPhysicalDescription(DOMElement $msDesc): array {
+    function setPhysicalDescription($msDesc): array {
         $phsyDesc = $this->createElement("phsyDesc");
         $p = $this->createDocumentFragment();
         $catalogueEntry = $this->headers["h9"] ?? "";
@@ -216,9 +223,9 @@ class Headers extends \DOMDocument {
     }
 
     /**
-     * @param DOMElement $msDesc
+     * @param  $msDesc
      */
-    function setHistoryDescription(DOMElement $msDesc): void {
+    function setHistoryDescription($msDesc): void {
         $history = $this->createElement("history");
         $origin = $this->createElement("origin");
         $history->appendChild($origin);
@@ -232,19 +239,19 @@ class Headers extends \DOMDocument {
     function setEncodingDescription(): void {
         $encodingDesc = $this->createDocumentFragment();
         $encodingDesc->appendXML("<encodingDesc><editorialDecl><p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p><p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p></editorialDecl></encodingDesc>");
-        $this->teiHeader->appendChild($encodingDesc);
+        $this->document->teiHeader->appendChild($this->document->importNode($encodingDesc, true));
     }
 
     function setProfileDescription(): void {
         $profileDesc = $this->createDocumentFragment();
         $profileDesc->appendXML("<profileDesc><creation> <date>" . $this->currentDate . "</date> </creation> </profileDesc>");
-        $this->teiHeader->appendChild($profileDesc);
+        $this->document->teiHeader->appendChild($this->document->importNode($profileDesc, true));
     }
 
     function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
         $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
-        $this->teiHeader->appendChild($revisionDesc);
+        $this->document->teiHeader->appendChild($this->document->importNode($revisionDesc, true));
     }
 
 

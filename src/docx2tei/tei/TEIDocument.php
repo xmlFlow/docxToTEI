@@ -15,24 +15,23 @@ class TEIDocument extends DOMDocument {
     var $structuredDocument;
     var $xpath;
     var $headers = array();
-    var $currentDate;
+
 
 
     public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
         $this->xpath = new DOMXPath($structuredDocument);
         $this->cfg = $config;
-        $this->currentDate = date("Y-m-d");
         parent::__construct('1.0', 'utf-8');
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
         $this->setStructure();
         $this->isCorrectStructure();
-        $headers = new Headers();
+        $headers = new Headers($this);
 
 
         //TODO  first replace all the small entries, then SB
-        $facsimiles = new Facsimiles();
+        $facsimiles = new Facsimiles($this);
         $abstract = new Abstracts($this);
 
         $tmp = $structuredDocument->saveXML();

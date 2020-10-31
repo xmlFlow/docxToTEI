@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="E_2253_0015A">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -17,31 +17,30 @@
         </respStmt>
       </titleStmt>
     </fileDesc>
-    <sourceDesc>
-      <msDesc>
-        <msIdentifier>
-          <settlement>Kathmandu</settlement>
-          <repository>National Archives</repository>
-          <idno>Inventory number assigned by holding institution</idno>
-        </msIdentifier>
-        <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
-          <settlement>Location</settlement>
-          <collection>Holding institution</collection>
-          <idno>Inventory number</idno>
-        </altIdentifier>
-        <msContents>
-          <textLang mainLang="Main language of document" otherLangs="Other languages"/>
-        </msContents>
-        <phsyDesc>
-          <p>For details see <ref target="..">entry in database</ref></p>
-        </phsyDesc>
-        <history>
-          <origin>
-            <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p>
-          </origin>
-        </history>
-      </msDesc>
-    </sourceDesc>
+    <sourceDesc/>
+    <msDesc>
+      <msIdentifier>
+        <settlement>Kathmandu</settlement>
+        <repository>National Archives</repository>
+        <idno>Inventory number assigned by holding institution</idno>
+      </msIdentifier>
+      <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
+        <settlement>Location</settlement>
+        <collection>Holding institution</collection>
+        <idno>Inventory number</idno>
+      </altIdentifier>
+      <msContents>
+        <textLang mainLang="Main language of document" otherLangs="Other languages"/>
+      </msContents>
+      <phsyDesc>
+        <p>For details see <ref target="..">entry in database</ref></p>
+      </phsyDesc>
+      <history>
+        <origin>
+          <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p>
+        </origin>
+      </history>
+    </msDesc>
     <encodingDesc>
       <editorialDecl>
         <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
