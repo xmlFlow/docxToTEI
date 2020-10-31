@@ -42,8 +42,7 @@ class Abstracts extends \DOMDocument {
                     $div->appendChild($ab);
                 }
             }
-            $body = $this->document->body;
-            $body->appendChild($this->document->importNode($div, true));
+            $this->document->body->appendChild($this->document->importNode($div, true));
         }
     }
 }
