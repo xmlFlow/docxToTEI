@@ -34,6 +34,8 @@
 | :ok: | Facsimile    (Create surfaces)|
 | :ok: | Abstract    (Create  Abstract )|
 | :question: | Needs an example of a table|
+| :ok: | Body (create Body element)|
+| :ok: | Body (Check for languages in Edition  (lang) )|
 
 
  
