@@ -22,7 +22,7 @@ class Edition extends DOMDocument {
         } else {
             #<div xml:id="ed" type="edition" xml:lang="nep">#
             $div = $this->createDiv();
-            $this->createEditionSections($div);
+            $this->createSections($div);
 
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
@@ -44,7 +44,7 @@ class Edition extends DOMDocument {
         $ed_lang = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/title');
         $content = $ed_lang[0]->ownerDocument->saveXML($ed_lang[0]);
         preg_match('/\((.*?)\)/', $content, $matches);
-        $lang = "nep";
+        $lang = $this->document->cfg->default_language;
         if (count($matches) == 2) {
             $lang = $matches[1];
         }
@@ -58,10 +58,10 @@ class Edition extends DOMDocument {
     /**
      * @param DOMElement $div
      */
-    private function createEditionSections(DOMElement $div): void {
+    private function createSections(DOMElement $div): void {
         $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
         foreach ($sections as $section) {
-            $ab = $this->createEditionSectionBeginning($section, $div);
+            $ab = $this->createSectionBegin($section, $div);
             $contents = $this->document->xpath->query('./p', $section);
             if ($contents) {
                 foreach ($contents as $content) {
@@ -82,7 +82,7 @@ class Edition extends DOMDocument {
      * @param $section
      * @param DOMElement $div
      */
-    private function createEditionSectionBeginning($section, DOMElement $div): ?DOMElement {
+    private function createSectionBegin($section, DOMElement $div): ?DOMElement {
         $ab = null;
         $type = "";
         $title = $this->document->xpath->query('./title', $section)->item(0);
