@@ -47,8 +47,8 @@
         <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-10-31</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-10-31" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2020-11-01</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-11-01" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
     <facsimile>
       <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
     </facsimile>
@@ -78,6 +78,8 @@
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
           <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं </p>
+          <lb break="no"/>
+          <lb/>
           <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर- #SE</p>
           <p>(2) An empty line break follows me </p>
           <lb/>
@@ -85,12 +87,16 @@
           <lb break="no"/>
           <lb break="no"/>
           <lb/>
+          <p>(4) Text with 5 illegible characters</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++@extent# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++@@content# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++@extent@content# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++@extent@content@newAttribnewValue# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>(2) sentence Block with empty line inside #sB{नकर वम्हन प #////@lines# </p>
           <lb/>
           <p>नकम थ्वया}#</p>
           <lb/>
-          <p>(3) Text with 5 illegible characters</p>
-          <p>नमो रत्नंत्रयाय [रत्न˚] #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <lb/>
           <p>(4) Text with a personal name</p>
           <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>

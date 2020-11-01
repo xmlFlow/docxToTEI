@@ -65,14 +65,19 @@ class Edition extends DOMDocument {
             $contents = $this->document->xpath->query('./p', $section);
             if ($contents) {
                 foreach ($contents as $content) {
-                    $sectionContent = $content->ownerDocument->saveXML($content);
-                    $sectionContent = XMLUtils::clean($sectionContent);
-                    #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
-                    $sectionContent = XMLUtils::createLineBegin($sectionContent);
-                    $sectionContent = XMLUtils::createLineBeginNoBreak($sectionContent);
+                    $s = $content->ownerDocument->saveXML($content);
+                    # ! order is important. never change order #
+                    $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::createLineBegin($s);
+                    $s = XMLUtils::createLineBeginNoBreak($s);
+                    # no line breaks in text
+                    $s = XMLUtils::joinLines($s);
+                    $s = XMLUtils::illegibleGaps($s);
 
+                    # ! order is important. never change order #
+                    #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
                     $frag = $this->createDocumentFragment();
-                    $frag->appendXML($sectionContent);
+                    $frag->appendXML($s);
                     if (!is_null($ab)) {
                         $ab->appendChild($frag);
                     }
