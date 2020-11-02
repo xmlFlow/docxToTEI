@@ -63,11 +63,37 @@ class XMLUtils {
      */
     public static function illegibleGaps(string $s) {
 
-        preg_match_all('/'. '' . XMLUtils::$BOUNDARY.'(\+)+([\@][((\w|=)>\s)]*)*'. XMLUtils::$BOUNDARY .'/i', $s, $matches);
+        preg_match_all('/' . '' . XMLUtils::$BOUNDARY . '(\+)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$BOUNDARY . '/i', $s, $matches);
         $gap = $matches[0];
         if (!is_null($gap) && count($gap) != 0) {
             $str = str_replace(XMLUtils::$BOUNDARY, '', $gap[0]);
+            $elem =  new \DOMDocument();
+            $gap = $elem->createElement("gap");
+            $gapsLength = 0;
             $parts = explode("@", $str);
+            if (!is_null($parts)) {
+                $gapsLength = count_chars(array_pop($parts));
+            };
+            if (!is_null($parts)) {
+                $ex = $elem->createAttribute('extent');
+                $type = ($gapsLength==1) ? 'character' : 'characters';
+                $extent = array_pop($parts);
+                if (is_null($extent))  $extent = $type;
+                $extent->value = $gapsLength.' '.$extent;
+                $gap->appendChild($ex);
+
+            };
+            if (!is_null($parts)) {
+                $agent = array_pop($parts);
+                if (!is_null($agent)){
+
+                }
+            };
+
+
+            foreach ($parts as $part) {
+
+            }
 
 
         }
