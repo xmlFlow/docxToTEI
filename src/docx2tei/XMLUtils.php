@@ -57,19 +57,19 @@ class XMLUtils {
         return $s;
     }
 
-    /**
-     * @param string $s
-     * @return string
-     */
-    public static function illegibleGaps(string $s) {
 
-        preg_match_all('/' . '' . XMLUtils::$bnd . '(\+)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+    public static function createGap(string $s, string $reason, string $replace) {
+
+
+        preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $gap = $matches[0];
         if (!is_null($gap) && count($gap) != 0) {
             $str = str_replace(XMLUtils::$bnd, '', $gap[0]);
             $elem = new \DOMDocument();
             $gap = $elem->createElement("gap");
-            $gapsLength = 0;
+            $r = $elem->createAttribute('reason');
+            $r->value = $reason;
+            $gap->appendChild($r);
             $parts = explode("@", $str);
             if (!is_null($parts)) {
                 $gapsLength = strlen(array_shift($parts));
@@ -77,7 +77,9 @@ class XMLUtils {
                 $type = ($gapsLength == 1) ? 'character' : 'characters';
 
                 $extent = array_shift($parts);
-                if(strlen($extent)>0) {$type= $extent;}
+                if (strlen($extent) > 0) {
+                    $type = $extent;
+                }
                 $extentVAl = $gapsLength . ' ' . $type;
                 $ex->value = $extentVAl;
                 $gap->appendChild($ex);
@@ -105,9 +107,10 @@ class XMLUtils {
                     }
                 }
             }
-            $s = str_replace($matches[0],$gap->ownerDocument->saveXML($gap),$s);
+            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
         }
         return $s;
+
     }
 
     /**

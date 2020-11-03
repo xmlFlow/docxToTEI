@@ -72,7 +72,9 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
-                    $s = XMLUtils::illegibleGaps($s);
+                    $s = XMLUtils::createGap($s,'lost','\/');
+                    $s = XMLUtils::createGap($s,'illegible','\+');
+                    //$s = XMLUtils::createGap($s,'/');
 
                     # ! order is important. never change order #
                     #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
