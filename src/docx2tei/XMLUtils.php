@@ -56,10 +56,26 @@ class XMLUtils {
         $s = preg_replace('/\r|\n/', '', $s);
         return $s;
     }
+    public static function createSpaces(string $s) {
+        preg_match_all('/' . XMLUtils::$bnd . '(\.)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+            $elem = new \DOMDocument();
+            $gap = $elem->createElement("space");
+            $gapsLength = strlen($match[0]);
+            $qn = $elem->createAttribute('quantity');
+            $qn->value = $gapsLength;
+            $gap->appendChild($qn);
+            $unit = $elem->createAttribute('unit');
+            $unit->value = 'chars';
+            $gap->appendChild($unit);
+            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
 
+        }
+        return $s;
+    }
 
     public static function createGap(string $s, string $reason, string $replace) {
-
 
         preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $gap = $matches[0];

@@ -92,12 +92,14 @@
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="illegible" extent="5 characters" agent="agent"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="illegible" extent="5 extent" agent="agent"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-          <p>(4) Text with 5 lost characters</p>
+          <p>(5) Text with 5 lost characters</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters" agent="agent"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 extent" agent="agent"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 extent" agent="" newAttrib="newValue"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
-          <lb/>
+          <p>(6) Space</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="9" unit="chars"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+          <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="14" unit="chars"/> ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
           <p>(2) sentence Block with empty line inside #sB{नकर वम्हन प <gap reason="lost" extent="4 lines"/> </p>
           <lb/>
           <p>नकम थ्वया}#</p>
@@ -113,10 +115,6 @@
           <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
           <p>(8) This line includes a .</p>
           <p>तिष्ठा दिन जुरो ।। ।। <bold>.</bold> दानपति सलको थविर श्री धनजोतिजु</p>
-          <p>(9) This line includes a gap of 5 <bold>lost </bold>lines with default extent type characters</p>
-          <p>नकर वम्हन प <gap reason="lost" extent="4 lines"/> नकम थ्वया</p>
-          <p>(10) This line includes a gap of 5 <bold>illegible</bold> lines with default extent type characters</p>
-          <p>नकर वम्हन प <gap reason="illegible" extent="4 lines"/> नकम थ्वया</p>
           <p>(11) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
           <p>नकर वम्हन प #&amp;@second{}# नकम थ्वया </p>
           <p>(12) Some unclear text inside a text block default cert=high</p>
@@ -130,7 +128,7 @@
           <p>(15): This line contains unnecessary , repeated text</p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sur{सर्वदा}# दानपति सलको x</p>
           <p>(16): This line includes 4 spaces , default unit=chars</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #....# दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <space quantity="6" unit="chars"/> दानपति सलको </p>
           <p>(17) This line includes text supplied by editor, default reason is lost</p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
           <p>(18) After this line, table begins</p>
