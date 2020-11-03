@@ -6,7 +6,7 @@ namespace docx2tei;
 
 class XMLUtils {
 
-    protected static $BOUNDARY = '#';
+    protected static $bnd = '#';
 
     public function __construct() {
 
@@ -63,39 +63,49 @@ class XMLUtils {
      */
     public static function illegibleGaps(string $s) {
 
-        preg_match_all('/' . '' . XMLUtils::$BOUNDARY . '(\+)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$BOUNDARY . '/i', $s, $matches);
+        preg_match_all('/' . '' . XMLUtils::$bnd . '(\+)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $gap = $matches[0];
         if (!is_null($gap) && count($gap) != 0) {
-            $str = str_replace(XMLUtils::$BOUNDARY, '', $gap[0]);
-            $elem =  new \DOMDocument();
+            $str = str_replace(XMLUtils::$bnd, '', $gap[0]);
+            $elem = new \DOMDocument();
             $gap = $elem->createElement("gap");
             $gapsLength = 0;
             $parts = explode("@", $str);
             if (!is_null($parts)) {
-                $gapsLength = count_chars(array_pop($parts));
-            };
-            if (!is_null($parts)) {
+                $gapsLength = strlen(array_shift($parts));
                 $ex = $elem->createAttribute('extent');
-                $type = ($gapsLength==1) ? 'character' : 'characters';
-                $extent = array_pop($parts);
-                if (is_null($extent))  $extent = $type;
-                $extent->value = $gapsLength.' '.$extent;
+                $type = ($gapsLength == 1) ? 'character' : 'characters';
+
+                $extent = array_shift($parts);
+                if(strlen($extent)>0) {$type= $extent;}
+                $extentVAl = $gapsLength . ' ' . $type;
+                $ex->value = $extentVAl;
                 $gap->appendChild($ex);
 
+
             };
-            if (!is_null($parts)) {
-                $agent = array_pop($parts);
-                if (!is_null($agent)){
+            if (count($parts) > 0) {
+                $agent = array_shift($parts);
+                if (!is_null($agent)) {
+                    $ag = $elem->createAttribute('agent');
+                    $ag->value = $agent;
+                    $gap->appendChild($ag);
 
                 }
             };
-
-
-            foreach ($parts as $part) {
-
+            if (count($parts) > 0) {
+                for ($i = 0; $i < count($parts); $i++) {
+                    $extras = explode('=', $parts[$i]);
+                    if (count($extras) == 2) {
+                        $attr = $elem->createAttribute($extras[0]);
+                        $attr->value = $extras[1];
+                        $gap->appendChild($attr);
+                    } else {
+                        print_error("[Error]  " . $parts[$i] . " doese not conatin a = sign");
+                    }
+                }
             }
-
-
+            $s = str_replace($matches[0],$gap->ownerDocument->saveXML($gap),$s);
         }
         return $s;
     }
