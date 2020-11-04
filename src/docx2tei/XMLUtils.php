@@ -56,6 +56,19 @@ class XMLUtils {
         $s = preg_replace('/\r|\n/', '', $s);
         return $s;
     }
+    public static  function createStructuredContent(string $s){
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@[\w]*)*(\{([(\w)*(\s)*])*\})*'. XMLUtils::$bnd . '/i', $s, $matches);
+        $match = $matches[0];
+        $x=1;
+    return $s;
+    }
+
+
+
+    /**
+     * @param string $s
+     * @return string|string[]
+     */
     public static function createSpaces(string $s) {
         preg_match_all('/' . XMLUtils::$bnd . '(\.)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $match = $matches[0];
@@ -75,6 +88,12 @@ class XMLUtils {
         return $s;
     }
 
+    /**
+     * @param string $s
+     * @param string $reason
+     * @param string $replace
+     * @return string|string[]
+     */
     public static function createGap(string $s, string $reason, string $replace) {
 
         preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);

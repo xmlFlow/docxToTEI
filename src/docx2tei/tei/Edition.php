@@ -77,6 +77,8 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap($s,'illegible','\+');
                     # create spaces
                     $s = XMLUtils::createSpaces($s);
+                    # structured content xy{content}
+                    $s = XMLUtils::createStructuredContent($s);
 
 
                     # ! order is important. never change order #
