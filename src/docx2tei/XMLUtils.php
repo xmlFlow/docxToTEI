@@ -56,10 +56,19 @@ class XMLUtils {
         $s = preg_replace('/\r|\n/', '', $s);
         return $s;
     }
+
+    /**
+     * @param string $s
+     * @return string
+     */
+
     public static  function createStructuredContent(string $s){
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@[\w]*)*(\{([(\w)*(\s)*])*\})*'. XMLUtils::$bnd . '/i', $s, $matches);
+
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|\?|&amp;]+(@[\w]*)*(\{(.)*\})+'. XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
-        $x=1;
+        if (count($match)) {
+            $s  = str_replace($matches[0],"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",$s);
+        }
     return $s;
     }
 
