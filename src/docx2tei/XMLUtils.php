@@ -62,17 +62,38 @@ class XMLUtils {
      * @return string
      */
 
-    public static  function createStructuredContent(string $s){
+    public static function createStructuredContent(string $s) {
 
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|\?|&amp;]+(@[\w]*)*(\{(.)*\})+'. XMLUtils::$bnd . '/iUu', $s, $matches);
+
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@[\w|=|-]*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
-        if (count($match)) {
-            $s  = str_replace($matches[0],"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",$s);
+        if (!is_null($match) && count($match) != 0) {
+            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
+            $parts = explode("{", $str);
+            $suffix1 = str_replace('}','',$parts[1]);
+            if (count($parts) == 3) $suffix2 = str_replace('}','',$parts[2]);
+            $prefix = explode('@', $parts[0]);
+            $tagStr = $prefix[0];
+            $elem = new \DOMDocument();
+            $tagElem = $elem->createElement("tag");
+            for ($i = 0; $i < count($prefix); $i++) {
+
+                $tag = str_replace('=', '', $prefix[$i]);
+                $tag = str_replace('-', '', $tag);
+
+                $attr = $elem->createAttribute($tag);
+                $attr->value ='value';
+                $tagElem->appendChild($attr);
+            }
+            $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }
-    return $s;
+        return $s;
     }
 
-
+    static function print_error($message): void {
+        echo("[XML Parsing error]" . $message . "\n");
+        //error_log($message."\n");
+    }
 
     /**
      * @param string $s
@@ -147,7 +168,7 @@ class XMLUtils {
                         $attr->value = $extras[1];
                         $gap->appendChild($attr);
                     } else {
-                        print_error("[Error]  " . $parts[$i] . " doese not conatin a = sign");
+                        self::print_error($parts[$i] . " does not conatin a = sign");
                     }
                 }
             }

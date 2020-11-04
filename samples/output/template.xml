@@ -77,10 +77,10 @@
           <p>श्रीमालीका</p>
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
-          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXभवतो भजेहं </p>
+          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं <tag/>भवतो भजेहं </p>
           <lb break="no"/>
           <lb/>
-          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXपञ्चम्यान्तिथौ मृगशिर- #SE</p>
+          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <tag/>पञ्चम्यान्तिथौ मृगशिर- #SE</p>
           <p>(2) An empty line break follows me </p>
           <lb/>
           <p>( 3)Two line breaks without a break follows me.</p>
@@ -102,29 +102,31 @@
           <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="14" unit="chars"/> ।। धर्म्मेश्वर: सक <gap reason="lost" extent="5 characters"/>लपाप <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/>विनाशहे-</p>
           <lb/>
           <p>(07) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
-          <p>नकर वम्हन प XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX नकम थ्वया </p>
+          <p>नकर वम्हन प <tag second="value" new-Attrib1newValue="value" new-Attrib2newValue2="value"/> नकम थ्वया </p>
           <p>(08) Some unclear text inside a text block default cert=high</p>
-          <p>तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको थविर श्री धनजोतिजु</p>
           <p>(09) sic: reproduced text with corrections</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको थविर श्री धनजोतिजु</p>
           <p>(10): orig: this line contains a text marked as original , rather than being normalized.</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको </p>
           <p>(11): reg: this line contains a text marked as being normalized/corrected</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको </p>
           <p>(12): This line contains unnecessary , repeated text</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको x</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको x</p>
           <p>(13) This line includes text supplied by editor, default reason is lost</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको </p>
           <p>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
-          <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+          <p>
+            <tag rend="value"/>
+          </p>
           <p>(15) Text with a personal name</p>
-          <p>तुः सौखावतीगतिमहाजXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXनमार्थहे[तुः] दुःखाधिपारगमनो</p>
+          <p>तुः सौखावतीगतिमहाज<tag/>नमार्थहे[तुः] दुःखाधिपारगमनो</p>
           <p>(16) Text with a place name </p>
-          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXभवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं <tag/>भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
           <p>(17) Text with a geographical name</p>
-          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXपञ्चम्यान्तिथौ मृगशिर-</p>
+          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <tag/>पञ्चम्यान्तिथौ मृगशिर-</p>
           <p>(18) This line includes a sentence </p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <tag/> दानपति सलको </p>
           <lb/>
           <lb/>
           <p>(7) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
@@ -138,9 +140,9 @@
           <p>(19) Experimental sentence with line beginning and ending</p>
           <lb/>
           <p>(20) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
-          <p>भोXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#-#ग्&amp;#8205;य </p>
+          <p>भो<tag/>#-#ग्&amp;#8205;य </p>
           <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
-          <p>भोXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#-#ग्&amp;#x200c;य "</p>
+          <p>भो<tag/>#-#ग्&amp;#x200c;य "</p>
           <lb/>
           <lb/>
           <lb/>
