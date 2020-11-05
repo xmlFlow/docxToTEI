@@ -73,13 +73,16 @@ class XMLUtils {
             $suffix1 = str_replace('}','',$parts[1]);
             if (count($parts) == 3) $suffix2 = str_replace('}','',$parts[2]);
             $prefix = explode('@', $parts[0]);
-            $tagStr = $prefix[0];
+
             $elem = new \DOMDocument();
-            $tagElem = $elem->createElement("tag");
+            $tag = str_replace('=', '', $prefix[0]);
+            $tag = str_replace('-', '', $tag);
+            $tag = str_replace('&amp;', 'add', $tag);
+            $tag = str_replace('?', 'unclear', $tag);
+
+            $tagElem = $elem->createElement($tag);
             for ($i = 0; $i < count($prefix); $i++) {
 
-                $tag = str_replace('=', '', $prefix[$i]);
-                $tag = str_replace('-', '', $tag);
 
                 $attr = $elem->createAttribute($tag);
                 $attr->value ='value';
