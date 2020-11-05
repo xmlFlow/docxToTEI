@@ -74,18 +74,26 @@ class XMLUtils {
             if (count($parts) == 3) $suffix2 = str_replace('}', '', $parts[2]);
             $prefix = explode('@', $parts[0]);
 
-            $elem = new \DOMDocument();
             $tag = str_replace('=', '', $prefix[0]);
             $tag = str_replace('-', '', $tag);
             $tag = str_replace('&amp;', 'add', $tag);
             $tag = str_replace('?', 'unclear', $tag);
+            $elem = new \DOMDocument();
 
             $tagElem = $elem->createElement($tag);
-
+            # add
+            $types = array(
+                array("tag" => "place", "default" => "above the line"),
+                array("tag" => "hand", "default" => "first")
+            );
+            # remove tag
+            $tags = array_shift($prefix);
             for ($i = 0; $i < count($prefix); $i++) {
-                $attr = $elem->createAttribute($tag);
-                $attr->value = 'value';
-                $tagElem->appendChild($attr);
+                if ($i < count($types)) {
+                    $attr = $elem->createAttribute($types[$i]['tag']);
+                    $attr->value = (strlen($prefix[$i])>0) ? $prefix[$i] : $types[$i]['default'];
+                    $tagElem->appendChild($attr);
+                }
             }
             $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }
