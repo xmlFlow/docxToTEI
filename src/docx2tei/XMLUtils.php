@@ -94,6 +94,14 @@ class XMLUtils {
                     $attr->value = (strlen($prefix[$i])>0) ? $prefix[$i] : $types[$i]['default'];
                     $tagElem->appendChild($attr);
                 }
+                else {
+                    $extraAttrs = explode("=", $prefix[$i]);
+                    if (count($extraAttrs) == 2) {
+                        $attr = $elem->createAttribute($extraAttrs[0]);
+                        $attr->value = $extraAttrs[1];
+                        $tagElem->appendChild($attr);
+                    }
+                }
             }
             $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }

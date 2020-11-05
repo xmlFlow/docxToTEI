@@ -102,9 +102,9 @@
           <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="14" unit="chars"/> ।। धर्म्मेश्वर: सक <gap reason="lost" extent="5 characters"/>लपाप <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/>विनाशहे-</p>
           <lb/>
           <p>(07) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
-          <p>नकर वम्हन प <add place="above the line" hand="second"/> नकम</p>
+          <p>नकर वम्हन प <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम</p>
           <p> थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="second"/> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम थ्वया </p>
           <p>नकर वम्हन प <add/> नकम थ्वया </p>
           <p>नकर वम्हन प <add place="below the text"/> नकम थ्वया </p>
           <p>नकर वम्हन प <add place="above the line" hand="second"/> नकम थ्वया </p>
