@@ -65,13 +65,13 @@ class XMLUtils {
     public static function createStructuredContent(string $s) {
 
 
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@[\w|=|-]*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             $str = str_replace(XMLUtils::$bnd, '', $match[0]);
             $parts = explode("{", $str);
-            $suffix1 = str_replace('}','',$parts[1]);
-            if (count($parts) == 3) $suffix2 = str_replace('}','',$parts[2]);
+            $suffix1 = str_replace('}', '', $parts[1]);
+            if (count($parts) == 3) $suffix2 = str_replace('}', '', $parts[2]);
             $prefix = explode('@', $parts[0]);
 
             $elem = new \DOMDocument();
@@ -81,21 +81,15 @@ class XMLUtils {
             $tag = str_replace('?', 'unclear', $tag);
 
             $tagElem = $elem->createElement($tag);
+
             for ($i = 0; $i < count($prefix); $i++) {
-
-
                 $attr = $elem->createAttribute($tag);
-                $attr->value ='value';
+                $attr->value = 'value';
                 $tagElem->appendChild($attr);
             }
             $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }
         return $s;
-    }
-
-    static function print_error($message): void {
-        echo("[XML Parsing error]" . $message . "\n");
-        //error_log($message."\n");
     }
 
     /**
@@ -179,6 +173,11 @@ class XMLUtils {
         }
         return $s;
 
+    }
+
+    static function print_error($message): void {
+        echo("[XML Parsing error]" . $message . "\n");
+        //error_log($message."\n");
     }
 
     /**

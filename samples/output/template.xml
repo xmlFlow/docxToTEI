@@ -102,6 +102,11 @@
           <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="14" unit="chars"/> ।। धर्म्मेश्वर: सक <gap reason="lost" extent="5 characters"/>लपाप <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/>विनाशहे-</p>
           <lb/>
           <p>(07) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
+          <p>नकर वम्हन प <add add="value"/> नकम</p>
+          <p> थ्वया </p>
+          <p>नकर वम्हन प <add add="value"/> नकम थ्वया </p>
+          <p>नकर वम्हन प <add add="value"/> नकम थ्वया </p>
+          <p>नकर वम्हन प <add add="value"/> नकम थ्वया </p>
           <p>नकर वम्हन प <add add="value"/> नकम थ्वया </p>
           <p>(08) Some unclear text inside a text block default cert=high</p>
           <p>तिष्ठा दिन जुरो ।। ।। <unclear unclear="value"/> दानपति सलको थविर श्री धनजोतिजु</p>
@@ -129,19 +134,19 @@
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sb sb="value"/> दानपति सलको </p>
           <lb/>
           <lb/>
-          <p>(7) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
+          <p>(x) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
           <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
-          <p>(8) This line includes a .</p>
+          <p>(x) This line includes a .</p>
           <p>तिष्ठा दिन जुरो ।। ।। <bold>.</bold> दानपति सलको थविर श्री धनजोतिजु</p>
           <lb/>
-          <p>(18) After this line, table begins</p>
+          <p>(x) After this line, table begins</p>
           <lb/>
           <p>Sentence begin after table ends</p>
-          <p>(19) Experimental sentence with line beginning and ending</p>
+          <p>(x) Experimental sentence with line beginning and ending</p>
           <lb/>
-          <p>(20) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
+          <p>(x) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
           <p>भो<orig orig="value"/>#-#ग्&amp;#8205;य </p>
-          <p>(21) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
+          <p>(x) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
           <p>भो<orig orig="value"/>#-#ग्&amp;#x200c;य "</p>
           <lb/>
           <lb/>
