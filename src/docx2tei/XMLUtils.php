@@ -88,21 +88,22 @@ class XMLUtils {
             );
             # remove tag
             $tags = array_shift($prefix);
-            for ($i = 0; $i < count($prefix); $i++) {
+            for ($i = 0; $i < count($types); $i++) {
                 if ($i < count($types)) {
                     $attr = $elem->createAttribute($types[$i]['tag']);
-                    $attr->value = (strlen($prefix[$i])>0) ? $prefix[$i] : $types[$i]['default'];
+                    $attr->value =  $types[$i]['default'];
                     $tagElem->appendChild($attr);
                 }
-                else {
-                    $extraAttrs = explode("=", $prefix[$i]);
-                    if (count($extraAttrs) == 2) {
-                        $attr = $elem->createAttribute($extraAttrs[0]);
-                        $attr->value = $extraAttrs[1];
-                        $tagElem->appendChild($attr);
-                    }
+            }
+            for ($i = count($types); $i < count($prefix); $i++) {
+                $extraAttrs = explode("=", $prefix[$i]);
+                if (count($extraAttrs) == 2) {
+                    $attr = $elem->createAttribute($extraAttrs[0]);
+                    $attr->value = $extraAttrs[1];
+                    $tagElem->appendChild($attr);
                 }
             }
+
             $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }
         return $s;
