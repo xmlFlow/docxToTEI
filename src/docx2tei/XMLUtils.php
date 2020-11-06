@@ -89,7 +89,11 @@ class XMLUtils {
                     for ($i = 0; $i < count($tag["attributes"]); $i++) {
                         if ($i < count($tag["attributes"])) {
                             $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                            $attr->value = $tag["attributes"][$i]['default'];
+                            $val = $tag["attributes"][$i]['default'];
+                            if ((count($prefix) > $i) && (strlen($prefix[$i])>0)) {
+                                $val = $prefix[$i];
+                            }
+                            $attr->value = $val;
                             $tagElem->appendChild($attr);
                         }
                     }
@@ -238,9 +242,16 @@ class XMLUtils {
                 "original" => "sur",
                 "replace" => "surplus",
                 "attributes" => array(
-                    array("tag" => "reason", "default" => "lost"),
+                    array("tag" => "reason", "default" => "repeated"),
                 )
             ),
+            array(
+                "original" => "sup",
+                "replace" => "supplied",
+                "attributes" => array(
+                    array("tag" => "reason", "default" => "lost"),
+                )
+            )
 
         ];
         return $tags;

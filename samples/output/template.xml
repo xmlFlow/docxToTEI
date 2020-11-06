@@ -102,12 +102,12 @@
           <p>नमो रत्नंत्रयाय [रत्न˚] <space quantity="14" unit="chars"/> ।। धर्म्मेश्वर: सक <gap reason="lost" extent="5 characters"/>लपाप <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/>विनाशहे-</p>
           <lb/>
           <p>(07) This line includes an addition to the text. default is : hand=first , place = above the line.</p>
-          <p>नकर वम्हन प <add place="above the line" hand="first" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम</p>
+          <p>नकर वम्हन प <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम</p>
           <p> थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम थ्वया </p>
           <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया</add> नकम थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया </add> नकम थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया</add> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="below the text" hand="first">नकम थ्वया </add> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="second">नकम थ्वया</add> नकम थ्वया </p>
           <p>(08) Some unclear text inside a text block default cert=high</p>
           <p>तिष्ठा दिन जुरो ।। ।। <unclear cert="high">शुभमस्तु शुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तु </unclear> दानपति सलको थविर श्री धनजोतिजु</p>
           <p>(09) sic: reproduced text with corrections</p>
@@ -118,9 +118,11 @@
           <p>(11): reg: this line contains a text marked as being normalized/corrected</p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #reg{सर्वदा}{सर्वदा}# दानपति सलको </p>
           <p>(12): This line contains unnecessary , repeated text</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <surplus reason="lost">सर्वदा</surplus> दानपति सलको x</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <surplus reason="repeated">सर्वदा</surplus> दानपति सलको x</p>
+          <p>जुरो ।। ।। <surplus reason="unrepeated">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </surplus> दानपति सलको x</p>
           <p>(13) This line includes text supplied by editor, default reason is lost</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <supplied reason="lost">दानपति सलको </supplied> दानपति सलको </p>
+          <p>जुरो ।। ।। <supplied reason="lost-manully-set">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </supplied> दानपति सलको x</p>
           <p>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
           <p>#del@rend{text}#</p>
           <p>(15) Text with a personal name</p>
