@@ -64,7 +64,7 @@ class XMLUtils {
 
     public static function createStructuredContent(string $s) {
 
-
+        $tags = self::getTagsList();
         preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
@@ -74,39 +74,55 @@ class XMLUtils {
             if (count($parts) == 3) $suffix2 = str_replace('}', '', $parts[2]);
             $prefix = explode('@', $parts[0]);
 
-            $tag = str_replace('=', '', $prefix[0]);
-            $tag = str_replace('-', '', $tag);
-            $tag = str_replace('&amp;', 'add', $tag);
-            $tag = str_replace('?', 'unclear', $tag);
+            $tagName = $prefix[0];
+            $tagName = self::removeUnnecessaryChars($tagName);
+
             $elem = new \DOMDocument();
 
-            $tagElem = $elem->createElement($tag);
-            # add
-            $types = array(
-                array("tag" => "place", "default" => "above the line"),
-                array("tag" => "hand", "default" => "first")
-            );
-            # remove tag
-            $tags = array_shift($prefix);
-            for ($i = 0; $i < count($types); $i++) {
-                if ($i < count($types)) {
-                    $attr = $elem->createAttribute($types[$i]['tag']);
-                    $attr->value =  $types[$i]['default'];
-                    $tagElem->appendChild($attr);
-                }
-            }
-            for ($i = count($types); $i < count($prefix); $i++) {
-                $extraAttrs = explode("=", $prefix[$i]);
-                if (count($extraAttrs) == 2) {
-                    $attr = $elem->createAttribute($extraAttrs[0]);
-                    $attr->value = $extraAttrs[1];
-                    $tagElem->appendChild($attr);
-                }
-            }
 
-            $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
+            foreach ($tags as $tag) {
+                if ($tagName == $tag["original"]) {
+                    $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
+                    $tagElem = $elem->createElement($tagName,$suffix1);
+                    // remove tag from array
+                    array_shift($prefix);
+                    for ($i = 0; $i < count($tag["attributes"]); $i++) {
+                        if ($i < count($tag["attributes"])) {
+                            $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                            $attr->value = $tag["attributes"][$i]['default'];
+                            $tagElem->appendChild($attr);
+                        }
+                    }
+                    for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
+                        $extraAttrs = explode("=", $prefix[$i]);
+                        if (count($extraAttrs) == 2) {
+                            $attr = $elem->createAttribute($extraAttrs[0]);
+                            $attr->value = $extraAttrs[1];
+                            $tagElem->appendChild($attr);
+                        } else {
+                            self::print_error('Attribute with no = sign ' . $prefix[$i]);
+                        }
+                    }
+                    $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
+                }
+            }
         }
         return $s;
+    }
+
+    /**
+     * @param string $tagName
+     * @return string|string[]
+     */
+    public static function removeUnnecessaryChars(string $tagName) {
+        $tagName = str_replace('=', '', $tagName);
+        $tagName = str_replace('-', '', $tagName);
+        return $tagName;
+    }
+
+    static function print_error($message): void {
+        echo("[XML Parsing error]" . $message . "\n");
+        //error_log($message."\n");
     }
 
     /**
@@ -192,25 +208,35 @@ class XMLUtils {
 
     }
 
-    static function print_error($message): void {
-        echo("[XML Parsing error]" . $message . "\n");
-        //error_log($message."\n");
-    }
 
     /**
-     * @param string $str
-     * @param string $xml
-     * @return string
+     * @return array[]
      */
-    public static function createExtraAtrributes(string $str, string $xml, int $offset): string {
-        $parts = array_slice(explode("@", $str), $offset);
-        foreach ($parts as $part) {
-            list ($key, $value) = explode('=', $part);
-            if (!is_null($key) && !is_null($value)) {
-                $xml .= '@' . $key . '=' . $value;
-            }
-        }
-        return $xml;
+    private static function getTagsList(): array {
+        $tags = [
+            array(
+                "original" => "&amp;",
+                "replace" => "add",
+                "attributes" => array(
+                    array("tag" => "place", "default" => "above the line"),
+                    array("tag" => "hand", "default" => "first")
+                )
+            ),
+            array(
+                "original" => "?",
+                "replace" => "unclear",
+                "attributes" => array(
+                    array("tag" => "cert", "default" => "high"),
+                )
+            ),
+            array(
+                "original" => "orig",
+                "replace" => "orig",
+                "attributes" => array()
+            )
+
+        ];
+        return $tags;
     }
 
 

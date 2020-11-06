@@ -47,8 +47,8 @@
         <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-11-05</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-11-05" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2020-11-06</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-11-06" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
     <facsimile>
       <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
     </facsimile>
@@ -77,10 +77,10 @@
           <p>श्रीमालीका</p>
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
-          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं <pln place="above the line" hand="first"/>भवतो भजेहं </p>
+          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं </p>
           <lb break="no"/>
           <lb/>
-          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <gen place="above the line" hand="first"/>पञ्चम्यान्तिथौ मृगशिर- #SE</p>
+          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर- #SE</p>
           <p>(2) An empty line break follows me </p>
           <lb/>
           <p>( 3)Two line breaks without a break follows me.</p>
@@ -105,33 +105,31 @@
           <p>नकर वम्हन प <add place="above the line" hand="first" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम</p>
           <p> थ्वया </p>
           <p>नकर वम्हन प <add place="above the line" hand="first" new-Attrib1="newValue" new-Attrib2="newValue2"/> नकम थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first"/> नकम थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first"/> नकम थ्वया </p>
-          <p>नकर वम्हन प <add place="above the line" hand="first"/> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया</add> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया </add> नकम थ्वया </p>
+          <p>नकर वम्हन प <add place="above the line" hand="first">नकम थ्वया</add> नकम थ्वया </p>
           <p>(08) Some unclear text inside a text block default cert=high</p>
-          <p>तिष्ठा दिन जुरो ।। ।। <unclear place="above the line" hand="first"/> दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>तिष्ठा दिन जुरो ।। ।। <unclear cert="high">शुभमस्तु शुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तु </unclear> दानपति सलको थविर श्री धनजोतिजु</p>
           <p>(09) sic: reproduced text with corrections</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <cor place="above the line" hand="first"/> दानपति सलको थविर श्री धनजोतिजु</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #cor{¯¯¯¯}{- - -}# दानपति सलको थविर श्री धनजोतिजु</p>
           <p>(10): orig: this line contains a text marked as original , rather than being normalized.</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <orig place="above the line" hand="first"/> दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <orig>सर्वदा</orig> दानपति सलको </p>
           <p>(11): reg: this line contains a text marked as being normalized/corrected</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <reg place="above the line" hand="first"/> दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #reg{सर्वदा}{सर्वदा}# दानपति सलको </p>
           <p>(12): This line contains unnecessary , repeated text</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sur place="above the line" hand="first"/> दानपति सलको x</p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sur{सर्वदा}# दानपति सलको x</p>
           <p>(13) This line includes text supplied by editor, default reason is lost</p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sup place="above the line" hand="first"/> दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
           <p>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
-          <p>
-            <del place="above the line" hand="first"/>
-          </p>
+          <p>#del@rend{text}#</p>
           <p>(15) Text with a personal name</p>
-          <p>तुः सौखावतीगतिमहाज<pen place="above the line" hand="first"/>नमार्थहे[तुः] दुःखाधिपारगमनो</p>
+          <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
           <p>(16) Text with a place name </p>
-          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं <pln place="above the line" hand="first"/>भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+          <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
           <p>(17) Text with a geographical name</p>
-          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <gen place="above the line" hand="first"/>पञ्चम्यान्तिथौ मृगशिर-</p>
+          <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
           <p>(18) This line includes a sentence </p>
-          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sb place="above the line" hand="first"/> दानपति सलको </p>
+          <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sb{दानपति सलको सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो । }# दानपति सलको </p>
           <lb/>
           <lb/>
           <p>(x) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
@@ -145,9 +143,9 @@
           <p>(x) Experimental sentence with line beginning and ending</p>
           <lb/>
           <p>(x) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
-          <p>भो<orig place="above the line" hand="first"/>#-#ग्&amp;#8205;य </p>
+          <p>भो<orig>•</orig>#-#ग्&amp;#8205;य </p>
           <p>(x) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
-          <p>भो<orig place="above the line" hand="first"/>#-#ग्&amp;#x200c;य "</p>
+          <p>भो<orig>•</orig>#-#ग्&amp;#x200c;य "</p>
           <lb/>
           <lb/>
           <lb/>
