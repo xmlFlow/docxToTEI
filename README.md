@@ -94,17 +94,17 @@
  | 10.  :heavy_check_mark: | #orig{text}# | | `#orig{Tall}#` | `<orig>Tall</orig>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html)|
  | 11. :ok: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
  | 12. :heavy_check_mark: | #sur{text}# | |  `#sur@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
- | 13. :ok: | #sup@reason{text}# | @reason=lost| `#sup@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
- | 14. :ok: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
- | 15. #pen{url}# | `#pn{corresp_ID}#` | `<persName corresp="corresp_ID"/>` | :ok: | [persName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-persName.html) |
- | 16. #pln{url}# | `#pln{corresp_ID}#` | `<placeName  corresp="corresp_ID"/>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
- | 17.  #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
- | 18. :ok:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
- | | last minus of a sentence| | | | |
+ | 13.  :heavy_check_mark:  | #sup@reason{text}# | @reason=lost| `#sup@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
+ | 14. :heavy_check_mark: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
+ | 15. :heavy_check_mark: |  #pen{url}# | `#pn{corresp_ID}#` | `<persName corresp="corresp_ID"/>` | :ok: | [persName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-persName.html) |
+ | 16. :heavy_check_mark: |  #pln{url}# | `#pln{corresp_ID}#` | `<placeName  corresp="corresp_ID"/>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
+ | 17. :heavy_check_mark: |   #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
+ | 18. heavy_check_mark: :ok:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+ | 19. :ok: | last minus of a sentence| | | | |
  | :ok: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
  | :ok: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
- | :ok: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
  | :ok: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
+ | :ok: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
  | :ok: | #pb@p:page-number@facs#|  | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
  | :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | :ok: | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
@@ -193,9 +193,4 @@
  
 :heavy_check_mark:
  
-    
- 
-### Not to foreget
-| S | Markup | Default | Markup Example | TEI Example | Remarks |
-| ---- | ---- | ---- | ---- | ---- |  ---- |
-| :question: | #sp{@extenty@unit}# |@unit=chars | `#sp{@3@lines}` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
+   

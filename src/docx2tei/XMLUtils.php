@@ -71,7 +71,9 @@ class XMLUtils {
             $str = str_replace(XMLUtils::$bnd, '', $match[0]);
             $parts = explode("{", $str);
             $suffix1 = str_replace('}', '', $parts[1]);
-            if (count($parts) == 3) $suffix2 = str_replace('}', '', $parts[2]);
+            if (count($parts) == 3) {
+                $suffix2 = str_replace('}', '', $parts[2]);
+            }
             $prefix = explode('@', $parts[0]);
 
             $tagName = $prefix[0];
@@ -81,9 +83,9 @@ class XMLUtils {
 
 
             foreach ($tags as $tag) {
-                if ($tagName == $tag["original"]) {
+                if ( $tag["original"] == $tagName) {
                     $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
-                    $tagElem = $elem->createElement($tagName,$suffix1);
+                    $tagElem = $elem->createElement($tagName);
                     // remove tag from array
                     array_shift($prefix);
                     for ($i = 0; $i < count($tag["attributes"]); $i++) {
@@ -106,6 +108,20 @@ class XMLUtils {
                         } else {
                             self::print_error('Attribute with no = sign ' . $prefix[$i]);
                         }
+                    }
+                    if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) ==2 ) {
+
+                            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+                            $tagElem->appendChild($suffix1Elem);
+                            if(isset($suffix2)) {
+                                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                                $tagElem->appendChild($suffix2Elem);
+                            }
+
+
+                    }
+                    else {
+                        $tagElem->nodeValue = $suffix1;
                     }
                     $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
                 }
@@ -251,6 +267,39 @@ class XMLUtils {
                 "attributes" => array(
                     array("tag" => "reason", "default" => "lost"),
                 )
+            ),
+            array(
+                "original" => "del",
+                "replace" => "del",
+                "attributes" => array(
+                    array("tag" => "rend", "default" => "overstrike"),
+                )
+            ),
+            array(
+                "original" => "pen",
+                "replace" => "pen",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "pln",
+                "replace" => "pln",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "gen",
+                "replace" => "gen",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "sb",
+                "replace" => "sb",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "cor",
+                "replace" => "choice",
+                "innerTags" => array('sic','corr'),
+                "attributes" => array()
             )
 
         ];
