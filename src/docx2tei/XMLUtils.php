@@ -23,8 +23,13 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createComplexSentence(string $s) {
-        $s = preg_replace('/\#SB/', '<s>', $s);
-        $s = preg_replace('/\#SE/', '</s>', $s);
+        #preg_match_all('/' . XMLUtils::$bnd . 'SB(.|\n)*' . XMLUtils::$bnd.'SE'. '/i', $s, $matches);
+        preg_match_all('/#SB(.|\n|\r\n|\r)*#SE/i', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+            $s = preg_replace('/\#SB/i', '<s>', $s);
+            $s = preg_replace('/\#SE/i', '</s>', $s);
+        }
         return $s;
     }
 
@@ -43,6 +48,11 @@ class XMLUtils {
      */
     public static function createLineBeginNoBreak(string $s) {
         $s = preg_replace('/<p>(\s)*[-]+(\s)*<\/p>/i', '<lb break="no"/>', $s);
+        return $s;
+    }
+
+    public static function createDot(string $s) {
+        $s = preg_replace('/\./i', '<orig>.</orig>', $s);
         return $s;
     }
 
@@ -71,24 +81,18 @@ class XMLUtils {
                 if ($tag["original"] == $tagName) {
                     $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
                     $tagElem = $elem->createElement($tagName);
+                    $attr = $elem->createAttribute("corresp");
+                    $attr->value = $suffix1;
+                    $tagElem->appendChild($attr);
                 }
             }
+            $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
         }
+        return $s;
     }
 
     public static function getControlledVocabList(): array {
-        $tags = array(array(
-            "original" => "pen",
-            "replace" => "persName"
-        ),
-            array(
-                "original" => "pln",
-                "replace" => "placeName"
-            ),
-            array(
-                "original" => "gen",
-                "replace" => "geogName"
-            ));
+        $tags = array();
         return $tags;
     }
 
@@ -227,6 +231,21 @@ class XMLUtils {
                 "replace" => "choice",
                 "innerTags" => array('orig', 'corr'),
                 "attributes" => array()
+            ),
+            array(
+                "original" => "pen",
+                "replace" => "persName",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "pln",
+                "replace" => "placeName",
+                "attributes" => array()
+            ),
+            array(
+                "original" => "gen",
+                "replace" => "geogName",
+                "attributes" => array()
             )
         ];
         return $tags;
@@ -304,7 +323,7 @@ class XMLUtils {
                         $attr->value = $extras[1];
                         $gap->appendChild($attr);
                     } else {
-                        self::print_error($parts[$i] . " does not conatin a = sign");
+                        self::print_error($parts[$i] . " does not contain a = sign");
                     }
                 }
             }

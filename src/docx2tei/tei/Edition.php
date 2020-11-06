@@ -53,7 +53,7 @@ class Edition extends DOMDocument {
         $sections = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
         foreach ($sections as $section) {
             $ab = $this->createSectionBegin($section, $div);
-            $contents = $this->document->xpath->query('./p', $section);
+            $contents = $this->document->xpath->query('child::node()', $section);
             if ($contents) {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
@@ -70,7 +70,11 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createSpaces($s);
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
-# ! order is important. never change order #
+                    # set . as <orig> dot
+                    $s = XMLUtils::createDot($s);
+
+
+                    # ! order is important. never change order #
                     #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
