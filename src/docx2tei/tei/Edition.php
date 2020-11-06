@@ -1,8 +1,6 @@
 <?php
 
-
 namespace docx2tei\tei;
-
 
 use docx2tei\XMLUtils;
 use DOMDocument;
@@ -14,22 +12,17 @@ class Edition extends DOMDocument {
     public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
-
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
-
         if (count($edition) == 0) {
             $this->print_error("[Error] Edition section not found");
         } else {
             #<div xml:id="ed" type="edition" xml:lang="nep">#
             $div = $this->createDiv();
             $this->createSections($div);
-
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
         $tmp = $this->document->structuredDocument->saveXML();
         $y = 1;
-
-
     }
 
     private function createDiv() {
@@ -48,12 +41,10 @@ class Edition extends DOMDocument {
         if (count($matches) == 2) {
             $lang = $matches[1];
         }
-
         $langAttr->value = $lang;
         $div->appendChild($langAttr);
         return $div;
     }
-
 
     /**
      * @param DOMElement $div
@@ -73,15 +64,13 @@ class Edition extends DOMDocument {
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
                     # create gaps of illegible and lost characters
-                    $s = XMLUtils::createGap($s,'lost','\/');
-                    $s = XMLUtils::createGap($s,'illegible','\+');
+                    $s = XMLUtils::createGap($s, 'lost', '\/');
+                    $s = XMLUtils::createGap($s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createSpaces($s);
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
-
-
-                    # ! order is important. never change order #
+# ! order is important. never change order #
                     #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
@@ -90,7 +79,6 @@ class Edition extends DOMDocument {
                     }
                 }
             }
-
         }
     }
 
@@ -109,9 +97,7 @@ class Edition extends DOMDocument {
             $titleAttribs = explode("@", $titleContent);
             if (count($titleAttribs) >= 3) {
                 list ($type, $value1, $value2) = $titleAttribs;
-
                 $type = trim(strtolower($type));
-
                 if ($type == "pb") {
                     //<pb n="1r" facs="#surface1"/>
                     $ab = $this->createElement("pb");
@@ -130,7 +116,6 @@ class Edition extends DOMDocument {
                     $n->value = $value1;
                     $ab->appendChild($facsAttr);
                     $ab->appendChild($n);
-
                 } else {
                     $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");
                 }
@@ -142,14 +127,12 @@ class Edition extends DOMDocument {
                             $extraAttr->value = $parts[1];
                             $ab->appendChild($extraAttr);
                         }
-
                     }
                 }
                 $div->appendChild($ab);
             } else {
                 $this->document->print_error("[Error] not enough information in " . $titleContent);
             }
-
         } else {
             $this->document->print_error("[Error]  In edition block, section header not defined ");
         }

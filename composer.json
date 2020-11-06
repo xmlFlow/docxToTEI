@@ -1,22 +1,22 @@
 {
-    "name": "doc/docx2tei",
-    "description": "DOCX to JATS XML converter",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Dulip Withanage",
-            "email": "dulip.withanage@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": "^7.2",
-        "ext-zip": "^1.15",
-		"ext-dom": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "docx2tei\\": "src/docx2tei"
-        }
+  "name": "doc/docx2tei",
+  "description": "DOCX to JATS XML converter",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Dulip Withanage",
+      "email": "dulip.withanage@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2",
+    "ext-zip": "^1.15",
+    "ext-dom": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "docx2tei\\": "src/docx2tei"
+    }
+  }
 }

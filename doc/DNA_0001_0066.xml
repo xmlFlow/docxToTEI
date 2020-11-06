@@ -1,258 +1,318 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xml:id="DNA_0001_0066" xmlns:tei="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title type="main">An arjī from Badarībāṇa Sāhī re the sending of Dasaĩ prasāda (VS
-               1877)</title>
-            <title type="short">An arjī re the sending of Dasaĩ prasāda</title>
-            <title type="sub">DNA_0001_0066</title>
+<TEI xml:id="DNA_0001_0066">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">An arjī from Badarībāṇa Sāhī re the sending of Dasaĩ prasāda (VS
+                    1877)
+                </title>
+                <title type="short">An arjī re the sending of Dasaĩ prasāda</title>
+                <title type="sub">DNA_0001_0066</title>
 
 
-            <author role="issuer">Badarībāṇa Sāhī</author>
+                <author role="issuer">Badarībāṇa Sāhī</author>
 
-            <respStmt>
-               <resp>main editor</resp>
-               <name type="main_editor">Astrid Zotter</name>
-            </respStmt>
+                <respStmt>
+                    <resp>main editor</resp>
+                    <name type="main_editor">Astrid Zotter</name>
+                </respStmt>
 
-            <respStmt>
-               <resp>collaborator</resp>
-               <name type="collaborator"/>
-            </respStmt>
-         </titleStmt>
+                <respStmt>
+                    <resp>collaborator</resp>
+                    <name type="collaborator"/>
+                </respStmt>
+            </titleStmt>
 
-         <publicationStmt>
-            <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of
-               Religion and Law of Pre-modern Nepal</publisher>
-            <pubPlace>Heidelberg, Germany</pubPlace>
-            <availability status="restricted">
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a
-                  Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-               <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of
-                  the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives,
-                  Government of Nepal).</p>
-            </availability>
-         </publicationStmt>
+            <publicationStmt>
+                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of
+                    Religion and Law of Pre-modern Nepal
+                </publisher>
+                <pubPlace>Heidelberg, Germany</pubPlace>
+                <availability status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a
+                        Creative Commons Attribution-ShareAlike 4.0 Unported License
+                    </licence>
+                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of
+                        the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives,
+                        Government of Nepal).
+                    </p>
+                </availability>
+            </publicationStmt>
 
-         <notesStmt>
-            <note>This file is based on the template v2_0</note>
-            <note/>
-         </notesStmt>
+            <notesStmt>
+                <note>This file is based on the template v2_0</note>
+                <note/>
+            </notesStmt>
 
-         <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <settlement>Kathmandu</settlement>
-                  <repository>National Archives</repository>
-                  <idno>Ms. no. 66</idno>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Kathmandu</settlement>
+                        <repository>National Archives</repository>
+                        <idno>Ms. no. 66</idno>
 
-                  <altIdentifier type="microfilm">
-                     <settlement>Kathmandu, Berlin</settlement>
-                     <collection>Nepal German Manuscript Preservation Project</collection>
-                     <idno>NGMPP DNA 1/66</idno>
-                  </altIdentifier>
-               </msIdentifier>
+                        <altIdentifier type="microfilm">
+                            <settlement>Kathmandu, Berlin</settlement>
+                            <collection>Nepal German Manuscript Preservation Project</collection>
+                            <idno>NGMPP DNA 1/66</idno>
+                        </altIdentifier>
+                    </msIdentifier>
 
-               <msContents>
-                  <textLang mainLang="nep"/>
-               </msContents>
+                    <msContents>
+                        <textLang mainLang="nep"/>
+                    </msContents>
 
-               <physDesc>
-                  <p>For details see <ref
-                        target="http://abhilekha.adw.uni-heidelberg.de/nepal/index.php/catitems/viewitem/1642/1"
-                        >entry in database</ref></p>
-               </physDesc>
+                    <physDesc>
+                        <p>For details see
+                            <ref
+                                    target="http://abhilekha.adw.uni-heidelberg.de/nepal/index.php/catitems/viewitem/1642/1"
+                            >entry in database
+                            </ref>
+                        </p>
+                    </physDesc>
 
-               <history>
-                  <origin>
-                     <p>Issued in <origDate>1820 (VS 1877)</origDate> from
-                           <origPlace>Sallyāna</origPlace>
-                     </p>
-                  </origin>
-               </history>
-            </msDesc>
-         </sourceDesc>
-      </fileDesc>
+                    <history>
+                        <origin>
+                            <p>Issued in <origDate>1820 (VS 1877)</origDate> from
+                                <origPlace>Sallyāna</origPlace>
+                            </p>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
 
-      <encodingDesc>
-         <editorialDecl>
-            <p>The original document from which this e-text was formed is in the Devanāgarī script.
-               The electronic text below contains the following parts: abstract, edition in
-               Devanāgarī, English translation and commentary.</p>
-            <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in <gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in <gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
-         </editorialDecl>
-      </encodingDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>The original document from which this e-text was formed is in the Devanāgarī script.
+                    The electronic text below contains the following parts: abstract, edition in
+                    Devanāgarī, English translation and commentary.
+                </p>
+                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
+                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
+                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
+                    lines of various shapes, often used as placeholders or structuring elements. The editorial
+                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
+                    </gi> in <gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in <gi>
+                        choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the
+                    original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
 
-      <profileDesc>
-         <creation>
-            <date>2015-11-23</date>
-         </creation>
-      </profileDesc>
+        <profileDesc>
+            <creation>
+                <date>2015-11-23</date>
+            </creation>
+        </profileDesc>
 
-      <revisionDesc>
-         <listChange>
-            <change type="internal" when="2016-01-29" who="#PP">edited the English</change>
-            <change type="internal" when="2016-03-14" who="#AZ">converted to template_v2_0</change>
-            <change type="internal" when="2016-03-15" who="#MB">added facs url and checked the annotations</change>
-            <change type="internal" when="2017-01-11" who="#AZ">prepared for UB</change>
-         </listChange>
-      </revisionDesc>
-   </teiHeader>
+        <revisionDesc>
+            <listChange>
+                <change type="internal" when="2016-01-29" who="#PP">edited the English</change>
+                <change type="internal" when="2016-03-14" who="#AZ">converted to template_v2_0</change>
+                <change type="internal" when="2016-03-15" who="#MB">added facs url and checked the annotations</change>
+                <change type="internal" when="2017-01-11" who="#AZ">prepared for UB</change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
 
-   <facsimile>
-      <surface xml:id="surface1" facs="DNA_0001_0356.png" ulx="318" uly="384" lrx="1310" lry="1801">
-         <zone xml:id="invocatio" ulx="785" uly="437" lrx="959" lry="538"/>
-         <zone xml:id="space1" ulx="412" uly="460" lrx="542" lry="514"/>
-         <zone xml:id="space2" ulx="744" uly="729" lrx="899" lry="784"/>
-         <zone xml:id="main_text" ulx="496" uly="1136" lrx="1263" lry="1759"/>
-      </surface>
-   </facsimile>
+    <facsimile>
+        <surface xml:id="surface1" facs="DNA_0001_0356.png" ulx="318" uly="384" lrx="1310" lry="1801">
+            <zone xml:id="invocatio" ulx="785" uly="437" lrx="959" lry="538"/>
+            <zone xml:id="space1" ulx="412" uly="460" lrx="542" lry="514"/>
+            <zone xml:id="space2" ulx="744" uly="729" lrx="899" lry="784"/>
+            <zone xml:id="main_text" ulx="496" uly="1136" lrx="1263" lry="1759"/>
+        </surface>
+    </facsimile>
 
-   <text>
-      <body>
+    <text>
+        <body>
 
-         <div xml:id="abs" type="abstract" xml:lang="eng">
-            <ab>In this document, sent from Sallyāna, Badarībāṇa Sāhī states that he has sent the
-               Dasaĩ <foreign>prasāda</foreign> from various temples, some with delay.</ab>
-         </div>
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <ab>In this document, sent from Sallyāna, Badarībāṇa Sāhī states that he has sent the
+                    Dasaĩ <foreign>prasāda</foreign> from various temples, some with delay.
+                </ab>
+            </div>
 
-         <div xml:id="ed" type="edition" xml:lang="nep">
-            <pb n="1r" facs="#surface1"/>
+            <div xml:id="ed" type="edition" xml:lang="nep">
+                <pb n="1r" facs="#surface1"/>
 
-            <ab type="invocatio" corresp="#invocatio">श्रीः\</ab>
-            <p/>
-            <ab corresp="#space1"><add hand="second" place="in the upper margin">नं.६६</add></ab>
-            <p/>
-            <ab corresp="#space2"><w>श्रीमालीका</w></ab>
-            <p/>
+                <ab type="invocatio" corresp="#invocatio">श्रीः\</ab>
+                <p/>
+                <ab corresp="#space1">
+                    <add hand="second" place="in the upper margin">नं.६६</add>
+                </ab>
+                <p/>
+                <ab corresp="#space2">
+                    <w>श्रीमालीका</w>
+                </ab>
+                <p/>
 
-            <ab type="maintext" corresp="#main_text">
-               <lb n="1"/>
-               <w>अर्जि</w>
-               <choice>
-                  <orig>¯¯¯¯ ¯¯¯¯ ¯¯¯¯ ¯¯¯¯ ¯¯¯¯</orig>
-                  <reg>- - -</reg>
-               </choice>
-               <space extent="1" unit="lines"/>
-               <lb n="2"/>
-               <s>
-                  <w>उप्रान्त</w>
-                  <orig>•</orig>
-                  <placeName n="4"><w>सल्ल्यानका</w></placeName>
-                  <w>दसैको</w>
-                  <w>प्रसाद</w>
-                  <w>अघि</w>
-                  <w>चह्राईपठायाको</w>
-                  <w>पु<lb n="3" break="no"/>ग्यो</w>
-                  <w>हो</w>
-               </s>
-               <s>
-                  <placeName n="5"><w>जुमलाको</w></placeName>
-                  <w>दसै</w>
-                  <orig>•</orig>
-                  <w>चन्दनाथका</w>
-                  <w>थानमा</w>
-                  <orig>•</orig>
-                  <w>पुर्णमासिमा</w>
-                  <w>सां<lb n="4" break="no"/>ग्य</w>
-                  <w>हुन्या</w>
-                  <w>रहेछ</w>
-                  <w>र</w>
-                  <orig>•</orig>
-                  <w>प्रसाद</w>
-                  <w>चह्राईपठाउन</w>
-                  <w>ढिल</w>
-                  <w>हुनगयाको</w>
-                  <w>हो</w>
-               </s>
-               <lb n="5"/>
-               <s>
-                  <w>जुमलाका</w>
-                  <w>कंपनिको</w>
-                  <w>र</w>
-                  <orig>•</orig>
-                  <w>दसै</w>
-                  <choice>
-                     <orig><w>¯ ¯ ¯को</w></orig>
-                     <reg><w>- - -को</w></reg>
-                  </choice>
-                  <w>प्रसाद</w>
-                  <w>आईपुग्यो</w>
-                  <orig>•</orig>
-               </s>
-               <s>
-                  <w>च<lb n="6" break="no"/>ह्राईपठायाको</w>
-                  <w>छ</w>
-               </s>
-               <s>
-                  <w>दाषिल</w>
-                  <w>होला</w>
-               </s><orig>•</orig>
-               <s>
-                  <w>ईति</w>
-                  <w>संवत्</w>
-                  <w>१८७७</w>
-                  <w>साल</w>
-                  <orig>•</orig>
-                  <w>मिती</w>
-                  <lb n="7"/>
-                  <w>कार्तिक</w>
-                  <w>वदि</w>
-                  <w>१०</w>
-                  <w>रोज</w>
-                  <w>३</w>
-               </s>
-               <s>
-                  <w>मुकाम</w>
-                  <w>सल्ल्यान</w>
-               </s>
-               <s>
-                  <w>शुभम्</w>
-               </s>
-               <choice>
-                  <orig>¯¯¯¯</orig>
-                  <reg>- - -</reg>
-               </choice>
-               <space extent="1" unit="lines"/>
-               <lb n="8"/>
-               <s>
-                  <w>ईत</w>
-                  <persName n="9">
-                     <w>वदरीवाण</w>
-                     <w>साहीको</w>
-                  </persName>
-                  <w>शाष्टांग</w>
-                  <w>कोटि</w><w>कोटि</w>
-                  <w>वन्दगी</w>
-                  <w>कुर्णेश</w>
-                  <w>सलाम्</w>
-               </s>
-            </ab>
+                <ab type="maintext" corresp="#main_text">
+                    <lb n="1"/>
+                    <w>अर्जि</w>
+                    <choice>
+                        <orig>¯¯¯¯ ¯¯¯¯ ¯¯¯¯ ¯¯¯¯ ¯¯¯¯</orig>
+                        <reg>- - -</reg>
+                    </choice>
+                    <space extent="1" unit="lines"/>
+                    <lb n="2"/>
+                    <s>
+                        <w>उप्रान्त</w>
+                        <orig>•</orig>
+                        <placeName n="4">
+                            <w>सल्ल्यानका</w>
+                        </placeName>
+                        <w>दसैको</w>
+                        <w>प्रसाद</w>
+                        <w>अघि</w>
+                        <w>चह्राईपठायाको</w>
+                        <w>पु<lb n="3" break="no"/>ग्यो
+                        </w>
+                        <w>हो</w>
+                    </s>
+                    <s>
+                        <placeName n="5">
+                            <w>जुमलाको</w>
+                        </placeName>
+                        <w>दसै</w>
+                        <orig>•</orig>
+                        <w>चन्दनाथका</w>
+                        <w>थानमा</w>
+                        <orig>•</orig>
+                        <w>पुर्णमासिमा</w>
+                        <w>सां<lb n="4" break="no"/>ग्य
+                        </w>
+                        <w>हुन्या</w>
+                        <w>रहेछ</w>
+                        <w>र</w>
+                        <orig>•</orig>
+                        <w>प्रसाद</w>
+                        <w>चह्राईपठाउन</w>
+                        <w>ढिल</w>
+                        <w>हुनगयाको</w>
+                        <w>हो</w>
+                    </s>
+                    <lb n="5"/>
+                    <s>
+                        <w>जुमलाका</w>
+                        <w>कंपनिको</w>
+                        <w>र</w>
+                        <orig>•</orig>
+                        <w>दसै</w>
+                        <choice>
+                            <orig>
+                                <w>¯ ¯ ¯को</w>
+                            </orig>
+                            <reg>
+                                <w>- - -को</w>
+                            </reg>
+                        </choice>
+                        <w>प्रसाद</w>
+                        <w>आईपुग्यो</w>
+                        <orig>•</orig>
+                    </s>
+                    <s>
+                        <w>च<lb n="6" break="no"/>ह्राईपठायाको
+                        </w>
+                        <w>छ</w>
+                    </s>
+                    <s>
+                        <w>दाषिल</w>
+                        <w>होला</w>
+                    </s>
+                    <orig>•</orig>
+                    <s>
+                        <w>ईति</w>
+                        <w>संवत्</w>
+                        <w>१८७७</w>
+                        <w>साल</w>
+                        <orig>•</orig>
+                        <w>मिती</w>
+                        <lb n="7"/>
+                        <w>कार्तिक</w>
+                        <w>वदि</w>
+                        <w>१०</w>
+                        <w>रोज</w>
+                        <w>३</w>
+                    </s>
+                    <s>
+                        <w>मुकाम</w>
+                        <w>सल्ल्यान</w>
+                    </s>
+                    <s>
+                        <w>शुभम्</w>
+                    </s>
+                    <choice>
+                        <orig>¯¯¯¯</orig>
+                        <reg>- - -</reg>
+                    </choice>
+                    <space extent="1" unit="lines"/>
+                    <lb n="8"/>
+                    <s>
+                        <w>ईत</w>
+                        <persName n="9">
+                            <w>वदरीवाण</w>
+                            <w>साहीको</w>
+                        </persName>
+                        <w>शाष्टांग</w>
+                        <w>कोटि</w>
+                        <w>कोटि</w>
+                        <w>वन्दगी</w>
+                        <w>कुर्णेश</w>
+                        <w>सलाम्</w>
+                    </s>
+                </ab>
 
-         </div>
+            </div>
 
-         <div xml:id="et" type="english_translation" corresp="#ed" xml:lang="eng">
-            <pb n="1r"/>
-            <p><term ref="1869">Śrī</term></p>
-            <p>No. 66<note place="end">This number, added by a second hand, refers to the ms. no. given by the National Archives, Kathmandu.</note></p>
-            <p>Venerable Mālikā</p>
-            <p>
-               <term ref="855">Arjī</term>
-            </p>
+            <div xml:id="et" type="english_translation" corresp="#ed" xml:lang="eng">
+                <pb n="1r"/>
+                <p>
+                    <term ref="1869">Śrī</term>
+                </p>
+                <p>No. 66
+                    <note place="end">This number, added by a second hand, refers to the ms. no. given by the National
+                        Archives, Kathmandu.
+                    </note>
+                </p>
+                <p>Venerable Mālikā</p>
+                <p>
+                    <term ref="855">Arjī</term>
+                </p>
 
-            <p><term ref="1997">Uprānta</term>: The <term ref="1855">prasāda</term> from the <term ref="1854">Dasaĩ</term> in <placeName n="10">Sallyāna</placeName>, which was sent
-               earlier, must have arrived. Regarding the Dasaĩ in <placeName n="11">Jumalā</placeName>, it turns out that at the Candanātha sanctum the conclusion
-               [of the ritual only takes place] on the full moon day, and the sending of the <foreign>prasāda</foreign> was [therefore] delayed. The <foreign>prasāda</foreign>
-               of the Jumalā company and that of Dasaĩ - - - (i.e. Venerable Mālikā)<note place="end">Inserted from the space above. The phrase <foreign>dasai śrīmālīkāko prasāda</foreign> is a bit puzzling. Either it refers to a special form of the goddess worshipped on the occasion of Dasaĩ or the syntax is deficient, a formulation such as <foreign>dasaiko śrīmālīkāko prasāda</foreign> or <foreign>śrīmālīkāko dasaiko prasāda</foreign> being intended here.</note> arrived. It has been sent. They will have been presented [to you]. Tuesday, 10th of the dark fortnight of Kārttika, [in the Vikrama] era year 1877 (1820 CE). Residence: Sallyāna. Auspiciousness.</p>
-            <p/>
-            <p>From me, <persName n="14">Badarībāṇa Sāhī</persName>, crores and crores of greetings [and] reverential salutations in eight-limbed prostration.</p>
-         </div>
+                <p><term ref="1997">Uprānta</term>: The <term ref="1855">prasāda</term> from the <term ref="1854">
+                    Dasaĩ
+                </term> in <placeName n="10">Sallyāna</placeName>, which was sent
+                    earlier, must have arrived. Regarding the Dasaĩ in <placeName n="11">Jumalā</placeName>, it turns
+                    out that at the Candanātha sanctum the conclusion
+                    [of the ritual only takes place] on the full moon day, and the sending of the <foreign>prasāda
+                    </foreign> was [therefore] delayed. The
+                    <foreign>prasāda</foreign>
+                    of the Jumalā company and that of Dasaĩ - - - (i.e. Venerable Mālikā)
+                    <note place="end">Inserted from the space above. The phrase <foreign>dasai śrīmālīkāko prasāda
+                    </foreign> is a bit puzzling. Either it refers to a special form of the goddess worshipped on the
+                        occasion of Dasaĩ or the syntax is deficient, a formulation such as <foreign>dasaiko
+                            śrīmālīkāko prasāda
+                        </foreign> or <foreign>śrīmālīkāko dasaiko prasāda</foreign> being intended here.
+                    </note>
+                    arrived. It has been sent. They will have been presented [to you]. Tuesday, 10th of the dark
+                    fortnight of Kārttika, [in the Vikrama] era year 1877 (1820 CE). Residence: Sallyāna.
+                    Auspiciousness.
+                </p>
+                <p/>
+                <p>From me, <persName n="14">Badarībāṇa Sāhī</persName>, crores and crores of greetings [and]
+                    reverential salutations in eight-limbed prostration.
+                </p>
+            </div>
 
-         <div xml:id="commentary" type="commentary" xml:lang="eng">
-            <p>There are similar documents recording the sending of Dasaĩ <foreign>prasāda</foreign> from major temples and military companies of the realm to the central authority (e.g. DNA_0002_0061, DNA_0002_0081).</p>
-         </div>
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p>There are similar documents recording the sending of Dasaĩ <foreign>prasāda</foreign> from major
+                    temples and military companies of the realm to the central authority (e.g. DNA_0002_0061,
+                    DNA_0002_0081).
+                </p>
+            </div>
 
-      </body>
-   </text>
+        </body>
+    </text>
 </TEI>

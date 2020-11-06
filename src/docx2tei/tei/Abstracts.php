@@ -1,8 +1,6 @@
 <?php
 
-
 namespace docx2tei\tei;
-
 
 use docx2tei\XMLUtils;
 use DOMDocument;
@@ -15,7 +13,6 @@ class Abstracts extends DOMDocument {
         $this->document = $document;
         $this->setAbstract();
     }
-
 
     protected function setAbstract(): void {
         $abstractSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->abstract . '"]/parent::sec/p');
@@ -35,8 +32,7 @@ class Abstracts extends DOMDocument {
             foreach ($abstractSec as $abstract) {
                 if (strlen($abstract->textContent) > 0) {
                     $content = $abstract->ownerDocument->saveXML($abstract);
-
-                    // replace all <p>s to <ab> s and multiple whitespaces
+// replace all <p>s to <ab> s and multiple whitespaces
                     $content = $this->tagReplace($content, 'p', 'ab');
                     $content = XMLUtils::cleanMultipleSpaces($content);
                     $ab = $this->createDocumentFragment();

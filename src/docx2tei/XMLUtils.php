@@ -1,15 +1,13 @@
 <?php
 
-
 namespace docx2tei;
 
+use DOMDocument;
 
 class XMLUtils {
-
     protected static $bnd = '#';
 
     public function __construct() {
-
     }
 
     /**
@@ -57,13 +55,58 @@ class XMLUtils {
         return $s;
     }
 
+    public static function createControlledVocabs(string $s) {
+        $tags = self::getControlledVocabList();
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
+            $parts = explode("{", $str);
+            $suffix1 = str_replace('}', '', $parts[1]);
+            $prefix = explode('@', $parts[0]);
+            $tagName = $prefix[0];
+            $tagName = self::removeUnnecessaryChars($tagName);
+            $elem = new DOMDocument();
+            foreach ($tags as $tag) {
+                if ($tag["original"] == $tagName) {
+                    $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
+                    $tagElem = $elem->createElement($tagName);
+                }
+            }
+        }
+    }
+
+    public static function getControlledVocabList(): array {
+        $tags = array(array(
+            "original" => "pen",
+            "replace" => "persName"
+        ),
+            array(
+                "original" => "pln",
+                "replace" => "placeName"
+            ),
+            array(
+                "original" => "gen",
+                "replace" => "geogName"
+            ));
+        return $tags;
+    }
+
+    /**
+     * @param string $tagName
+     * @return string|string[]
+     */
+    public static function removeUnnecessaryChars(string $tagName) {
+        $tagName = str_replace('=', '', $tagName);
+        $tagName = str_replace('-', '', $tagName);
+        return $tagName;
+    }
+
     /**
      * @param string $s
      * @return string
      */
-
     public static function createStructuredContent(string $s) {
-
         $tags = self::getTagsList();
         preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
@@ -75,15 +118,11 @@ class XMLUtils {
                 $suffix2 = str_replace('}', '', $parts[2]);
             }
             $prefix = explode('@', $parts[0]);
-
             $tagName = $prefix[0];
             $tagName = self::removeUnnecessaryChars($tagName);
-
-            $elem = new \DOMDocument();
-
-
+            $elem = new DOMDocument();
             foreach ($tags as $tag) {
-                if ( $tag["original"] == $tagName) {
+                if ($tag["original"] == $tagName) {
                     $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
                     $tagElem = $elem->createElement($tagName);
                     // remove tag from array
@@ -92,7 +131,7 @@ class XMLUtils {
                         if ($i < count($tag["attributes"])) {
                             $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
                             $val = $tag["attributes"][$i]['default'];
-                            if ((count($prefix) > $i) && (strlen($prefix[$i])>0)) {
+                            if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
                                 $val = $prefix[$i];
                             }
                             $attr->value = $val;
@@ -109,18 +148,14 @@ class XMLUtils {
                             self::print_error('Attribute with no = sign ' . $prefix[$i]);
                         }
                     }
-                    if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) ==2 ) {
-
-                            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
-                            $tagElem->appendChild($suffix1Elem);
-                            if(isset($suffix2)) {
-                                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
-                                $tagElem->appendChild($suffix2Elem);
-                            }
-
-
-                    }
-                    else {
+                    if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
+                        $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+                        $tagElem->appendChild($suffix1Elem);
+                        if (isset($suffix2)) {
+                            $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                            $tagElem->appendChild($suffix2Elem);
+                        }
+                    } else {
                         $tagElem->nodeValue = $suffix1;
                     }
                     $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
@@ -129,105 +164,6 @@ class XMLUtils {
         }
         return $s;
     }
-
-    /**
-     * @param string $tagName
-     * @return string|string[]
-     */
-    public static function removeUnnecessaryChars(string $tagName) {
-        $tagName = str_replace('=', '', $tagName);
-        $tagName = str_replace('-', '', $tagName);
-        return $tagName;
-    }
-
-    static function print_error($message): void {
-        echo("[XML Parsing error]" . $message . "\n");
-        //error_log($message."\n");
-    }
-
-    /**
-     * @param string $s
-     * @return string|string[]
-     */
-    public static function createSpaces(string $s) {
-        preg_match_all('/' . XMLUtils::$bnd . '(\.)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            $elem = new \DOMDocument();
-            $gap = $elem->createElement("space");
-            $gapsLength = strlen($match[0]);
-            $qn = $elem->createAttribute('quantity');
-            $qn->value = $gapsLength;
-            $gap->appendChild($qn);
-            $unit = $elem->createAttribute('unit');
-            $unit->value = 'chars';
-            $gap->appendChild($unit);
-            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
-
-        }
-        return $s;
-    }
-
-    /**
-     * @param string $s
-     * @param string $reason
-     * @param string $replace
-     * @return string|string[]
-     */
-    public static function createGap(string $s, string $reason, string $replace) {
-
-        preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
-        $gap = $matches[0];
-        if (!is_null($gap) && count($gap) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $gap[0]);
-            $elem = new \DOMDocument();
-            $gap = $elem->createElement("gap");
-            $r = $elem->createAttribute('reason');
-            $r->value = $reason;
-            $gap->appendChild($r);
-            $parts = explode("@", $str);
-            if (!is_null($parts)) {
-                $gapsLength = strlen(array_shift($parts));
-                $ex = $elem->createAttribute('extent');
-                $type = ($gapsLength == 1) ? 'character' : 'characters';
-
-                $extent = array_shift($parts);
-                if (strlen($extent) > 0) {
-                    $type = $extent;
-                }
-                $extentVAl = $gapsLength . ' ' . $type;
-                $ex->value = $extentVAl;
-                $gap->appendChild($ex);
-
-
-            };
-            if (count($parts) > 0) {
-                $agent = array_shift($parts);
-                if (!is_null($agent)) {
-                    $ag = $elem->createAttribute('agent');
-                    $ag->value = $agent;
-                    $gap->appendChild($ag);
-
-                }
-            };
-            if (count($parts) > 0) {
-                for ($i = 0; $i < count($parts); $i++) {
-                    $extras = explode('=', $parts[$i]);
-                    if (count($extras) == 2) {
-                        $attr = $elem->createAttribute($extras[0]);
-                        $attr->value = $extras[1];
-                        $gap->appendChild($attr);
-                    } else {
-                        self::print_error($parts[$i] . " does not conatin a = sign");
-                    }
-                }
-            }
-            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
-        }
-        return $s;
-
-    }
-
 
     /**
      * @return array[]
@@ -276,21 +212,6 @@ class XMLUtils {
                 )
             ),
             array(
-                "original" => "pen",
-                "replace" => "pen",
-                "attributes" => array()
-            ),
-            array(
-                "original" => "pln",
-                "replace" => "pln",
-                "attributes" => array()
-            ),
-            array(
-                "original" => "gen",
-                "replace" => "gen",
-                "attributes" => array()
-            ),
-            array(
                 "original" => "sb",
                 "replace" => "sb",
                 "attributes" => array()
@@ -298,19 +219,97 @@ class XMLUtils {
             array(
                 "original" => "cor",
                 "replace" => "choice",
-                "innerTags" => array('sic','corr'),
+                "innerTags" => array('sic', 'corr'),
                 "attributes" => array()
             ),
             array(
                 "original" => "reg",
                 "replace" => "choice",
-                "innerTags" => array('orig','corr'),
+                "innerTags" => array('orig', 'corr'),
                 "attributes" => array()
             )
-
         ];
         return $tags;
     }
 
+    static function print_error($message): void {
+        echo("[XML Parsing error]" . $message . "\n");
+        //error_log($message."\n");
+    }
 
+    /**
+     * @param string $s
+     * @return string|string[]
+     */
+    public static function createSpaces(string $s) {
+        preg_match_all('/' . XMLUtils::$bnd . '(\.)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+            $elem = new DOMDocument();
+            $gap = $elem->createElement("space");
+            $gapsLength = strlen($match[0]);
+            $qn = $elem->createAttribute('quantity');
+            $qn->value = $gapsLength;
+            $gap->appendChild($qn);
+            $unit = $elem->createAttribute('unit');
+            $unit->value = 'chars';
+            $gap->appendChild($unit);
+            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
+        }
+        return $s;
+    }
+
+    /**
+     * @param string $s
+     * @param string $reason
+     * @param string $replace
+     * @return string|string[]
+     */
+    public static function createGap(string $s, string $reason, string $replace) {
+        preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+        $gap = $matches[0];
+        if (!is_null($gap) && count($gap) != 0) {
+            $str = str_replace(XMLUtils::$bnd, '', $gap[0]);
+            $elem = new DOMDocument();
+            $gap = $elem->createElement("gap");
+            $r = $elem->createAttribute('reason');
+            $r->value = $reason;
+            $gap->appendChild($r);
+            $parts = explode("@", $str);
+            if (!is_null($parts)) {
+                $gapsLength = strlen(array_shift($parts));
+                $ex = $elem->createAttribute('extent');
+                $type = ($gapsLength == 1) ? 'character' : 'characters';
+                $extent = array_shift($parts);
+                if (strlen($extent) > 0) {
+                    $type = $extent;
+                }
+                $extentVAl = $gapsLength . ' ' . $type;
+                $ex->value = $extentVAl;
+                $gap->appendChild($ex);
+            }
+            if (count($parts) > 0) {
+                $agent = array_shift($parts);
+                if (!is_null($agent)) {
+                    $ag = $elem->createAttribute('agent');
+                    $ag->value = $agent;
+                    $gap->appendChild($ag);
+                }
+            }
+            if (count($parts) > 0) {
+                for ($i = 0; $i < count($parts); $i++) {
+                    $extras = explode('=', $parts[$i]);
+                    if (count($extras) == 2) {
+                        $attr = $elem->createAttribute($extras[0]);
+                        $attr->value = $extras[1];
+                        $gap->appendChild($attr);
+                    } else {
+                        self::print_error($parts[$i] . " does not conatin a = sign");
+                    }
+                }
+            }
+            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
+        }
+        return $s;
+    }
 }

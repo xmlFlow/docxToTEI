@@ -1,13 +1,10 @@
 <?php
 
-
 namespace docx2tei\tei;
-
 
 use DOMDocument;
 
 class Facsimiles extends DOMDocument {
-
     var $document;
 
     public function __construct(TEIDocument $document) {
@@ -47,15 +44,11 @@ class Facsimiles extends DOMDocument {
                             $coord->value = 0;
                             $surface->appendChild($coord);
                         }
-
                         $facsimile->appendChild($surface);
                         $this->document->teiHeader->appendChild($this->document->importNode($facsimile, true));
                     }
                 }
-
-
             }
         }
     }
-
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace docx2tei\tei;
-
 
 use DOMDocument;
 
@@ -17,8 +15,6 @@ class Headers extends DOMDocument {
         $this->document = $document;
         $this->getHeaders();
         $this->setHeaders();
-
-
     }
 
     function getHeaders(): void {
@@ -34,24 +30,19 @@ class Headers extends DOMDocument {
                     $this->headers[array_keys($config_headers)[$key]] = $value;
                 } else {
                     $this->print_error("[Error] Not allowed header in the metadata: " . $headerName);
-
                 }
-
             } else {
                 $this->print_error("Metadata table should be 2 columns wide");
             }
         }
-
     }
 
     function setHeaders() {
-
         $this->setFileDescription();
         $this->setSourceDescription();
         $this->setEncodingDescription();
         $this->setProfileDescription();
         $this->setRevisionDescription();
-
     }
 
     function setFileDescription(): void {
@@ -66,11 +57,9 @@ class Headers extends DOMDocument {
         $this->setCollaborator($titleStmt);
         $this->document->teiHeader->appendChild($this->document->importNode($fileDesc, true));
     }
-
     /**
      * @param  $titleStmt
      *//**/
-
     function setHeaderTitle($titleStmt): void {
         $mainTitle = $this->createElement("title", $this->headers["h12"] ?? "");
         $typeAttrib = $this->createAttribute('type');
@@ -88,7 +77,6 @@ class Headers extends DOMDocument {
         $typeAttrib->value = 'short';
         $shortTitle->appendChild($typeAttrib);
         $titleStmt->appendChild($shortTitle);
-
     }
 
     /**
@@ -100,7 +88,6 @@ class Headers extends DOMDocument {
         $typeAttrib->value = 'sub';
         $subTitle->appendChild($typeAttrib);
         $titleStmt->appendChild($subTitle);
-
     }
 
     /**
@@ -148,7 +135,6 @@ class Headers extends DOMDocument {
         $sourceDesc = $this->createElement("sourceDesc");
         $this->document->teiHeader->appendChild($this->document->importNode($sourceDesc, true));
         $msDesc = $this->createElement("msDesc");
-
         $sourceDesc->appendChild($msDesc);
         $this->setMsIdentifier($msDesc);
         $this->setAltIdentifier($msDesc);
@@ -156,7 +142,6 @@ class Headers extends DOMDocument {
         $this->setPhysicalDescription($msDesc);
         $this->setHistoryDescription($msDesc);
         $this->document->teiHeader->appendChild($this->document->importNode($msDesc, true));
-
     }
 
     /**
@@ -255,6 +240,4 @@ class Headers extends DOMDocument {
         $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->document->teiHeader->appendChild($this->document->importNode($revisionDesc, true));
     }
-
-
 }
