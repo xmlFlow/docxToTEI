@@ -87,8 +87,8 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 
     if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
-        $structuredXML->saveToFile($filePath);
-        //$teiDocument->saveToFile($filePath);
+        //$structuredXML->saveToFile($filePath);
+        $teiDocument->saveToFile($filePath);
         $docxArchive->getMediaFiles($outputDir);
     } else {
         if (!is_dir($outputDir . $filename)) {
