@@ -233,7 +233,14 @@ class XMLUtils {
                 "original" => "orig",
                 "replace" => "orig",
                 "attributes" => array()
-            )
+            ),
+            array(
+                "original" => "sur",
+                "replace" => "surplus",
+                "attributes" => array(
+                    array("tag" => "reason", "default" => "lost"),
+                )
+            ),
 
         ];
         return $tags;
