@@ -1,43 +1,60 @@
 ## Tokens used in xml and possible pseudocodes in Word
 
-### TODO
+### Guidelines
+
+ *  Following  tag symbols. `#` `@` `{ }` and `:`
+       * `#` begins and end a markup
+       * `@` begins an attribute
+       * `{}` contains xml tag content
+       * `:`  if the attribute is unclear from the order,we use : after attribute name  @attribute:value  
+ * If reserved  symbols are necessary for the text, they  are escaped by a `\` e.g. `\@` 
+ * `@#` is  used, if a certain attribute begin with `#` 
+ * For markup upper-small case will be validated. 
+ * Order of the arttributes is important and will be read from let to right.
+ * Content for XML or attributes is written in {}, always at the end of the markup. 
+ * Add `<p/>` after each `<ab>`
+ * Abstract defaults to `<div xml:id="abs" type="abstract" xml:lang="eng">`
+ * Edition defaults to `<div xml:id="ed" type="edition" xml:lang="nep-san">`
+ 
+ ### Structural identifications
+
 | status| Issue|
 |--- | ---|
-| :ok: | Tei Header   Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
-| :ok: | Tei Header   Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
-| :ok: | Tei Header   ( Document ID)|
-| :ok: | Tei Header   ( Main title of document) | 
-| :ok: | Tei Header   ( Short title of document)|  
-| :ok: | Tei Header ( Sub of document) |  
-| :ok: | Tei Header   ( Author/issuer of document)|
-| :ok: | Tei Header   ( Name of editor(s)|
-| :ok: | Tei Header   ( Name of collaborator(s))|
-| :ok: | Tei Header   ( :question: Changed the name to be unique in the table / ( Deposit holding institution)|
-| :ok: | Tei Header   (Place of deposit / current location of document)|
-| :ok: | Tei Header   (Deposit holding institution )|
-| :ok: | Tei Header   (Inventory number assigned by holding institution )|
-| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Location )|
-| :ok: | Tei Header   (Alternative manifestation(/inventory Type of manifestation) |
-| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Inventory number) |
-| :ok: :question: |  Can we change it to be more precise ? Tei Header   (Holding institution) |
-| :ok: | Tei Header   (Main language of document) |
-| :ok: | Tei Header   (Other languages) |
-| :ok: | Tei Header   :question: `ref target (Link to catalogue entry) |
-| :ok: | Tei Header   (Date of origin of document) |
-| :ok: | Tei Header   (Place of origin of document) |
+| :heavy_check_mark: | Tei Header   Check: sections available ["Document metadata","Facsimiles","Abstract","Edition","English Translation","Translation","Synopsis","Commentary"] |
+| :heavy_check_mark: | Tei Header   Check: header metadata  [ "Alternative manifestation/inventory", "Author/issuer of document", "Date of origin of document", "Document ID", "Holding institution", "Inventory number", "Inventory number assigned by holding institution", "Link to catalogue entry", "Location ", "Main language of document", "Main title of document", "Name of editor(s)", "Name of collaborator(s)", "Name of image file(s)", "Other languages", "Place of deposit / current location of document", "Place of origin of document", "Type of manifestation ", "Holding institution" ] |
+| :heavy_check_mark: | Tei Header   ( Document ID)|
+| :heavy_check_mark: | Tei Header   ( Main title of document) | 
+| :heavy_check_mark: | Tei Header   ( Short title of document)|  
+| :heavy_check_mark: | Tei Header ( Sub of document) |  
+| :heavy_check_mark: | Tei Header   ( Author/issuer of document)|
+| :heavy_check_mark: | Tei Header   ( Name of editor(s)|
+| :heavy_check_mark: | Tei Header   ( Name of collaborator(s))|
+| :heavy_check_mark: | Tei Header   ( :question: Changed the name to be unique in the table / ( Deposit holding institution)|
+| :heavy_check_mark: | Tei Header   (Place of deposit / current location of document)|
+| :heavy_check_mark: | Tei Header   (Deposit holding institution )|
+| :heavy_check_mark: | Tei Header   (Inventory number assigned by holding institution )|
+| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Location )|
+| :heavy_check_mark: | Tei Header   (Alternative manifestation(/inventory Type of manifestation) |
+| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Inventory number) |
+| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Holding institution) |
+| :heavy_check_mark: | Tei Header   (Main language of document) |
+| :heavy_check_mark: | Tei Header   (Other languages) |
+| :heavy_check_mark: | Tei Header   :question: `ref target (Link to catalogue entry) |
+| :heavy_check_mark: | Tei Header   (Date of origin of document) |
+| :heavy_check_mark: | Tei Header   (Place of origin of document) |
 | :question: | Is it needed now ??Tei Header   (Name of image file(s)) |
 |:question:  |  Word: header metadata   block user edits of the header| 
-| :ok: | Tei Header   (encoding description), default text |
-| :ok: | Tei Header   (profile description), default text |
+| :heavy_check_mark: | Tei Header   (encoding description), default text |
+| :heavy_check_mark: | Tei Header   (profile description), default text |
 | :question: | How to define the user  e.fg #AZ? Tei Header   (revision description), default text |
-| :ok: | Validation   Error message, if metadata values aren't set |
-| :ok: | Facsimile    (Create surfaces)|
-| :ok: | Abstract    (Create  Abstract )|
+| :heavy_check_mark: | Validation   Error message, if metadata values aren't set |
+| :heavy_check_mark: | Facsimile    (Create surfaces)|
+| :heavy_check_mark: | Abstract    (Create  Abstract )|
 | :question: | Needs an example of a table|
-| :ok: | Body (create Body element)|
-| :ok: | Body (Check for languages in Edition  (lang) )|
-| :ok: | Body (pb) for surface|
-| :ok: | Body (ab) for surface|
+| :heavy_check_mark: | Body (create Body element)|
+| :heavy_check_mark: | Body (Check for languages in Edition  (lang) )|
+| :heavy_check_mark: | Body (pb) for surface|
+| :heavy_check_mark: | Body (ab) for surface|
 
 
  
@@ -62,22 +79,6 @@
 * Check for macros to auto-complete.
 
 
-### Guidelines
-
- *  Following  tag symbols. `#` `@` `{ }` and `:`
-       * `#` begins and end a markup
-       * `@` begins an attribute
-       * `{}` contains xml tag content
-       * `:`  if the attribute is unclear from the order,we use : after attribute name  @attribute:value  
- * If reserved  symbols are necessary for the text, they  are escaped by a `\` e.g. `\@` 
- * `@#` is  used, if a certain attribute begin with `#` 
- * For markup upper-small case will be validated. 
- * Order of the arttributes is important and will be read from let to right.
- * Content for XML or attributes is written in {}, always at the end of the markup. 
- * Add `<p/>` after each `<ab>`
- * Abstract defaults to `<div xml:id="abs" type="abstract" xml:lang="eng">`
- * Edition defaults to `<div xml:id="ed" type="edition" xml:lang="nep-san">`
- 
  ### Formal annotations (div, ab, pb, lb, w, s, space, table, row, cell, add, del, gap, unclear)
   
  | Status | Markup | Default | Markup Example | TEI Example | Remarks |
@@ -90,9 +91,9 @@
  | 6. :heavy_check_mark: | #...# |@unit=chars | `#...#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
  | 7. :heavy_check_mark:  | #&@place@hand{}# |`place="above the line" hand="first"` e.g. @@second" |`#&@above the line@first#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
  | 8. :heavy_check_mark:  | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
- | 9. :ok: | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
+ | 9. :heavy_check_mark:  | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
  | 10.  :heavy_check_mark: | #orig{text}# | | `#orig{Tall}#` | `<orig>Tall</orig>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html)|
- | 11. :ok: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
+ | 11. :heavy_check_mark: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
  | 12. :heavy_check_mark: | #sur{text}# | |  `#sur@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
  | 13.  :heavy_check_mark:  | #sup@reason{text}# | @reason=lost| `#sup@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
  | 14. :heavy_check_mark: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
@@ -111,7 +112,6 @@
  
 
  
-
  
 
  ### Discussion

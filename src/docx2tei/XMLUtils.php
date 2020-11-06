@@ -300,6 +300,12 @@ class XMLUtils {
                 "replace" => "choice",
                 "innerTags" => array('sic','corr'),
                 "attributes" => array()
+            ),
+            array(
+                "original" => "reg",
+                "replace" => "choice",
+                "innerTags" => array('orig','corr'),
+                "attributes" => array()
             )
 
         ];
