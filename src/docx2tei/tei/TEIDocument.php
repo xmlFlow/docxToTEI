@@ -28,7 +28,8 @@ class TEIDocument extends DOMDocument {
         $facsimiles = new Facsimiles($this);
         $abstract = new Abstracts($this);
         $edition = new Edition($this);
-        $englishTranslation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->et . '"]/parent::sec');
+        $et = new EnglishTranslation($this);
+
         $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
         $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
         $commentary = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->commentary . '"]/parent::sec');

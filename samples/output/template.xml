@@ -47,8 +47,8 @@
         <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-11-06</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-11-06" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2020-11-10</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-11-10" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
     <facsimile>
       <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
     </facsimile>
@@ -130,7 +130,7 @@
           <p>जुरो ।। ।। <surplus reason="unrepeated">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </surplus> दानपति सलको x</p>
           <p>(13) This line includes text supplied by editor, default reason is lost</p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <supplied reason="lost">दानपति सलको </supplied> दानपति सलको </p>
-          <p>जुरो ।। ।। <supplied reason="lost-manully-set">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </supplied> दानपति सलको x</p>
+          <p>जुरो ।। ।। <supplied reason="lost-manually-set">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </supplied> दानपति सलको x</p>
           <p>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
           <p>
             <del rend="overstrike">सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन </del>
@@ -146,14 +146,20 @@
           <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <geogName>corresp_ID</geogName>पञ्चम्यान्तिथौ मृगशिर-</p>
           <p>(18) This line includes a sentence </p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sb>दानपति सलको सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो । </sb> दानपति सलको </p>
+          <p>(19) all <orig>.</orig> are converterd to &lt;orig&gt;<orig>.</orig>&lt;/orig&gt;</p>
+          <p>(20) &amp;#x200c; is let as it is inside text</p>
+          <p>ो<orig>•</orig>#-#ग्&amp;#8205;य</p>
+          <p>(21) &amp;#x200c; is let as it is inside text</p>
+          <p>भो<orig>•</orig>#-#ग्&amp;#x200c;य</p>
           <lb/>
           <lb/>
-          <p>(x) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
+          <lb/>
+          <lb/>
+          <p>(22) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
           <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
-          <p>(x) This line includes a <orig>.</orig></p>
-          <p>तिष्ठा दिन जुरो ।। ।। <bold><orig>.</orig></bold> दानपति सलको थविर श्री धनजोतिजु</p>
-          <lb/>
-          <p>(x) After this line, table begins</p>
+          <p>(23) All words are included in &lt;w&gt;</p>
+          <p>जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p>
+          <p>(24) After this line, table begins</p>
           <lb/>
           <table-wrap> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p>content 1</p> </cell> <cell> <lb/> </cell> <cell> <p> content 3</p> </cell> <cell> <lb/> </cell> </row> <row> <cell> <p> शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p> </cell> <cell> <p>सर्वदा</p> </cell> <cell> <p>सहस्र पुण्य राक जुरो</p> </cell> <cell> <lb/> </cell> </row> </table> </table-wrap>
           <p>Sentence begin after table ends</p>
@@ -168,6 +174,17 @@
           <lb/>
           <lb/>
         </ab>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+        <p>which was sent earlier, must have arrived<orig>.</orig> Regarding the Dasaĩ in , it turns</p>
+        <p> out that at the Candanātha sanctum the conclusion [of the ritual only takes place] on the full moon day, and the sending of the prasāda as [therefore] delayed<orig>.</orig> The <foreign>prasāda</foreign> of the Jumalā company and that of Dasaĩ - - - (i<orig>.</orig>e<orig>.</orig> Venerable Mālikā)</p>
+        <p> &lt;Inserted from the space above<orig>.</orig> The phrase dasai <foreign>śrīmālīkāko</foreign> <foreign>prasāda</foreign></p>
+        <p> is a bit puzzling<orig>.</orig> Either it refers to a special form of the goddess worshipped on the</p>
+        <p> occasion of Dasaĩ or the syntax is deficient, a formulation such as &lt;&gt;dasaiko</p>
+        <p> <foreign> śrīmālīkāko prasāda</foreign> or śrīmālīkāko dasaiko prasāda being intended here<orig>.</orig></p>
+        <p> arrived<orig>.</orig> It has been sent<orig>.</orig> They will have been presented [to you]<orig>.</orig> Tuesday, 10th of the dark</p>
+        <p> fortnight of Kārttika, [in the Vikrama] era year 1877 (1820 CE)<orig>.</orig> Residence: Sallyāna<orig>.</orig> Auspiciousness<orig>.</orig><persName>शुक्रवासरे शुक्रवासरे</persName> Text with a place name </p>
+        <p><placeName>place_with_unique_id</placeName> Text with a geographical name <placeName>place_with_unique_id</placeName></p>
       </div>
     </body>
   </text>
