@@ -15,7 +15,7 @@ class EnglishTranslation extends DOMDocument {
     }
 
     protected function setEnglishTranslation(): void {
-        $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->et . '"]/parent::sec/p');
+        $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->et . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
             $this->print_error("[Error] EnglishTranslation text not defined");
         } else {
@@ -47,7 +47,7 @@ class EnglishTranslation extends DOMDocument {
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
                     # set . as <orig> dot
-                    $s = XMLUtils::createDot($s);
+                    #$s = XMLUtils::createDot($s);
 
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
