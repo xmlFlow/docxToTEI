@@ -29,8 +29,9 @@ class TEIDocument extends DOMDocument {
         $abstract = new Abstracts($this);
         $edition = new Edition($this);
         $et = new EnglishTranslation($this);
+        $synopsis = new Sypnosis($this);
 
-        $synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
+        //$synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
         $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
         $commentary = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->commentary . '"]/parent::sec');
         $tokens = explode('#', 'त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');

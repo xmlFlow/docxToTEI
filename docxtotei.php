@@ -2,6 +2,8 @@
 
 
 $time_start = microtime(true);
+error_reporting(E_ALL ^ E_WARNING);
+
 require_once(__DIR__ . "/vendor/autoload.php");
 
 use docx2tei\DOCXArchive;
