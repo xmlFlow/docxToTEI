@@ -29,10 +29,10 @@ class Headers extends DOMDocument {
                 if ($key >= 0) {
                     $this->headers[array_keys($config_headers)[$key]] = $value;
                 } else {
-                    $this->print_error("[Error] Not allowed header in the metadata: " . $headerName);
+                    XMLUtils::print_error("[Error] Not allowed header in the metadata: " . $headerName);
                 }
             } else {
-                $this->print_error("Metadata table should be 2 columns wide");
+                XMLUtils::print_error("Metadata table should be 2 columns wide");
             }
         }
     }

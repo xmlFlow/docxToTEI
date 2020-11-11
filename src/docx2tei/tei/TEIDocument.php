@@ -23,17 +23,21 @@ class TEIDocument extends DOMDocument {
         $this->formatOutput = true;
         $this->setStructure();
         $this->isCorrectStructure();
+
+        # Section processing
+
         $headers = new Headers($this);
-//TODO  first replace all the small entries, then SB
         $facsimiles = new Facsimiles($this);
         $abstract = new Abstracts($this);
         $edition = new Edition($this);
         $et = new EnglishTranslation($this);
         $synopsis = new Sypnosis($this);
+        $commentary = new Commentary($this);
 
-        //$synopsis = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->synopsis . '"]/parent::sec');
-        $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
+        # Final  processing
+
         $commentary = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->commentary . '"]/parent::sec');
+        $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
         $tokens = explode('#', 'त#SB्तमकर्ण्णधारः<p> श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। </p>श्#SEरेयोऽस्त');
     }
 
@@ -70,7 +74,7 @@ class TEIDocument extends DOMDocument {
             if (!in_array($section->nodeValue, (array)$this->cfg->sections)) {
                 // specially handle Editions
                 if (!preg_match("/Edition(\s)*\((.)*\)/i", $section->nodeValue)) {
-                    $this->print_error("[Error] Section missing or wrong : " . $section->nodeValue);
+                    XMLUtils::print_error("[Error] Section missing or wrong : " . $section->nodeValue);
                     return false;
                 }
             }
@@ -78,13 +82,7 @@ class TEIDocument extends DOMDocument {
         return true;
     }
 
-    /**
-     * @param $value
-     */
-    function print_error($message): void {
-        echo("" . $message . "\n");
-        //error_log($message."\n");
-    }
+
 
     function isCorrectHeaders(): bool {
         return true;

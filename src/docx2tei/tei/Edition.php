@@ -14,7 +14,7 @@ class Edition extends DOMDocument {
         $this->document = $document;
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
         if (count($edition) == 0) {
-            $this->print_error("[Error] Edition section not found");
+            XMLUtils::print_error("[Error] Edition section not found");
         } else {
             #<div xml:id="ed" type="edition" xml:lang="nep">#
             $div = $this->createDiv();
@@ -121,7 +121,7 @@ class Edition extends DOMDocument {
                     $ab->appendChild($facsAttr);
                     $ab->appendChild($n);
                 } else {
-                    $this->document->print_error("[Error]  Edition blocks should be define as  ab or pb");
+                    $this->document->print_error("[Error]  Wrong type in edition: ".$type);
                 }
                 foreach ($titleAttribs as $attribute) {
                     if (strpos($attribute, "=") > 0) {

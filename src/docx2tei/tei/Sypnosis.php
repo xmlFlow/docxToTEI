@@ -17,7 +17,7 @@ class Sypnosis extends DOMDocument {
     protected function setEnglishTranslation(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->synopsis . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
-            $this->print_error("[Error] Sypnosis text not defined");
+            XMLUtils::print_error("[Error] Sypnosis text not defined");
         } else {
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');
@@ -33,8 +33,6 @@ class Sypnosis extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::cleanMultipleSpaces($s);
-
-
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

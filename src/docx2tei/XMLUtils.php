@@ -251,10 +251,6 @@ class XMLUtils {
         return $tags;
     }
 
-    static function print_error($message): void {
-        echo("[XML Parsing error]" . $message . "\n");
-        //error_log($message."\n");
-    }
 
     /**
      * @param string $s
@@ -330,5 +326,14 @@ class XMLUtils {
             $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
         }
         return $s;
+    }
+
+    /**
+     * @param $value
+     */
+    public static function print_error($message): void {
+        echo("" . $message . "\n");
+        exit();
+        //error_log($message."\n");
     }
 }
