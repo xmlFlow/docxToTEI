@@ -37,7 +37,7 @@ class Text extends DataObject {
         $styles = $this->getXpath()->evaluate('w:footnoteReference', $this->getDomElement());
         foreach ($styles as $style){
             $fnId =$style->getAttribute('w:id');
-            $stringText = $stringText . '[footnoteReference_'.$fnId.']';
+            $stringText = $stringText . '#footnoteReference{'.$fnId.'}#';
 
         }
         return $stringText;
