@@ -19,15 +19,26 @@ class Text extends DataObject {
     public function __construct(\DOMElement $domElement) {
         parent::__construct($domElement);
         $this->properties = $this->setProperties('w:rPr/child::node()');
-        $this->text = $this->setText('w:t');
+        $this->text = $this->setText();
         $this->type = $this->setType();
     }
 
-    private function setText(string $xpathExpression) {
+    private function setText() {
         $stringText = '';
-        $contentNodes = $this->getXpath()->evaluate($xpathExpression, $this->getDomElement());
+
+
+        $contentNodes = $this->getXpath()->evaluate('w:t', $this->getDomElement());
+        $content = $this->getDomElement()->ownerDocument->saveXML($this->getDomElement());
+
         foreach ($contentNodes as $contentNode) {
             $stringText = $stringText . $contentNode->nodeValue;
+        }
+        # Style information
+        $styles = $this->getXpath()->evaluate('w:footnoteReference', $this->getDomElement());
+        foreach ($styles as $style){
+            $fnId =$style->getAttribute('w:id');
+            $stringText = $stringText . '[footnoteReference_'.$fnId.']';
+
         }
         return $stringText;
     }
