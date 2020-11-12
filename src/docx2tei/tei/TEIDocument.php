@@ -1,6 +1,7 @@
 <?php namespace docx2tei\tei;
 
 use docx2tei\structure\Document;
+use docx2tei\XMLUtils;
 use DOMDocument;
 use DOMXPath;
 
@@ -31,7 +32,7 @@ class TEIDocument extends DOMDocument {
         $abstract = new Abstracts($this);
         $edition = new Edition($this);
         $et = new EnglishTranslation($this);
-        $synopsis = new Sypnosis($this);
+        $synopsis = new Synopsis($this);
         $commentary = new Commentary($this);
 
         # Final  processing

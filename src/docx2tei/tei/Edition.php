@@ -121,7 +121,7 @@ class Edition extends DOMDocument {
                     $ab->appendChild($facsAttr);
                     $ab->appendChild($n);
                 } else {
-                    $this->document->print_error("[Error]  Wrong type in edition: ".$type);
+                    XMLUtils::print_error("[Error]  Wrong type in edition: ".$type);
                 }
                 foreach ($titleAttribs as $attribute) {
                     if (strpos($attribute, "=") > 0) {
@@ -135,10 +135,10 @@ class Edition extends DOMDocument {
                 }
                 $div->appendChild($ab);
             } else {
-                $this->document->print_error("[Error] not enough information in " . $titleContent);
+                XMLUtils::print_error("[Error] not enough information in " . $titleContent);
             }
         } else {
-            $this->document->print_error("[Error]  In edition block, section header not defined ");
+            XMLUtils::print_error("[Error]  In edition block, section header not defined ");
         }
         return $ab;
     }

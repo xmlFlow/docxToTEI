@@ -16,19 +16,19 @@ class Facsimiles extends DOMDocument {
     function setFacsimiles(): void {
         $facsimiles = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
         if (count($facsimiles) == 0) {
-            $this->document->print_error("[Error] No facsimiles defined");
+            XMLUtils::print_error("[Error] No facsimiles ".$this->document->cfg->sections->facsimiles );
         } else {
             foreach ($facsimiles as $facsimile) {
                 if ($facsimile->tagName !== "title") {
-                    $this->document->print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ");
+                    XMLUtils::print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ".$facsimile->tagName);
                 }
                 $text = (string)$facsimile->textContent;
                 if (strlen($text) == 0) {
-                    $this->document->print_error("[Error]  Content of facsimile is not defined or Formatting error");
+                    XMLUtils::print_error("[Error]  Content of facsimile is not defined or Formatting error");
                 } else {
                     $surfaceParts = explode(":", $text);
                     if (count($surfaceParts) < 3) {
-                        $this->document->print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r");
+                        XMLUtils::print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r ".$surfaceParts);
                     } else {
                         list($xml_id, $facs, $page) = $surfaceParts;
                         $facsimile = $this->createElement("facsimile");

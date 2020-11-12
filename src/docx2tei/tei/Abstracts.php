@@ -17,7 +17,7 @@ class Abstracts extends DOMDocument {
     protected function setAbstract(): void {
         $abstractSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->abstract . '"]/parent::sec/p');
         if (count($abstractSec) == 0) {
-            XMLUtils::print_error("[Error] Abstract text not defined");
+            XMLUtils::print_error("[Error] Abstract section not defined");
         } else {
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');

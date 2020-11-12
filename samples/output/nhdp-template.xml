@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <text>
+    <sec id="sec-1">
+      <title>Document metadata</title>
+      <table-wrap>
+        <table>
+          <row>
+            <cell>
+              <p>Document ID</p>
+            </cell>
+            <cell>
+              <p>E_2253_0015A</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Main title of document</p>
+            </cell>
+            <cell>
+              <p>A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to  Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma</p>
+              <p>  Guṭhī [VS 1859]</p>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Short title of document</p>
+            </cell>
+            <cell>
+              <p>Short title of document</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Author/issuer of document</p>
+            </cell>
+            <cell>
+              <p>Badarībāṇa Sāhī]</p>
+              <p></p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of editor(s)</p>
+            </cell>
+            <cell>
+              <p>Name of editor(s)</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of collaborator(s)</p>
+            </cell>
+            <cell>
+              <p>Name of collaborator(s)</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Place of deposit / current location of document</p>
+            </cell>
+            <cell>
+              <p>Kathmandu</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Deposit holding institution</p>
+            </cell>
+            <cell>
+              <p>National Archives</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Inventory number assigned by holding institution</p>
+            </cell>
+            <cell>
+              <p>Inventory number assigned by holding institution</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Alternative manifestation/inventory Type of manifestation</p>
+            </cell>
+            <cell>
+              <p>Alternative manifestation/inventory Type of manifestation</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Location</p>
+            </cell>
+            <cell>
+              <p>Location </p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Holding institution</p>
+            </cell>
+            <cell>
+              <p>Holding institution</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Inventory number</p>
+            </cell>
+            <cell>
+              <p>Inventory number</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Main language of document</p>
+            </cell>
+            <cell>
+              <p>Main language of document</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Other languages</p>
+            </cell>
+            <cell>
+              <p>Other languages</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Link to catalogue entry</p>
+            </cell>
+            <cell>
+              <p>entry in database</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Date of origin of document</p>
+            </cell>
+            <cell>
+              <p>Date of origin of document</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Place of origin of document</p>
+            </cell>
+            <cell>
+              <p>Place of origin of document</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Name of image file(s)</p>
+            </cell>
+            <cell>
+              <p>Name of image file(s)</p>
+            </cell>
+          </row>
+        </table>
+      </table-wrap>
+    </sec>
+    <sec id="sec-2">
+      <title>Facsimiles</title>
+      <sec id="sec-2_1">
+        <title>surface1:E_2253_0532.png:1r</title>
+      </sec>
+      <sec id="sec-2_2">
+        <title>surface2:E_2253_0533.png:1v</title>
+      </sec>
+      <sec id="sec-2_3">
+        <title>surface2:E_2253_0534.png:3r</title>
+      </sec>
+    </sec>
+    <sec id="sec-3">
+      <title>Abstract</title>
+      <p>First inscription records donors Dhanajyoti    and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+      <p>Second inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+      <p></p>
+    </sec>
+    <sec id="sec-4">
+      <title>Edition (san)</title>
+      <sec id="sec-4_1">
+        <title>pb@#surface1@1r</title>
+      </sec>
+      <sec id="sec-4_2">
+        <title>ab@#invocatio@invocatio</title>
+        <p>श्रीः\</p>
+      </sec>
+      <sec id="sec-4_3">
+        <title>ab@#space1@space@newArttiibute=newAttributeValue</title>
+        <p>नं.६६</p>
+      </sec>
+      <sec id="sec-4_4">
+        <title>ab@#space2@space</title>
+        <p>श्रीमालीका</p>
+      </sec>
+      <sec id="sec-4_5">
+        <title>ab@#main_text@maintext@key=valEdi</title>
+        <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚]  #/////# ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं </p>
+        <p>-</p>
+        <p></p>
+        <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर- #SE</p>
+        <p>(2)  An empty     line break follows me </p>
+        <p></p>
+        <p>( 3)Two line breaks without a break follows me.</p>
+        <p>-</p>
+        <p>-</p>
+        <p></p>
+        <p>(4) Text with 5 illegible characters</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++@@agent# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++@extent@agent# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #+++++@extent@@newAttrib=newValue# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>(5) Text with 5 lost characters</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #/////# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #/////@@agent# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #/////@extent@agent# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #/////@extent@@newAttrib=newValue# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>(6) Space</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #.......# ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>नमो रत्नंत्रयाय [रत्न˚]  #............# ।। धर्म्मेश्वर: सक  #/////#लपाप   #+++++@extent@@newAttrib=newValue#विनाशहे-</p>
+        <p></p>
+        <p>(07)  This line includes an addition to the text. default is : hand=first , place = above the line.</p>
+        <p>नकर वम्हन प #&amp;@@second@new-Attrib1=newValue@new-Attrib2=newValue2{}#  नकम</p>
+        <p> थ्वया </p>
+        <p>नकर वम्हन प #&amp;@@second@new-Attrib1=newValue@new-Attrib2=newValue2{}#  नकम थ्वया </p>
+        <p>नकर वम्हन प #&amp;{नकम थ्वया}#  नकम थ्वया </p>
+        <p>नकर वम्हन प #&amp;@below the text{नकम थ्वया }#  नकम थ्वया </p>
+        <p>नकर वम्हन प #&amp;@@second{नकम थ्वया}#  नकम थ्वया </p>
+        <p>(08)  Some unclear text inside a text block default cert=high</p>
+        <p>तिष्ठा दिन जुरो ।। ।। #?{शुभमस्तु शुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तु }# दानपति सलको  थविर श्री धनजोतिजु</p>
+        <p>(09) sic: reproduced text with corrections</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #cor{¯¯¯¯}{- - -}# दानपति सलको  थविर श्री धनजोतिजु</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #cor{¯¯¯¯ मस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।मस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।मस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।मस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।मस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।}{- - -}# दानपति सलको  थविर श्री धनजोतिजु</p>
+        <p></p>
+        <p>(10): orig: this line  contains a text marked as original , rather than being normalized.</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #orig{सर्वदा}# दानपति सलको </p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #orig{सर्वदा दानपति सलकोदानपति सलकोदानपति सलकोदानपति सलकोदानपति सलकोदानपति सलकोदानपति सलको}# दानपति सलको </p>
+        <p>(11): reg: this line  contains a text marked  as being normalized/corrected</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #reg{सर्वदा}{सर्वदा कोदानपति सलकोदानपति सलकोदानपति सलकोकोदानपति सलकोदानपति सलकोदानपति सलकोकोदानपति सलकोदानपति सलकोदानपति सलकोकोदानपति सलकोदानपति सलकोदानपति सलकोकोदानपति सलकोदानपति सलकोदानपति सलको }# दानपति सलको </p>
+        <p>(12):  This line contains unnecessary , repeated text</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sur{सर्वदा}# दानपति सलको x</p>
+        <p>जुरो ।। ।। #sur@unrepeated{सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन  }# दानपति सलको x</p>
+        <p>(13) This line includes text supplied by editor, default reason is lost</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sup{दानपति सलको }# दानपति सलको </p>
+        <p>जुरो ।। ।। #sup@lost-manually-set{सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन  }# दानपति सलको x</p>
+        <p>(14) Delete text  <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
+        <p>#del{सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन  }#</p>
+        <p>#del@rend{सर्वदा सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन  }#</p>
+        <p>(15) Text with a personal name</p>
+        <p>तुः सौखावतीगतिमहाज#pen{शुक्रवासरे शुक्रवासरे}#नमार्थहे[तुः] दुःखाधिपारगमनो</p>
+        <p>(16) Text with a place name </p>
+        <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं #pln{place_with_unique_id}#भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+        <p>(17) Text with a geographical name</p>
+        <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे #gen{corresp_ID}#पञ्चम्यान्तिथौ मृगशिर-</p>
+        <p>(18) This line includes a sentence </p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। #sb{दानपति सलको  सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो । }# दानपति सलको </p>
+        <p>(19)   all . are converterd to &lt;orig&gt;.&lt;/orig&gt;</p>
+        <p>(20)  &amp;#x200c; is let as it is inside text</p>
+        <p>ो#orig{•}##-#ग्&amp;#8205;य</p>
+        <p>(21) &amp;#x200c; is let as it is inside text</p>
+        <p>भो#orig{•}##-#ग्&amp;#x200c;य</p>
+        <p></p>
+        <p>(22)  All the lines with an ending -  has attribute break &lt;lb break="no"/&gt;</p>
+        <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
+        <p>(23)   All words are included in &lt;w&gt;</p>
+        <p>जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p>
+        <p>(24)  After this line, table begins</p>
+        <p></p>
+        <table-wrap>
+          <table>
+            <row>
+              <cell>
+                <p>Table header 1</p>
+              </cell>
+              <cell>
+                <p>Table header 2</p>
+              </cell>
+              <cell>
+                <p>Table header 3</p>
+              </cell>
+              <cell>
+                <p>Table header 3</p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>content 1</p>
+              </cell>
+              <cell>
+                <p></p>
+              </cell>
+              <cell>
+                <p>content 3</p>
+              </cell>
+              <cell>
+                <p></p>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <p>शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p>
+              </cell>
+              <cell>
+                <p>सर्वदा</p>
+              </cell>
+              <cell>
+                <p>सहस्र पुण्य राक जुरो</p>
+              </cell>
+              <cell>
+                <p></p>
+              </cell>
+            </row>
+          </table>
+        </table-wrap>
+        <p>Sentence begin after table ends</p>
+        <p>(x) Experimental sentence with line  beginning and ending</p>
+        <p></p>
+        <p>(x) Following word has zero-width joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#8205;य&lt;/w&gt;</p>
+        <p>भो#orig{•}##-#ग्&amp;#8205;य </p>
+        <p>(x) Following word has zero-width non-joiner which should return &lt;w&gt;भो&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;ग्&amp;#x200c;य&lt;/w&gt;</p>
+        <p>भो#orig{•}##-#ग्&amp;#x200c;य "</p>
+        <p></p>
+        <p>ॐ नमो रत्नंत्रयाय [रत्न˚] ।। धर्म्मेश्वर: सकलपापविनाशहे-</p>
+        <p>तुः सौखावतीगतिमहाजनमार्थहे[तुः] दुःखाधिपारगमनो-</p>
+        <p>त्तमकर्ण्णधारः श्रीलोकनाथचरणं भवतो भजेहं ।। ।। श्रेयोऽस्तु</p>
+        <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे पञ्चम्यान्तिथौ मृगशिर-</p>
+        <p>नक्षत्रे अतिगण्डयोगे शुक्रवासरे थ्वकुन्हु श्रीलोकेश्वर फले प्र-</p>
+        <p>तिष्ठा दिन जुरो ।। ।। दानपति सलको [? - 4 characters] थविर श्री धनजोतिजु</p>
+        <p>भार्य्या रुकमणि [? - 12 characters] ति केहें व</p>
+        <p>न्हाय थुति समुहन दुन्ता । [? - 3 characters] बु रोव ‹८› । थ्वतिया वरसानन</p>
+        <p>दवथ्य जुरो । [? - 5 characters] चैत्यभ‹रा›र गजुरि थ्वतिया-</p>
+        <p>त जुरो । मेष संक्रान्ति ‹कुन्हु दान वियमार› । फं २ सियाब-</p>
+        <p>जि फं २ थ्व [? - 12 characters] ति फरेस</p>
+        <p>दान बिय जुरो । भुय [? - 14 characters] फं २ सष्वा-</p>
+        <p>र थुति याय रश [? - 9 characters] ‹इक्षा›भोजन</p>
+        <p>याय जुरो । गुथि‹जन› [? - 9 characters] ‹ज्यो›तिजु मणि-</p>
+        <p>देवजु कोवाहार दे [? - 8 characters] वराजजु वं-</p>
+        <p>कुवाहर कुतुजु थुति [? - 6 characters] यायमार । सेल्हो-</p>
+        <p>यात दम शुकि तय न [? - 6 characters] ग्वम्हनसे</p>
+        <p>नकर वम्हन प [? - 15 characters] नकम थ्वया</p>
+        <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।</p>
+      </sec>
+    </sec>
+    <sec id="sec-5">
+      <title>Commentary</title>
+      <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of Lokeśvara was installed on the phalcā<foreign></foreign>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 ropanīs of land in … and established a guṭhī<foreign></foreign> to observe the <sup>anniversary</sup>. From the income of the land, an <bold>offering</bold> of 2 pāthīs of dry-fried puffed rice (syāḥbaji), 2 pāthīs of thvã… shall be made at the phalcā as charity (dāna) on meṣa saṃkrānti, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 pāthīs of lime and … shall be fed food items of their choice. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju of Ko Bāhāḥ, Kutuju<foreign></foreign> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the guṭhī, shall … . A certain amount has been allocated for renovation of the phalcā. The person who feeds shall receive a thousandfold merit.</p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </sec>
+    <sec id="sec-6">
+      <title></title>
+      <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of Lokeśvara at a phalcā in Subāhāḥ and also donated land for observing the anniversary of the image. The actual location of the phalcā in which the image was installed is not clear, as the inscription is no longer at its original location. The phalcā probably is the one to the east of the monastery.</p>
+      <fig>
+        <graphic mimetype="image" mime-subtype="png" xlink:href="image1.png"/>
+      </fig>
+    </sec>
+  </text>
+</root>

@@ -16,6 +16,7 @@ class DOCXArchive extends \ZipArchive {
             $styles = $this->transformToXml("word/styles.xml");
             $this->mediaFiles = $this->extractMediaFiles();
             $numbering = $this->transformToXml("word/numbering.xml");
+            $footnotes = $this->transformToXml("word/footnotes.xml");
             $this->close();
 // construct as an array
             $params = array();
@@ -23,6 +24,7 @@ class DOCXArchive extends \ZipArchive {
             if ($relationships) $params["relationships"] = $relationships;
             if ($styles) $params["styles"] = $styles;
             if ($numbering) $params["numbering"] = $numbering;
+            if ($footnotes) $params["footnotes"] = $footnotes;
             $document = new Document($params);
             $this->document = $document;
         }

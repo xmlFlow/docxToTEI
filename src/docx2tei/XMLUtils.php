@@ -333,7 +333,7 @@ class XMLUtils {
      */
     public static function print_error($message): void {
         echo("" . $message . "\n");
-        exit();
+        //exit();
         //error_log($message."\n");
     }
 }

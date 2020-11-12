@@ -10,6 +10,7 @@ class Text extends DataObject {
     const DOCX_TEXT_SUBSCRIPT = 4;
     const DOCX_TEXT_STRIKETHROUGH = 5;
     const DOCX_TEXT_EXTLINK = 6;
+    const DOCX_TEXT_FOOTNOTE = 7;
     private $properties;
     private $text;
     private $type = array();
@@ -59,6 +60,12 @@ class Text extends DataObject {
                 case "w:strike":
                     if ($this->togglePropertyEnabled($property)) {
                         $type[] = $this::DOCX_TEXT_STRIKETHROUGH;
+                    }
+                    break;
+                case "w:rStyle":
+                    if ($this->togglePropertyEnabled($property)) {
+                        $x=1;
+                        $type[] = $this::DOCX_TEXT_FOOTNOTE;
                     }
                     break;
             }

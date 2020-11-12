@@ -95,6 +95,7 @@ private $type = array();
             $styles = $this->getXpath()->query('w:pPr/w:pStyle/@w:val', $this->getDomElement());
             if ($this->isOnlyChildNode($styles)) {
                 $styleString = $styles[0]->nodeValue;
+
             }
         }
 // Not a heading if empty

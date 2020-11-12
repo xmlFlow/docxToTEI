@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:footnotes
+        xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="w14 wp14">
+    <w:footnote w:id="0" w:type="separator">
+        <w:p>
+            <w:pPr>
+                <w:rPr>
+                    <w:sz w:val="12"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:separator/>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="1" w:type="continuationSeparator">
+        <w:p>
+            <w:pPr>
+                <w:rPr>
+                    <w:sz w:val="12"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:continuationSeparator/>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="2">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:bookmarkStart w:id="2" w:name="_ftn1"/>
+            <w:bookmarkEnd w:id="2"/>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">[New.] var. </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>phale</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">, </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>phalacā</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>; n. one-storeyed building open towards the street for religious or social functions or for
+                    travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns,
+                    but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).
+                </w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="3">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">[fr. S.] var. </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>ropani</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>murīs</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">. The area may vary according to the grade, but current standard area for a </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>ropanī</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> comprises 5,476 square feet.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="4">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>The three unreadable letters here are perhaps the name of the place where the donated land was
+                    situated.
+                </w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="5">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">[fr. S. </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>goṣṭhī</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">] var. </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>guṭh</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>; n. “endowed lands or other sources of revenue for financing religious and charitable functions
+                    “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.
+                </w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="6">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">The letters inscribed after </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>thva</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> have already faded. But it probably means </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>thvã</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="7">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>As few letters have faded, we do not know the persons to be fed the items of their choice.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="8">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="9">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">He probably is </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>kutu bhāju</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>, a government official (Malla 2000: 53).</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="10">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">It is not clear what the members of the </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Emphasis"/>
+                </w:rPr>
+                <w:t>guṭhī</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> were instructed to do, as the letters here in the inscription have faded.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="11">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>Test Endnote 1</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="12">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>TestEndnote 2</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+</w:footnotes>

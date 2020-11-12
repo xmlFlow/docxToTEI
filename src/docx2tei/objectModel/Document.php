@@ -15,11 +15,13 @@ class Document {
     static $relationshipsXpath;
     static $stylesXpath;
     static $numberingXpath;
+    static $footnotesXpath;
     private static $minimalHeadingLevel;
     private $content;
     private $relationships;
     private $styles;
     private $numbering;
+    private $footnotes;
 
     public function __construct(array $params) {
         if (array_key_exists("relationships", $params)) {
@@ -33,6 +35,11 @@ class Document {
         if (array_key_exists("numbering", $params)) {
             $this->numbering = $params["numbering"];
             self::$numberingXpath = new \DOMXPath($this->numbering);
+        }
+
+        if (array_key_exists("footnotes", $params)) {
+            $this->footnotes = $params["footnotes"];
+            self::$footnotesXpath = new \DOMXPath($this->footnotes);
         }
         self::$xpath = new \DOMXPath($params["ooxmlDocument"]);
         $childNodes = self::$xpath->query("//w:body/child::node()");

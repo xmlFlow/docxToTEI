@@ -109,7 +109,7 @@
  | 24. | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   |
  
  
- * Change header according to sypnosis
+ * Change header according to synopsis
 
  
  
