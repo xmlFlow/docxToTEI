@@ -62,12 +62,6 @@ class Text extends DataObject {
                         $type[] = $this::DOCX_TEXT_STRIKETHROUGH;
                     }
                     break;
-                case "w:rStyle":
-                    if ($this->togglePropertyEnabled($property)) {
-                        $x=1;
-                        $type[] = $this::DOCX_TEXT_FOOTNOTE;
-                    }
-                    break;
             }
         }
         return $type;
