@@ -33,13 +33,6 @@ class Text extends DataObject {
         foreach ($contentNodes as $contentNode) {
             $stringText = $stringText . $contentNode->nodeValue;
         }
-        # Style information
-        $styles = $this->getXpath()->evaluate('w:footnoteReference', $this->getDomElement());
-        foreach ($styles as $style){
-            $fnId =$style->getAttribute('w:id');
-            $stringText = $stringText . '#footnoteReference{'.$fnId.'}#';
-
-        }
         return $stringText;
     }
 
