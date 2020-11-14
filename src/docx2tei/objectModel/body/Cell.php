@@ -10,8 +10,8 @@ class Cell extends DataObject {
     private $isMerged;
     private $cellNumber;
 
-    public function __construct(\DOMElement $domElement, $cellNumber) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params, $cellNumber) {
+        parent::__construct($domElement, $params);
         $this->cellNumber = $cellNumber;
         $this->isMerged = $this->defineMerged();
         $this->colspan = $this->extractColspanNumber();

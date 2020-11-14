@@ -7,10 +7,12 @@ abstract class DataObject {
     private $xpath;
     private $flatSectionId;
     private $dimensionalSectionId = array();
+    private $params;
 
-    public function __construct(\DOMElement $domElement) {
+    public function __construct(\DOMElement $domElement, $params) {
         $this->domElement = $domElement;
         $this->xpath = Document::$xpath;
+        $this->params = $params;
     }
 
     public function getFlatSectionId(): int {
@@ -49,6 +51,10 @@ abstract class DataObject {
         return $this->xpath;
     }
 
+    public  function getParameters() {
+        return $this->params;
+    }
+
     private function extractPropertyRecursion($styleNodes): array {
         $properties = array();
         foreach ($styleNodes as $styleNode) {
@@ -76,7 +82,7 @@ abstract class DataObject {
         $content = array();
         $parNodes = $this->getXpath()->query('w:p', $this->getDomElement());
         foreach ($parNodes as $parNode) {
-            $par = new Par($parNode);
+            $par = new Par($parNode, $this->getParameters());
             $content[] = $par;
         }
         return $content;

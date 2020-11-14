@@ -56,18 +56,18 @@ class Document {
                         $imageNodes = self::$xpath->query(".//pic:pic", $childNode);
                         if ($imageNodes->length > 0) {
                             foreach ($imageNodes as $imageNode) {
-                                $figure = new Image($imageNode);
+                                $figure = new Image($imageNode, $params);
                                 $content[] = $figure;
                             }
                         }
                     }
                     else {
-                        $par = new Par($childNode);
+                        $par = new Par($childNode, $params);
                         $content[] = $par;
                     }
                     break;
                 case "w:tbl":
-                    $table = new Table($childNode);
+                    $table = new Table($childNode,$params);
                     $content[] = $table;
                     break;
             }

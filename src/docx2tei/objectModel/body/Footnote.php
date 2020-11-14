@@ -6,8 +6,8 @@ use docx2tei\objectModel\Document;
 class Footnote extends DataObject {
     private $footnote;
 
-    public function __construct(\DOMElement $domElement) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params) {
+        parent::__construct($domElement, $params);
         $this->footnote = $this->extractFootnote();
     }
 

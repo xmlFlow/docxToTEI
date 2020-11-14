@@ -6,8 +6,8 @@ class Table extends DataObject {
     private $properties = array();
     private $rows = array();
 
-    public function __construct(\DOMElement $domElement) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params) {
+        parent::__construct($domElement, $params);
         $this->properties = $this->setProperties('w:tblPr/child::node()');
         $this->rows = $this->setContent('w:tr');
     }
@@ -17,7 +17,7 @@ class Table extends DataObject {
         $contentNodes = $this->getXpath()->query($xpathExpression, $this->getDomElement());
         if ($contentNodes->count() > 0) {
             foreach ($contentNodes as $contentNode) {
-                $row = new Row($contentNode);
+                $row = new Row($contentNode,  $this->getParameters());
                 $content[] = $row;
             }
         }

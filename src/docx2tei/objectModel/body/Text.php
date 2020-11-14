@@ -16,8 +16,8 @@ class Text extends DataObject {
     private $type = array();
     private $link;
 
-    public function __construct(\DOMElement $domElement) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params) {
+        parent::__construct($domElement, $params);
         $this->properties = $this->setProperties('w:rPr/child::node()');
         $this->text = $this->setText();
         $this->type = $this->setType();

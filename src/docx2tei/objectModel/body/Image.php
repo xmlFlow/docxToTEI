@@ -6,8 +6,8 @@ use docx2tei\objectModel\Document;
 class Image extends DataObject {
     private $link;
 
-    public function __construct(\DOMElement $domElement) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params) {
+        parent::__construct($domElement, $params);
         $this->link = $this->extractLink();
     }
 

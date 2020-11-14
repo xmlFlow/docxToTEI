@@ -25,8 +25,8 @@ private $type = array();
 // TODO should more detailed list styles be implemented?
     private $numberingType;
 
-    public function __construct(\DOMElement $domElement) {
-        parent::__construct($domElement);
+    public function __construct(\DOMElement $domElement, $params) {
+        parent::__construct($domElement, $params);
         $this->defineType();
         $this->properties = $this->setProperties('w:pPr/child::node()');
         $this->text = $this->setContent('w:r|w:hyperlink');
@@ -73,12 +73,12 @@ private $type = array();
         $contentNodes = $this->getXpath()->query($xpathExpression, $this->getDomElement());
         foreach ($contentNodes as $contentNode) {
             if ($contentNode->nodeName === "w:r") {
-                $text = new Text($contentNode);
+                $text = new Text($contentNode, $this->getParameters());
                 $content[] = $text;
             } elseif ($contentNode->nodeName === "w:hyperlink") {
                 $children = $this->getXpath()->query('child::node()', $contentNode);
                 foreach ($children as $child) {
-                    $href = new Text($child);
+                    $href = new Text($child, $this->getParameters());
                     $href->addType($href::DOCX_TEXT_EXTLINK);
                     $href->setLink();
                     $content[] = $href;
