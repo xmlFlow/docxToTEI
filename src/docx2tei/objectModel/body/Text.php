@@ -32,9 +32,13 @@ class Text extends DataObject {
         }
         # Style information
         $styles = $this->getXpath()->evaluate('w:footnoteReference', $this->getDomElement());
-        foreach ($styles as $style){
-            $fnId =$style->getAttribute('w:id');
-            $stringText = $stringText . '#footnoteReference{'.$fnId.'}#';
+        $params = $this->getParameters();
+        if (array_key_exists("footnotes", $params)) {
+            $footnotes = $params["footnotes"];
+            foreach ($styles as $style) {
+                $fnId = $style->getAttribute('w:id');
+                $stringText = $stringText . '#footnoteReference{' . $fnId . '}#';
+            }
         }
 
         return $stringText;
