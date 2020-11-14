@@ -46,14 +46,14 @@ class Text extends DataObject {
                         $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]',$child);
                         $fnText = $footnotesXpath->evaluate('w:t',$child);
                         if(count($fnType)>0 && count($fnText)>0 ) {
-                            $footnoteString .=  '<>'.$fnText->item(0)->nodeValue.']]';
+                            $footnoteString .=  '<foreign>'.$fnText->item(0)->nodeValue.'</foreign>';
 
                         }else {
                             $footnoteString .=  $child->nodeValue;
 
                         }
                     }
-                    $stringText = $stringText . '#footnoteReference{' . $footnoteString. '}#';
+                    $stringText = $stringText . '<note place="end">' . $footnoteString. '</note>';
                     $x=1;
                 }
             }
