@@ -40,7 +40,21 @@ class Text extends DataObject {
                 $fnId = $style->getAttribute('w:id');
                 $footnoteNodes = $footnotesXpath->query('//w:footnote[@w:id='.$fnId.']');
                 foreach ($footnoteNodes as $footnoteNode) {
-                    $stringText = $stringText . '#footnoteReference{' . $footnoteNode->nodeValue . '}#';
+                    $children = $footnotesXpath->query('w:p/w:r', $footnoteNode);
+                    $footnoteString='';
+                    foreach ($children as $child){
+                        $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]',$child);
+                        $fnText = $footnotesXpath->evaluate('w:t',$child);
+                        if(count($fnType)>0 && count($fnText)>0 ) {
+                            $footnoteString .=  '<>'.$fnText->item(0)->nodeValue.']]';
+
+                        }else {
+                            $footnoteString .=  $child->nodeValue;
+
+                        }
+                    }
+                    $stringText = $stringText . '#footnoteReference{' . $footnoteString. '}#';
+                    $x=1;
                 }
             }
         }
