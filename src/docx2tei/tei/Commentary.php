@@ -11,10 +11,10 @@ class Commentary extends DOMDocument {
     public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
-        $this->setEnglishTranslation();
+        $this->getCommentry();
     }
 
-    protected function setEnglishTranslation(): void {
+    protected function getCommentry(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->commentary . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
             XMLUtils::print_error("[Error] Commentary section not defined");
@@ -33,6 +33,7 @@ class Commentary extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::createFootnoteTags($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

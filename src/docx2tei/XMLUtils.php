@@ -22,6 +22,20 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
+    public static function createFootnoteTags(string $s) {
+        $s= preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
+        $s= preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
+        $s= preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
+        $s= preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
+
+        return  $s;
+    }
+
+
+    /**
+     * @param $s
+     * @return string|string[]|null
+     */
     public static function createComplexSentence(string $s) {
         #preg_match_all('/' . XMLUtils::$bnd . 'SB(.|\n)*' . XMLUtils::$bnd.'SE'. '/i', $s, $matches);
         preg_match_all('/#SB(.|\n|\r\n|\r)*#SE/i', $s, $matches);
