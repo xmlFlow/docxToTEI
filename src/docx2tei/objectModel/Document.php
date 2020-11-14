@@ -3,6 +3,7 @@
 use docx2tei\objectModel\body\Image;
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\body\Table;
+use docx2tei\objectModel\body\Footnote;
 
 class Document {
     const SECT_NESTED_LEVEL_LIMIT = 5; // limit the number of possible levels for sections
@@ -48,6 +49,7 @@ class Document {
             switch ($childNode->nodeName) {
                 case "w:p":
                     // There can be multiple drawings inside a run and multiple elements inside a drawing
+
                     if ($this->isDrawing($childNode)) {
                         // TODO add support for other drawings type, e.g., c:chart
                         self::$xpath->registerNamespace("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
@@ -58,7 +60,8 @@ class Document {
                                 $content[] = $figure;
                             }
                         }
-                    } else {
+                    }
+                    else {
                         $par = new Par($childNode);
                         $content[] = $par;
                     }
@@ -72,6 +75,7 @@ class Document {
         $this->content = $this->addSectionMarks($content);
         self::$minimalHeadingLevel = $this->minimalHeadingLevel();
     }
+
 
     private function isDrawing($childNode): bool {
         $element = Document::$xpath->query("w:r//w:drawing", $childNode)[0];

@@ -25,14 +25,18 @@ class Text extends DataObject {
 
     private function setText() {
         $stringText = '';
-
-
         $contentNodes = $this->getXpath()->evaluate('w:t', $this->getDomElement());
-        $content = $this->getDomElement()->ownerDocument->saveXML($this->getDomElement());
 
         foreach ($contentNodes as $contentNode) {
             $stringText = $stringText . $contentNode->nodeValue;
         }
+        # Style information
+        $styles = $this->getXpath()->evaluate('w:footnoteReference', $this->getDomElement());
+        foreach ($styles as $style){
+            $fnId =$style->getAttribute('w:id');
+            $stringText = $stringText . '#footnoteReference{'.$fnId.'}#';
+        }
+
         return $stringText;
     }
 

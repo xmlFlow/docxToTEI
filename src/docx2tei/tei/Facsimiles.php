@@ -1,7 +1,7 @@
 <?php
 
 namespace docx2tei\tei;
-
+use docx2tei\XMLUtils;
 use DOMDocument;
 
 class Facsimiles extends DOMDocument {
