@@ -29,24 +29,24 @@
 | :heavy_check_mark: | Tei Header   ( Author/issuer of document)|
 | :heavy_check_mark: | Tei Header   ( Name of editor(s)|
 | :heavy_check_mark: | Tei Header   ( Name of collaborator(s))|
-| :heavy_check_mark: | Tei Header   ( :question: Changed the name to be unique in the table / ( Deposit holding institution)|
+| :heavy_check_mark: | Tei Header   ( uestion: Changed the name to be unique in the table / ( Deposit holding institution)|
 | :heavy_check_mark: | Tei Header   (Place of deposit / current location of document)|
 | :heavy_check_mark: | Tei Header   (Deposit holding institution )|
 | :heavy_check_mark: | Tei Header   (Inventory number assigned by holding institution )|
-| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Location )|
+| :heavy_check_mark:  |  Can we change it to be more precise ? Tei Header   (Location )|
 | :heavy_check_mark: | Tei Header   (Alternative manifestation(/inventory Type of manifestation) |
-| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Inventory number) |
-| :heavy_check_mark: :question: |  Can we change it to be more precise ? Tei Header   (Holding institution) |
+| :heavy_check_mark:  |  Can we change it to be more precise ? Tei Header   (Inventory number) |
+| :heavy_check_mark:  |  Can we change it to be more precise ? Tei Header   (Holding institution) |
 | :heavy_check_mark: | Tei Header   (Main language of document) |
 | :heavy_check_mark: | Tei Header   (Other languages) |
-| :heavy_check_mark: | Tei Header   :question: `ref target (Link to catalogue entry) |
+| :heavy_check_mark: | Tei Header    `ref target (Link to catalogue entry) |
 | :heavy_check_mark: | Tei Header   (Date of origin of document) |
 | :heavy_check_mark: | Tei Header   (Place of origin of document) |
-| :question: | Is it needed now ??Tei Header   (Name of image file(s)) |
+| :heavy_check_mark: | Is it needed now Tei Header   (Name of image file(s)) |
 |:question:  |  Word: header metadata   block user edits of the header| 
 | :heavy_check_mark: | Tei Header   (encoding description), default text |
 | :heavy_check_mark: | Tei Header   (profile description), default text |
-| :question: | How to define the user  e.fg #AZ? Tei Header   (revision description), default text |
+| :heavy_check_mark: | #AUTO for the conveterting user. Tei Header   (revision description), default text |
 | :heavy_check_mark: | Validation   Error message, if metadata values aren't set |
 | :heavy_check_mark: | Facsimile    (Create surfaces)|
 | :heavy_check_mark: | Abstract    (Create  Abstract )|
@@ -55,7 +55,7 @@
 | :heavy_check_mark: | Body (Check for languages in Edition  (lang) )|
 | :heavy_check_mark: | Body (pb) for surface|
 | :heavy_check_mark: | Body (ab) for surface|
-
+| :question: | Change header according to synopsis, what is the header change here ? | 
 
  
 
@@ -101,26 +101,17 @@
  | 16. :heavy_check_mark: |  #pln{url}# | `#pln{corresp_ID}#` | `<placeName  corresp="corresp_ID"/>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
  | 17. :heavy_check_mark: |   #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
  | 18. :heavy_check_mark:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
-<<<<<<< HEAD
- | 19. :heavy_check_mark: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
- | 20. :heavy_check_mark: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
- | 21. :heavy_check_mark: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
- | 22.  | last minus of a sentence| | | | |
- | 23. | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
- | 24. | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   |
-=======
  | 19. | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
  | :ok: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
  | :ok: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
  | :ok: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
- | :ok: | #ab@type@correspond# |  | `#@ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
- | :ok: | #pb@p:page-number@facs#|  | `#@pb@p=12@#surface1#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
+ | :ok: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
+ | :ok: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
  | :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | :ok: | last minus of a sentence| | | | |
->>>>>>> 003dc06... 20201106-1
  
  
- * Change header according to synopsis
+ 
 
  
  

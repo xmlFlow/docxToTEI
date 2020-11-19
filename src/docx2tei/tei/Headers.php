@@ -2,6 +2,7 @@
 
 namespace docx2tei\tei;
 
+use docx2tei\XMLUtils;
 use DOMDocument;
 
 class Headers extends DOMDocument {
@@ -106,11 +107,27 @@ class Headers extends DOMDocument {
      */
     function setMainEditor($titleStmt): void {
         $respStmt = $this->createElement("respStmt");
-        $resp = $this->createElement("resp", "main_editor");
+        $editorTypeString = "";
+        $editorType = "";
+        $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->et . '"]');
+        $synSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->synopsis . '"]');
+        if (count($etSec) != 0) {
+            $editorTypeString = 'main editor and translator';
+            $editorType = 'main_editor';
+        }
+        if (count($synSec) != 0) {
+            $editorTypeString = 'main editor';
+            $editorType = 'synopsis_editor';
+        }
+        if (count($etSec) + count($synSec) ==2) {
+            XMLUtils::print_error('[Warning] both English translation and synopsis defined. Please define only one of them.');
+        }
+        $resp = $this->createElement("resp", $editorTypeString);
         $respStmt->appendChild($resp);
         $name = $this->createElement("name", $this->headers["h13"] ?? "");
         $typeAttrib = $this->createAttribute('type');
-        $typeAttrib->value = 'main_editor';
+
+        $typeAttrib->value = $editorType;
         $name->appendChild($typeAttrib);
         $respStmt->appendChild($name);
         $titleStmt->appendChild($respStmt);
