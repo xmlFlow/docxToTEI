@@ -10,16 +10,16 @@
     "translation": "Translation"
   },
   "headers": {
-    "h1": "Alternative manifestation/inventory Type of manifestation",
+    "h1": "Alternative manifestation/inventory Type of alternative manifestation ",
     "h2": "Author/issuer of document",
     "h3": "Date of origin of document",
     "h4": "Document ID",
     "h5": "Deposit holding institution",
     "h6": "Short title of document",
-    "h7": "Inventory number",
+    "h7": "Alternative inventory number",
     "h8": "Inventory number assigned by holding institution",
     "h9": "Link to catalogue entry",
-    "h10": "Location",
+    "h10": "Alternative Location",
     "h11": "Main language of document",
     "h12": "Main title of document",
     "h13": "Name of editor(s)",
@@ -28,7 +28,7 @@
     "h16": "Other languages",
     "h17": "Place of deposit / current location of document",
     "h18": "Place of origin of document",
-    "h19": "Holding institution"
+    "h19": "Alternative holding institution"
   },
   "default_language": "nep"
 }

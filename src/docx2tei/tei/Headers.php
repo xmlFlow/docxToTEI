@@ -237,7 +237,7 @@ class Headers extends DOMDocument {
 
     function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
-        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#???????????">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->document->teiHeader->appendChild($this->document->importNode($revisionDesc, true));
     }
 }
