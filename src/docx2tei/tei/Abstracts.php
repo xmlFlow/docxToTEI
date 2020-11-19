@@ -32,8 +32,6 @@ class Abstracts extends DOMDocument {
             foreach ($abstractSec as $abstract) {
                 if (strlen($abstract->textContent) > 0) {
                     $content = $abstract->ownerDocument->saveXML($abstract);
-// replace all <p>s to <ab> s and multiple whitespaces
-                    $content = $this->tagReplace($content, 'p', 'ab');
                     $content = XMLUtils::cleanMultipleSpaces($content);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($content);
