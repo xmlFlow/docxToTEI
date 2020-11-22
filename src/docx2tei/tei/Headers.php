@@ -119,7 +119,7 @@ class Headers extends DOMDocument {
             $editorTypeString = 'main editor';
             $editorType = 'synopsis_editor';
         }
-        if (count($etSec) + count($synSec) ==2) {
+        if (count($etSec) + count($synSec) == 2) {
             XMLUtils::print_error('[Warning] both English translation and synopsis defined. Please define only one of them.');
         }
         $resp = $this->createElement("resp", $editorTypeString);

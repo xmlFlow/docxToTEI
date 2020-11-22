@@ -13,9 +13,9 @@ class Par extends DataObject {
     const DOCX_LIST_ITEM_ID = 'itemId';
     const DOCX_LIST_TYPE_UNORDERED = 1;
     const DOCX_LIST_TYPE_ORDERED = 2;
-        public static $headings = array("heading", "heading 1", "heading 2", "heading 3", "heading 4", "heading 5", "heading 6", "title"); // const
+    public static $headings = array("heading", "heading 1", "heading 2", "heading 3", "heading 4", "heading 5", "heading 6", "title"); // const
     static $numberingUnorderedMarkers = array("bullet", "none", "");
-private $type = array();
+    private $type = array();
     private $properties = array();
     private $text = array();
     private $headingLevel;

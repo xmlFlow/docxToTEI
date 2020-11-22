@@ -23,12 +23,12 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createFootnoteTags(string $s) {
-        $s= preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
-        $s= preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-        $s= preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
-        $s= preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
+        $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
+        $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
+        $s = preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
+        $s = preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
 
-        return  $s;
+        return $s;
     }
 
 
@@ -37,13 +37,13 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createComplexSentence(string $s) {
-        #preg_match_all('/' . XMLUtils::$bnd . 'SB(.|\n)*' . XMLUtils::$bnd.'SE'. '/i', $s, $matches);
-        preg_match_all('/#SB(.|\n|\r\n|\r)*#SE/i', $s, $matches);
+        preg_match_all('/#SB(.|\n)*?#SE/i', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
-            $s = preg_replace('/\#SB/i', '<s>', $s);
-            $s = preg_replace('/\#SE/i', '</s>', $s);
+            $s = preg_replace('/#SB/i', '<s>', $s);
+            $s = preg_replace('/#SE/i', '</s>', $s);
         }
+
         return $s;
     }
 
@@ -265,6 +265,14 @@ class XMLUtils {
         return $tags;
     }
 
+    /**
+     * @param $value
+     */
+    public static function print_error($message): void {
+        echo("" . $message . "\n");
+        //exit();
+        //error_log($message."\n");
+    }
 
     /**
      * @param string $s
@@ -340,14 +348,5 @@ class XMLUtils {
             $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
         }
         return $s;
-    }
-
-    /**
-     * @param $value
-     */
-    public static function print_error($message): void {
-        echo("" . $message . "\n");
-        //exit();
-        //error_log($message."\n");
     }
 }

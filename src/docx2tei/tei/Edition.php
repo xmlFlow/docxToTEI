@@ -16,13 +16,14 @@ class Edition extends DOMDocument {
         if (count($edition) == 0) {
             XMLUtils::print_error("[Error] Edition section not found");
         } else {
-            #<div xml:id="ed" type="edition" xml:lang="nep">#
             $div = $this->createDiv();
             $this->createSections($div);
+            $fullText = $div->ownerDocument->saveXML($div);
+            $fullText = XMLUtils::createComplexSentence($fullText);
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
-        $tmp = $this->document->structuredDocument->saveXML();
-        $y = 1;
+
+
     }
 
     private function createDiv() {
@@ -75,7 +76,7 @@ class Edition extends DOMDocument {
 
 
                     # ! order is important. never change order #
-                    #$sectionContent = XMLUtils::createComplexSentence($sectionContent);
+
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {
@@ -83,6 +84,7 @@ class Edition extends DOMDocument {
                     }
                 }
             }
+
         }
     }
 
@@ -121,7 +123,7 @@ class Edition extends DOMDocument {
                     $ab->appendChild($facsAttr);
                     $ab->appendChild($n);
                 } else {
-                    XMLUtils::print_error("[Error]  Wrong type in edition: ".$type);
+                    XMLUtils::print_error("[Error]  Wrong type in edition: " . $type);
                 }
                 foreach ($titleAttribs as $attribute) {
                     if (strpos($attribute, "=") > 0) {

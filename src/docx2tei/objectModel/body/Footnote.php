@@ -1,7 +1,6 @@
 <?php namespace docx2tei\objectModel\body;
 
 use docx2tei\objectModel\DataObject;
-use docx2tei\objectModel\Document;
 
 class Footnote extends DataObject {
     private $footnote;
@@ -12,7 +11,7 @@ class Footnote extends DataObject {
     }
 
     private function extractFootnote(): ?string {
-      return "";
+        return "";
 
     }
 

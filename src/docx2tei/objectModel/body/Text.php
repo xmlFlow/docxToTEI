@@ -38,23 +38,23 @@ class Text extends DataObject {
             $footnotesXpath = new \DOMXPath($params["footnotes"]);
             foreach ($styles as $style) {
                 $fnId = $style->getAttribute('w:id');
-                $footnoteNodes = $footnotesXpath->query('//w:footnote[@w:id='.$fnId.']');
+                $footnoteNodes = $footnotesXpath->query('//w:footnote[@w:id=' . $fnId . ']');
                 foreach ($footnoteNodes as $footnoteNode) {
                     $children = $footnotesXpath->query('w:p/w:r', $footnoteNode);
-                    $footnoteString='';
-                    foreach ($children as $child){
-                        $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]',$child);
-                        $fnText = $footnotesXpath->evaluate('w:t',$child);
-                        if(count($fnType)>0 && count($fnText)>0 ) {
-                            $footnoteString .=  '<foreign>'.$fnText->item(0)->nodeValue.'</foreign>';
+                    $footnoteString = '';
+                    foreach ($children as $child) {
+                        $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]', $child);
+                        $fnText = $footnotesXpath->evaluate('w:t', $child);
+                        if (count($fnType) > 0 && count($fnText) > 0) {
+                            $footnoteString .= '<foreign>' . $fnText->item(0)->nodeValue . '</foreign>';
 
-                        }else {
-                            $footnoteString .=  $child->nodeValue;
+                        } else {
+                            $footnoteString .= $child->nodeValue;
 
                         }
                     }
-                    $stringText = $stringText . '<note place="end">' . $footnoteString. '</note>';
-                    $x=1;
+                    $stringText = $stringText . '<note place="end">' . $footnoteString . '</note>';
+                    $x = 1;
                 }
             }
         }

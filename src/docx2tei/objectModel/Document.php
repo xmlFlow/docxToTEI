@@ -3,7 +3,6 @@
 use docx2tei\objectModel\body\Image;
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\body\Table;
-use docx2tei\objectModel\body\Footnote;
 
 class Document {
     const SECT_NESTED_LEVEL_LIMIT = 5; // limit the number of possible levels for sections
@@ -60,14 +59,13 @@ class Document {
                                 $content[] = $figure;
                             }
                         }
-                    }
-                    else {
+                    } else {
                         $par = new Par($childNode, $params);
                         $content[] = $par;
                     }
                     break;
                 case "w:tbl":
-                    $table = new Table($childNode,$params);
+                    $table = new Table($childNode, $params);
                     $content[] = $table;
                     break;
             }

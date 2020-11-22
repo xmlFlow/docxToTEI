@@ -41,18 +41,14 @@ abstract class DataObject {
         return $element;
     }
 
-    protected function setProperties(string $xpathExpression): array {
-        $styleNodes = $this->getXpath()->evaluate($xpathExpression, $this->domElement);
-        $properties = $this->extractPropertyRecursion($styleNodes);
-        return $properties;
-    }
-
     protected function getXpath(): \DOMXPath {
         return $this->xpath;
     }
 
-    public  function getParameters() {
-        return $this->params;
+    protected function setProperties(string $xpathExpression): array {
+        $styleNodes = $this->getXpath()->evaluate($xpathExpression, $this->domElement);
+        $properties = $this->extractPropertyRecursion($styleNodes);
+        return $properties;
     }
 
     private function extractPropertyRecursion($styleNodes): array {
@@ -90,5 +86,9 @@ abstract class DataObject {
 
     protected function getDomElement(): \DOMElement {
         return $this->domElement;
+    }
+
+    public function getParameters() {
+        return $this->params;
     }
 }

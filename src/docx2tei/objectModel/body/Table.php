@@ -17,7 +17,7 @@ class Table extends DataObject {
         $contentNodes = $this->getXpath()->query($xpathExpression, $this->getDomElement());
         if ($contentNodes->count() > 0) {
             foreach ($contentNodes as $contentNode) {
-                $row = new Row($contentNode,  $this->getParameters());
+                $row = new Row($contentNode, $this->getParameters());
                 $content[] = $row;
             }
         }

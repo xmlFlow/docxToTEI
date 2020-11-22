@@ -1,6 +1,7 @@
 <?php
 
 namespace docx2tei\tei;
+
 use docx2tei\XMLUtils;
 use DOMDocument;
 
@@ -16,11 +17,11 @@ class Facsimiles extends DOMDocument {
     function setFacsimiles(): void {
         $facsimiles = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
         if (count($facsimiles) == 0) {
-            XMLUtils::print_error("[Error] No facsimiles ".$this->document->cfg->sections->facsimiles );
+            XMLUtils::print_error("[Error] No facsimiles " . $this->document->cfg->sections->facsimiles);
         } else {
             foreach ($facsimiles as $facsimile) {
                 if ($facsimile->tagName !== "title") {
-                    XMLUtils::print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word ".$facsimile->tagName);
+                    XMLUtils::print_error("[Error] facsimile not formatted properly. Use  Heading 2 format in Word " . $facsimile->tagName);
                 }
                 $text = (string)$facsimile->textContent;
                 if (strlen($text) == 0) {
@@ -28,7 +29,7 @@ class Facsimiles extends DOMDocument {
                 } else {
                     $surfaceParts = explode(":", $text);
                     if (count($surfaceParts) < 3) {
-                        XMLUtils::print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r ".$surfaceParts);
+                        XMLUtils::print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r " . $surfaceParts);
                     } else {
                         list($xml_id, $facs, $page) = $surfaceParts;
                         $facsimile = $this->createElement("facsimile");
