@@ -73,6 +73,9 @@ class Edition extends DOMDocument {
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
 
+                    #rename tags
+                    $s = XMLUtils::tagReplace($s, 'p', 'ab');
+
 
                     # ! order is important. never change order #
 

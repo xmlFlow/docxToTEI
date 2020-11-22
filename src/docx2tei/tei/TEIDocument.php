@@ -36,8 +36,9 @@ class TEIDocument extends DOMDocument {
         $commentary = new Commentary($this);
 
         # Final  processing
+        $fd = new FinalDocument($this);
 
-        $translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
+        //$translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
 
 
     }

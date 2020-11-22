@@ -42,11 +42,5 @@ class Abstracts extends DOMDocument {
         }
     }
 
-    /**
-     * @param string $content
-     * @return string|string[]|null
-     */
-    protected function tagReplace(string $content, string $tag, string $replace) {
-        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/i', '<' . $replace . '>$1</' . $replace . '>', $content);
-    }
+
 }

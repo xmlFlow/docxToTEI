@@ -19,6 +19,14 @@ class XMLUtils {
     }
 
     /**
+     * @param string $content
+     * @return string|string[]|null
+     */
+    public static function tagReplace(string $content, string $tag, string $replace) {
+        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/i', '<' . $replace . '>$1</' . $replace . '>', $content);
+    }
+
+    /**
      * @param $s
      * @return string|string[]|null
      */
