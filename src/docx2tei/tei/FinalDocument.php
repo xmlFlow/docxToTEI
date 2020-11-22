@@ -2,7 +2,6 @@
 
 namespace docx2tei\tei;
 
-use docx2tei\XMLUtils;
 use DOMDocument;
 
 class FinalDocument extends DOMDocument {
@@ -15,13 +14,11 @@ class FinalDocument extends DOMDocument {
     }
 
     protected function cleanTitle(): void {
-        //$titles = $this->document->xpath->query('//root/text/sec/title');
-
-            $placesNodes = $this->document->getElementsByTagName('title');
-            while ($placesNodes->length > 0) {
-                $node = $placesNodes->item(0);
-                $node->parentNode->removeChild($node);
-            }
+        $titles = $this->document->getElementsByTagName('title');
+        while ($titles->length > 0) {
+            $node = $titles->item(0);
+            $node->parentNode->removeChild($node);
+        }
 
     }
 
