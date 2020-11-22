@@ -18,8 +18,7 @@ class Edition extends DOMDocument {
         } else {
             $div = $this->createDiv();
             $this->createSections($div);
-            $fullText = $div->ownerDocument->saveXML($div);
-            $fullText = XMLUtils::createComplexSentence($fullText);
+            $divText = $div->ownerDocument->saveXML($div);
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
 

@@ -83,11 +83,10 @@
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
           <title>ab @#main_text@maintext@key=valEdi</title>
-          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं <placeName>place_with_unique_id</placeName>भवतो भजेहं </p>
+          <p>(1) #SB नमो रत्नंत्रयाय [रत्न˚] <gap reason="lost" extent="5 characters"/> ।। धर्म्मेश्वर: सकलपापविनाशहे त्तमकर्ण्णधारः श्रीलोकनाथचरणं <placeName>place_with_unique_id</placeName>भवतो #SEभजेहं </p>
           <lb break="no"/>
           <lb/>
-          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <geogName>corresp_ID</geogName>पञ्चम्यान्तिथौ मृगशिर- #SE</p>
-          <p>(2) An empty line break follows me </p>
+          <p>।। ।। श्रेयोऽस्तु सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <geogName>corresp_ID</geogName>पञ्चम्यान्तिथौ मृगशिर-(2) An empty line break follows me </p>
           <lb/>
           <p>( 3)Two line breaks without a break follows me<orig>.</orig></p>
           <lb break="no"/>
@@ -146,7 +145,7 @@
           <p>सम्वत्‌ ८२० वैशाषशुक्लचतुर्थ्या: परे <geogName>corresp_ID</geogName>पञ्चम्यान्तिथौ मृगशिर-</p>
           <p>(18) This line includes a sentence </p>
           <p>सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।। ।। <sb>दानपति सलको सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो ।सहस्र पुण्य राक जुरो । शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो । </sb> दानपति सलको </p>
-          <p>(19) all <orig>.</orig> are converterd to &lt;orig&gt;<orig>.</orig>&lt;/orig&gt;</p>
+          <p>(19) all <orig>.</orig> are converted to &lt;orig&gt;<orig>.</orig>&lt;/orig&gt;</p>
           <p>(20) &amp;#x200c; is let as it is inside text</p>
           <p>ो<orig>•</orig>#-#ग्&amp;#8205;य</p>
           <p>(21) &amp;#x200c; is let as it is inside text</p>
