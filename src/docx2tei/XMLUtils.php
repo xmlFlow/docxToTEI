@@ -78,6 +78,14 @@ class XMLUtils {
         return $s;
     }
 
+
+    public static function createWords(string $s) {
+        if (preg_match("/[\p{Devanagari}]+/u", $s,$matches)) {
+            $s = preg_replace('/[\p{Devanagari}]+/u', '<w>'.$matches[0].'</w>', $s);
+        }
+        return $s;
+    }
+
     /**
      * @param string $s
      * @return string|string[]|null

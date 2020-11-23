@@ -50,12 +50,13 @@
 | :heavy_check_mark: | Validation   Error message, if metadata values aren't set |
 | :heavy_check_mark: | Facsimile    (Create surfaces)|
 | :heavy_check_mark: | Abstract    (Create  Abstract )|
-| :question: | Needs an example of a table|
+| :heavy_check_mark:  |Table support|
 | :heavy_check_mark: | Body (create Body element)|
 | :heavy_check_mark: | Body (Check for languages in Edition  (lang) )|
 | :heavy_check_mark: | Body (pb) for surface|
 | :heavy_check_mark: | Body (ab) for surface|
 | :heavy_check_mark: | Change header according to synopsin and et. ``` <respStmt> <resp>main editor and translator</resp> <name type="main_editor">Max Mustermann</name> </respStmt>    <respStmt><resp>main editor</resp> <name type="synopsis_editor">Max Mustermann</name> </respStmt>```    | 
+| :heavy_check_mark: | Body (ab) for surface|
 
  
 
@@ -195,4 +196,3 @@
  
 :heavy_check_mark:
  
-   

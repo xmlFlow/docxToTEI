@@ -72,9 +72,10 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createStructuredContent($s);
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
-
+                    $s = XMLUtils::createWords($s);
                     #rename tags
                     $s = XMLUtils::tagReplace($s, 'p', 'ab');
+                    # create words
 
 
                     # ! order is important. never change order #
