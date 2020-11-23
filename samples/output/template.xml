@@ -65,105 +65,106 @@
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="#surface1" facs="1r"/>
         <ab type="invocatio" corresp="#invocatio">
-          <ab><w>श्रीः</w>\</ab>
+          <p><w>श्रीः</w>\</p>
         </ab>
         <ab type="space" corresp="#space1" newArttiibute="newAttributeValue">
-          <ab>
+          <p>
             <w>नं</w>
             <orig>.</orig>
             <w>नं</w>
-          </ab>
+          </p>
         </ab>
         <ab type="space" corresp="#space2">
-          <ab>
+          <p>
             <w>श्रीमालीका</w>
-          </ab>
+          </p>
         </ab>
         <ab type="maintext" corresp="#main_text" key="valEdi">
-          <ab>(1) #SB <w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w> <w>नमो</w> <w>नमो</w> <placeName>place_with_unique_id</placeName><w>नमो</w> #SE<w>नमो</w> </ab>
+          <p>(1) #SB <w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w> <w>नमो</w> <w>नमो</w> <placeName>place_with_unique_id</placeName><w>नमो</w> #SE<w>नमो</w> </p>
           <lb break="no"/>
           <lb/>
-          <ab>।। ।। <w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>‌ <w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>: <w>श्रेयोऽस्तु</w> <geogName>corresp_ID</geogName><w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>-(2) An empty line break follows me </ab>
+          <p>।। ।। <w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>‌ <w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>: <w>श्रेयोऽस्तु</w> <geogName>corresp_ID</geogName><w>श्रेयोऽस्तु</w> <w>श्रेयोऽस्तु</w>-(2) An empty line break follows me </p>
           <lb/>
-          <ab>( 3)Two line breaks without a break follows me<orig>.</orig></ab>
+          <p>( 3)Two line breaks without a break follows me<orig>.</orig></p>
           <lb break="no"/>
           <lb break="no"/>
           <lb/>
-          <ab>(4) Text with 5 illegible characters</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 characters" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 extent" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab>(5) Text with 5 lost characters</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 extent" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab>(6) Space</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <space quantity="9" unit="chars"/> ।। <w>नमो</w>: <w>नमो</w>-</ab>
-          <ab><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <space quantity="14" unit="chars"/> ।। <w>नमो</w>: <w>नमो</w> <gap reason="lost" extent="5 characters"/><w>नमो</w> <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/><w>नमो</w>-</ab>
+          <p>(4) Text with 5 illegible characters</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 characters" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 extent" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p>(5) Text with 5 lost characters</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 characters" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 extent" agent="agent"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <gap reason="lost" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p>(6) Space</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <space quantity="9" unit="chars"/> ।। <w>नमो</w>: <w>नमो</w>-</p>
+          <p><w>नमो</w> <w>नमो</w> [<w>नमो</w>˚] <space quantity="14" unit="chars"/> ।। <w>नमो</w>: <w>नमो</w> <gap reason="lost" extent="5 characters"/><w>नमो</w> <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/><w>नमो</w>-</p>
           <lb/>
-          <ab>(07) This line includes an addition to the text<orig>.</orig> default is : hand=first , place = above the line<orig>.</orig></ab>
-          <ab><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकर</w></ab>
-          <ab> <w>थ्वया</w> </ab>
-          <ab><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकर</w> <w>नकर</w> </ab>
-          <ab><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="first"><w>नकर</w> <w>नकर</w></add> <w>नकर</w> <w>नकर</w> </ab>
-          <ab><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="below the text" hand="first"><w>नकर</w> <w>नकर</w> </add> <w>नकर</w> <w>नकर</w> </ab>
-          <ab><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second"><w>नकर</w> <w>नकर</w></add> <w>नकर</w> <w>नकर</w> </ab>
-          <ab>(08) Some unclear text inside a text block default cert=high</ab>
-          <ab><w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> ।। ।। <unclear cert="high"><w>तिष्ठा</w> <w>तिष्ठा</w> </unclear> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w></ab>
-          <ab>(09) sic: reproduced text with corrections</ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><sic>¯¯¯¯</sic><corr>- - -</corr></choice> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><sic>¯¯¯¯ <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।</sic><corr>- - -</corr></choice> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></ab>
+          <p>(07) This line includes an addition to the text<orig>.</orig> default is : hand=first , place = above the line<orig>.</orig></p>
+          <p><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकर</w></p>
+          <p> <w>थ्वया</w> </p>
+          <p><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकर</w> <w>नकर</w> </p>
+          <p><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="first"><w>नकर</w> <w>नकर</w></add> <w>नकर</w> <w>नकर</w> </p>
+          <p><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="below the text" hand="first"><w>नकर</w> <w>नकर</w> </add> <w>नकर</w> <w>नकर</w> </p>
+          <p><w>नकर</w> <w>नकर</w> <w>नकर</w> <add place="above the line" hand="second"><w>नकर</w> <w>नकर</w></add> <w>नकर</w> <w>नकर</w> </p>
+          <p>(08) Some unclear text inside a text block default cert=high</p>
+          <p><w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> ।। ।। <unclear cert="high"><w>तिष्ठा</w> <w>तिष्ठा</w> </unclear> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w> <w>तिष्ठा</w></p>
+          <p>(09) sic: reproduced text with corrections</p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><sic>¯¯¯¯</sic><corr>- - -</corr></choice> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><sic>¯¯¯¯ <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।<w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।</sic><corr>- - -</corr></choice> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></p>
           <lb/>
-          <ab>(10): orig: this line contains a text marked as original , rather than being normalized<orig>.</orig></ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <orig><w>सहस्र</w></orig> <w>सहस्र</w> <w>सहस्र</w> </ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <orig><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></orig> <w>सहस्र</w> <w>सहस्र</w> </ab>
-          <ab>(11): reg: this line contains a text marked as being normalized/corrected</ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><orig><w>सहस्र</w></orig><corr><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> </corr></choice> <w>सहस्र</w> <w>सहस्र</w> </ab>
-          <ab>(12): This line contains unnecessary , repeated text</ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <surplus reason="repeated"><w>सहस्र</w></surplus> <w>सहस्र</w> <w>सहस्र</w> x</ab>
-          <ab><w>जुरो</w> ।। ।। <surplus reason="unrepeated"><w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> </surplus> <w>जुरो</w> <w>जुरो</w> x</ab>
-          <ab>(13) This line includes text supplied by editor, default reason is lost</ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <supplied reason="lost"><w>सहस्र</w> <w>सहस्र</w> </supplied> <w>सहस्र</w> <w>सहस्र</w> </ab>
-          <ab><w>जुरो</w> ।। ।। <supplied reason="lost-manually-set"><w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> </supplied> <w>जुरो</w> <w>जुरो</w> x</ab>
-          <ab>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></ab>
-          <ab>
+          <p>(10): orig: this line contains a text marked as original , rather than being normalized<orig>.</orig></p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <orig><w>सहस्र</w></orig> <w>सहस्र</w> <w>सहस्र</w> </p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <orig><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></orig> <w>सहस्र</w> <w>सहस्र</w> </p>
+          <p>(11): reg: this line contains a text marked as being normalized/corrected</p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <choice><orig><w>सहस्र</w></orig><corr><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> </corr></choice> <w>सहस्र</w> <w>सहस्र</w> </p>
+          <p>(12): This line contains unnecessary , repeated text</p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <surplus reason="repeated"><w>सहस्र</w></surplus> <w>सहस्र</w> <w>सहस्र</w> x</p>
+          <p><w>जुरो</w> ।। ।। <surplus reason="unrepeated"><w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> </surplus> <w>जुरो</w> <w>जुरो</w> x</p>
+          <p>(13) This line includes text supplied by editor, default reason is lost</p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <supplied reason="lost"><w>सहस्र</w> <w>सहस्र</w> </supplied> <w>सहस्र</w> <w>सहस्र</w> </p>
+          <p><w>जुरो</w> ।। ।। <supplied reason="lost-manually-set"><w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> </supplied> <w>जुरो</w> <w>जुरो</w> x</p>
+          <p>(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign></p>
+          <p>
             <del rend="overstrike"><w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> । <w>सर्वदा</w> <w>सर्वदा</w> ।<w>सर्वदा</w> <w>सर्वदा</w> </del>
-          </ab>
-          <ab>
+          </p>
+          <p>
             <del rend="rend"><w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> <w>सर्वदा</w> । <w>सर्वदा</w> <w>सर्वदा</w> ।<w>सर्वदा</w> <w>सर्वदा</w> </del>
-          </ab>
-          <ab>(15) Text with a personal name</ab>
-          <ab><w>तुः</w> <w>तुः</w><persName><w>तुः</w> <w>तुः</w></persName><w>तुः</w>[<w>तुः</w>] <w>तुः</w></ab>
-          <ab>(16) Text with a place name </ab>
-          <ab><w>त्तमकर्ण्णधारः</w> <w>त्तमकर्ण्णधारः</w> <placeName>place_with_unique_id</placeName><w>त्तमकर्ण्णधारः</w> <w>त्तमकर्ण्णधारः</w> ।। ।। <w>त्तमकर्ण्णधारः</w></ab>
-          <ab>(17) Text with a geographical name</ab>
-          <ab><w>सम्वत्</w>‌ <w>सम्वत्</w> <w>सम्वत्</w>: <w>सम्वत्</w> <geogName>corresp_ID</geogName><w>सम्वत्</w> <w>सम्वत्</w>-</ab>
-          <ab>(18) This line includes a sentence </ab>
-          <ab><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <sb><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । </sb> <w>सहस्र</w> <w>सहस्र</w> </ab>
-          <ab>(19) all <orig>.</orig> are converted to &lt;orig&gt;<orig>.</orig>&lt;/orig&gt;</ab>
-          <ab>(20) &amp;#x200c; is let as it is inside text</ab>
-          <ab><w>ो</w><orig>•</orig>#-#<w>ो</w>&amp;#8205;<w>ो</w></ab>
-          <ab>(21) &amp;#x200c; is let as it is inside text</ab>
-          <ab><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#x200c;<w>भो</w></ab>
+          </p>
+          <p>(15) Text with a personal name</p>
+          <p><w>तुः</w> <w>तुः</w><persName><w>तुः</w> <w>तुः</w></persName><w>तुः</w>[<w>तुः</w>] <w>तुः</w></p>
+          <p>(16) Text with a place name </p>
+          <p><w>त्तमकर्ण्णधारः</w> <w>त्तमकर्ण्णधारः</w> <placeName>place_with_unique_id</placeName><w>त्तमकर्ण्णधारः</w> <w>त्तमकर्ण्णधारः</w> ।। ।। <w>त्तमकर्ण्णधारः</w></p>
+          <p>(17) Text with a geographical name</p>
+          <p><w>सम्वत्</w>‌ <w>सम्वत्</w> <w>सम्वत्</w>: <w>सम्वत्</w> <geogName>corresp_ID</geogName><w>सम्वत्</w> <w>सम्वत्</w>-</p>
+          <p>(18) This line includes a sentence </p>
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।। ।। <sb><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । <w>सहस्र</w> <w>सहस्र</w> ।<w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> । </sb> <w>सहस्र</w> <w>सहस्र</w> </p>
+          <p>(19) all <orig>.</orig> are converted to &lt;orig&gt;<orig>.</orig>&lt;/orig&gt;</p>
+          <p>(20) &amp;#x200c; is let as it is inside text</p>
+          <p><w>ो</w><orig>•</orig>#-#<w>ो</w>&amp;#8205;<w>ो</w></p>
+          <p>(21) &amp;#x200c; is let as it is inside text</p>
+          <p><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#x200c;<w>भो</w></p>
           <lb/>
           <lb/>
           <lb/>
           <lb/>
-          <ab>(22) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</ab>
-          <ab><w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w>-</ab>
-          <ab>(23) All words are included in &lt;w&gt;</ab>
-          <ab><w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w></ab>
-          <ab>(24) After this line, table begins</ab>
+          <p>(22) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;</p>
+          <p><w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w> <w>नक्षत्रे</w>-</p>
+          <p>(23) All words are included in &lt;w&gt;</p>
+          <p><w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w> <w>जुरो</w> । <w>जुरो</w> <w>जुरो</w> ।<w>जुरो</w> <w>जुरो</w> <w>जुरो</w></p>
+          <p>(24) After this line, table begins</p>
           <lb/>
-          <ab>Sentence begin after table ends</ab>
-          <ab>(x) Experimental sentence with line beginning and ending</ab>
+          <table-wrap> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p>content 1</p> </cell> <cell> <lb/> </cell> <cell> <p> content 3</p> </cell> <cell> <lb/> </cell> </row> <row> <cell> <p> <w>शुभमस्तु</w> <w>शुभमस्तु</w> ।<w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w></p> </cell> <cell> <p><w>शुभमस्तु</w></p> </cell> <cell> <p><w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w></p> </cell> <cell> <lb/> </cell> </row> </table> </table-wrap>
+          <p>Sentence begin after table ends</p>
+          <p>(x) Experimental sentence with line beginning and ending</p>
           <lb/>
-          <ab>(x) Following word has zero-width joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>भो</w>&amp;#8205;<w>भो</w>&lt;/w&gt;</ab>
-          <ab><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#8205;<w>भो</w> </ab>
-          <ab>(x) Following word has zero-width non-joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>भो</w>&amp;#x200c;<w>भो</w>&lt;/w&gt;</ab>
-          <ab><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#x200c;<w>भो</w> "</ab>
+          <p>(x) Following word has zero-width joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>भो</w>&amp;#8205;<w>भो</w>&lt;/w&gt;</p>
+          <p><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#8205;<w>भो</w> </p>
+          <p>(x) Following word has zero-width non-joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;•&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>भो</w>&amp;#x200c;<w>भो</w>&lt;/w&gt;</p>
+          <p><w>भो</w><orig>•</orig>#-#<w>भो</w>&amp;#x200c;<w>भो</w> "</p>
           <lb/>
           <lb/>
           <lb/>
