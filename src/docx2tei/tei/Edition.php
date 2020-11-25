@@ -74,8 +74,8 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::createWords($s);
                     #rename tags
-                    # deletes tables
-                    //$s = XMLUtils::tagReplace($s, 'p', 'ab');
+                    #TODO deletes tables
+                    #$s = XMLUtils::tagReplace($s, 'p', 'ab');
                     # create words
 
 

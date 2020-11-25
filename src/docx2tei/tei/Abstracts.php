@@ -31,10 +31,11 @@ class Abstracts extends DOMDocument {
             $div->appendChild($langAttr);
             foreach ($abstractSec as $abstract) {
                 if (strlen($abstract->textContent) > 0) {
-                    $content = $abstract->ownerDocument->saveXML($abstract);
-                    $content = XMLUtils::cleanMultipleSpaces($content);
+                    $s = $abstract->ownerDocument->saveXML($abstract);
+                    $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::createFootnoteTags($s);
                     $ab = $this->createDocumentFragment();
-                    $ab->appendXML($content);
+                    $ab->appendXML($s);
                     $div->appendChild($ab);
                 }
             }

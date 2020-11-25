@@ -27,6 +27,24 @@ class XMLUtils {
     }
 
     /**
+     * @param $dom
+     * @param $elementName
+     * @return mixed
+     */
+    public static function  removeTagByName($dom,$elementName){
+        $xpath = new \DOMXPath($dom);
+
+        foreach ($xpath->query('//'.$elementName) as $node) {
+            $parent = $node->parentNode;
+            while ($node->hasChildNodes()) {
+                $parent->insertBefore($node->lastChild, $node->nextSibling);
+            }
+            $parent->removeChild($node);
+        }
+        return $dom;
+    }
+
+    /**
      * @param $s
      * @return string|string[]|null
      */

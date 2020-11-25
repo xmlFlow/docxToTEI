@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <author role="issuer">Badarībāṇa Sāhī]</author>
+        <respStmt>
+          <resp>main editor</resp>
+          <name type="synopsis_editor">Name of editor(s)</name>
+        </respStmt>
+        <respStmt>
+          <resp>collaborator</resp>
+          <name type="collaborator">Name of collaborator(s)</name>
+        </respStmt>
+      </titleStmt>
+    </fileDesc>
+    <sourceDesc/>
+    <msDesc>
+      <msIdentifier>
+        <settlement>Kathmandu</settlement>
+        <repository>National Archives</repository>
+        <idno>Inventory number assigned by holding institution</idno>
+      </msIdentifier>
+      <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
+        <settlement>Alternative Location</settlement>
+        <collection>Alternative holding institution</collection>
+        <idno>Alternative Inventory number</idno>
+      </altIdentifier>
+      <msContents>
+        <textLang mainLang="Main language of document" otherLangs="Other languages"/>
+      </msContents>
+      <phsyDesc>
+        <p>For details see <ref target="..">entry in database</ref></p>
+      </phsyDesc>
+      <history>
+        <origin>
+          <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p>
+        </origin>
+      </history>
+    </msDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc><creation> <date>2020-11-24</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-11-24" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <facsimile>
+      <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
+    <facsimile>
+      <surface xml:id="surface2" facs="E_2253_0533.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
+    <facsimile>
+      <surface xml:id="surface2" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    </facsimile>
+  </teiHeader>
+  <text>
+    <body>
+      <div xml:id="abs" type="abstract" xml:lang="eng">
+        <p>Abstract</p>
+      </div>
+      <div xml:id="ed" type="edition" xml:lang="san">
+        <pb n="#surface1" facs="1r"/>
+        <ab type="invocatio" corresp="#invocatio">
+          <p><w>श्रीः</w>\</p>
+        </ab>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue">
+          <p>
+            <w>नं</w>
+            <orig>.</orig>
+            <w>नं</w>
+          </p>
+        </ab>
+        <ab type="space" corresp="#space2">
+          <p>
+            <w>श्रीमालीका</w>
+          </p>
+        </ab>
+        <ab type="maintext" corresp="#main_text" key="valEdi">
+          <p><w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w> <w>सहस्र</w></p>
+          <table-wrap> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p> <w>शुभमस्तु</w> <w>शुभमस्तु</w> ।<w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w></p> </cell> <cell> <p><w>शुभमस्तु</w></p> </cell> <cell> <p><w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w> <w>शुभमस्तु</w></p> </cell> <cell> <lb/> </cell> </row> </table> </table-wrap>
+        </ab>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+        <p>English translation</p>
+      </div>
+      <div xml:id="synopsis" type="synopsis" xml:lang="eng">
+        <p>synopsis&lt;note place="end"&gt; This is a synopsis footnote&lt;/note&gt;</p>
+      </div>
+      <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>Commentry<bold> </bold><bold>&lt;note place="end"&gt; This is a commentary footnote&lt;/note&gt;</bold></p>
+      </div>
+    </body>
+  </text>
+</TEI>

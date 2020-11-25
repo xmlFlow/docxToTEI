@@ -46,8 +46,8 @@ class EnglishTranslation extends DOMDocument {
                     $s = XMLUtils::createSpaces($s);
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
-                    # set . as <orig> dot
-                    #$s = XMLUtils::createDot($s);
+
+                    $s = XMLUtils::createFootnoteTags($s);
 
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);

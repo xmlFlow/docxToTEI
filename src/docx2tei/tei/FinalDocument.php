@@ -2,6 +2,7 @@
 
 namespace docx2tei\tei;
 
+use docx2tei\XMLUtils;
 use DOMDocument;
 
 class FinalDocument extends DOMDocument {
@@ -11,6 +12,8 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $this->cleanTitle();
+        XMLUtils::removeTagByName($this->document,"p");
+
     }
 
     protected function cleanTitle(): void {

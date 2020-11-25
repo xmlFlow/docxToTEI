@@ -33,6 +33,7 @@ class Synopsis extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::createFootnoteTags($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

@@ -55,8 +55,9 @@
 | :heavy_check_mark: | Body (Check for languages in Edition  (lang) )|
 | :heavy_check_mark: | Body (pb) for surface|
 | :heavy_check_mark: | Body (ab) for surface|
-| :heavy_check_mark: | Change header according to synopsin and et. ``` <respStmt> <resp>main editor and translator</resp> <name type="main_editor">Max Mustermann</name> </respStmt>    <respStmt><resp>main editor</resp> <name type="synopsis_editor">Max Mustermann</name> </respStmt>```    | 
+| :heavy_check_mark: | Change header according to synopsis and et. ``` <respStmt> <resp>main editor and translator</resp> <name type="main_editor">Max Mustermann</name> </respStmt>    <respStmt><resp>main editor</resp> <name type="synopsis_editor">Max Mustermann</name> </respStmt>```    | 
 | :heavy_check_mark: | Body (ab) for surface|
+| :heavy_check_mark: | Numbering|
 
  
 
