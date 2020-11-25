@@ -31,7 +31,7 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function  removeTagByName($dom,$elementName){
+    public static function  removeTagByNameLeaveChildren($dom, $elementName){
         $xpath = new \DOMXPath($dom);
 
         foreach ($xpath->query('//'.$elementName) as $node) {
@@ -71,6 +71,19 @@ class XMLUtils {
         }
 
         return $s;
+    }
+
+    /**
+     * @param $dom
+     * @param $tag
+     */
+    public static  function removeTagByName($dom, $tag): void {
+        $titles = $dom->getElementsByTagName($tag);
+        while ($titles->length > 0) {
+            $node = $titles->item(0);
+            $node->parentNode->removeChild($node);
+        }
+
     }
 
     /**
