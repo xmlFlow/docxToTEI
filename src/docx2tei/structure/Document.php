@@ -5,8 +5,10 @@ use docx2tei\objectModel\body\Par;
 use docx2tei\structure\Figure as TeiFigure;
 use docx2tei\structure\Par as TeiPar;
 use docx2tei\structure\Table as TeiTable;
+use DOMDocument;
+use DOMXPath;
 
-class Document extends \DOMDocument {
+class Document extends DOMDocument {
     var $root;
     var $teiHeader;
     var $text;
@@ -147,7 +149,7 @@ class Document extends \DOMDocument {
     }
 
     private function cleanContent(): void {
-        $xpath = new \DOMXPath($this);
+        $xpath = new DOMXPath($this);
         $nodesToRemove = $xpath->query("//body//*[not(normalize-space()) and not(.//@*) and not(self::td)]");
         foreach ($nodesToRemove as $nodeToRemove) {
             $nodeToRemove->parentNode->removeChild($nodeToRemove);

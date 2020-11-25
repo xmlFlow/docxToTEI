@@ -3,6 +3,7 @@
 namespace docx2tei;
 
 use DOMDocument;
+use DOMXPath;
 
 class XMLUtils {
     protected static $bnd = '#';
@@ -31,10 +32,10 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function  removeTagByNameLeaveChildren($dom, $elementName){
-        $xpath = new \DOMXPath($dom);
+    public static function removeTagByNameLeaveChildren($dom, $elementName) {
+        $xpath = new DOMXPath($dom);
 
-        foreach ($xpath->query('//'.$elementName) as $node) {
+        foreach ($xpath->query('//' . $elementName) as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -77,7 +78,7 @@ class XMLUtils {
      * @param $dom
      * @param $tag
      */
-    public static  function removeTagByName($dom, $tag): void {
+    public static function removeTagByName($dom, $tag): void {
         $titles = $dom->getElementsByTagName($tag);
         while ($titles->length > 0) {
             $node = $titles->item(0);
@@ -111,8 +112,8 @@ class XMLUtils {
 
 
     public static function createWords(string $s) {
-        if (preg_match("/[\p{Devanagari}]+/u", $s,$matches)) {
-            $s = preg_replace('/[\p{Devanagari}]+/u', '<w>'.$matches[0].'</w>', $s);
+        if (preg_match("/[\p{Devanagari}]+/u", $s, $matches)) {
+            $s = preg_replace('/[\p{Devanagari}]+/u', '<w>' . $matches[0] . '</w>', $s);
         }
         return $s;
     }

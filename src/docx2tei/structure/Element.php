@@ -2,8 +2,9 @@
 
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\DataObject;
+use DOMElement;
 
-abstract class Element extends \DOMElement {
+abstract class Element extends DOMElement {
     private $dataObject;
 
     public function __construct(DataObject $dataObject) {

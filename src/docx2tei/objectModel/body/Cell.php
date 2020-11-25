@@ -1,6 +1,7 @@
 <?php namespace docx2tei\objectModel\body;
 
 use docx2tei\objectModel\DataObject;
+use DOMElement;
 
 class Cell extends DataObject {
     private $properties = array();
@@ -10,7 +11,7 @@ class Cell extends DataObject {
     private $isMerged;
     private $cellNumber;
 
-    public function __construct(\DOMElement $domElement, $params, $cellNumber) {
+    public function __construct(DOMElement $domElement, $params, $cellNumber) {
         parent::__construct($domElement, $params);
         $this->cellNumber = $cellNumber;
         $this->isMerged = $this->defineMerged();
@@ -45,7 +46,7 @@ class Cell extends DataObject {
         }
     }
 
-    private function extractRowspanRecursion(\DOMElement $node): void {
+    private function extractRowspanRecursion(DOMElement $node): void {
         $cellNodeListInNextRow = $this->getXpath()->query('parent::w:tr/following-sibling::w:tr[1]/w:tc', $node);
         $numberOfCells = 0; // counting number of cells in a row
         $mergedNode = null; // retrieving possibly merged cell node

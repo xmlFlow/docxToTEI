@@ -1,12 +1,13 @@
 <?php namespace docx2tei\objectModel\body;
 
 use docx2tei\objectModel\DataObject;
+use DOMElement;
 
 class Row extends DataObject {
     private $properties = array();
     private $cells = array();
 
-    public function __construct(\DOMElement $domElement, $params) {
+    public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->properties = $this->setProperties('w:trPr/child::node()');
         $this->cells = $this->setContent('w:tc');

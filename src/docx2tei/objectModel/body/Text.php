@@ -2,6 +2,8 @@
 
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
+use DOMElement;
+use DOMXPath;
 
 class Text extends DataObject {
     const DOCX_TEXT_BOLD = 1;
@@ -16,7 +18,7 @@ class Text extends DataObject {
     private $type = array();
     private $link;
 
-    public function __construct(\DOMElement $domElement, $params) {
+    public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->properties = $this->setProperties('w:rPr/child::node()');
         $this->text = $this->setText();
@@ -35,7 +37,7 @@ class Text extends DataObject {
         $params = $this->getParameters();
 
         if (array_key_exists("footnotes", $params)) {
-            $footnotesXpath = new \DOMXPath($params["footnotes"]);
+            $footnotesXpath = new DOMXPath($params["footnotes"]);
             foreach ($styles as $style) {
                 $fnId = $style->getAttribute('w:id');
                 $footnoteNodes = $footnotesXpath->query('//w:footnote[@w:id=' . $fnId . ']');
@@ -97,7 +99,7 @@ class Text extends DataObject {
         return $type;
     }
 
-    private function togglePropertyEnabled(\DOMElement $property): bool {
+    private function togglePropertyEnabled(DOMElement $property): bool {
         if ($property->hasAttribute('w:val')) {
             $attrValue = $property->getAttribute('w:val');
             return ($attrValue == '1' || $attrValue == 'true');

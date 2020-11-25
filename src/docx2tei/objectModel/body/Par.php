@@ -2,6 +2,7 @@
 
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
+use DOMElement;
 
 class Par extends DataObject {
     const DOCX_PAR_REGULAR = 1;
@@ -25,7 +26,7 @@ class Par extends DataObject {
 // TODO should more detailed list styles be implemented?
     private $numberingType;
 
-    public function __construct(\DOMElement $domElement, $params) {
+    public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->defineType();
         $this->properties = $this->setProperties('w:pPr/child::node()');

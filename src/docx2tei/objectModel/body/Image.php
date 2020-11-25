@@ -2,11 +2,12 @@
 
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
+use DOMElement;
 
 class Image extends DataObject {
     private $link;
 
-    public function __construct(\DOMElement $domElement, $params) {
+    public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->link = $this->extractLink();
     }

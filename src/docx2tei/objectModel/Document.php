@@ -3,6 +3,7 @@
 use docx2tei\objectModel\body\Image;
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\body\Table;
+use DOMXPath;
 
 class Document {
     const SECT_NESTED_LEVEL_LIMIT = 5; // limit the number of possible levels for sections
@@ -26,22 +27,22 @@ class Document {
     public function __construct(array $params) {
         if (array_key_exists("relationships", $params)) {
             $this->relationships = $params["relationships"];
-            self::$relationshipsXpath = new \DOMXPath($this->relationships);
+            self::$relationshipsXpath = new DOMXPath($this->relationships);
         }
         if (array_key_exists("styles", $params)) {
             $this->styles = $params["styles"];
-            self::$stylesXpath = new \DOMXPath($this->styles);
+            self::$stylesXpath = new DOMXPath($this->styles);
         }
         if (array_key_exists("numbering", $params)) {
             $this->numbering = $params["numbering"];
-            self::$numberingXpath = new \DOMXPath($this->numbering);
+            self::$numberingXpath = new DOMXPath($this->numbering);
         }
 
         if (array_key_exists("footnotes", $params)) {
             $this->footnotes = $params["footnotes"];
-            self::$footnotesXpath = new \DOMXPath($this->footnotes);
+            self::$footnotesXpath = new DOMXPath($this->footnotes);
         }
-        self::$xpath = new \DOMXPath($params["ooxmlDocument"]);
+        self::$xpath = new DOMXPath($params["ooxmlDocument"]);
         $childNodes = self::$xpath->query("//w:body/child::node()");
         $content = array();
         foreach ($childNodes as $childNode) {

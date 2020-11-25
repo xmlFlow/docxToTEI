@@ -1,8 +1,10 @@
 <?php namespace docx2tei;
 
 use docx2tei\objectModel\Document;
+use DOMDocument;
+use ZipArchive;
 
-class DOCXArchive extends \ZipArchive {
+class DOCXArchive extends ZipArchive {
     private $filePath;
     private $ooxmlDocument;
     private $document;
@@ -30,11 +32,11 @@ class DOCXArchive extends \ZipArchive {
         }
     }
 
-    private function transformToXml(string $path): ?\DOMDocument {
+    private function transformToXml(string $path): ?DOMDocument {
         $index = $this->locateName($path);
         if (!$index) return null;
         $data = $this->getFromIndex($index);
-        $xml = new \DOMDocument();
+        $xml = new DOMDocument();
         $xml->loadXML($data, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
         return $xml;
     }
@@ -49,7 +51,7 @@ class DOCXArchive extends \ZipArchive {
         return $paths;
     }
 
-    public function getDocumentOoxml(): \DOMDocument {
+    public function getDocumentOoxml(): DOMDocument {
         return $this->ooxmlDocument;
     }
 

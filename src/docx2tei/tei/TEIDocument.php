@@ -40,9 +40,7 @@ class TEIDocument extends DOMDocument {
         $finalDom = new FinalDocument($this);
         $this->newDom = $finalDom->getDocumentElement();
 
-$x=1;
-
-        //$translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
+        $x = 1;
 
 
     }
