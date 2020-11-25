@@ -18,7 +18,6 @@ class Edition extends DOMDocument {
         } else {
             $div = $this->createDiv();
             $this->createSections($div);
-            $divText = $div->ownerDocument->saveXML($div);
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
 

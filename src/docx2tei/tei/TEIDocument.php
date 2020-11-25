@@ -14,6 +14,7 @@ class TEIDocument extends DOMDocument {
     var $structuredDocument;
     var $xpath;
     var $headers = array();
+    var $newDom;
 
     public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
@@ -27,16 +28,19 @@ class TEIDocument extends DOMDocument {
 
         # Section processing
 
-        $headers = new Headers($this);
-        $facsimiles = new Facsimiles($this);
-        $abstract = new Abstracts($this);
-        $edition = new Edition($this);
-        $et = new EnglishTranslation($this);
-        $synopsis = new Synopsis($this);
-        $commentary = new Commentary($this);
+        $this->newDom = new Headers($this);
+        $this->newDom = new Facsimiles($this);
+        $this->newDom = new Abstracts($this);
+        $this->newDom = new Edition($this);
+        $this->newDom = new EnglishTranslation($this);
+        $this->newDom = new Synopsis($this);
+        $this->newDom = new Commentary($this);
 
         # Final  processing
-        $fd = new FinalDocument($this);
+        $finalDom = new FinalDocument($this);
+        $this->newDom = $finalDom->getDocumentElement();
+
+$x=1;
 
         //$translation = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->translation . '"]/parent::sec');
 
@@ -112,6 +116,7 @@ class TEIDocument extends DOMDocument {
     }
 
     public function saveToFile(string $pathToFile) {
-        $this->save($pathToFile);
+
+        $this->newDom->save($pathToFile);
     }
 }

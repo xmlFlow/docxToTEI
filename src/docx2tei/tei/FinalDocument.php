@@ -10,13 +10,24 @@ class FinalDocument extends DOMDocument {
 
     public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
-        $this->document = $document;
 
         // DOM operations
-        XMLUtils::removeTagByName($this->document,"title");
-        XMLUtils::removeTagByNameLeaveChildren($this->document,"p");
+        XMLUtils::removeTagByName($document,"title");
+        XMLUtils::removeTagByNameLeaveChildren($document,"p");
+
+        // String operations
+        $s = $document->saveXML();
+        $s=XMLUtils::createComplexSentence($s);
+        // Create new Dom
+        $newDom = new DOMDocument();
+        $newDom->loadXML($s);
+        $this->document = $newDom;
 
 
+    }
+
+    public  function getDocumentElement() {
+        return $this->document;
     }
 
 
