@@ -12,28 +12,31 @@ use docx2tei\structure\Document;
 
 //ini_set('error_log', 'errors.log');
 
-$configFile = 'config.json';
+
 $config = null;
 
 $inputPath = null;
 $outputPath = null;
+$configFile = null;
 
 
+
+
+
+if ($argc == 4) {
+    $inputPath = $argv[1];
+    $outputPath = $argv[2];
+    $configFile = $argv[3];
+} else {
+    throw new InvalidArgumentException("requires valid input and output paths" . "\n" .
+        "Basic usage: php docxtotei.php [path/to/file.docx or path/to/input/dir] [path/to/output/file.xml or path/to/output/dir] [path/to/config.json]" . "\n");
+}
 if (file_exists($configFile)) {
     $data = file_get_contents($configFile);
     $config = json_decode($data);
 
 } else {
     echo("configuration file: config.json not found");
-}
-
-
-if ($argc == 3) {
-    $inputPath = $argv[1];
-    $outputPath = $argv[2];
-} else {
-    throw new InvalidArgumentException("requires valid input and output paths" . "\n" .
-        "Basic usage: php docxtotei.php [path/to/file.docx or path/to/input/dir] [path/to/output/file.xml or path/to/output/dir]" . "\n");
 }
 
 $inputPathParts = pathinfo($inputPath);
