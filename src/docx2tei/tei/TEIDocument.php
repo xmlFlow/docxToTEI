@@ -23,12 +23,13 @@ class TEIDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
         $this->preserveWhiteSpace = false;
         $this->formatOutput = true;
+        $this->getHeaders();
         $this->setStructure();
         $this->isCorrectStructure();
 
         # Section processing
 
-        $this->newDom = new Headers($this);
+        $this->newDom = new Headers($this, $this->headers);
         $this->newDom = new Facsimiles($this);
         $this->newDom = new Abstracts($this);
         $this->newDom = new Edition($this);
@@ -43,6 +44,25 @@ class TEIDocument extends DOMDocument {
         $x = 1;
 
 
+    }
+    function getHeaders(): void {
+        $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
+        foreach ($metadataFields as $metadata) {
+            $cells = $metadata->getElementsByTagName("cell");
+            if (count($cells) == 2) {
+                $headerName = trim($cells->item(0)->textContent);
+                $value = trim($cells->item(1)->textContent);
+                $config_headers = get_object_vars($this->cfg->headers);
+                $key = array_search($headerName, array_values($config_headers));
+                if ($key >= 0) {
+                    $this->headers[array_keys($config_headers)[$key]] = $value;
+                } else {
+                    XMLUtils::print_error("[Error] Not allowed header in the metadata: " . $headerName);
+                }
+            } else {
+                XMLUtils::print_error("Metadata table should be 2 columns wide");
+            }
+        }
     }
 
     function setStructure() {

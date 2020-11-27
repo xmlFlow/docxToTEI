@@ -10,33 +10,16 @@ class Headers extends DOMDocument {
     var $headers;
     var $currentDate;
 
-    public function __construct(TEIDocument $document) {
+    public function __construct(TEIDocument $document , $headers) {
         parent::__construct('1.0', 'utf-8');
         $this->currentDate = date("Y-m-d");
         $this->document = $document;
-        $this->getHeaders();
+        $this->headers = $headers;
         $this->setHeaders();
+
     }
 
-    function getHeaders(): void {
-        $metadataFields = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
-        foreach ($metadataFields as $metadata) {
-            $cells = $metadata->getElementsByTagName("cell");
-            if (count($cells) == 2) {
-                $headerName = trim($cells->item(0)->textContent);
-                $value = trim($cells->item(1)->textContent);
-                $config_headers = get_object_vars($this->document->cfg->headers);
-                $key = array_search($headerName, array_values($config_headers));
-                if ($key >= 0) {
-                    $this->headers[array_keys($config_headers)[$key]] = $value;
-                } else {
-                    XMLUtils::print_error("[Error] Not allowed header in the metadata: " . $headerName);
-                }
-            } else {
-                XMLUtils::print_error("Metadata table should be 2 columns wide");
-            }
-        }
-    }
+
 
     function setHeaders() {
         $this->setFileDescription();

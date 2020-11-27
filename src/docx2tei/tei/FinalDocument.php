@@ -15,9 +15,11 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTagByName($document, "title");
         XMLUtils::removeTagByNameLeaveChildren($document, "p");
 
+
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
+
         // Create new Dom
         $newDom = new DOMDocument();
         $newDom->loadXML($s);
