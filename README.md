@@ -196,4 +196,5 @@
 > `<w>` @MANIK: If you have not done so yet, please send Dulip your regex
  
 :heavy_check_mark:
- 
+ # install
+
