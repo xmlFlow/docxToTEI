@@ -32,10 +32,10 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeTagByNameLeaveChildren($dom, $elementName) {
+    public static function removeElementsInEdition($dom, $elementName) {
         $xpath = new DOMXPath($dom);
 
-        foreach ($xpath->query('//' . $elementName) as $node) {
+        foreach ($xpath->query('//ab[@type="maintext"]/' . $elementName) as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -109,7 +109,6 @@ class XMLUtils {
         $s = preg_replace('/\./i', '<orig>.</orig>', $s);
         return $s;
     }
-
 
     public static function createWords(string $s) {
         if (preg_match("/[\p{Devanagari}]+/u", $s, $matches)) {

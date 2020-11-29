@@ -103,14 +103,14 @@
  | 16. :heavy_check_mark: |  #pln{url}# | `#pln{corresp_ID}#` | `<placeName  corresp="corresp_ID"/>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
  | 17. :heavy_check_mark: |   #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
  | 18. :heavy_check_mark:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
- | 19. | Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
- | :ok: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
- | :ok: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
- | :ok: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
+ | 19. :heavy_check_mark:| Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
+ | 20. :heavy_check_mark: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
+ | 21. :heavy_check_mark: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
+ | 22. :heavy_check_mark: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
  | :ok: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
  | :ok: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
- | :ok: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
- | :ok: | last minus of a sentence| | | | |
+ | 23. :heavy_check_mark: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
+ | 24. :heavy_check_mark: | last minus of a sentence| | | | |
  
  
  

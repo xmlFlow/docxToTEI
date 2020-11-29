@@ -19,8 +19,6 @@ class Headers extends DOMDocument {
 
     }
 
-
-
     function setHeaders() {
         $this->setFileDescription();
         $this->setSourceDescription();

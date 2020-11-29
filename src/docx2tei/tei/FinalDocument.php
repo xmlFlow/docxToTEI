@@ -13,7 +13,7 @@ class FinalDocument extends DOMDocument {
 
         // DOM operations
         XMLUtils::removeTagByName($document, "title");
-        XMLUtils::removeTagByNameLeaveChildren($document, "p");
+        XMLUtils::removeElementsInEdition($document, "p");
 
 
         // String operations
