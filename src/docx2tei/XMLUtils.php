@@ -20,8 +20,9 @@ class XMLUtils {
     }
 
     public static function replaceNotes(string $s){
-        $s = preg_replace('/&lt;/i', '<', $s);
-        $s = preg_replace('/&gt;/i', '>', $s);
+        $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
+        $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
+
         return $s;
 
     }
@@ -91,6 +92,18 @@ class XMLUtils {
             $node = $titles->item(0);
             $node->parentNode->removeChild($node);
         }
+
+    }
+
+    public static function addChildElement($dom, $elems, $child): void {
+        $elems = $dom->getElementsByTagName($elems);
+        $firstItem = $elems->item(0);
+
+        $newItem[] = $dom->createElement($child);
+        foreach ($newItem as $xmlItem){
+            $firstItem->insertBefore($xmlItem,$firstItem->firstChild);
+        }
+
 
     }
 
@@ -407,17 +420,7 @@ class XMLUtils {
     public static function printPHPErrors(): void {
         $errorTypes = E_ALL;
         set_error_handler(function ($errno, $errstr, $errfile, $errline) {
-            switch ($errno) {
-                case E_USER_ERROR:
-                    echo "Error number $errstr";
-                    break;
-                case E_USER_WARNING:
-                    echo "Error number $errstr";
-                    break;
-                default:
-                    echo "Error number $errstr";
-                    break;
-            }
+                echo "[Warning] $errstr $errfile $errline\n";
             return true;
         }, $errorTypes);
     }

@@ -14,12 +14,14 @@ class FinalDocument extends DOMDocument {
         // DOM operations
         XMLUtils::removeTagByName($document, "title");
         XMLUtils::removeElementByNameInEdition($document, "p");
+        XMLUtils::addChildElement($document, "ab","lb");
 
 
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::replaceNotes($s);
+        #$s = XMLUtils::createFootnoteTags($s);
 
         // Create new Dom
         $newDom = new DOMDocument();
@@ -28,9 +30,7 @@ class FinalDocument extends DOMDocument {
 
         $this->document = $newDom;
 
-
     }
-
 
 
     public function getDocumentElement() {
