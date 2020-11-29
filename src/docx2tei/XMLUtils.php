@@ -19,6 +19,13 @@ class XMLUtils {
         return preg_replace('/\s+/i', ' ', $s);
     }
 
+    public static function replaceNotes(string $s){
+        $s = preg_replace('/&lt;/i', '<', $s);
+        $s = preg_replace('/&gt;/i', '>', $s);
+        return $s;
+
+    }
+
     /**
      * @param string $content
      * @return string|string[]|null
@@ -32,7 +39,7 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeElementsInEdition($dom, $elementName) {
+    public static function removeElementByNameInEdition($dom, $elementName) {
         $xpath = new DOMXPath($dom);
 
         foreach ($xpath->query('//ab[@type="maintext"]/' . $elementName) as $node) {
@@ -395,5 +402,23 @@ class XMLUtils {
             $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
         }
         return $s;
+    }
+
+    public static function printPHPErrors(): void {
+        $errorTypes = E_ALL;
+        set_error_handler(function ($errno, $errstr, $errfile, $errline) {
+            switch ($errno) {
+                case E_USER_ERROR:
+                    echo "Error number $errstr";
+                    break;
+                case E_USER_WARNING:
+                    echo "Error number $errstr";
+                    break;
+                default:
+                    echo "Error number $errstr";
+                    break;
+            }
+            return true;
+        }, $errorTypes);
     }
 }

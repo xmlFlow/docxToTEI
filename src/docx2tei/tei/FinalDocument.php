@@ -13,20 +13,25 @@ class FinalDocument extends DOMDocument {
 
         // DOM operations
         XMLUtils::removeTagByName($document, "title");
-        XMLUtils::removeElementsInEdition($document, "p");
+        XMLUtils::removeElementByNameInEdition($document, "p");
 
 
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
+        $s = XMLUtils::replaceNotes($s);
 
         // Create new Dom
         $newDom = new DOMDocument();
+        XMLUtils::printPHPErrors();
         $newDom->loadXML($s);
+
         $this->document = $newDom;
 
 
     }
+
+
 
     public function getDocumentElement() {
         return $this->document;

@@ -37,6 +37,7 @@ class DOCXArchive extends ZipArchive {
         if (!$index) return null;
         $data = $this->getFromIndex($index);
         $xml = new DOMDocument();
+        XMLUtils::printPHPErrors();
         $xml->loadXML($data, LIBXML_NOENT | LIBXML_XINCLUDE | LIBXML_NOERROR | LIBXML_NOWARNING);
         return $xml;
     }
