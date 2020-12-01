@@ -13,7 +13,7 @@ class FinalDocument extends DOMDocument {
 
         // DOM operations
         XMLUtils::removeTitleInBody($document, "title");
-        XMLUtils::removeElementByNameInEdition($document, "p");
+        XMLUtils::removeParagraphsInBody($document);
         XMLUtils::addChildElement($document, "ab","lb");
 
 

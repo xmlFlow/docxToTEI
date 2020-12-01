@@ -40,10 +40,9 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeElementByNameInEdition($dom, $elementName) {
+    public static function removeParagraphsInBody($dom) {
         $xpath = new DOMXPath($dom);
-
-        foreach ($xpath->query('//ab[@type="maintext"]/' . $elementName) as $node) {
+        foreach ($xpath->query('//ab[@type="maintext"]/p') as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
