@@ -19,7 +19,7 @@ class XMLUtils {
         return preg_replace('/\s+/i', ' ', $s);
     }
 
-    public static function replaceNotes(string $s){
+    public static function replaceNotes(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
 
@@ -86,21 +86,15 @@ class XMLUtils {
      * @param $dom
      * @param $tag
      */
-   /* public static function removeTagByName($dom, $tag): void {
-        $titles = $dom->getElementsByTagName($tag);
-        while ($titles->length > 0) {
-            $node = $titles->item(0);
-            $node->parentNode->removeChild($node);
+    public static function removeTitleInBody($dom): void {
+        $titlesXpath = new DOMXPath($dom);
+
+        $titles = $titlesXpath->query("//body/div/*/title | //div/title");
+        foreach ($titles as $title) {
+            $title->parentNode->removeChild($title);
         }
 
-    }*/
 
-    public static function removeTagByName($dom, $tag): void {
-        $xpath = new DOMXPath($dom);
-        $nodesToRemove = $xpath->query("//body//".$tag."/*");
-        foreach ($nodesToRemove as $nodeToRemove) {
-            $nodeToRemove->parentNode->removeChild($nodeToRemove);
-        }
     }
 
     public static function addChildElement($dom, $elems, $child): void {
@@ -108,8 +102,8 @@ class XMLUtils {
         $firstItem = $elems->item(0);
 
         $newItem[] = $dom->createElement($child);
-        foreach ($newItem as $xmlItem){
-            $firstItem->insertBefore($xmlItem,$firstItem->firstChild);
+        foreach ($newItem as $xmlItem) {
+            $firstItem->insertBefore($xmlItem, $firstItem->firstChild);
         }
 
 
@@ -428,7 +422,7 @@ class XMLUtils {
     public static function printPHPErrors(): void {
         $errorTypes = E_ALL;
         set_error_handler(function ($errno, $errstr, $errfile, $errline) {
-                echo "[Warning] $errstr $errfile $errline\n";
+            echo "[Warning] $errstr $errfile $errline\n";
             return true;
         }, $errorTypes);
     }

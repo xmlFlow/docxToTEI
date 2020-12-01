@@ -12,7 +12,7 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
 
         // DOM operations
-        XMLUtils::removeTagByName($document, "title");
+        XMLUtils::removeTitleInBody($document, "title");
         XMLUtils::removeElementByNameInEdition($document, "p");
         XMLUtils::addChildElement($document, "ab","lb");
 
@@ -20,8 +20,8 @@ class FinalDocument extends DOMDocument {
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
-        $s = XMLUtils::replaceNotes($s);
-        #$s = XMLUtils::createFootnoteTags($s);
+        #$s = XMLUtils::replaceNotes($s);
+        $s = XMLUtils::createFootnoteTags($s);
 
         // Create new Dom
         $newDom = new DOMDocument();
