@@ -86,13 +86,21 @@ class XMLUtils {
      * @param $dom
      * @param $tag
      */
-    public static function removeTagByName($dom, $tag): void {
+   /* public static function removeTagByName($dom, $tag): void {
         $titles = $dom->getElementsByTagName($tag);
         while ($titles->length > 0) {
             $node = $titles->item(0);
             $node->parentNode->removeChild($node);
         }
 
+    }*/
+
+    public static function removeTagByName($dom, $tag): void {
+        $xpath = new DOMXPath($dom);
+        $nodesToRemove = $xpath->query("//body//".$tag."/*");
+        foreach ($nodesToRemove as $nodeToRemove) {
+            $nodeToRemove->parentNode->removeChild($nodeToRemove);
+        }
     }
 
     public static function addChildElement($dom, $elems, $child): void {
@@ -259,7 +267,7 @@ class XMLUtils {
                 "original" => "&amp;",
                 "replace" => "add",
                 "attributes" => array(
-                    array("tag" => "place", "default" => "above the line"),
+                    array("tag" => "place", "default" => "above_the_line"),
                     array("tag" => "hand", "default" => "first")
                 )
             ),
@@ -293,7 +301,7 @@ class XMLUtils {
                 "original" => "del",
                 "replace" => "del",
                 "attributes" => array(
-                    array("tag" => "rend", "default" => "overstrike"),
+                    array("tag" => "rend", "default" => "crossed_out"),
                 )
             ),
             array(

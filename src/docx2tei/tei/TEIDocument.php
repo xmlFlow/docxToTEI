@@ -55,7 +55,7 @@ class TEIDocument extends DOMDocument {
                 $config_headers = get_object_vars($this->cfg->headers);
                 $key = array_search($headerName, array_values($config_headers));
                 if ($key >= 0) {
-                    $this->headers[array_keys($config_headers)[$key]] = $value;
+                    $this->headers[array_keys($config_headers)[$key]] = trim($value);
                 } else {
                     XMLUtils::print_error("[Error] Not allowed header in the metadata: " . $headerName);
                 }
