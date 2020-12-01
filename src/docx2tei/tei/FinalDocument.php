@@ -20,8 +20,8 @@ class FinalDocument extends DOMDocument {
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
-        #$s = XMLUtils::replaceNotes($s);
         $s = XMLUtils::createFootnoteTags($s);
+        $s = XMLUtils::replaceNotes($s);
 
         // Create new Dom
         $newDom = new DOMDocument();
