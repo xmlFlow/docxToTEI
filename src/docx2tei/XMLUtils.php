@@ -42,13 +42,15 @@ class XMLUtils {
      */
     public static function removeParagraphsInBody($dom) {
         $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//ab[@type="maintext"]/p') as $node) {
+        foreach ($xpath->query('//ab/p ') as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
             }
             $parent->removeChild($node);
         }
+
+
         return $dom;
     }
 
