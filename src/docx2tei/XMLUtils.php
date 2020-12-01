@@ -42,7 +42,7 @@ class XMLUtils {
      */
     public static function removeParagraphsInBody($dom) {
         $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//ab/p | p') as $node) {
+        foreach ($xpath->query('//ab/p ') as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -52,7 +52,30 @@ class XMLUtils {
     return $dom;
     }
 
-    public static function removeWinControlledVocabs($dom) {
+    public static function removeBoldTags($dom) {
+        $xpath = new DOMXPath($dom);
+        foreach ($xpath->query('//bold') as $node) {
+            $parent = $node->parentNode;
+            while ($node->hasChildNodes()) {
+                $parent->insertBefore($node->lastChild, $node->nextSibling);
+            }
+            $parent->removeChild($node);
+        }
+        return $dom;
+    }
+
+    public static function enumerateLineBegginings($dom) {
+        $xpath = new DOMXPath($dom);
+        $i = 1;
+        foreach ($xpath->query('//ab/lb') as $node) {
+            $attr = $dom->createAttribute("n");
+            $attr->value = $i;
+            $node->appendChild($attr);
+            $i++;
+
+        }
+    }
+    public static function removeControlledVocabsWordTagging($dom) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
             $parent = $node->parentNode;
@@ -139,7 +162,7 @@ class XMLUtils {
     }
 
     public static function createDot(string $s) {
-        $s = preg_replace('/\./i', '<orig>.</orig>', $s);
+        $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
         return $s;
     }
 
