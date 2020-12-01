@@ -313,7 +313,7 @@ class XMLUtils {
             array(
                 "original" => "reg",
                 "replace" => "choice",
-                "innerTags" => array('orig', 'corr'),
+                "innerTags" => array('orig', 'reg'),
                 "attributes" => array()
             ),
             array(
