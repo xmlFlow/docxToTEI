@@ -49,7 +49,7 @@ class XMLUtils {
             }
             $parent->removeChild($node);
         }
-    return $dom;
+        return $dom;
     }
 
     public static function removeBoldTags($dom) {
@@ -75,6 +75,7 @@ class XMLUtils {
 
         }
     }
+
     public static function removeControlledVocabsWordTagging($dom) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
@@ -233,54 +234,56 @@ class XMLUtils {
         preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
-            $parts = explode("{", $str);
-            $suffix1 = str_replace('}', '', $parts[1]);
-            if (count($parts) == 3) {
-                $suffix2 = str_replace('}', '', $parts[2]);
-            }
-            $prefix = explode('@', $parts[0]);
-            $tagName = $prefix[0];
-            $tagName = self::removeUnnecessaryChars($tagName);
-            $elem = new DOMDocument();
-            foreach ($tags as $tag) {
-                if ($tag["original"] == $tagName) {
-                    $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
-                    $tagElem = $elem->createElement($tagName);
-                    // remove tag from array
-                    array_shift($prefix);
-                    for ($i = 0; $i < count($tag["attributes"]); $i++) {
-                        if ($i < count($tag["attributes"])) {
-                            $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                            $val = $tag["attributes"][$i]['default'];
-                            if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
-                                $val = $prefix[$i];
+            foreach ($match as $m) {
+                $str = str_replace(XMLUtils::$bnd, '', $m);
+                $parts = explode("{", $str);
+                $suffix1 = str_replace('}', '', $parts[1]);
+                if (count($parts) == 3) {
+                    $suffix2 = str_replace('}', '', $parts[2]);
+                }
+                $prefix = explode('@', $parts[0]);
+                $tagName = $prefix[0];
+                $tagName = self::removeUnnecessaryChars($tagName);
+                $elem = new DOMDocument();
+                foreach ($tags as $tag) {
+                    if ($tag["original"] == $tagName) {
+                        $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
+                        $tagElem = $elem->createElement($tagName);
+                        // remove tag from array
+                        array_shift($prefix);
+                        for ($i = 0; $i < count($tag["attributes"]); $i++) {
+                            if ($i < count($tag["attributes"])) {
+                                $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                                $val = $tag["attributes"][$i]['default'];
+                                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
+                                    $val = $prefix[$i];
+                                }
+                                $attr->value = $val;
+                                $tagElem->appendChild($attr);
                             }
-                            $attr->value = $val;
-                            $tagElem->appendChild($attr);
                         }
-                    }
-                    for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
-                        $extraAttrs = explode("=", $prefix[$i]);
-                        if (count($extraAttrs) == 2) {
-                            $attr = $elem->createAttribute($extraAttrs[0]);
-                            $attr->value = $extraAttrs[1];
-                            $tagElem->appendChild($attr);
+                        for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
+                            $extraAttrs = explode("=", $prefix[$i]);
+                            if (count($extraAttrs) == 2) {
+                                $attr = $elem->createAttribute($extraAttrs[0]);
+                                $attr->value = $extraAttrs[1];
+                                $tagElem->appendChild($attr);
+                            } else {
+                                self::print_error('Attribute with no = sign ' . $prefix[$i]);
+                            }
+                        }
+                        if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
+                            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+                            $tagElem->appendChild($suffix1Elem);
+                            if (isset($suffix2)) {
+                                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                                $tagElem->appendChild($suffix2Elem);
+                            }
                         } else {
-                            self::print_error('Attribute with no = sign ' . $prefix[$i]);
+                            $tagElem->nodeValue = $suffix1;
                         }
+                        $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
                     }
-                    if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
-                        $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
-                        $tagElem->appendChild($suffix1Elem);
-                        if (isset($suffix2)) {
-                            $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
-                            $tagElem->appendChild($suffix2Elem);
-                        }
-                    } else {
-                        $tagElem->nodeValue = $suffix1;
-                    }
-                    $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
                 }
             }
         }
