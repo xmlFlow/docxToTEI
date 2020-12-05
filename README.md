@@ -16,6 +16,71 @@
  * Abstract defaults to `<div xml:id="abs" type="abstract" xml:lang="eng">`
  * Edition defaults to `<div xml:id="ed" type="edition" xml:lang="nep-san">`
  
+ 
+ ### Testing
+ | Nr:Nutzer:Status |  Fehler | Grund| Korrektur |
+| ---- | ---- | ---- | ---- |
+| 1. CZ:  Testen | `<teiHeader> <fileDesc> <titleStmt> <title type="main">....</title> <title type="short">....</title> <title type="sub">...</title>`|Title wurde automatisch entfernt | Struktur angepasst |
+| 2. CZ:  Testen | `<ab type="margin" corresp="#margin1"> <lb/> <p><w>९४</w> <w>९४</w>• </p> </ab>`| paragraph elementen wurde nicht entfernt. `<lb>` nummerierung war nicht implementiert  | Struktur angepasst |
+| 3. CZ:  Testen | `<choice><orig>....</orig><corr>---</corr></choice> ` | Hatte nur in Spezifikation geändert| Korrigiert |
+| 4. CZ:  Testen | `<persName><w>प्रमांनगी</w> <w>प्रमांनगी</w> • <w>प्रमांनगी</w> • <w>प्रमांनगी</w></persName> ` | Falsche Annahme: dass jedes Devanagari-Wort mit `w` eingeschlossen sein sollte | Korrigiert |
+| 5. CZ:  Testen | `<space> works but the @quantity is miscounted, e.g. #...# should be <space quantity="3" unit="chars"/> not <space quantity="5"... /> (does the tool also counts the #s?), furthermore: value for @unit cannot be changed (I tried #@unit=line...# but it was not converted, #...@unit=line# was converted into <space> but value is still "chars", the same with #...@@unit=line# ` | | |
+| 5. CZ:  Testen | `surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
+| 6. CZ:  Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
+| 7. CZ:  Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | | 
+| 8. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s  (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
+| 9. CZ:  Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
+| 10. SC:  Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | Done | 
+| 11. SC:  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
+| 12. SC:  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
+| 13. SC:  Testen | `</sourceDesc> nach </msDesc>` | | | 
+| 14. SC:  Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
+| 15. SC:  Testen | `<p>For details see <ref target="...">entry in database</ref></p> URL in "..."; entry in database bleibt stehen, nicht URL statt „entry in database“.` | | | 
+| 16. SC:  Testen | `<physDesc> statt <phsyDesc>` | | | 
+
+
+
+
+ 
+ 
+ ### Formal annotations
+   
+  | Status | Markup | Default | Markup Example | TEI Example | Remarks |
+  | ---- | ---- | ---- | ---- | ---- |  ---- |
+  | 1. :heavy_check_mark:   | #SB Content #SE | | `#SBA long affairSE#` | `<s>A long affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+  | 2. :heavy_check_mark: | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | 
+  | 3. :heavy_check_mark: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
+  | 4. :heavy_check_mark: | #++++@extent@agent# |`extent=characters` | `#++++@agent#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+  | 5. :heavy_check_mark: | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
+  | 6. :robot: | #...# |*chars or lines instead of @unit=chars* | `#...#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
+  | 7. :heavy_check_mark:  | #&@place@hand{}# |`place="above_the_line" hand="first"` e.g. @@second" |`#&@above the line@first#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
+  | 8. :heavy_check_mark:  | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
+  | 9. :heavy_check_mark:  | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
+  | 10. :heavy_check_mark: | #orig{text}# | | `#orig{Tall}#` | `<orig>Tall</orig>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html)|
+  | 11. :heavy_check_mark: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <reg>Table</reg></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
+  | 12. :heavy_check_mark: | #sur{text}# | |  `#sur@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
+  | 13. :heavy_check_mark:  | #sup@reason{text}# | @reason=lost| `#sup@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
+  | 14. :heavy_check_mark: | #del@rend{text}# | | `#DEL@rend:crossed_out{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
+  | 15. :heavy_check_mark: |  #pen{url}# | `#pen{ Text }#` | `<persName>Text</persName>` | :ok: | [persName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-persName.html) |
+  | 16. :heavy_check_mark: |  #pln{url}# | `#pln{Text}#` | `<placeName>Text</placeName>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
+  | 17. :heavy_check_mark: |   #gen{url}# | `#gen{Text}#` | `<geogName>Text</geogName>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
+  | 18. :heavy_check_mark:| Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
+  | 19. :robot: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>ग्&#8205;य</w> | Correct the &amp; as & |
+  | 20. :robot: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
+  | 21. :heavy_check_mark: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
+  | 22. :robot: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
+  | 23. :robot: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
+  | 26. :robot: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
+  | 24. :robot: | last minus of a sentence| | | | |
+  | 25. :robot: | lb etween 2 `ab` s there should be `p` s| | | | |
+  
+ 
+  
+  
+
+ 
+ 
+ 
  ### Structural identifications
 
 | status| Issue|
@@ -81,40 +146,7 @@
 * Check for macros to auto-complete.
 
 
- ### Formal annotations (div, ab, pb, lb, w, s, space, table, row, cell, add, del, gap, unclear)
-  
- | Status | Markup | Default | Markup Example | TEI Example | Remarks |
- | ---- | ---- | ---- | ---- | ---- |  ---- |
- | 1. :question:  | #SB Content #SE | | `#SBA long affairSE#` | `<s>A long affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
- | 2. :heavy_check_mark: | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html)  | 
- | 3. :heavy_check_mark: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
- | 4. :heavy_check_mark: | #++++@extent@agent# |`extent=characters` | `#++++@agent#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
- | 5. :heavy_check_mark: | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
- | 6. :heavy_check_mark: | #...# |@unit=chars | `#...#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
- | 7. :heavy_check_mark:  | #&@place@hand{}# |`place="above the line" hand="first"` e.g. @@second" |`#&@above the line@first#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
- | 8. :heavy_check_mark:  | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
- | 9. :heavy_check_mark:  | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |
- | 10.  :heavy_check_mark: | #orig{text}# | | `#orig{Tall}#` | `<orig>Tall</orig>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html)|
- | 11. :heavy_check_mark: | #reg{text}{}# | | `#reg{Talel}{Table}#` | `<choice><orig>Tabel</orig> <corr>Table</corr></choice>`  |  [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) [reg](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-reg.html) |
- | 12. :heavy_check_mark: | #sur{text}# | |  `#sur@repeated{unnecessary text}#` | `<surplus reason="repeated">unnecessary text</surplus>` | [surplus](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-surplus.html) |
- | 13.  :heavy_check_mark:  | #sup@reason{text}# | @reason=lost| `#sup@lost{text supplied by editor}#` | `<supplied @reason=“lost>text supplied by editor </supplied>` | : [supplied](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-supplied.html) |
- | 14. :heavy_check_mark: | #del@rend{text}# | | `#DEL@rend:overstrike{deleted text}#` | `<del @rend="overstrike">"deleted text"></del>` |   [deletion](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-del.html) |
- | 15. :heavy_check_mark: |  #pen{url}# | `#pn{corresp_ID}#` | `<persName corresp="corresp_ID"/>` | :ok: | [persName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-persName.html) |
- | 16. :heavy_check_mark: |  #pln{url}# | `#pln{corresp_ID}#` | `<placeName  corresp="corresp_ID"/>` |:ok: | [placeName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-placeName.html) |
- | 17. :heavy_check_mark: |   #gen{url}# | `#gen{corresp_ID}#` | `<geogName corresp="corresp_ID"/>` | :ok: |  [geogName](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-geogName.html) |
- | 18. :heavy_check_mark:  | #sb{content} | | `#SB{A short affair}#` | `<s>A short affair</s>` |  [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
- | 19. :heavy_check_mark:| Word1 word2 | |  `#  Buddhist lirerature. #` | `<w>Buddhist </w><w>lirerature.</w>` |   [Word](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-w.html) |
- | 20. :heavy_check_mark: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#8205;य</w> |  |
- | 21. :heavy_check_mark: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
- | 22. :heavy_check_mark: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
- | :ok: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
- | :ok: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
- | 23. :heavy_check_mark: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
- | 24. :heavy_check_mark: | last minus of a sentence| | | | |
  
- 
- 
-
  
  
 

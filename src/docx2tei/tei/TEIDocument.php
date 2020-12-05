@@ -9,6 +9,7 @@ class TEIDocument extends DOMDocument {
     var $cfg;
     var $root;
     var $teiHeader;
+    var $facsimile;
     var $text;
     var $body;
     var $structuredDocument;
@@ -76,6 +77,8 @@ class TEIDocument extends DOMDocument {
         $this->appendChild($this->root);
         $this->teiHeader = $this->createElement('teiHeader');
         $this->root->appendChild($this->teiHeader);
+        $this->facsimile = $this->createElement('facsimile');
+        $this->root->appendChild($this->facsimile);
         $this->text = $this->createElement('text');
         $this->body = $this->createElement('body');
         $this->text->appendChild($this->body);

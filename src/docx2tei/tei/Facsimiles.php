@@ -32,7 +32,6 @@ class Facsimiles extends DOMDocument {
                         XMLUtils::print_error("[Error]  Surface formatting error. Should be e.g. in surface1: E_12.png:1r " . $surfaceParts);
                     } else {
                         list($xml_id, $facs, $page) = $surfaceParts;
-                        $facsimile = $this->createElement("facsimile");
                         $surface = $this->createElement("surface");
                         $idAttrib = $this->createAttribute('xml:id');
                         $idAttrib->value = $xml_id;
@@ -45,8 +44,8 @@ class Facsimiles extends DOMDocument {
                             $coord->value = 0;
                             $surface->appendChild($coord);
                         }
-                        $facsimile->appendChild($surface);
-                        $this->document->teiHeader->appendChild($this->document->importNode($facsimile, true));
+
+                        $this->document->facsimile->appendChild($this->document->importNode($surface, true));
                     }
                 }
             }
