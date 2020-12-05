@@ -30,7 +30,7 @@
 | 7. CZ:  Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | | 
 | 8. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s  (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
 | 9. CZ:  Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
-| 10. SC:  Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | Done | 
+| 10. SC:  :ok: Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | Done | 
 | 11. SC:  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
 | 12. SC:  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
 | 13. SC:  Testen | `</sourceDesc> nach </msDesc>` | | | 

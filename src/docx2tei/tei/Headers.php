@@ -21,7 +21,6 @@ class Headers extends DOMDocument {
 
     function setHeaders() {
         $this->setFileDescription();
-        $this->setSourceDescription();
         $this->setEncodingDescription();
         $this->setProfileDescription();
         $this->setRevisionDescription();
@@ -37,6 +36,7 @@ class Headers extends DOMDocument {
         $this->setAuthor($titleStmt);
         $this->setMainEditor($titleStmt);
         $this->setCollaborator($titleStmt);
+        $this->setSourceDescription($fileDesc);
         $this->document->teiHeader->appendChild($this->document->importNode($fileDesc, true));
     }
     /**
@@ -129,9 +129,9 @@ class Headers extends DOMDocument {
         $titleStmt->appendChild($respStmt);
     }
 
-    function setSourceDescription(): void {
+    function setSourceDescription($fileDesc): void {
         $sourceDesc = $this->createElement("sourceDesc");
-        $this->document->teiHeader->appendChild($this->document->importNode($sourceDesc, true));
+        //$this->document->teiHeader->appendChild($this->document->importNode($sourceDesc, true));
         $msDesc = $this->createElement("msDesc");
         $sourceDesc->appendChild($msDesc);
         $this->setMsIdentifier($msDesc);
@@ -139,7 +139,8 @@ class Headers extends DOMDocument {
         $this->setMsContents($msDesc);
         $this->setPhysicalDescription($msDesc);
         $this->setHistoryDescription($msDesc);
-        $this->document->teiHeader->appendChild($this->document->importNode($msDesc, true));
+        $fileDesc->appendChild($sourceDesc);
+
     }
 
     /**
