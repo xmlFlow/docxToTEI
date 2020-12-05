@@ -31,10 +31,10 @@
 | 8. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s  (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
 | 9. CZ:  Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
 | 10. SC:  :ok: Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | Done | 
-| 11. SC:  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
-| 12. SC:  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
-| 13. SC:  Testen | `</sourceDesc> nach </msDesc>` | | | 
-| 14. SC:  Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
+| 11. SC: :ok:  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
+| 12. SC:  :ok:  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
+| 13. SC:  :ok:  Testen | `</sourceDesc> nach </msDesc>` | | | 
+| 14. SC:  :ok: Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
 | 15. SC:  Testen | `<p>For details see <ref target="...">entry in database</ref></p> URL in "..."; entry in database bleibt stehen, nicht URL statt „entry in database“.` | | | 
 | 16. SC:  Testen | `<physDesc> statt <phsyDesc>` | | | 
 

@@ -135,7 +135,6 @@ class Headers extends DOMDocument {
         $msDesc = $this->createElement("msDesc");
         $sourceDesc->appendChild($msDesc);
         $this->setMsIdentifier($msDesc);
-        $this->setAltIdentifier($msDesc);
         $this->setMsContents($msDesc);
         $this->setPhysicalDescription($msDesc);
         $this->setHistoryDescription($msDesc);
@@ -156,13 +155,14 @@ class Headers extends DOMDocument {
         $msIdentifier->appendChild($repository);
         $msDesc->appendChild($msIdentifier);
         $msIdentifier->appendChild($idno);
+        $this->setAltIdentifier($msIdentifier);
         return array($settlement, $idno);
     }
 
     /**
-     * @param  $msDesc
+     * @param  $msIdentifier
      */
-    function setAltIdentifier($msDesc): void {
+    function setAltIdentifier($msIdentifier): void {
         $altIdentifier = $this->createElement("altIdentifier");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = $this->headers["h1"] ?? "";
@@ -172,7 +172,7 @@ class Headers extends DOMDocument {
         $idno = $this->createElement("idno", $this->headers["h7"] ?? "");
         $altIdentifier->appendChild($settlement);
         $altIdentifier->appendChild($collection);
-        $msDesc->appendChild($altIdentifier);
+        $msIdentifier->appendChild($altIdentifier);
         $altIdentifier->appendChild($idno);
     }
 
