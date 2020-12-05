@@ -199,13 +199,13 @@ class Headers extends DOMDocument {
      * @return array
      */
     function setPhysicalDescription($msDesc): array {
-        $phsyDesc = $this->createElement("phsyDesc");
+        $physDesc = $this->createElement("physDesc");
         $p = $this->createDocumentFragment();
         $catalogueEntry = $this->headers["h9"] ?? "";
         $p->appendXML('<p>For details see <ref target="'.$catalogueEntry.'">entry in database </ref></p>');
-        $phsyDesc->appendChild($p);
-        $msDesc->appendChild($phsyDesc);
-        return array($phsyDesc, $p);
+        $physDesc->appendChild($p);
+        $msDesc->appendChild($physDesc);
+        return array($physDesc, $p);
     }
 
     /**

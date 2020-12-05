@@ -36,7 +36,7 @@
 | 13. SC:  :ok:  Testen | `</sourceDesc> nach </msDesc>` | | | 
 | 14. SC:  :ok: Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
 | 15. SC:  :ok:  Testen | `<p>For details see <ref target="...">entry in database</ref></p> URL in "..."; entry in database bleibt stehen, nicht URL statt „entry in database“.` | | | 
-| 16. SC:  Testen | `<physDesc> statt <phsyDesc>` | | | 
+| 16. SC: :ok:  Testen | `<physDesc> statt <phsyDesc>` | | | 
 
 
 
