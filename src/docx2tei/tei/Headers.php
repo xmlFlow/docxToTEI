@@ -202,7 +202,7 @@ class Headers extends DOMDocument {
         $phsyDesc = $this->createElement("phsyDesc");
         $p = $this->createDocumentFragment();
         $catalogueEntry = $this->headers["h9"] ?? "";
-        $p->appendXML('<p>For details see <ref target="..">' . $catalogueEntry . '</ref></p>');
+        $p->appendXML('<p>For details see <ref target="'.$catalogueEntry.'">entry in database </ref></p>');
         $phsyDesc->appendChild($p);
         $msDesc->appendChild($phsyDesc);
         return array($phsyDesc, $p);
