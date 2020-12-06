@@ -106,4 +106,4 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
 }
 
 $time_end = microtime(true);
-print("[Info] Execution Time: " . round(($time_end - $time_start), 4) . " seconds");
+print("Execution Time: " . round(($time_end - $time_start), 4) . " seconds");
