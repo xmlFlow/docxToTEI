@@ -168,9 +168,10 @@ class XMLUtils {
     }
 
     public static function createWords(string $s) {
-        if (preg_match("/([\p{Devanagari}])+/u", $s, $matches)) {
-            $s = preg_replace('/([\p{Devanagari}]+)/u', '<w>$1</w>', $s);
-
+        #$pattern = "\p{Devanagari}+<\w+>[\p{Devanagari}|\s]+<\/\w+>\p{Devanagari}+|\s+\p{Devanagari}+\s+";
+        $pattern = "[\s\p{Devanagari}\s]+";
+        if (preg_match('/'.$pattern.'/u', $s, $matches)) {
+            $s = preg_replace('/'.$pattern.'/u', '<w>$0</w>', $s);
         }
         return $s;
     }
