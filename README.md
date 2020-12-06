@@ -6,7 +6,8 @@
        * `#` begins and end a markup
        * `@` begins an attribute
        * `{}` contains xml tag content
-       * `:`  if the attribute is unclear from the order,we use : after attribute name  @attribute:value  
+       * `:`  if the attribute is unclear from the order,we use : after attribute name  @attribute:value 
+       * Do not use bold text 
  * If reserved  symbols are necessary for the text, they  are escaped by a `\` e.g. `\@` 
  * `@#` is  used, if a certain attribute begin with `#` 
  * For markup upper-small case will be validated. 
@@ -24,12 +25,11 @@
 | 2. CZ: :ok: Testen | `<ab type="margin" corresp="#margin1"> <lb/> <p><w>९४</w> <w>९४</w>• </p> </ab>`| paragraph elementen wurde nicht entfernt. `<lb>` nummerierung war nicht implementiert  | Struktur angepasst |
 | 3. CZ: :ok: Testen | `<choice><orig>....</orig><corr>---</corr></choice> ` | Hatte nur in Spezifikation geändert| Korrigiert |
 | 4. CZ: :ok: Testen | `<persName><w>प्रमांनगी</w> <w>प्रमांनगी</w> • <w>प्रमांनगी</w> • <w>प्रमांनगी</w></persName> ` | Falsche Annahme: dass jedes Devanagari-Wort mit `w` eingeschlossen sein sollte | Korrigiert |
-| 5. CZ: :ok: Testen | `<space> works but the @quantity is miscounted, e.g. #...# should be <space quantity="3" unit="chars"/> not <space quantity="5"... /> (does the tool also counts the #s?), furthermore: value for @unit cannot be changed (I tried #@unit=line...# but it was not converted, #...@unit=line# was converted into <space> but value is still "chars", the same with #...@@unit=line# ` | | |
-| 5. CZ:  Testen | `surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
+| 5. CZ: :ok: Testen | `<space> works but the @quantity is miscounted, e.g. #...# should be <space quantity="3" unit="chars"/> not <space quantity="5"... /> (does the tool also counts the #s?), furthermore: value for @unit cannot be changed (I tried #@unit=line...# but it was not converted, #...@unit=line# was converted into <space> but value is still "chars", the same with #...@@unit=line# ` | | Specification was wrong, Document updated. |
 | 6. CZ:  Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
 | 7. CZ:  Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | | 
 | 8. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s  (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
-| 9. CZ:  Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
+| 9. CZ: :ok: Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
 | 10. SC:  :ok: Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | |  | 
 | 11. SC: :ok:  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
 | 12. SC:  :ok:  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
@@ -40,6 +40,7 @@
 | 17. SC: :ok:  Testen | `#pen{Lokaramaṇa Upādhyāya}#    --> Im Commentary scheinen keinerlei tags möglich zu sein.` | | |
 | 18. SC: :  Testen | `<add place="place" hand="hand"> <w>नं</w> --> Die Default-values scheinen noch nicht implementiert zu sein.` | | |
 | 19. SC: :  Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | | |
+| 20. CZ:  Testen | `surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
  
 
 
@@ -56,7 +57,7 @@
   | 3. :heavy_check_mark: | `-` |  | `-` | `<lb @break=no>`  | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
   | 4. :heavy_check_mark: | #++++@extent@agent# |`extent=characters` | `#++++@agent#` | `<gap @reason=“illegible“ extent=“4 lines“> `  | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
   | 5. :heavy_check_mark: | #///@extent@agent#  |`extent=characters` | `#///@characters#` | `<gap @reason=“lost extent=“3 characters“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
-  | 6. :robot: | #...# |*chars or lines instead of @unit=chars* | `#...#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
+  | 6. :heavy_check_mark: | #...# | | `#...@lines#` | `<space quantity="3" unit="chars"/>` |  [space](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-space.html) |
   | 7. :heavy_check_mark:  | #&@place@hand{}# |`place="above_the_line" hand="first"` e.g. @@second" |`#&@above the line@first#` | `<add place="above the line" hand="first"/>` | [add](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-add.html) |
   | 8. :heavy_check_mark:  | #?@cert{text}# | @cert=high| `#?@high{text unclear}#` | `<unclear @cert=high> </unclear>` |  [unclear](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-unclear.html) |
   | 9. :heavy_check_mark:  | #cor{text}{text}# | |  `#cor{Talel}{Table}#` | `<choice><sic>Tabel</sic> <corr>Table</corr></choice>` | :  [sic](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-sic.html) [corr](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-corr.html) |

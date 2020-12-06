@@ -383,22 +383,43 @@ class XMLUtils {
 
     /**
      * @param string $s
+     * @param $characterType
      * @return string|string[]
      */
-    public static function createSpaces(string $s) {
-        preg_match_all('/' . XMLUtils::$bnd . '(\.)+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+    public static function createSpaces(string $s, string $characterType) {
+        preg_match_all('/' . XMLUtils::$bnd . '(' . $characterType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
+            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
             $elem = new DOMDocument();
-            $gap = $elem->createElement("space");
-            $gapsLength = strlen($match[0]);
-            $qn = $elem->createAttribute('quantity');
-            $qn->value = $gapsLength;
-            $gap->appendChild($qn);
-            $unit = $elem->createAttribute('unit');
-            $unit->value = 'chars';
-            $gap->appendChild($unit);
-            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
+            $sp = $elem->createElement("space");
+
+            $parts = explode("@", $str);
+            if (!is_null($parts)) {
+                $qty = $elem->createAttribute('quantity');
+                $gapsLength = substr_count(array_shift($parts), str_replace('\\','',$characterType));
+                $qty->value = $gapsLength;
+                $sp->appendChild($qty);
+                $unt = array_shift($parts);
+                if (!is_null($unt)) {
+                    $unit = $elem->createAttribute('unit');
+                    $unt->value = $unt;
+                    $sp->appendChild($unit);
+                }
+            }
+            if (count($parts) > 0) {
+                for ($i = 0; $i < count($parts); $i++) {
+                    $extras = explode('=', $parts[$i]);
+                    if (count($extras) == 2) {
+                        $attr = $elem->createAttribute($extras[0]);
+                        $attr->value = $extras[1];
+                        $sp->appendChild($attr);
+                    } else {
+                        self::print_error($parts[$i] . " does not contain a = sign");
+                    }
+                }
+            }
+            $s = str_replace($matches[0], $sp->ownerDocument->saveXML($sp), $s);
         }
         return $s;
     }

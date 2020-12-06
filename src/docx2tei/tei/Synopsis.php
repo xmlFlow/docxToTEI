@@ -35,6 +35,8 @@ class Synopsis extends DOMDocument {
                     $s = XMLUtils::cleanMultipleSpaces($s);
                     $s = XMLUtils::createFootnoteTags($s);
                     $s = XMLUtils::createStructuredContent($s);
+                    # create spaces
+                    $s = XMLUtils::createSpaces($s,'\.');
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

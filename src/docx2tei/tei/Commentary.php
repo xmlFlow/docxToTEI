@@ -33,6 +33,8 @@ class Commentary extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::cleanMultipleSpaces($s);
+                    # create spaces
+                    $s = XMLUtils::createSpaces($s,'\.');
                     $s = XMLUtils::createFootnoteTags($s);
                     $s = XMLUtils::createStructuredContent($s);
                     $ab = $this->createDocumentFragment();
