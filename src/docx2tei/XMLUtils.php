@@ -30,8 +30,10 @@ class XMLUtils {
 
 
 
-    public static function createAmpersand(string $s) {
-        return preg_replace('/amp;/i', '', $s);
+    public static function handleLastMinus(string $s) {
+        $s=  preg_replace('/(\s)*-(\s)*<\/s>/i', '<lb break="no"/></s>', $s);
+        //$s=  preg_replace('/&amp;#x200c;/i', '&amp;#x200c;', $s);
+        return $s;
     }
 
 
@@ -189,6 +191,18 @@ class XMLUtils {
     public static function createDot(string $s) {
         $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
         return $s;
+    }
+    public static function addParagraphsBetweenAnonymousBlocks($dom) {
+        $abs = $dom->getElementsByTagName("ab");
+        foreach ($abs as $ab) {
+
+            try {
+                $ab->parentNode->insertBefore( $dom->createElement('p'), $ab->nextSibling);
+            } catch(\Exception $e){
+                $ab->parentNode->appendChild( $ab);
+            }
+
+        }
     }
 
     public static function createWords(string $s) {

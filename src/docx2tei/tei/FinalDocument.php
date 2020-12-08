@@ -18,15 +18,16 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBeginings($document);
         XMLUtils::removeBoldTags($document);
+        XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
 
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
+        $s = XMLUtils::handleLastMinus($s);
         $s = XMLUtils::createFootnoteTags($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::removeEmptyTags($s);
-        $s = XMLUtils::createAmpersand($s);
 
         // Create new Dom
         $newDom = new DOMDocument();

@@ -21,27 +21,27 @@
  ### Testing
  | Nr:Nutzer:Status | Fehler | Grund| Korrektur |
 | ---- | ---- | ---- | ---- |
-| 1. CZ: Testen | `<teiHeader> <fileDesc> <titleStmt> <title type="main">....</title> <title type="short">....</title> <title type="sub">...</title>`|Title wurde automatisch entfernt | Struktur angepasst |
-| 2. CZ: Testen | `<ab type="margin" corresp="#margin1"> <lb/> <p><w>९४</w> <w>९४</w>• </p> </ab>`| paragraph elementen wurde nicht entfernt. `<lb>` nummerierung war nicht implementiert | Struktur angepasst |
-| 3. CZ: Testen | `<choice><orig>....</orig><corr>---</corr></choice> ` | Hatte nur in Spezifikation geändert| Korrigiert |
-| 4. CZ: Testen | `<persName><w>प्रमांनगी</w> <w>प्रमांनगी</w> • <w>प्रमांनगी</w> • <w>प्रमांनगी</w></persName> ` | Falsche Annahme: dass jedes Devanagari-Wort mit `w` eingeschlossen sein sollte | Korrigiert |
-| 5. CZ: Testen | `<space> works but the @quantity is miscounted, e.g. #...# should be <space quantity="3" unit="chars"/> not <space quantity="5"... /> (does the tool also counts the #s?), furthermore: value for @unit cannot be changed (I tried #@unit=line...# but it was not converted, #...@unit=line# was converted into <space> but value is still "chars", the same with #...@@unit=line# ` | | Specification was wrong, Document updated. |
-| 6. SC: Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
-| 7. SC: Testen | `<p>For details see <ref target="...">entry in database</ref></p> URL in "..."; entry in database bleibt stehen, nicht URL statt „entry in database“.` | | | 
-| 8. SC: Testen | `<physDesc> statt <phsyDesc>` | | | 
-| 9. CZ: Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
-| 10. SC: Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | | 
-| 11. SC: Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
-| 12. SC: Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
-| 13. SC: Testen | `</sourceDesc> nach </msDesc>` | | | 
-| 14. SC: Testen | `#pen{Lokaramaṇa Upādhyāya}# --> Im Commentary scheinen keinerlei tags möglich zu sein.` | | |
-| 15. SC: Testen | `<add place="place" hand="hand"> <w>नं</w> --> Die Default-values scheinen noch nicht implementiert zu sein.` | |#&{नं ९७}# sollte ` <add place="above_the_line" hand="first"><w>नं</w> <w>९७</w></add>`  ausgeben|
-| 16. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
-| 17. CZ: Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
-| 18. CZ: | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | | 
-| 19. SC: Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | |  habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
-| 20. CZ: | `surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
- 
+| 1. Testen | `<teiHeader> <fileDesc> <titleStmt> <title type="main">....</title> <title type="short">....</title> <title type="sub">...</title>`|Title wurde automatisch entfernt | Struktur angepasst |
+| 2. Testen | `<ab type="margin" corresp="#margin1"> <lb/> <p><w>९४</w> <w>९४</w>• </p> </ab>`| paragraph elementen wurde nicht entfernt. `<lb>` nummerierung war nicht implementiert | Struktur angepasst |
+| 3. Testen | `<choice><orig>....</orig><corr>---</corr></choice> ` | Hatte nur in Spezifikation geändert| Korrigiert |
+| 4. Testen | `<persName><w>प्रमांनगी</w> <w>प्रमांनगी</w> • <w>प्रमांनगी</w> • <w>प्रमांनगी</w></persName> ` | Falsche Annahme: dass jedes Devanagari-Wort mit `w` eingeschlossen sein sollte | Korrigiert |
+| 5. Testen | `<space> works but the @quantity is miscounted, e.g. #...# should be <space quantity="3" unit="chars"/> not <space quantity="5"... /> (does the tool also counts the #s?), furthermore: value for @unit cannot be changed (I tried #@unit=line...# but it was not converted, #...@unit=line# was converted into <space> but value is still "chars", the same with #...@@unit=line# ` | | Specification was wrong, Document updated. |
+| 6.  Testen | `</msIdentifier> nach </altIdentifier>, nicht vor <altIdentifier type="">` | | | 
+| 7.  Testen | `<p>For details see <ref target="...">entry in database</ref></p> URL in "..."; entry in database bleibt stehen, nicht URL statt „entry in database“.` | | | 
+| 8.  Testen | `<physDesc> statt <phsyDesc>` | | | 
+| 9. Testen | `<persName>s works in the edition and the translation but not in the Commentary. the same holds true for <placeName>s` | | | 
+| 10.  Testen | `</teiHeader> nach </revisionDesc>, nicht nach </facsimile>` | | | 
+| 11.  Testen | `</fileDesc> vor <encodingDesc>, nicht nach </titleStmt>` | | | 
+| 12.  Testen | `<sourceDesc> vor <msDesc>, nicht <sourceDesc/> vor <msDesc>` | | | 
+| 13.  Testen | `</sourceDesc> nach </msDesc>` | | | 
+| 14.  Testen | `#pen{Lokaramaṇa Upādhyāya}# --> Im Commentary scheinen keinerlei tags möglich zu sein.` | | |
+| 15.  Testen | `<add place="place" hand="hand"> <w>नं</w> --> Die Default-values scheinen noch nicht implementiert zu sein.` | |#&{नं ९७}# sollte ` <add place="above_the_line" hand="first"><w>नं</w> <w>९७</w></add>`  ausgeben|
+| 16.  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
+| 17. Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
+| 18.  Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | with having & in xml , is not good for validating, let us discuss this  | 
+| 19.  Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | |  habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
+| 20. :question:| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | Spezifikation unischer| 
+ |21.  Testen  :question: | last minus of a sentence| | | | |
 
 
 
@@ -76,8 +76,7 @@
   | 22. :heavy_check_mark: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
   | 23. :heavy_check_mark: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
   | 26.  :heavy_check_mark: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
-  | 24. :robot: | last minus of a sentence| | | | |
-  | 25. :robot: | between 2 `ab` s there should be `p` s| | | | |
+  | 24. :heavy_check_mark:  | between 2 `ab` s there should be `p` s| | | | |
   
  
   
