@@ -391,7 +391,7 @@ class XMLUtils {
      * @param $characterType
      * @return string|string[]
      */
-    public static function createSpaces(string $s, string $characterType) {
+    public static function createSpaceTag(string $s, string $characterType) {
         preg_match_all('/' . XMLUtils::$bnd . '(' . $characterType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {

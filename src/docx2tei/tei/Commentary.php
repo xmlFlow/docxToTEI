@@ -34,7 +34,7 @@ class Commentary extends DOMDocument {
                     $s = $et->ownerDocument->saveXML($et);
 
                     # create spaces
-                    $s = XMLUtils::createSpaces($s,'\.');
+                    $s = XMLUtils::createSpaceTag($s,'\.');
                     $s = XMLUtils::createFootnoteTags($s);
                     $s = XMLUtils::createStructuredContent($s);
                     $ab = $this->createDocumentFragment();

@@ -43,7 +43,7 @@ class EnglishTranslation extends DOMDocument {
                     $s = XMLUtils::createGap($s, 'lost', '\/');
                     $s = XMLUtils::createGap($s, 'illegible', '\+');
                     # create spaces
-                    $s = XMLUtils::createSpaces($s,'\.');
+                    $s = XMLUtils::createSpaceTag($s,'\.');
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
 
