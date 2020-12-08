@@ -28,7 +28,18 @@ class XMLUtils {
         return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
     }
 
-    public static function replaceNotes(string $s) {
+
+
+    public static function createAmpersand(string $s) {
+        return preg_replace('/amp;/i', '', $s);
+    }
+
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
 

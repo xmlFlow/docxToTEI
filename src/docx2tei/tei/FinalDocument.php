@@ -24,8 +24,9 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::createFootnoteTags($s);
-        $s = XMLUtils::replaceNotes($s);
+        $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::removeEmptyTags($s);
+        $s = XMLUtils::createAmpersand($s);
 
         // Create new Dom
         $newDom = new DOMDocument();
