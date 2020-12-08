@@ -16,7 +16,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeParagraphsInBody($document);
         XMLUtils::addChildElement($document, "ab","lb");
         XMLUtils::removeControlledVocabsWordTagging($document);
-        XMLUtils::enumerateLineBegginings($document);
+        XMLUtils::enumerateLineBeginings($document);
         XMLUtils::removeBoldTags($document);
 
 

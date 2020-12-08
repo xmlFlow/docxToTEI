@@ -17,6 +17,7 @@ class XMLUtils {
      */
     public static function cleanMultipleSpaces(string $s) {
         return preg_replace('/\s+/i', ' ', $s);
+        return $s;
     }
 
     public static function replaceNotes(string $s) {
@@ -64,15 +65,19 @@ class XMLUtils {
         return $dom;
     }
 
-    public static function enumerateLineBegginings($dom) {
+    public static function enumerateLineBeginings($dom) {
         $xpath = new DOMXPath($dom);
         $i = 1;
-        foreach ($xpath->query('//ab/lb') as $node) {
-            $attr = $dom->createAttribute("n");
-            $attr->value = $i;
-            $node->appendChild($attr);
-            $i++;
+        $abs = $xpath->query('//ab');
+        foreach ($abs as $ab) {
+            foreach ($xpath->query('lb', $ab) as $ln) {
 
+                $attr = $dom->createAttribute("n");
+                $attr->value = $i;
+                $ln->appendChild($attr);
+                $i++;
+            }
+            $i = 1;
         }
     }
 
@@ -397,7 +402,7 @@ class XMLUtils {
             $parts = explode("@", $str);
             if (!is_null($parts)) {
                 $qty = $elem->createAttribute('quantity');
-                $gapsLength = substr_count(array_shift($parts), str_replace('\\','',$characterType));
+                $gapsLength = substr_count(array_shift($parts), str_replace('\\', '', $characterType));
                 $qty->value = $gapsLength;
                 $sp->appendChild($qty);
                 $unt = array_shift($parts);

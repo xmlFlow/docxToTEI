@@ -32,7 +32,7 @@ class Abstracts extends DOMDocument {
             foreach ($abstractSec as $abstract) {
                 if (strlen($abstract->textContent) > 0) {
                     $s = $abstract->ownerDocument->saveXML($abstract);
-                    $s = XMLUtils::cleanMultipleSpaces($s);
+
                     $s = XMLUtils::createFootnoteTags($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);

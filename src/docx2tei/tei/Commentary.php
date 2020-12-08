@@ -32,7 +32,7 @@ class Commentary extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s = XMLUtils::cleanMultipleSpaces($s);
+
                     # create spaces
                     $s = XMLUtils::createSpaces($s,'\.');
                     $s = XMLUtils::createFootnoteTags($s);
