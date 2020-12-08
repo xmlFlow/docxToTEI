@@ -32,7 +32,7 @@ class Synopsis extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     $s = XMLUtils::createFootnoteTags($s);
                     $s = XMLUtils::createStructuredContent($s);
                     # create spaces

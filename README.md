@@ -39,7 +39,7 @@
 | 16. CZ:  Testen | `<lb>, so far only at the beginning of first <ab> <lb n="1"/> is included, but no <lb n="2"/> etc., furthermore <lb>s are missing in all following <ab>s (pleas note, that in every <ab> the counting should start with n="1" anew)` | | | 
 | 17. CZ: Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
 | 18. CZ: | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | | 
-| 19. SC: | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | | |
+| 19. SC: Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | |  habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
 | 20. CZ: | `surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
  
 
@@ -73,11 +73,11 @@
   | 19. :robot: | `&#x200c;` | | `भो#orig{•}##-#ग्&#8205;य` | `<w>ग्&#8205;य</w> | Correct the &amp; as & |
   | 20. :robot: | `&#8205;` | | `भो#orig{•}##-#ग्&#x200c;य` | `<w>भो<orig>•</orig><lb n="15" break="no"/>ग्&#x200c;य</w>` |  |
   | 21. :heavy_check_mark: | #div@id@type@lang# | | `#div@abs@abstract@eng#` `#div@ed@edition@nep-san@` | `<div xml:id="abs" type="abstract" xml:lang="eng">` |   [div](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-div.html)|
-  | 22. :robot: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
-  | 23. :robot: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
-  | 26. :robot: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
+  | 22. :heavy_check_mark: | #ab@type@correspond# |  | `#ab@addition@#addition1#` | `<ab type="addition" corresp="# addition1">` |   [Annonymous ](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-ab.html)|
+  | 23. :heavy_check_mark: | #pb@p:page-number@facs#|  | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` |  [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
+  | 26.  :heavy_check_mark: | `.` |  | . | `<orig>.</orig>`  | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
   | 24. :robot: | last minus of a sentence| | | | |
-  | 25. :robot: | lb etween 2 `ab` s there should be `p` s| | | | |
+  | 25. :robot: | between 2 `ab` s there should be `p` s| | | | |
   
  
   

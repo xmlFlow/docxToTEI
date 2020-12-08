@@ -15,9 +15,17 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function cleanMultipleSpaces(string $s) {
+    public static function removeMultipleSpacesandZWNJS(string $s) {
+        $s = preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
         return preg_replace('/\s+/i', ' ', $s);
-        return $s;
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    public static function removeEmptyTags(string $s) {
+        return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
     }
 
     public static function replaceNotes(string $s) {
@@ -173,8 +181,9 @@ class XMLUtils {
     }
 
     public static function createWords(string $s) {
-        if (preg_match("/([\p{Devanagari}])+/u", $s, $matches)) {
-            $s = preg_replace('/([\p{Devanagari}]+)/u', '<w>$1</w>', $s);
+        $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;)+";
+        if (preg_match("/".$preg."/u", $s, $matches)) {
+            $s = preg_replace('/'.$preg.'/u', '<w>$0</w>', $s);
 
         }
         return $s;

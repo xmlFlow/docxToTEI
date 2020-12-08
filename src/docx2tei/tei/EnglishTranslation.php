@@ -35,7 +35,7 @@ class EnglishTranslation extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s = XMLUtils::cleanMultipleSpaces($s);
+                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
