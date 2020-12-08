@@ -17,14 +17,13 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addChildElement($document, "ab","lb");
         XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBeginings($document);
-        XMLUtils::removeBoldTags($document);
+        XMLUtils::removeTags($document,"//bold");
+        XMLUtils::removeTags($document,"//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
 
         // String operations
         $s = $document->saveXML();
-        $s = XMLUtils::createComplexSentence($s);
-        $s = XMLUtils::handleLastMinus($s);
         $s = XMLUtils::createFootnoteTags($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::removeEmptyTags($s);

@@ -74,9 +74,10 @@ class XMLUtils {
         return $dom;
     }
 
-    public static function removeBoldTags($dom) {
+    public static function removeTags($dom, $str) {
         $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//bold') as $node) {
+
+        foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -158,13 +159,11 @@ class XMLUtils {
 
     }
 
-    public static function addChildElement($dom, $elems, $child): void {
-        $elems = $dom->getElementsByTagName($elems);
-        $firstItem = $elems->item(0);
+    public static function addChildElement($dom, $parent, $child): void {
+        $nodes = $dom->getElementsByTagName($parent);
 
-        $newItem[] = $dom->createElement($child);
-        foreach ($newItem as $xmlItem) {
-            $firstItem->insertBefore($xmlItem, $firstItem->firstChild);
+        foreach ($nodes as $node) {
+            $node->insertBefore($dom->createElement($child), $node->firstChild);
         }
 
 

@@ -73,7 +73,9 @@ class Edition extends DOMDocument {
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::createWords($s);
-
+                    # handle sb and se
+                    $s = XMLUtils::createComplexSentence($s);
+                    $s = XMLUtils::handleLastMinus($s);
 
 
                     #rename tags
