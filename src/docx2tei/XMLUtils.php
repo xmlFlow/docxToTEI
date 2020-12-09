@@ -273,7 +273,7 @@ class XMLUtils {
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
-                $str = str_replace(" ", '', $m);
+                $str = trim($m,XMLUtils::$bnd);
                 $parts = explode("{", $str);
                 $suffix1 = str_replace('}', '', $parts[1]);
                 if (count($parts) == 3) {
