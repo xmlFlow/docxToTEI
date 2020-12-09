@@ -31,7 +31,7 @@ class XMLUtils {
 
 
     public static function handleLastMinus(string $s) {
-        $s=  preg_replace('/(\s)*-(\s)*<\/s>/i', '<lb break="no"/></s>', $s);
+        $s=  preg_replace('/(\s)*-(\s)*<\/s>/', '<lb break="no"/></s>', $s);
 
         return $s;
     }
@@ -54,7 +54,7 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function tagReplace(string $content, string $tag, string $replace) {
-        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/i', '<' . $replace . '>$1</' . $replace . '>', $content);
+        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/', '<' . $replace . '>$1</' . $replace . '>', $content);
     }
 
     /**
@@ -134,11 +134,11 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createComplexSentence(string $s) {
-        preg_match_all('/#SB(.|\n)*?#SE/i', $s, $matches);
+        preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
-            $s = preg_replace('/#SB/i', '<s>', $s);
-            $s = preg_replace('/#SE/i', '</s>', $s);
+            $s = preg_replace('/#SB/', '<s>', $s);
+            $s = preg_replace('/#SE/', '</s>', $s);
         }
 
         return $s;
