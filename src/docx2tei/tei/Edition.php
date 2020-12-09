@@ -57,7 +57,6 @@ class Edition extends DOMDocument {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
                     # ! order is important. never change order #
-                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     $s = XMLUtils::createLineBegin($s);
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
@@ -72,6 +71,7 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createStructuredContent($s);
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
+                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     $s = XMLUtils::createWords($s);
                     # handle sb and se
 

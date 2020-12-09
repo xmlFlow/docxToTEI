@@ -29,9 +29,8 @@ class XMLUtils {
     }
 
 
-
     public static function handleLastMinus(string $s) {
-        $s=  preg_replace('/(\s)*-(\s)*<\/s>/', '<lb break="no"/></s>', $s);
+        $s = preg_replace('/(\s)*-(\s)*<\/s>/', '<lb break="no"/></s>', $s);
 
         return $s;
     }
@@ -191,23 +190,24 @@ class XMLUtils {
         $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
         return $s;
     }
+
     public static function addParagraphsBetweenAnonymousBlocks($dom) {
         $abs = $dom->getElementsByTagName("ab");
         foreach ($abs as $ab) {
 
             try {
-                $ab->parentNode->insertBefore( $dom->createElement('p'), $ab->nextSibling);
-            } catch(\Exception $e){
-                $ab->parentNode->appendChild( $ab);
+                $ab->parentNode->insertBefore($dom->createElement('p'), $ab->nextSibling);
+            } catch (\Exception $e) {
+                $ab->parentNode->appendChild($ab);
             }
 
         }
     }
 
     public static function createWords(string $s) {
-        $preg = "(\p{Devanagari}|&amp;x200c;|&amp;#8205;)+";
-        if (preg_match("/".$preg."/u", $s, $matches)) {
-            $s = preg_replace('/'.$preg.'/u', '<w>$0</w>', $s);
+        $preg = "(\p{Devanagari}|#&amp;x200c;|#&amp;8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
+        if (preg_match("/" . $preg . "/u", $s, $matches)) {
+            $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
 
         }
         return $s;
@@ -413,7 +413,7 @@ class XMLUtils {
     /**
      * @param $value
      */
-    public static function print_error($message, $exit=false): void {
+    public static function print_error($message, $exit = false): void {
         echo("" . $message . "\n");
         if ($exit) {
             exit("[Error] Please correct your Microsoft Word file  and upload again");
@@ -440,7 +440,7 @@ class XMLUtils {
                 $qty->value = $gapsLength;
                 $sp->appendChild($qty);
                 $unt = array_shift($parts);
-                $unt = (is_null($unt)) ? "chars": $unt;
+                $unt = (is_null($unt)) ? "chars" : $unt;
                 $unit = $elem->createAttribute('unit');
                 $unit->value = $unt;
                 $sp->appendChild($unit);

@@ -18,9 +18,10 @@
  ### Testing Round 2
   | Nr. Status | Fehler | Grund| Korrektur |
  | ---- | ---- | ---- | ---- |
- | 1.  | `<space› please check again, e.g. #.....# is now converted to <space quantity="3"/> (value should be 5, @unit is missing)` |  |  Could not reproduce the  quantitiy, unit default added. e.g.  |
+ | 1.  | `<space› please check again, e.g. #.....# is now converted to <space quantity="3"/> (value should be 5, @unit is missing)` |  |  Christoph, could not reproduce the  quantitiy, unit default added. e.g. #.....@lines#  |
  | 2. | `I realized that no <w>s are annotated inside <persName>`| |Manik wanted it when we went through last-time, therefore I removed it from all the places, names, and geographical locations. I reverted the function now.|
- | 3. | `<lb> is  found in all <ab>s now. Good! But still there is no <lb> for the second, third etc. line (also "-" is not working yet)`| | Could not reproduce it, Chrisoph, can you send me the reference document |   
+ | 3. | `<lb> is  found in all <ab>s now. Good! But still there is no <lb> for the second, third etc. line (also "-" is not working yet)`| | Could not reproduce. Has to test some reference docs. |
+ | 4. | `ZWJ is properly integrated but ZWNJ is still outside the <w> token ` | | Hatte ein Typo,  habe korrigiert.|   
  
  
  ### Testing Round 1
