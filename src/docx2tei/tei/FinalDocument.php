@@ -52,8 +52,8 @@ class FinalDocument extends DOMDocument {
     }
 
     function isComplexStatementsCorrect($s): bool {
-        preg_match_all('/#SB/i', $s, $SBS);
-        preg_match_all('/#SE/i', $s, $SES);
+        preg_match_all('/#SB/', $s, $SBS);
+        preg_match_all('/#SE/', $s, $SES);
 
         $diff = count($SBS[0]) - count($SES[0]);
         if ($diff > 0) {
