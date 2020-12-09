@@ -140,7 +140,8 @@ class TEIDocument extends DOMDocument {
     }
 
     public function saveToFile(string $pathToFile) {
-
-        $this->newDom->save($pathToFile);
+        $content =$this->newDom->saveXML();
+        $content = str_replace("&amp;", "&", $content);
+        file_put_contents($pathToFile, $content);
     }
 }

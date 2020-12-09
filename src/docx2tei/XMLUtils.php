@@ -32,7 +32,7 @@ class XMLUtils {
 
     public static function handleLastMinus(string $s) {
         $s=  preg_replace('/(\s)*-(\s)*<\/s>/i', '<lb break="no"/></s>', $s);
-        //$s=  preg_replace('/&amp;#x200c;/i', '&amp;#x200c;', $s);
+
         return $s;
     }
 

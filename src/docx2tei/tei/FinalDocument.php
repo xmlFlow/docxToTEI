@@ -22,6 +22,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
 
+
         // String operations
         $s = $document->saveXML();
         $s = XMLUtils::createFootnoteTags($s);
