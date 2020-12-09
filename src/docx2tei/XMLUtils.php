@@ -440,11 +440,11 @@ class XMLUtils {
                 $qty->value = $gapsLength;
                 $sp->appendChild($qty);
                 $unt = array_shift($parts);
-                if (!is_null($unt)) {
-                    $unit = $elem->createAttribute('unit');
-                    $unt->value = $unt;
-                    $sp->appendChild($unit);
-                }
+                $unt = (is_null($unt)) ? "chars": $unt;
+                $unit = $elem->createAttribute('unit');
+                $unit->value = $unt;
+                $sp->appendChild($unit);
+
             }
             if (count($parts) > 0) {
                 for ($i = 0; $i < count($parts); $i++) {
