@@ -41,7 +41,7 @@
 | 18.  Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | | with having & in xml , is not good for validating, let us discuss this  | 
 | 19.  Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | |  habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
 | 20. :question:| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | Spezifikation unischer| 
- |21.  Testen  :question: | last minus of a sentence| | | | |
+ |21.  Testen  :question: | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
 
 
 

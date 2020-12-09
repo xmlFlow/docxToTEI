@@ -205,7 +205,7 @@ class XMLUtils {
     }
 
     public static function createWords(string $s) {
-        $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;)+";
+        $preg = "(\p{Devanagari}|&amp;x200c;|&amp;#8205;)+";
         if (preg_match("/".$preg."/u", $s, $matches)) {
             $s = preg_replace('/'.$preg.'/u', '<w>$0</w>', $s);
 
