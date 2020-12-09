@@ -36,18 +36,41 @@ class Headers extends DOMDocument {
         $this->setAuthor($titleStmt);
         $this->setMainEditor($titleStmt);
         $this->setCollaborator($titleStmt);
+        $publicationStmt = $this->createElement("publicationStmt");
+        $fileDesc->appendChild($publicationStmt);
+        $this->setPublicationStmt($publicationStmt);
         $this->setSourceDescription($fileDesc);
         $this->document->teiHeader->appendChild($this->document->importNode($fileDesc, true));
     }
-    /**
-     * @param  $titleStmt
-     *//**/
+
     function setHeaderTitle($titleStmt): void {
         $mainTitle = $this->createElement("title", $this->headers["h12"] ?? "");
         $typeAttrib = $this->createAttribute('type');
         $typeAttrib->value = 'main';
         $mainTitle->appendChild($typeAttrib);
         $titleStmt->appendChild($mainTitle);
+    }
+    /**
+     * @param  $pubStmt
+     *//**/
+    function setPublicationStmt($pubStmt): void {
+        $publisher = $this->createElement("publisher", "Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal");
+        $pubStmt->appendChild($publisher);
+        $pubPlace = $this->createElement("pubPlace", "Heidelberg, Germany");
+        $pubStmt->appendChild($pubPlace);
+        $availability = $this->createElement("availability");
+        $statusAttrib = $this->createAttribute('status');
+        $statusAttrib->value = 'restricted';
+        $availability->appendChild($statusAttrib);
+        $licence = $this->createElement("licence","Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License");
+        $targetAttrib = $this->createAttribute('target');
+        $targetAttrib->value = 'http://creativecommons.org/licenses/by-sa/4.0/';
+        $availability->appendChild($licence);
+        $p = $this->createElement("p","Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).");
+        $availability->appendChild($p);
+
+        $pubStmt->appendChild($availability);
+
     }
 
     /**

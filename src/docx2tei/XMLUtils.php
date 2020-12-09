@@ -24,7 +24,7 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function removeEmptyTags(string $s) {
+    public static function removeTagsWithoutContent(string $s) {
         return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
     }
 

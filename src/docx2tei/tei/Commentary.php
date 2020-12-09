@@ -17,7 +17,7 @@ class Commentary extends DOMDocument {
     protected function getCommentry(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->commentary . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
-            XMLUtils::print_error("[Error] Commentary section not defined");
+            XMLUtils::print_error("[Warning] Commentary section not defined");
         } else {
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');

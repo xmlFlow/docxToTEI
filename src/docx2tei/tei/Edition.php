@@ -74,8 +74,6 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::createWords($s);
                     # handle sb and se
-                    $s = XMLUtils::createComplexSentence($s);
-                    $s = XMLUtils::handleLastMinus($s);
 
 
                     #rename tags
@@ -146,7 +144,7 @@ class Edition extends DOMDocument {
                 }
                 $div->appendChild($ab);
             } else {
-                XMLUtils::print_error("[Error] not enough information in " . $titleContent);
+                XMLUtils::print_error("[Error] Text should be either correctly formatted title in H1  or should be text. Check formatting {" . $titleContent . " }");
             }
         } else {
             XMLUtils::print_error("[Error]  In edition block, section header not defined ");

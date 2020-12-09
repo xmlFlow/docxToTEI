@@ -46,6 +46,7 @@ class TEIDocument extends DOMDocument {
 
 
     }
+
     function getHeaders(): void {
         $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
         foreach ($metadataFields as $metadata) {
@@ -113,6 +114,8 @@ class TEIDocument extends DOMDocument {
     function isCorrectHeaders(): bool {
         return true;
     }
+
+
 
     function renameElement($element, $newName) {
         $newElement = $element->ownerDocument->createElement($newName);

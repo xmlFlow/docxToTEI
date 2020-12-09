@@ -17,7 +17,7 @@ class Synopsis extends DOMDocument {
     protected function setEnglishTranslation(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->synopsis . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
-            XMLUtils::print_error("[Error] synopsis section not defined");
+            XMLUtils::print_error("[Warning] synopsis section not defined");
         } else {
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');

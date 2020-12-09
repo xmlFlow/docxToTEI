@@ -26,7 +26,12 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
         $s = XMLUtils::createFootnoteTags($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
-        $s = XMLUtils::removeEmptyTags($s);
+        $s = XMLUtils::removeTagsWithoutContent($s);
+        # Complex  sentence
+        $this->isComplexStatementsCorrect($s);
+        $s = XMLUtils::createComplexSentence($s);
+        $s = XMLUtils::handleLastMinus($s);
+
 
         // Create new Dom
         $newDom = new DOMDocument();
@@ -37,7 +42,22 @@ class FinalDocument extends DOMDocument {
 
     }
 
+    function isComplexStatementsCorrect($s): bool {
+        preg_match_all('/#SB/i', $s, $SBS);
+        preg_match_all('/#SE/i', $s, $SES);
 
+        $diff = count($SBS[0]) - count($SES[0]);
+        if ($diff > 0) {
+            XMLUtils::print_error("[Fatal Error] Your document contains " . $diff . " #SB elements, which has to be  enclosed with #SE. ");
+            exit('[Fatal Error] Please correct your Word file  and upload again');
+
+        } else if ($diff < 0) {
+            XMLUtils::print_error("[Fatal Error] Your document contains " . abs($diff) . " #SE elements, which has to be  begin with #SB");
+            exit('[Fatal Error] Please your Word file  and upload again');
+        }
+
+        return true;
+    }
     public function getDocumentElement() {
         return $this->document;
     }
