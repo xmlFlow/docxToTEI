@@ -413,10 +413,11 @@ class XMLUtils {
     /**
      * @param $value
      */
-    public static function print_error($message): void {
+    public static function print_error($message, $exit=false): void {
         echo("" . $message . "\n");
-        //exit();
-        //error_log($message."\n");
+        if ($exit) {
+            exit("[Error] Please correct your Microsoft Word file  and upload again");
+        }
     }
 
     /**

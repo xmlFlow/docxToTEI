@@ -14,11 +14,11 @@ class FinalDocument extends DOMDocument {
         // DOM operations
         XMLUtils::removeTitleInBody($document, "title");
         XMLUtils::removeParagraphsInBody($document);
-        XMLUtils::addChildElement($document, "ab","lb");
+        XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBeginings($document);
-        XMLUtils::removeTags($document,"//bold");
-        XMLUtils::removeTags($document,"//table-wrap");
+        XMLUtils::removeTags($document, "//bold");
+        XMLUtils::removeTags($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
 
@@ -31,6 +31,15 @@ class FinalDocument extends DOMDocument {
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::handleLastMinus($s);
+
+        ## Error messages
+        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}|#\w+\{.*}/i', $s, $matches);
+        if (count($matches[0]) > 0) {
+            foreach ($matches as $match) {
+                XMLUtils::print_error("[Error] Formatting error, please correct " . $match[0]);
+                XMLUtils::print_error("[Error] Possible reasons : Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ",true);
+            }
+        }
 
 
         // Create new Dom
@@ -48,16 +57,16 @@ class FinalDocument extends DOMDocument {
 
         $diff = count($SBS[0]) - count($SES[0]);
         if ($diff > 0) {
-            XMLUtils::print_error("[Fatal Error] Your document contains " . $diff . " #SB elements, which has to be  enclosed with #SE. ");
-            exit('[Fatal Error] Please correct your Word file  and upload again');
+            XMLUtils::print_error("[Fatal Error] Your document contains " . $diff . " #SB elements, which has to be  enclosed with #SE. ", true);
 
         } else if ($diff < 0) {
-            XMLUtils::print_error("[Fatal Error] Your document contains " . abs($diff) . " #SE elements, which has to be  begin with #SB");
-            exit('[Fatal Error] Please your Word file  and upload again');
+            XMLUtils::print_error("[Fatal Error] Your document contains " . abs($diff) . " #SE elements, which has to be  begin with #SB", true);
+
         }
 
         return true;
     }
+
     public function getDocumentElement() {
         return $this->document;
     }
