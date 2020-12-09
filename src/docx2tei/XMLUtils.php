@@ -205,7 +205,7 @@ class XMLUtils {
     }
 
     public static function createWords(string $s) {
-        $preg = "(\p{Devanagari}|#&amp;x200c;|#&amp;8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
+        $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
         if (preg_match("/" . $preg . "/u", $s, $matches)) {
             $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
 
@@ -273,7 +273,7 @@ class XMLUtils {
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
-                $str = str_replace(XMLUtils::$bnd, '', $m);
+                $str = str_replace(" ", '', $m);
                 $parts = explode("{", $str);
                 $suffix1 = str_replace('}', '', $parts[1]);
                 if (count($parts) == 3) {

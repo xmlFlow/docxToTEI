@@ -34,7 +34,7 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::handleLastMinus($s);
 
         ## Error messages
-        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}|#\w+\{.*}/', $s, $matches);
+        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
         if (count($matches[0]) > 0) {
             foreach ($matches as $match) {
                 XMLUtils::print_error("[Error] Formatting error, please correct " . $match[0]);
