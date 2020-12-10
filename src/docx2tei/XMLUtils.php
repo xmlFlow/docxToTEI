@@ -41,8 +41,8 @@ class XMLUtils {
     public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-        $s =preg_replace('/&lt;/i', '<', $s);
-        $s =preg_replace('/&gt;/i', '>', $s);
+        $s = preg_replace('/&lt;/i', '<', $s);
+        $s = preg_replace('/&gt;/i', '>', $s);
         return $s;
     }
 
@@ -399,8 +399,6 @@ class XMLUtils {
     }
 
 
-
-
     /**
      * @param string $tagName
      * @param string $attrOne
@@ -414,21 +412,28 @@ class XMLUtils {
     public static function createGap(string $tagName, string $attrOne, string $attrTwo, string $attrThree, string $s, string $attrOneDefault, string $countCharType) {
         preg_match_all('/' . XMLUtils::$bnd . '(' . $countCharType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
         $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
+        foreach ($match as $m) {
+
+            $str = str_replace(XMLUtils::$bnd, '', $m);
             $elem = new DOMDocument();
             $gap = $elem->createElement($tagName);
 
             $parts = explode("@", $str);
-            if (!is_null($parts)) {
-                $gapCharacters = array_shift($parts);
-                $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
-                $ex = $elem->createAttribute($attrTwo);
-                $size = array_shift($parts);
-                $extentVAl = $gapsLength . ' ' . $size;
-                $ex->value = $extentVAl;
-                $gap->appendChild($ex);
+
+            $ex = $elem->createAttribute($attrTwo);
+            $gapCharacters = array_shift($parts);
+            $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
+            if (is_null($parts)) {
+                if ($tagName == "gap") {
+                    $gapsLength = $gapsLength . ' characters';
+                }
+
+            } else {
+                $characterType = array_shift($parts);
+                $gapsLength = $gapsLength . ' ' . $characterType;
             }
+            $ex->value = $gapsLength;
+            $gap->appendChild($ex);
             if (count($parts) > 0 && strlen($attrThree) > 0) {
                 $agent = array_shift($parts);
                 if (!is_null($agent)) {
@@ -450,11 +455,13 @@ class XMLUtils {
                 }
             }
 
-
             $r = $elem->createAttribute($attrOne);
             $r->value = $attrOneDefault;
             $gap->appendChild($r);
-            $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
+
+
+            $count = 1;
+            $s = str_replace($m, $gap->ownerDocument->saveXML($gap), $s, $count);
         }
         return $s;
     }
