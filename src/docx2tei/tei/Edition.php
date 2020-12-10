@@ -64,7 +64,7 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
-                    $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, '', '\.');
+                    $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
 
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);

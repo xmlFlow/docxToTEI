@@ -407,24 +407,22 @@ class XMLUtils {
      * @param string $attrTwo
      * @param string $attrThree
      * @param string $s
-     * @param string $reason
-     * @param string $replace
+     * @param string $attrOneDefault
+     * @param string $countCharType
      * @return string|string[]
      */
-    public static function createGap(string $tagName, string $attrOne, string $attrTwo, string $attrThree, string $s, string $reason, string $replace) {
-        preg_match_all('/' . XMLUtils::$bnd . '(' . $replace . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
-        $gap = $matches[0];
-        if (!is_null($gap) && count($gap) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $gap[0]);
+    public static function createGap(string $tagName, string $attrOne, string $attrTwo, string $attrThree, string $s, string $attrOneDefault, string $countCharType) {
+        preg_match_all('/' . XMLUtils::$bnd . '(' . $countCharType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
             $elem = new DOMDocument();
             $gap = $elem->createElement($tagName);
-            $r = $elem->createAttribute($attrOne);
-            $r->value = $reason;
-            $gap->appendChild($r);
+
             $parts = explode("@", $str);
             if (!is_null($parts)) {
-                $gapsStr = array_shift($parts);
-                $gapsLength = substr_count($gapsStr, str_replace('\\', '', $replace));
+                $gapCharacters = array_shift($parts);
+                $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
                 $ex = $elem->createAttribute($attrTwo);
                 $size = array_shift($parts);
                 $extentVAl = $gapsLength . ' ' . $size;
@@ -451,6 +449,11 @@ class XMLUtils {
                     }
                 }
             }
+
+
+            $r = $elem->createAttribute($attrOne);
+            $r->value = $attrOneDefault;
+            $gap->appendChild($r);
             $s = str_replace($matches[0], $gap->ownerDocument->saveXML($gap), $s);
         }
         return $s;

@@ -41,7 +41,7 @@
                         <altIdentifier type="microfilm">
                             <settlement>Kathmandu, Berlin</settlement>
                             <collection>Nepal German Manuscript Preservation Project</collection>
-                            <idno>NGMPP E 2253/15C</idno>
+                            <idno>NGMPP E 2253/15</idno>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -123,7 +123,7 @@
                     <del rend="crossed_out">
                         <w>स्वस्तिश्री</w>
                     </del>
-                    <gap reason="lost" extent="15 characters" agent="ink"/>
+                    <gap extent="15 characters" agent="ink" reason="lost"/>
                     <w>लिखा</w>
                     <w>पत्रम्</w>
                 </ab>
@@ -240,16 +240,16 @@
                     <lb n="5"/>
                     <s xml:lang="nep">
                         <w>मेरो</w>
-                        <gap reason="illegible" extent="5 " agent="breakage"/>
+                        <gap extent="5 " agent="breakage" reason="illegible"/>
                         <w>नाम</w>
                         <w>विष्णु</w>
                         <w>हो</w>
                         <w>तर</w>
-                        <space unit="" quantity="6 characters"/>
+                        <space quantity="6 chars" unit="chars"/>
                         <w>श्याम</w>
                         <w>होइन</w>
                     </s>
-                    <space unit="" quantity="6 characters"/>
+                    <space quantity="6 chars" unit="chars"/>
                     <s xml:lang="nep">
                         <w>मेरो</w>
                         <add place="below_the_line" hand="second">
