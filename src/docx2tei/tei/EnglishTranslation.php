@@ -43,7 +43,6 @@ class EnglishTranslation extends DOMDocument {
                     $s = XMLUtils::createSpaceTag($s, '\.');
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
-                    $s = XMLUtils::createFootnoteTags($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

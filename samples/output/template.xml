@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="E_2253_0015A">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to  Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma  Guṭhī [VS 1859]</title>
+        <title type="short">Short title of document</title>
+        <title type="sub">E_2253_0015A</title>
+        <author role="issuer">Badarībāṇa Sāhī]</author>
+        <respStmt>
+          <resp>main editor</resp>
+          <name type="synopsis_editor">Name of editor(s)</name>
+        </respStmt>
+        <respStmt>
+          <resp>collaborator</resp>
+          <name type="collaborator">Name of collaborator(s)</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
+        <pubPlace>Heidelberg, Germany</pubPlace>
+        <availability status="restricted">
+          <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+          <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Kathmandu</settlement>
+            <repository>National Archives</repository>
+            <idno>Inventory number assigned by holding institution</idno>
+            <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
+              <settlement>Alternative Location</settlement>
+              <collection>Alternative holding institution</collection>
+              <idno>Alternative Inventory number</idno>
+            </altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <textLang mainLang="Main language of document" otherLangs="Other languages"/>
+          </msContents>
+          <physDesc>
+            <p>For details see <ref target="entry in database">entry in database </ref></p>
+          </physDesc>
+          <history>
+            <origin>
+              <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p>
+            </origin>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc><creation> <date>2020-12-10</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-12-10" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    <surface xml:id="surface2" facs="E_2253_0533.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    <surface xml:id="surface2" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0"/>
+  </facsimile>
+  <text>
+    <body>
+      <div xml:id="abs" type="abstract" xml:lang="eng">
+        <p>First inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+        <p>Second inscription records donors Dhanajyoti and his wife Rukamanī of Subāhāḥ sponsoring the installation of an image of Lokeśvara on a <foreign>phalcā</foreign> and setting up a <foreign>guṭhī</foreign> to observe its anniversary.</p>
+      </div>
+      <div xml:id="ed" type="edition" xml:lang="san">
+        <pb n="#surface1" facs="1r"/>
+        <ab type="invocatio" corresp="#invocatio" n="1"><lb n="1"/><w>श्रीः</w>\</ab>
+        <p/>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="2"><lb n="1"/><w>नं</w>.<w>६६</w></ab>
+        <p/>
+        <ab type="space" corresp="#space2" n="3">
+          <lb n="1"/>
+          <w>श्रीमालीका</w>
+        </ab>
+        <p/>
+        <ab type="maintext" corresp="#main_text" key="valEdi" n="4"><lb n="1"/>(1) <s xml:lang="nep"> <w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="lost" extent="5 "/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w> <w>त्तमकर्ण्णधारः</w> <w>श्रीलोकनाथचरणं</w> <placeName>place_with_unique_id</placeName><w>भवतो</w> </s><w>भजेहं</w> <lb break="no" n="2"/><lb n="3"/>।। ।। <w>श्रेयोऽस्तु</w> <w>सम्वत्</w> <w>८२०</w> <w>वैशाषशुक्लचतुर्थ्या</w>: <w>परे</w> <geogName>corresp_ID</geogName><w>पञ्चम्यान्तिथौ</w> <w>मृगशिर</w>-(2) An empty line break follows me <lb n="4"/>( 3)Two line breaks without a break follows me.<lb break="no" n="5"/><lb break="no" n="6"/><lb n="7"/>(4) Text with 5 illegible characters<w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="illegible" extent="5 "/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="8"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="illegible" extent="5 " agent="agent"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="9"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="illegible" extent="5 extent" agent="agent"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="10"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="11"/>(5) Text with 5 lost characters<w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="lost" extent="5 "/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="12"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="lost" extent="5 " agent="agent"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="13"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="lost" extent="5 extent" agent="agent"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="14"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <gap reason="lost" extent="5 extent" agent="" newAttrib="newValue"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="15"/>(6) Space<w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <space unit="" quantity="7 lines"/> ।। <w>धर्म्मेश्वर</w>: <w>सकलपापविनाशहे</w><lb break="no" n="16"/><w>नमो</w> <w>रत्नंत्रयाय</w> [<w>रत्न</w>˚] <space unit="" quantity="12 "/> ।। <w>धर्म्मेश्वर</w>: <w>सक</w> <gap reason="lost" extent="5 "/><w>लपाप</w> <gap reason="illegible" extent="5 extent" agent="" newAttrib="newValue"/><w>विनाशहे</w><lb break="no" n="17"/><lb n="18"/>(07) This line includes an addition to the text. default is : hand=first , place = above the line.<w>नकर</w> <w>वम्हन</w> <w>प</w> <add place="above_the_line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकम</w> <w>थ्वया</w> <w>नकर</w> <w>वम्हन</w> <w>प</w> <add place="above_the_line" hand="second" new-Attrib1="newValue" new-Attrib2="newValue2"/> <w>नकम</w> <w>थ्वया</w> <w>नकर</w> <w>वम्हन</w> <w>प</w> <add place="above_the_line" hand="first"><w>नकम</w> <w>थ्वया</w></add> <w>नकम</w> <w>थ्वया</w> <w>नकर</w> <w>वम्हन</w> <w>प</w> <add place="below the text" hand="first"><w>नकम</w> <w>थ्वया</w> </add> <w>नकम</w> <w>थ्वया</w> <w>नकर</w> <w>वम्हन</w> <w>प</w> <add place="above_the_line" hand="second"><w>नकम</w> <w>थ्वया</w></add> <w>नकम</w> <w>थ्वया</w> (08) Some unclear text inside a text block default cert=high<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <unclear cert="high"><w>शुभमस्तु</w> <w>शुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तुशुभमस्तु</w> </unclear> <w>दानपति</w> <w>सलको</w> <w>थविर</w> <w>श्री</w> <w>धनजोतिजु</w>(09) sic: reproduced text with corrections<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <choice><sic>¯¯¯¯</sic><corr>- - -</corr></choice> <w>दानपति</w> <w>सलको</w> <w>थविर</w> <w>श्री</w> <w>धनजोतिजु</w><w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <choice><sic>¯¯¯¯ <w>मस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।<w>मस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।<w>मस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।<w>मस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।<w>मस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।</sic><corr>- - -</corr></choice> <w>दानपति</w> <w>सलको</w> <w>थविर</w> <w>श्री</w> <w>धनजोतिजु</w><lb n="19"/>(10): orig: this line contains a text marked as original , rather than being normalized.<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <orig><w>सर्वदा</w></orig> <w>दानपति</w> <w>सलको</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <orig><w>सर्वदा</w> <w>दानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलको</w></orig> <w>दानपति</w> <w>सलको</w> (11): reg: this line contains a text marked as being normalized/corrected<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <choice><orig><w>सर्वदा</w></orig><reg><w>सर्वदा</w> <w>कोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोकोदानपति</w> <w>सलकोदानपति</w> <w>सलकोदानपति</w> <w>सलको</w> </reg></choice> <w>दानपति</w> <w>सलको</w> (12): This line contains unnecessary , repeated text<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <surplus><w>सर्वदा</w></surplus> <w>दानपति</w> <w>सलको</w> x<w>जुरो</w> ।। ।। <surplus><w>सर्वदा</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> </surplus> <w>दानपति</w> <w>सलको</w> x(13) This line includes text supplied by editor, default reason is lost<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <supplied reason="lost"><w>दानपति</w> <w>सलको</w> </supplied> <w>दानपति</w> <w>सलको</w> <w>जुरो</w> ।। ।। <supplied reason="lost-manually-set"><w>सर्वदा</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> </supplied> <w>दानपति</w> <w>सलको</w> x(14) Delete text <foreign>&lt;del @rend="overstrike"&gt;"deleted text"&gt;&lt;/del&gt;</foreign><del rend="crossed_out"><w>सर्वदा</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> </del><del rend="rend"><w>सर्वदा</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> </del>(15) Text with a personal name<w>तुः</w> <w>सौखावतीगतिमहाज</w><persName><w>शुक्रवासरे</w> <w>शुक्रवासरे</w></persName><w>नमार्थहे</w>[<w>तुः</w>] <w>दुःखाधिपारगमनो</w>(16) Text with a place name <w>त्तमकर्ण्णधारः</w> <w>श्रीलोकनाथचरणं</w> <placeName>place_with_unique_id</placeName><w>भवतो</w> <w>भजेहं</w> ।। ।। <w>श्रेयोऽस्तु</w>(17) Text with a geographical name<w>सम्वत्</w> <w>८२०</w> <w>वैशाषशुक्लचतुर्थ्या</w>: <w>परे</w> <geogName>corresp_ID</geogName><w>पञ्चम्यान्तिथौ</w> <w>मृगशिर</w><lb break="no" n="20"/>(18) This line includes a sentence <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।। ।। <sb><w>दानपति</w> <w>सलको</w> <w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> । </sb> <w>दानपति</w> <w>सलको</w> (19) all . are converted to &lt;orig&gt;.&lt;/orig&gt;(20) <w>&amp;#x200c;</w> is let as it is inside text<w>ो</w><orig><orig>•</orig></orig>#-#<w>ग्&amp;#8205;य</w>(21) <w>&amp;#x200c;</w> is let as it is inside text<w>भो</w><orig><orig>•</orig></orig>#-#<w>ग्&amp;#x200c;य</w><lb n="21"/> <foreign/><lb n="22"/><lb n="23"/>(22) All the lines with an ending - has attribute break &lt;lb break="no"/&gt;<w>नक्षत्रे</w> <w>अतिगण्डयोगे</w> <w>शुक्रवासरे</w> <w>थ्वकुन्हु</w> <w>श्रीलोकेश्वर</w> <w>फले</w> <w>प्र</w><lb break="no" n="24"/>(23) All words are included in &lt;w&gt;<w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w> ।<w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w> । <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w>(24) After this line, table begins<lb n="25"/> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p>content 1</p> </cell> <cell> <lb/> </cell> <cell> <p> content 3</p> </cell> <cell> <lb/> </cell> </row> <row> <cell> <p> <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w></p> </cell> <cell> <p><w>सर्वदा</w></p> </cell> <cell> <p><w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w></p> </cell> <cell> <lb/> </cell> </row> </table>Sentence begin after table ends(x) Experimental sentence with line beginning and ending<lb n="26"/>(x) Following word has zero-width joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;<orig>•</orig>&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>ग्&amp;#8205;य</w>&lt;/w&gt;<w>भो</w><orig><orig>•</orig></orig>#-#<w>ग्&amp;#8205;य</w> (x) Following word has zero-width non-joiner which should return &lt;w&gt;<w>भो</w>&lt;orig&gt;<orig>•</orig>&lt;/orig&gt;&lt;lb n="15" break="no"/&gt;<w>ग्&amp;#x200c;य</w>&lt;/w&gt;<w>भो</w><orig><orig>•</orig></orig>#-#<w>ग्&amp;#x200c;य</w> "<lb n="27"/><lb n="28"/><lb n="29"/><lb n="30"/></ab>
+        <p/>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng"><p>which was sent earlier, must have arrived. Regarding the Dasaĩ in , it turns</p><p> out that at the Candanātha sanctum the conclusion [of the ritual only takes place] on the full moon day, and the sending of the prasāda as [therefore] delayed. The <foreign>prasāda</foreign> of the Jumalā company and that of Dasaĩ - - - (i.e. Venerable Mālikā)</p><p> &lt;Inserted from the space above. The phrase dasai <foreign>śrīmālīkāko</foreign> <foreign>prasāda</foreign></p><p> is a bit puzzling. Either it refers to a special form of the goddess worshipped on the</p><p> occasion of Dasaĩ or the syntax is deficient, a formulation such as &lt;&gt;dasaiko</p><p>  <foreign>śrīmālīkāko prasāda</foreign> or śrīmālīkāko dasaiko prasāda being intended here.</p><p> arrived. It has been sent. They will have been presented [to you]. Tuesday, 10th of the dark</p><p> fortnight of Kārttika, [in the Vikrama] era year 1877 (1820 CE). Residence: Sallyāna. Auspiciousness.<persName>शुक्रवासरे शुक्रवासरे</persName> Text with a place name </p><p><placeName>place_with_unique_id</placeName> Text with a geographical name <geogName>corresp_ID</geogName></p> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> </row> <row> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> <cell> <p>जि फं २ थ्व </p> </cell> </row> </table> </div>
+      <div xml:id="synopsis" type="synopsis" xml:lang="eng">
+        <p>On Friday, [the concluding of] the 4th and [the beginning of] the 5th of the bright fortnight of Vaiśākha in NS 820 (1700 CE), an image of <foreign>Lokeśvara</foreign> was installed on the <foreign>phalcā</foreign><foreign><sup>1</sup></foreign>. Donors Dhanajyoti and his wife Rukamanī of Subāhāḥ donated 8 <foreign>ropanī</foreign>s<sup>2</sup> of land in …<sup>3</sup> and established a <foreign>guṭhī</foreign><foreign><sup>4</sup></foreign> to observe the anniversary. From the income of the land, an offering of 2 <foreign>pāthī</foreign>s of dry-fried puffed rice (<foreign>syāḥbaji</foreign>), 2 <foreign>pāthī</foreign>s of <foreign>thvã</foreign>…<sup>5</sup> shall be made at the <foreign>phalcā</foreign> as charity (<foreign>dāna</foreign>) on <foreign>meṣa saṃkrānti</foreign>, the first day of Vaiśākha. A coat of whitewash shall be painted out of 2 <foreign>pāthī</foreign>s of lime and … shall be fed food items of their choice<sup>6</sup>. Jyotiju (text: Jotiju), Maṇidevaju, …varājaju<sup>7</sup> of Ko Bāhāḥ, <foreign>Kutuju</foreign><foreign><sup>8</sup></foreign> of Oku Bāhāḥ (text: Vaṃku Bāhara), the members of the <foreign>guṭhī</foreign>, shall …<sup>9</sup> . A certain amount has been allocated for renovation of the <foreign>phalcā</foreign>. The person who feeds shall receive a thousandfold merit.</p>
+      </div>
+      <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>As many inscribed letters of this inscription have already faded, it is difficult to understand its content in full. But what we know from this inscription is Dhanajyoti and his wife Rukamanī from Subāhāḥ sponsored the installation of an image of <foreign>Lokeśvara</foreign> at a <foreign>phalcā</foreign> in Subāhāḥ and also donated land for observing the anniversary of the image. The actual<sup>10</sup> location of the <foreign>phalcā</foreign> in which the image was installed is not clear, as the inscription is no longer at its original location. The <foreign>phalcā</foreign> probably is the one to the east of the monastery.<sup>11</sup></p>
+        <p>1 [New.] var. <foreign>phale</foreign>, <foreign>phalacā</foreign>; n. one-storeyed building open towards the street for religious or social functions or for travellers. Phalcā is little more than roofed rectangular platform, “usually a lean-to in the towns, but free-standing along the trails” (cf. Slusser 1998, vol. 1, 146).</p>
+        <p>2 [fr. S.] var. <foreign>ropani</foreign>; n. unit of land measurement in the hill region, including the Kathmandu Valley, comprising four <foreign>murīs</foreign>. The area may vary according to the grade, but current standard area for a <foreign>ropanī</foreign> comprises 5,476 square feet.</p>
+        <p>3 The three unreadable letters here are perhaps the name of the place where the donated land was situated.</p>
+        <p>4 [fr. S. <foreign>goṣṭhī</foreign>] var. <foreign>guṭh</foreign>; n. “endowed lands or other sources of revenue for financing religious and charitable functions “(M.R. Pant 2002: 132; cf. M.C. Regmi 1988: 267.</p>
+        <p>5 The letters inscribed after <foreign>thva</foreign> have already faded. But it probably means <foreign>thvã</foreign> i.e. homemade spirituous liquor prepared from fermented rice. The sentence probably lists other items too.</p>
+        <p>6 As few letters have faded, we do not know the persons to be fed the items of their choice.</p>
+        <p>7 The first letter of his name is unreadable, but it probably is Devarājaju or Jīvarājaju.</p>
+        <p>8 He probably is <foreign>kutu bhāju</foreign>, a government official (Malla 2000: 53).</p>
+        <p>9 It is not clear what the members of the <foreign>guṭhī</foreign> were instructed to do, as the letters here in the inscription have faded.</p>
+        <p>10 Test Endnote 1</p>
+        <p>11 TestEndnote 2</p>
+      </div>
+    </body>
+  </text>
+</TEI>

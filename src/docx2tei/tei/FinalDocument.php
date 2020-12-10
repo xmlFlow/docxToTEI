@@ -19,14 +19,17 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTags($document, "//bold");
         XMLUtils::removeTags($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
-// String operations
+        // String operations
         $s = $document->saveXML();
-        $s = XMLUtils::createFootnoteTags($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
+
+        # correct after creating tags
+
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
+
 ## Error messages
         preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
         if (count($matches[0]) > 0) {

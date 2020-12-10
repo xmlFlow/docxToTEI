@@ -41,6 +41,9 @@ class XMLUtils {
     public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
+        $s =preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
+        $s =preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
+
         return $s;
     }
 
@@ -113,17 +116,6 @@ class XMLUtils {
         return $dom;
     }
 
-    /**
-     * @param $s
-     * @return string|string[]|null
-     */
-    public static function createFootnoteTags(string $s) {
-        preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
-        preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-        preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
-        preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
-        return $s;
-    }
 
     /**
      * @param $s

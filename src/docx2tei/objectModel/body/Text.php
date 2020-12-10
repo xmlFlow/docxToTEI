@@ -43,7 +43,7 @@ class Text extends DataObject {
                     $children = $footnotesXpath->query('w:p/w:r', $footnoteNode);
                     $footnoteString = '';
                     foreach ($children as $child) {
-                        $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]', $child);
+                        $fnType = $footnotesXpath->evaluate('w:rPr/w:rStyle[@w:val="Emphasis"]|w:rPr/w:i', $child);
                         $fnText = $footnotesXpath->evaluate('w:t', $child);
                         if (count($fnType) > 0 && count($fnText) > 0) {
                             $footnoteString .= '<foreign>' . $fnText->item(0)->nodeValue . '</foreign>';
