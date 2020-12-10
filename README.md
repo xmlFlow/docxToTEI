@@ -15,6 +15,7 @@
 * Content for XML is written in {}. 
 * _Italic_ is supported. **Bold** is not supported. 
  
+
  ### Testing Round 2
   | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
@@ -24,12 +25,12 @@
  | 4. | `ZWJ is properly integrated but ZWNJ is still outside the <w> token ` |  Had a typo| 
  | 5. | `add:  @xml:lang for <s>  [The input would be e.g., @san, @nep]` |   Implemented. defaulted to nep. Any language with three codes will be recognized. Please check this, cause I did not see this in example|
  | 6. | `not required: @reason for <surplus>` | default removed|
- | 7. | `missing: <lb @n> for each line and each <ab>` | lb should have worked, ab numbering added.|
+ | 7. | `missing: <lb @n> for each line and each <ab>` | lb should have worked, ab numbering added. Each ab begins with a n=1 or should they be incrementally counted?|
  | 8. | `not implemented: "-" at the end of line as <lb break="no">` |  newly implemented e.g handling. का- or रुक्का-#SE |
 | 9. |  `not implemented: zones according to the <ab>s` | Newly implemented |
 | 10. |  `number of dots (...) for space was not correctly counted` | Corrected | 
 | 11. |   `in the footnotes, texts in italics are not transformed into <foreign>`| Added|
-   
+  
  
  
  ### Testing Round 1
@@ -54,8 +55,8 @@
 | 17. Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
 | 18. Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | Manik, I did the & conversion, but the XML was invalid. I can do it, but let us have a discussion there. | | 
 | 19. Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | | habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
-| 20. :question:| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | Spezifikation unischer| 
- |21. Testen :question: | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
+| 20. Testen| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | Spezifikation unischer| 
+|21. Testen | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
 
 
 

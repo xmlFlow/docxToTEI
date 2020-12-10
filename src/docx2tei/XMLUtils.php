@@ -92,7 +92,6 @@ class XMLUtils {
             $abAttr = $dom->createAttribute("n");
             $abAttr->value = $abCount;
             $ab->appendChild($abAttr);
-            $abCount++;
             foreach ($xpath->query('lb', $ab) as $ln) {
                 $attr = $dom->createAttribute("n");
                 $attr->value = $lbCount;
