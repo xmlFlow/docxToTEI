@@ -1,11 +1,15 @@
 <?php
+
 namespace docx2tei\tei;
+
 use docx2tei\XMLUtils;
 use DOMDocument;
 use DOMElement;
+
 class Edition extends DOMDocument {
     var $document;
-public function __construct(TEIDocument $document) {
+
+    public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
@@ -16,8 +20,9 @@ public function __construct(TEIDocument $document) {
             $this->createSections($div);
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
-}
-private function createDiv() {
+    }
+
+    private function createDiv() {
         $div = $this->createElement("div");
         $idAttrib = $this->createAttribute('xml:id');
         $idAttrib->value = "ed";
@@ -37,7 +42,8 @@ private function createDiv() {
         $div->appendChild($langAttr);
         return $div;
     }
-/**
+
+    /**
      * @param DOMElement $div
      */
     private function createSections(DOMElement $div): void {
@@ -59,7 +65,7 @@ private function createDiv() {
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, '', '\.');
-$s = XMLUtils::createSpaceTag($s, '\.');
+                    $s = XMLUtils::createSpaceTag($s, '\.');
 # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
                     # set . as <orig> dot
@@ -72,16 +78,17 @@ $s = XMLUtils::createSpaceTag($s, '\.');
                     #$s = XMLUtils::tagReplace($s, 'p', 'ab');
                     # create words
 # ! order is important. never change order #
-$frag = $this->createDocumentFragment();
+                    $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {
                         $ab->appendChild($frag);
                     }
                 }
             }
-}
+        }
     }
-/**
+
+    /**
      * @param $section
      * @param DOMElement $div
      */

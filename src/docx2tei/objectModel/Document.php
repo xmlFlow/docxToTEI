@@ -1,8 +1,10 @@
 <?php namespace docx2tei\objectModel;
+
 use docx2tei\objectModel\body\Image;
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\body\Table;
 use DOMXPath;
+
 class Document {
     const SECT_NESTED_LEVEL_LIMIT = 5; // limit the number of possible levels for sections
 // Represent styling for OOXMl structure elements
@@ -21,7 +23,8 @@ class Document {
     private $styles;
     private $numbering;
     private $footnotes;
-public function __construct(array $params) {
+
+    public function __construct(array $params) {
         if (array_key_exists("relationships", $params)) {
             $this->relationships = $params["relationships"];
             self::$relationshipsXpath = new DOMXPath($this->relationships);
@@ -34,7 +37,7 @@ public function __construct(array $params) {
             $this->numbering = $params["numbering"];
             self::$numberingXpath = new DOMXPath($this->numbering);
         }
-if (array_key_exists("footnotes", $params)) {
+        if (array_key_exists("footnotes", $params)) {
             $this->footnotes = $params["footnotes"];
             self::$footnotesXpath = new DOMXPath($this->footnotes);
         }
@@ -45,7 +48,7 @@ if (array_key_exists("footnotes", $params)) {
             switch ($childNode->nodeName) {
                 case "w:p":
                     // There can be multiple drawings inside a run and multiple elements inside a drawing
-if ($this->isDrawing($childNode)) {
+                    if ($this->isDrawing($childNode)) {
                         // TODO add support for other drawings type, e.g., c:chart
                         self::$xpath->registerNamespace("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
                         $imageNodes = self::$xpath->query(".//pic:pic", $childNode);
@@ -69,12 +72,14 @@ if ($this->isDrawing($childNode)) {
         $this->content = $this->addSectionMarks($content);
         self::$minimalHeadingLevel = $this->minimalHeadingLevel();
     }
-private function isDrawing($childNode): bool {
+
+    private function isDrawing($childNode): bool {
         $element = Document::$xpath->query("w:r//w:drawing", $childNode)[0];
         if ($element) return true;
         return false;
     }
-private function addSectionMarks(array $content): array {
+
+    private function addSectionMarks(array $content): array {
         $flatSectionId = 0; // simple section id
         $dimensions = array_fill(0, self::SECT_NESTED_LEVEL_LIMIT, 0); // contains dimensional section id
         foreach ($content as $key => $object) {
@@ -87,7 +92,8 @@ private function addSectionMarks(array $content): array {
         }
         return $content;
     }
-private function extractSectionDimension(Par $object, array $dimensions): array {
+
+    private function extractSectionDimension(Par $object, array $dimensions): array {
         $number = $object->getHeadingLevel() - 1;
         $dimensions[$number]++;
         while ($number < self::SECT_NESTED_LEVEL_LIMIT) {
@@ -96,7 +102,8 @@ private function extractSectionDimension(Par $object, array $dimensions): array 
         }
         return $dimensions;
     }
-private function minimalHeadingLevel(): int {
+
+    private function minimalHeadingLevel(): int {
         $minimalNumber = 7;
         foreach ($this->content as $dataObject) {
             if (get_class($dataObject) === "docx2tei\objectModel\body\Par" && in_array(Par::DOCX_PAR_LIST, $dataObject->getType())) {
@@ -108,15 +115,18 @@ private function minimalHeadingLevel(): int {
         }
         return $minimalNumber;
     }
-public static function getMinimalHeadingLevel(): int {
+
+    public static function getMinimalHeadingLevel(): int {
         return self::$minimalHeadingLevel;
     }
-static function getRelationshipById(string $id): string {
+
+    static function getRelationshipById(string $id): string {
         $element = self::$relationshipsXpath->query("//*[@Id='" . $id . "']");
         $target = $element[0]->getAttribute("Target");
         return $target;
     }
-static function getElementStyling(string $constStyleType, string $id): ?string {
+
+    static function getElementStyling(string $constStyleType, string $id): ?string {
         if (self::$stylesXpath) {
             $element = self::$stylesXpath->query("/w:styles/w:style[@w:type='" . $constStyleType . "'][@w:styleId='" . $id . "']")[0];
             $name = self::$stylesXpath->query("w:name", $element)[0];
@@ -125,7 +135,8 @@ static function getElementStyling(string $constStyleType, string $id): ?string {
             return null;
         }
     }
-static function getNumberingTypeById(string $id, string $lvl): ?string {
+
+    static function getNumberingTypeById(string $id, string $lvl): ?string {
         if (!self::$numberingXpath) return null; // the numbering styles are missing.
         $element = self::$numberingXpath->query("//*[@w:abstractNumId='" . $id . "']");
         if ($element->count() == 0) return null;
@@ -135,7 +146,8 @@ static function getNumberingTypeById(string $id, string $lvl): ?string {
         if ($type->count() == 0) return null;
         return $type[0]->nodeValue;
     }
-public function getContent(): array {
+
+    public function getContent(): array {
         return $this->content;
     }
 }

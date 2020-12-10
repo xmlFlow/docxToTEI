@@ -1,16 +1,21 @@
 <?php namespace docx2tei\objectModel\body;
+
 use docx2tei\objectModel\DataObject;
 use DOMElement;
+
 class Footnote extends DataObject {
     private $footnote;
-public function __construct(DOMElement $domElement, $params) {
+
+    public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->footnote = $this->extractFootnote();
     }
-private function extractFootnote(): ?string {
+
+    private function extractFootnote(): ?string {
         return "";
-}
-public function getFootnote(): ?string {
+    }
+
+    public function getFootnote(): ?string {
         return $this->footnote;
     }
 }

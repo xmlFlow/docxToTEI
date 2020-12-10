@@ -1,12 +1,18 @@
 <?php
+
 namespace docx2tei;
+
 use DOMDocument;
 use DOMXPath;
+use Exception;
+
 class XMLUtils {
     protected static $bnd = '#';
-public function __construct() {
+
+    public function __construct() {
     }
-/**
+
+    /**
      * @param $s
      * @return string|string[]|null
      */
@@ -14,34 +20,39 @@ public function __construct() {
         $s = preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
         return preg_replace('/\s+/i', ' ', $s);
     }
-/**
+
+    /**
      * @param string $s
      * @return string|string[]|null
      */
     public static function removeTagsWithoutContent(string $s) {
         return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
     }
-public static function replaceLastMinus(string $s) {
+
+    public static function replaceLastMinus(string $s) {
         $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
         return $s;
     }
-/**
+
+    /**
      * @param string $s
      * @return string|string[]|null
      */
     public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-return $s;
-}
-/**
+        return $s;
+    }
+
+    /**
      * @param string $content
      * @return string|string[]|null
      */
     public static function tagReplace(string $content, string $tag, string $replace) {
         return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/', '<' . $replace . '>$1</' . $replace . '>', $content);
     }
-/**
+
+    /**
      * @param $dom
      * @param $elementName
      * @return mixed
@@ -57,9 +68,10 @@ return $s;
         }
         return $dom;
     }
-public static function removeTags($dom, $str) {
+
+    public static function removeTags($dom, $str) {
         $xpath = new DOMXPath($dom);
-foreach ($xpath->query($str) as $node) {
+        foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -68,7 +80,8 @@ foreach ($xpath->query($str) as $node) {
         }
         return $dom;
     }
-public static function enumerateLineBegins($dom) {
+
+    public static function enumerateLineBegins($dom) {
         $xpath = new DOMXPath($dom);
         $lbCount = 1;
         $abCount = 1;
@@ -79,7 +92,7 @@ public static function enumerateLineBegins($dom) {
             $ab->appendChild($abAttr);
             $abCount++;
             foreach ($xpath->query('lb', $ab) as $ln) {
-$attr = $dom->createAttribute("n");
+                $attr = $dom->createAttribute("n");
                 $attr->value = $lbCount;
                 $ln->appendChild($attr);
                 $lbCount++;
@@ -87,7 +100,8 @@ $attr = $dom->createAttribute("n");
             $lbCount = 1;
         }
     }
-public static function removeControlledVocabsWordTagging($dom) {
+
+    public static function removeControlledVocabsWordTagging($dom) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
             $parent = $node->parentNode;
@@ -98,7 +112,8 @@ public static function removeControlledVocabsWordTagging($dom) {
         }
         return $dom;
     }
-/**
+
+    /**
      * @param $s
      * @return string|string[]|null
      */
@@ -107,9 +122,10 @@ public static function removeControlledVocabsWordTagging($dom) {
         preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
         preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
         preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
-return $s;
+        return $s;
     }
-/**
+
+    /**
      * @param $s
      * @return string|string[]|null
      */
@@ -122,26 +138,29 @@ return $s;
             $s = preg_replace('/#SB/', '<s xml:lang="nep">', $s);
             $s = preg_replace('/#SE/', '</s>', $s);
         }
-return $s;
+        return $s;
     }
-/**
+
+    /**
      * @param $dom
      * @param $tag
      */
     public static function removeTitleInBody($dom): void {
         $titlesXpath = new DOMXPath($dom);
-$titles = $titlesXpath->query("//body/div/*/title | //div/title");
+        $titles = $titlesXpath->query("//body/div/*/title | //div/title");
         foreach ($titles as $title) {
             $title->parentNode->removeChild($title);
         }
-}
-public static function addChildElement($dom, $parent, $child): void {
+    }
+
+    public static function addChildElement($dom, $parent, $child): void {
         $nodes = $dom->getElementsByTagName($parent);
-foreach ($nodes as $node) {
+        foreach ($nodes as $node) {
             $node->insertBefore($dom->createElement($child), $node->firstChild);
         }
-}
-/**
+    }
+
+    /**
      * @param $s
      * @return string|string[]|null
      */
@@ -149,7 +168,8 @@ foreach ($nodes as $node) {
         $s = preg_replace('/<p>(\s)*<\/p>/i', '<lb/>', $s);
         return $s;
     }
-/**
+
+    /**
      * @param string $s
      * @return string|string[]|null
      */
@@ -157,28 +177,32 @@ foreach ($nodes as $node) {
         $s = preg_replace('/<p>(\s)*[-]+(\s)*<\/p>/i', '<lb break="no"/>', $s);
         return $s;
     }
-public static function createDot(string $s) {
+
+    public static function createDot(string $s) {
         $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
         return $s;
     }
-public static function addParagraphsBetweenAnonymousBlocks($dom) {
+
+    public static function addParagraphsBetweenAnonymousBlocks($dom) {
         $abs = $dom->getElementsByTagName("ab");
         foreach ($abs as $ab) {
-try {
+            try {
                 $ab->parentNode->insertBefore($dom->createElement('p'), $ab->nextSibling);
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $ab->parentNode->appendChild($ab);
             }
-}
+        }
     }
-public static function createWords(string $s) {
+
+    public static function createWords(string $s) {
         $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
         if (preg_match("/" . $preg . "/u", $s, $matches)) {
             $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
-}
+        }
         return $s;
     }
-/**
+
+    /**
      * @param string $s
      * @return string|string[]|null
      */
@@ -186,7 +210,8 @@ public static function createWords(string $s) {
         $s = preg_replace('/\r|\n/', '', $s);
         return $s;
     }
-public static function createControlledVocabs(string $s) {
+
+    public static function createControlledVocabs(string $s) {
         $tags = self::getControlledVocabList();
         preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
         $match = $matches[0];
@@ -211,11 +236,13 @@ public static function createControlledVocabs(string $s) {
         }
         return $s;
     }
-public static function getControlledVocabList(): array {
+
+    public static function getControlledVocabList(): array {
         $tags = array();
         return $tags;
     }
-/**
+
+    /**
      * @param string $tagName
      * @return string|string[]
      */
@@ -224,7 +251,8 @@ public static function getControlledVocabList(): array {
         $tagName = str_replace('-', '', $tagName);
         return $tagName;
     }
-/**
+
+    /**
      * @param string $s
      * @return string
      */
@@ -234,7 +262,7 @@ public static function getControlledVocabList(): array {
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
-                $str = trim($m,XMLUtils::$bnd);
+                $str = trim($m, XMLUtils::$bnd);
                 $parts = explode("{", $str);
                 $suffix1 = str_replace('}', '', $parts[1]);
                 if (count($parts) == 3) {
@@ -288,7 +316,8 @@ public static function getControlledVocabList(): array {
         }
         return $s;
     }
-/**
+
+    /**
      * @return array[]
      */
     private static function getTagsList(): array {
@@ -316,8 +345,7 @@ public static function getControlledVocabList(): array {
             array(
                 "original" => "sur",
                 "replace" => "surplus",
-                "attributes" => array(
-                    )
+                "attributes" => array()
             ),
             array(
                 "original" => "sup",
@@ -368,7 +396,8 @@ public static function getControlledVocabList(): array {
         ];
         return $tags;
     }
-/**
+
+    /**
      * @param $value
      */
     public static function print_error($message, $exit = false): void {
@@ -377,7 +406,8 @@ public static function getControlledVocabList(): array {
             exit("[Error] Please correct your Microsoft Word file  and upload again");
         }
     }
-/**
+
+    /**
      * @param string $s
      * @param $characterType
      * @return string|string[]
@@ -390,7 +420,7 @@ public static function getControlledVocabList(): array {
             $str = str_replace(XMLUtils::$bnd, '', $match[0]);
             $elem = new DOMDocument();
             $sp = $elem->createElement("space");
-$parts = explode("@", $str);
+            $parts = explode("@", $str);
             if (!is_null($parts)) {
                 $qty = $elem->createAttribute('quantity');
                 $gapsLength = substr_count(array_shift($parts), str_replace('\\', '', $characterType));
@@ -401,12 +431,13 @@ $parts = explode("@", $str);
                 $unit = $elem->createAttribute('unit');
                 $unit->value = $unt;
                 $sp->appendChild($unit);
-}
+            }
             return $s;
         }
     }
 # space
-/**
+
+    /**
      * @param string $tagName
      * @param string $attrOne
      * @param string $attrTwo
@@ -429,14 +460,14 @@ $parts = explode("@", $str);
             $parts = explode("@", $str);
             if (!is_null($parts)) {
                 $gapsStr = array_shift($parts);
-                $gapsLength = substr_count($gapsStr,str_replace('\\','',$replace));
+                $gapsLength = substr_count($gapsStr, str_replace('\\', '', $replace));
                 $ex = $elem->createAttribute($attrTwo);
                 $size = array_shift($parts);
                 $extentVAl = $gapsLength . ' ' . $size;
                 $ex->value = $extentVAl;
                 $gap->appendChild($ex);
             }
-            if (count($parts) > 0 && strlen($attrThree)>0) {
+            if (count($parts) > 0 && strlen($attrThree) > 0) {
                 $agent = array_shift($parts);
                 if (!is_null($agent)) {
                     $ag = $elem->createAttribute($attrThree);
@@ -460,7 +491,8 @@ $parts = explode("@", $str);
         }
         return $s;
     }
-public static function printPHPErrors(): void {
+
+    public static function printPHPErrors(): void {
         $errorTypes = E_ALL;
         set_error_handler(function ($errno, $errstr, $errfile, $errline) {
             echo "[Warning] $errstr $errfile $errline\n";
