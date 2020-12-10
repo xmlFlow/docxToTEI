@@ -1,9 +1,7 @@
 <?php namespace docx2tei\objectModel\body;
-
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
 use DOMElement;
-
 class Par extends DataObject {
     const DOCX_PAR_REGULAR = 1;
     const DOCX_PAR_HEADING = 2;
@@ -25,8 +23,7 @@ class Par extends DataObject {
     private $numberingItemProp = array();
 // TODO should more detailed list styles be implemented?
     private $numberingType;
-
-    public function __construct(DOMElement $domElement, $params) {
+public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->defineType();
         $this->properties = $this->setProperties('w:pPr/child::node()');
@@ -38,8 +35,7 @@ class Par extends DataObject {
         $this->numberingItemProp = $this->setNumberingItemProp();
         $this->numberingType = $this->extractNumberingType();
     }
-
-    private function defineType() {
+private function defineType() {
         $type = array();
         $styles = $this->getXpath()->query('w:pPr/w:pStyle/@w:val', $this->getDomElement());
         if ($this->isOnlyChildNode($styles)) {
@@ -68,8 +64,7 @@ class Par extends DataObject {
         }
         return $type;
     }
-
-    protected function setContent(string $xpathExpression) {
+protected function setContent(string $xpathExpression) {
         $content = array();
         $contentNodes = $this->getXpath()->query($xpathExpression, $this->getDomElement());
         foreach ($contentNodes as $contentNode) {
@@ -88,16 +83,14 @@ class Par extends DataObject {
         }
         return $content;
     }
-
-    private function setHeadingLevel() {
+private function setHeadingLevel() {
         $level = 0;
         $styleString = '';
         if (in_array(self::DOCX_PAR_HEADING, $this->type)) {
             $styles = $this->getXpath()->query('w:pPr/w:pStyle/@w:val', $this->getDomElement());
             if ($this->isOnlyChildNode($styles)) {
                 $styleString = $styles[0]->nodeValue;
-
-            }
+}
         }
 // Not a heading if empty
         if (empty($styleString)) return $level;
@@ -107,8 +100,7 @@ class Par extends DataObject {
         $level = intval(implode('', $matches[0]));
         return $level;
     }
-
-    private function setNumberingLevel(): int {
+private function setNumberingLevel(): int {
         $numberingLevel = 0;
         $numberString = '';
         if (in_array(self::DOCX_PAR_LIST, $this->type)) {
@@ -121,8 +113,7 @@ class Par extends DataObject {
         $numberingLevel = intval($numberString);
         return $numberingLevel;
     }
-
-    private function setNumberingId(): int {
+private function setNumberingId(): int {
         $numberingId = 0;
         $numberString = '';
         if (in_array(self::DOCX_PAR_LIST, $this->type)) {
@@ -135,8 +126,7 @@ class Par extends DataObject {
         $numberingId = intval($numberString);
         return $numberingId;
     }
-
-    private function setNumberingItemProp(): array {
+private function setNumberingItemProp(): array {
         $propArray = array();
         $itemDimensionalId = array_fill(0, $this->getNumberingLevel() + 1, 0);
         if (!in_array(self::DOCX_PAR_LIST, $this->getType())) return $propArray;
@@ -177,20 +167,16 @@ class Par extends DataObject {
         $propArray[self::DOCX_LIST_ITEM_ID] = $itemDimensionalId;
         return $propArray;
     }
-
-    public function getNumberingLevel(): int {
+public function getNumberingLevel(): int {
         return $this->numberingLevel;
     }
-
-    public function getType() {
+public function getType() {
         return $this->type;
     }
-
-    public function getNumberingId(): int {
+public function getNumberingId(): int {
         return $this->numberingId;
     }
-
-    private function extractNumberingType(): int {
+private function extractNumberingType(): int {
         $numberingType = self::DOCX_LIST_TYPE_UNORDERED;
         $numberingPrNode = null;
         if (in_array(self::DOCX_PAR_LIST, $this->type)) {
@@ -208,24 +194,19 @@ class Par extends DataObject {
         if (!in_array($type, self::$numberingUnorderedMarkers)) $numberingType = self::DOCX_LIST_TYPE_ORDERED;
         return $numberingType;
     }
-
-    public function getProperties(): array {
+public function getProperties(): array {
         return $this->properties;
     }
-
-    public function getContent(): array {
+public function getContent(): array {
         return $this->text;
     }
-
-    public function getHeadingLevel(): int {
+public function getHeadingLevel(): int {
         return $this->headingLevel;
     }
-
-    public function getNumberingItemProp() {
+public function getNumberingItemProp() {
         return $this->numberingItemProp;
     }
-
-    public function getNumberingType(): int {
+public function getNumberingType(): int {
         return $this->numberingType;
     }
 }

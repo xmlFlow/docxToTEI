@@ -1,20 +1,15 @@
 <?php
-
 namespace docx2tei\tei;
-
 use docx2tei\XMLUtils;
 use DOMDocument;
-
 class Commentary extends DOMDocument {
     var $document;
-
-    public function __construct(TEIDocument $document) {
+public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $this->getCommentry();
     }
-
-    protected function getCommentry(): void {
+protected function getCommentry(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->commentary . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
             XMLUtils::print_error("[Warning] Commentary section not defined");
@@ -45,5 +40,4 @@ class Commentary extends DOMDocument {
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
     }
-
 }

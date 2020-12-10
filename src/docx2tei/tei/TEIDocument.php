@@ -1,10 +1,8 @@
 <?php namespace docx2tei\tei;
-
 use docx2tei\structure\Document;
 use docx2tei\XMLUtils;
 use DOMDocument;
 use DOMXPath;
-
 class TEIDocument extends DOMDocument {
     var $cfg;
     var $root;
@@ -16,8 +14,7 @@ class TEIDocument extends DOMDocument {
     var $xpath;
     var $headers = array();
     var $newDom;
-
-    public function __construct(Document $structuredDocument, $config) {
+public function __construct(Document $structuredDocument, $config) {
         $this->structuredDocument = $structuredDocument;
         $this->xpath = new DOMXPath($structuredDocument);
         $this->cfg = $config;
@@ -27,27 +24,20 @@ class TEIDocument extends DOMDocument {
         $this->getHeaders();
         $this->setStructure();
         $this->isCorrectStructure();
-
-        # Section processing
-
-        $this->newDom = new Headers($this, $this->headers);
+# Section processing
+$this->newDom = new Headers($this, $this->headers);
         $this->newDom = new Facsimiles($this);
         $this->newDom = new Abstracts($this);
         $this->newDom = new Edition($this);
         $this->newDom = new EnglishTranslation($this);
         $this->newDom = new Synopsis($this);
         $this->newDom = new Commentary($this);
-
-        # Final  processing
+# Final  processing
         $finalDom = new FinalDocument($this);
         $this->newDom = $finalDom->getDocumentElement();
-
-        $x = 1;
-
-
-    }
-
-    function getHeaders(): void {
+$x = 1;
+}
+function getHeaders(): void {
         $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
@@ -66,8 +56,7 @@ class TEIDocument extends DOMDocument {
             }
         }
     }
-
-    function setStructure() {
+function setStructure() {
         $this->root = $this->createElement('TEI');
         $this->root->setAttributeNS(
             "http://www.w3.org/2000/xmlns/",
@@ -85,15 +74,13 @@ class TEIDocument extends DOMDocument {
         $this->text->appendChild($this->body);
         $this->root->appendChild($this->text);
     }
-
-    function isCorrectStructure(): bool {
+function isCorrectStructure(): bool {
         $correct = true;
         $correct = $this->isCorrectSections();
         $correct = $this->isCorrectHeaders();
         return $correct;
     }
-
-    /**
+/**
      * @return bool
      */
     function isCorrectSections(): bool {
@@ -109,15 +96,10 @@ class TEIDocument extends DOMDocument {
         }
         return true;
     }
-
-
-    function isCorrectHeaders(): bool {
+function isCorrectHeaders(): bool {
         return true;
     }
-
-
-
-    function renameElement($element, $newName) {
+function renameElement($element, $newName) {
         $newElement = $element->ownerDocument->createElement($newName);
         $parentElement = $element->parentNode;
         $parentElement->insertBefore($newElement, $element);
@@ -138,8 +120,7 @@ class TEIDocument extends DOMDocument {
         $parentElement->removeChild($element);
         return $newElement;
     }
-
-    public function saveToFile(string $pathToFile) {
+public function saveToFile(string $pathToFile) {
         $content =$this->newDom->saveXML();
         #$content = str_replace("&amp;", "&", $content);
         file_put_contents($pathToFile, $content);

@@ -1,13 +1,10 @@
 <?php namespace docx2tei\structure;
-
 use docx2tei\objectModel\body\Par;
 use docx2tei\objectModel\DataObject;
 use DOMElement;
-
 abstract class Element extends DOMElement {
     private $dataObject;
-
-    public function __construct(DataObject $dataObject) {
+public function __construct(DataObject $dataObject) {
         $this->dataObject = $dataObject;
         $name = '';
         switch (get_class($dataObject)) {
@@ -33,8 +30,7 @@ abstract class Element extends DOMElement {
         }
         if (!empty($name)) parent::__construct($name);
     }
-
-    protected function getDataObject() {
+protected function getDataObject() {
         return $this->dataObject;
     }
 }

@@ -1,20 +1,15 @@
 <?php
-
 namespace docx2tei\tei;
-
 use docx2tei\XMLUtils;
 use DOMDocument;
-
 class Facsimiles extends DOMDocument {
     var $document;
-
-    public function __construct(TEIDocument $document) {
+public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $this->setFacsimiles();
     }
-
-    function setFacsimiles(): void {
+function setFacsimiles(): void {
         $facsimiles = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
         if (count($facsimiles) == 0) {
             XMLUtils::print_error("[Error] No facsimiles " . $this->document->cfg->sections->facsimiles);
@@ -44,8 +39,7 @@ class Facsimiles extends DOMDocument {
                             $coord->value = 0;
                             $surface->appendChild($coord);
                         }
-
-                        $this->document->facsimile->appendChild($this->document->importNode($surface, true));
+$this->document->facsimile->appendChild($this->document->importNode($surface, true));
                     }
                 }
             }

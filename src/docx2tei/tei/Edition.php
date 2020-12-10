@@ -1,15 +1,11 @@
 <?php
-
 namespace docx2tei\tei;
-
 use docx2tei\XMLUtils;
 use DOMDocument;
 use DOMElement;
-
 class Edition extends DOMDocument {
     var $document;
-
-    public function __construct(TEIDocument $document) {
+public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
@@ -20,11 +16,8 @@ class Edition extends DOMDocument {
             $this->createSections($div);
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
-
-
-    }
-
-    private function createDiv() {
+}
+private function createDiv() {
         $div = $this->createElement("div");
         $idAttrib = $this->createAttribute('xml:id');
         $idAttrib->value = "ed";
@@ -44,8 +37,7 @@ class Edition extends DOMDocument {
         $div->appendChild($langAttr);
         return $div;
     }
-
-    /**
+/**
      * @param DOMElement $div
      */
     private function createSections(DOMElement $div): void {
@@ -57,45 +49,39 @@ class Edition extends DOMDocument {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
                     # ! order is important. never change order #
+                    $s = XMLUtils::replaceLastMinus($s);
                     $s = XMLUtils::createLineBegin($s);
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
                     # create gaps of illegible and lost characters
-                    $s = XMLUtils::createGap($s, 'lost', '\/');
-                    $s = XMLUtils::createGap($s, 'illegible', '\+');
+                    $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
+                    $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
-                    $s = XMLUtils::createSpaceTag($s, '\.');
-
-                    # structured content xy{content}
+                    $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, '', '\.');
+$s = XMLUtils::createSpaceTag($s, '\.');
+# structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     $s = XMLUtils::createWords($s);
                     # handle sb and se
-
-
-                    #rename tags
+#rename tags
                     #TODO deletes tables
                     #$s = XMLUtils::tagReplace($s, 'p', 'ab');
                     # create words
-
-
-                    # ! order is important. never change order #
-
-                    $frag = $this->createDocumentFragment();
+# ! order is important. never change order #
+$frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {
                         $ab->appendChild($frag);
                     }
                 }
             }
-
-        }
+}
     }
-
-    /**
+/**
      * @param $section
      * @param DOMElement $div
      */

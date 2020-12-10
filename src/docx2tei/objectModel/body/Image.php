@@ -1,18 +1,14 @@
 <?php namespace docx2tei\objectModel\body;
-
 use docx2tei\objectModel\DataObject;
 use docx2tei\objectModel\Document;
 use DOMElement;
-
 class Image extends DataObject {
     private $link;
-
-    public function __construct(DOMElement $domElement, $params) {
+public function __construct(DOMElement $domElement, $params) {
         parent::__construct($domElement, $params);
         $this->link = $this->extractLink();
     }
-
-    private function extractLink(): ?string {
+private function extractLink(): ?string {
         $link = null;
         $relationshipId = null;
         $this->getXpath()->registerNamespace("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
@@ -25,12 +21,10 @@ class Image extends DataObject {
         }
         return $link;
     }
-
-    public function getLink(): ?string {
+public function getLink(): ?string {
         return $this->link;
     }
-
-    public function getFileName(): ?string {
+public function getFileName(): ?string {
         $name = basename($this->link);
         return $name;
     }

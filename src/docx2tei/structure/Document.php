@@ -1,5 +1,4 @@
 <?php namespace docx2tei\structure;
-
 use docx2tei\DOCXArchive;
 use docx2tei\objectModel\body\Par;
 use docx2tei\structure\Figure as TeiFigure;
@@ -7,7 +6,6 @@ use docx2tei\structure\Par as TeiPar;
 use docx2tei\structure\Table as TeiTable;
 use DOMDocument;
 use DOMXPath;
-
 class Document extends DOMDocument {
     var $root;
     var $teiHeader;
@@ -16,8 +14,7 @@ class Document extends DOMDocument {
     var $sections = array();
     var $lists = array();
     private $docxArchive;
-
-    public function __construct(DOCXArchive $docxArchive) {
+public function __construct(DOCXArchive $docxArchive) {
         parent::__construct('1.0', 'utf-8');
         $this->docxArchive = $docxArchive;
         $this->preserveWhiteSpace = false;
@@ -26,16 +23,14 @@ class Document extends DOMDocument {
         $this->extractContent();
         $this->cleanContent();
     }
-
-    private function setBasicStructure() {
+private function setBasicStructure() {
         $this->root = $this->createElement('root');
 // $this->structure->setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
         $this->appendChild($this->root);
         $this->text = $this->createElement('text');
         $this->root->appendChild($this->text);
     }
-
-    private function extractContent() {
+private function extractContent() {
         $document = $this->docxArchive->getDocument();
         if (!empty($document->getContent())) {
             $latestSectionId = array();
@@ -147,16 +142,14 @@ class Document extends DOMDocument {
             }
         }
     }
-
-    private function cleanContent(): void {
+private function cleanContent(): void {
         $xpath = new DOMXPath($this);
         $nodesToRemove = $xpath->query("//body//*[not(normalize-space()) and not(.//@*) and not(self::td)]");
         foreach ($nodesToRemove as $nodeToRemove) {
             $nodeToRemove->parentNode->removeChild($nodeToRemove);
         }
     }
-
-    public function saveToFile(string $pathToFile) {
+public function saveToFile(string $pathToFile) {
         $this->save($pathToFile);
     }
 }

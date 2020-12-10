@@ -1,20 +1,15 @@
 <?php
-
 namespace docx2tei\tei;
-
 use docx2tei\XMLUtils;
 use DOMDocument;
-
 class EnglishTranslation extends DOMDocument {
     var $document;
-
-    public function __construct(TEIDocument $document) {
+public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
         $this->setEnglishTranslation();
     }
-
-    protected function setEnglishTranslation(): void {
+protected function setEnglishTranslation(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->et . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
             XMLUtils::print_error("[Warning] English Translation section not defined");
@@ -39,17 +34,12 @@ class EnglishTranslation extends DOMDocument {
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
-                    # create gaps of illegible and lost characters
-                    $s = XMLUtils::createGap($s, 'lost', '\/');
-                    $s = XMLUtils::createGap($s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createSpaceTag($s,'\.');
                     # structured content xy{content}
                     $s = XMLUtils::createStructuredContent($s);
-
-                    $s = XMLUtils::createFootnoteTags($s);
-
-                    $ab = $this->createDocumentFragment();
+$s = XMLUtils::createFootnoteTags($s);
+$ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
                 }
@@ -57,5 +47,4 @@ class EnglishTranslation extends DOMDocument {
             $this->document->body->appendChild($this->document->importNode($div, true));
         }
     }
-
 }

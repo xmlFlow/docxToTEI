@@ -1,8 +1,6 @@
 <?php namespace docx2tei\structure;
-
 use docx2tei\objectModel\body\Text as ObjectText;
 use DOMElement;
-
 class Text {
     public static function extractText(ObjectText $teiText, DOMElement $domElement): void {
 // Get DOMDocument
