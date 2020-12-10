@@ -423,14 +423,16 @@ class XMLUtils {
             $ex = $elem->createAttribute($attrTwo);
             $gapCharacters = array_shift($parts);
             $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
-            if (is_null($parts)) {
-                if ($tagName == "gap") {
-                    $gapsLength = $gapsLength . ' characters';
-                }
+            $characterType = array_shift($parts);
+            if ($tagName == "gap") {
+                if (is_null($characterType) | strlen($characterType)==0) {
+                    $chars = ($gapsLength==1) ? 'character': 'characters';
+                    $gapsLength = $gapsLength .' '.$chars;
 
-            } else {
-                $characterType = array_shift($parts);
-                $gapsLength = $gapsLength . ' ' . $characterType;
+                } else {
+
+                    $gapsLength = $gapsLength . ' ' . $characterType;
+                }
             }
             $ex->value = $gapsLength;
             $gap->appendChild($ex);
@@ -456,7 +458,13 @@ class XMLUtils {
             }
 
             $r = $elem->createAttribute($attrOne);
-            $r->value = $attrOneDefault;
+            // for space unit
+            if ($tagName == "space" && strlen($characterType)>0) {
+                $r->value = $characterType;
+            }
+            else {
+                $r->value = $attrOneDefault;
+            }
             $gap->appendChild($r);
 
 
