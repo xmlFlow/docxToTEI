@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:footnotes xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="w14 wp14">
+    <w:footnote w:id="0" w:type="separator">
+        <w:p>
+            <w:pPr>
+                <w:rPr>
+                    <w:sz w:val="12"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:separator/>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="1" w:type="continuationSeparator">
+        <w:p>
+            <w:pPr>
+                <w:rPr>
+                    <w:sz w:val="12"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:continuationSeparator/>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="2">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>The text written in the right margin has been blacked out with ink.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="3">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:bookmarkStart w:id="15" w:name="note--2"/>
+            <w:r>
+                <w:rPr>
+                    <w:color w:val="000000"/>
+                </w:rPr>
+                <w:t>The name of the king is not mentioned here, but it is evident from the date of the document that it
+                    was #pen{
+                </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Bkgpersname"/>
+                    <w:color w:val="000000"/>
+                </w:rPr>
+                <w:t>Gīrvāṇayuddha Vikrama Śāha}#</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:color w:val="000000"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> (r. 1799-1816). He ruled under the regency of Queen #pen{</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="Bkgpersname"/>
+                    <w:color w:val="000000"/>
+                </w:rPr>
+                <w:t>Lalita Tripura Sundarī}#</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:color w:val="000000"/>
+                </w:rPr>
+                <w:t>.</w:t>
+            </w:r>
+            <w:bookmarkEnd w:id="15"/>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="4">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr></w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve">Footnote commentary: interesting very </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:i/>
+                    <w:iCs/>
+                </w:rPr>
+                <w:t>gutha tugha</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t>.</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+    <w:footnote w:id="5">
+        <w:p>
+            <w:pPr>
+                <w:pStyle w:val="Footnote"/>
+                <w:rPr>
+                    <w:lang w:val="en-GB"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rStyle w:val="FootnoteCharacters"/>
+                </w:rPr>
+                <w:footnoteRef/>
+            </w:r>
+            <w:r>
+                <w:rPr></w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:lang w:val="en-GB"/>
+                </w:rPr>
+                <w:t xml:space="preserve">This is a commentary </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:i/>
+                    <w:iCs/>
+                    <w:lang w:val="en-GB"/>
+                </w:rPr>
+                <w:t>footnote</w:t>
+            </w:r>
+        </w:p>
+    </w:footnote>
+</w:footnotes>
