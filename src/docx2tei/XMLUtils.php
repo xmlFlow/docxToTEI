@@ -41,9 +41,8 @@ class XMLUtils {
     public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-        $s =preg_replace('/&lt;foreign&gt;/i', '<foreign>', $s);
-        $s =preg_replace('/&lt;\/foreign&gt;/i', '</foreign>', $s);
-
+        $s =preg_replace('/&lt;/i', '<', $s);
+        $s =preg_replace('/&gt;/i', '>', $s);
         return $s;
     }
 
@@ -399,35 +398,8 @@ class XMLUtils {
         }
     }
 
-    /**
-     * @param string $s
-     * @param $characterType
-     * @return string|string[]
-     */
-    public static function createSpaceTag(string $s, string $characterType) {
-        return $s;
-        preg_match_all('/' . XMLUtils::$bnd . '(' . $characterType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
-            $elem = new DOMDocument();
-            $sp = $elem->createElement("space");
-            $parts = explode("@", $str);
-            if (!is_null($parts)) {
-                $qty = $elem->createAttribute('quantity');
-                $gapsLength = substr_count(array_shift($parts), str_replace('\\', '', $characterType));
-                $qty->value = $gapsLength;
-                $sp->appendChild($qty);
-                $unt = array_shift($parts);
-                $unt = (is_null($unt)) ? "chars" : $unt;
-                $unit = $elem->createAttribute('unit');
-                $unit->value = $unt;
-                $sp->appendChild($unit);
-            }
-            return $s;
-        }
-    }
-# space
+
+
 
     /**
      * @param string $tagName

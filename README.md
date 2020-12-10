@@ -28,7 +28,7 @@
  | 8. | `not implemented: "-" at the end of line as <lb break="no">` |  newly implemented e.g handling. का- or रुक्का-#SE |
 | 9. |  `not implemented: zones according to the <ab>s` | Newly implemented |
 | 10. |  `number of dots (...) for space was not correctly counted` | Corrected | 
-    # in the footnotes, texts in italics are not transformed into <foreign>
+| 11. |   `in the footnotes, texts in italics are not transformed into <foreign>`| Added|
    
  
  

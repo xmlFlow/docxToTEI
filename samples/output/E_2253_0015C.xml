@@ -140,9 +140,7 @@
                     </s>
                     <s xml:lang="nep">
                         <w>आगे</w>
-                        <placeName>
-                            <w>पाटनका</w>
-                        </placeName>
+                        #pln{<w>पाटनका</w>}#
                         <placeName>
                             <w>ओकु</w>
                             <w>वाहाल</w>

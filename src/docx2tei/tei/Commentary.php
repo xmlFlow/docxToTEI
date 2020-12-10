@@ -34,8 +34,6 @@ class Commentary extends DOMDocument {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
                     # create spaces
-                    $s = XMLUtils::createSpaceTag($s, '\.');
-                    $s = XMLUtils::createStructuredContent($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

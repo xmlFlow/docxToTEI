@@ -65,9 +65,7 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, '', '\.');
-                    $s = XMLUtils::createSpaceTag($s, '\.');
-# structured content xy{content}
-                    $s = XMLUtils::createStructuredContent($s);
+
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);

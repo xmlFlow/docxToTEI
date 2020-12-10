@@ -21,14 +21,17 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
         // String operations
         $s = $document->saveXML();
-        $s = XMLUtils::createNotesWithCorrectTags($s);
 
-        # correct after creating tags
 
+
+        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
+
+        # correct after creating tags
+        $s = XMLUtils::createNotesWithCorrectTags($s);
 
 ## Error messages
         preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);

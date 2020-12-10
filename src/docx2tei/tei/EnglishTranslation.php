@@ -40,9 +40,7 @@ class EnglishTranslation extends DOMDocument {
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
                     # create spaces
-                    $s = XMLUtils::createSpaceTag($s, '\.');
                     # structured content xy{content}
-                    $s = XMLUtils::createStructuredContent($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

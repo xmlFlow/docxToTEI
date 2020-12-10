@@ -33,9 +33,7 @@ class Synopsis extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
-                    $s = XMLUtils::createStructuredContent($s);
                     # create spaces
-                    $s = XMLUtils::createSpaceTag($s, '\.');
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
