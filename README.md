@@ -26,14 +26,9 @@
  | 6. | `not required: @reason for <surplus>` | default removed|
  | 7. | `missing: <lb @n> for each line and each <ab>` | lb should have worked, ab numbering added.|
  | 8. | `not implemented: "-" at the end of line as <lb break="no">` |  newly implemented e.g handling. का- or रुक्का-#SE |
-      
-  
-  # not implemented: zones according to the <ab>s
-  
-    
-  # number of dots (...) for space was not correctly counted
-  
-  # in the footnotes, texts in italics are not transformed into <foreign>
+| 9. |  `not implemented: zones according to the <ab>s` | Newly implemented |
+| 10. |  `number of dots (...) for space was not correctly counted` | Corrected | 
+    # in the footnotes, texts in italics are not transformed into <foreign>
    
  
  

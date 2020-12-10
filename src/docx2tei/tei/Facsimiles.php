@@ -39,15 +39,44 @@ class Facsimiles extends DOMDocument {
                         $facsAttrib = $this->createAttribute('facs');
                         $facsAttrib->value = $facs;
                         $surface->appendChild($facsAttrib);
-                        foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
-                            $coord = $this->createAttribute($attr);
-                            $coord->value = 0;
-                            $surface->appendChild($coord);
+                        $this->createCoordinates($surface);
+                        $abs = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
+
+                        foreach ($abs as $ab) {
+                            $abElement = $this->document->xpath->query("title",$ab);
+                            if(count($abElement)>0) {
+                                $nodeValue = $abElement->item(0)->nodeValue;
+                                if(substr( $nodeValue, 0, 2 ) === "ab") {
+                                    $parts = explode('@', $nodeValue);
+                                    if (count($parts)>1) {
+                                        $zone = $this->createElement("zone");
+                                        $idAttrib = $this->createAttribute('xml:id');
+                                        $idAttrib->value =str_replace("#","",$parts[1]);
+                                        $zone->appendChild($idAttrib);
+                                        $this->createCoordinates($zone);
+                                        $surface->appendChild($zone);
+                                    }
+                                }
+
+                            }
+
                         }
+
                         $this->document->facsimile->appendChild($this->document->importNode($surface, true));
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * @param \DOMElement $surface
+     */
+    private function createCoordinates(\DOMElement $surface): void {
+        foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
+            $coord = $this->createAttribute($attr);
+            $coord->value = 0;
+            $surface->appendChild($coord);
         }
     }
 }
