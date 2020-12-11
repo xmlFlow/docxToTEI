@@ -12,7 +12,8 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
 // DOM operations
         XMLUtils::removeTitleInBody($document, "title");
-        XMLUtils::removeParagraphsInBody($document);
+        XMLUtils::removeElementsInTag($document,'//ab/p');
+        XMLUtils::removeElementsInTag($document,'//add/w');
         XMLUtils::addChildElement($document, "ab", "lb");
         //XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBegins($document);
@@ -24,16 +25,15 @@ class FinalDocument extends DOMDocument {
 
 
 
-        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         # correct after creating tags
         #   these are final operations in ORDER
-        $s = XMLUtils::createWords($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
-        $s = XMLUtils::specialLastRules($s);
+        $s = XMLUtils::handleLineBreakNoWords($s);
+        $s = XMLUtils::handleSurroundingAdd($s);
 
 
 ## Error messages
@@ -48,6 +48,8 @@ class FinalDocument extends DOMDocument {
         $newDom = new DOMDocument();
         XMLUtils::printPHPErrors();
         $newDom->loadXML($s);
+        XMLUtils::removeTags($document, "//add/w");
+
         $this->document = $newDom;
     }
 

@@ -65,10 +65,12 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
+                    $s = XMLUtils::createStructuredContent($s);
 
                     # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
+                    $s = XMLUtils::createWords($s);
 
                     # handle sb and se
 #rename tags

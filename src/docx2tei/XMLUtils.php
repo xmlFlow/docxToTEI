@@ -59,9 +59,9 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeParagraphsInBody($dom) {
+    public static function removeElementsInTag($dom,$str) {
         $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//ab/p ') as $node) {
+        foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
             while ($node->hasChildNodes()) {
                 $parent->insertBefore($node->lastChild, $node->nextSibling);
@@ -70,6 +70,9 @@ class XMLUtils {
         }
         return $dom;
     }
+
+
+
 
     public static function removeTags($dom, $str) {
         $xpath = new DOMXPath($dom);
@@ -201,15 +204,17 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function specialLastRules(string $s) {
+    public static function handleLineBreakNoWords(string $s) {
         // <w>व<lb break="no" n="2"/>सी</w>
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
-        // <add place="above_the_line" hand="first">सल्याना सल्याना</add>
-        $s = preg_replace('/(<add\s*place=".*\shand=".*">)\s*(<w>)\s*([\p{Devanagari}+\s*]+)(<\/w>)\s*(<\/add>)*/u', '<w>$1$3$5</w>', $s);
-
-
         return $s;
     }
+    public static function handleSurroundingAdd(string $s) {
+        //
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+        return $s;
+    }
+
 
     public static function createControlledVocabs(string $s) {
         $tags = self::getControlledVocabList();
@@ -322,14 +327,14 @@ class XMLUtils {
      */
     private static function getTagsList(): array {
         $tags = [
-            array(
+            /*array(
                 "original" => "&amp;",
                 "replace" => "add",
                 "attributes" => array(
                     array("tag" => "place", "default" => "above_the_line"),
                     array("tag" => "hand", "default" => "first")
                 )
-            ),
+            ),*/
             array(
                 "original" => "?",
                 "replace" => "unclear",
