@@ -15,6 +15,12 @@
 * Content for XML is written in {}. 
 * _Italic_ is supported. **Bold** is not supported. 
  
+ ### Testing Round 1
+ | Nr. Status | Fehler | Remarks|
+ | ---- | ---- | ---- |
+ | 1 |  `is now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written | 
+ | 1 |  `is now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written | 
+ 
 
  ### Testing Round 2
   | Nr. Status | Fehler | Remarks|

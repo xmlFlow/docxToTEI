@@ -33,7 +33,7 @@ class FinalDocument extends DOMDocument {
         #   these are final operations in ORDER
         $s = XMLUtils::createWords($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
-        $s = XMLUtils::wordsMergeLineBreaks($s);
+        $s = XMLUtils::specialLastRules($s);
 
 
 ## Error messages

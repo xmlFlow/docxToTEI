@@ -201,8 +201,13 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function wordsMergeLineBreaks(string $s) {
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s+<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+    public static function specialLastRules(string $s) {
+        // <w>व<lb break="no" n="2"/>सी</w>
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+        // <add place="above_the_line" hand="first">सल्याना सल्याना</add>
+        $s = preg_replace('/(<add\s*place=".*\shand=".*">)\s*(<w>)\s*([\p{Devanagari}+\s*]+)(<\/w>)\s*(<\/add>)*/u', '<w>$1$3$5</w>', $s);
+
+
         return $s;
     }
 

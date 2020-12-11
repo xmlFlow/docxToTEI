@@ -140,16 +140,13 @@
                     </s>
                     <s xml:lang="nep">
                         <w>तेरा</w>
-                        <w>पुरू</w>
-                        <lb break="no" n="2"/>
-                        <w>आगे<lb break="no" n="3"/>आगे
+                        <w>पुरू<lb break="no" n="2"/>आगेआगे
                         </w>
+                        <lb n="3"/>
                         <lb n="4"/>
-                        <lb n="5"/>
-                        <w>षा</w>#pen{
-                        <w>जीवराज</w>
-                        <w>वांडाले</w>}#
-                        <w>१</w>
+                        <w>षा</w>
+                        #pen{<w>जीवराज</w>
+                        <w>वांडाले</w>}# <w>१</w>
                         <w>को</w>
                         <w>रथमहा</w>
                         <w>सुनको</w>
@@ -157,9 +154,8 @@
                         <w>चढाउंदा</w>
                         <w>गूठ</w>
                         <w>राख्याको</w>
-                        <w>का</w>
-                        <lb break="no" n="6"/>
-                        <w>म</w>
+                        <w>का<lb break="no" n="5"/>म
+                        </w>
                         <w>चलाई</w>
                         <w>वाकि</w>
                         <w>रह्याका</w>
@@ -180,8 +176,7 @@
                                     <placeName>
                                         <w>ङखु</w>
                                     </placeName>
-                                    <w>रोपनी</w>
-                                    ---
+                                    <w>रोपनी</w> ---
                                     <w>६</w>
                                 </p>
                             </cell>
@@ -190,16 +185,14 @@
                                     <placeName>
                                         <w>भिलुपा</w>
                                     </placeName>
-                                    <w>रोपनी</w>
-                                    ---
+                                    <w>रोपनी</w> ---
                                     <w>६</w>
                                 </p>
                             </cell>
                             <cell>
                                 <p>
                                     <w>ङषुवंग</w>
-                                    <w>रोपनी</w>
-                                    ---
+                                    <w>रोपनी</w> ---
                                     <w>१</w>
                                 </p>
                             </cell>
@@ -208,28 +201,24 @@
                             <cell>
                                 <p>
                                     <w>पाको</w>
-                                    <w>रोपनी</w>
-                                    ---
-                                    <w>६</w>
+                                    <w>रोपनी</w> --- <w>६</w>
                                 </p>
                             </cell>
                             <cell>
                                 <p>
                                     <w>सिलापाको</w>
-                                    <w>रोपनी</w>
-                                    --- <w>६</w>।
+                                    <w>रोपनी</w> --- <w>६</w>।
                                 </p>
                             </cell>
                             <cell>
                                 <p>
                                     <w>रानिवु</w>
-                                    <w>रोपनी</w>
-                                    --- <w>१</w>।।।
+                                    <w>रोपनी</w> --- <w>१</w>।।।
                                 </p>
                             </cell>
                         </row>
                     </table>
-                    <lb n="7"/>
+                    <lb n="6"/>
                     <s xml:lang="nep">
                         <w>मेरो</w>
                         <gap extent="5 characters" agent="breakage" reason="illegible"/>
@@ -252,8 +241,7 @@
                         <add place="above_the_line" hand="first">
                             <w>हो</w>
                         </add>
-                        ,
-                        <w>सेत्ये</w>
+                        , <w>सेत्ये</w>
                         <unclear cert="medium">
                             <w>होइन</w>
                         </unclear>
@@ -328,7 +316,7 @@
                         <orig>•</orig>
                         <w>होइन</w>
                     </s>
-                    <lb n="8"/>
+                    <lb n="7"/>
                 </ab>
                 <p/>
             </div>
