@@ -29,9 +29,12 @@ class FinalDocument extends DOMDocument {
         # Complex  sentence
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
-
         # correct after creating tags
+        #   these are final operations in ORDER
+        $s = XMLUtils::createWords($s);
         $s = XMLUtils::createNotesWithCorrectTags($s);
+        #$s = XMLUtils::wordsMergeLineBreaks($s);
+
 
 ## Error messages
         preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);

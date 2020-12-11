@@ -19,17 +19,17 @@
  ### Testing Round 2
   | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
- | 1.  | `<space› please check again, e.g. #.....# is now converted to <space quantity="3"/> (value should be 5, @unit is missing)` |   unit default added. e.g. #.....@lines#  |
- | 2. | `I realized that no <w>s are annotated inside <persName>`| I explicitly removed it from all the places, names, and geographical locations. I reverted the function now.|
- | 3. | `<lb> is  found in all <ab>s now. Good! But still there is no <lb> for the second, third etc. line (also "-" is not working yet)`|  Could not reproduce. Has to test some reference docs. |
- | 4. | `ZWJ is properly integrated but ZWNJ is still outside the <w> token ` |  Had a typo| 
- | 5. | `add:  @xml:lang for <s>  [The input would be e.g., @san, @nep]` |   Implemented. defaulted to nep. Any language with three codes will be recognized. Please check this, cause I did not see this in example|
- | 6. | `not required: @reason for <surplus>` | default removed|
- | 7. | `missing: <lb @n> for each line and each <ab>` | lb should have worked, ab numbering added. Each ab begins with a n=1 or should they be incrementally counted?|
- | 8. | `not implemented: "-" at the end of line as <lb break="no">` |  newly implemented e.g handling. का- or रुक्का-#SE |
-| 9. |  `not implemented: zones according to the <ab>s` | Newly implemented |
-| 10. |  `number of dots (...) for space was not correctly counted` | Corrected | 
-| 11. |   `in the footnotes, texts in italics are not transformed into <foreign>`| Added|
+ | 1. :robot:  | `<space› please check again, e.g. #.....# is now converted to <space quantity="3"/> (value should be 5, @unit is missing)` |   unit default added. e.g. #.....@lines#  |
+ | 2. :robot: | `I realized that no <w>s are annotated inside <persName>`| I explicitly removed it from all the places, names, and geographical locations. I reverted the function now.|
+ | 3. :robot: | `<lb> is  found in all <ab>s now. Good! But still there is no <lb> for the second, third etc. line (also "-" is not working yet)`| newly implemented |
+ | 4. :robot: | `ZWJ is properly integrated but ZWNJ is still outside the <w> token ` |  Had a typo| 
+ | 5. :robot: | `add:  @xml:lang for <s>  [The input would be e.g., @san, @nep]` |   Implemented. defaulted to nep. Any language with three codes will be recognized. Please check this, cause I did not see this in example|
+ | 6. :robot: | `not required: @reason for <surplus>` | default removed|
+ | 7. :robot: | `missing: <lb @n> for each line and each <ab>` | lb should have worked, ab numbering added. Each ab begins with a n=1 or should they be incrementally counted?|
+ | 8. :robot: | `not implemented: "-" at the end of line as <lb break="no">` |  newly implemented e.g handling. का- or रुक्का-#SE |
+| 9. :robot: |  `not implemented: zones according to the <ab>s` | Newly implemented |
+| 10.  :robot: |  `number of dots (...) for space was not correctly counted` | Corrected | 
+| 11.  :robot: |   `in the footnotes, texts in italics are not transformed into <foreign>`| Added|
   
  
  
