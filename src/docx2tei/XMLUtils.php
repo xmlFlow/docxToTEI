@@ -192,12 +192,17 @@ class XMLUtils {
         return $s;
     }
 
+    public static function joinLines(string $s) {
+        $s = preg_replace('/\r|\n/', '', $s);
+        return $s;
+    }
+
     /**
      * @param string $s
      * @return string|string[]|null
      */
-    public static function joinLines(string $s) {
-        $s = preg_replace('/\r|\n/', '', $s);
+    public static function wordsMergeLineBreaks(string $s) {
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s+<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;
     }
 
