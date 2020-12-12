@@ -59,7 +59,7 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeElementsInTag($dom,$str) {
+    public static function removeElementsInTag($dom, $str) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
@@ -70,8 +70,6 @@ class XMLUtils {
         }
         return $dom;
     }
-
-
 
 
     public static function removeTags($dom, $str) {
@@ -209,6 +207,7 @@ class XMLUtils {
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;
     }
+
     public static function handleSurroundingAdd(string $s) {
         //
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
@@ -247,14 +246,25 @@ class XMLUtils {
         return $tags;
     }
 
+    public static function removeUnnecessaryChars(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
+    }
+
     /**
-     * @param string $tagName
-     * @return string|string[]
+     * @param string $s
+     * @return string
      */
-    public static function removeUnnecessaryChars(string $tagName) {
-        $tagName = str_replace('=', '', $tagName);
-        $tagName = str_replace('-', '', $tagName);
-        return $tagName;
+    public static function createAddElement(string $s) {
+        preg_match_all('/#\&amp;([@\w]*){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu', $s, $matches);
+        $match = $matches[0];
+        if (!is_null($match) && count($match) != 0) {
+
+            $x = 1;
+        }
+        return $s;
+
     }
 
     /**
@@ -439,9 +449,9 @@ class XMLUtils {
             $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
             $characterType = array_shift($parts);
             if ($tagName == "gap") {
-                if (is_null($characterType) | strlen($characterType)==0) {
-                    $chars = ($gapsLength==1) ? 'character': 'characters';
-                    $gapsLength = $gapsLength .' '.$chars;
+                if (is_null($characterType) | strlen($characterType) == 0) {
+                    $chars = ($gapsLength == 1) ? 'character' : 'characters';
+                    $gapsLength = $gapsLength . ' ' . $chars;
 
                 } else {
 
@@ -473,10 +483,9 @@ class XMLUtils {
 
             $r = $elem->createAttribute($attrOne);
             // for space unit
-            if ($tagName == "space" && strlen($characterType)>0) {
+            if ($tagName == "space" && strlen($characterType) > 0) {
                 $r->value = $characterType;
-            }
-            else {
+            } else {
                 $r->value = $attrOneDefault;
             }
             $gap->appendChild($r);
