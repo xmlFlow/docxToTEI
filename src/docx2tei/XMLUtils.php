@@ -260,8 +260,7 @@ class XMLUtils {
         preg_match_all('/#\&amp;([@\w]*){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
-
-            $x = 1;
+            $s = '<w><add place="above_the_addline" hand="first"></add></w>';
         }
         return $s;
 
