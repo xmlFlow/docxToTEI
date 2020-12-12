@@ -258,10 +258,19 @@ class XMLUtils {
      */
     public static function createAddElement(string $s) {
         preg_match_all('/#\&amp;([@\w]*){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            $s = '<w><add place="above_the_addline" hand="first"></add></w>';
+
+        if (!is_null($matches[0]) && count($matches[0]) != 0) {
+            for ($i = 0; $i < count($matches[0]); $i++) {
+                #$parts = explode("@", $matches[1][$i]);
+                $place = "above_the_line";
+                $hand ="first";
+                $innerContent = (array_key_exists($i, $matches[2])) ? $matches[2][$i] :'';
+                $outerContent = (array_key_exists($i, $matches[3])) ? $matches[3][$i] :'';
+                $s = '<w><add place="' . $place . '" hand="'.$hand.'">' . $innerContent . '</add>' . $outerContent . '</w>';
+                $x=1;
+            }
         }
+
         return $s;
 
     }
