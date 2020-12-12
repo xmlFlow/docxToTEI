@@ -257,31 +257,23 @@ class XMLUtils {
      * @return string
      */
     public static function createAddElement(string $s) {
-        preg_match_all('/#\&amp;([@\w]*){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu', $s, $matches);
+        #$s = preg_replace('', $s);
+
+        $s = preg_replace_callback(
+            '/#\&amp;([@\w]{0,}){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu',
+            function ($matches) {
+                $parts= explode('@',$matches[1]);
+                $place= (count($parts)>1) ? $parts[1] :"above_the_line";
+                $hand= (count($parts)>2) ? $parts[2] : "first";
+                return '<w><add place="'.$place.'"  hand="'.$hand.'">'.$matches[2].'</add>'.$matches[3].'</w>';
+            },
+            $s
+        );
         $place = "";
         $hand ="";
-        if (!is_null($matches[0]) && count($matches[0]) != 0) {
-            for ($i = 0; $i < count($matches[0]); $i++) {
 
-                if(array_key_exists($i, $matches[1])){
-                    $parts = explode("@", $matches[1][$i]);
-                    if(count($parts)==2){
-                        $place =$parts[1];
-                    }
-                    if(count($parts)==3){
-                        $place =$parts[1];
-                        $hand =$parts[2];
-                    }
 
-                }
-                if (strlen($place)==0)  $place = "above_the_line" ;
-                if (strlen($hand)==0) $hand ="first";
-                $innerContent = (array_key_exists($i, $matches[2])) ? $matches[2][$i] :'';
-                $outerContent = (array_key_exists($i, $matches[3])) ? $matches[3][$i] :'';
-                $s = '<w><add place="' . $place . '" hand="'.$hand.'">' . $innerContent . '</add>' . $outerContent . '</w>';
-                $x=1;
-            }
-        }
+
 
         return $s;
 
