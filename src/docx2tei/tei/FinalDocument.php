@@ -25,7 +25,7 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
 
 
-
+        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         $this->isComplexStatementsCorrect($s);

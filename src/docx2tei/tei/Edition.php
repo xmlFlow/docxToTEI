@@ -56,6 +56,8 @@ class Edition extends DOMDocument {
                     $s = $content->ownerDocument->saveXML($content);
                     # ! order is important. never change order #
                     $s = XMLUtils::replaceLastMinus($s);
+                    # ! order is important. never change order #
+
                     $s = XMLUtils::createLineBegin($s);
                     $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
@@ -65,8 +67,8 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
                     # create spaces
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
-                    $s = XMLUtils::createStructuredContent($s);
-                    # create add
+
+
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
 
@@ -74,9 +76,9 @@ class Edition extends DOMDocument {
                     # ! order is important. never change order #
                     $s = XMLUtils::createAddElement($s);
                     $s = XMLUtils::createWords($s);
-
-
                     # ! order is important. never change order #
+
+
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {
