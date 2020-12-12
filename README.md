@@ -15,11 +15,12 @@
 * Content for XML is written in {}. 
 * _Italic_ is supported. **Bold** is not supported. 
  
- ### Testing Round 1
+ ### Testing Round 3, New functions
  | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
  | 1 |  `is now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written | 
- | 1 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written | 
+ | 2 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written, will work for this structure #&{जीवराज}#राज |
+
  
 
  ### Testing Round 2
