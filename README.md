@@ -19,7 +19,7 @@
  | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
  | 1 |  `is now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written | 
- | 1 |  `< place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written | 
+ | 1 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written | 
  
 
  ### Testing Round 2

@@ -67,19 +67,16 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
                     $s = XMLUtils::createStructuredContent($s);
                     # create add
-                    $s = XMLUtils::createAddElement($s);
-
-                    # set . as <orig> dot
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
+
+
+                    # ! order is important. never change order #
+                    $s = XMLUtils::createAddElement($s);
                     $s = XMLUtils::createWords($s);
 
-                    # handle sb and se
-#rename tags
-                    #TODO deletes tables
-                    #$s = XMLUtils::tagReplace($s, 'p', 'ab');
-                    # create words
-# ! order is important. never change order #
+
+                    # ! order is important. never change order #
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {

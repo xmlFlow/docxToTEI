@@ -14,6 +14,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTitleInBody($document, "title");
         XMLUtils::removeElementsInTag($document,'//ab/p');
         XMLUtils::removeElementsInTag($document,'//add/w');
+        XMLUtils::removeElementsInTag($document,'//w/w');
         XMLUtils::addChildElement($document, "ab", "lb");
         //XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBegins($document);
