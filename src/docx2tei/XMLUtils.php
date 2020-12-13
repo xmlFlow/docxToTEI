@@ -285,11 +285,15 @@ class XMLUtils {
      */
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/u', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
+                $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
+                if($hash_count > 1 && $hash_count %2==0) {
+                    $match_without_hash = self::createStructuredContent($match_without_hash);
+                }
                 $parts = explode("{", $match_without_hash);
                 $suffix1 = str_replace('}', '', $parts[1]);
                 if (count($parts) == 3) {
