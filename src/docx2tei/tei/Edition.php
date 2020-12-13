@@ -74,9 +74,6 @@ class Edition extends DOMDocument {
 
 
                     # ! order is important. never change order #
-                    $s = XMLUtils::createAddElement($s);
-                    $s = XMLUtils::createWords($s);
-                    # ! order is important. never change order #
 
 
                     $frag = $this->createDocumentFragment();

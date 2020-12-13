@@ -25,9 +25,15 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
 
 
+        # ! order is important. never change order #
         $s = XMLUtils::createStructuredContent($s);
+        $s = XMLUtils::createAddElement($s);
+        $s = XMLUtils::createWords($s);
+
+
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
+        #TODO reactvate
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         # correct after creating tags
@@ -37,14 +43,8 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::handleSurroundingAdd($s);
 
 
-## Error messages
-        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
-        if (count($matches[0]) > 0) {
-            foreach ($matches as $match) {
-                XMLUtils::print_error("[Error] Formatting error, please correct " . $match[0]);
-                XMLUtils::print_error("[Error] Possible reasons : Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ", true);
-            }
-        }
+        ## Error messages
+        #$matches = self::_checkForUnparsedElements($s, $matches);
 // Create new Dom
         $newDom = new DOMDocument();
         XMLUtils::printPHPErrors();
@@ -64,6 +64,22 @@ class FinalDocument extends DOMDocument {
             XMLUtils::print_error("[Fatal Error] Your document contains " . abs($diff) . " #SE elements, which has to be  begin with #SB", true);
         }
         return true;
+    }
+
+    /**
+     * @param array|null $s
+     * @param $matches
+     * @return mixed
+     */
+    private static function _checkForUnparsedElements(?array $s, $matches) {
+        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
+        if (count($matches[0]) > 0) {
+            foreach ($matches as $match) {
+                XMLUtils::print_error("[Error] Formatting error, please correct " . $match[0]);
+                XMLUtils::print_error("[Error] Possible reasons : Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ", true);
+            }
+        }
+        return $matches;
     }
 
     public function getDocumentElement() {

@@ -53,14 +53,18 @@
     <encodingDesc>
       <editorialDecl>
         <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
-        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (<w>़</w>); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-12-09</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-12-09" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2020-12-13</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-12-13" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
   </teiHeader>
   <facsimile>
-    <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0"/>
+    <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
   </facsimile>
   <text>
     <body>
@@ -69,14 +73,11 @@
       </div>
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="#surface1" facs="1r"/>
-        <ab type="invocatio" corresp="#invocatio">
-          <lb n="1"/>
-          <w>श्री</w>
-        </ab>
+        <ab type="invocatio" corresp="#invocatio" n="1"><lb n="1"/><w>श्री</w><choice><sic><w>अर्जि</w>#del@overstrike</sic><corr><w>अर्जि</w></corr></choice><w>अर्जि</w>}{<w>अर्जि</w>}#</ab>
         <p/>
-        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue"><lb n="1"/><add place="above_the_line" hand="first"><w>नं</w> <w>९७</w></add><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><add place="place" hand="hand"><w>नं</w> <w>९७</w></add><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice></ab>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="1"><lb n="1"/>#&amp;{<w>नं</w> <w>९७</w>}#<w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice>#&amp;@place@hand{<w>नं</w> <w>९७</w>}#<w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice></ab>
         <p/>
-        <ab type="maintext" corresp="#main_text" key="valEdi"><lb n="1"/><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><s> <choice><sic><w>उप्रन्त</w></sic><corr><w>उप्रान्त</w></corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा</w>-<w>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic><w>आश्वि</w></sic><corr><w>आश्विन</w></corr></choice> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७</w><w>का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर</w>-<w>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व</w>-<w>हुत</w> <w>षुसि</w> <surplus reason="repeated"><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्र</w><w>शुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName>कावुल्का</placeName> <w>किल्लामा</w> <w>अंरेजको</w><w>सेवक</w> <persName>लोकरमणोपाध्यायको</persName> <w>वेदो</w>-<w>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s></ab>
+        <ab type="maintext" corresp="#main_text" key="valEdi" n="1"><lb n="1"/><w>अर्जि</w> # reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<s xml:lang="nep"> <choice><sic><w>उप्रन्त</w></sic><corr><w>उप्रान्त</w></corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा<lb break="no" n="2"/>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic><w>आश्वि</w></sic><corr><w>आश्विन</w></corr></choice> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर<lb break="no" n="3"/>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व<lb break="no" n="4"/>हुत</w> <w>षुसि</w> <surplus><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्रशुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName><w>कावुल्का</w></placeName> <w>किल्लामा</w> <w>अंरेजकोसेवक</w> <persName><w>लोकरमणोपाध्यायको</w></persName> <w>वेदो<lb break="no" n="5"/>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s></ab>
         <p/>
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
