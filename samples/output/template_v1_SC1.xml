@@ -1,268 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DNA_0001_0097">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">An arjī from Lokaramaṇa Upādhyāya re the departure of the governor general from
-                    Calcutta, a meeting with the governor general’s secretary and the British victory in the Battle of
-                    Kabul (VS 1899)
-                </title>
-                <title type="short">An arjī re the departure of the governor general from Calcutta, a meeting with the
-                    governor general’s secretary and the British victory in the Battleof Kabul
-                </title>
-                <title type="sub">DNA_0001_0097</title>
-                <author role="issuer">Lokaramaṇa Upādhyāya</author>
-                <respStmt>
-                    <resp>main editor and translator</resp>
-                    <name type="main_editor">Manik Bajracharya, Simon Cubelic, Rajan Khatiwoda</name>
-                </respStmt>
-                <respStmt>
-                    <resp>collaborator</resp>
-                    <name type="collaborator">Rabi Acharya</name>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
-                    of Pre-modern Nepal
-                </publisher>
-                <pubPlace>Heidelberg, Germany</pubPlace>
-                <availability status="restricted">
-                    <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile
-                        remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).
-                    </p>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <settlement>Kathmandu</settlement>
-                        <repository>National Archives</repository>
-                        <idno>Ms. no. 97</idno>
-                        <altIdentifier type="Image">
-                            <settlement>Heidelberg</settlement>
-                            <collection>Heidelberg Academy of Sciences and Humanities</collection>
-                            <idno>1234567</idno>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="Nepali" otherLangs="Sanskrit"/>
-                    </msContents>
-                    <physDesc>
-                        <p>For details see
-                            <ref target="http://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/1168/1">entry in
-                                database
-                            </ref>
-                        </p>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p>Issued in <origDate>1842 (VS 1899)</origDate> from
-                                <origPlace>Calcutta</origPlace>
-                            </p>
-                        </origin>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <editorialDecl>
-                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
-                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
-                    optionally commentary.
-                </p>
-                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
-                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
-                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
-                    lines of various shapes, often used as placeholders or structuring elements. The editorial
-                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
-                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
-                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
-                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
-                </p>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <creation>
-                <date>2020-12-13</date>
-            </creation>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change type="internal" when="2020-12-13" who="#AUTO">Automatically converted from docx to TEI-XML
-                </change>
-            </listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0">
-            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div xml:id="abs" type="abstract" xml:lang="eng">
-                <p>In this letter Lokaramaṇa Upādhyāya reports about the departure of the governor general to the
-                    North-Western Provinces, a meeting with the governor general’s secretary and the British military
-                    victory in Kabul during the First Anglo-Afghan War (1839–1842).
-                </p>
-            </div>
-            <div xml:id="ed" type="edition" xml:lang="san">
-                <pb n="#surface1" facs="1r"/>
-                <ab type="invocatio" corresp="#invocatio" n="1">
-                    <lb n="1"/>
-                    <w>श्री</w>
-                    <choice>
-                        <sic>
-                            <w>अर्जि</w>
-                            <del rend="overstrike">
-                                <w>अर्जि</w>
-                            </del>
-                            <w>अर्जि</w>
-                        </sic>
-                        <corr>
-                            <w>अर्जि</w>
-                        </corr>
-                    </choice>
-                </ab>
-                <p/>
-                <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="1"><lb n="1"/>#&amp;{<w>नं</w>
-                    <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}##&amp;@place@hand{<w>नं</w>
-                    <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{
-                    ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#
-                </ab>
-                <p/>
-                <ab type="maintext" corresp="#main_text" key="valEdi" n="1">
-                    <lb n="1"/>
-                    <w>अर्जि</w>
-                    <choice>
-                        <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
-                        <reg>---</reg>
-                    </choice>
-                    <s xml:lang="nep">
-                        <choice>
-                            <sic>
-                                <w>उप्रन्त</w>
-                            </sic>
-                            <corr>
-                                <w>उप्रान्त</w>
-                            </corr>
-                        </choice>
-                        <w>गवर्नर्</w>
-                        <w>जनरल</w>
-                        <w>पश्चिम</w>
-                        <w>गयादेखि</w>
-                        <w>याँहाँ</w>
-                        <w>मा<lb break="no" n="2"/>मूलि
-                        </w>
-                        <w>दर्वार</w>
-                        <w>भयाको</w>
-                        <w>थिएन</w>
-                        <choice>
-                            <sic>
-                                <w>आश्वि</w>
-                            </sic>
-                            <corr>
-                                <w>आश्विन</w>
-                            </corr>
-                        </choice>
-                        <w>शुक्ल</w>
-                        <w>५</w>
-                        <w>रोज</w>
-                        <w>७</w>
-                        <w>का</w>
-                        <w>साहव</w>
-                        <w>सिक्रिटरिकाँहाँ</w>
-                        <w>दर्वार</w>
-                        <w>भयो</w>
-                        <w>हजूर<lb break="no" n="3"/>का
-                        </w>
-                        <w>मिजाजमुवारक्को</w>
-                        <w>षैरआफ़ियत्</w>
-                        <w>सोध्या</w>
-                        <w>व<lb break="no" n="4"/>हुत
-                        </w>
-                        <w>षुसि</w>
-                        <surplus>
-                            <w>वा</w>
-                            <w>षुसि</w>
-                        </surplus>
-                        <w>हुनुहुन्छ</w>
-                        <w>भनि</w>
-                        <w>जवाव</w>
-                        <w>दियाँ</w>
-                        <w>भाद्र</w>
-                        <w>शुक्ल</w>
-                        <w>१२</w>
-                        <w>का</w>
-                        <w>दिन</w>
-                        <placeName>
-                            <w>कावुल्का</w>
-                        </placeName>
-                        <w>किल्लामा</w>
-                        <w>अंरेजको</w>
-                        <w>सेवक</w>
-                        <persName>
-                            <w>लोकरमणोपाध्यायको</w>
-                        </persName>
-                        <w>वेदो<lb break="no" n="5"/>क्त
-                        </w>
-                        <w>शुभ</w>
-                        <w>आसिर्वाद</w>
-                        <w>सहश्रम्</w>
-                        <choice>
-                            <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
-                            <reg>---</reg>
-                        </choice>
-                    </s>
-                </ab>
-                <p/>
-            </div>
-            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
-                <p>Śrī</p>
-                <p>Number 97
-                    <note place="end">An addition by a second hand in the original, representing the manuscript number
-                        given by the National Archives Nepal.
-                    </note>
-                </p>
-                <p>
-                    <foreign>Arjī</foreign>
-                    - - -
-                </p>
-                <p><foreign>Uprānta</foreign>: Since the governor general departed for the Western [Provinces] there has
-                    not been any regular court assembly (<foreign>darbāra</foreign>) held. There was a court assembly
-                    held with the governor general’s secretary (<foreign>sāhaba sikriṭari</foreign>)<note place="end">
-                        Most probably #pen{Henry Marion Durand}# (1812–1871) who was appointed as private secretary to
-                        the governor general on 28 February 1842.
-                    </note> on Saturday, the 5th of the bright fortnight of Āśvina. [He] asked about your well-being and
-                    spirits. I replied that you are in very good spirits. The news has been published in newspapers here
-                    that the English gained a victory at the fort of Kabul<note place="end">This might refer to the Bala
-                        Hissar, where on 16 September 1842 Major General Sir George Pollock raised the British flag
-                        after seizing Kabul.
-                    </note> on the 12th of the bright fortnight of Bhādra. Two Persian newspapers have been sent to you.
-                    The situation in Kabul will become clear[er] if you cast your eyes on them.
-                </p>
-                <p>Friday, the 10th of the bright fortnight of Āśvina in the [Vikrama] era year 1899 (1842 CE).
-                    Residence: #pln{Chitpur}#, Calcutta. Auspiciousness.
-                </p>
-                <p>Thousands of auspicious blessings from [your] servant Lokaramaṇa Upādhyāya as uttered in the Vedas.
-                </p>
-            </div>
-            <div xml:id="commentary" type="commentary" xml:lang="eng">
-                <p>This report of #pen{Lokaramaṇa Upādhyāya}# refers to two historical events. The first one is the
-                    departure of Governor General Edward Law, 1st Earl of Ellenborough who took over office from Lord
-                    Auckland on 28 February 1842 (Anonymous 1842: 37), on a tour to the #gen{North-Western Provinces}#
-                    in April 1842 (Anonymous 1842: 142). The second one is the First Anglo-Afghan War (1839–1842).
-                    Lokaramaṇa reports about the Battle of Kabul, in which the so called "Army of Retribution" under the
-                    command of Major General Sir George Pollock destroyed parts of Kabul in September 1842.<note
-                            place="end">The second one is the First Anglo-Afghan War (1839–1842).
-                    </note> The army was dispatched by Governor General Lord Auckland as retaliation for the Massacre of
-                    Elphinstone's army in January 1842 and to recover prisoners captured during that British defeat. An
-                    account on the British advance to and capture of Kabul is given by Findlay 2014: 233.
-                </p>
-            </div>
-        </body>
-    </text>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">An arjī from Lokaramaṇa Upādhyāya re the departure of the governor general from Calcutta, a meeting with the governor general’s secretary and the British victory in the Battle of Kabul (VS 1899)</title>
+        <title type="short">An arjī re the departure of the governor general from Calcutta, a meeting with the governor general’s secretary and the British victory in the Battleof Kabul</title>
+        <title type="sub">DNA_0001_0097</title>
+        <author role="issuer">Lokaramaṇa Upādhyāya</author>
+        <respStmt>
+          <resp>main editor and translator</resp>
+          <name type="main_editor">Manik Bajracharya, Simon Cubelic, Rajan Khatiwoda</name>
+        </respStmt>
+        <respStmt>
+          <resp>collaborator</resp>
+          <name type="collaborator">Rabi Acharya</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
+        <pubPlace>Heidelberg, Germany</pubPlace>
+        <availability status="restricted">
+          <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+          <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Kathmandu</settlement>
+            <repository>National Archives</repository>
+            <idno>Ms. no. 97</idno>
+            <altIdentifier type="Image">
+              <settlement>Heidelberg</settlement>
+              <collection>Heidelberg Academy of Sciences and Humanities</collection>
+              <idno>1234567</idno>
+            </altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <textLang mainLang="Nepali" otherLangs="Sanskrit"/>
+          </msContents>
+          <physDesc>
+            <p>For details see <ref target="http://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/1168/1">entry in database </ref></p>
+          </physDesc>
+          <history>
+            <origin>
+              <p>Issued in <origDate>1842 (VS 1899)</origDate> from <origPlace>Calcutta</origPlace></p>
+            </origin>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc><creation> <date>2020-12-14</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-12-14" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div xml:id="abs" type="abstract" xml:lang="eng">
+        <p>In this letter Lokaramaṇa Upādhyāya reports about the departure of the governor general to the North-Western Provinces, a meeting with the governor general’s secretary and the British military victory in Kabul during the First Anglo-Afghan War (1839–1842).</p>
+      </div>
+      <div xml:id="ed" type="edition" xml:lang="san">
+        <pb n="#surface1" facs="1r"/>
+        <ab type="invocatio" corresp="#invocatio" n="1">
+          <lb n="1"/>
+          <w>श्री</w>
+          <choice>
+            <sic><w>अर्जि</w><del rend="overstrike"><w>अर्जि</w></del><w>अर्जि</w></sic>
+            <corr>
+              <w>अर्जि</w>
+            </corr>
+          </choice>
+        </ab>
+        <p/>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="1"><lb n="1"/>#&amp;{<w>नं</w> <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}##&amp;@place@hand{<w>नं</w> <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#</ab>
+        <p/>
+        <ab type="maintext" corresp="#main_text" key="valEdi" n="1"><lb n="1"/><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><s xml:lang="nep"> <choice><sic><w>उप्रन्त</w></sic><corr><w>उप्रान्त</w></corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा<lb break="no" n="2"/>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic><w>आश्वि</w></sic><corr><w>आश्विन</w></corr></choice> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७</w><w>का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर<lb break="no" n="3"/>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व<lb break="no" n="4"/>हुत</w> <w>षुसि</w> <surplus><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्र</w><w>शुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName><w>कावुल्का</w></placeName> <w>किल्लामा</w> <w>अंरेजको</w><w>सेवक</w> <persName><w>लोकरमणोपाध्यायको</w></persName> <w>वेदो<lb break="no" n="5"/>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s></ab>
+        <p/>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+        <p>Śrī</p>
+        <p>Number 97<note place="end"> An addition by a second hand in the original, representing the manuscript number given by the National Archives Nepal.</note></p>
+        <p><foreign>Arjī</foreign> - - -</p>
+        <p><foreign>Uprānta</foreign>: Since the governor general departed for the Western [Provinces] there has not been any regular court assembly (<foreign>darbāra</foreign>) held. There was a court assembly held with the governor general’s secretary (<foreign>sāhaba sikriṭari</foreign>)<note place="end"> Most probably #pen{Henry Marion Durand}# (1812–1871) who was appointed as private secretary to the governor general on 28 February 1842.</note> on Saturday, the 5th of the bright fortnight of Āśvina. [He] asked about your well-being and spirits. I replied that you are in very good spirits. The news has been published in newspapers here that the English gained a victory at the fort of Kabul<note place="end"> This might refer to the Bala Hissar, where on 16 September 1842 Major General Sir George Pollock raised the British flag after seizing Kabul.</note> on the 12th of the bright fortnight of Bhādra. Two Persian newspapers have been sent to you. The situation in Kabul will become clear[er] if you cast your eyes on them.</p>
+        <p>Friday, the 10th of the bright fortnight of Āśvina in the [Vikrama] era year 1899 (1842 CE). Residence: #pln{Chitpur}#, Calcutta. Auspiciousness.</p>
+        <p>Thousands of auspicious blessings from [your] servant Lokaramaṇa Upādhyāya as uttered in the Vedas.</p>
+      </div>
+      <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>This report of #pen{Lokaramaṇa Upādhyāya}# refers to two historical events. The first one is the departure of Governor General Edward Law, 1st Earl of Ellenborough who took over office from Lord Auckland on 28 February 1842 (Anonymous 1842: 37), on a tour to the #gen{North-Western Provinces}# in April 1842 (Anonymous 1842: 142). The second one is the First Anglo-Afghan War (1839–1842). Lokaramaṇa reports about the Battle of Kabul, in which the so called "Army of Retribution" under the command of Major General Sir George Pollock destroyed parts of Kabul in September 1842.<note place="end"> The second one is the First Anglo-Afghan War (1839–1842).</note> The army was dispatched by Governor General Lord Auckland as retaliation for the Massacre of Elphinstone's army in January 1842 and to recover prisoners captured during that British defeat. An account on the British advance to and capture of Kabul is given by Findlay 2014: 233.</p>
+      </div>
+    </body>
+  </text>
 </TEI>

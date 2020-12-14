@@ -30,12 +30,12 @@ class FinalDocument extends DOMDocument {
         # Complex  sentence
         #TODO reactvate
         $this->isComplexStatementsCorrect($s);
-        $s = XMLUtils::createComplexSentence($s);
+        $s = XMLUtils::finalCreateComplexSentence($s);
         # correct after creating tags
         #   these are final operations in ORDER
-        $s = XMLUtils::createNotesWithCorrectTags($s);
-        $s = XMLUtils::handleLineBreakNoWords($s);
-        $s = XMLUtils::handleSurroundingAdd($s);
+        $s = XMLUtils::finalCreateNotesWithCorrectTags($s);
+        $s = XMLUtils::finalHandleLineBreakNoWords($s);
+        $s = XMLUtils::finalHandleSurroundingAdd($s);
 
 
         ## Error messages

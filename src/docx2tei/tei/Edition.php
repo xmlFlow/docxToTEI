@@ -55,8 +55,7 @@ class Edition extends DOMDocument {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
                     # ! order is important. never change order #
-                    $s = XMLUtils::replaceLastMinus($s);
-                    # ! order is important. never change order #
+                    $s = XMLUtils::createReplaceLastMinus($s);
 
                     $s = XMLUtils::createLineBegin($s);
                     $s = XMLUtils::createLineBeginNoBreak($s);

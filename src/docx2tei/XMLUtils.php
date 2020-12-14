@@ -29,7 +29,7 @@ class XMLUtils {
         return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
     }
 
-    public static function replaceLastMinus(string $s) {
+    public static function createReplaceLastMinus(string $s) {
         $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
         return $s;
     }
@@ -38,7 +38,7 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function createNotesWithCorrectTags(string $s) {
+    public static function finalCreateNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
         $s = preg_replace('/&lt;/i', '<', $s);
@@ -120,7 +120,7 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function createComplexSentence(string $s) {
+    public static function finalCreateComplexSentence(string $s) {
         preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
@@ -202,13 +202,13 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function handleLineBreakNoWords(string $s) {
+    public static function finalHandleLineBreakNoWords(string $s) {
         // <w>व<lb break="no" n="2"/>सी</w>
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;
     }
 
-    public static function handleSurroundingAdd(string $s) {
+    public static function finalHandleSurroundingAdd(string $s) {
         //
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;
@@ -285,7 +285,7 @@ class XMLUtils {
      */
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/u', $s, $matches);
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\}){1,2}' . XMLUtils::$bnd . '/u', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
