@@ -11,10 +11,10 @@ class Synopsis extends DOMDocument {
     public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
         $this->document = $document;
-        $this->setEnglishTranslation();
+        $this->setSynopsis();
     }
 
-    protected function setEnglishTranslation(): void {
+    protected function setSynopsis(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->synopsis . '"]/parent::sec/child::node()');
         if (count($etSec) == 0) {
             XMLUtils::print_error("[Warning] synopsis section not defined");

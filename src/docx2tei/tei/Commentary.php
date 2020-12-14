@@ -32,8 +32,7 @@ class Commentary extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
-                    # create spaces
+                    $s= XMLUtils::sectionHandling($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
