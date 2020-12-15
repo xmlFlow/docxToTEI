@@ -34,12 +34,12 @@ class XMLUtils {
 
         $s = XMLUtils::createDot($s);
         # ! order is important. never change order #
-        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createAddElement($s);
+        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createWords($s);
         # ! order is important. never change order #
 
-
+        #TODO
         #return preg_replace('/\s+/i', ' ', $s);
         return $s;
     }
@@ -286,9 +286,9 @@ class XMLUtils {
             '/#\&amp;([@\w]{0,}){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu',
             function ($matches) {
                 $parts= explode('@',$matches[1]);
-                $place= (count($parts)>1) ? $parts[1] :"above_the_line";
-                $hand= (count($parts)>2) ? $parts[2] : "first";
-                return '<w><add place="'.$place.'"  hand="'.$hand.'">'.$matches[2].'</add>'.$matches[3].'</w>';
+                $place = (count($parts) > 1) ? $parts[1] : "above_the_line";
+                $hand = (count($parts) > 2) ? $parts[2] : "first";
+                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . $matches[2] . '</add>' . $matches[3] . '</w>';
             },
             $s
         );

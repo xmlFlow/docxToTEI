@@ -1,614 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="E_2253_0015A">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">A copy of an executive order presumably from King Gīrvāṇa granting Rāmānanda Bā̃ḍā
-                    the right to retain overseership of the Luthāma Guṭha and its land endowments (VS 1860)
-                </title>
-                <title type="short">A copy of an executive order granting Rāmānanda Bā̃ḍā the right to retain
-                    overseership of the Luthāma Guṭha and its land endowments
-                </title>
-                <title type="sub">E_2253_0015A</title>
-                <author role="issuer">[Gīrvāṇayuddha Vikrama Śāha]</author>
-                <respStmt>
-                    <resp>main editor and translator</resp>
-                    <name type="main_editor">Manik Bajracharya</name>
-                </respStmt>
-                <respStmt>
-                    <resp>collaborator</resp>
-                    <name type="collaborator">Yogesh Budhathoki</name>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
-                    of Pre-modern Nepal
-                </publisher>
-                <pubPlace>Heidelberg, Germany</pubPlace>
-                <availability status="restricted">
-                    <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile
-                        remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).
-                    </p>
-                </availability>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <settlement>Kathmandu</settlement>
-                        <repository>Manoja Rājopādhyāya</repository>
-                        <idno/>
-                        <altIdentifier type="microfilm">
-                            <settlement>Kathmandu, Berlin</settlement>
-                            <collection>Nepal German Manuscript Preservation Project</collection>
-                            <idno>NGMPP E 2253/15C</idno>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="Nep" otherLangs="San"/>
-                    </msContents>
-                    <physDesc>
-                        <p>For details see
-                            <ref target="https://nepalica.hadw-bw.de/nepal/catitems/viewitem/18862/1">entry in
-                                database
-                            </ref>
-                        </p>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p>Issued in <origDate>VS 1856</origDate> from
-                                <origPlace>Calcutta</origPlace>
-                            </p>
-                        </origin>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <editorialDecl>
-                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
-                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
-                    optionally commentary.
-                </p>
-                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
-                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
-                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
-                    lines of various shapes, often used as placeholders or structuring elements. The editorial
-                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
-                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
-                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
-                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
-                </p>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <creation>
-                <date>2020-12-15</date>
-            </creation>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML
-                </change>
-            </listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface xml:id="surface1" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0">
-            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-        </surface>
-        <surface xml:id="surface2" facs="E_2253_0534a.png" ulx="0" uly="0" lrx="0" lry="0">
-            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-        </surface>
-        <surface xml:id="surface2" facs="E_2253_0534b.png" ulx="0" uly="0" lrx="0" lry="0">
-            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
-        </surface>
-    </facsimile>
-    <text>
-        <body>
-            <div xml:id="abs" type="abstract" xml:lang="eng">
-                <p>The executive order of presumably King Gīrvāṇa, of which this is a copy, “empowers” Rāmananda Bā̃ḍā
-                    of Patan to exercise overseership of the Luthāma <foreign>guṭha</foreign> and its endowments,
-                    consisting of sixty-nine <foreign>ropanīs</foreign> of land.
-                </p>
-            </div>
-            <div xml:id="ed" type="edition" xml:lang="nep-san">
-                <pb n="#surface1" facs="1r"/>
-                <ab type="invocatio" corresp="#invocatio" n="1">
-                    <lb n="1"/>
-                    <supplied reason="lost">
-                        <w>श्रीमत्सेंद्र</w>
-                        <w>१</w>
-                    </supplied>
-                </ab>
-                <p/>
-                <ab type="margin" corresp="#margin" n="1">
-                    <lb n="1"/>
-                    <del rend="crossed_out">
-                        <w>स्वस्तिश्री</w>
-                    </del>
-                    <gap extent="15 characters" agent="ink" reason="lost"/>
-                    <w>लिखा</w>
-                    <w>पत्रम्</w>
-                </ab>
-                <p/>
-                <ab type="maintext" corresp="#main_text" n="1">
-                    <lb n="1"/>
-                    <s xml:lang="san">
-                        <w>स्वस्ति</w>
-                    </s>
-                    <s xml:lang="san">
-                        <w>श्रीमन्महाराजाधिराजकस्य</w>
-                        <w>रुक्का</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>आगे</w>
-                        <persName>
-                            <w>रामहरी</w>
-                        </persName>
-                        <placeName>
-                            <w>पाटनका</w>
-                        </placeName>
-                        <placeName>
-                            <w>ओकु</w>
-                            <w>वाहाल</w>
-                            <w>टोलको</w>
-                        </placeName>
-                        <placeName>
-                            <w>महावुद्ध</w>
-                        </placeName>
-                        <w>घरको</w>
-                        <persName>
-                            <w>रामानंद</w>
-                            <w>वांडाके</w>
-                        </persName>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>तेरा</w>
-                        <w>पुरू<lb break="no" n="2"/>षा
-                        </w>
-                        <persName>
-                            <w>जीवराज</w>
-                            <w>वांडाले</w>
-                        </persName>
-                        <w>१</w>
-                        <w>को</w>
-                        <w>रथमहा</w>
-                        <w>सुनको</w>
-                        <w>विमान</w>
-                        <w>चढाउंदा</w>
-                        <w>गूठ</w>
-                        <w>राख्याको</w>
-                        <w>का<lb break="no" n="3"/>म
-                        </w>
-                        <w>चलाई</w>
-                        <w>वाकि</w>
-                        <w>रह्याका</w>
-                        <w>द्रव्यले</w>
-                        <w>पछि</w>
-                        <w>गूठका</w>
-                        <w>खेत</w>
-                        <w>वढाउदै</w>
-                        <surplus>
-                            <w>ख</w>
-                        </surplus>
-                        <w>राख्याका</w>
-                    </s>
-                    <table>
-                        <row>
-                            <cell>
-                                <p>
-                                    <placeName>
-                                        <w>ङखु</w>
-                                    </placeName>
-                                    <w>रोपनी</w> ---
-                                    <w>६</w>
-                                </p>
-                            </cell>
-                            <cell>
-                                <p>
-                                    <placeName>
-                                        <w>भिलुपा</w>
-                                    </placeName>
-                                    <w>रोपनी</w> ---
-                                    <w>६</w>
-                                </p>
-                            </cell>
-                            <cell>
-                                <p>
-                                    <persName>
-                                        <w>ङषुवंग</w>
-                                    </persName>
-                                    <w>रोपनी</w> ---
-                                    <w>१</w>
-                                </p>
-                            </cell>
-                        </row>
-                        <row>
-                            <cell>
-                                <p>
-                                    <w>पाको</w>
-                                    <w>रोपनी</w> --- <w>६</w>
-                                </p>
-                            </cell>
-                            <cell>
-                                <p>
-                                    <w>सिलापाको</w>
-                                    <w>रोपनी</w> --- <w>६</w>।
-                                </p>
-                            </cell>
-                            <cell>
-                                <p>
-                                    <w>रानिवु</w>
-                                    <w>रोपनी</w> --- <w>१</w>।।।
-                                </p>
-                            </cell>
-                        </row>
-                    </table>
-                    <lb n="4"/>
-                    <s xml:lang="hin">
-                        <w>मेरो</w>
-                        <gap extent="5 characters" agent="breakage" reason="illegible"/>
-                        <w>नाम</w>
-                        <w>विष्णु</w>
-                        <w>हो</w>
-                        <w>तर</w>
-                        <space quantity="6" unit="characters"/>
-                        <w>श्याम</w>
-                        <w>होइन</w>
-                    </s>
-                    <space quantity="5" unit="lines"/>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>
-                            <add place="below_the_line" hand="second">नाम</add>
-                        </w>
-                        <w>काले</w>
-                        <w>
-                            <add place="" hand="">हो</add>
-                        </w>
-                        , <w>सेत्ये</w>
-                        <unclear cert="low">
-                            <w>होइन</w>
-                        </unclear>
-                        <w>है</w>
-                        <unclear cert="high">
-                            <w>हाइ</w>
-                        </unclear>
-                        <unclear cert="high">
-                            <w>हाइ</w>
-                        </unclear>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <choice>
-                            <sic>
-                                <w>काम</w>
-                            </sic>
-                            <corr>
-                                <w>नाम</w>
-                            </corr>
-                        </choice>
-                        <w>सेतो</w>
-                        <orig>|||||</orig>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <choice>
-                            <orig>|||</orig>
-                            <reg>—</reg>
-                        </choice>
-                        <w>नाम</w>
-                        <geogName>
-                            <w>सेतो</w>
-                        </geogName>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <w>होइन</w>
-                    </s>
-                    <s xml:lang="nep">
-                        <w>मेरो</w>
-                        <w>नाम</w>
-                        <w>सेतो</w>
-                        <orig>•</orig>
-                        <w>होइन</w>
-                    </s>
-                    <lb n="5"/>
-                </ab>
-                <p/>
-                <pb n="#surface2" facs="1v"/>
-                <ab type="marphat" corresp="#marphat" n="1">
-                    <lb n="1"/>
-                    <del rend="crossed_out">
-                        <w>स्वस्तिश्री</w>
-                    </del>
-                    <gap extent="15 characters" agent="ink" reason="lost"/>
-                    <w>लिखा</w>
-                    <w>पत्रम्</w>
-                    <w>मार्फत्</w>
-                    #pen{<w>रणबहादुर</w>
-                    <w>साह</w>}
-                </ab>
-                <p/>
-                <ab type="margin" corresp="#margin" n="1">
-                    <lb n="1"/>
-                    <w>स्ही</w>
-                    <w>सदर</w>
-                    <persName>
-                        <w>बेखा</w>
-                    </persName>
-                    <placeName>
-                        <w>काठमाडौं</w>
-                    </placeName>
-                    <geogName>
-                        <w>फुल्चोकी</w>
-                    </geogName>
-                    <lb n="2"/>
-                </ab>
-                <p/>
-                <pb n="#surface3" facs="2r"/>
-                <ab type="marphat" corresp="#marphat" n="1">
-                    <lb n="1"/>
-                    <del rend="crossed_out">
-                        <w>स्वस्तिश्री</w>
-                    </del>
-                    <gap extent="15 characters" agent="ink" reason="lost"/>
-                    <w>लिखा</w>
-                    <w>पत्रम्</w>
-                    <w>मार्फत्</w>
-                    #pen{<w>रणबहादुर</w>
-                    <w>साह</w>}
-                </ab>
-                <p/>
-                <ab type="margin" corresp="#margin" n="1">
-                    <lb n="1"/>
-                    <w>स्ही</w>
-                    <w>सदर</w>
-                    <persName>
-                        <w>बेखा</w>
-                    </persName>
-                    <placeName>
-                        <w>काठमाडौं</w>
-                    </placeName>
-                    <geogName>
-                        <w>फुल्चोकी</w>
-                    </geogName>
-                    <lb n="2"/>
-                </ab>
-                <p/>
-            </div>
-            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
-                <p>Śrī Matsyendra[nātha] - 1</p>
-                <p>...
-                    <note place="end">The text written in the right margin has been blacked out with ink, written
-                        in <placeName>Kathmandu</placeName>.
-                    </note>
-                    written letter.
-                </p>
-                <p>Hail! A rukkā of the venerable supreme king of great kings
-                    <note place="end">The name of the king is not mentioned here, <foreign>but it is evident from the
-                        date of the document that
-                    </foreign> it was <persName>Gīrvāṇayuddha Vikrama Śāha</persName> (r. 1799-1816). He ruled under the
-                        regency of Queen <persName>Lalita Tripura Sundarī</persName>.
-                    </note>
-                </p>
-                <p>Āge: To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at Oku
-                    Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your ancestor Jīvarāja
-                    Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e.,
-                    Matsyendranātha) were added further rice field plots with money left over after it completed its
-                    tasks. It is learned that you (i.e., the <foreign>guṭha</foreign> members) have been tending to
-                    those plots as well. It is also learned that up to the present you have been renovating the <foreign>
-                        vimāna
-                    </foreign> whenever it is damaged. You still enjoyed [the fruits of] the <foreign>guṭha</foreign> for
-                    two or three years after [the start of] our rule. Earlier during [the Gorkha troops'] blockade of
-                    the region, when you took to Bhādagāũ, in order to hide them there, the documents relating to the
-                    donation of the <foreign>guṭha</foreign>, [the documents] were grabbed by Bhoṭyās. However, it is
-                    learned that the well-informed among the twenty-four thousand 7 [households/people] know [that you
-                    are the rightful overseers of the <foreign>guṭha</foreign>]. Later, when the <foreign>ijārā
-                    </foreign> [system] was instituted, you gave up the plots but did not give up the regular duties [of
-                    the <foreign>guṭha</foreign>]. It is [further] learned that you still had to renovate [the <foreign>
-                        vimāna</foreign>] whenever it was damaged, even after the <foreign>ijārā</foreign> [obligations
-                    on the part of the <foreign>guṭha</foreign>] had been forgiven, and that you were unable to make use
-                    of the <foreign>guṭha</foreign> established by your ancestors.
-                </p>
-                <table>
-                    <row>
-                        <cell>
-                            <p>
-                                <placeName>Nyakhu</placeName>
-                                <foreign>ropani</foreign> ---
-                                <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <placeName>Bhilupa</placeName>
-                                <foreign>ropani</foreign> ---
-                                <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <persName>banga</persName>
-                                <foreign>ropa</foreign> ---
-                                <w>१</w>
-                            </p>
-                        </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <p>
-                                <persName>Pako</persName>
-                                <foreign>ropani</foreign> --- <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <placeName>Silapa</placeName>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <foreign>Ropani</foreign>
-                                – 6
-                            </p>
-                        </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <p>
-                                <placeName>Nyakhu</placeName>
-                                <foreign>ropani</foreign> ---
-                                <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <placeName>Bhilupa</placeName>
-                                <foreign>ropani</foreign> ---
-                                <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <persName>banga</persName>
-                                <foreign>ropa</foreign> ---
-                                <w>१</w>
-                            </p>
-                        </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <p>
-                                <persName>Pako</persName>
-                                <foreign>ropani</foreign> --- <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <placeName>Silapa</placeName>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <foreign>Ropani</foreign>
-                                – 6
-                            </p>
-                        </cell>
-                    </row>
-                    <row>
-                        <cell>
-                            <p>
-                                <w>पाको</w>
-                                <w>रोपनी</w> --- <w>६</w>
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <w>सिलापाको</w>
-                                <w>रोपनी</w> --- <w>६</w>।
-                            </p>
-                        </cell>
-                        <cell>
-                            <p>
-                                <w>रानिवु</w>
-                                <w>रोपनी</w> --- <w>१</w>।।।
-                            </p>
-                        </cell>
-                    </row>
-                </table>
-            </div>
-            <div xml:id="commentary" type="commentary" xml:lang="eng">
-                <p>This document is a copy of an executive order seemingly issued by King <persName>Gīrvāṇayuddha
-                </persName> to Rāmānanda Bā̃ḍā of <placeName>Oku Bāhāla</placeName> in <geogName>Patan</geogName>. It
-                    grants Rāmānanda and his fellow <foreign>guṭha</foreign> members the right to retain overseership of
-                    the Luthāma Guṭha and its land endowments. It was issued in response to a petition by Rāmānanda and
-                    is mentioned in a note appended to document E_2253_0015B. There is a gap of one year between this
-                    and the previous document
-                    <note place="end">Footnote commentary: interesting very <foreign>gutha tugha</foreign>.
-                    </note>
-                    E_2253_0015B, leading one to believe that Rāmānanda had to wait that long to get this <foreign>
-                        rukkā
-                    </foreign> issued.
-                </p>
-                <p>Rāmānanda apparently did not possess any proof of his right to the Luthāma Guṭha. As the document
-                    mentions, this was because his papers were taken by Bhoṭes when he fled to Bhaktapur during attacks
-                    by Gorkhali troops in Patan. <foreign>The king, however, acknowledges his right to the guṭha based
-                        on information obtained from the general public.
-                    </foreign> No names of suppliers of such information are mentioned, nor does the document provide
-                    any details about the Bhoṭes who took the documents. If the ethnonym Bhoṭe refers to Tibetanid
-                    peoples, it is puzzling how they could have overpowered Rāmānanda in Bhaktapur, which was still
-                    ruled by a Newar king. One may also assume that the documents were taken while he was on his way to
-                    Bhaktapur.
-                </p>
-                <p>The document lists 14 pieces of plots amounting to 69 <foreign>ropanīs</foreign> as the endowment of
-                    the <foreign>guṭha</foreign>. Although some of the place names cannot be identified, it is likely
-                    that all the plots were in or around Lalitpur district. It is interesting to note that Bruce Owens's
-                    study during the 1980s found 36 <foreign>ropanīs</foreign> of land remaining with the <foreign>
-                        guṭha
-                    </foreign> (see Owens 1989: 274). This was only half of the original amount of land mentioned in the
-                    current document. Owens further mentions that the "<foreign>guṭhiyar</foreign> complains of having
-                    difficulty extracting the <foreign>guṭhī's</foreign> share of the proceeds from its tenants"
-                    (ibid.).
-                </p>
-                <p>The document has a note appended at the end which mentions that Amālī Śaṅkhadhara had asked the <foreign>
-                    guṭha
-                </foreign> members to verify their status through Patan's notables. It is interesting that an <foreign>
-                    amāli
-                </foreign> could object to a right already granted by the king. Could a local authority overrule the
-                    king's order? Or was this merely a bureaucratic formality?Commentry
-                    <note place="end">This is a commentary
-                        <foreign>footnote.</foreign>
-                    </note>
-                </p>
-            </div>
-        </body>
-    </text>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">A copy of an executive order presumably from King Gīrvāṇa granting Rāmānanda Bā̃ḍā the right to retain overseership of the Luthāma Guṭha and its land endowments (VS 1860)</title>
+        <title type="short">A copy of an executive order granting Rāmānanda Bā̃ḍā the right to retain overseership of the Luthāma Guṭha and its land endowments</title>
+        <title type="sub">E_2253_0015A</title>
+        <author role="issuer">[Gīrvāṇayuddha Vikrama Śāha]</author>
+        <respStmt>
+          <resp>main editor and translator</resp>
+          <name type="main_editor">Manik Bajracharya</name>
+        </respStmt>
+        <respStmt>
+          <resp>collaborator</resp>
+          <name type="collaborator">Yogesh Budhathoki</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
+        <pubPlace>Heidelberg, Germany</pubPlace>
+        <availability status="restricted">
+          <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+          <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Kathmandu</settlement>
+            <repository>Manoja Rājopādhyāya</repository>
+            <idno/>
+            <altIdentifier type="microfilm">
+              <settlement>Kathmandu, Berlin</settlement>
+              <collection>Nepal German Manuscript Preservation Project</collection>
+              <idno>NGMPP E 2253/15C</idno>
+            </altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <textLang mainLang="Nep" otherLangs="San"/>
+          </msContents>
+          <physDesc>
+            <p>For details see <ref target="https://nepalica.hadw-bw.de/nepal/catitems/viewitem/18862/1">entry in database </ref></p>
+          </physDesc>
+          <history>
+            <origin>
+              <p>Issued in <origDate>VS 1856</origDate> from <origPlace>Calcutta</origPlace></p>
+            </origin>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc><creation> <date>2020-12-15</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface xml:id="surface1" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+    <surface xml:id="surface2" facs="E_2253_0534a.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+    <surface xml:id="surface2" facs="E_2253_0534b.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="marphat" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="margin" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div xml:id="abs" type="abstract" xml:lang="eng">
+        <p>The executive order of presumably King Gīrvāṇa, of which this is a copy, “empowers” Rāmananda Bā̃ḍā of Patan to exercise overseership of the Luthāma <foreign>guṭha</foreign> and its endowments, consisting of sixty-nine <foreign>ropanīs</foreign> of land.</p>
+      </div>
+      <div xml:id="ed" type="edition" xml:lang="nep-san">
+        <pb n="#surface1" facs="1r"/>
+        <ab type="invocatio" corresp="#invocatio" n="1">
+          <lb n="1"/>
+          <supplied reason="lost"><w>श्रीमत्सेंद्र</w> <w>१</w></supplied>
+        </ab>
+        <p/>
+        <ab type="margin" corresp="#margin" n="1"><lb n="1"/><del rend="crossed_out"><w>स्वस्तिश्री</w></del> <gap extent="15 characters" agent="ink" reason="lost"/> <w>लिखा</w> <w>पत्रम्</w></ab>
+        <p/>
+        <ab type="maintext" corresp="#main_text" n="1"><lb n="1"/><s xml:lang="san"><w>स्वस्ति</w></s><s xml:lang="san"><w>श्रीमन्महाराजाधिराजकस्य</w> <w>रुक्का</w></s><s xml:lang="nep"><w>आगे</w> <persName><w>रामहरी</w></persName> <placeName><w>पाटनका</w></placeName> <placeName><w>ओकु</w> <w>वाहाल</w> <w>टोलको</w></placeName> <placeName><w>महावुद्ध</w></placeName> <w>घरको</w> <persName><w>रामानंद</w> <w>वांडाके</w></persName> </s> <s xml:lang="nep"><w>तेरा</w> <w>पुरू<lb break="no" n="2"/>षा</w> <persName><w>जीवराज</w> <w>वांडाले</w></persName> <w>१</w> <w>को</w> <w>रथमहा</w> <w>सुनको</w> <w>विमान</w> <w>चढाउंदा</w> <w>गूठ</w> <w>राख्याको</w> <w>का<lb break="no" n="3"/>म</w> <w>चलाई</w> <w>वाकि</w> <w>रह्याका</w> <w>द्रव्यले</w> <w>पछि</w> <w>गूठका</w> <w>खेत</w> <w>वढाउदै</w> <surplus><w>ख</w></surplus> <w>राख्याका</w></s>  <table>    <row>      <cell>        <p><placeName><w>ङखु</w></placeName> <w>रोपनी</w> --- <w>६</w></p>      </cell>      <cell>        <p><placeName><w>भिलुपा</w></placeName> <w>रोपनी</w> --- <w>६</w></p>      </cell>      <cell>        <p><persName><w>ङषुवंग</w></persName> <w>रोपनी</w> --- <w>१</w></p>      </cell>    </row>    <row>      <cell>        <p> <w>पाको</w> <w>रोपनी</w> --- <w>६</w> </p>      </cell>      <cell>        <p><w>सिलापाको</w> <w>रोपनी</w> --- <w>६</w>। </p>      </cell>      <cell>        <p><w>रानिवु</w> <w>रोपनी</w> --- <w>१</w>।।।</p>      </cell>    </row>  </table><lb n="4"/><s xml:lang="hin"><w>मेरो</w> <gap extent="5 characters" agent="breakage" reason="illegible"/><w>नाम</w> <w>विष्णु</w> <w>हो</w> <w>तर</w><space quantity="6" unit="characters"/> <w>श्याम</w> <w>होइन</w></s> <space quantity="5" unit="lines"/><s xml:lang="nep"><w>मेरो</w> <w><add place="below_the_line" hand="second">नाम</add></w> <w>काले</w> <w><add place="" hand="">हो</add></w>, <w>सेत्ये</w> <unclear cert="low"><w>होइन</w></unclear><w>है</w> <unclear cert="high"><w>हाइ</w></unclear> <unclear cert="high"><w>हाइ</w></unclear></s><s xml:lang="nep"><w>मेरो</w> <choice><sic><w>काम</w></sic><corr><w>नाम</w></corr></choice> <w>सेतो</w> <orig>|||||</orig> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <choice><orig>|||</orig><reg>—</reg></choice> <w>नाम</w> <geogName><w>सेतो</w></geogName> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <w>होइन</w></s> <s xml:lang="nep"> <w>मेरो</w> <w>नाम</w> <w>सेतो</w> <orig>•</orig> <w>होइन</w></s><lb n="5"/></ab>
+        <p/>
+        <pb n="#surface2" facs="1v"/>
+        <ab type="marphat" corresp="#marphat" n="1"><lb n="1"/><del rend="crossed_out"><w>स्वस्तिश्री</w></del> <gap extent="15 characters" agent="ink" reason="lost"/> <w>लिखा</w> <w>पत्रम्</w><w>मार्फत्</w> #pen{<w>रणबहादुर</w> <w>साह</w>}</ab>
+        <p/>
+        <ab type="margin" corresp="#margin" n="1"><lb n="1"/><w>स्ही</w> <w>सदर</w> <persName><w>बेखा</w></persName> <placeName><w>काठमाडौं</w></placeName> <geogName><w>फुल्चोकी</w></geogName><lb n="2"/></ab>
+        <p/>
+        <pb n="#surface3" facs="2r"/>
+        <ab type="marphat" corresp="#marphat" n="1"><lb n="1"/><del rend="crossed_out"><w>स्वस्तिश्री</w></del> <gap extent="15 characters" agent="ink" reason="lost"/> <w>लिखा</w> <w>पत्रम्</w><w>मार्फत्</w> #pen{<w>रणबहादुर</w> <w>साह</w>}</ab>
+        <p/>
+        <ab type="margin" corresp="#margin" n="1"><lb n="1"/><w>स्ही</w> <w>सदर</w> <persName><w>बेखा</w></persName> <placeName><w>काठमाडौं</w></placeName> <geogName><w>फुल्चोकी</w></geogName><lb n="2"/></ab>
+        <p/>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng"><p>Śrī Matsyendra[nātha] - 1</p><p>...<note place="end"> The text written in the right margin has been blacked out with ink, written in <placeName>Kathmandu</placeName>.</note> written letter.</p><p>Hail! A rukkā of the venerable supreme king of great kings<note place="end"> The name of the king is not mentioned here, <foreign>but it is evident from the date of the document that</foreign> it was <persName>Gīrvāṇayuddha Vikrama Śāha</persName> (r. 1799-1816). He ruled under the regency of Queen <persName>Lalita Tripura Sundarī</persName>.</note></p><p>Āge: To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at Oku Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your ancestor Jīvarāja Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e., Matsyendranātha) were added further rice field plots with money left over after it completed its tasks. It is learned that you (i.e., the <foreign>guṭha</foreign> members) have been tending to those plots as well. It is also learned that up to the present you have been renovating the <foreign>vimāna</foreign> whenever it is damaged. You still enjoyed [the fruits of] the <foreign>guṭha</foreign> for two or three years after [the start of] our rule. Earlier during [the Gorkha troops'] blockade of the region, when you took to Bhādagāũ, in order to hide them there, the documents relating to the donation of the <foreign>guṭha</foreign>, [the documents] were grabbed by Bhoṭyās. However, it is learned that the well-informed among the twenty-four thousand 7 [households/people] know [that you are the rightful overseers of the <foreign>guṭha</foreign>]. Later, when the <foreign>ijārā</foreign> [system] was instituted, you gave up the plots but did not give up the regular duties [of the <foreign>guṭha</foreign>]. It is [further] learned that you still had to renovate [the <foreign>vimāna</foreign>] whenever it was damaged, even after the <foreign>ijārā</foreign> [obligations on the part of the <foreign>guṭha</foreign>] had been forgiven, and that you were unable to make use of the <foreign>guṭha</foreign> established by your ancestors.</p>  <table>    <row>      <cell>        <p><placeName>Nyakhu</placeName> <foreign>ropani</foreign> --- <w>६</w></p>      </cell>      <cell>        <p><placeName>Bhilupa</placeName> <foreign>ropani</foreign> --- <w>६</w></p>      </cell>      <cell>        <p><persName>banga</persName> <foreign>ropa</foreign> --- <w>१</w></p>      </cell>    </row>    <row>      <cell>        <p> <persName>Pako</persName> <foreign>ropani</foreign> --- <w>६</w> </p>      </cell>      <cell>        <p><placeName>Silapa</placeName> </p>      </cell>      <cell>        <p><foreign>Ropani</foreign> – 6</p>      </cell>    </row>    <row>      <cell>        <p><placeName>Nyakhu</placeName> <foreign>ropani</foreign> --- <w>६</w></p>      </cell>      <cell>        <p><placeName>Bhilupa</placeName> <foreign>ropani</foreign> --- <w>६</w></p>      </cell>      <cell>        <p><persName>banga</persName> <foreign>ropa</foreign> --- <w>१</w></p>      </cell>    </row>    <row>      <cell>        <p> <persName>Pako</persName> <foreign>ropani</foreign> --- <w>६</w> </p>      </cell>      <cell>        <p><placeName>Silapa</placeName> </p>      </cell>      <cell>        <p><foreign>Ropani</foreign> – 6</p>      </cell>    </row>    <row>      <cell>        <p> <w>पाको</w> <w>रोपनी</w> --- <w>६</w> </p>      </cell>      <cell>        <p><w>सिलापाको</w> <w>रोपनी</w> --- <w>६</w>। </p>      </cell>      <cell>        <p><w>रानिवु</w> <w>रोपनी</w> --- <w>१</w>।।।</p>      </cell>    </row>  </table></div>
+      <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>This document is a copy of an executive order seemingly issued by King <persName>Gīrvāṇayuddha</persName> to Rāmānanda Bā̃ḍā of <placeName>Oku Bāhāla</placeName> in <geogName>Patan</geogName>. It grants Rāmānanda and his fellow <foreign>guṭha</foreign> members the right to retain overseership of the Luthāma Guṭha and its land endowments. It was issued in response to a petition by Rāmānanda and is mentioned in a note appended to document E_2253_0015B. There is a gap of one year between this and the previous document<note place="end"> Footnote commentary: interesting very <foreign>gutha tugha</foreign>.</note> E_2253_0015B, leading one to believe that Rāmānanda had to wait that long to get this <foreign>rukkā</foreign> issued.</p>
+        <p>Rāmānanda apparently did not possess any proof of his right to the Luthāma Guṭha. As the document mentions, this was because his papers were taken by Bhoṭes when he fled to Bhaktapur during attacks by Gorkhali troops in Patan. <foreign>The king, however, acknowledges his right to the guṭha based on information obtained from the general public.</foreign> No names of suppliers of such information are mentioned, nor does the document provide any details about the Bhoṭes who took the documents. If the ethnonym Bhoṭe refers to Tibetanid peoples, it is puzzling how they could have overpowered Rāmānanda in Bhaktapur, which was still ruled by a Newar king. One may also assume that the documents were taken while he was on his way to Bhaktapur.</p>
+        <p>The document lists 14 pieces of plots amounting to 69 <foreign>ropanīs</foreign> as the endowment of the <foreign>guṭha</foreign>. Although some of the place names cannot be identified, it is likely that all the plots were in or around Lalitpur district. It is interesting to note that Bruce Owens's study during the 1980s found 36 <foreign>ropanīs</foreign> of land remaining with the <foreign>guṭha</foreign> (see Owens 1989: 274). This was only half of the original amount of land mentioned in the current document. Owens further mentions that the "<foreign>guṭhiyar</foreign> complains of having difficulty extracting the <foreign>guṭhī's</foreign> share of the proceeds from its tenants" (ibid.).</p>
+        <p>The document has a note appended at the end which mentions that Amālī Śaṅkhadhara had asked the <foreign>guṭha</foreign> members to verify their status through Patan's notables. It is interesting that an <foreign>amāli</foreign> could object to a right already granted by the king. Could a local authority overrule the king's order? Or was this merely a bureaucratic formality?Commentry <note place="end"> This is a commentary <foreign>footnote.</foreign></note></p>
+      </div>
+    </body>
+  </text>
 </TEI>
