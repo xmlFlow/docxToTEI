@@ -36,7 +36,7 @@ class XMLUtils {
         # ! order is important. never change order #
 
         $s = XMLUtils::createAddElement($s);
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
         $s = XMLUtils::createStructuredContent($s,$pattern);
 
         # ! order is important. never change order #
@@ -318,7 +318,7 @@ class XMLUtils {
             foreach ($match as $m) {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
-                if($hash_count > 1 && $hash_count %2==0) {
+                if($hash_count %2==0) {
                     $pattern = '/'.XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
                     $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
                 }
