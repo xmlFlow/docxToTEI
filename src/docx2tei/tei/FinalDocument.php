@@ -25,6 +25,7 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
 
 
+
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         #TODO reactvate
@@ -35,6 +36,8 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
+        $s = XMLUtils::createStructuredContent($s,$pattern);
 
 
         ## Error messages

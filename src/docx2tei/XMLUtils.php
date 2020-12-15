@@ -7,7 +7,7 @@ use DOMXPath;
 use Exception;
 
 class XMLUtils {
-    protected static $bnd = '#';
+    static $bnd = '#';
 
     public function __construct() {
     }
@@ -34,8 +34,9 @@ class XMLUtils {
 
         $s = XMLUtils::createDot($s);
         # ! order is important. never change order #
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+        $s = XMLUtils::createStructuredContent($s,$pattern);
         $s = XMLUtils::createAddElement($s);
-        $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createWords($s);
         # ! order is important. never change order #
 
@@ -306,17 +307,17 @@ class XMLUtils {
      * @param string $s
      * @return string
      */
-    public static function createStructuredContent(string $s) {
+    public static function createStructuredContent(string $s, $pattern) {
         $tags = self::getTagsList();
-        # Uungready is very important
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/Uu', $s, $matches);
+        # Ungready is very important
+        preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
                 if($hash_count > 1 && $hash_count %2==0) {
-                    $match_without_hash = self::createStructuredContent($match_without_hash);
+                    $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
                 }
                 $parts = explode("{", $match_without_hash);
                 $suffix1 = str_replace('}', '', $parts[1]);
