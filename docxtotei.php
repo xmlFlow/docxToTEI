@@ -20,9 +20,6 @@ $outputPath = null;
 $configFile = null;
 
 
-
-
-
 if ($argc == 4) {
     $inputPath = $argv[1];
     $outputPath = $argv[2];
@@ -73,7 +70,47 @@ if (array_key_exists("singleFile", $inputs)) {
         }
     }
 }
+function arrayRecursiveDiff($aArray1, $aArray2) {
+    $aReturn = array();
 
+    foreach ($aArray1 as $mKey => $mValue) {
+        if (array_key_exists($mKey, $aArray2)) {
+            if (is_array($mValue)) {
+                $aRecursiveDiff = arrayRecursiveDiff($mValue, $aArray2[$mKey]);
+                if (count($aRecursiveDiff)) {
+                    $aReturn[$mKey] = $aRecursiveDiff;
+                }
+            } else {
+                if ($mValue != $aArray2[$mKey]) {
+                    $aReturn[$mKey] = $mValue;
+                }
+            }
+        } else {
+            $aReturn[$mKey] = $mValue;
+        }
+    }
+    return $aReturn;
+}
+
+function getChangeElements($currentDoc, $oldContent) {
+    try {
+
+        $oldXML = file_get_contents($oldContent);
+        $oldXMLNOde = simplexml_load_string($oldXML, "SimpleXMLElement", LIBXML_NOCDATA);
+        $oldXMLjson = json_encode($oldXMLNOde);
+        $oldXMLArray = json_decode($oldXMLjson, TRUE);
+        $currentXML = $currentDoc->saveXML();
+        $currentXMLNOde = simplexml_load_string($currentXML, "SimpleXMLElement", LIBXML_NOCDATA);
+        $currentXMLjson = json_encode($currentXMLNOde);
+        $currentXMLArray = json_decode($currentXMLjson, TRUE);
+        $results = arrayRecursiveDiff($currentXMLArray,$oldXMLArray);
+        print_r($results);
+        $x=1;
+
+    } catch (Exception $ex) {
+        throw $ex;
+    }
+}
 
 function writeOutput(string $inputFilePath, array $outputPathParts, array $inputPathParts, string $outputDir, bool $isDir, $config): void {
     $time_start = microtime(true);
@@ -91,6 +128,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
     if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
         //$structuredXML->saveToFile($filePath);
+        //getChangeElements($teiDocument, $filePath);
         $teiDocument->saveToFile($filePath);
         $docxArchive->getMediaFiles($outputDir);
     } else {
