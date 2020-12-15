@@ -38,7 +38,6 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::handleSurroundingAdd($s);
         $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
         $s = XMLUtils::createStructuredContent($s,$pattern);
-        #$s = XMLUtils::createWords($s);
 
 
         ## Error messages

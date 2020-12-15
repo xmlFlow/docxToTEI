@@ -103,9 +103,10 @@ function getChangeElements($currentDoc, $oldContent) {
         $currentXMLNOde = simplexml_load_string($currentXML, "SimpleXMLElement", LIBXML_NOCDATA);
         $currentXMLjson = json_encode($currentXMLNOde);
         $currentXMLArray = json_decode($currentXMLjson, TRUE);
-        $results = arrayRecursiveDiff($currentXMLArray,$oldXMLArray);*/
+        $results = arrayRecursiveDiff($currentXMLArray,$oldXMLArray);
         exec("git diff", $output, $retval);
         var_dump($output);
+       */
 
     } catch (Exception $ex) {
         throw $ex;

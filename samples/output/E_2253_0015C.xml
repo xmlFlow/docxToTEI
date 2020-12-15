@@ -147,14 +147,15 @@
                 <ab type="maintext" corresp="#main_text" n="1">
                     <lb n="1"/>
                     <s xml:lang="san">स्वस्ति</s>
-                    <s xml:lang="san">श्रीमन्महाराजाधिराजकस्य रुक्का</s>
+                    <s xml:lang="san">श्रीमन्महाराजाधिराजकस्य रुक्का</s>व<lb break="no" n="2"/>सी
+                    <lb n="3"/>
                     <s>आगे <persName>रामहरी</persName>
                         <placeName>पाटनका</placeName>
                         <placeName>ओकु वाहाल टोलको</placeName>
                         <placeName>महावुद्ध</placeName> घरको <persName>रामानंद वांडाके</persName>
                     </s>
-                    <s>तेरा पुरू<lb break="no" n="2"/>षा <persName>जीवराज वांडाले</persName> १ को रथमहा सुनको विमान
-                        चढाउंदा गूठ राख्याको का<lb break="no" n="3"/>म चलाई वाकि रह्याका द्रव्यले पछि गूठका खेत वढाउदै <surplus>
+                    <s>तेरा पुरू<lb break="no" n="4"/>षा <persName>जीवराज वांडाले</persName> १ को रथमहा सुनको विमान
+                        चढाउंदा गूठ राख्याको का<lb break="no" n="5"/>म चलाई वाकि रह्याका द्रव्यले पछि गूठका खेत वढाउदै <surplus>
                             ख
                         </surplus> राख्याका
                     </s>
@@ -191,7 +192,7 @@
                             </cell>
                         </row>
                     </table>
-                    <lb n="4"/>
+                    <lb n="6"/>
                     <s xml:lang="hin">मेरो<gap extent="5 characters" agent="breakage" reason="illegible"/>नाम विष्णु हो
                         तर
                         <space quantity="6" unit="characters"/>
@@ -230,7 +231,7 @@
                     <s>मेरो नाम सेतो होइन</s>
                     <s>मेरो नाम सेतो <orig>•</orig> होइन
                     </s>
-                    <lb n="5"/>
+                    <lb n="7"/>
                 </ab>
                 <p/>
                 <pb n="#surface2" facs="1v"/>
