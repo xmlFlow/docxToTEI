@@ -54,27 +54,7 @@ class Edition extends DOMDocument {
             if ($contents) {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
-                    # ! order is important. never change order #
-                    $s = XMLUtils::replaceLastMinus($s);
-                    # ! order is important. never change order #
-
-                    $s = XMLUtils::createLineBegin($s);
-                    $s = XMLUtils::createLineBeginNoBreak($s);
-                    # no line breaks in text
-                    $s = XMLUtils::joinLines($s);
-                    # create gaps of illegible and lost characters
-                    $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
-                    $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
-                    # create spaces
-                    $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
-
-                    $s = XMLUtils::createDot($s);
-                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
-                    # ! order is important. never change order #
-                    $s = XMLUtils::createStructuredContent($s);
-                    $s = XMLUtils::createAddElement($s);
-                    $s = XMLUtils::createWords($s);
-                    # ! order is important. never change order #
+                    $s = XMLUtils::getMarkups($s);
 
 
                     $frag = $this->createDocumentFragment();

@@ -426,58 +426,73 @@
             </div>
             <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
                 <p>Śrī Matsyendra[nātha] - 1</p>
-                <p>...<note place="end">The text written in the right margin has been blacked out with ink, written in
-                    #pln{Kathmandu}#.
-                </note> written letter.
+                <p>...
+                    <note place="end">The text written in the right margin has been blacked out with ink, written
+                        in <placeName>Kathmandu</placeName>.
+                    </note>
+                    written letter.
                 </p>
                 <p>Hail! A rukkā of the venerable supreme king of great kings
                     <note place="end">The name of the king is not mentioned here, <foreign>but it is evident from the
                         date of the document that
-                    </foreign> it was #pen{Gīrvāṇayuddha Vikrama Śāha}# (r. 1799-1816). He ruled under the regency of
-                        Queen #pen{Lalita Tripura Sundarī}#.
+                    </foreign> it was <persName>Gīrvāṇayuddha Vikrama Śāha</persName> (r. 1799-1816). He ruled under the
+                        regency of Queen <persName>Lalita Tripura Sundarī</persName>.
                     </note>
                 </p>
-                <p>Āge: To #pen{Rāmānaṃda Bā̃ḍā}#, a resident of #pln{Mahābuddha}# at Oku Bāhāla Ṭola in #pln{Patan}#.
-                    To the guṭha 3 established by your ancestor Jīvarāja Bā̃ḍā when he offered a golden <foreign>
+                <p>Āge: To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at Oku
+                    Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your ancestor Jīvarāja
+                    Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e.,
+                    Matsyendranātha) were added further rice field plots with money left over after it completed its
+                    tasks. It is learned that you (i.e., the <foreign>guṭha</foreign> members) have been tending to
+                    those plots as well. It is also learned that up to the present you have been renovating the <foreign>
                         vimāna
-                    </foreign> 4 to the chariot of 1 (i.e., Matsyendranātha) were added further rice field plots with
-                    money left over after it completed its tasks. It is learned that you (i.e., the <foreign>guṭha
-                    </foreign> members) have been tending to those plots as well. It is also learned that up to the
-                    present you have been renovating the <foreign>vimāna</foreign> whenever it is damaged. You still
-                    enjoyed [the fruits of] the <foreign>guṭha</foreign> for two or three years after [the start of] our
-                    rule. Earlier during [the Gorkha troops'] blockade of the region, when you took to Bhādagāũ, in
-                    order to hide them there, the documents relating to the donation of the <foreign>guṭha</foreign>,
-                    [the documents] were grabbed by Bhoṭyās. However, it is learned that the well-informed among the
-                    twenty-four thousand 7 [households/people] know [that you are the rightful overseers of
-                    the <foreign>guṭha</foreign>]. Later, when the <foreign>ijārā</foreign> [system] was instituted, you
-                    gave up the plots but did not give up the regular duties [of the <foreign>guṭha</foreign>]. It is
-                    [further] learned that you still had to renovate [the <foreign>vimāna</foreign>] whenever it was
-                    damaged, even after the <foreign>ijārā</foreign> [obligations on the part of the <foreign>
-                        guṭha</foreign>] had been forgiven, and that you were unable to make use of the <foreign>guṭha
-                    </foreign> established by your ancestors.
+                    </foreign> whenever it is damaged. You still enjoyed [the fruits of] the <foreign>guṭha</foreign> for
+                    two or three years after [the start of] our rule. Earlier during [the Gorkha troops'] blockade of
+                    the region, when you took to Bhādagāũ, in order to hide them there, the documents relating to the
+                    donation of the <foreign>guṭha</foreign>, [the documents] were grabbed by Bhoṭyās. However, it is
+                    learned that the well-informed among the twenty-four thousand 7 [households/people] know [that you
+                    are the rightful overseers of the <foreign>guṭha</foreign>]. Later, when the <foreign>ijārā
+                    </foreign> [system] was instituted, you gave up the plots but did not give up the regular duties [of
+                    the <foreign>guṭha</foreign>]. It is [further] learned that you still had to renovate [the <foreign>
+                        vimāna</foreign>] whenever it was damaged, even after the <foreign>ijārā</foreign> [obligations
+                    on the part of the <foreign>guṭha</foreign>] had been forgiven, and that you were unable to make use
+                    of the <foreign>guṭha</foreign> established by your ancestors.
                 </p>
                 <table>
                     <row>
                         <cell>
-                            <p>#pln{Nyakhu}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <placeName>Nyakhu</placeName>
+                                <foreign>ropani</foreign> ---
+                                <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pln{Bhilupa}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <placeName>Bhilupa</placeName>
+                                <foreign>ropani</foreign> ---
+                                <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pen{banga}# <foreign>ropa</foreign> --- १
+                            <p>
+                                <persName>banga</persName>
+                                <foreign>ropa</foreign> ---
+                                <w>१</w>
                             </p>
                         </cell>
                     </row>
                     <row>
                         <cell>
-                            <p>#pen{Pako}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <persName>Pako</persName>
+                                <foreign>ropani</foreign> --- <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pln{Silapa}#</p>
+                            <p>
+                                <placeName>Silapa</placeName>
+                            </p>
                         </cell>
                         <cell>
                             <p>
@@ -488,25 +503,38 @@
                     </row>
                     <row>
                         <cell>
-                            <p>#pln{Nyakhu}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <placeName>Nyakhu</placeName>
+                                <foreign>ropani</foreign> ---
+                                <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pln{Bhilupa}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <placeName>Bhilupa</placeName>
+                                <foreign>ropani</foreign> ---
+                                <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pen{banga}# <foreign>ropa</foreign> --- १
+                            <p>
+                                <persName>banga</persName>
+                                <foreign>ropa</foreign> ---
+                                <w>१</w>
                             </p>
                         </cell>
                     </row>
                     <row>
                         <cell>
-                            <p>#pen{Pako}# <foreign>ropani</foreign> --- ६
+                            <p>
+                                <persName>Pako</persName>
+                                <foreign>ropani</foreign> --- <w>६</w>
                             </p>
                         </cell>
                         <cell>
-                            <p>#pln{Silapa}#</p>
+                            <p>
+                                <placeName>Silapa</placeName>
+                            </p>
                         </cell>
                         <cell>
                             <p>
@@ -517,24 +545,33 @@
                     </row>
                     <row>
                         <cell>
-                            <p>पाको रोपनी --- ६</p>
+                            <p>
+                                <w>पाको</w>
+                                <w>रोपनी</w> --- <w>६</w>
+                            </p>
                         </cell>
                         <cell>
-                            <p>सिलापाको रोपनी --- ६।</p>
+                            <p>
+                                <w>सिलापाको</w>
+                                <w>रोपनी</w> --- <w>६</w>।
+                            </p>
                         </cell>
                         <cell>
-                            <p>रानिवु रोपनी --- १।।।</p>
+                            <p>
+                                <w>रानिवु</w>
+                                <w>रोपनी</w> --- <w>१</w>।।।
+                            </p>
                         </cell>
                     </row>
                 </table>
             </div>
             <div xml:id="commentary" type="commentary" xml:lang="eng">
-                <p>This document is a copy of an executive order seemingly issued by King #pen{Gīrvāṇayuddha}# to
-                    Rāmānanda Bā̃ḍā of #pln{Oku Bāhāla}# in #gen{Patan}#. It grants Rāmānanda and his fellow <foreign>
-                        guṭha
-                    </foreign> members the right to retain overseership of the Luthāma Guṭha and its land endowments. It
-                    was issued in response to a petition by Rāmānanda and is mentioned in a note appended to document
-                    E_2253_0015B. There is a gap of one year between this and the previous document
+                <p>This document is a copy of an executive order seemingly issued by King <persName>Gīrvāṇayuddha
+                </persName> to Rāmānanda Bā̃ḍā of <placeName>Oku Bāhāla</placeName> in <geogName>Patan</geogName>. It
+                    grants Rāmānanda and his fellow <foreign>guṭha</foreign> members the right to retain overseership of
+                    the Luthāma Guṭha and its land endowments. It was issued in response to a petition by Rāmānanda and
+                    is mentioned in a note appended to document E_2253_0015B. There is a gap of one year between this
+                    and the previous document
                     <note place="end">Footnote commentary: interesting very <foreign>gutha tugha</foreign>.
                     </note>
                     E_2253_0015B, leading one to believe that Rāmānanda had to wait that long to get this <foreign>

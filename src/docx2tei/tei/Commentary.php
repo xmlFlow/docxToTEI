@@ -33,7 +33,7 @@ class Commentary extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
 
-                    $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
+                    $s = XMLUtils::getMarkups($s);
 
 
 

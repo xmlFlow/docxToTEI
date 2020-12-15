@@ -16,9 +16,32 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function removeMultipleSpacesandZWNJS(string $s) {
-        $s = preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
-        return preg_replace('/\s+/i', ' ', $s);
+    public static function getMarkups(string $s) {
+        $s = self::removeZWNJ($s);
+        # ! order is important. never change order #
+        $s = XMLUtils::replaceLastMinus($s);
+        # ! order is important. never change order #
+
+        $s = XMLUtils::createLineBegin($s);
+        $s = XMLUtils::createLineBeginNoBreak($s);
+        # no line breaks in text
+        $s = XMLUtils::joinLines($s);
+        # create gaps of illegible and lost characters
+        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
+        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
+        # create spaces
+        $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
+
+        $s = XMLUtils::createDot($s);
+        # ! order is important. never change order #
+        $s = XMLUtils::createStructuredContent($s);
+        $s = XMLUtils::createAddElement($s);
+        $s = XMLUtils::createWords($s);
+        # ! order is important. never change order #
+
+
+        #return preg_replace('/\s+/i', ' ', $s);
+        return $s;
     }
 
     /**
@@ -520,5 +543,13 @@ class XMLUtils {
             echo "[Warning] $errstr $errfile $errline\n";
             return true;
         }, $errorTypes);
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    private static function removeZWNJ(string $s) {
+        return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 }
