@@ -54,7 +54,8 @@ class Edition extends DOMDocument {
             if ($contents) {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
-                    $s= XMLUtils::sectionHandling($s);
+                    $s = XMLUtils::getMarkups($s);
+
 
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);

@@ -33,9 +33,12 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::finalCreateComplexSentence($s);
         # correct after creating tags
         #   these are final operations in ORDER
-        $s = XMLUtils::finalCreateNotesWithCorrectTags($s);
-        $s = XMLUtils::finalHandleLineBreakNoWords($s);
-        $s = XMLUtils::finalHandleSurroundingAdd($s);
+        $s = XMLUtils::createNotesWithCorrectTags($s);
+        $s = XMLUtils::handleLineBreakNoWords($s);
+        $s = XMLUtils::handleSurroundingAdd($s);
+        #$pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+        #$s = XMLUtils::createStructuredContent($s,$pattern);
+        #$s = XMLUtils::createWords($s);
 
 
         ## Error messages

@@ -7,7 +7,7 @@ use DOMXPath;
 use Exception;
 
 class XMLUtils {
-    protected static $bnd = '#';
+    static $bnd = '#';
 
     public function __construct() {
     }
@@ -38,9 +38,34 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function removeMultipleSpacesandZWNJS(string $s) {
-        $s = preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
-        return preg_replace('/\s+/i', ' ', $s);
+    public static function getMarkups(string $s) {
+        $s = self::removeZWNJ($s);
+        # ! order is important. never change order #
+        $s = XMLUtils::replaceLastMinus($s);
+        # ! order is important. never change order #
+
+        $s = XMLUtils::createLineBegin($s);
+        $s = XMLUtils::createLineBeginNoBreak($s);
+        # no line breaks in text
+        $s = XMLUtils::joinLines($s);
+        # create gaps of illegible and lost characters
+        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
+        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
+        # create spaces
+        $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
+
+        $s = XMLUtils::createDot($s);
+        # ! order is important. never change order #
+
+        $s = XMLUtils::createAddElement($s);
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+        $s = XMLUtils::createStructuredContent($s,$pattern);
+
+        # ! order is important. never change order #
+
+        #TODO
+
+        return $s;
     }
 
     /**
@@ -285,9 +310,9 @@ class XMLUtils {
             '/#\&amp;([@\w]{0,}){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu',
             function ($matches) {
                 $parts= explode('@',$matches[1]);
-                $place= (count($parts)>1) ? $parts[1] :"above_the_line";
-                $hand= (count($parts)>2) ? $parts[2] : "first";
-                return '<w><add place="'.$place.'"  hand="'.$hand.'">'.$matches[2].'</add>'.$matches[3].'</w>';
+                $place = (count($parts) > 1) ? $parts[1] : "above_the_line";
+                $hand = (count($parts) > 2) ? $parts[2] : "first";
+                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . $matches[2] . '</add>' . $matches[3] . '</w>';
             },
             $s
         );
@@ -305,16 +330,19 @@ class XMLUtils {
      * @param string $s
      * @return string
      */
-    public static function createStructuredContent(string $s) {
+    public static function createStructuredContent(string $s, $pattern) {
         $tags = self::getTagsList();
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\}){1,2}' . XMLUtils::$bnd . '/u', $s, $matches);
+        $s=  preg_replace('/\s+/i', ' ', $s);
+        # Ungready is very important
+        preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
-                if($hash_count > 1 && $hash_count %2==0) {
-                    $match_without_hash = self::createStructuredContent($match_without_hash);
+                if($hash_count %2==0) {
+                    $pattern = '/'.XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+                    $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
                 }
                 $parts = explode("{", $match_without_hash);
                 $suffix1 = str_replace('}', '', $parts[1]);
@@ -541,5 +569,13 @@ class XMLUtils {
             echo "[Warning] $errstr $errfile $errline\n";
             return true;
         }, $errorTypes);
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    private static function removeZWNJ(string $s) {
+        return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 }

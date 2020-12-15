@@ -35,7 +35,12 @@ class EnglishTranslation extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s= XMLUtils::sectionHandling($s);
+                    $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::createLineBeginNoBreak($s);
+                    # no line breaks in text
+                    $s = XMLUtils::joinLines($s);
+                    # create spaces
+                    # structured content xy{content}
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);

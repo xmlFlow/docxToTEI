@@ -32,7 +32,10 @@ class Commentary extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s= XMLUtils::sectionHandling($s);
+
+                    $s = XMLUtils::getMarkups($s);
+
+
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
