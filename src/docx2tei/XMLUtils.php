@@ -34,14 +34,15 @@ class XMLUtils {
 
         $s = XMLUtils::createDot($s);
         # ! order is important. never change order #
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
+
         $s = XMLUtils::createAddElement($s);
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
         $s = XMLUtils::createStructuredContent($s,$pattern);
 
         # ! order is important. never change order #
 
         #TODO
-        #return preg_replace('/\s+/i', ' ', $s);
+
         return $s;
     }
 
@@ -309,6 +310,7 @@ class XMLUtils {
      */
     public static function createStructuredContent(string $s, $pattern) {
         $tags = self::getTagsList();
+        $s=  preg_replace('/\s+/i', ' ', $s);
         # Ungready is very important
         preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
@@ -317,7 +319,7 @@ class XMLUtils {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
                 if($hash_count > 1 && $hash_count %2==0) {
-                    $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+                    $pattern = '/'.XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
                     $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
                 }
                 $parts = explode("{", $match_without_hash);
