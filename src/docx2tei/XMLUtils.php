@@ -12,27 +12,7 @@ class XMLUtils {
     public function __construct() {
     }
 
-    public static function sectionHandling(string $s){
-        $s = XMLUtils::createReplaceLastMinus($s);
-        $s = XMLUtils::createLineBegin($s);
-        $s = XMLUtils::createLineBeginNoBreak($s);
-        # no line breaks in text
-        $s = XMLUtils::joinLines($s);
-        # create gaps of illegible and lost characters
-        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
-        $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
-        # create spaces
-        $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
-        $s = XMLUtils::createDot($s);
-        $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
 
-        # ! order is important. never change order #
-        $s = XMLUtils::createStructuredContent($s);
-        $s = XMLUtils::createAddElement($s);
-        $s = XMLUtils::createWords($s);
-        # ! order is important. never change order #
-        return $s;
-    }
 
     /**
      * @param $s
@@ -262,32 +242,9 @@ class XMLUtils {
     }
 
 
-    public static function createControlledVocabs(string $s) {
-        $tags = self::getControlledVocabList();
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/iUu', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            $str = str_replace(XMLUtils::$bnd, '', $match[0]);
-            $parts = explode("{", $str);
-            $suffix1 = str_replace('}', '', $parts[1]);
-            $prefix = explode('@', $parts[0]);
-            $tagName = $prefix[0];
-            $tagName = self::removeUnnecessaryChars($tagName);
-            $elem = new DOMDocument();
-            foreach ($tags as $tag) {
-                if ($tag["original"] == $tagName) {
-                    $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
-                    $tagElem = $elem->createElement($tagName);
-                    $attr = $elem->createAttribute("corresp");
-                    $attr->value = $suffix1;
-                    $tagElem->appendChild($attr);
-                }
-            }
-            $s = str_replace($matches[0], $tagElem->ownerDocument->saveXML($tagElem), $s);
-        }
-        return $s;
-    }
-
+    /**
+     * @return array
+     */
     public static function getControlledVocabList(): array {
         $tags = array();
         return $tags;
