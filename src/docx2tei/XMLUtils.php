@@ -13,6 +13,10 @@ class XMLUtils {
     }
 
 
+    public static function createReplaceLastMinus(string $s) {
+        $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
+        return $s;
+    }
 
     /**
      * @param $s
@@ -38,144 +42,14 @@ class XMLUtils {
         # ! order is important. never change order #
 
         $s = XMLUtils::createAddElement($s);
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
-        $s = XMLUtils::createStructuredContent($s,$pattern);
+        $pattern = '/' . XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+        $s = XMLUtils::createStructuredContent($s, $pattern);
 
         # ! order is important. never change order #
 
         #TODO
 
         return $s;
-    }
-
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    public static function removeTagsWithoutContent(string $s) {
-        return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
-    }
-
-    public static function createReplaceLastMinus(string $s) {
-        $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
-        return $s;
-    }
-
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    public static function createNotesWithCorrectTags(string $s) {
-        $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
-        $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
-        $s = preg_replace('/&lt;/i', '<', $s);
-        $s = preg_replace('/&gt;/i', '>', $s);
-        return $s;
-    }
-
-    /**
-     * @param string $content
-     * @return string|string[]|null
-     */
-    public static function tagReplace(string $content, string $tag, string $replace) {
-        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/', '<' . $replace . '>$1</' . $replace . '>', $content);
-    }
-
-    /**
-     * @param $dom
-     * @param $elementName
-     * @return mixed
-     */
-    public static function removeElementsInTag($dom, $str) {
-        $xpath = new DOMXPath($dom);
-        foreach ($xpath->query($str) as $node) {
-            $parent = $node->parentNode;
-            while ($node->hasChildNodes()) {
-                $parent->insertBefore($node->lastChild, $node->nextSibling);
-            }
-            $parent->removeChild($node);
-        }
-        return $dom;
-    }
-
-
-    public static function removeTags($dom, $str) {
-        $xpath = new DOMXPath($dom);
-        foreach ($xpath->query($str) as $node) {
-            $parent = $node->parentNode;
-            while ($node->hasChildNodes()) {
-                $parent->insertBefore($node->lastChild, $node->nextSibling);
-            }
-            $parent->removeChild($node);
-        }
-        return $dom;
-    }
-
-    public static function enumerateLineBegins($dom) {
-        $xpath = new DOMXPath($dom);
-        $lbCount = 1;
-        $abCount = 1;
-        $abs = $xpath->query('//ab');
-        foreach ($abs as $ab) {
-            $abAttr = $dom->createAttribute("n");
-            $abAttr->value = $abCount;
-            $ab->appendChild($abAttr);
-            foreach ($xpath->query('lb', $ab) as $ln) {
-                $attr = $dom->createAttribute("n");
-                $attr->value = $lbCount;
-                $ln->appendChild($attr);
-                $lbCount++;
-            }
-            $lbCount = 1;
-        }
-    }
-
-    public static function removeControlledVocabsWordTagging($dom) {
-        $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
-            $parent = $node->parentNode;
-            while ($node->hasChildNodes()) {
-                $parent->insertBefore($node->lastChild, $node->nextSibling);
-            }
-            $parent->removeChild($node);
-        }
-        return $dom;
-    }
-
-
-    /**
-     * @param $s
-     * @return string|string[]|null
-     */
-    public static function createComplexSentence(string $s) {
-        preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
-            # do not change order
-            $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
-            $s = preg_replace('/#SB/', '<s>', $s);
-            $s = preg_replace('/#SE/', '</s>', $s);
-        }
-        return $s;
-    }
-
-    /**
-     * @param $dom
-     * @param $tag
-     */
-    public static function removeTitleInBody($dom): void {
-        $titlesXpath = new DOMXPath($dom);
-        $titles = $titlesXpath->query("//body/div/*/title | //div/title");
-        foreach ($titles as $title) {
-            $title->parentNode->removeChild($title);
-        }
-    }
-
-    public static function addChildElement($dom, $parent, $child): void {
-        $nodes = $dom->getElementsByTagName($parent);
-        foreach ($nodes as $node) {
-            $node->insertBefore($dom->createElement($child), $node->firstChild);
-        }
     }
 
     /**
@@ -196,64 +70,88 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createDot(string $s) {
-        $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
-        return $s;
-    }
-
-    public static function addParagraphsBetweenAnonymousBlocks($dom) {
-        $abs = $dom->getElementsByTagName("ab");
-        foreach ($abs as $ab) {
-            try {
-                $ab->parentNode->insertBefore($dom->createElement('p'), $ab->nextSibling);
-            } catch (Exception $e) {
-                $ab->parentNode->appendChild($ab);
-            }
-        }
-    }
-
-    public static function createWords(string $s) {
-        $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
-        if (preg_match("/" . $preg . "/u", $s, $matches)) {
-            $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
-        }
-        return $s;
-    }
-
     public static function joinLines(string $s) {
         $s = preg_replace('/\r|\n/', '', $s);
         return $s;
     }
 
     /**
+     * @param string $tagName
+     * @param string $attrOne
+     * @param string $attrTwo
+     * @param string $attrThree
      * @param string $s
-     * @return string|string[]|null
+     * @param string $attrOneDefault
+     * @param string $countCharType
+     * @return string|string[]
      */
-    public static function handleLineBreakNoWords(string $s) {
-        // <w>व<lb break="no" n="2"/>सी</w>
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+    public static function createGap(string $tagName, string $attrOne, string $attrTwo, string $attrThree, string $s, string $attrOneDefault, string $countCharType) {
+        preg_match_all('/' . XMLUtils::$bnd . '(' . $countCharType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+        $match = $matches[0];
+        foreach ($match as $m) {
+
+            $str = str_replace(XMLUtils::$bnd, '', $m);
+            $elem = new DOMDocument();
+            $gap = $elem->createElement($tagName);
+
+            $parts = explode("@", $str);
+
+            $ex = $elem->createAttribute($attrTwo);
+            $gapCharacters = array_shift($parts);
+            $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
+            $characterType = array_shift($parts);
+            if ($tagName == "gap") {
+                if (is_null($characterType) | strlen($characterType) == 0) {
+                    $chars = ($gapsLength == 1) ? 'character' : 'characters';
+                    $gapsLength = $gapsLength . ' ' . $chars;
+
+                } else {
+
+                    $gapsLength = $gapsLength . ' ' . $characterType;
+                }
+            }
+            $ex->value = $gapsLength;
+            $gap->appendChild($ex);
+            if (count($parts) > 0 && strlen($attrThree) > 0) {
+                $agent = array_shift($parts);
+                if (!is_null($agent)) {
+                    $ag = $elem->createAttribute($attrThree);
+                    $ag->value = $agent;
+                    $gap->appendChild($ag);
+                }
+            }
+            if (count($parts) > 0) {
+                for ($i = 0; $i < count($parts); $i++) {
+                    $extras = explode('=', $parts[$i]);
+                    if (count($extras) == 2) {
+                        $attr = $elem->createAttribute($extras[0]);
+                        $attr->value = $extras[1];
+                        $gap->appendChild($attr);
+                    } else {
+                        self::print_error($parts[$i] . " does not contain a = sign");
+                    }
+                }
+            }
+
+            $r = $elem->createAttribute($attrOne);
+            // for space unit
+            if ($tagName == "space" && strlen($characterType) > 0) {
+                $r->value = $characterType;
+            } else {
+                $r->value = $attrOneDefault;
+            }
+            $gap->appendChild($r);
+
+
+            $count = 1;
+            $s = str_replace($m, $gap->ownerDocument->saveXML($gap), $s, $count);
+        }
         return $s;
     }
 
-    public static function handleSurroundingAdd(string $s) {
-        //
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+    public static function createDot(string $s) {
+        $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
         return $s;
-    }
-
-
-    /**
-     * @return array
-     */
-    public static function getControlledVocabList(): array {
-        $tags = array();
-        return $tags;
-    }
-
-    public static function removeUnnecessaryChars(string $tag) {
-        $tag = str_replace('=', '', $tag);
-        $tag = str_replace('-', '', $tag);
-        return $tag;
     }
 
     /**
@@ -266,7 +164,7 @@ class XMLUtils {
         $s = preg_replace_callback(
             '/#\&amp;([@\w]{0,}){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu',
             function ($matches) {
-                $parts= explode('@',$matches[1]);
+                $parts = explode('@', $matches[1]);
                 $place = (count($parts) > 1) ? $parts[1] : "above_the_line";
                 $hand = (count($parts) > 2) ? $parts[2] : "first";
                 return '<w><add place="' . $place . '"  hand="' . $hand . '">' . $matches[2] . '</add>' . $matches[3] . '</w>';
@@ -274,9 +172,7 @@ class XMLUtils {
             $s
         );
         $place = "";
-        $hand ="";
-
-
+        $hand = "";
 
 
         return $s;
@@ -289,7 +185,7 @@ class XMLUtils {
      */
     public static function createStructuredContent(string $s, $pattern) {
         $tags = self::getTagsList();
-        $s=  preg_replace('/\s+/i', ' ', $s);
+        $s = preg_replace('/\s+/i', ' ', $s);
         # Ungready is very important
         preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
@@ -297,9 +193,9 @@ class XMLUtils {
             foreach ($match as $m) {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
-                if($hash_count %2==0) {
-                    $pattern = '/'.XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
-                    $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
+                if ($hash_count % 2 == 0) {
+                    $pattern = '/' . XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+                    $match_without_hash = self::createStructuredContent($match_without_hash, $pattern);
                 }
                 $parts = explode("{", $match_without_hash);
                 $suffix1 = str_replace('}', '', $parts[1]);
@@ -353,6 +249,16 @@ class XMLUtils {
             }
         }
         return $s;
+    }
+
+    /**
+     * @param $value
+     */
+    public static function print_error($message, $exit = false): void {
+        echo("" . $message . "\n");
+        if ($exit) {
+            exit("[Error] Please correct your Microsoft Word file  and upload again");
+        }
     }
 
     /**
@@ -436,88 +342,141 @@ class XMLUtils {
     }
 
     /**
-     * @param $value
+     * @param string $s
+     * @return string|string[]|null
      */
-    public static function print_error($message, $exit = false): void {
-        echo("" . $message . "\n");
-        if ($exit) {
-            exit("[Error] Please correct your Microsoft Word file  and upload again");
+    public static function createNotesWithCorrectTags(string $s) {
+        $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
+        $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
+        $s = preg_replace('/&lt;/i', '<', $s);
+        $s = preg_replace('/&gt;/i', '>', $s);
+        return $s;
+    }
+
+    /**
+     * @param $dom
+     * @param $elementName
+     * @return mixed
+     */
+    public static function removeElementsInTag($dom, $str) {
+        $xpath = new DOMXPath($dom);
+        foreach ($xpath->query($str) as $node) {
+            $parent = $node->parentNode;
+            while ($node->hasChildNodes()) {
+                $parent->insertBefore($node->lastChild, $node->nextSibling);
+            }
+            $parent->removeChild($node);
+        }
+        return $dom;
+    }
+
+    public static function removeTags($dom, $str) {
+        $xpath = new DOMXPath($dom);
+        foreach ($xpath->query($str) as $node) {
+            $parent = $node->parentNode;
+            while ($node->hasChildNodes()) {
+                $parent->insertBefore($node->lastChild, $node->nextSibling);
+            }
+            $parent->removeChild($node);
+        }
+        return $dom;
+    }
+
+    public static function enumerateLineBegins($dom) {
+        $xpath = new DOMXPath($dom);
+        $lbCount = 1;
+        $abCount = 1;
+        $abs = $xpath->query('//ab');
+        foreach ($abs as $ab) {
+            $abAttr = $dom->createAttribute("n");
+            $abAttr->value = $abCount;
+            $ab->appendChild($abAttr);
+            foreach ($xpath->query('lb', $ab) as $ln) {
+                $attr = $dom->createAttribute("n");
+                $attr->value = $lbCount;
+                $ln->appendChild($attr);
+                $lbCount++;
+            }
+            $lbCount = 1;
         }
     }
 
+    public static function removeControlledVocabsWordTagging($dom) {
+        $xpath = new DOMXPath($dom);
+        foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
+            $parent = $node->parentNode;
+            while ($node->hasChildNodes()) {
+                $parent->insertBefore($node->lastChild, $node->nextSibling);
+            }
+            $parent->removeChild($node);
+        }
+        return $dom;
+    }
 
     /**
-     * @param string $tagName
-     * @param string $attrOne
-     * @param string $attrTwo
-     * @param string $attrThree
-     * @param string $s
-     * @param string $attrOneDefault
-     * @param string $countCharType
-     * @return string|string[]
+     * @param $s
+     * @return string|string[]|null
      */
-    public static function createGap(string $tagName, string $attrOne, string $attrTwo, string $attrThree, string $s, string $attrOneDefault, string $countCharType) {
-        preg_match_all('/' . XMLUtils::$bnd . '(' . $countCharType . ')+([\@][((\w|=)>\s)]*)*' . XMLUtils::$bnd . '/i', $s, $matches);
+    public static function createComplexSentence(string $s) {
+        preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
         $match = $matches[0];
-        foreach ($match as $m) {
-
-            $str = str_replace(XMLUtils::$bnd, '', $m);
-            $elem = new DOMDocument();
-            $gap = $elem->createElement($tagName);
-
-            $parts = explode("@", $str);
-
-            $ex = $elem->createAttribute($attrTwo);
-            $gapCharacters = array_shift($parts);
-            $gapsLength = substr_count($gapCharacters, str_replace('\\', '', $countCharType));
-            $characterType = array_shift($parts);
-            if ($tagName == "gap") {
-                if (is_null($characterType) | strlen($characterType) == 0) {
-                    $chars = ($gapsLength == 1) ? 'character' : 'characters';
-                    $gapsLength = $gapsLength . ' ' . $chars;
-
-                } else {
-
-                    $gapsLength = $gapsLength . ' ' . $characterType;
-                }
-            }
-            $ex->value = $gapsLength;
-            $gap->appendChild($ex);
-            if (count($parts) > 0 && strlen($attrThree) > 0) {
-                $agent = array_shift($parts);
-                if (!is_null($agent)) {
-                    $ag = $elem->createAttribute($attrThree);
-                    $ag->value = $agent;
-                    $gap->appendChild($ag);
-                }
-            }
-            if (count($parts) > 0) {
-                for ($i = 0; $i < count($parts); $i++) {
-                    $extras = explode('=', $parts[$i]);
-                    if (count($extras) == 2) {
-                        $attr = $elem->createAttribute($extras[0]);
-                        $attr->value = $extras[1];
-                        $gap->appendChild($attr);
-                    } else {
-                        self::print_error($parts[$i] . " does not contain a = sign");
-                    }
-                }
-            }
-
-            $r = $elem->createAttribute($attrOne);
-            // for space unit
-            if ($tagName == "space" && strlen($characterType) > 0) {
-                $r->value = $characterType;
-            } else {
-                $r->value = $attrOneDefault;
-            }
-            $gap->appendChild($r);
-
-
-            $count = 1;
-            $s = str_replace($m, $gap->ownerDocument->saveXML($gap), $s, $count);
+        if (!is_null($match) && count($match) != 0) {
+            # do not change order
+            $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
+            $s = preg_replace('/#SB/', '<s>', $s);
+            $s = preg_replace('/#SE/', '</s>', $s);
         }
         return $s;
+    }
+
+    public static function addChildElement($dom, $parent, $child): void {
+        $nodes = $dom->getElementsByTagName($parent);
+        foreach ($nodes as $node) {
+            $node->insertBefore($dom->createElement($child), $node->firstChild);
+        }
+    }
+
+    public static function addParagraphsBetweenAnonymousBlocks($dom) {
+        $abs = $dom->getElementsByTagName("ab");
+        foreach ($abs as $ab) {
+            try {
+                $ab->parentNode->insertBefore($dom->createElement('p'), $ab->nextSibling);
+            } catch (Exception $e) {
+                $ab->parentNode->appendChild($ab);
+            }
+        }
+    }
+
+    public static function createWords(string $s) {
+        $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
+        if (preg_match("/" . $preg . "/u", $s, $matches)) {
+            $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
+        }
+        return $s;
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    public static function handleLineBreakNoWords(string $s) {
+        // <w>व<lb break="no" n="2"/>सी</w>
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+        return $s;
+    }
+
+    public static function handleSurroundingAdd(string $s) {
+        //
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+        return $s;
+    }
+
+    /**
+     * @return array
+     */
+    public static function getControlledVocabList(): array {
+        $tags = array();
+        return $tags;
     }
 
     public static function printPHPErrors(): void {
@@ -532,7 +491,41 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
+    public static function removeTagsWithoutContent(string $s) {
+        return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
+    }
+
+    /**
+     * @param $dom
+     * @param $tag
+     */
+    public static function removeTitleInBody($dom): void {
+        $titlesXpath = new DOMXPath($dom);
+        $titles = $titlesXpath->query("//body/div/*/title | //div/title");
+        foreach ($titles as $title) {
+            $title->parentNode->removeChild($title);
+        }
+    }
+
+    public static function removeUnnecessaryChars(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
     private static function removeZWNJ(string $s) {
         return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
+    }
+
+    /**
+     * @param string $content
+     * @return string|string[]|null
+     */
+    public static function tagReplace(string $content, string $tag, string $replace) {
+        return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/', '<' . $replace . '>$1</' . $replace . '>', $content);
     }
 }

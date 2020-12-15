@@ -4,6 +4,7 @@ namespace docx2tei\tei;
 
 use docx2tei\XMLUtils;
 use DOMDocument;
+use DOMElement;
 
 class Facsimiles extends DOMDocument {
     var $document;
@@ -43,15 +44,15 @@ class Facsimiles extends DOMDocument {
                         $abs = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
 
                         foreach ($abs as $ab) {
-                            $abElement = $this->document->xpath->query("title",$ab);
-                            if(count($abElement)>0) {
+                            $abElement = $this->document->xpath->query("title", $ab);
+                            if (count($abElement) > 0) {
                                 $nodeValue = $abElement->item(0)->nodeValue;
-                                if(substr( $nodeValue, 0, 2 ) === "ab") {
+                                if (substr($nodeValue, 0, 2) === "ab") {
                                     $parts = explode('@', $nodeValue);
-                                    if (count($parts)>1) {
+                                    if (count($parts) > 1) {
                                         $zone = $this->createElement("zone");
                                         $idAttrib = $this->createAttribute('xml:id');
-                                        $idAttrib->value =str_replace("#","",$parts[1]);
+                                        $idAttrib->value = str_replace("#", "", $parts[1]);
                                         $zone->appendChild($idAttrib);
                                         $this->createCoordinates($zone);
                                         $surface->appendChild($zone);
@@ -70,9 +71,9 @@ class Facsimiles extends DOMDocument {
     }
 
     /**
-     * @param \DOMElement $surface
+     * @param DOMElement $surface
      */
-    private function createCoordinates(\DOMElement $surface): void {
+    private function createCoordinates(DOMElement $surface): void {
         foreach (["ulx", "uly", "lrx", "lry"] as $attr) {
             $coord = $this->createAttribute($attr);
             $coord->value = 0;

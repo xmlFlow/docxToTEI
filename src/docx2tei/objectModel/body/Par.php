@@ -177,18 +177,6 @@ class Par extends DataObject {
         return $propArray;
     }
 
-    public function getNumberingLevel(): int {
-        return $this->numberingLevel;
-    }
-
-    public function getType() {
-        return $this->type;
-    }
-
-    public function getNumberingId(): int {
-        return $this->numberingId;
-    }
-
     private function extractNumberingType(): int {
         $numberingType = self::DOCX_LIST_TYPE_UNORDERED;
         $numberingPrNode = null;
@@ -206,6 +194,18 @@ class Par extends DataObject {
         $type = Document::getNumberingTypeById($id[0]->nodeValue, $lvl[0]->nodeValue);
         if (!in_array($type, self::$numberingUnorderedMarkers)) $numberingType = self::DOCX_LIST_TYPE_ORDERED;
         return $numberingType;
+    }
+
+    public function getNumberingLevel(): int {
+        return $this->numberingLevel;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+
+    public function getNumberingId(): int {
+        return $this->numberingId;
     }
 
     public function getProperties(): array {

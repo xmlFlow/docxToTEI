@@ -93,16 +93,6 @@ class Document {
         return $content;
     }
 
-    private function extractSectionDimension(Par $object, array $dimensions): array {
-        $number = $object->getHeadingLevel() - 1;
-        $dimensions[$number]++;
-        while ($number < self::SECT_NESTED_LEVEL_LIMIT) {
-            $number++;
-            $dimensions[$number] = 0;
-        }
-        return $dimensions;
-    }
-
     private function minimalHeadingLevel(): int {
         $minimalNumber = 7;
         foreach ($this->content as $dataObject) {
@@ -114,6 +104,16 @@ class Document {
             }
         }
         return $minimalNumber;
+    }
+
+    private function extractSectionDimension(Par $object, array $dimensions): array {
+        $number = $object->getHeadingLevel() - 1;
+        $dimensions[$number]++;
+        while ($number < self::SECT_NESTED_LEVEL_LIMIT) {
+            $number++;
+            $dimensions[$number] = 0;
+        }
+        return $dimensions;
     }
 
     public static function getMinimalHeadingLevel(): int {

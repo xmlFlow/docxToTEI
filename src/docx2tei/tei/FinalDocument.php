@@ -12,9 +12,9 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
 // DOM operations
         XMLUtils::removeTitleInBody($document, "title");
-        XMLUtils::removeElementsInTag($document,'//ab/p');
-        XMLUtils::removeElementsInTag($document,'//add/w');
-        XMLUtils::removeElementsInTag($document,'//w/w');
+        XMLUtils::removeElementsInTag($document, '//ab/p');
+        XMLUtils::removeElementsInTag($document, '//add/w');
+        XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::addChildElement($document, "ab", "lb");
         //XMLUtils::removeControlledVocabsWordTagging($document);
         XMLUtils::enumerateLineBegins($document);
@@ -23,7 +23,6 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
         // String operations
         $s = $document->saveXML();
-
 
 
         $s = XMLUtils::removeTagsWithoutContent($s);
@@ -36,8 +35,8 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
-        $s = XMLUtils::createStructuredContent($s,$pattern);
+        $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+        $s = XMLUtils::createStructuredContent($s, $pattern);
 
 
         ## Error messages

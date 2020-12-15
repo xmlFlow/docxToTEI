@@ -58,7 +58,6 @@ class Edition extends DOMDocument {
                     $s = XMLUtils::createWords($s);
 
 
-
                     $frag = $this->createDocumentFragment();
                     $frag->appendXML($s);
                     if (!is_null($ab)) {
