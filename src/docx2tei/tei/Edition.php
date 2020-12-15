@@ -68,11 +68,8 @@ class Edition extends DOMDocument {
                     # create spaces
                     $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
 
-
                     $s = XMLUtils::createDot($s);
                     $s = XMLUtils::removeMultipleSpacesandZWNJS($s);
-
-
                     # ! order is important. never change order #
                     $s = XMLUtils::createStructuredContent($s);
                     $s = XMLUtils::createAddElement($s);

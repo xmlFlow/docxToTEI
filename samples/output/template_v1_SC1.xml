@@ -84,12 +84,12 @@
         </encodingDesc>
         <profileDesc>
             <creation>
-                <date>2020-12-13</date>
+                <date>2020-12-15</date>
             </creation>
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change type="internal" when="2020-12-13" who="#AUTO">Automatically converted from docx to TEI-XML
+                <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML
                 </change>
             </listChange>
         </revisionDesc>
@@ -115,23 +115,37 @@
                     <lb n="1"/>
                     <w>श्री</w>
                     <choice>
-                        <sic>
-                            <w>अर्जि</w>
-                            <del rend="overstrike">
-                                <w>अर्जि</w>
-                            </del>
-                            <w>अर्जि</w>
+                        <sic><w>अर्जि</w>#del@overstrike
                         </sic>
                         <corr>
                             <w>अर्जि</w>
                         </corr>
                     </choice>
+                    <w>अर्जि</w>}{<w>अर्जि</w>}#
                 </ab>
                 <p/>
                 <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="1"><lb n="1"/>#&amp;{<w>नं</w>
-                    <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}##&amp;@place@hand{<w>नं</w>
-                    <w>९७</w>}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{ ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#<w>अर्जि</w> #reg{
-                    ¯ ¯ ¯ ¯ ¯ ¯}{ ---}#
+                    <w>९७</w>}#<w>अर्जि</w>
+                    <choice>
+                        <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    #&amp;@place@hand{<w>नं</w>
+                    <w>९७</w>}#<w>अर्जि</w>
+                    <choice>
+                        <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <w>अर्जि</w>
+                    <choice>
+                        <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <w>अर्जि</w>
+                    <choice>
+                        <orig>¯ ¯ ¯ ¯ ¯ ¯</orig>
+                        <reg>---</reg>
+                    </choice>
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text" key="valEdi" n="1">

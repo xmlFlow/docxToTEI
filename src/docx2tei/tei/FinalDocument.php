@@ -25,7 +25,6 @@ class FinalDocument extends DOMDocument {
         $s = $document->saveXML();
 
 
-
         $s = XMLUtils::removeTagsWithoutContent($s);
         # Complex  sentence
         #TODO reactvate

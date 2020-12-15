@@ -285,7 +285,8 @@ class XMLUtils {
      */
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
-        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/u', $s, $matches);
+        # Uungready is very important
+        preg_match_all('/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(.)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/Uu', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
