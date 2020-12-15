@@ -34,10 +34,10 @@ class XMLUtils {
 
         $s = XMLUtils::createDot($s);
         # ! order is important. never change order #
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
-        $s = XMLUtils::createStructuredContent($s,$pattern);
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
         $s = XMLUtils::createAddElement($s);
-        $s = XMLUtils::createWords($s);
+        $s = XMLUtils::createStructuredContent($s,$pattern);
+
         # ! order is important. never change order #
 
         #TODO
@@ -317,6 +317,7 @@ class XMLUtils {
                 $match_without_hash = trim($m, XMLUtils::$bnd);
                 $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
                 if($hash_count > 1 && $hash_count %2==0) {
+                    $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
                     $match_without_hash = self::createStructuredContent($match_without_hash ,$pattern);
                 }
                 $parts = explode("{", $match_without_hash);

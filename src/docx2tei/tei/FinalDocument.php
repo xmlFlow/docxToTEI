@@ -36,8 +36,9 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
-        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
-        $s = XMLUtils::createStructuredContent($s,$pattern);
+        #$pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/u';
+        #$s = XMLUtils::createStructuredContent($s,$pattern);
+        #$s = XMLUtils::createWords($s);
 
 
         ## Error messages
