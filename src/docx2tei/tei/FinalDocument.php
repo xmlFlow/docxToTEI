@@ -36,8 +36,8 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
-        #$pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
-        #$s = XMLUtils::createStructuredContent($s,$pattern);
+        $pattern = '/'.XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd.'/U';
+        $s = XMLUtils::createStructuredContent($s,$pattern);
         #$s = XMLUtils::createWords($s);
 
 
@@ -45,8 +45,8 @@ class FinalDocument extends DOMDocument {
         preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
         if (count($matches[0]) > 0) {
             foreach ($matches as $match) {
-                XMLUtils::print_error("[Error] Formatting error, please correct " . $match[0]);
-                XMLUtils::print_error("[Error] Possible reasons : Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ", true);
+                XMLUtils::print_error("[Error] Formatting error: please correct " . $match[0]);
+                XMLUtils::print_error("[Error] Possible reasons: Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ", true);
             }
         }
 // Create new Dom

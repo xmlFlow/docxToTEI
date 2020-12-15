@@ -95,7 +95,7 @@ function arrayRecursiveDiff($aArray1, $aArray2) {
 function getChangeElements($currentDoc, $oldContent) {
     try {
 
-        $oldXML = file_get_contents($oldContent);
+       /* $oldXML = file_get_contents($oldContent);
         $oldXMLNOde = simplexml_load_string($oldXML, "SimpleXMLElement", LIBXML_NOCDATA);
         $oldXMLjson = json_encode($oldXMLNOde);
         $oldXMLArray = json_decode($oldXMLjson, TRUE);
@@ -103,9 +103,9 @@ function getChangeElements($currentDoc, $oldContent) {
         $currentXMLNOde = simplexml_load_string($currentXML, "SimpleXMLElement", LIBXML_NOCDATA);
         $currentXMLjson = json_encode($currentXMLNOde);
         $currentXMLArray = json_decode($currentXMLjson, TRUE);
-        $results = arrayRecursiveDiff($currentXMLArray,$oldXMLArray);
-        print_r($results);
-        $x=1;
+        $results = arrayRecursiveDiff($currentXMLArray,$oldXMLArray);*/
+        exec("git diff", $output, $retval);
+        var_dump($output);
 
     } catch (Exception $ex) {
         throw $ex;
@@ -128,7 +128,7 @@ function writeOutput(string $inputFilePath, array $outputPathParts, array $input
     if (!$isDir) {
         $filePath = $outputDir . $filename . ".xml";
         //$structuredXML->saveToFile($filePath);
-        //getChangeElements($teiDocument, $filePath);
+        getChangeElements($teiDocument, $filePath);
         $teiDocument->saveToFile($filePath);
         $docxArchive->getMediaFiles($outputDir);
     } else {
