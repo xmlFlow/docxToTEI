@@ -30,7 +30,7 @@ class FinalDocument extends DOMDocument {
         # Complex  sentence
         #TODO reactvate
         $this->isComplexStatementsCorrect($s);
-        $s = XMLUtils::finalCreateComplexSentence($s);
+        $s = XMLUtils::createComplexSentence($s);
         # correct after creating tags
         #   these are final operations in ORDER
         $s = XMLUtils::createNotesWithCorrectTags($s);

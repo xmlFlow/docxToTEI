@@ -41,7 +41,7 @@ class XMLUtils {
     public static function getMarkups(string $s) {
         $s = self::removeZWNJ($s);
         # ! order is important. never change order #
-        $s = XMLUtils::replaceLastMinus($s);
+        $s = XMLUtils::createReplaceLastMinus($s);
         # ! order is important. never change order #
 
         $s = XMLUtils::createLineBegin($s);
@@ -85,7 +85,7 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function finalCreateNotesWithCorrectTags(string $s) {
+    public static function createNotesWithCorrectTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
         $s = preg_replace('/&lt;/i', '<', $s);
@@ -167,7 +167,7 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function finalCreateComplexSentence(string $s) {
+    public static function createComplexSentence(string $s) {
         preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
@@ -249,13 +249,13 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function finalHandleLineBreakNoWords(string $s) {
+    public static function handleLineBreakNoWords(string $s) {
         // <w>व<lb break="no" n="2"/>सी</w>
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;
     }
 
-    public static function finalHandleSurroundingAdd(string $s) {
+    public static function handleSurroundingAdd(string $s) {
         //
         $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
         return $s;

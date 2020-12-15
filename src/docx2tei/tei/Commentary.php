@@ -35,7 +35,6 @@ class Commentary extends DOMDocument {
 
                     $s = XMLUtils::getMarkups($s);
 
-
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
