@@ -173,7 +173,7 @@ class XMLUtils {
         if (!is_null($match) && count($match) != 0) {
             # do not change order
             $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
-            $s = preg_replace('/#SB/', '<s xml:lang="nep">', $s);
+            $s = preg_replace('/#SB/', '<s>', $s);
             $s = preg_replace('/#SE/', '</s>', $s);
         }
         return $s;

@@ -1,94 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="K_0356_0042">
-  <teiHeader>
-    <fileDesc>
-      <titleStmt>
-        <title type="main">A copy of a rukkā of King Surendra reappointing Jagadīśvaranātha as abbot on Siddha Bhagavantanātha's  monastic throne (VS 1909)</title>
-        <title type="short">Short title of document</title>
-        <title type="sub">K_0356_0042</title>
-        <author role="issuer">[Surendra Vikrama Śāha]</author>
-        <respStmt>
-          <resp>main editor and translator</resp>
-          <name type="main_editor">Christof Zotter</name>
-        </respStmt>
-        <respStmt>
-          <resp>collaborator</resp>
-          <name type="collaborator">Name of collaborator(s)</name>
-        </respStmt>
-      </titleStmt>
-      <publicationStmt>
-        <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
-        <pubPlace>Heidelberg, Germany</pubPlace>
-        <availability status="restricted">
-          <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-          <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p>
-        </availability>
-      </publicationStmt>
-      <sourceDesc>
-        <msDesc>
-          <msIdentifier>
-            <settlement>Kathmandu</settlement>
-            <repository>Guṭhi Saṃsthāna</repository>
-            <idno>Bha. Gu. La. Ta. Ms. no. 94, book no. 1 [nos. 1-186]</idno>
-            <altIdentifier type="microfilm">
-              <settlement>Kathmandu, Berlin</settlement>
-              <collection>Nepal German Manuscript Preservation Project</collection>
-              <idno>NGMPP K 356/32</idno>
-            </altIdentifier>
-          </msIdentifier>
-          <msContents>
-            <textLang mainLang="nep" otherLangs="san"/>
-          </msContents>
-          <physDesc>
-            <p>For details see <ref target="https://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/42437/1">entry in database </ref></p>
-          </physDesc>
-          <history>
-            <origin>
-              <p>Issued in <origDate>1853 (VS 1910)</origDate> from <origPlace/></p>
-            </origin>
-          </history>
-        </msDesc>
-      </sourceDesc>
-    </fileDesc>
-    <encodingDesc>
-      <editorialDecl>
-        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
-        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
-      </editorialDecl>
-    </encodingDesc>
-    <profileDesc><creation> <date>2020-12-09</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-12-09" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
-  </teiHeader>
-  <facsimile>
-    <surface xml:id="surface1" facs=" K_0356_0228.png" ulx="0" uly="0" lrx="0" lry="0"/>
-  </facsimile>
-  <text>
-    <body>
-      <div xml:id="abs" type="abstract" xml:lang="eng">
-        <p>This is a test file</p>
-      </div>
-      <div xml:id="ed" type="edition" xml:lang="nep">
-        <pb n="#surface1" facs="1r"/>
-        <ab type="margin" corresp="#margin1" n="1"><lb n="1"/><space quantity="5" unit="chars"/><surplus> <w>डाङ्&amp;#x200c;</w></surplus> <w>डाङ्&amp;#x200c;</w> <w>डाङ्&amp;#8205;९४</w> <w>नं</w><orig>•</orig> </ab>
-        <p/>
-        <ab type="margin" corresp="#margin2" n="2"><lb n="1"/><w>प्रमांनगी</w><space quantity="5" unit="chars"/> <w>जनरल</w> <persName><w>स्याम</w> <w>वाहादुर</w> <orig>•</orig> <w>कुंव़र</w> <orig>•</orig> <w>राणाजी</w></persName> <orig>•</orig> <lb n="2"/><w>पालामा</w><space quantity="5" unit="lines"/> <w>सर्याको</w> <choice><orig>¯¯¯¯¯¯¯ ¯¯¯¯¯¯¯</orig><reg>---</reg></choice> <lb n="3"/></ab>
-        <p/>
-        <ab type="seal" corresp="#seal" n="3"><lb n="1"/>[seal]<lb n="2"/><lb break="no" n="3"/><lb break="no" n="4"/><lb break="no" n="5"/></ab>
-        <p/>
-        <ab type="margin" corresp="#margin3" n="4"><lb n="1"/><w>हेर्ने</w> <unclear cert="high"><w>स्ही</w></unclear> <w>नौ</w> <persName><w>हरि</w></persName> <orig>•</orig> <w>भने</w> <w>सही</w> <w>नौ</w> <persName><w>गणेश</w></persName> <orig>•</orig><lb n="2"/></ab>
-        <p/>
-        <ab type="maintext" corresp="#main_text" n="5"><lb n="1"/><lb n="2"/> <w>डाङ्</w> <space quantity="5" unit="chars"/> <w>सल्यानाका</w> <orig>•</orig> <w>श्री</w> <w>सीद्ध</w> <orig>•</orig> <w>भगवंन्तनाथ</w><orig>•</orig><w>का</w> <w>मठगुठी</w> <choice><orig>¯¯¯ ¯¯¯¯¯¯¯¯¯</orig><reg>---</reg></choice> <lb n="3"/><choice><orig>¯¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</orig><reg>---</reg></choice>  <choice><sic><w>प्रस्तीसौ</w></sic><corr><w>प्रशस्तिसौ</w></corr></choice><orig>•</orig> <w>आगे</w> <w>महंत</w> <orig>•</orig> <w>जगदिश्वरनाथके</w> <orig>•</orig> <w>डाङ्&amp;#x200c;</w> <orig>•</orig> <w>सल्यानाका</w> <w>श्री</w> <w>सीद्ध</w> <orig>•</orig> <w>भगवंन्तनाथ</w><orig>•</orig><w>का</w> <w>मठगादीमा</w> <orig>•</orig> <w>व</w>-<w>सी</w> <table> <row> <cell> <p>Table header 1</p> </cell> <cell> <p>Table header 2</p> </cell> <cell> <p>Table header 3</p> </cell> <cell> <p>Table header 3</p> </cell> </row> <row> <cell> <p> <w>शुभमस्तु</w> <w>सर्वदा</w> ।<w>तिष्ठा</w> <w>दिन</w> <w>जुरो</w></p> </cell> <cell> <p><w>सर्वदा</w></p> </cell> <cell> <p><w>सहस्र</w> <w>पुण्य</w> <w>राक</w> <w>जुरो</w></p> </cell> <cell> <lb/> </cell> </row> </table></ab>
-        <p/>
-      </div>
-      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
-        <p>no. 94<note place="end"> This archival note indicates the document number in Volume 1 of copies of documents sent by the Kausī Tosākhānā to the Guṭhī Tahabila Phā̃ṭa under Śrī 5 Sarkāra and now kept in the Guṭhī Lagata and Tahabīla office in Bhadrakali (cf. note 1 in K_0356_0032).</note></p>
-        <p>[seal]</p>
-        <p><foreign>pramāṅgī pramāṅgī pramāṅgī </foreign>The order (<foreign>pramāṃnagī</foreign> for <foreign>pramāṅgī</foreign>) was copied during the tenure of General <persName>Syāma Bahādura Kũvara Rāṇājī</persName></p>
-        <p>He who watched, signature: Nau[sindā] <persName>Hari</persName></p>
-      </div>
-      <div xml:id="commentary" type="commentary" xml:lang="eng">
-        <p> Jagadīśvaranātha, selected by his guru, Mahanta Lokanātha, as successor to Bhagavantanātha's throne, received his first confirmation of the abbotship in VS 1904 (see K_0468_0062), but as we know from another document in the same volume of copied material (see note 1)—a mohara that was annulled by the present document—he was dismissed by King Surendra in VS 1909 for keeping a woman in the maṭha (see K_0356_0032). Jagadīśvaranātha successfully challenged his replacement by Santoṣanātha, so much so that on the very day of his reappointment as mahanta the prime minister wrote to officials in Pyuthana and Salyan ordering them to respect certain privileges enjoyed by maṭha that seemingly had been contested in the past (Naraharinātha VS 2022: 464). Jagadīśvaranātha stayed in office—if not without further controversies (see Naraharinātha VS 2022: 464-465)—until he died and the abbotship passed on to his disciple Khīmānātha in VS 1934 (cf. K_0097_0040). </p>
-      </div>
-    </body>
-  </text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">A copy of a rukkā of King Surendra reappointing Jagadīśvaranātha as abbot on Siddha
+                    Bhagavantanātha's monastic throne (VS 1909)
+                </title>
+                <title type="short">Short title of document</title>
+                <title type="sub">K_0356_0042</title>
+                <author role="issuer">[Surendra Vikrama Śāha]</author>
+                <respStmt>
+                    <resp>main editor and translator</resp>
+                    <name type="main_editor">Christof Zotter</name>
+                </respStmt>
+                <respStmt>
+                    <resp>collaborator</resp>
+                    <name type="collaborator">Name of collaborator(s)</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
+                    of Pre-modern Nepal
+                </publisher>
+                <pubPlace>Heidelberg, Germany</pubPlace>
+                <availability status="restricted">
+                    <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile
+                        remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).
+                    </p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Kathmandu</settlement>
+                        <repository>Guṭhi Saṃsthāna</repository>
+                        <idno>Bha. Gu. La. Ta. Ms. no. 94, book no. 1 [nos. 1-186]</idno>
+                        <altIdentifier type="microfilm">
+                            <settlement>Kathmandu, Berlin</settlement>
+                            <collection>Nepal German Manuscript Preservation Project</collection>
+                            <idno>NGMPP K 356/32</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="nep" otherLangs="san"/>
+                    </msContents>
+                    <physDesc>
+                        <p>For details see
+                            <ref target="https://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/42437/1">entry
+                                in database
+                            </ref>
+                        </p>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <p>Issued in <origDate>1853 (VS 1910)</origDate> from
+                                <origPlace/>
+                            </p>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
+                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
+                    optionally commentary.
+                </p>
+                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
+                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
+                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
+                    lines of various shapes, often used as placeholders or structuring elements. The editorial
+                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
+                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
+                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
+                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date>2020-12-15</date>
+            </creation>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML
+                </change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="surface1" facs=" K_0356_0228.png" ulx="0" uly="0" lrx="0" lry="0">
+            <zone xml:id="margin1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="margin2" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="seal" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="margin3" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <p>This is a test file</p>
+            </div>
+            <div xml:id="ed" type="edition" xml:lang="nep">
+                <pb n="#surface1" facs="1r"/>
+                <ab type="margin" corresp="#margin1" n="1">
+                    <lb n="1"/>
+                    <space quantity="5" unit="chars"/>
+                    <surplus>डाङ्&amp;#x200c;</surplus>
+                    डाङ्&amp;#x200c; डाङ्&amp;#8205;९४ नं<orig>•</orig>
+                </ab>
+                <p/>
+                <ab type="margin" corresp="#margin2" n="1"><lb n="1"/>प्रमांनगी
+                    <space quantity="5" unit="chars"/>
+                    जनरल
+                    <persName>स्याम वाहादुर <orig>•</orig> कुंव़र <orig>•</orig> राणाजी
+                    </persName>
+                    <orig>•</orig>
+                    <lb n="2"/>पालामा
+                    <space quantity="5" unit="lines"/>
+                    सर्याको
+                    <choice>
+                        <orig>¯¯¯¯¯¯¯ ¯¯¯¯¯¯¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <lb n="3"/>
+                </ab>
+                <p/>
+                <ab type="seal" corresp="#seal" n="1"><lb n="1"/>[seal]
+                    <lb n="2"/>
+                    <lb break="no" n="3"/>
+                    <lb break="no" n="4"/>
+                    <lb break="no" n="5"/>
+                </ab>
+                <p/>
+                <ab type="margin" corresp="#margin3" n="1"><lb n="1"/>हेर्ने <unclear cert="high">स्ही</unclear> नौ <persName>
+                    हरि
+                </persName>
+                    <orig>•</orig> भने सही नौ <persName>गणेश</persName>
+                    <orig>•</orig>
+                    <lb n="2"/>
+                </ab>
+                <p/>
+                <ab type="maintext" corresp="#main_text" n="1">
+                    <lb n="1"/>
+                    <lb n="2"/>
+                    डाङ्
+                    <space quantity="5" unit="chars"/>
+                    सल्यानाका <orig>•</orig> श्री सीद्ध <orig>•</orig> भगवंन्तनाथ<orig>•</orig>का मठगुठी
+                    <choice>
+                        <orig>¯¯¯ ¯¯¯¯¯¯¯¯¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <lb n="3"/>
+                    <choice>
+                        <orig>¯¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <choice>
+                        <sic>प्रस्तीसौ</sic>
+                        <corr>प्रशस्तिसौ</corr>
+                    </choice>
+                    <orig>•</orig>
+                    आगे महंत <orig>•</orig> जगदिश्वरनाथके <orig>•</orig> डाङ्&amp;#x200c; <orig>•</orig> सल्यानाका श्री
+                    सीद्ध <orig>•</orig> भगवंन्तनाथ<orig>•</orig>का मठगादीमा <orig>•</orig> व<lb break="no" n="4"/>सी
+                    <table>
+                        <row>
+                            <cell>
+                                <p>Table header 1</p>
+                            </cell>
+                            <cell>
+                                <p>Table header 2</p>
+                            </cell>
+                            <cell>
+                                <p>Table header 3</p>
+                            </cell>
+                            <cell>
+                                <p>Table header 3</p>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <p>शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p>
+                            </cell>
+                            <cell>
+                                <p>सर्वदा</p>
+                            </cell>
+                            <cell>
+                                <p>सहस्र पुण्य राक जुरो</p>
+                            </cell>
+                            <cell>
+                                <lb/>
+                            </cell>
+                        </row>
+                    </table>
+                </ab>
+                <p/>
+            </div>
+            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+                <p>no. 94
+                    <note place="end">This archival note indicates the document number in Volume 1 of copies of
+                        documents sent by the Kausī Tosākhānā to the Guṭhī Tahabila Phā̃ṭa under Śrī 5 Sarkāra and now
+                        kept in the Guṭhī Lagata and Tahabīla office in Bhadrakali (cf. note 1 in K_0356_0032).
+                    </note>
+                </p>
+                <p>[seal]</p>
+                <p><foreign>pramāṅgī pramāṅgī pramāṅgī</foreign>The order (<foreign>pramāṃnagī</foreign> for <foreign>
+                    pramāṅgī</foreign>) was copied during the tenure of General
+                    <persName>Syāma Bahādura Kũvara Rāṇājī</persName>
+                </p>
+                <p>He who watched, signature: Nau[sindā]
+                    <persName>Hari</persName>
+                </p>
+            </div>
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p>Jagadīśvaranātha, selected by his guru, Mahanta Lokanātha, as successor to Bhagavantanātha's throne,
+                    received his first confirmation of the abbotship in VS 1904 (see K_0468_0062), but as we know from
+                    another document in the same volume of copied material (see note 1)—a mohara that was annulled by
+                    the present document—he was dismissed by King Surendra in VS 1909 for keeping a woman in the maṭha
+                    (see K_0356_0032). Jagadīśvaranātha successfully challenged his replacement by Santoṣanātha, so much
+                    so that on the very day of his reappointment as mahanta the prime minister wrote to officials in
+                    Pyuthana and Salyan ordering them to respect certain privileges enjoyed by maṭha that seemingly had
+                    been contested in the past (Naraharinātha VS 2022: 464). Jagadīśvaranātha stayed in office—if not
+                    without further controversies (see Naraharinātha VS 2022: 464-465)—until he died and the abbotship
+                    passed on to his disciple Khīmānātha in VS 1934 (cf. K_0097_0040).
+                </p>
+            </div>
+        </body>
+    </text>
 </TEI>
