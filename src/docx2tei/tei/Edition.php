@@ -55,6 +55,8 @@ class Edition extends DOMDocument {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
                     $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::createWords($s);
+
 
 
                     $frag = $this->createDocumentFragment();

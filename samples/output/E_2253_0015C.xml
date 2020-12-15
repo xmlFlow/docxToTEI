@@ -134,102 +134,236 @@
                 <pb n="#surface1" facs="1r"/>
                 <ab type="invocatio" corresp="#invocatio" n="1">
                     <lb n="1"/>
-                    <supplied reason="lost">श्रीमत्सेंद्र १</supplied>
+                    <supplied reason="lost">
+                        <w>श्रीमत्सेंद्र</w>
+                        <w>१</w>
+                    </supplied>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin" n="1">
                     <lb n="1"/>
-                    <del rend="crossed_out">स्वस्तिश्री</del>
+                    <del rend="crossed_out">
+                        <w>स्वस्तिश्री</w>
+                    </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
-                    लिखा पत्रम्
+                    <w>लिखा</w>
+                    <w>पत्रम्</w>
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text" n="1">
                     <lb n="1"/>
-                    <s xml:lang="san">स्वस्ति</s>
-                    <s xml:lang="san">श्रीमन्महाराजाधिराजकस्य रुक्का</s>व<lb break="no" n="2"/>सी
-                    <lb n="3"/>
-                    <s>आगे <persName>रामहरी</persName>
-                        <placeName>पाटनका</placeName>
-                        <placeName>ओकु वाहाल टोलको</placeName>
-                        <placeName>महावुद्ध</placeName> घरको <persName>रामानंद वांडाके</persName>
+                    <s xml:lang="san">
+                        <w>स्वस्ति</w>
                     </s>
-                    <s>तेरा पुरू<lb break="no" n="4"/>षा <persName>जीवराज वांडाले</persName> १ को रथमहा सुनको विमान
-                        चढाउंदा गूठ राख्याको का<lb break="no" n="5"/>म चलाई वाकि रह्याका द्रव्यले पछि गूठका खेत वढाउदै <surplus>
-                            ख
-                        </surplus> राख्याका
+                    <s xml:lang="san">
+                        <w>श्रीमन्महाराजाधिराजकस्य</w>
+                        <w>रुक्का</w>
+                    </s>
+                    <w><add place="above_the_line" hand="first">सल्याना</add>का
+                    </w>
+                    <w>व<lb break="no" n="2"/>सी
+                    </w>
+                    <lb n="3"/>
+                    <s>
+                        <w>आगे</w>
+                        <persName>
+                            <w>रामहरी</w>
+                        </persName>
+                        <placeName>
+                            <w>पाटनका</w>
+                        </placeName>
+                        <placeName>
+                            <w>ओकु</w>
+                            <w>वाहाल</w>
+                            <w>टोलको</w>
+                        </placeName>
+                        <placeName>
+                            <w>महावुद्ध</w>
+                        </placeName>
+                        <w>घरको</w>
+                        <persName>
+                            <w>रामानंद</w>
+                            <w>वांडाके</w>
+                        </persName>
+                    </s>
+                    <s>
+                        <w>तेरा</w>
+                        <w>पुरू<lb break="no" n="4"/>षा
+                        </w>
+                        <persName>
+                            <w>जीवराज</w>
+                            <w>वांडाले</w>
+                        </persName>
+                        <w>१</w>
+                        <w>को</w>
+                        <w>रथमहा</w>
+                        <w>सुनको</w>
+                        <w>विमान</w>
+                        <w>चढाउंदा</w>
+                        <w>गूठ</w>
+                        <w>राख्याको</w>
+                        <w>का<lb break="no" n="5"/>म
+                        </w>
+                        <w>चलाई</w>
+                        <w>वाकि</w>
+                        <w>रह्याका</w>
+                        <w>द्रव्यले</w>
+                        <w>पछि</w>
+                        <w>गूठका</w>
+                        <w>खेत</w>
+                        <w>वढाउदै</w>
+                        <surplus>
+                            <w>ख</w>
+                        </surplus>
+                        <w>राख्याका</w>
                     </s>
                     <table>
                         <row>
                             <cell>
                                 <p>
-                                    <placeName>ङखु</placeName>
-                                    रोपनी --- ६
+                                    <placeName>
+                                        <w>ङखु</w>
+                                    </placeName>
+                                    <w>रोपनी</w> ---
+                                    <w>६</w>
                                 </p>
                             </cell>
                             <cell>
                                 <p>
-                                    <placeName>भिलुपा</placeName>
-                                    रोपनी --- ६
+                                    <placeName>
+                                        <w>भिलुपा</w>
+                                    </placeName>
+                                    <w>रोपनी</w> ---
+                                    <w>६</w>
                                 </p>
                             </cell>
                             <cell>
                                 <p>
-                                    <persName>ङषुवंग</persName>
-                                    रोपनी --- १
+                                    <persName>
+                                        <w>ङषुवंग</w>
+                                    </persName>
+                                    <w>रोपनी</w> ---
+                                    <w>१</w>
                                 </p>
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <p>पाको रोपनी --- ६</p>
+                                <p>
+                                    <w>पाको</w>
+                                    <w>रोपनी</w> --- <w>६</w>
+                                </p>
                             </cell>
                             <cell>
-                                <p>सिलापाको रोपनी --- ६।</p>
+                                <p>
+                                    <w>सिलापाको</w>
+                                    <w>रोपनी</w> --- <w>६</w>।
+                                </p>
                             </cell>
                             <cell>
-                                <p>रानिवु रोपनी --- १।।।</p>
+                                <p>
+                                    <w>रानिवु</w>
+                                    <w>रोपनी</w> --- <w>१</w>।।।
+                                </p>
                             </cell>
                         </row>
                     </table>
                     <lb n="6"/>
-                    <s xml:lang="hin">मेरो<gap extent="5 characters" agent="breakage" reason="illegible"/>नाम विष्णु हो
-                        तर
+                    <s xml:lang="hin">
+                        <w>मेरो</w>
+                        <gap extent="5 characters" agent="breakage" reason="illegible"/>
+                        <w>नाम</w>
+                        <w>विष्णु</w>
+                        <w>हो</w>
+                        <w>तर</w>
                         <space quantity="6" unit="characters"/>
-                        श्याम होइन
+                        <w>श्याम</w>
+                        <w>होइन</w>
                     </s>
                     <space quantity="5" unit="lines"/>
-                    <s>मेरो
+                    <s>
+                        <w>मेरो</w>
                         <w>
                             <add place="below_the_line" hand="second">नाम</add>
                         </w>
-                        काले
+                        <w>काले</w>
                         <w>
                             <add place="" hand="">हो</add>
                         </w>
-                        , सेत्ये <unclear cert="low">होइन</unclear>है <unclear cert="high">हाइ</unclear>
-                        <unclear cert="high">हाइ</unclear>
+                        , <w>सेत्ये</w>
+                        <unclear cert="low">
+                            <w>होइन</w>
+                        </unclear>
+                        <w>है</w>
+                        <unclear cert="high">
+                            <w>हाइ</w>
+                        </unclear>
+                        <unclear cert="high">
+                            <w>हाइ</w>
+                        </unclear>
                     </s>
-                    <s>मेरो
+                    <s>
+                        <w>मेरो</w>
                         <choice>
-                            <sic>काम</sic>
-                            <corr>नाम</corr>
+                            <sic>
+                                <w>काम</w>
+                            </sic>
+                            <corr>
+                                <w>नाम</w>
+                            </corr>
                         </choice>
-                        सेतो <orig>|||||</orig> होइन
+                        <w>सेतो</w>
+                        <orig>|||||</orig>
+                        <w>होइन</w>
                     </s>
-                    <s>मेरो
+                    <s>
+                        <w>मेरो</w>
                         <choice>
                             <orig>|||</orig>
                             <reg>—</reg>
                         </choice>
-                        नाम <geogName>सेतो</geogName> होइन
+                        <w>नाम</w>
+                        <geogName>
+                            <w>सेतो</w>
+                        </geogName>
+                        <w>होइन</w>
                     </s>
-                    <s>मेरो नाम सेतो होइन</s>
-                    <s>मेरो नाम सेतो होइन</s>
-                    <s>मेरो नाम सेतो होइन</s>
-                    <s>मेरो नाम सेतो होइन</s>
-                    <s>मेरो नाम सेतो होइन</s>
-                    <s>मेरो नाम सेतो <orig>•</orig> होइन
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <w>होइन</w>
+                    </s>
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <w>होइन</w>
+                    </s>
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <w>होइन</w>
+                    </s>
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <w>होइन</w>
+                    </s>
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <w>होइन</w>
+                    </s>
+                    <s>
+                        <w>मेरो</w>
+                        <w>नाम</w>
+                        <w>सेतो</w>
+                        <orig>•</orig>
+                        <w>होइन</w>
                     </s>
                     <lb n="7"/>
                 </ab>
@@ -237,28 +371,60 @@
                 <pb n="#surface2" facs="1v"/>
                 <ab type="marphat" corresp="#marphat" n="1">
                     <lb n="1"/>
-                    <del rend="crossed_out">स्वस्तिश्री</del>
+                    <del rend="crossed_out">
+                        <w>स्वस्तिश्री</w>
+                    </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
-                    लिखा पत्रम्मार्फत् #pen{रणबहादुर साह}
+                    <w>लिखा</w>
+                    <w>पत्रम्</w>
+                    <w>मार्फत्</w>
+                    #pen{<w>रणबहादुर</w>
+                    <w>साह</w>}
                 </ab>
                 <p/>
-                <ab type="margin" corresp="#margin" n="1"><lb n="1"/>स्ही सदर <persName>बेखा</persName>
-                    <placeName>काठमाडौं</placeName>
-                    <geogName>फुल्चोकी</geogName>
+                <ab type="margin" corresp="#margin" n="1">
+                    <lb n="1"/>
+                    <w>स्ही</w>
+                    <w>सदर</w>
+                    <persName>
+                        <w>बेखा</w>
+                    </persName>
+                    <placeName>
+                        <w>काठमाडौं</w>
+                    </placeName>
+                    <geogName>
+                        <w>फुल्चोकी</w>
+                    </geogName>
                     <lb n="2"/>
                 </ab>
                 <p/>
                 <pb n="#surface3" facs="2r"/>
                 <ab type="marphat" corresp="#marphat" n="1">
                     <lb n="1"/>
-                    <del rend="crossed_out">स्वस्तिश्री</del>
+                    <del rend="crossed_out">
+                        <w>स्वस्तिश्री</w>
+                    </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
-                    लिखा पत्रम्मार्फत् #pen{रणबहादुर साह}
+                    <w>लिखा</w>
+                    <w>पत्रम्</w>
+                    <w>मार्फत्</w>
+                    #pen{<w>रणबहादुर</w>
+                    <w>साह</w>}
                 </ab>
                 <p/>
-                <ab type="margin" corresp="#margin" n="1"><lb n="1"/>स्ही सदर <persName>बेखा</persName>
-                    <placeName>काठमाडौं</placeName>
-                    <geogName>फुल्चोकी</geogName>
+                <ab type="margin" corresp="#margin" n="1">
+                    <lb n="1"/>
+                    <w>स्ही</w>
+                    <w>सदर</w>
+                    <persName>
+                        <w>बेखा</w>
+                    </persName>
+                    <placeName>
+                        <w>काठमाडौं</w>
+                    </placeName>
+                    <geogName>
+                        <w>फुल्चोकी</w>
+                    </geogName>
                     <lb n="2"/>
                 </ab>
                 <p/>
