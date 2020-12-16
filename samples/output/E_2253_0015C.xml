@@ -131,7 +131,7 @@
                 </p>
             </div>
             <div xml:id="ed" type="edition" xml:lang="nep-san">
-                <pb n="#surface1" facs="1r"/>
+                <pb n="1r" facs="#surface1"/>
                 <ab type="invocatio" corresp="#invocatio" n="1">
                     <lb n="1"/>
                     <supplied reason="lost">
@@ -377,7 +377,7 @@
                     <lb n="7"/>
                 </ab>
                 <p/>
-                <pb n="#surface2" facs="1v"/>
+                <pb n="1v" facs="#surface2"/>
                 <ab type="marphat" corresp="#marphat" n="1">
                     <lb n="1"/>
                     <del rend="crossed_out">
@@ -407,7 +407,7 @@
                     <lb n="2"/>
                 </ab>
                 <p/>
-                <pb n="#surface3" facs="2r"/>
+                <pb n="2r" facs="#surface3"/>
                 <ab type="marphat" corresp="#marphat" n="1">
                     <lb n="1"/>
                     <del rend="crossed_out">

@@ -12,12 +12,6 @@ class XMLUtils {
     public function __construct() {
     }
 
-
-    public static function createReplaceLastMinus(string $s) {
-        $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
-        return $s;
-    }
-
     /**
      * @param $s
      * @return string|string[]|null
@@ -48,6 +42,19 @@ class XMLUtils {
 
         #TODO
 
+        return $s;
+    }
+
+    /**
+     * @param string $s
+     * @return string|string[]|null
+     */
+    private static function removeZWNJ(string $s) {
+        return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
+    }
+
+    public static function createReplaceLastMinus(string $s) {
+        $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
         return $s;
     }
 
@@ -177,20 +184,7 @@ class XMLUtils {
         return $s;
 
     }
-    /**
-     * String replace nth occurrence
-     *
-     * @param type $search  	Search string
-     * @param type $replace 	Replace string
-     * @param type $subject 	Source string
-     * @param type $occurrence 	Nth occurrence
-     * @return type 		Replaced string
-     */
-    public static function str_replace_n($search, $replace, $subject, $occurrence)
-    {
-        $search = preg_quote($search);
-        return preg_replace("/^((?:(?:.*?$search){".--$occurrence."}.*?))$search/", "$1$replace", $subject);
-    }
+
     /**
      * @param string $s
      * @return string
@@ -206,15 +200,12 @@ class XMLUtils {
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
                 $hash_count = substr_count($m, XMLUtils::$bnd);
-                if ($hash_count % 2 == 0 ) {
-                    $match_without_hash = trim($m, XMLUtils::$bnd);
-                    $match_without_hash = self::createStructuredContent($match_without_hash);
+                if ($hash_count % 2 == 0) {
+                    $content = self::createStructuredContent(trim($m, XMLUtils::$bnd));
+                } else if ($hash_count == 3) {
+                    $content = self::createStructuredContent(self::str_replace_n(XMLUtils::$bnd, "", $m, 1));
                 }
-                else if ($hash_count==3) {
-                    $match_string = self::str_replace_n(XMLUtils::$bnd, "", $m, 1);
-                    $match_without_hash = self::createStructuredContent($match_string);
-                }
-                $parts = explode("{", $match_without_hash);
+                $parts = explode("{", $content);
                 $suffix1 = str_replace('}', '', $parts[1]);
                 if (count($parts) == 3) {
                     $suffix2 = str_replace('}', '', $parts[2]);
@@ -356,6 +347,26 @@ class XMLUtils {
             )
         ];
         return $tags;
+    }
+
+    /**
+     * String replace nth occurrence
+     *
+     * @param type $search Search string
+     * @param type $replace Replace string
+     * @param type $subject Source string
+     * @param type $occurrence Nth occurrence
+     * @return type        Replaced string
+     */
+    public static function str_replace_n($search, $replace, $subject, $occurrence) {
+        $search = preg_quote($search);
+        return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
+    }
+
+    public static function removeUnnecessaryChars(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
     }
 
     /**
@@ -522,20 +533,6 @@ class XMLUtils {
         foreach ($titles as $title) {
             $title->parentNode->removeChild($title);
         }
-    }
-
-    public static function removeUnnecessaryChars(string $tag) {
-        $tag = str_replace('=', '', $tag);
-        $tag = str_replace('-', '', $tag);
-        return $tag;
-    }
-
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    private static function removeZWNJ(string $s) {
-        return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 
     /**

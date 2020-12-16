@@ -88,10 +88,10 @@ class Edition extends DOMDocument {
                     //<pb n="1r" facs="#surface1"/>
                     $ab = $this->createElement("pb");
                     $typeAttr = $this->createAttribute('n');
-                    $typeAttr->value = $value1;
+                    $typeAttr->value = $value2;
                     $ab->appendChild($typeAttr);
                     $facs = $this->createAttribute('facs');
-                    $facs->value = $value2;
+                    $facs->value = $value1;
                     $ab->appendChild($facs);
                 } elseif ($type == "ab") {
                     //<ab type="invocatio" corresp="#invocatio"/>

@@ -19,10 +19,13 @@
 
 | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
-| 1 |  ` व- सीis now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written | 
-| 2 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written, will work for this structure #&{जीवराज}#राज |
+| 1 |  ` व- सीis now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written.  | 
+| 2 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written, will work for this structure #&{जीवराज}#राज This is a little complex rule, which deviates from our generic rule  of #content#  |
 | 3 | `reverted the default value of the s element` |
-| 4 |  | `#cor{पु#del@overstrike{ण्य}#ण्येक}{पुण्य}#` |
+| 4 |  `#cor{पु#del@overstrike{ण्य}#ण्येक}{पुण्य}#` |  Added supporting  recursive pattern matching.  This feature has  to be tested.  |
+| 5 |  ` The attribute values within pagebreaks <pb> are wrongly placed: <pb n="#surface3" facs="2r"/> should be <pb n="2r " facs="#surface3"/>` | Corrected |
+
+
 
 
  ### Testing Round 2
