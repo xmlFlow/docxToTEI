@@ -42,8 +42,7 @@ class XMLUtils {
         # ! order is important. never change order #
 
         $s = XMLUtils::createAddElement($s);
-        $pattern = '/' . XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
-        $s = XMLUtils::createStructuredContent($s, $pattern);
+        $s = XMLUtils::createStructuredContent($s);
 
         # ! order is important. never change order #
 
@@ -178,24 +177,42 @@ class XMLUtils {
         return $s;
 
     }
-
+    /**
+     * String replace nth occurrence
+     *
+     * @param type $search  	Search string
+     * @param type $replace 	Replace string
+     * @param type $subject 	Source string
+     * @param type $occurrence 	Nth occurrence
+     * @return type 		Replaced string
+     */
+    public static function str_replace_n($search, $replace, $subject, $occurrence)
+    {
+        $search = preg_quote($search);
+        return preg_replace("/^((?:(?:.*?$search){".--$occurrence."}.*?))$search/", "$1$replace", $subject);
+    }
     /**
      * @param string $s
      * @return string
      */
-    public static function createStructuredContent(string $s, $pattern) {
+    public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
         $s = preg_replace('/\s+/i', ' ', $s);
+        $pattern = '/' . XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+
         # Ungready is very important
         preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
             foreach ($match as $m) {
-                $match_without_hash = trim($m, XMLUtils::$bnd);
-                $hash_count = substr_count($match_without_hash, XMLUtils::$bnd);
-                if ($hash_count % 2 == 0) {
-                    $pattern = '/' . XMLUtils::$bnd . '[\w|?]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
-                    $match_without_hash = self::createStructuredContent($match_without_hash, $pattern);
+                $hash_count = substr_count($m, XMLUtils::$bnd);
+                if ($hash_count % 2 == 0 ) {
+                    $match_without_hash = trim($m, XMLUtils::$bnd);
+                    $match_without_hash = self::createStructuredContent($match_without_hash);
+                }
+                else if ($hash_count==3) {
+                    $match_string = self::str_replace_n(XMLUtils::$bnd, "", $m, 1);
+                    $match_without_hash = self::createStructuredContent($match_string);
                 }
                 $parts = explode("{", $match_without_hash);
                 $suffix1 = str_replace('}', '', $parts[1]);
