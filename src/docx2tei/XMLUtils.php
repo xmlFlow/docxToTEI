@@ -165,7 +165,6 @@ class XMLUtils {
      * @return string
      */
     public static function createAddElement(string $s) {
-        #$s = preg_replace('', $s);
 
         $s = preg_replace_callback(
             '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U',
