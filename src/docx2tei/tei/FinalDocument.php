@@ -10,17 +10,19 @@ class FinalDocument extends DOMDocument {
 
     public function __construct(TEIDocument $document) {
         parent::__construct('1.0', 'utf-8');
-// DOM operations
+
         XMLUtils::removeTitleInBody($document, "title");
         XMLUtils::removeElementsInTag($document, '//ab/p');
         XMLUtils::removeElementsInTag($document, '//add/w');
         XMLUtils::removeElementsInTag($document, '//w/w');
-        XMLUtils::addChildElement($document, "ab", "lb");
-        //XMLUtils::removeControlledVocabsWordTagging($document);
-        XMLUtils::enumerateLineBegins($document);
+        XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
         XMLUtils::removeTags($document, "//table-wrap");
+
+
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
+        XMLUtils::addChildElement($document, "ab", "lb");
+        XMLUtils::enumerateLineBegins($document);
         // String operations
         $s = $document->saveXML();
 
@@ -34,9 +36,12 @@ class FinalDocument extends DOMDocument {
         #   these are final operations in ORDER
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
-        $s = XMLUtils::createNotesWithCorrectTags($s);
-        $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
-        $s = XMLUtils::createStructuredContent($s, $pattern);
+        $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
+        #$pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+        #$s = XMLUtils::createStructuredContent($s, $pattern);
+
+        # Last operations
+
 
 
         ## Error messages

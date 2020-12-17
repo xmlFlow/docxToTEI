@@ -36,7 +36,6 @@ class EnglishTranslation extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
                     $s = XMLUtils::getMarkups($s);
-                    $s = XMLUtils::createLineBeginNoBreak($s);
                     # no line breaks in text
                     $s = XMLUtils::joinLines($s);
                     # create spaces

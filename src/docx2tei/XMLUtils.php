@@ -32,14 +32,13 @@ class XMLUtils {
         # create spaces
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
 
-        $s = XMLUtils::createDot($s);
-        # ! order is important. never change order #
+
 
         $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createStructuredContent($s);
 
-        # ! order is important. never change order #
+        $s = XMLUtils::createDot($s);
 
         #TODO
 
@@ -64,7 +63,7 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createLineBegin(string $s) {
-        $s = preg_replace('/<p>(\s)*<\/p>/i', '<lb/>', $s);
+        $s = preg_replace('/<p>(.*)<\/p>/i', '$1<lb/>', $s);
         return $s;
     }
 
@@ -157,7 +156,7 @@ class XMLUtils {
     }
 
     public static function createDot(string $s) {
-        $s = preg_replace('/\•/i', '<orig>•</orig>', $s);
+        $s = preg_replace('/\•/U', '<orig>•</orig>', $s);
         return $s;
     }
 
@@ -169,7 +168,7 @@ class XMLUtils {
         #$s = preg_replace('', $s);
 
         $s = preg_replace_callback(
-            '/#\&amp;([@\w]{0,}){([\p{Devanagari}\s]*)}#(\p{Devanagari}*)/iu',
+            '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U',
             function ($matches) {
                 $parts = explode('@', $matches[1]);
                 $place = (count($parts) > 1) ? $parts[1] : "above_the_line";
@@ -377,11 +376,12 @@ class XMLUtils {
      * @param string $s
      * @return string|string[]|null
      */
-    public static function createNotesWithCorrectTags(string $s) {
+    public static function createXMLTagsFromUncompatibleTags(string $s) {
         $s = preg_replace('/&lt;note place="end"&gt;/i', '<note place="end">', $s);
         $s = preg_replace('/&lt;\/note&gt;/i', '</note>', $s);
         $s = preg_replace('/&lt;/i', '<', $s);
         $s = preg_replace('/&gt;/i', '>', $s);
+
         return $s;
     }
 
