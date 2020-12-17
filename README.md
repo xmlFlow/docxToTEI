@@ -15,16 +15,18 @@
 * Content for XML is written in {}. 
 * _Italic_ is supported. **Bold** is not supported. 
  
- ### Testing Round 3, New functions
+ ### Testing Round 3
 
 | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
-| 1 |  ` व- सीis now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written.  | 
-| 2 |  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written, will work for this structure #&{जीवराज}#राज This is a little complex rule, which deviates from our generic rule  of #content#  |
-| 3 | `reverted the default value of the s element` |
-| 4 |  `#cor{पु#del@overstrike{ण्य}#ण्येक}{पुण्य}#` |  Added supporting  recursive pattern matching.  This feature has  to be tested.  |
-| 5 |  ` The attribute values within pagebreaks <pb> are wrongly placed: <pb n="#surface3" facs="2r"/> should be <pb n="2r " facs="#surface3"/>` | Corrected |
-
+| 1 :robot: |  ` व- सीis now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written.  | 
+| 2  :robot:|  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | New specific rule written, will work for this structure #&{जीवराज}#राज This is a little complex rule, which deviates from our generic rule  of #content#  |
+| 3   :robot: | `reverted the default value of the s element` |
+| 4  :robot: |  `#cor{पु#del@overstrike{ण्य}#ण्येक}{पुण्य}#` |  Added supporting  recursive pattern matching.  This feature has  to be tested.  |
+| 5  :robot: |  ` The attribute values within pagebreaks <pb> are wrongly placed: <pb n="#surface3" facs="2r"/> should be <pb n="2r " facs="#surface3"/>` | Corrected |
+| 6  :robot: | `In the heading “Abstract”, one single word in italics was divided into two <foreign>s.guṭha became <foreign>g</foreign><foreign>uṭha</foreign>` | Corrected | 
+| 7   | `When there are multiple names inside a sentence, the first name after the <s> tag do not seem to be processed: <s xml:lang="nep"><w>आगे</w> #pen{<w>रामहरी</w>}# <placeName><w>पाटनका</w></placeName>`||
+| 8   | `#ref@https://web.de{गूठका खेत वढाउदै}` |  Not yet implemented. A proper mechanism to handle urls, without breaking the existing attribute handling|
 
 
 
@@ -104,6 +106,7 @@
  | 23. :heavy_check_mark: | #pb@p:page-number@facs#| | `#pb@#surface1@1r#` | `<pb n="1r" facs="#surface1"/>` | [pb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-pb.html) |
  | 26. :heavy_check_mark: | `.` | | . | `<orig>.</orig>` | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | 24. :heavy_check_mark: | between 2 `ab` s there should be `p` s| | | | |
+ | 24. :heavy_check_mark: | `#ref@URL{}# `| |`#ref{URL}# e.g.  #ref{https://google.com}# #ref@URL{}# --> default attribute: target e.g ref@https://web.de{गूठका खेत वढाउदै}` | | |
  
  
  

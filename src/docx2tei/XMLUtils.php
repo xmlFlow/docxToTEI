@@ -36,6 +36,7 @@ class XMLUtils {
         # ! order is important. never change order #
 
         $s = XMLUtils::createAddElement($s);
+        $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createStructuredContent($s);
 
         # ! order is important. never change order #
@@ -177,10 +178,6 @@ class XMLUtils {
             },
             $s
         );
-        $place = "";
-        $hand = "";
-
-
         return $s;
 
     }
@@ -238,7 +235,7 @@ class XMLUtils {
                                 $attr->value = $extraAttrs[1];
                                 $tagElem->appendChild($attr);
                             } else {
-                                self::print_error('Attribute with no = sign ' . $prefix[$i]);
+                                self::print_error('[Error] Attribute with no = sign ' . $prefix[$i]);
                             }
                         }
                         if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
@@ -311,6 +308,13 @@ class XMLUtils {
                 "replace" => "del",
                 "attributes" => array(
                     array("tag" => "rend", "default" => "crossed_out"),
+                )
+            ),
+            array(
+                "original" => "ref",
+                "replace" => "ref",
+                "attributes" => array(
+                    array("tag" => "target"),
                 )
             ),
             array(

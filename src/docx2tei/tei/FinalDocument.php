@@ -32,21 +32,31 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createComplexSentence($s);
         # correct after creating tags
         #   these are final operations in ORDER
-        $s = XMLUtils::createNotesWithCorrectTags($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
+        $s = XMLUtils::createNotesWithCorrectTags($s);
         $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
         $s = XMLUtils::createStructuredContent($s, $pattern);
 
 
         ## Error messages
-        preg_match_all('/\w+\s+{.*}|\s+\w+\{.*}/', $s, $matches);
-        if (count($matches[0]) > 0) {
-            foreach ($matches as $match) {
-                XMLUtils::print_error("[Error] Formatting error: please correct " . $match[0]);
-                XMLUtils::print_error("[Error] Possible reasons: Unknown Tag '#tag{}#'. Empty spaces  '' between tags. Hashtag '#' missing, Brackets '{}' missing ", true);
-            }
-        }
+        preg_replace_callback_array(
+            [
+                '/\w+\s+{.*}|\s+\w+\{.*}/' => function ($match) {
+                    XMLUtils::print_error("[Error] Formatting error: please correct " . $match[0]);
+                },
+                '/#[\w|?|]+(@(\w)*)*\{(<.*>(.)*<\/w>)\s\V*/U' => function ($match) {
+                    XMLUtils::print_error("[Error] Formatting error of  following places: missing ending # in  " . $match[0]);
+                },
+                '/[\w|?|]+(@(\w)*)*\{(<.*>(.)*<\/w>)\s\V*/U' => function ($match) {
+                    XMLUtils::print_error("[Error] Formatting error of  following places: missing ending # in  " . $match[0]);
+                }
+            ],
+            $s
+        );
+
+
+
 // Create new Dom
         $newDom = new DOMDocument();
         XMLUtils::printPHPErrors();

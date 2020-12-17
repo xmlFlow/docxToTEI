@@ -83,12 +83,12 @@
         </encodingDesc>
         <profileDesc>
             <creation>
-                <date>2020-12-16</date>
+                <date>2020-12-17</date>
             </creation>
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change type="internal" when="2020-12-16" who="#AUTO">Automatically converted from docx to TEI-XML
+                <change type="internal" when="2020-12-17" who="#AUTO">Automatically converted from docx to TEI-XML
                 </change>
             </listChange>
         </revisionDesc>
@@ -152,15 +152,6 @@
                 <p/>
                 <ab type="maintext" corresp="#main_text" n="1">
                     <lb n="1"/>
-                    <choice>
-                        <sic>
-                            <w>पु</w>
-                            <del rend="overstrike">
-                                <w>ण्य</w>
-                            </del>
-                        </sic>
-                    </choice>
-                    <w>ण्</w>
                     <s xml:lang="san">
                         <w>स्वस्ति</w>
                     </s>
@@ -168,11 +159,6 @@
                         <w>श्रीमन्महाराजाधिराजकस्य</w>
                         <w>रुक्का</w>
                     </s>
-                    <w><add place="above_the_line" hand="first">सल्याना</add>का
-                    </w>
-                    <w>व<lb break="no" n="2"/>सी
-                    </w>
-                    <lb n="3"/>
                     <s>
                         <w>आगे</w>
                         <persName>
@@ -197,7 +183,7 @@
                     </s>
                     <s>
                         <w>तेरा</w>
-                        <w>पुरू<lb break="no" n="4"/>षा
+                        <w>पुरू<lb break="no" n="2"/>षा
                         </w>
                         <persName>
                             <w>जीवराज</w>
@@ -211,7 +197,7 @@
                         <w>चढाउंदा</w>
                         <w>गूठ</w>
                         <w>राख्याको</w>
-                        <w>का<lb break="no" n="5"/>म
+                        <w>का<lb break="no" n="3"/>म
                         </w>
                         <w>चलाई</w>
                         <w>वाकि</w>
@@ -277,7 +263,7 @@
                             </cell>
                         </row>
                     </table>
-                    <lb n="6"/>
+                    <lb n="4"/>
                     <s xml:lang="hin">
                         <w>मेरो</w>
                         <gap extent="5 characters" agent="breakage" reason="illegible"/>
@@ -374,7 +360,7 @@
                         <orig>•</orig>
                         <w>होइन</w>
                     </s>
-                    <lb n="7"/>
+                    <lb n="5"/>
                 </ab>
                 <p/>
                 <pb n="1v" facs="#surface2"/>
@@ -387,8 +373,10 @@
                     <w>लिखा</w>
                     <w>पत्रम्</w>
                     <w>मार्फत्</w>
-                    #pen{<w>रणबहादुर</w>
-                    <w>साह</w>}
+                    <persName>
+                        <w>रणबहादुर</w>
+                        <w>साह</w>
+                    </persName>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin" n="1">
@@ -417,8 +405,8 @@
                     <w>लिखा</w>
                     <w>पत्रम्</w>
                     <w>मार्फत्</w>
-                    #pen{<w>रणबहादुर</w>
-                    <w>साह</w>}
+                    pen{<w>रणबहादुर</w>
+                    <w>साह</w>}#
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin" n="1">
