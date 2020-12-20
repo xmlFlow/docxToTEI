@@ -22,20 +22,16 @@ class XMLUtils {
         # block
         $s = XMLUtils::createLBBreakForMinus($s);
 
-        # Block
-        # no line breaks in text
-        $s = XMLUtils::joinLines($s);
+
         # create gaps of illegible and lost characters
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
         # create spaces
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
-
-
+        # 2 times
         $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createStructuredContent($s);
-
         $s = XMLUtils::createDot($s);
 
         #TODO
@@ -58,8 +54,13 @@ class XMLUtils {
                 return '<lb break="no"/>' . $match[1];
             },
             '/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U' => function ($match) {
-                return '<lb/>' . $match[1];
-            }],
+                if (substr_count($match[0], '<lb break="no"/>') >0) {
+                 return $match[1];
+                }
+                return  $match[1].'<lb/>';
+            },
+
+           ],
             $s
         );
         return $s;

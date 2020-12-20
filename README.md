@@ -31,6 +31,7 @@
 | 10. :robot: | ` <date>yyyy</date>` | Added to header license|
 | 11. :robot: | ` <p>License text</p>` | Added to header license|
 | 12. :robot: | ` <ab n="1">` | anonymous block auto-numbering removed|
+| 13. :robot: | `<lb> is  found in all <ab>s now. Good! But still there is no <lb>`| newly implemented |
 
 
   

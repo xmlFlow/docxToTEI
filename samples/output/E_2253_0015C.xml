@@ -128,37 +128,36 @@
     </facsimile>
     <text>
         <body>
-            <div xml:id="abs" type="abstract" xml:lang="eng"><lb/>The executive order of presumably King Gīrvāṇa, of
-                which this is a copy, “empowers” Rāmananda Bā̃ḍā of Patan to exercise overseership of the <foreign>
-                    guṭhī
+            <div xml:id="abs" type="abstract" xml:lang="eng">The executive order of presumably King Gīrvāṇa, of which
+                this is a copy, “empowers” Rāmananda Bā̃ḍā of Patan to exercise overseership of the <foreign>guṭhī
                 </foreign> called Luthāma Guṭha and its endowments, consisting of sixty-nine <foreign>ropanīs</foreign> of
                 land.
+                <lb/>
             </div>
             <div xml:id="ed" type="edition" xml:lang="nep-san">
                 <pb n="1r-part1" facs="#surface1"/>
                 <ab type="invocatio" corresp="#invocatio">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <supplied reason="lost">
                         <w>श्रीमत्सेंद्र</w>
                         <w>१</w>
                     </supplied>
+                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <del rend="crossed_out">
                         <w>स्वस्तिश्री</w>
                     </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
                     <w>लिखा</w>
                     <w>पत्रम्</w>
+                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <s xml:lang="san">
                         <w>स्वस्ति</w>
                     </s>
@@ -168,7 +167,7 @@
                     </s>
                     <s>
                         <w>आगे</w>
-                        <lb n="3"/>
+                        <lb n="2"/>
                         <w>रथमहा</w>
                         <w>सुनको</w>
                         <w>विमान</w>
@@ -179,7 +178,7 @@
                         <placeName>
                             <w>पाटनका</w>
                         </placeName>
-                        <lb n="4"/>
+                        <lb n="3"/>
                         <placeName>
                             <w>ओकु</w>
                             <w>वाहाल</w>
@@ -188,7 +187,7 @@
                         <placeName>
                             <w>महावुद्ध</w>
                         </placeName>
-                        <lb n="5"/>
+                        <lb n="4"/>
                         <w>घरको</w>
                         <persName>
                             <w>रामानंद</w>
@@ -197,10 +196,8 @@
                     </s>
                     <s>
                         <w>तेरा</w>
-                        <w>पुरू</w>
-                        <lb break="no" n="6"/>
-                        <lb n="7"/>
-                        <w>षा</w>
+                        <w>पुरू<lb break="no" n="5"/>षा
+                        </w>
                         <persName>
                             <w>जीवराज</w>
                             <w>वांडाले</w>
@@ -213,10 +210,8 @@
                         <w>चढाउंदा</w>
                         <w>गूठ</w>
                         <w>राख्याको</w>
-                        <w>का</w>
-                        <lb break="no" n="8"/>
-                        <lb n="9"/>
-                        <w>म</w>
+                        <w>का<lb break="no" n="6"/>म
+                        </w>
                         <w>चलाई</w>
                         <w>वाकि</w>
                         <w>रह्याका</w>
@@ -230,61 +225,57 @@
                         </surplus>
                         <w>राख्याका</w>
                     </s>
+                    <lb n="7"/>
                     <table>
                         <row>
                             <cell>
-                                <lb/>
                                 <placeName>
                                     <w>ङखु</w>
                                 </placeName>
-                                <w>रोपनी</w> --- <w>६</w>
+                                <w>रोपनी</w> ---
+                                <w>६</w>
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <placeName>
                                     <w>भिलुपा</w>
                                 </placeName>
-                                <w>रोपनी</w> --- <w>६</w>
+                                <w>रोपनी</w> ---
+                                <w>६</w>
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <persName>
                                     <w>ङषुवंग</w>
                                 </persName>
-                                <w>रोपनी</w> --- <w>१</w>
+                                <w>रोपनी</w> ---
+                                <w>१</w>
+                                <lb/>
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <lb/>
                                 <w>पाको</w>
                                 <w>रोपनी</w> --- <w>६</w>
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <w>सिलापाको</w>
                                 <w>रोपनी</w> --- <w>६</w>।
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <w>रानिवु</w>
                                 <w>रोपनी</w> --- <w>१</w>।।।
+                                <lb/>
                             </cell>
                         </row>
                         <row>
-                            <cell><lb/>ka
+                            <cell>ka
+                                <lb/>
                             </cell>
-                            <cell><lb/>ka
-                            </cell>
-                            <cell>
-                                <p/>
-                            </cell>
-                        </row>
-                        <row>
-                            <cell>
-                                <p/>
-                            </cell>
-                            <cell><lb/>ka
+                            <cell>ka
+                                <lb/>
                             </cell>
                             <cell>
                                 <p/>
@@ -294,14 +285,26 @@
                             <cell>
                                 <p/>
                             </cell>
-                            <cell><lb/>ka
+                            <cell>ka
+                                <lb/>
                             </cell>
-                            <cell><lb/>ka
+                            <cell>
+                                <p/>
+                            </cell>
+                        </row>
+                        <row>
+                            <cell>
+                                <p/>
+                            </cell>
+                            <cell>ka
+                                <lb/>
+                            </cell>
+                            <cell>ka
+                                <lb/>
                             </cell>
                         </row>
                     </table>
                     <p/>
-                    <lb n="10"/>
                     <s xml:lang="hin">
                         <w>मेरो</w>
                         <gap extent="5 characters" agent="breakage" reason="illegible"/>
@@ -314,7 +317,7 @@
                         <w>होइन</w>
                     </s>
                     <space quantity="5" unit="lines"/>
-                    <lb n="11"/>
+                    <lb n="8"/>
                     <s>
                         <w>मेरो</w>
                         <w>
@@ -325,7 +328,7 @@
                             <add place="above_the_line" hand="first">हो</add>
                         </w>
                         ,
-                        <lb n="12"/>
+                        <lb n="9"/>
                         <w>सेत्ये</w>
                         <unclear cert="low">
                             <w>होइन</w>
@@ -348,7 +351,7 @@
                                 <w>नाम</w>
                             </corr>
                         </choice>
-                        <lb n="13"/>
+                        <lb n="10"/>
                         <w>सेतो</w>
                         <orig>|||||</orig>
                         <w>होइन</w>
@@ -365,7 +368,7 @@
                         </geogName>
                         <w>होइन</w>
                     </s>
-                    <lb n="14"/>
+                    <lb n="11"/>
                     <s>
                         <w>मेरो</w>
                         <w>नाम</w>
@@ -381,7 +384,7 @@
                     <s>
                         <w>मेरो</w>
                         <w>नाम</w>
-                        <lb n="15"/>
+                        <lb n="12"/>
                         <w>सेतो</w>
                         <w>होइन</w>
                     </s>
@@ -395,7 +398,7 @@
                         <w>मेरो</w>
                         <w>नाम</w>
                         <w>सेतो</w>
-                        <lb n="16"/>
+                        <lb n="13"/>
                         <w>होइन</w>
                     </s>
                     <s>@I <w>मेरो</w>
@@ -404,37 +407,37 @@
                         <orig>•</orig>
                         <w>होइन</w>
                     </s>
+                    <lb n="14"/>
                     <p/>
                 </ab>
                 <p/>
                 <pb n="1r-part2" facs="#surface2"/>
                 <ab type="maintext1" corresp="#main_text">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <s>@F <w>तर</w>
                         <w>काले</w>
                         <w>हो</w>
                     </s>
+                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="marphat" corresp="#marphat">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <del rend="crossed_out">
                         <w>स्वस्तिश्री</w>
                     </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
                     <w>लिखा</w>
                     <w>पत्रम्</w>
-                    <lb n="3"/>
+                    <lb n="2"/>
                     <w>मार्फत्</w>
                     #pen{<w>रणबहादुर</w>
                     <w>साह</w>}
+                    <lb n="3"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <w>स्ही</w>
                     <w>सदर</w>
                     <persName>
@@ -446,28 +449,28 @@
                     <geogName>
                         <w>फुल्चोकी</w>
                     </geogName>
+                    <lb n="2"/>
                     <p/>
                 </ab>
                 <p/>
                 <pb n="1v" facs="#surface3"/>
                 <ab type="marphat" corresp="#marphat">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <del rend="crossed_out">
                         <w>स्वस्तिश्री</w>
                     </del>
                     <gap extent="15 characters" agent="ink" reason="lost"/>
                     <w>लिखा</w>
                     <w>पत्रम्</w>
-                    <lb n="3"/>
+                    <lb n="2"/>
                     <w>मार्फत्</w>
                     #pen{<w>रणबहादुर</w>
                     <w>साह</w>}
+                    <lb n="3"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
                     <lb n="1"/>
-                    <lb n="2"/>
                     <w>स्ही</w>
                     <w>सदर</w>
                     <persName>
@@ -479,24 +482,30 @@
                     <geogName>
                         <w>फुल्चोकी</w>
                     </geogName>
+                    <lb n="2"/>
                     <p/>
                 </ab>
                 <p/>
             </div>
             <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
-                <sec id="sec-5_1"><lb/>Śrī Matsyendra[nātha] - 1<lb/>...
+                <sec id="sec-5_1">Śrī Matsyendra[nātha] - 1
+                    <lb/>
+                    ...
                     <note place="end">The text written in the right margin has been blacked out with ink, written
                         in <placeName>Kathmandu</placeName>.
                     </note>
-                    written letter.<lb/>Hail! A rukkā of the venerable supreme king of great kings
+                    written letter.
+                    <lb/>
+                    Hail! A rukkā of the venerable supreme king of great kings
                     <note place="end">The name of the king is not mentioned here, <foreign>but it is evident from the
                         date of the document that
                     </foreign> it was <persName>Gīrvāṇayuddha Vikrama Śāha</persName> (r. 1799-1816). He ruled under the
                         regency of Queen <persName>Lalita Tripura Sundarī</persName>.
                     </note>
-                    <lb/>Āge: To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at
-                    Oku Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your ancestor
-                    Jīvarāja Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e.,
+                    <lb/>
+                    Āge: To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at Oku
+                    Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your ancestor Jīvarāja
+                    Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e.,
                     Matsyendranātha) were added further rice field plots with money left over after it completed its
                     tasks. It is learned that you (i.e., the <foreign>guṭha</foreign> members) have been tending to
                     those plots as well. It is also learned that up to the present you have been renovating the <foreign>
@@ -512,99 +521,103 @@
                         vimāna</foreign>] whenever it was damaged, even after the <foreign>ijārā</foreign> [obligations
                     on the part of the <foreign>guṭha</foreign>] had been forgiven, and that you were unable to make use
                     of the <foreign>guṭha</foreign> established by your ancestors.
+                    <lb/>
                     <table>
                         <row>
                             <cell>
-                                <lb/>
                                 <placeName>Nyakhu</placeName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <placeName>Bhilupa</placeName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <persName>banga</persName>
                                 <foreign>ropa</foreign> --- १
+                                <lb/>
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <lb/>
                                 <persName>Pako</persName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <placeName>Silapa</placeName>
+                                <lb/>
                             </cell>
                             <cell>
+                                <foreign>Ropani</foreign> – 6
                                 <lb/>
-                                <foreign>Ropani</foreign>
-                                – 6
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <lb/>
                                 <placeName>Nyakhu</placeName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <placeName>Bhilupa</placeName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <persName>banga</persName>
                                 <foreign>ropa</foreign> --- १
+                                <lb/>
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <lb/>
                                 <persName>Pako</persName>
                                 <foreign>ropani</foreign> --- ६
+                                <lb/>
                             </cell>
                             <cell>
-                                <lb/>
                                 <placeName>Silapa</placeName>
+                                <lb/>
                             </cell>
                             <cell>
+                                <foreign>Ropani</foreign> – 6
                                 <lb/>
-                                <foreign>Ropani</foreign>
-                                – 6
                             </cell>
                         </row>
                         <row>
-                            <cell>
+                            <cell>पाको रोपनी --- ६
                                 <lb/>
-                                पाको रोपनी --- ६
                             </cell>
-                            <cell><lb/>सिलापाको रोपनी --- ६।
+                            <cell>सिलापाको रोपनी --- ६।
+                                <lb/>
                             </cell>
-                            <cell><lb/>रानिवु रोपनी --- १।।।
+                            <cell>रानिवु रोपनी --- १।।।
+                                <lb/>
                             </cell>
                         </row>
                     </table>
                     <p/>
                 </sec>
-                <sec id="sec-5_2"><lb/>To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha
+                <sec id="sec-5_2">To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha
                 </placeName> at Oku Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha 3 established by your
                     ancestor Jīvarāja Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1
-                    (i.e., Matsyendranātha) were added.<lb/>Further rice field plots with money left over after it
-                    completed its tasks (see <ref target="">https://google.com</ref>).
+                    (i.e., Matsyendranātha) were added.
+                    <lb/>
+                    Further rice field plots with money left over after it completed its tasks (see <ref target="">
+                        https://google.com</ref>).
+                    <lb/>
                     <p/>
                 </sec>
-                <sec id="sec-5_3"><lb/>To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha
+                <sec id="sec-5_3">To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha
                 </placeName> at Oku Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha (see
                     #ref@https:google.com{Google}#).
+                    <lb/>
                 </sec>
             </div>
-            <div xml:id="commentary" type="commentary" xml:lang="eng"><lb/>This document is a copy of an executive order
+            <div xml:id="commentary" type="commentary" xml:lang="eng">This document is a copy of an executive order
                 seemingly issued by King <persName>Gīrvāṇayuddha</persName> to Rāmānanda Bā̃ḍā of <placeName>Oku
                     Bāhāla
                 </placeName> in <geogName>Patan</geogName>. It grants Rāmānanda and his fellow <foreign>guṭha</foreign> members
@@ -643,6 +656,7 @@
                     <foreign>footnote</foreign>
                     <foreign>.</foreign>
                 </note>
+                <lb/>
             </div>
         </body>
     </text>
