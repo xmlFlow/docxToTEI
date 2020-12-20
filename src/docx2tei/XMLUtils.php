@@ -413,15 +413,12 @@ class XMLUtils {
         return $dom;
     }
 
-    public static function enumerateLineBegins($dom) {
+    public static function enumerateLBs($dom) {
         $xpath = new DOMXPath($dom);
         $lbCount = 1;
         $abCount = 1;
         $abs = $xpath->query('//ab');
         foreach ($abs as $ab) {
-            $abAttr = $dom->createAttribute("n");
-            $abAttr->value = $abCount;
-            $ab->appendChild($abAttr);
             foreach ($xpath->query('lb', $ab) as $ln) {
                 $attr = $dom->createAttribute("n");
                 $attr->value = $lbCount;

@@ -22,7 +22,7 @@ class FinalDocument extends DOMDocument {
 
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
         XMLUtils::addChildElement($document, "ab", "lb");
-        XMLUtils::enumerateLineBegins($document);
+        XMLUtils::enumerateLBs($document);
         // String operations
         $s = $document->saveXML();
 
