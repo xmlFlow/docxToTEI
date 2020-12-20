@@ -54,6 +54,8 @@ class Edition extends DOMDocument {
             if ($contents) {
                 foreach ($contents as $content) {
                     $s = $content->ownerDocument->saveXML($content);
+                    $s = XMLUtils::createLBBreakForMinus($s);
+
                     $s = XMLUtils::getMarkups($s);
                     $s = XMLUtils::createWords($s);
 

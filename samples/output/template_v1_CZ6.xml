@@ -105,8 +105,8 @@
     </facsimile>
     <text>
         <body>
-            <div xml:id="abs" type="abstract" xml:lang="eng">This is a test file
-                <lb/>
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <p>This is a test file</p>
             </div>
             <div xml:id="ed" type="edition" xml:lang="nep">
                 <pb n="1r" facs="#surface1"/>
@@ -246,33 +246,41 @@
                 </ab>
                 <p/>
             </div>
-            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">no. 94
-                <note place="end">This archival note indicates the document number in Volume 1 of copies of documents
-                    sent by the Kausī Tosākhānā to the Guṭhī Tahabila Phā̃ṭa under Śrī 5 Sarkāra and now kept in the
-                    Guṭhī Lagata and Tahabīla office in Bhadrakali (cf. note 1 in K_0356_0032).
-                </note>
-                <lb/>[seal]<lb/>The order (<foreign>pramāṃnagī</foreign> for <foreign>pramāṅgī</foreign>) was copied
-                during the tenure of General
-                <persName>Syāma Bahādura Kũvara Rāṇājī</persName>
-                <lb/>He who watched, signature: Nau[sindā]
-                <persName>Hari</persName>
-                <lb/>To test a
-                <placeName>place name</placeName>
-                <lb/>
+            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+                <p>no. 94
+                    <note place="end">This archival note indicates the document number in Volume 1 of copies of
+                        documents sent by the Kausī Tosākhānā to the Guṭhī Tahabila Phā̃ṭa under Śrī 5 Sarkāra and now
+                        kept in the Guṭhī Lagata and Tahabīla office in Bhadrakali (cf. note 1 in K_0356_0032).
+                    </note>
+                </p>
+                <p>[seal]</p>
+                <p>The order (<foreign>pramāṃnagī</foreign> for <foreign>pramāṅgī</foreign>) was copied during the
+                    tenure of General
+                    <persName>Syāma Bahādura Kũvara Rāṇājī</persName>
+                </p>
+                <p>He who watched, signature: Nau[sindā]
+                    <persName>Hari</persName>
+                </p>
+                <p>To test a
+                    <placeName>place name</placeName>
+                </p>
             </div>
-            <div xml:id="commentary" type="commentary" xml:lang="eng">Jagadīśvaranātha, selected by his guru,
-                Mahanta <persName>Lokanātha</persName>, as successor to Bhagavantanātha's throne, received his first
-                confirmation of the abbotship in VS 1904 (see K_0468_0062), but as we know from another document in the
-                same volume of copied material (see note 1)—a <foreign>mohara</foreign> that was annulled by the present
-                document—he was dismissed by King Surendra in VS 1909 for keeping a woman in the maṭha (see
-                K_0356_0032). Jagadīśvaranātha successfully challenged his replacement by Santoṣanātha, so much so that
-                on the very day of his reappointment as mahanta the prime minister wrote to officials in Pyuthana and
-                Salyan ordering them to respect certain privileges enjoyed by maṭha that seemingly had been contested in
-                the past (Naraharinātha VS 2022: 464). Jagadīśvaranātha stayed in office—if not without further
-                controversies (see Naraharinātha VS 2022: 464-465)—until he died and the abbotship passed on to his
-                disciple Khīmānātha in VS 1934 (cf. K_0097_0040).<lb/>To test a
-                <placeName>place name</placeName>
-                <lb/>
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p>Jagadīśvaranātha, selected by his guru, Mahanta <persName>Lokanātha</persName>, as successor to
+                    Bhagavantanātha's throne, received his first confirmation of the abbotship in VS 1904 (see
+                    K_0468_0062), but as we know from another document in the same volume of copied material (see note
+                    1)—a <foreign>mohara</foreign> that was annulled by the present document—he was dismissed by King
+                    Surendra in VS 1909 for keeping a woman in the maṭha (see K_0356_0032). Jagadīśvaranātha
+                    successfully challenged his replacement by Santoṣanātha, so much so that on the very day of his
+                    reappointment as mahanta the prime minister wrote to officials in Pyuthana and Salyan ordering them
+                    to respect certain privileges enjoyed by maṭha that seemingly had been contested in the past
+                    (Naraharinātha VS 2022: 464). Jagadīśvaranātha stayed in office—if not without further controversies
+                    (see Naraharinātha VS 2022: 464-465)—until he died and the abbotship passed on to his disciple
+                    Khīmānātha in VS 1934 (cf. K_0097_0040).
+                </p>
+                <p>To test a
+                    <placeName>place name</placeName>
+                </p>
             </div>
         </body>
     </text>

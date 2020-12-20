@@ -30,8 +30,20 @@
 | 9. :robot: | `[Field name in word template:] Copyright statement: --> for the <p></p> under  <availability status="restricted">.` | added |
 | 10. :robot: | ` <date>yyyy</date>` | Added to header license|
 | 11. :robot: | ` <p>License text</p>` | Added to header license|
-| 12. :robot: | ` <ab n="1">` | anonymous block auto-numbering removed|
-| 13. :robot: | `<lb> is  found in all <ab>s now. Good! But still there is no <lb>`| newly implemented |
+| 12. :robot: | `<lb> is  found in all <ab>s now. Good! But still there is no <lb>`| newly implemented |
+| 13. :robot: | `<ab>s now have an additional attribute @n. It has to be removed.`| newly implemented |
+| 14. :robot: | `In the text blocks with multiple lines, Linebreaks <lb @break=”no”> are correctly applied where there are “-“ at the end of the. However, “normal” <lb> Linebreaks are missing now.`| Added |
+
+
+
+Pagebreaks <pb> in the translation section are not processed. Here we have to note one thing: the <pb> in translation should be different than in the edition text. Example below:
+
+
+        In Edition:  pb@#surface1@1r-part1 
+        In Translation: pb@1r-part1  (@n for surface is not needed in translation)
+
+    For the <s> and <w> elements, @part is not yet applied. The values of @part would be “I”, “M”, “F” (I am not sure if I applied it correctly. I did “#SB@I”)
+    There appears a new element <sec> wrapping the paragraphs of the Translation div. Please remove them
 
 
   

@@ -19,8 +19,7 @@ class XMLUtils {
     public static function getMarkups(string $s) {
         $s = self::removeZWNJ($s);
 
-        # block
-        $s = XMLUtils::createLBBreakForMinus($s);
+
 
 
         # create gaps of illegible and lost characters
