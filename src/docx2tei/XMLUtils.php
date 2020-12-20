@@ -21,7 +21,6 @@ class XMLUtils {
 
         # block
         $s = XMLUtils::createLBBreakForMinus($s);
-        $s = XMLUtils::createLineBegin($s);
 
         # Block
         # no line breaks in text
@@ -31,7 +30,6 @@ class XMLUtils {
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
         # create spaces
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
-
 
 
         $s = XMLUtils::createAddElement($s);
@@ -53,31 +51,17 @@ class XMLUtils {
         return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 
-//    public static function createLBBreakForMinus(string $s) {
-//        $s = preg_replace('/-\s*(<\/p>|#SE)/U', '<lb break="no"/>$1', $s);
-//        return $s;
-//    }
 
     public static function createLBBreakForMinus(string $s) {
         $s = preg_replace_callback_array(
-            [
-                '/-\s*(<\/p>|#SE)/U' => function ($match) {
-
-                    return '<lb break="no"/>'.$match[1] ;
-
-                }
-
-            ],
+            ['/-\s*(<\/p>|#SE)/U' => function ($match) {
+                return '<lb break="no"/>' . $match[1];
+            },
+            '/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U' => function ($match) {
+                return '<lb/>' . $match[1];
+            }],
             $s
         );
-        return $s;
-    }
-    /**
-     * @param $s
-     * @return string|string[]|null
-     */
-    public static function createLineBegin(string $s) {
-        $s = preg_replace('/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U', '$1<lb/>', $s);
         return $s;
     }
 
@@ -162,11 +146,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createDot(string $s) {
-        $s = preg_replace('/\•/U', '<orig>•</orig>', $s);
-        return $s;
-    }
-
     /**
      * @param string $s
      * @return string
@@ -177,9 +156,9 @@ class XMLUtils {
             '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U',
             function ($matches) {
                 $parts = explode('@', $matches[1]);
-                $place = (count($parts) > 1 && strlen($parts[1])>0) ? $parts[1] : "above_the_line";
-                $hand = (count($parts) > 2 &&  strlen($parts[2])>0) ? $parts[2] : "first";
-                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n","",$matches[2]) . '</add>' . $matches[3] . '</w>';
+                $place = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "above_the_line";
+                $hand = (count($parts) > 2 && strlen($parts[2]) > 0) ? $parts[2] : "first";
+                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n", "", $matches[2]) . '</add>' . $matches[3] . '</w>';
             },
             $s
         );
@@ -258,6 +237,11 @@ class XMLUtils {
                 }
             }
         }
+        return $s;
+    }
+
+    public static function createDot(string $s) {
+        $s = preg_replace('/\•/U', '<orig>•</orig>', $s);
         return $s;
     }
 
