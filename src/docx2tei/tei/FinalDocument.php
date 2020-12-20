@@ -13,7 +13,7 @@ class FinalDocument extends DOMDocument {
 
         XMLUtils::removeTitleInBody($document, "title");
         //XMLUtils::removeElementsInTag($document, '//ab/p');
-        XMLUtils::removeElementsInTag($document, '//add/w');
+        //XMLUtils::removeElementsInTag($document, '//add/w');
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
@@ -21,6 +21,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
         XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::enumerateLBs($document);
+        XMLUtils::removeTags($document, "//add/w");
 
         // String operations
 
@@ -29,7 +30,6 @@ class FinalDocument extends DOMDocument {
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
-        $s = XMLUtils::handleSurroundingAdd($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
 
         ## Error messages
@@ -52,7 +52,7 @@ class FinalDocument extends DOMDocument {
 
 // Create new Dom
         XMLUtils::printPHPErrors();
-        XMLUtils::removeTags($document, "//add/w");
+
 
         $newDom = new DOMDocument();
         $newDom->loadXML($s);

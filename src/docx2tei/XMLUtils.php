@@ -18,12 +18,12 @@ class XMLUtils {
      */
     public static function getMarkups(string $s) {
         $s = self::removeZWNJ($s);
-        # ! order is important. never change order #
-        $s = XMLUtils::createReplaceLastMinus($s);
-        # ! order is important. never change order #
 
+        # block
+        $s = XMLUtils::createLBBreakForMinus($s);
         $s = XMLUtils::createLineBegin($s);
-        $s = XMLUtils::createLineBeginNoBreak($s);
+
+        # Block
         # no line breaks in text
         $s = XMLUtils::joinLines($s);
         # create gaps of illegible and lost characters
@@ -53,28 +53,35 @@ class XMLUtils {
         return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 
-    public static function createReplaceLastMinus(string $s) {
-        $s = preg_replace('/-\s*(<\/p>|#SE)/', '<lb break="no"/>$1', $s);
+//    public static function createLBBreakForMinus(string $s) {
+//        $s = preg_replace('/-\s*(<\/p>|#SE)/U', '<lb break="no"/>$1', $s);
+//        return $s;
+//    }
+
+    public static function createLBBreakForMinus(string $s) {
+        $s = preg_replace_callback_array(
+            [
+                '/-\s*(<\/p>|#SE)/U' => function ($match) {
+
+                    return '<lb break="no"/>'.$match[1] ;
+
+                }
+
+            ],
+            $s
+        );
         return $s;
     }
-
     /**
      * @param $s
      * @return string|string[]|null
      */
     public static function createLineBegin(string $s) {
-        $s = preg_replace('/<p>(.*)(?!-)<\/p>/i', '$1<lb/>', $s);
+        $s = preg_replace('/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U', '$1<lb/>', $s);
         return $s;
     }
 
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    public static function createLineBeginNoBreak(string $s) {
-        $s = preg_replace('/<p>.*[-]<\/p>/i', '<lb break="no"/>', $s);
-        return $s;
-    }
+
 
     public static function joinLines(string $s) {
         $s = preg_replace('/\r|\n/', '', $s);
@@ -493,11 +500,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function handleSurroundingAdd(string $s) {
-        //
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
-        return $s;
-    }
 
     public static function printPHPErrors(): void {
         $errorTypes = E_ALL;
