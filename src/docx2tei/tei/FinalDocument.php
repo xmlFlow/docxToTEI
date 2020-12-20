@@ -12,7 +12,7 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
 
         XMLUtils::removeTitleInBody($document, "title");
-        XMLUtils::removeElementsInTag($document, '//ab/p');
+        //XMLUtils::removeElementsInTag($document, '//ab/p');
         XMLUtils::removeElementsInTag($document, '//add/w');
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');

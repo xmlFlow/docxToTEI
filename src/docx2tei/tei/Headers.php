@@ -161,8 +161,11 @@ class Headers extends DOMDocument {
         $licence = $this->createElement("licence", "Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License");
         $targetAttrib = $this->createAttribute('target');
         $targetAttrib->value = 'http://creativecommons.org/licenses/by-sa/4.0/';
+        $licence->appendChild($targetAttrib);
         $availability->appendChild($licence);
-        $p = $this->createElement("p", "Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).");
+        $date = $this->createElement("date",$this->currentDate);
+        $availability->appendChild($date);
+        $p = $this->createElement("p", $this->headers["h20"] ?? "");
         $availability->appendChild($p);
         $pubStmt->appendChild($availability);
     }

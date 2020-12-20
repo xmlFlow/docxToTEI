@@ -63,7 +63,7 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createLineBegin(string $s) {
-        $s = preg_replace('/<p>(.*)<\/p>/i', '$1<lb/>', $s);
+        $s = preg_replace('/<p>(.*)(?!-)<\/p>/i', '$1<lb/>', $s);
         return $s;
     }
 
@@ -72,7 +72,7 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createLineBeginNoBreak(string $s) {
-        $s = preg_replace('/<p>(\s)*[-]+(\s)*<\/p>/i', '<lb break="no"/>', $s);
+        $s = preg_replace('/<p>.*[-]<\/p>/i', '<lb break="no"/>', $s);
         return $s;
     }
 
@@ -170,9 +170,9 @@ class XMLUtils {
             '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U',
             function ($matches) {
                 $parts = explode('@', $matches[1]);
-                $place = (count($parts) > 1) ? $parts[1] : "above_the_line";
-                $hand = (count($parts) > 2) ? $parts[2] : "first";
-                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . $matches[2] . '</add>' . $matches[3] . '</w>';
+                $place = (count($parts) > 1 && strlen($parts[1])>0) ? $parts[1] : "above_the_line";
+                $hand = (count($parts) > 2 &&  strlen($parts[2])>0) ? $parts[2] : "first";
+                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n","",$matches[2]) . '</add>' . $matches[3] . '</w>';
             },
             $s
         );

@@ -38,11 +38,13 @@ class TEIDocument extends DOMDocument {
 # Final  processing
         $finalDom = new FinalDocument($this);
         $this->newDom = $finalDom->getDocumentElement();
+
         $x = 1;
     }
 
     function getHeaders(): void {
         $metadataFields = $this->xpath->query('//root/text/sec/title[text()="' . $this->cfg->sections->metadata . '"]/parent::sec/table-wrap/table/row');
+        $definedHeaders = [];
         foreach ($metadataFields as $metadata) {
             $cells = $metadata->getElementsByTagName("cell");
             if (count($cells) == 2) {
@@ -52,13 +54,18 @@ class TEIDocument extends DOMDocument {
                 $key = array_search($headerName, array_values($config_headers));
                 if ($key >= 0) {
                     $this->headers[array_keys($config_headers)[$key]] = trim($value);
+                    $definedHeaders [] = $headerName;
                 } else {
                     XMLUtils::print_error("[Error] Not allowed header in the metadata: " . $headerName);
                 }
+
             } else {
                 XMLUtils::print_error("Metadata table should be 2 columns wide");
             }
         }
+        $unfefined = array_diff(array_values($config_headers) , $definedHeaders);
+        $x=1;
+
     }
 
     function setStructure() {
@@ -131,8 +138,17 @@ class TEIDocument extends DOMDocument {
     }
 
     public function saveToFile(string $pathToFile) {
-        $content = $this->newDom->saveXML();
-        #$content = str_replace("&amp;", "&", $content);
-        file_put_contents($pathToFile, $content);
+        $s = $this->newDom->saveXML();
+        /*$s = preg_replace_callback(
+            '/<w>(.|\s)*<\/w>/U',
+            function ($matches) {
+                $match = $matches[0];
+                if ($match) return preg_replace('\n','', $match);
+            },
+            $s
+        );*/
+
+
+        file_put_contents($pathToFile, $s);
     }
 }

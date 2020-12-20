@@ -24,11 +24,11 @@
     "h12": "Main title of document",
     "h13": "Name of editor(s)",
     "h14": "Name of collaborator(s)",
-    "h15": "Name of image file(s)",
     "h16": "Other languages",
     "h17": "Place of deposit / current location of document",
     "h18": "Place of origin of document",
-    "h19": "Alternative holding institution"
+    "h19": "Alternative holding institution",
+    "h20": "Copyright statement"
   },
   "default_language": "nep"
 }
