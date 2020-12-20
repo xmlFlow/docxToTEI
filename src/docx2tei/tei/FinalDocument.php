@@ -18,31 +18,19 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
         XMLUtils::removeTags($document, "//table-wrap");
-
-
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
         XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::enumerateLBs($document);
+
         // String operations
+
         $s = $document->saveXML();
-
-
         $s = XMLUtils::removeTagsWithoutContent($s);
-        # Complex  sentence
-        #TODO reactvate
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
-        # correct after creating tags
-        #   these are final operations in ORDER
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::handleSurroundingAdd($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
-        #$pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w_-)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
-        #$s = XMLUtils::createStructuredContent($s, $pattern);
-
-        # Last operations
-
-
 
         ## Error messages
         preg_replace_callback_array(
@@ -63,10 +51,11 @@ class FinalDocument extends DOMDocument {
 
 
 // Create new Dom
-        $newDom = new DOMDocument();
         XMLUtils::printPHPErrors();
-        $newDom->loadXML($s);
         XMLUtils::removeTags($document, "//add/w");
+
+        $newDom = new DOMDocument();
+        $newDom->loadXML($s);
 
         $this->document = $newDom;
     }

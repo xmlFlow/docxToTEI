@@ -499,14 +499,6 @@ class XMLUtils {
         return $s;
     }
 
-    /**
-     * @return array
-     */
-    public static function getControlledVocabList(): array {
-        $tags = array();
-        return $tags;
-    }
-
     public static function printPHPErrors(): void {
         $errorTypes = E_ALL;
         set_error_handler(function ($errno, $errstr, $errfile, $errline) {
