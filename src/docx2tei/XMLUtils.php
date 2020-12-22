@@ -434,10 +434,11 @@ class XMLUtils {
         preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
-
             $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
             $s = preg_replace('/#SB/', '<s>', $s);
             $s = preg_replace('/#SE/', '</s>', $s);
+
+
         }
         return $s;
     }
