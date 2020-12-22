@@ -69,7 +69,6 @@ class Edition extends DOMDocument {
             }
         }
     }
-
     /**
      * @param $section
      * @param DOMElement $div

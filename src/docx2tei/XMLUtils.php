@@ -19,9 +19,6 @@ class XMLUtils {
     public static function getMarkups(string $s) {
         $s = self::removeZWNJ($s);
 
-
-
-
         # create gaps of illegible and lost characters
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'lost', '\/');
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
@@ -437,14 +434,26 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createComplexSentence(string $s) {
-        preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
-        $match = $matches[0];
-        if (!is_null($match) && count($match) != 0) {
+       # preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
+       # $match = $matches[0];
+       # if (!is_null($match) && count($match) != 0) {
             # do not change order
-            $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
-            $s = preg_replace('/#SB/', '<s>', $s);
-            $s = preg_replace('/#SE/', '</s>', $s);
-        }
+
+            $s = preg_replace_callback_array(
+                ['/#SB(@[a-z]{3}|@)?(@[IMF])?((.|\n)*?)#SE/' => function ($match) {
+                $x=1;
+
+                }
+                ],
+                $s
+            );
+
+
+
+         ##   $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
+          ##  $s = preg_replace('/#SB/', '<s>', $s);
+          ##  $s = preg_replace('/#SE/', '</s>', $s);
+        #}
         return $s;
     }
 

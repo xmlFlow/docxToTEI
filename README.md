@@ -25,7 +25,7 @@
 | 4  :robot: |  `#cor{पु#del@overstrike{ण्य}#ण्येक}{पुण्य}#` |  `Added supporting  recursive pattern matching.  This feature has  to be tested. ` |
 | 5  :robot: |  ` The attribute values within pagebreaks <pb> are wrongly placed: <pb n="#surface3" facs="2r"/> should be <pb n="2r " facs="#surface3"/>` | Corrected |
 | 6  :robot: | `In the heading “Abstract”, one single word in italics was divided into two <foreign>s.guṭha became <foreign>g</foreign><foreign>uṭha</foreign>` | Corrected | 
-| 7  | `When there are multiple names inside a sentence, the first name after the <s> tag do not seem to be processed: <s xml:lang="nep"><w>आगे</w> #pen{<w>रामहरी</w>}# <placeName><w>पाटनका</w></placeName>`|  Manik can you run it again, I found missing hashtags there. I added a rule to check for missing end tags|
+| 7 :robot:  | `When there are multiple names inside a sentence, the first name after the <s> tag do not seem to be processed: <s xml:lang="nep"><w>आगे</w> #pen{<w>रामहरी</w>}# <placeName><w>पाटनका</w></placeName>`|  Manik can you run it again, I found missing hashtags there. I added a rule to check for missing end tags|
 | 8  | `#ref@https://web.de{गूठका खेत वढाउदै}` |  `Not yet implemented. A proper mechanism to handle urls, without breaking the existing attribute handling`|
 | 9. :robot: | `[Field name in word template:] Copyright statement: --> for the <p></p> under  <availability status="restricted">.` | added |
 | 10. :robot: | ` <date>yyyy</date>` | Added to header license|
@@ -36,14 +36,7 @@
 
 
 
-Pagebreaks <pb> in the translation section are not processed. Here we have to note one thing: the <pb> in translation should be different than in the edition text. Example below:
 
-
-        In Edition:  pb@#surface1@1r-part1 
-        In Translation: pb@1r-part1  (@n for surface is not needed in translation)
-
-    For the <s> and <w> elements, @part is not yet applied. The values of @part would be “I”, “M”, “F” (I am not sure if I applied it correctly. I did “#SB@I”)
-    There appears a new element <sec> wrapping the paragraphs of the Translation div. Please remove them
 
 
   
@@ -96,15 +89,13 @@ Header implementations are done.
 |21. Testen | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
 
 
-
-
  
  
  ### Formal annotations
   
  | Status | Markup | Default | Markup Example | TEI Example | Remarks |
  | ---- | ---- | ---- | ---- | ---- | ---- |
- | 1. :heavy_check_mark:  | #SB Content #SE | | `#SBA long affairSE#` | `<s>A long affair</s>` | [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
+ | 1. :heavy_check_mark:  | #SB@lan Content #SE | | `#SBA long affairSE#` | `<s>A long affair</s>` | [s-unit](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-s.html) |
  | 2. :heavy_check_mark: | Empty line | | `` | `<lb>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) | 
  | 3. :heavy_check_mark: | `-` | | `-` | `<lb @break=no>` | [lb](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-lb.html) |
  | 4. :heavy_check_mark: | #++++@extent@agent# |`extent=characters` | `#++++@agent#` | `<gap @reason=“illegible“ extent=“4 lines“> ` | [gap](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-gap.html) |
