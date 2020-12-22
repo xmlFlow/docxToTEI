@@ -120,9 +120,6 @@ class Edition extends DOMDocument {
             } else {
                 XMLUtils::print_error("[Error] Text should be either correctly formatted title in H1  or should be text. Check formatting {" . $titleContent . " }");
             }
-        } else {
-            XMLUtils::print_error("[Error]  In edition block, section header not defined ");
-        }
-        return $ab;
+        } return $ab;
     }
 }

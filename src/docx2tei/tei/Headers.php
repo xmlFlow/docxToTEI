@@ -38,8 +38,18 @@ class Headers extends DOMDocument {
         $publicationStmt = $this->createElement("publicationStmt");
         $fileDesc->appendChild($publicationStmt);
         $this->setPublicationStmt($publicationStmt);
+        $this->setNotesStmt($fileDesc);
         $this->setSourceDescription($fileDesc);
         $this->document->teiHeader->appendChild($this->document->importNode($fileDesc, true));
+    }
+
+    function setNotesStmt($pubStmt):void {
+
+        $noteStmt = $this->createElement("notesStmt");
+        $note = $this->createElement("note",$this->headers["h21"] ?? "");
+        $noteStmt->appendChild($note);
+        $pubStmt->appendChild($noteStmt);
+
     }
 
     function setEncodingDescription(): void {
@@ -163,8 +173,10 @@ class Headers extends DOMDocument {
         $targetAttrib->value = 'http://creativecommons.org/licenses/by-sa/4.0/';
         $licence->appendChild($targetAttrib);
         $availability->appendChild($licence);
+        $pDate = $this->createElement("p");
         $date = $this->createElement("date",$this->currentDate);
-        $availability->appendChild($date);
+        $pDate->appendChild($date);
+        $availability->appendChild($pDate);
         $p = $this->createElement("p", $this->headers["h20"] ?? "");
         $availability->appendChild($p);
         $pubStmt->appendChild($availability);
@@ -172,7 +184,6 @@ class Headers extends DOMDocument {
 
     function setSourceDescription($fileDesc): void {
         $sourceDesc = $this->createElement("sourceDesc");
-        //$this->document->teiHeader->appendChild($this->document->importNode($sourceDesc, true));
         $msDesc = $this->createElement("msDesc");
         $sourceDesc->appendChild($msDesc);
         $this->setMsIdentifier($msDesc);

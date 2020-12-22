@@ -28,7 +28,8 @@
     "h17": "Place of deposit / current location of document",
     "h18": "Place of origin of document",
     "h19": "Alternative holding institution",
-    "h20": "Copyright statement"
+    "h20": "Copyright statement",
+    "h21": "Notes"
   },
   "default_language": "nep"
 }
