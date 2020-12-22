@@ -43,32 +43,6 @@ class XMLUtils {
         return preg_replace('/[\x{200B}-\x{200D}\x{FEFF}]/u', '', $s);
     }
 
-
-    public static function createLBBreakForMinus(string $s) {
-        $s = preg_replace_callback_array(
-            ['/-\s*(<\/p>|#SE)/U' => function ($match) {
-                return '<lb break="no"/>' . $match[1];
-            },
-            '/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U' => function ($match) {
-                if (substr_count($match[0], '<lb break="no"/>') >0) {
-                 return $match[1];
-                }
-                return  $match[1].'<lb/>';
-            },
-
-           ],
-            $s
-        );
-        return $s;
-    }
-
-
-
-    public static function joinLines(string $s) {
-        $s = preg_replace('/\r|\n/', '', $s);
-        return $s;
-    }
-
     /**
      * @param string $tagName
      * @param string $attrOne
@@ -359,6 +333,29 @@ class XMLUtils {
         return $tag;
     }
 
+    public static function createLBBreakForMinus(string $s) {
+        $s = preg_replace_callback_array(
+            ['/-\s*(<\/p>|#SE)/U' => function ($match) {
+                return '<lb break="no"/>' . $match[1];
+            },
+                '/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U' => function ($match) {
+                    if (substr_count($match[0], '<lb break="no"/>') > 0) {
+                        return $match[1];
+                    }
+                    return $match[1] . '<lb/>';
+                },
+
+            ],
+            $s
+        );
+        return $s;
+    }
+
+    public static function joinLines(string $s) {
+        $s = preg_replace('/\r|\n/', '', $s);
+        return $s;
+    }
+
     /**
      * @param string $s
      * @return string|string[]|null
@@ -434,25 +431,24 @@ class XMLUtils {
      * @return string|string[]|null
      */
     public static function createComplexSentence(string $s) {
-       # preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
-       # $match = $matches[0];
-       # if (!is_null($match) && count($match) != 0) {
-            # do not change order
+        # preg_match_all('/#SB(.|\n)*?#SE/', $s, $matches);
+        # $match = $matches[0];
+        # if (!is_null($match) && count($match) != 0) {
+        # do not change order
 
-            $s = preg_replace_callback_array(
-                ['/#SB(@[a-z]{3}|@)?(@[IMF])?((.|\n)*?)#SE/' => function ($match) {
-                $x=1;
+        $s = preg_replace_callback_array(
+            ['/#SB(@[a-z]{3}|@)?(@[IMF])?((.|\n)*?)#SE/' => function ($match) {
+                $x = 1;
 
-                }
-                ],
-                $s
-            );
+            }
+            ],
+            $s
+        );
 
 
-
-         ##   $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
-          ##  $s = preg_replace('/#SB/', '<s>', $s);
-          ##  $s = preg_replace('/#SE/', '</s>', $s);
+        ##   $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
+        ##  $s = preg_replace('/#SB/', '<s>', $s);
+        ##  $s = preg_replace('/#SE/', '</s>', $s);
         #}
         return $s;
     }
