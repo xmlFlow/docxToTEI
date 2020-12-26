@@ -20,10 +20,14 @@
         <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
         <pubPlace>Heidelberg, Germany</pubPlace>
         <availability status="restricted">
-          <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-          <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p>
+          <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+          <date>2020-12-26</date>
+          <p/>
         </availability>
       </publicationStmt>
+      <notesStmt>
+        <note/>
+      </notesStmt>
       <sourceDesc>
         <msDesc>
           <msIdentifier>
@@ -56,8 +60,8 @@
         <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-12-15</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2020-12-26</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2020-12-26" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
   </teiHeader>
   <facsimile>
     <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0">
@@ -72,18 +76,18 @@
         <p>In this letter Lokaramaṇa Upādhyāya reports about the departure of the governor general to the North-Western Provinces, a meeting with the governor general’s secretary and the British military victory in Kabul during the First Anglo-Afghan War (1839–1842).</p>
       </div>
       <div xml:id="ed" type="edition" xml:lang="san">
-        <pb n="#surface1" facs="1r"/>
-        <ab type="invocatio" corresp="#invocatio" n="1"><lb n="1"/>श्री<choice><sic>अर्जि#del@overstrike</sic><corr>अर्जि</corr></choice>अर्जि}{अर्जि}#</ab>
+        <pb n="1r" facs="#surface1"/>
+        <ab type="invocatio" corresp="#invocatio"><lb n="1"/><w>श्री</w><lb n="2"/><choice><sic><w>अर्जि</w><del rend="overstrike"><w>अर्जि</w></del></sic></choice><w>अर्जि</w>}{<w>अर्जि</w>}#<lb n="3"/></ab>
         <p/>
-        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue" n="1"><lb n="1"/>#&amp;{नं ९७}#अर्जि <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice>#&amp;@place@hand{नं ९७}#अर्जि <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice>अर्जि <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice>अर्जि <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice></ab>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue"><lb n="1"/><w><add place="above_the_line" hand="first">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w><add place="place" hand="hand">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><lb n="2"/></ab>
         <p/>
-        <ab type="maintext" corresp="#main_text" key="valEdi" n="1"><lb n="1"/>अर्जि <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><s xml:lang="nep"> <choice><sic>उप्रन्त</sic><corr>उप्रान्त</corr></choice> गवर्नर् जनरल पश्चिम गयादेखि याँहाँ मा<lb break="no" n="2"/>मूलि दर्वार भयाको थिएन <choice><sic>आश्वि</sic><corr>आश्विन</corr></choice> शुक्ल ५ रोज ७का साहव सिक्रिटरिकाँहाँ दर्वार भयो हजूर<lb break="no" n="3"/>का मिजाजमुवारक्को षैरआफ़ियत् सोध्या व<lb break="no" n="4"/>हुत षुसि <surplus>वा षुसि</surplus> हुनुहुन्छ भनि जवाव दियाँ भाद्रशुक्ल १२ का दिन <placeName>कावुल्का</placeName> किल्लामा अंरेजकोसेवक <persName>लोकरमणोपाध्यायको</persName> वेदो<lb break="no" n="5"/>क्त शुभ आसिर्वाद सहश्रम् <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s></ab>
+        <ab type="maintext" corresp="#main_text" key="valEdi"><lb n="1"/><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><lb n="2"/><s> <choice><sic><w>उप्रन्त</w></sic><corr><w>उप्रान्त</w></corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा<lb break="no" n="3"/>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic><w>आश्वि</w></sic><corr><w>आश्विन</w></corr></choice> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७</w><lb n="4"/><w>का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर<lb break="no" n="5"/>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व<lb break="no" n="6"/>हुत</w> <w>षुसि</w> <surplus><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्र</w><lb n="7"/><w>शुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName><w>कावुल्का</w></placeName> <w>किल्लामा</w> <w>अंरेजको</w><lb n="8"/><w>सेवक</w> <persName><w>लोकरमणोपाध्यायको</w></persName> <w>वेदो<lb break="no" n="9"/>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s><lb n="10"/></ab>
         <p/>
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
         <p>Śrī</p>
         <p>Number 97<note place="end"> An addition by a second hand in the original, representing the manuscript number given by the National Archives Nepal.</note></p>
-        <p><foreign>Arjī</foreign> - - <lb break="no"/></p>
+        <p><foreign>Arjī</foreign> - - -</p>
         <p><foreign>Uprānta</foreign>: Since the governor general departed for the Western [Provinces] there has not been any regular court assembly (<foreign>darbāra</foreign>) held. There was a court assembly held with the governor general’s secretary (<foreign>sāhaba sikriṭari</foreign>)<note place="end"> Most probably <persName>Henry Marion Durand</persName> (1812–1871) who was appointed as private secretary to the governor general on 28 February 1842.</note> on Saturday, the 5th of the bright fortnight of Āśvina. [He] asked about your well-being and spirits. I replied that you are in very good spirits. The news has been published in newspapers here that the English gained a victory at the fort of Kabul<note place="end"> This might refer to the Bala Hissar, where on 16 September 1842 Major General Sir George Pollock raised the British flag after seizing Kabul.</note> on the 12th of the bright fortnight of Bhādra. Two Persian newspapers have been sent to you. The situation in Kabul will become clear[er] if you cast your eyes on them.</p>
         <p>Friday, the 10th of the bright fortnight of Āśvina in the [Vikrama] era year 1899 (1842 CE). Residence: <placeName>Chitpur</placeName>, Calcutta. Auspiciousness.</p>
         <p>Thousands of auspicious blessings from [your] servant Lokaramaṇa Upādhyāya as uttered in the Vedas.</p>

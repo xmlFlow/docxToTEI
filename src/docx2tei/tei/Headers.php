@@ -173,10 +173,10 @@ class Headers extends DOMDocument {
         $targetAttrib->value = 'http://creativecommons.org/licenses/by-sa/4.0/';
         $licence->appendChild($targetAttrib);
         $availability->appendChild($licence);
-        $pDate = $this->createElement("p");
+        //$pDate = $this->createElement("p");
+        //$pDate->appendChild($date);
         $date = $this->createElement("date",$this->currentDate);
-        $pDate->appendChild($date);
-        $availability->appendChild($pDate);
+        $availability->appendChild($date);
         $p = $this->createElement("p", $this->headers["h20"] ?? "");
         $availability->appendChild($p);
         $pubStmt->appendChild($availability);
