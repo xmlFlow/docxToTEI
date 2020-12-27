@@ -28,13 +28,13 @@
 | 7 :robot:  | `When there are multiple names inside a sentence, the first name after the <s> tag do not seem to be processed: <s xml:lang="nep"><w>आगे</w> #pen{<w>रामहरी</w>}# <placeName><w>पाटनका</w></placeName>`|  Manik can you run it again, I found missing hashtags there. I added a rule to check for missing end tags|
 | 8  | `#ref@https://web.de{गूठका खेत वढाउदै}` |  `Not yet implemented. A proper mechanism to handle urls, without breaking the existing attribute handling`|
 | 9. :robot: | `[Field name in word template:] Copyright statement: --> for the <p></p> under  <availability status="restricted">.` | added |
-| 10. :robot: | ` <p><date>yyyy</date></p>` | Added to header license, only date was not valid|
+| 10. :robot: | ` <<date>yyyy</date>` | Added to header license, only date was not valid|
 | 11. :robot: | ` <p>License text</p>` | Added to header license|
 | 11. :robot: | ` <notesStmt> <note>notes1</note> </notesStmt>` | Added to header as new  element|
 | 12. :robot: | `<lb> is  found in all <ab>s now. Good! But still there is no <lb>`| newly implemented |
 | 13. :robot: | `<ab>s now have an additional attribute @n. It has to be removed.`| newly implemented |
 | 14. :robot: | `In the text blocks with multiple lines, Linebreaks <lb @break=”no”> are correctly applied where there are “-“ at the end of the. However, “normal” <lb> Linebreaks are missing now.`| Added |
-| 15. | `Under <publicationStmt>: <date> should only show year (e. g. <date>2020</date>) and should be placed under <pubPlace>` ||
+| 15. :robot: | `Under <publicationStmt>: <date> should only show year (e. g. <date>2020</date>) and should be placed under <pubPlace>` |  Removed it, but in Oxygen,  it is shown as a validation error without p   |
 | 16. | `Zones are still doubled under both surfaces` ||
 | 17. | Before </ab> a superfluous line break is created: ` <lb n="1"/> <w> <add place="above_the_line" hand="first">२</add> </w> <lb n="2"/> </ab>` ||
 | 18. | `<persName><choice> <sic><w>सिं</w></sic> <corr><w>सिंह</w></corr> </choice></persName> <w>स्याहुले</w>}#` should be `<persName><w><choice><sic>सिं</sic><corr>सिंह</corr></choice></w><w>स्याहुले</w></persName>`| | 

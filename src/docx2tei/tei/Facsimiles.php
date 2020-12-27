@@ -17,6 +17,10 @@ class Facsimiles extends DOMDocument {
 
     function setFacsimiles(): void {
         $facsimiles = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
+
+        $sbXpathStr = '//title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec';
+        $abs = $this->document->xpath->query($sbXpathStr);
+
         if (count($facsimiles) == 0) {
             XMLUtils::print_error("[Error] No facsimiles " . $this->document->cfg->sections->facsimiles);
         } else {
@@ -41,7 +45,6 @@ class Facsimiles extends DOMDocument {
                         $facsAttrib->value = $facs;
                         $surface->appendChild($facsAttrib);
                         $this->createCoordinates($surface);
-                        $abs = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec');
 
                         foreach ($abs as $ab) {
                             $abElement = $this->document->xpath->query("title", $ab);
@@ -62,7 +65,6 @@ class Facsimiles extends DOMDocument {
                             }
 
                         }
-
                         $this->document->facsimile->appendChild($this->document->importNode($surface, true));
                     }
                 }
