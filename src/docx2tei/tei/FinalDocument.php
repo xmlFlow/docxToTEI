@@ -37,11 +37,12 @@ class FinalDocument extends DOMDocument {
 
         $s = $document->saveXML();
         $s = XMLUtils::removeTagsWithoutContent($s);
-        $s = XMLUtils::createSurroundWordForChoice($s);
+
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
+        $s = XMLUtils::createSurroundWordForChoice($s);
 
         ## Error messages
         preg_replace_callback_array(
