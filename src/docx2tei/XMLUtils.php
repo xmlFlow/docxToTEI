@@ -327,6 +327,16 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
+    public static function removeLastElementOfParent($dom, string $tag) {
+        $xpath = new DOMXPath($dom);
+        $lastLbs = $xpath->query('//ab/' . $tag . '[last()]');
+        foreach ($lastLbs as $lb) {
+            $parent = $lb->parentNode;
+            $parent->removeChild($lb);
+        }
+        return $dom;
+
+    }
     public static function removeUnnecessaryChars(string $tag) {
         $tag = str_replace('=', '', $tag);
         $tag = str_replace('-', '', $tag);

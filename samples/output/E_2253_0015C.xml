@@ -128,7 +128,6 @@
                         <w>श्रीमत्सेंद्र</w>
                         <w>१</w>
                     </supplied>
-                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
@@ -139,7 +138,6 @@
                     <gap extent="15 characters" agent="ink" reason="lost"/>
                     <w>लिखा</w>
                     <w>पत्रम्</w>
-                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text">
@@ -394,7 +392,6 @@
                         <w>होइन</w>
                     </s>
                     <lb n="15"/>
-                    <lb n="16"/>
                 </ab>
                 <p/>
                 <pb n="1r-part2" facs="#surface2"/>
@@ -405,7 +402,6 @@
                         <w>काले</w>
                         <w>हो</w>
                     </s>
-                    <lb n="2"/>
                 </ab>
                 <p/>
                 <ab type="marphat" corresp="#marphat">
@@ -420,7 +416,6 @@
                     <w>मार्फत्</w>
                     #pen{<w>रणबहादुर</w>
                     <w>साह</w>}
-                    <lb n="3"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
@@ -437,7 +432,6 @@
                         <w>फुल्चोकी</w>
                     </geogName>
                     <lb n="2"/>
-                    <lb n="3"/>
                 </ab>
                 <p/>
                 <pb n="1v" facs="#surface3"/>
@@ -453,7 +447,6 @@
                     <w>मार्फत्</w>
                     #pen{<w>रणबहादुर</w>
                     <w>साह</w>}
-                    <lb n="3"/>
                 </ab>
                 <p/>
                 <ab type="margin" corresp="#margin">
@@ -470,7 +463,6 @@
                         <w>फुल्चोकी</w>
                     </geogName>
                     <lb n="2"/>
-                    <lb n="3"/>
                 </ab>
                 <p/>
             </div>

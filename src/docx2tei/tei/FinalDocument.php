@@ -12,20 +12,19 @@ class FinalDocument extends DOMDocument {
         parent::__construct('1.0', 'utf-8');
 
         XMLUtils::removeTitleInBody($document, "title");
-        //XMLUtils::removeElementsInTag($document, '//ab/p');
-        //XMLUtils::removeElementsInTag($document, '//add/w');
+
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
         XMLUtils::removeTags($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
-        # LBs
+        # LBs  adds begin element, enumerate, then remove the last lb.
         XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::enumerateLBs($document);
+        XMLUtils::removeLastElementOfParent($document,'lb');
 
-
-
+        #
         XMLUtils::removeTags($document, "//add/w");
 
         // String operations
