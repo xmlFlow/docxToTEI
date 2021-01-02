@@ -327,14 +327,12 @@
                     </s>
                     <s>
                         <w>मेरो</w>
-                        <choice>
-                            <sic>
-                                <w>काम</w>
-                            </sic>
-                            <corr>
-                                <w>नाम</w>
-                            </corr>
-                        </choice>
+                        <w>
+                            <choice>
+                                <sic>काम</sic>
+                                <corr>नाम</corr>
+                            </choice>
+                        </w>
                         <lb n="11"/>
                         <w>सेतो</w>
                         <orig>|||||</orig>

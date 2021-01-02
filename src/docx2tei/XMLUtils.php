@@ -500,6 +500,11 @@ class XMLUtils {
         }, $errorTypes);
     }
 
+
+    public static function createSurroundWordForChoice(string $s) {
+        return preg_replace('/<choice>\s*<sic>.*<\/sic>\s*<corr>.*<\/corr>\s*<\/choice>/','<w>$0</w>', $s);
+    }
+
     /**
      * @param string $s
      * @return string|string[]|null

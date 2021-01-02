@@ -13,6 +13,12 @@ class FinalDocument extends DOMDocument {
 
         XMLUtils::removeTitleInBody($document, "title");
 
+        # handle choice elements specially
+        XMLUtils::removeElementsInTag($document, '//choice/sic/w');
+        XMLUtils::removeElementsInTag($document, '//choice/corr/w');
+
+
+
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
@@ -31,6 +37,7 @@ class FinalDocument extends DOMDocument {
 
         $s = $document->saveXML();
         $s = XMLUtils::removeTagsWithoutContent($s);
+        $s = XMLUtils::createSurroundWordForChoice($s);
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
