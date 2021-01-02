@@ -18,7 +18,6 @@ class Facsimiles extends DOMDocument {
         $facsimiles = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->facsimiles . '"]/parent::sec/sec/title');
         $abs = $this->document->xpath->query('//title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]/parent::sec/sec/title');
 
-
         $lastPB = null;
         foreach ($facsimiles as $facsimile) {
 
@@ -56,8 +55,6 @@ class Facsimiles extends DOMDocument {
             $this->document->facsimile->appendChild($this->document->importNode($surface, true));
 
         }
-
-
 
     }
 

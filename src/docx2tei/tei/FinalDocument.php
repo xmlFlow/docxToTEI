@@ -19,8 +19,13 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTags($document, "//bold");
         XMLUtils::removeTags($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
+
+        # LBs
         XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::enumerateLBs($document);
+
+
+
         XMLUtils::removeTags($document, "//add/w");
 
         // String operations

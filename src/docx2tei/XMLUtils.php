@@ -335,14 +335,16 @@ class XMLUtils {
 
     public static function createLBBreakForMinus(string $s) {
         $s = preg_replace_callback_array(
-            ['/-\s*(<\/p>|#SE)/U' => function ($match) {
+            [
+                '/-\s*(<\/p>|#SE)/U' => function ($match) {
                 return '<lb break="no"/>' . $match[1];
             },
-                '/<p>(.*)(?!(-|<lb break="no"\/>))<\/p>/U' => function ($match) {
+                '/<p>(.*)(?!(-|<lb break=\"no\"\/>))<\/p>/U' => function ($match) {
                     if (substr_count($match[0], '<lb break="no"/>') > 0) {
                         return $match[1];
                     }
                     return $match[1] . '<lb/>';
+
                 },
 
             ],

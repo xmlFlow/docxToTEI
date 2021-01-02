@@ -35,8 +35,8 @@
 | 13. :robot: | `<ab>s now have an additional attribute @n. It has to be removed.`| newly implemented |
 | 14. :robot: | `In the text blocks with multiple lines, Linebreaks <lb @break=”no”> are correctly applied where there are “-“ at the end of the. However, “normal” <lb> Linebreaks are missing now.`| Added |
 | 15. :robot: | `Under <publicationStmt>: <date> should only show year (e. g. <date>2020</date>) and should be placed under <pubPlace>` |  Removed it, but in Oxygen,  it is shown as a validation error without p   |
-| 16. | `Zones are still doubled under both surfaces` ||
-| 17. | Before </ab> a superfluous line break is created: ` <lb n="1"/> <w> <add place="above_the_line" hand="first">२</add> </w> <lb n="2"/> </ab>` ||
+| 16. :robot: | `Zones are still doubled under both surfaces` | corrected.  can be tested|
+| 17. :question: | Before </ab> a superfluous line break is created: ` <lb n="1"/> <w> <add place="above_the_line" hand="first">२</add> </w> <lb n="2"/> </ab>` | |
 | 18. | `<persName><choice> <sic><w>सिं</w></sic> <corr><w>सिंह</w></corr> </choice></persName> <w>स्याहुले</w>}#` should be `<persName><w><choice><sic>सिं</sic><corr>सिंह</corr></choice></w><w>स्याहुले</w></persName>`| | 
 | 19. |  `<choice> <sic><w>पु</w><del rend="overstrike"><w>ण्य</w></del></sic> </choice><w>ण्येक</w>}{<w>पुण्य</w>}#` should be `<w> <choice> <sic>पु<del rend="overstrike">ण्य</del>ण्येक</sic> <corr>पुण्य</corr> </choice> </w>` | |
 | 20. | `In the commentary, a personal name tag was not transformed: #pen{Guṭhī Jā̃ca Aḍḍā}#` | |

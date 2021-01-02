@@ -100,7 +100,7 @@ class EnglishTranslation extends DOMDocument {
                 }
                 $div->appendChild($ab);
             } else {
-                XMLUtils::print_error("[Error] Text should be either correctly formatted. title in H1  or should be text. Check formatting {" . $titleContent . " }");
+                XMLUtils::print_error("[Error] Text should be either correctly formatted: title in H1  or should be text. Check formatting {" . $titleContent . " }");
             }
         }
         return $ab;
