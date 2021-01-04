@@ -273,9 +273,7 @@ class XMLUtils {
             array(
                 "original" => "ref",
                 "replace" => "ref",
-                "attributes" => array(
-                    array("tag" => "target"),
-                )
+                "attributes" => array()
             ),
             array(
                 "original" => "sb",

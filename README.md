@@ -40,8 +40,9 @@
 | 18. :robot: | `<persName><choice> <sic><w>सिं</w></sic> <corr><w>सिंह</w></corr> </choice></persName> <w>स्याहुले</w>}#` should be `<persName><w><choice><sic>सिं</sic><corr>सिंह</corr></choice></w><w>स्याहुले</w></persName>`| | 
 | 19. :robot: |  `<choice> <sic><w>पु</w><del rend="overstrike"><w>ण्य</w></del></sic> </choice><w>ण्येक</w>}{<w>पुण्य</w>}#` should be `<w> <choice> <sic>पु<del rend="overstrike">ण्य</del>ण्येक</sic> <corr>पुण्य</corr> </choice> </w>` | |
 | 20. :robot:  | `In the commentary, a personal name tag was not transformed: #pen{Guṭhī Jā̃ca Aḍḍā}#` | There was an error in the entry. Now error handliing displays those errors|
-| 21. :robot: | `Pbs in Edition and remove the structure header` | |
-|22. :robot:  | `delete all remaining empty ps inside ab`| |
+| 21. :robot: | `Pbs in Edition and remove the structure header` | implemented |
+|22. :robot:  | `delete all remaining empty ps inside ab`| implemented |
+|23. :robot:  | `#ref{URL}#`| implemented|
 
 
 
