@@ -175,7 +175,7 @@ class XMLUtils {
                         for ($i = 0; $i < count($tag["attributes"]); $i++) {
                             if ($i < count($tag["attributes"])) {
                                 $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                                $val = $tag["attributes"][$i]['default'];
+                                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
                                 if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
                                     $val = $prefix[$i];
                                 }
@@ -327,6 +327,12 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
+    public static function removeUnnecessaryChars(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
+    }
+
     public static function removeLastElementOfParent($dom, string $tag) {
         $xpath = new DOMXPath($dom);
         $lastLbs = $xpath->query('//ab/' . $tag . '[last()]');
@@ -337,18 +343,13 @@ class XMLUtils {
         return $dom;
 
     }
-    public static function removeUnnecessaryChars(string $tag) {
-        $tag = str_replace('=', '', $tag);
-        $tag = str_replace('-', '', $tag);
-        return $tag;
-    }
 
     public static function createLBBreakForMinus(string $s) {
         $s = preg_replace_callback_array(
             [
                 '/-\s*(<\/p>|#SE)/U' => function ($match) {
-                return '<lb break="no"/>' . $match[1];
-            },
+                    return '<lb break="no"/>' . $match[1];
+                },
                 '/<p>(.*)(?!(-|<lb break=\"no\"\/>))<\/p>/U' => function ($match) {
                     if (substr_count($match[0], '<lb break="no"/>') > 0) {
                         return $match[1];
@@ -445,7 +446,6 @@ class XMLUtils {
     }
 
 
-
     public static function addChildElement($dom, $parent, $child): void {
         $nodes = $dom->getElementsByTagName($parent);
         foreach ($nodes as $node) {
@@ -493,7 +493,7 @@ class XMLUtils {
 
 
     public static function createSurroundWordForChoice(string $s) {
-        return preg_replace('/<choice>\s*<sic>.*<\/sic>\s*<corr>.*<\/corr>\s*<\/choice>/','<w>$0</w>', $s);
+        return preg_replace('/<choice>\s*<sic>.*<\/sic>\s*<corr>.*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
     }
 
     /**
