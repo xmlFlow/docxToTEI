@@ -12,7 +12,7 @@ class Headers extends DOMDocument {
 
     public function __construct(TEIDocument $document, $headers) {
         parent::__construct('1.0', 'utf-8');
-        $this->currentDate = date("Y-m-d");
+        $this->currentDate = date("Y");
         $this->document = $document;
         $this->headers = $headers;
         $this->setHeaders();
@@ -174,7 +174,7 @@ class Headers extends DOMDocument {
         $licence->appendChild($targetAttrib);
         $availability->appendChild($licence);
         $date = $this->createElement("date",$this->currentDate);
-        $availability->appendChild($date);
+        $pubStmt->appendChild($date);
         $p = $this->createElement("p", $this->headers["h20"] ?? "");
         $availability->appendChild($p);
         $pubStmt->appendChild($availability);

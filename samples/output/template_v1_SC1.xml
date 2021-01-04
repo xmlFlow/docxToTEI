@@ -19,9 +19,9 @@
       <publicationStmt>
         <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
         <pubPlace>Heidelberg, Germany</pubPlace>
+        <date>2021</date>
         <availability status="restricted">
           <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-          <date>2020-12-26</date>
           <p/>
         </availability>
       </publicationStmt>
@@ -60,14 +60,13 @@
         <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
       </editorialDecl>
     </encodingDesc>
-    <profileDesc><creation> <date>2020-12-26</date> </creation> </profileDesc>
-    <revisionDesc><listChange> <change type="internal" when="2020-12-26" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
+    <profileDesc><creation> <date>2021</date> </creation> </profileDesc>
+    <revisionDesc><listChange> <change type="internal" when="2021" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>
   </teiHeader>
   <facsimile>
     <surface xml:id="surface1" facs=" DNA_0001_0523.png" ulx="0" uly="0" lrx="0" lry="0">
       <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
       <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
-      <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
     </surface>
   </facsimile>
   <text>
@@ -77,11 +76,11 @@
       </div>
       <div xml:id="ed" type="edition" xml:lang="san">
         <pb n="1r" facs="#surface1"/>
-        <ab type="invocatio" corresp="#invocatio"><lb n="1"/><w>श्री</w><lb n="2"/><choice><sic><w>अर्जि</w><del rend="overstrike"><w>अर्जि</w></del></sic></choice><w>अर्जि</w>}{<w>अर्जि</w>}#<lb n="3"/></ab>
+        <ab type="invocatio" corresp="#invocatio"><lb n="1"/><w>श्री</w><lb n="2"/><choice><sic>अर्जि<del rend="overstrike">अर्जि</del></sic></choice><w>अर्जि</w>}{<w>अर्जि</w>}#</ab>
         <p/>
-        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue"><lb n="1"/><w><add place="above_the_line" hand="first">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w><add place="place" hand="hand">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><lb n="2"/></ab>
+        <ab type="space" corresp="#space1" newArttiibute="newAttributeValue"><lb n="1"/><w><add place="above_the_line" hand="first">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w><add place="place" hand="hand">नं ९७</add></w><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice></ab>
         <p/>
-        <ab type="maintext" corresp="#main_text" key="valEdi"><lb n="1"/><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><lb n="2"/><s> <choice><sic><w>उप्रन्त</w></sic><corr><w>उप्रान्त</w></corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा<lb break="no" n="3"/>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic><w>आश्वि</w></sic><corr><w>आश्विन</w></corr></choice> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७</w><lb n="4"/><w>का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर<lb break="no" n="5"/>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व<lb break="no" n="6"/>हुत</w> <w>षुसि</w> <surplus><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्र</w><lb n="7"/><w>शुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName><w>कावुल्का</w></placeName> <w>किल्लामा</w> <w>अंरेजको</w><lb n="8"/><w>सेवक</w> <persName><w>लोकरमणोपाध्यायको</w></persName> <w>वेदो<lb break="no" n="9"/>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s><lb n="10"/></ab>
+        <ab type="maintext" corresp="#main_text" key="valEdi"><lb n="1"/><w>अर्जि</w> <choice><orig> ¯ ¯ ¯ ¯ ¯ ¯</orig><reg> ---</reg></choice><lb n="2"/><s> <w><choice><sic>उप्रन्त</sic><corr>उप्रान्त</corr></choice> <w>गवर्नर्</w> <w>जनरल</w> <w>पश्चिम</w> <w>गयादेखि</w> <w>याँहाँ</w> <w>मा<lb break="no" n="3"/>मूलि</w> <w>दर्वार</w> <w>भयाको</w> <w>थिएन</w> <choice><sic>आश्वि</sic><corr>आश्विन</corr></choice></w> <w>शुक्ल</w> <w>५</w> <w>रोज</w> <w>७</w><lb n="4"/><w>का</w> <w>साहव</w> <w>सिक्रिटरिकाँहाँ</w> <w>दर्वार</w> <w>भयो</w> <w>हजूर<lb break="no" n="5"/>का</w> <w>मिजाजमुवारक्को</w> <w>षैरआफ़ियत्</w> <w>सोध्या</w> <w>व<lb break="no" n="6"/>हुत</w> <w>षुसि</w> <surplus><w>वा</w> <w>षुसि</w></surplus> <w>हुनुहुन्छ</w> <w>भनि</w> <w>जवाव</w> <w>दियाँ</w> <w>भाद्र</w><lb n="7"/><w>शुक्ल</w> <w>१२</w> <w>का</w> <w>दिन</w> <placeName><w>कावुल्का</w></placeName> <w>किल्लामा</w> <w>अंरेजको</w><lb n="8"/><w>सेवक</w> <persName><w>लोकरमणोपाध्यायको</w></persName> <w>वेदो<lb break="no" n="9"/>क्त</w> <w>शुभ</w> <w>आसिर्वाद</w> <w>सहश्रम्</w> <choice><orig>¯ ¯ ¯ ¯ ¯ ¯</orig><reg>---</reg></choice></s></ab>
         <p/>
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
