@@ -14,13 +14,13 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTitleInBody($document, "title");
 
         # handle choice elements specially
-        XMLUtils::removeElementsInTag($document, '//choice/sic/w');
-        XMLUtils::removeElementsInTag($document, '//choice/corr/w');
-        XMLUtils::removeElementsInTag($document, '//ab/p');
-        XMLUtils::removeElementsInTag($document, '//w/w');
-        XMLUtils::removeElementsInTag($document, '//orig/orig');
-        XMLUtils::removeTags($document, "//bold");
-        XMLUtils::removeTags($document, "//table-wrap");
+        XMLUtils::removeElement($document, '//choice/sic/w');
+        XMLUtils::removeElement($document, '//choice/corr/w');
+        XMLUtils::removeElement($document, '//ab/p');
+        XMLUtils::removeElement($document, '//w/w');
+        XMLUtils::removeElement($document, '//orig/orig');
+        XMLUtils::removeElement($document, "//bold");
+        XMLUtils::removeElement($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
 
         # LBs  adds begin element, enumerate, then remove the last lb.
@@ -29,7 +29,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeLastElementOfParent($document,'lb');
 
         #
-        XMLUtils::removeTags($document, "//add/w");
+        XMLUtils::removeElement($document, "//add/w");
 
         // String operations
 

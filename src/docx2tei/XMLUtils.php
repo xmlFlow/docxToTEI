@@ -386,7 +386,7 @@ class XMLUtils {
      * @param $elementName
      * @return mixed
      */
-    public static function removeElementsInTag($dom, $str) {
+    public static function removeElement($dom, $str) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
@@ -398,17 +398,6 @@ class XMLUtils {
         return $dom;
     }
 
-    public static function removeTags($dom, $str) {
-        $xpath = new DOMXPath($dom);
-        foreach ($xpath->query($str) as $node) {
-            $parent = $node->parentNode;
-            while ($node->hasChildNodes()) {
-                $parent->insertBefore($node->lastChild, $node->nextSibling);
-            }
-            $parent->removeChild($node);
-        }
-        return $dom;
-    }
 
     public static function enumerateLBs($dom) {
         $xpath = new DOMXPath($dom);
