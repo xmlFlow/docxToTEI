@@ -28,8 +28,9 @@ class FinalDocument extends DOMDocument {
         XMLUtils::enumerateLBs($document);
         XMLUtils::removeLastElementOfParent($document,'lb');
 
-        #
+
         XMLUtils::removeElement($document, "//add/w");
+        XMLUtils::removeElement($document, "//sec");
 
         // String operations
 

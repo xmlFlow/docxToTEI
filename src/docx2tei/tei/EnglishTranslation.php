@@ -55,7 +55,7 @@ class EnglishTranslation extends DOMDocument {
      * @param $section
      * @param DOMElement $div
      */
-    private function createSectionBegin($section, $div): ?DOMElement {
+    private function createSectionBegin($section, $div) {
         $ab = null;
         $type = "";
         $title = $this->document->xpath->query('./title', $section)->item(0);
@@ -64,39 +64,17 @@ class EnglishTranslation extends DOMDocument {
             # Clean xml tags
             $titleContent = preg_replace('/<(\/)*title>/', '', $titleContent);
             $titleAttribs = explode("@", $titleContent);
-            if (count($titleAttribs) >= 3) {
-                list ($type, $value1, $value2) = $titleAttribs;
+            if (count($titleAttribs) >= 2) {
+                list ($type, $value1) = $titleAttribs;
                 $type = trim(strtolower($type));
                 if ($type == "pb") {
                     //<pb n="1r" facs="#surface1"/>
                     $ab = $this->createElement("pb");
                     $typeAttr = $this->createAttribute('n');
-                    $typeAttr->value = $value2;
+                    $typeAttr->value = $value1;
                     $ab->appendChild($typeAttr);
-                    $facs = $this->createAttribute('facs');
-                    $facs->value = $value1;
-                    $ab->appendChild($facs);
-                } elseif ($type == "ab") {
-                    //<ab type="invocatio" corresp="#invocatio"/>
-                    $ab = $this->createElement("ab");
-                    $facsAttr = $this->createAttribute('type');
-                    $facsAttr->value = $value2;
-                    $n = $this->createAttribute('corresp');
-                    $n->value = $value1;
-                    $ab->appendChild($facsAttr);
-                    $ab->appendChild($n);
                 } else {
                     XMLUtils::print_error("[Error]  Wrong type in edition: " . $type);
-                }
-                foreach ($titleAttribs as $attribute) {
-                    if (strpos($attribute, "=") > 0) {
-                        $parts = explode('=', $attribute);
-                        if (count($parts) == 2) {
-                            $extraAttr = $this->createAttribute($parts[0]);
-                            $extraAttr->value = $parts[1];
-                            $ab->appendChild($extraAttr);
-                        }
-                    }
                 }
                 $div->appendChild($ab);
             } else {
