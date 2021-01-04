@@ -19,7 +19,7 @@ class FinalDocument extends DOMDocument {
 
 
 
-        XMLUtils::removeElementsInTag($document, '//ab/p');
+        ##XMLUtils::removeElementsInTag($document, '//ab/p');
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
