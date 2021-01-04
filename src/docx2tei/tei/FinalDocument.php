@@ -16,10 +16,7 @@ class FinalDocument extends DOMDocument {
         # handle choice elements specially
         XMLUtils::removeElementsInTag($document, '//choice/sic/w');
         XMLUtils::removeElementsInTag($document, '//choice/corr/w');
-
-
-
-        ##TODOXMLUtils::removeElementsInTag($document, '//ab/p');
+        XMLUtils::removeElementsInTag($document, '//ab/p');
         XMLUtils::removeElementsInTag($document, '//w/w');
         XMLUtils::removeElementsInTag($document, '//orig/orig');
         XMLUtils::removeTags($document, "//bold");
