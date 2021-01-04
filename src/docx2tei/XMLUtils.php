@@ -448,12 +448,14 @@ class XMLUtils {
         if (!is_null($match) && count($match) != 0) {
             $s = preg_replace('/#SB@([a-z]{3})@([IMF])/', '<s xml:lang="$1" part="$2">', $s);
             $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
-            $s = preg_replace('/#SB@@([IMF])/', '<s part="$1">', $s);
+            $s = preg_replace('/#SB@([IMF])/', '<s part="$1">', $s);
             $s = preg_replace('/#SB/', '<s>', $s);
             $s = preg_replace('/#SE/', '</s>', $s);
         }
         return $s;
     }
+
+
 
     public static function addChildElement($dom, $parent, $child): void {
         $nodes = $dom->getElementsByTagName($parent);
