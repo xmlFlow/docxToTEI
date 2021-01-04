@@ -41,7 +41,7 @@
 | 19. :robot: |  `<choice> <sic><w>पु</w><del rend="overstrike"><w>ण्य</w></del></sic> </choice><w>ण्येक</w>}{<w>पुण्य</w>}#` should be `<w> <choice> <sic>पु<del rend="overstrike">ण्य</del>ण्येक</sic> <corr>पुण्य</corr> </choice> </w>` | |
 | 20. :robot:  | `In the commentary, a personal name tag was not transformed: #pen{Guṭhī Jā̃ca Aḍḍā}#` | There was an error in the entry. Now error handliing displays those errors|
 | 21.  | Pbs in Edition and remove the structure header |
-
+|22 |   `delete all remaining empty ps inside ab`| |
 
 
 
@@ -66,6 +66,7 @@ Header implementations are done.
 | 9. :robot: |  `not implemented: zones according to the <ab>s` | Newly implemented |
 | 10.  :robot: |  `number of dots (...) for space was not correctly counted` | Corrected | 
 | 11.  :robot: |   `in the footnotes, texts in italics are not transformed into <foreign>`| Added|
+
   
  
  
