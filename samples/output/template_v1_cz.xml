@@ -23,13 +23,17 @@
                     of Pre-modern Nepal
                 </publisher>
                 <pubPlace>Heidelberg, Germany</pubPlace>
+                <date>2021</date>
                 <availability status="restricted">
-                    <licence>Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
-                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile
-                        remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).
-                    </p>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
+                        Commons Attribution-ShareAlike 4.0 Unported License
+                    </licence>
+                    <p/>
                 </availability>
             </publicationStmt>
+            <notesStmt>
+                <note/>
+            </notesStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
@@ -81,13 +85,12 @@
         </encodingDesc>
         <profileDesc>
             <creation>
-                <date>2020-12-15</date>
+                <date>2021</date>
             </creation>
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change type="internal" when="2020-12-15" who="#AUTO">Automatically converted from docx to TEI-XML
-                </change>
+                <change type="internal" when="2021" who="#AUTO">Automatically converted from docx to TEI-XML</change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -97,7 +100,6 @@
             <zone xml:id="margin2" ulx="0" uly="0" lrx="0" lry="0"/>
             <zone xml:id="seal" ulx="0" uly="0" lrx="0" lry="0"/>
             <zone xml:id="margin3" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
         </surface>
     </facsimile>
     <text>
@@ -106,91 +108,157 @@
                 <p>This is a test file</p>
             </div>
             <div xml:id="ed" type="edition" xml:lang="nep">
-                <pb n="#surface1" facs="1r"/>
-                <ab type="margin" corresp="#margin1" n="1">
+                <pb n="1r" facs="#surface1"/>
+                <ab type="margin" corresp="#margin1">
                     <lb n="1"/>
                     <space quantity="5" unit="chars"/>
-                    <surplus>डाङ्&amp;#x200c;</surplus>
-                    डाङ्&amp;#x200c; डाङ्&amp;#8205;९४ नं<orig>•</orig>
+                    <surplus><w>डाङ्&amp;#x200c;</w>#
+                    </surplus>
+                    <w>डाङ्&amp;#x200c;</w>
+                    <w>डाङ्&amp;#8205;९४</w>
+                    <w>नं</w>
+                    <orig>•</orig>
                 </ab>
                 <p/>
-                <ab type="margin" corresp="#margin2" n="1"><lb n="1"/>प्रमांनगी
+                <ab type="margin" corresp="#margin2">
+                    <lb n="1"/>
+                    <w>प्रमांनगी</w>
                     <space quantity="5" unit="chars"/>
-                    जनरल
-                    <persName>स्याम वाहादुर <orig>•</orig> कुंव़र <orig>•</orig> राणाजी
+                    <w>जनरल</w>
+                    <persName>
+                        <w>स्याम</w>
+                        <w>वाहादुर</w>
+                        <orig>•</orig>
+                        <w>कुंव़र</w>
+                        <orig>•</orig>
+                        <w>राणाजी</w>
                     </persName>
                     <orig>•</orig>
-                    <lb n="2"/>पालामा
+                    <lb n="2"/>
+                    <lb n="3"/>
+                    <w>पालामा</w>
                     <space quantity="5" unit="lines"/>
-                    सर्याको
+                    <w>सर्याको</w>
                     <choice>
                         <orig>¯¯¯¯¯¯¯ ¯¯¯¯¯¯¯</orig>
                         <reg>---</reg>
                     </choice>
-                    <lb n="3"/>
+                    <lb n="4"/>
                 </ab>
                 <p/>
-                <ab type="seal" corresp="#seal" n="1"><lb n="1"/>[seal]
+                <ab type="seal" corresp="#seal"><lb n="1"/>[seal]
                     <lb n="2"/>
-                    <lb break="no" n="3"/>
+                    <lb n="3"/>
                     <lb break="no" n="4"/>
                     <lb break="no" n="5"/>
                 </ab>
                 <p/>
-                <ab type="margin" corresp="#margin3" n="1"><lb n="1"/>हेर्ने <unclear cert="high">स्ही</unclear> नौ <persName>
-                    हरि
-                </persName>
-                    <orig>•</orig> भने सही नौ <persName>गणेश</persName>
+                <ab type="margin" corresp="#margin3">
+                    <lb n="1"/>
+                    <w>हेर्ने</w>
+                    <unclear cert="high">
+                        <w>स्ही</w>
+                    </unclear>
+                    <w>नौ</w>
+                    <persName>
+                        <w>हरि</w>
+                    </persName>
                     <orig>•</orig>
                     <lb n="2"/>
+                    <w>भने</w>
+                    <w>सही</w>
+                    <w>नौ</w>
+                    <persName>
+                        <w>गणेश</w>
+                    </persName>
+                    <orig>•</orig>
+                    <lb n="3"/>
                 </ab>
                 <p/>
-                <ab type="maintext" corresp="#main_text" n="1">
+                <ab type="maintext" corresp="#main_text">
                     <lb n="1"/>
                     <lb n="2"/>
-                    डाङ्
+                    <w>डाङ्</w>
                     <space quantity="5" unit="chars"/>
-                    सल्यानाका <orig>•</orig> श्री सीद्ध <orig>•</orig> भगवंन्तनाथ<orig>•</orig>का मठगुठी
+                    <w>सल्यानाका</w>
+                    <orig>•</orig>
+                    <w>श्री</w>
+                    <w>सीद्ध</w>
+                    <orig>•</orig>
+                    <w>भगवंन्तनाथ</w>
+                    <orig>•</orig>
+                    <w>का</w>
+                    <w>मठगुठी</w>
                     <choice>
                         <orig>¯¯¯ ¯¯¯¯¯¯¯¯¯</orig>
                         <reg>---</reg>
                     </choice>
                     <lb n="3"/>
+                    <lb n="4"/>
                     <choice>
                         <orig>¯¯¯¯ ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯</orig>
                         <reg>---</reg>
                     </choice>
-                    <choice>
-                        <sic>प्रस्तीसौ</sic>
-                        <corr>प्रशस्तिसौ</corr>
-                    </choice>
+                    <lb n="5"/>
+                    <w>
+                        <choice>
+                            <sic>प्रस्तीसौ</sic>
+                            <corr>प्रशस्तिसौ</corr>
+                        </choice>
+                    </w>
                     <orig>•</orig>
-                    आगे महंत <orig>•</orig> जगदिश्वरनाथके <orig>•</orig> डाङ्&amp;#x200c; <orig>•</orig> सल्यानाका श्री
-                    सीद्ध <orig>•</orig> भगवंन्तनाथ<orig>•</orig>का मठगादीमा <orig>•</orig> व<lb break="no" n="4"/>सी
+                    <lb n="6"/>
+                    <w>आगे</w>
+                    <w>महंत</w>
+                    <orig>•</orig>
+                    <w>जगदिश्वरनाथके</w>
+                    <orig>•</orig>
+                    <w>डाङ्&amp;#x200c;</w>
+                    <orig>•</orig>
+                    <w>सल्यानाका</w>
+                    <w>श्री</w>
+                    <w>सीद्ध</w>
+                    <orig>•</orig>
+                    <w>भगवंन्तनाथ</w>
+                    <orig>•</orig>
+                    <w>का</w>
+                    <w>मठगादीमा</w>
+                    <orig>•</orig>
+                    <w>व<lb break="no" n="7"/>सी
+                    </w>
                     <table>
                         <row>
-                            <cell>
-                                <p>Table header 1</p>
+                            <cell>Table header 1
+                                <lb/>
                             </cell>
-                            <cell>
-                                <p>Table header 2</p>
+                            <cell>Table header 2
+                                <lb/>
                             </cell>
-                            <cell>
-                                <p>Table header 3</p>
+                            <cell>Table header 3
+                                <lb/>
                             </cell>
-                            <cell>
-                                <p>Table header 3</p>
+                            <cell>Table header 3
+                                <lb/>
                             </cell>
                         </row>
                         <row>
                             <cell>
-                                <p>शुभमस्तु सर्वदा ।तिष्ठा दिन जुरो</p>
+                                <w>शुभमस्तु</w>
+                                <w>सर्वदा</w> ।<w>तिष्ठा</w>
+                                <w>दिन</w>
+                                <w>जुरो</w>
+                                <lb/>
                             </cell>
                             <cell>
-                                <p>सर्वदा</p>
+                                <w>सर्वदा</w>
+                                <lb/>
                             </cell>
                             <cell>
-                                <p>सहस्र पुण्य राक जुरो</p>
+                                <w>सहस्र</w>
+                                <w>पुण्य</w>
+                                <w>राक</w>
+                                <w>जुरो</w>
+                                <lb/>
                             </cell>
                             <cell>
                                 <lb/>

@@ -122,6 +122,12 @@
                 <pb n="1r-part1" facs="#surface1"/>
                 <ab type="invocatio" corresp="#invocatio">
                     <lb n="1"/>
+                    <ref target="http://wwww.google.com/534534555555555555555555555555555555555555r">
+                        <w>फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी</w>
+                        <w>फुल्चोकी</w>
+                        <w>फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी</w>
+                    </ref>
+                    <lb n="2"/>
                     <supplied reason="lost">
                         <w>श्रीमत्सेंद्र</w>
                         <w>१</w>
@@ -470,9 +476,10 @@
             <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
                 <pb n="1r-part1"/>
                 <p>Śrī Matsyendra[n&amp;ātha] –
-                    #ref@rrr{फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी
+                    <ref target="http://wwww.google.com/4534534555555555555555555555555555555555555r">
+                        फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी
+                    </ref>
                 </p>
-                <p>}#</p>
                 <p>...
                     <note place="end">The text written in the right margin has been blacked out with ink, written
                         in <placeName>Kathmandu</placeName>.
@@ -603,13 +610,14 @@
                     Bā̃ḍā when he offered a golden <foreign>vimāna</foreign> 4 to the chariot of 1 (i.e.,
                     Matsyendranātha) were added.
                 </p>
-                <p>Further rice field plots with money left over after it completed its tasks (see
-                    #ref{https://google.com}#).
+                <p>Further rice field plots with money left over after it completed its tasks (see <ref>
+                    https://google.com</ref>).
                 </p>
                 <p/>
                 <pb n="1v"/>
                 <p>To <persName>Rāmānaṃda Bā̃ḍā</persName>, a resident of <placeName>Mahābuddha</placeName> at Oku
-                    Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha (see #ref@https:google.com{Google}#).
+                    Bāhāla Ṭola in <placeName>Patan</placeName>. To the guṭha (see <ref target="https:google.com">
+                        Google</ref>).
                 </p>
             </div>
             <div xml:id="commentary" type="commentary" xml:lang="eng">

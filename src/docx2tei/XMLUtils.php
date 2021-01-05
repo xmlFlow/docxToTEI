@@ -24,6 +24,8 @@ class XMLUtils {
         $s = XMLUtils::createGap('gap', 'reason', 'extent', 'agent', $s, 'illegible', '\+');
         # create spaces
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
+
+        $s = XMLUtils::createRef($s);
         # 2 times
         $s = XMLUtils::createAddElement($s);
         $s = XMLUtils::createAddElement($s);
@@ -32,6 +34,26 @@ class XMLUtils {
 
         #TODO
 
+        return $s;
+    }
+
+    public static function createRef($s) {
+
+        $s = preg_replace_callback_array(
+            [
+                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
+                    $url = $match[1];
+                    if (strlen($url) > 0) {
+                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
+                    } else {
+                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
+                    }
+
+                },
+
+            ],
+            $s
+        );
         return $s;
     }
 
