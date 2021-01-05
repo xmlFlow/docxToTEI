@@ -139,16 +139,9 @@ class TEIDocument extends DOMDocument {
 
     public function saveToFile(string $pathToFile) {
         $s = $this->newDom->saveXML();
-        /*$s = preg_replace_callback(
-            '/<w>(.|\s)*<\/w>/U',
-            function ($matches) {
-                $match = $matches[0];
-                if ($match) return preg_replace('\n','', $match);
-            },
-            $s
-        );*/
-
-
+        $s =  preg_replace('/\n/', '', $s);
+        #$s = str_replace('<w>',PHP_EOL.'<w>',$s);
+        $s = str_replace('</w>','</w>'.PHP_EOL,$s);
         file_put_contents($pathToFile, $s);
     }
 }
