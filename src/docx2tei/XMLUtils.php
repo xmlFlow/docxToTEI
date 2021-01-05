@@ -174,7 +174,13 @@ class XMLUtils {
                         array_shift($prefix);
                         for ($i = 0; $i < count($tag["attributes"]); $i++) {
                             if ($i < count($tag["attributes"])) {
-                                $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                                try {
+                                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                                } catch (Exception $e) {
+                                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                                    echo 'Caught exception: ',  $tag["attributes"], "\n";
+                                }
+
                                 $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
                                 if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
                                     $val = $prefix[$i];
@@ -238,6 +244,13 @@ class XMLUtils {
                     array("tag" => "place", "default" => "above_the_line"),
                     array("tag" => "hand", "default" => "first")
                 )
+            ),
+            array(
+                "original" => "ref",
+                "replace" => "ref",
+                "attributes" => array(
+                    array("target"=>"target")
+                )
             ),*/
             array(
                 "original" => "?",
@@ -269,11 +282,6 @@ class XMLUtils {
                 "attributes" => array(
                     array("tag" => "rend", "default" => "crossed_out"),
                 )
-            ),
-            array(
-                "original" => "ref",
-                "replace" => "ref",
-                "attributes" => array()
             ),
             array(
                 "original" => "sb",

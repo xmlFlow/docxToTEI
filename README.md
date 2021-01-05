@@ -26,7 +26,7 @@
 | 5  :robot: |  ` The attribute values within pagebreaks <pb> are wrongly placed: <pb n="#surface3" facs="2r"/> should be <pb n="2r " facs="#surface3"/>` | Corrected |
 | 6  :robot: | `In the heading “Abstract”, one single word in italics was divided into two <foreign>s.guṭha became <foreign>g</foreign><foreign>uṭha</foreign>` | Corrected | 
 | 7 :robot:  | `When there are multiple names inside a sentence, the first name after the <s> tag do not seem to be processed: <s xml:lang="nep"><w>आगे</w> #pen{<w>रामहरी</w>}# <placeName><w>पाटनका</w></placeName>`|  Manik can you run it again, I found missing hashtags there. I added a rule to check for missing end tags|
-| 8  | `#ref{https://web.de}{गूठका खेत वढाउदै}` |  `Not yet implemented. A proper mechanism to handle urls, without breaking the existing attribute handling`|
+| 8  | `#ref@https://web.de{गूठका खेत वढाउदै}` |  `Not yet implemented. A proper mechanism to handle urls, without breaking the existing attribute handling`|
 | 9. :robot: | `[Field name in word template:] Copyright statement: --> for the <p></p> under  <availability status="restricted">.` | added |
 | 10. :robot: | ` <<date>yyyy</date>` | Added to header license, only date was not valid|
 | 11. :robot: | ` <p>License text</p>` | Added to header license|
@@ -43,6 +43,7 @@
 | 21. :robot: | `Pbs in Edition and remove the structure header` | implemented |
 |22. :robot:  | `delete all remaining empty ps inside ab`| implemented |
 |23. :robot:  | `#ref{URL}#`| implemented|
+
 
 
 
