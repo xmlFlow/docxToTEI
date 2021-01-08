@@ -98,6 +98,7 @@ Header implementations are done.
 |21. Testen | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
 
 
+
  
  
  ### Formal annotations
@@ -130,8 +131,12 @@ Header implementations are done.
  | 26. :heavy_check_mark: | `.` | | . | `<orig>.</orig>` | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | 24. :heavy_check_mark: | between 2 `ab` s there should be `p` s| | | | |
  | 24. :heavy_check_mark: | `#ref@URL{}# `| |`#ref{URL}# e.g.  #ref{https://google.com}# #ref@URL{}# --> default attribute: target e.g ref@https://web.de{गूठका खेत वढाउदै}` | | |
- 
- 
+ | 25. | pen number |  | |
+ | 26. | Technical documention and a image of the workflow |  | |
+ | 27. | Simons mail - wednsday  |  | |
+ | 28. :heavy_check_mark:|  change needs wholeday, but creation date is the year |  | |
+ |29. | 15c has an extra lb  before table, unless there is a line break, there is no line break aFTER TABLE|  | |
+
  
   
  

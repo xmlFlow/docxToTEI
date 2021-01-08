@@ -9,10 +9,12 @@ class Headers extends DOMDocument {
     var $document;
     var $headers;
     var $currentDate;
+    var $currentYear;
 
     public function __construct(TEIDocument $document, $headers) {
         parent::__construct('1.0', 'utf-8');
-        $this->currentDate = date("Y");
+        $this->currentDate = date("Y-m-d");
+        $this->currentYear = date("Y");
         $this->document = $document;
         $this->headers = $headers;
         $this->setHeaders();
@@ -69,7 +71,7 @@ class Headers extends DOMDocument {
 
     function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
-        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentYear . '" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->document->teiHeader->appendChild($this->document->importNode($revisionDesc, true));
     }
 
