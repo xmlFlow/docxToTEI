@@ -25,8 +25,9 @@ class FinalDocument extends DOMDocument {
 
         # LBs  adds begin element, enumerate, then remove the last lb.
         XMLUtils::addChildElement($document, "ab", "lb");
-        XMLUtils::enumerateLBs($document);
         XMLUtils::removeLastElementOfParent($document,'lb');
+        XMLUtils::removeElementBefore($document,'table','lb');
+        XMLUtils::enumerateLBs($document);
 
 
         XMLUtils::removeElement($document, "//add/w");
@@ -35,6 +36,7 @@ class FinalDocument extends DOMDocument {
         // String operations
 
         $s = $document->saveXML();
+        $s = XMLUtils::getMarkups($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
 
         $this->isComplexStatementsCorrect($s);

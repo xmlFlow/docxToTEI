@@ -1,4 +1,14 @@
-## Tokens used in xml and possible pseudocodes in Word
+# Technical description
+
+This converter tool transforms semantically annotated MS-word documents (DOCX) into structured TEI XML documents.
+Tool can be used as a web-based tool and a command-line facility. It is implemented in php programming language. 
+Conversion occurs in three main phases, namely extraction, structure creation, TEI generation and annotation identification.
+Extraction part reads the Word document and extracts the content and the styling information.
+After the extraction, the structuring happens  and generic PHP objects are created. Those objects contain the styling and structural information and can be modified to user needs.
+PHP objects are grouped into TEI XML objects in the third phase and documents parts are reflected in the TEI XML  objects.
+Last part of the conversion process is annotation  generation in two-levels. First part is the line level annotation grouping, parsing and replacing  the content. 
+Second and final part of annotation identification is applying global rules for the whole documentation.    
+
 
 ### Guidelines
 
@@ -131,11 +141,11 @@ Header implementations are done.
  | 26. :heavy_check_mark: | `.` | | . | `<orig>.</orig>` | [orig](https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-orig.html) |
  | 24. :heavy_check_mark: | between 2 `ab` s there should be `p` s| | | | |
  | 24. :heavy_check_mark: | `#ref@URL{}# `| |`#ref{URL}# e.g.  #ref{https://google.com}# #ref@URL{}# --> default attribute: target e.g ref@https://web.de{गूठका खेत वढाउदै}` | | |
- | 25. | pen number |  | |
- | 26. | Technical documention and a image of the workflow |  | |
- | 27. | Simons mail - wednsday  |  | |
- | 28. :heavy_check_mark:|  change needs wholeday, but creation date is the year |  | |
- |29. | 15c has an extra lb  before table, unless there is a line break, there is no line break aFTER TABLE|  | |
+ | 25. :heavy_check_mark: | pen number |  | |
+ | 26. :heavy_check_mark: | Technical documentation and a image of the workflow |  | |
+ | 27. | Simons mail - Wednesday  |  | |
+ | 28. :heavy_check_mark:|  change needs whole, but creation date is the year |  | |
+ |29. :heavy_check_mark: | 15c has an extra lb  before table, unless there is a line break, there is no line break aFTER TABLE|  | |
 
  
   

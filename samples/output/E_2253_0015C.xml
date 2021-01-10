@@ -25,7 +25,7 @@
                     of Pre-modern Nepal
                 </publisher>
                 <pubPlace>Heidelberg, Germany</pubPlace>
-                <date>2021-01-08</date>
+                <date>2021-01-10</date>
                 <availability status="restricted">
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
                         Commons Attribution-ShareAlike 4.0 Unported License
@@ -76,9 +76,10 @@
                 </p>
                 <p>The text as it appears in the original document is reproduced as faithfully as possible, including
                     diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
-                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
-                    lines of various shapes, often used as placeholders or structuring elements. The editorial
-                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
+                    features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or
+                    macrons and lines of various shapes, often used as placeholders or structuring elements. The
+                    editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>
+                        reg
                     </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
                     Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
                     Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
@@ -87,7 +88,7 @@
         </encodingDesc>
         <profileDesc>
             <creation>
-                <date>2021-01-08</date>
+                <date>2021-01-10</date>
             </creation>
         </profileDesc>
         <revisionDesc>
@@ -122,12 +123,6 @@
                 <pb n="1r-part1" facs="#surface1"/>
                 <ab type="invocatio" corresp="#invocatio">
                     <lb n="1"/>
-                    <ref target="http://wwww.google.com/534534555555555555555555555555555555555555r">
-                        <w>फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी</w>
-                        <w>फुल्चोकी</w>
-                        <w>फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी</w>
-                    </ref>
-                    <lb n="2"/>
                     <supplied reason="lost">
                         <w>श्रीमत्सेंद्र</w>
                         <w>१</w>
@@ -145,7 +140,6 @@
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text">
-                    <lb n="1"/>
                     <s xml:lang="san">
                         <w>स्वस्ति</w>
                     </s>
@@ -155,7 +149,6 @@
                     </s>
                     <s>
                         <w>आगे</w>
-                        <lb n="2"/>
                         <w>रथमहा</w>
                         <w>सुनको</w>
                         <w>विमान</w>
@@ -166,16 +159,15 @@
                         <placeName>
                             <w>पाटनका</w>
                         </placeName>
-                        <lb n="3"/>
                         <placeName>
                             <w>ओकु</w>
                             <w>वाहाल</w>
                             <w>टोलको</w>
                         </placeName>
                         <placeName>
-                            <w>महावुद्ध</w>
+                            <w>महा</w>
+                            <w>वुद्ध</w>
                         </placeName>
-                        <lb n="4"/>
                         <w>घरको</w>
                         <persName>
                             <w>रामानंद</w>
@@ -184,8 +176,8 @@
                     </s>
                     <s>
                         <w>तेरा</w>
-                        <w>पुरू<lb break="no" n="5"/>षा
-                        </w>
+                        <w>पुरू</w>
+                        <w>षा</w>
                         <persName>
                             <w>जीवराज</w>
                             <w>वांडाले</w>
@@ -198,8 +190,8 @@
                         <w>चढाउंदा</w>
                         <w>गूठ</w>
                         <w>राख्याको</w>
-                        <w>का<lb break="no" n="6"/>म
-                        </w>
+                        <w>का</w>
+                        <w>म</w>
                         <w>चलाई</w>
                         <w>वाकि</w>
                         <w>रह्याका</w>
@@ -213,7 +205,6 @@
                         </surplus>
                         <w>राख्याका</w>
                     </s>
-                    <lb n="7"/>
                     <table>
                         <row>
                             <cell>
@@ -303,7 +294,7 @@
                             </cell>
                         </row>
                     </table>
-                    <lb n="8"/>
+                    <lb n="1"/>
                     <s xml:lang="hin">
                         <w>मेरो</w>
                         <gap extent="5 characters" agent="breakage" reason="illegible"/>
@@ -316,7 +307,7 @@
                         <w>होइन</w>
                     </s>
                     <space quantity="5" unit="lines"/>
-                    <lb n="9"/>
+                    <lb n="2"/>
                     <s>
                         <w>मेरो</w>
                         <w>
@@ -327,7 +318,7 @@
                             <add place="above_the_line" hand="first">हो</add>
                         </w>
                         ,
-                        <lb n="10"/>
+                        <lb n="3"/>
                         <w>सेत्ये</w>
                         <unclear cert="low">
                             <w>होइन</w>
@@ -348,7 +339,7 @@
                                 <corr>नाम</corr>
                             </choice>
                         </w>
-                        <lb n="11"/>
+                        <lb n="4"/>
                         <w>सेतो</w>
                         <orig>|||||</orig>
                         <w>होइन</w>
@@ -365,7 +356,7 @@
                         </geogName>
                         <w>होइन</w>
                     </s>
-                    <lb n="12"/>
+                    <lb n="5"/>
                     <s>
                         <w>मेरो</w>
                         <w>नाम</w>
@@ -381,7 +372,7 @@
                     <s>
                         <w>मेरो</w>
                         <w>नाम</w>
-                        <lb n="13"/>
+                        <lb n="6"/>
                         <w>सेतो</w>
                         <w>होइन</w>
                     </s>
@@ -395,17 +386,19 @@
                         <w>मेरो</w>
                         <w>नाम</w>
                         <w>सेतो</w>
-                        <lb n="14"/>
+                        <lb n="7"/>
                         <w>होइन</w>
                     </s>
                     <s part="I">
                         <w>मेरो</w>
                         <w>नाम</w>
                         <w>सेतो</w>
-                        <orig>•</orig>
+                        <orig>
+                            <orig>•</orig>
+                        </orig>
                         <w>होइन</w>
                     </s>
-                    <lb n="15"/>
+                    <lb n="8"/>
                 </ab>
                 <p/>
                 <pb n="1r-part2" facs="#surface2"/>
@@ -486,11 +479,7 @@
             </div>
             <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
                 <pb n="1r-part1"/>
-                <p>Śrī Matsyendra[n&amp;ātha] –
-                    <ref target="http://wwww.google.com/4534534555555555555555555555555555555555555r">
-                        फुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकीफुल्चोकी
-                    </ref>
-                </p>
+                <p>Śrī Matsyendra[nātha] - 1</p>
                 <p>...
                     <note place="end">The text written in the right margin has been blacked out with ink, written
                         in <placeName>Kathmandu</placeName>.

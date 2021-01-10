@@ -361,6 +361,13 @@ class XMLUtils {
         return $tag;
     }
 
+    public static function removeElementBefore($dom, string $tag , string $remove) {
+        $xpath = new DOMXPath($dom);
+
+        foreach ($xpath->evaluate('//' . $tag . '/preceding-sibling::lb') as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    }
     public static function removeLastElementOfParent($dom, string $tag) {
         $xpath = new DOMXPath($dom);
         $lastLbs = $xpath->query('//ab/' . $tag . '[last()]');
