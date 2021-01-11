@@ -147,8 +147,17 @@ Header implementations are done.
  | 28. :heavy_check_mark:|  change needs whole, but creation date is the year |  | |
  |29. :heavy_check_mark: | 15c has an extra lb  before table, unless there is a line break, there is no line break aFTER TABLE|  | |
 
- 
-  
+
+<add place="above_the_line" hand="first"><w>सिलापत्रको</w></add>
+
+<add place="above_the_line" hand="first"><w>सिलापत्रको</w> <w>नकल</w></add>
+
+<w>सिला<add place="above_the_line" hand="first">पत्रको</add></w>
+
+<del rend="overstrike"><w>सिलापत्रको</w></del>
+
+<del rend="overstrike"><w>सिलापत्रको</w> <w>नकल</w></del>
+<w>सिला<del rend="overstrike">पत्रको</del></w>
  
  
  ### Structural identifications

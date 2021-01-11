@@ -145,14 +145,15 @@ class XMLUtils {
      */
     public static function createAddElement(string $s) {
 
-        $s = preg_replace_callback(
-            '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U',
-            function ($matches) {
-                $parts = explode('@', $matches[1]);
-                $place = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "above_the_line";
-                $hand = (count($parts) > 2 && strlen($parts[2]) > 0) ? $parts[2] : "first";
-                return '<w><add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n", "", $matches[2]) . '</add>' . $matches[3] . '</w>';
-            },
+        $s = preg_replace_callback_array(
+            [
+                '/#\&amp;([@\w]{0,}){(.*)}#(\p{Devanagari}*)/U' => function ($matches) {
+                    $parts = explode('@', $matches[1]);
+                    $place = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "above_the_line";
+                    $hand = (count($parts) > 2 && strlen($parts[2]) > 0) ? $parts[2] : "first";
+                    return '<w><add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n", "", $matches[2]) . '</add>' . $matches[3] . '</w>';
+                },
+            ],
             $s
         );
         return $s;
