@@ -128,14 +128,19 @@
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text" key="valEdi">
-                    <w>
-                        <add place="above_the_line" hand="first">सिलापत्रको</add>
-                    </w>
-                    <w>
-                        <add place="above_the_line" hand="first">सिलापत्रको नकल</add>
+                    <add place="above_the_line" hand="first">
+                        <w>सिलापत्रको</w>
+                    </add>
+                    <w>नकल</w>
+                    <add place="above_the_line" hand="first">
+                        <w>सिलापत्रको</w>
+                        <w>नकल</w>
+                    </add>
+                    <w>सिला
+                        <add place="above_the_line" hand="first">पत्रको</add>
                     </w>
                     <w>सिला</w>
-                    <w>
+                    <w>सिला
                         <add place="above_the_line" hand="first">पत्रको</add>
                     </w>
                     <del rend="overstrike">
@@ -190,7 +195,7 @@
                                 <lb/>
                             </cell>
                             <cell>
-                                <p/>
+                                <lb/>
                             </cell>
                         </row>
                     </table>

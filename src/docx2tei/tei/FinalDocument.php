@@ -30,7 +30,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::enumerateLBs($document);
 
 
-        XMLUtils::removeElement($document, "//add/w");
+        XMLUtils::removeElement($document, "//w/add/w");
         XMLUtils::removeElement($document, "//sec");
 
         // String operations
