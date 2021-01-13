@@ -143,11 +143,12 @@ Header implementations are done.
  | 24. :heavy_check_mark: | `#ref@URL{}# `| |`#ref{URL}# e.g.  #ref{https://google.com}# #ref@URL{}# --> default attribute: target e.g ref@https://web.de{गूठका खेत वढाउदै}` | | |
  | 25. :heavy_check_mark: | pen number |  | |
  | 26. :heavy_check_mark: | Technical documentation and a image of the workflow |  | |
- | 27. | Simons mail - Wednesday  |  | |
+ | 27. | Simons mail There can be  only one word. - Wednesday  |  | |
  | 28. :heavy_check_mark:|  change needs whole, but creation date is the year |  | |
  |29. :heavy_check_mark: | 15c has an extra lb  before table, unless there is a line break, there is no line break aFTER TABLE|  | |
 
-
+#del@overstrike{ साल मिति वैशाख }#
+वै#del@overstrike{शाख }#द्वारा
 <add place="above_the_line" hand="first"><w>सिलापत्रको</w></add>
 
 <add place="above_the_line" hand="first"><w>सिलापत्रको</w> <w>नकल</w></add>

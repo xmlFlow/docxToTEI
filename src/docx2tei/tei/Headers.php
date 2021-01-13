@@ -71,7 +71,7 @@ class Headers extends DOMDocument {
 
     function setRevisionDescription(): void {
         $revisionDesc = $this->createDocumentFragment();
-        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentYear . '" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
+        $revisionDesc->appendXML('<revisionDesc><listChange> <change type="internal" when="' . $this->currentDate . '" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc>');
         $this->document->teiHeader->appendChild($this->document->importNode($revisionDesc, true));
     }
 
@@ -175,7 +175,7 @@ class Headers extends DOMDocument {
         $targetAttrib->value = 'http://creativecommons.org/licenses/by-sa/4.0/';
         $licence->appendChild($targetAttrib);
         $availability->appendChild($licence);
-        $date = $this->createElement("date",$this->currentDate);
+        $date = $this->createElement("date",$this->currentYear);
         $pubStmt->appendChild($date);
         $p = $this->createElement("p", $this->headers["h20"] ?? "");
         $availability->appendChild($p);
