@@ -25,12 +25,12 @@ user:encrypted-pass
 *  Server will be accessible under https://my.domain/nhdp/upload.php
 
 #### Create Distribution file (only for release by the developer)
-
-`zip -r /tmp/nhdp.zip  upload/ -x "upload/.git/*" "upload/docxtotei/.git/*" "upload/.gitmodules" "upload/.gitignore" "upload/.idea/*"`
-
-
+cd ~/projects/
+zip -r /tmp/nhdp.zip  upload/ -x "upload/.git/*" "upload/docxtotei/.git/*" "upload/.gitmodules" "upload/.gitignore" "upload/.idea/*" "upload/docxtotei/.idea/*" 
 
 
+
+sudo apt-get install texlive-full texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-generic-extra
 
 
 
