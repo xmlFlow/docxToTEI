@@ -155,12 +155,6 @@ class XMLUtils {
                     return '<add place="' . $place . '"  hand="' . $hand . '">'. $matches[3] . '</add>';
                 }
             },
-
-//                '/#\&amp;([@\w]{0,}){(.*)}#/U' => function ($matches) {
-//                    list($place, $hand) = self::_addElementDefaults($matches[1]);
-//                    return '<add place="' . $place . '"  hand="' . $hand . '">' . str_replace("\n", "", $matches[2]) . '</add>' . $matches[3] ;
-//                },
-
             ],
             $s
         );
