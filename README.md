@@ -55,14 +55,7 @@ Second and final part of annotation identification is applying global rules for 
 |23. :robot:  | `#ref{URL}#`| implemented|
 
 
-
-
-  
-
 Header implementations are done.
-
-
-
 
  ### Testing Round 2
   | Nr. Status | Fehler | Remarks|
@@ -104,7 +97,7 @@ Header implementations are done.
 | 17. Testen | `<add> works with default values, also @@second in #&, great!, also more than 1 word in an addition is correctly annotated, but additions can also occur inside a word, e.g. #&{सल्याना}#का shouldn't be <add place="above_the_line" hand="first"> <w>सल्याना</w> </add> <w>का</w> but <w><add place="above_the_line" hand="first">सल्याना</add>का</w>` | | | 
 | 18. Testen | ` ZWJ (&#8205;) and ZWNJ (&#x200c;) should come inside the <w>, e.g. सर्&#8205;याको shouldn't be <w>सर्</w> &#8205; <w>याको</w> but <w>सर्&#8205;याको</w>` | Manik, I did the & conversion, but the XML was invalid. I can do it, but let us have a discussion there. | | 
 | 19. Testen | `<foreign>sāhaba</foreign> <foreign> </foreign> <foreign>sikriṭari</foreign> --> Wenn ein Leerzeichen kursiviert wird, erscheint es als foreign tag. Kann man da etwas dagegen machen? Ich nehme an, dass das ein häufiger Nutzerfehler sein könnte.` | | habe ein neuer Regel hinzugefügt, falls ein tag ohne inhalt ist, sollte es entfernen|
-| 20. Testen| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | Spezifikation unischer| 
+| 20. Testen| `<surplus> works, but default @reason="repeated" is not needed; @all: or?` | | | 
 |21. Testen | last minus of a sentence| | | | <lb breank="no"> Es kann sein, dass es noch nicht nummeriert wird |
 
 

@@ -23,7 +23,7 @@
                     of Pre-modern Nepal
                 </publisher>
                 <pubPlace>Heidelberg, Germany</pubPlace>
-                <date>2021-01-11</date>
+                <date>2021</date>
                 <availability status="restricted">
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
                         Commons Attribution-ShareAlike 4.0 Unported License
@@ -39,11 +39,11 @@
                     <msIdentifier>
                         <settlement>Kathmandu</settlement>
                         <repository>National Archives</repository>
-                        <idno>Inventory number assigned by holding institution</idno>
-                        <altIdentifier type="Alternative manifestation/inventory Type of manifestation">
-                            <settlement>Alternative Location</settlement>
-                            <collection>Alternative holding institution</collection>
-                            <idno>Alternative Inventory number</idno>
+                        <idno/>
+                        <altIdentifier type="Alternative Inventory number">
+                            <settlement/>
+                            <collection/>
+                            <idno/>
                         </altIdentifier>
                     </msIdentifier>
                     <msContents>
@@ -84,12 +84,13 @@
         </encodingDesc>
         <profileDesc>
             <creation>
-                <date>2021-01-11</date>
+                <date>2021-01-17</date>
             </creation>
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change type="internal" when="2021" who="#AUTO">Automatically converted from docx to TEI-XML</change>
+                <change type="internal" when="2021-01-17" who="#AUTO">Automatically converted from docx to TEI-XML
+                </change>
             </listChange>
         </revisionDesc>
     </teiHeader>
@@ -128,10 +129,9 @@
                 </ab>
                 <p/>
                 <ab type="maintext" corresp="#main_text" key="valEdi">
-                    <add place="above_the_line" hand="first">
-                        <w>सिलापत्रको</w>
-                    </add>
-                    <w>नकल</w>
+                    <w>
+                        <add place="above_the_line" hand="first">सिलापत्रको</add>
+                    </w>
                     <add place="above_the_line" hand="first">
                         <w>सिलापत्रको</w>
                         <w>नकल</w>
@@ -139,7 +139,6 @@
                     <w>सिला
                         <add place="above_the_line" hand="first">पत्रको</add>
                     </w>
-                    <w>सिला</w>
                     <w>सिला
                         <add place="above_the_line" hand="first">पत्रको</add>
                     </w>

@@ -1,212 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="E_2253_0015A">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to Rudravīra Sāha and
-                    Bam Sāha in justification of his claim to control the Luthāma Guṭhī [VS 1859]
-                </title>
-                <title type="short">Short title of document</title>
-                <title type="sub">E_2253_0015A</title>
-                <author role="issuer">Badarībāṇa Sāhī]</author>
-                <respStmt>
-                    <resp>main editor</resp>
-                    <name type="synopsis_editor">Name of editor(s)</name>
-                </respStmt>
-                <respStmt>
-                    <resp>collaborator</resp>
-                    <name type="collaborator">Name of collaborator(s)</name>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
-                    of Pre-modern Nepal
-                </publisher>
-                <pubPlace>Heidelberg, Germany</pubPlace>
-                <date>2021-01-13</date>
-                <availability status="restricted">
-                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
-                        Commons Attribution-ShareAlike 4.0 Unported License
-                    </licence>
-                    <p/>
-                </availability>
-            </publicationStmt>
-            <notesStmt>
-                <note/>
-            </notesStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <settlement>Kathmandu</settlement>
-                        <repository>National Archives</repository>
-                        <idno/>
-                        <altIdentifier type="Alternative Inventory number">
-                            <settlement/>
-                            <collection/>
-                            <idno/>
-                        </altIdentifier>
-                    </msIdentifier>
-                    <msContents>
-                        <textLang mainLang="Main language of document" otherLangs="Other languages"/>
-                    </msContents>
-                    <physDesc>
-                        <p>For details see
-                            <ref target="entry in database">entry in database</ref>
-                        </p>
-                    </physDesc>
-                    <history>
-                        <origin>
-                            <p>Issued in <origDate>Date of origin of document</origDate> from
-                                <origPlace>Place of origin of document</origPlace>
-                            </p>
-                        </origin>
-                    </history>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-        <encodingDesc>
-            <editorialDecl>
-                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
-                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
-                    optionally commentary.
-                </p>
-                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
-                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
-                    features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or
-                    macrons and lines of various shapes, often used as placeholders or structuring elements. The
-                    editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>
-                        reg
-                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
-                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
-                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
-                </p>
-            </editorialDecl>
-        </encodingDesc>
-        <profileDesc>
-            <creation>
-                <date>2021-01-13</date>
-            </creation>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change type="internal" when="2021" who="#AUTO">Automatically converted from docx to TEI-XML</change>
-            </listChange>
-        </revisionDesc>
-    </teiHeader>
-    <facsimile>
-        <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0">
-            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
-            <zone xml:id="space2" ulx="0" uly="0" lrx="0" lry="0"/>
-        </surface>
-        <surface xml:id="surface2" facs="E_2253_0533.png" ulx="0" uly="0" lrx="0" lry="0"/>
-        <surface xml:id="surface2" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0"/>
-    </facsimile>
-    <text>
-        <body>
-            <div xml:id="abs" type="abstract" xml:lang="eng">
-                <p>Abstract</p>
-            </div>
-            <div xml:id="ed" type="edition" xml:lang="san">
-                <pb n="1r" facs="#surface1"/>
-                <ab type="invocatio" corresp="#invocatio">
-                    <lb n="1"/>
-                    <w>श्रीः</w>
-                    \
-                </ab>
-                <p/>
-                <ab type="space" corresp="#space1" newArttiibute="newAttributeValue">
-                    <lb n="1"/>
-                    <w>नं</w>
-                    .
-                    <w>६६</w>
-                </ab>
-                <p/>
-                <ab type="space" corresp="#space2">
-                    <lb n="1"/>
-                    <w>श्रीमालीका</w>
-                </ab>
-                <p/>
-                <ab type="maintext" corresp="#main_text" key="valEdi">
-                    <w>हेर्ने</w>
-                    <unclear cert="high">
-                        <w>स्ही</w>
-                    </unclear>
-                    <w>नौ</w>
-                    <persName>
-                        <w>हरि</w>
-                    </persName>
-                    <orig>
-                        <orig>•</orig>
-                    </orig>
-                    <w>हेर्ने</w>
-                    <unclear cert="high">
-                        <w>स्ही</w>
-                    </unclear>
-                    <w>नौ</w>
-                    <persName>
-                        <w>हरि</w>
-                    </persName>
-                    <orig>
-                        <orig>•</orig>
-                    </orig>
-                    <table>
-                        <row>
-                            <cell>Table header 1
-                                <lb/>
-                            </cell>
-                            <cell>Table header 2
-                                <lb/>
-                            </cell>
-                            <cell>Table header 3
-                                <lb/>
-                            </cell>
-                            <cell>Table header 3
-                                <lb/>
-                            </cell>
-                        </row>
-                        <row>
-                            <cell>
-                                <w>शुभमस्तु</w>
-                                <w>सर्वदा</w>
-                                ।
-                                <w>तिष्ठा</w>
-                                <w>दिन</w>
-                                <w>जुरो</w>
-                                <lb/>
-                            </cell>
-                            <cell>
-                                <w>सर्वदा</w>
-                                <lb/>
-                            </cell>
-                            <cell>
-                                <w>सहस्र</w>
-                                <w>पुण्य</w>
-                                <w>राक</w>
-                                <w>जुरो</w>
-                                <lb/>
-                            </cell>
-                            <cell>
-                                <lb/>
-                            </cell>
-                        </row>
-                    </table>
-                </ab>
-                <p/>
-            </div>
-            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
-                <p>English translation</p>
-            </div>
-            <div xml:id="synopsis" type="synopsis" xml:lang="eng">
-                <p>synopsis
-                    <note place="end">This is a synopsis footnote</note>
-                </p>
-            </div>
-            <div xml:id="commentary" type="commentary" xml:lang="eng">
-                <p>Commentry
-                    <note place="end">This is a commentary footnote</note>
-                </p>
-            </div>
-        </body>
-    </text>
-</TEI>
+<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="E_2253_0015A"> <teiHeader> <fileDesc> <titleStmt> <title type="main">A copy of an account by Rāmānanda Bā̃ḍā of petitions he made to Rudravīra Sāha and Bam Sāha in justification of his claim to control the Luthāma Guṭhī [VS 1859]</title> <title type="short">Short title of document</title> <title type="sub">E_2253_0015A</title> <author role="issuer">Badarībāṇa Sāhī]</author> <respStmt> <resp>main editor</resp> <name type="synopsis_editor">Name of editor(s)</name> </respStmt> <respStmt> <resp>collaborator</resp> <name type="collaborator">Name of collaborator(s)</name> </respStmt> </titleStmt> <publicationStmt> <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher> <pubPlace>Heidelberg, Germany</pubPlace> <date>2021</date> <availability status="restricted"> <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence> <p/> </availability> </publicationStmt> <notesStmt> <note/> </notesStmt> <sourceDesc> <msDesc> <msIdentifier> <settlement>Kathmandu</settlement> <repository>National Archives</repository> <idno/> <altIdentifier type="Alternative Inventory number"> <settlement/> <collection/> <idno/> </altIdentifier> </msIdentifier> <msContents> <textLang mainLang="Main language of document" otherLangs="Other languages"/> </msContents> <physDesc> <p>For details see <ref target="entry in database">entry in database </ref></p> </physDesc> <history> <origin> <p>Issued in <origDate>Date of origin of document</origDate> from <origPlace>Place of origin of document</origPlace></p> </origin> </history> </msDesc> </sourceDesc> </fileDesc> <encodingDesc> <editorialDecl> <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p> <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p> </editorialDecl> </encodingDesc> <profileDesc><creation> <date>2021-01-13</date> </creation> </profileDesc> <revisionDesc><listChange> <change type="internal" when="2021-01-13" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc> </teiHeader> <facsimile> <surface xml:id="surface1" facs="E_2253_0532.png" ulx="0" uly="0" lrx="0" lry="0"> <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="space2" ulx="0" uly="0" lrx="0" lry="0"/> </surface> <surface xml:id="surface2" facs="E_2253_0533.png" ulx="0" uly="0" lrx="0" lry="0"/> <surface xml:id="surface2" facs="E_2253_0534.png" ulx="0" uly="0" lrx="0" lry="0"/> </facsimile> <text> <body> <div xml:id="abs" type="abstract" xml:lang="eng"> <p>Abstract</p> </div> <div xml:id="ed" type="edition" xml:lang="san"> <pb n="1r" facs="#surface1"/> <ab type="invocatio" corresp="#invocatio"><lb n="1"/><w>श्रीः</w>
+\</ab> <p/> <ab type="space" corresp="#space1" newArttiibute="newAttributeValue"><lb n="1"/><w>नं</w>
+.<w>६६</w>
+</ab> <p/> <ab type="space" corresp="#space2"> <lb n="1"/> <w>श्रीमालीका</w>
+ </ab> <p/> <ab type="maintext" corresp="#main_text" key="valEdi"><w>हेर्ने</w>
+ <unclear cert="high"><w>स्ही</w>
+</unclear> <w>नौ</w>
+ <persName><w>हरि</w>
+</persName> <orig><orig>•</orig></orig> <w>हेर्ने</w>
+ <unclear cert="high"><w>स्ही</w>
+</unclear> <w>नौ</w>
+ <persName><w>हरि</w>
+</persName> <orig><orig>•</orig></orig> <table> <row> <cell> Table header 1<lb/> </cell> <cell> Table header 2<lb/> </cell> <cell> Table header 3<lb/> </cell> <cell> Table header 3<lb/> </cell> </row> <row> <cell> <w>शुभमस्तु</w>
+ <w>सर्वदा</w>
+ ।<w>तिष्ठा</w>
+ <w>दिन</w>
+ <w>जुरो</w>
+<lb/> </cell> <cell> <w>सर्वदा</w>
+<lb/> </cell> <cell> <w>सहस्र</w>
+ <w>पुण्य</w>
+ <w>राक</w>
+ <w>जुरो</w>
+<lb/> </cell> <cell> <lb/> </cell> </row> </table> </ab> <p/> </div> <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng"> <p>English translation</p> </div> <div xml:id="synopsis" type="synopsis" xml:lang="eng"> <p>synopsis<note place="end"> This is a synopsis footnote</note></p> </div> <div xml:id="commentary" type="commentary" xml:lang="eng"> <p>Commentry <note place="end"> This is a commentary footnote</note></p> </div> </body> </text> </TEI>
