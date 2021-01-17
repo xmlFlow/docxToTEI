@@ -149,14 +149,26 @@
                         <w>सिलापत्रको</w>
                         <w>नकल</w>
                     </del>
-                    <w>सिला</w>
-                    <del rend="overstrike">
-                        <w>पत्रको</w>
-                    </del>
-                    <w>सहस्र</w>
-                    <w>पुण्य</w>
-                    <w>राक</w>
-                    <w>जुरो</w>
+                    <w>सिला
+                        <del rend="overstrike">
+                            <w>पत्रको</w>
+                        </del>
+                    </w>
+                    <w>सिला
+                        <del rend="overstrike">
+                            <w>पत्रको</w>
+                        </del>
+                    </w>
+                    <w>
+                        <del rend="overstrike">
+                            <w>पत्रको</w>
+                        </del>
+                    </w>
+                    <w>सिला
+                        <del rend="overstrike">
+                            <w>पत्रको</w>
+                        </del>
+                    </w>
                     <table>
                         <row>
                             <cell>Table header 1

@@ -26,9 +26,9 @@ class XMLUtils {
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
 
         $s = XMLUtils::createRef($s);
-        # 2 times
+
         $s = XMLUtils::createAddElement($s);
-        #$s = XMLUtils::createAddElement($s);
+        $s = XMLUtils::createDelElement($s);
         $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createDot($s);
 
@@ -161,6 +161,30 @@ class XMLUtils {
         return $s;
 
     }
+    /**
+     * @param string $s
+     * @return string
+     */
+    public static function createDelElement(string $s) {
+
+        $s = preg_replace_callback_array(
+            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s\n]/' => function ($matches) {
+                $parts = explode('@', $matches[2]);
+                $rend = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "crossed_out";
+                if (strlen($matches[1]) > 0 or strlen($matches[4]) > 4) {
+                    return '<w>' . $matches[1] . '<del rend="' . $rend . '">' . $matches[3] . '</del></w>';
+                } else {
+                    return '<del rend="' . $rend . '">' . $matches[3] . '</del>';
+                }
+            },
+            ],
+            $s
+        );
+        return $s;
+
+    }
+
+
 
     /**
      * @param string $s
@@ -301,13 +325,7 @@ class XMLUtils {
                     array("tag" => "reason", "default" => "lost"),
                 )
             ),
-            array(
-                "original" => "del",
-                "replace" => "del",
-                "attributes" => array(
-                    array("tag" => "rend", "default" => "crossed_out"),
-                )
-            ),
+
             array(
                 "original" => "sb",
                 "replace" => "sb",
