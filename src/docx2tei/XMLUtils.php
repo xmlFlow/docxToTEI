@@ -146,13 +146,12 @@ class XMLUtils {
     public static function createAddElement(string $s) {
 
         $s = preg_replace_callback_array(
-            [ '/(.*)#&amp;([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s\n]/' => function ($matches) {
-                list($place, $hand) = self::_addElementDefaults($matches[2]);
-                if (strlen($matches[1])> 0 or strlen($matches[4])>4 ) {
-                    return '<w>' . $matches[1] . '<add place="' . $place . '"  hand="' . $hand . '">' . $matches[3] . '</add></w>';
-                }
-                else {
-                    return '<add place="' . $place . '"  hand="' . $hand . '">'. $matches[3] . '</add>';
+            ['/(.*)#&amp;([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s\n]/' => function ($m) {
+                list($place, $hand) = self::_addElementDefaults($m[2]);
+                if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
+                    return '<w>' . $m[1] . '<add place="' . $place . '"  hand="' . $hand . '">' . $m[3] . '</add>' . $m[4] . '</w>';
+                } else {
+                    return '<add place="' . $place . '"  hand="' . $hand . '">' . $m[3] . '</add>';
                 }
             },
             ],
@@ -168,13 +167,13 @@ class XMLUtils {
     public static function createDelElement(string $s) {
 
         $s = preg_replace_callback_array(
-            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s\n]/' => function ($matches) {
-                $parts = explode('@', $matches[2]);
+            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/>\s\n]/' => function ($m) {
+                $parts = explode('@', $m[2]);
                 $rend = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "crossed_out";
-                if (strlen($matches[1]) > 0 or strlen($matches[4]) > 4) {
-                    return '<w>' . $matches[1] . '<del rend="' . $rend . '">' . $matches[3] . '</del></w>';
+                if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
+                    return '<w>' . $m[1] . '<del rend="' . $rend . '">' . $m[3] . '</del>' . $m[4] . '</w>';
                 } else {
-                    return '<del rend="' . $rend . '">' . $matches[3] . '</del>';
+                    return '<del rend="' . $rend . '">' . $m[3] . '</del>';
                 }
             },
             ],
