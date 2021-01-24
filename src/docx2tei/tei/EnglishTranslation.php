@@ -16,9 +16,7 @@ class EnglishTranslation extends DOMDocument {
 
     protected function setEnglishTranslation(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->et . '"]/parent::sec/child::node()');
-        if (count($etSec) == 0) {
-            XMLUtils::print_error("[Warning] English Translation section not defined");
-        } else {
+        if (count($etSec) > 0){
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');
             $idAttrib->value = "et";
