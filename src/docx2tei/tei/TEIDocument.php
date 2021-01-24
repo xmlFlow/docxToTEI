@@ -192,6 +192,7 @@ class TEIDocument extends DOMDocument {
         $s = $this->newDom->saveXML();
         $s =  preg_replace('/\n/', '', $s);
         $s = str_replace('</w>','</w>'.PHP_EOL,$s);
+        $s = str_replace('&amp;','&',$s);
         $sArray = json_encode($this->xmlToArr($s));
         file_put_contents($pathToFile, $s);
     }
