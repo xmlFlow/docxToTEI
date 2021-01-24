@@ -44,7 +44,6 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
         $s = XMLUtils::createSurroundWordForChoice($s);
-        $s = XMLUtils::createWords($s);
 
 
         ## Error messages
