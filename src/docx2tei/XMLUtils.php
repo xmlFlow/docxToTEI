@@ -146,7 +146,7 @@ class XMLUtils {
     public static function createAddElement(string $s) {
 
         $s = preg_replace_callback_array(
-            ['/(.*)#&amp;([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s\n]/' => function ($m) {
+            ['/(.*)#&amp;([@\w]{0,})\{(.*)}#(.*)[<lb\/>|\s|\n]/U' => function ($m) {
                 list($place, $hand) = self::_addElementDefaults($m[2]);
                 if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
                     return '<w>' . $m[1] . '<add place="' . $place . '"  hand="' . $hand . '">' . $m[3] . '</add>' . $m[4] . '</w>';
@@ -167,7 +167,7 @@ class XMLUtils {
     public static function createDelElement(string $s) {
 
         $s = preg_replace_callback_array(
-            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/>\s\n]/' => function ($m) {
+            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/\>|\s|\n]/U' => function ($m) {
                 $parts = explode('@', $m[2]);
                 $rend = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "crossed_out";
                 if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
@@ -285,12 +285,20 @@ class XMLUtils {
      */
     private static function getTagsList(): array {
         $tags = [
-            /*array(
+            /*
+            array(
                 "original" => "&amp;",
                 "replace" => "add",
                 "attributes" => array(
                     array("tag" => "place", "default" => "above_the_line"),
                     array("tag" => "hand", "default" => "first")
+                )
+            ),
+            array(
+                "original" => "del",
+                "replace" => "del",
+                "attributes" => array(
+                    array("tag" => "rend", "default" => "crossed_out"),
                 )
             ),
             array(
@@ -324,7 +332,6 @@ class XMLUtils {
                     array("tag" => "reason", "default" => "lost"),
                 )
             ),
-
             array(
                 "original" => "sb",
                 "replace" => "sb",
