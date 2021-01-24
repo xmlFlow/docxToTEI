@@ -16,7 +16,7 @@ class Synopsis extends DOMDocument {
 
     protected function setSynopsis(): void {
         $etSec = $this->document->xpath->query('//root/text/sec/title[text()="' . $this->document->cfg->sections->synopsis . '"]/parent::sec/child::node()');
-        if ($etSec->length > 0) {
+        if (count($etSec) > 0) {
             $div = $this->createElement("div");
             $idAttrib = $this->createAttribute('xml:id');
             $idAttrib->value = "synopsis";
