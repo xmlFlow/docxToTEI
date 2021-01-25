@@ -32,5 +32,4 @@ zip -r /tmp/nhdp.zip  upload/ -x "upload/.git/*" "upload/docxtotei/.git/*" "uplo
 
 sudo apt-get install texlive-full texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-generic-extra
 
-
-
+#SBमेरो #&amp;@belowtheline@second{नाम}# काले #&amp;@@{हो}#<lb/>
