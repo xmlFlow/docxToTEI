@@ -27,8 +27,8 @@ class XMLUtils {
 
         $s = XMLUtils::createRef($s);
 
-        $s = XMLUtils::createAddElement($s);
-        $s = XMLUtils::createDelElement($s);
+        //$s = XMLUtils::createAddElement($s);
+        //$s = XMLUtils::createDelElement($s);
         $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createDot($s);
 
@@ -285,7 +285,6 @@ class XMLUtils {
      */
     private static function getTagsList(): array {
         $tags = [
-            /*
             array(
                 "original" => "&amp;",
                 "replace" => "add",
@@ -301,7 +300,7 @@ class XMLUtils {
                     array("tag" => "rend", "default" => "crossed_out"),
                 )
             ),
-            array(
+            /**array(
                 "original" => "ref",
                 "replace" => "ref",
                 "attributes" => array(
