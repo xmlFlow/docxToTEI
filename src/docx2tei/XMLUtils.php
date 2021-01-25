@@ -27,7 +27,7 @@ class XMLUtils {
 
         $s = XMLUtils::createRef($s);
 
-        $s = XMLUtils::createAddElement($s);
+        //$s = XMLUtils::createAddElement($s);
         //$s = XMLUtils::createDelElement($s);
         $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createDot($s);
