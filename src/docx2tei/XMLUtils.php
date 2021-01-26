@@ -192,7 +192,7 @@ class XMLUtils {
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
         $s = preg_replace('/\s+/i', ' ', $s);
-        $pattern = '/' . XMLUtils::$bnd . '[\w|?|]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+        $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
 
         # Ungready is very important
         preg_match_all($pattern, $s, $matches);
