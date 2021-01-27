@@ -27,8 +27,7 @@ class XMLUtils {
 
         $s = XMLUtils::createRef($s);
 
-        //$s = XMLUtils::createAddElement($s);
-        //$s = XMLUtils::createDelElement($s);
+        $s = XMLUtils::handleWordsWithAdditionAndDeletion($s);
         $s = XMLUtils::createStructuredContent($s);
         $s = XMLUtils::createDot($s);
 
@@ -143,45 +142,22 @@ class XMLUtils {
      * @param string $s
      * @return string
      */
-    public static function createAddElement(string $s) {
+    public static function handleWordsWithAdditionAndDeletion(string $s) {
 
         $s = preg_replace_callback_array(
-            ['/(.*)#&amp;([@\w]{0,})\{(.*)}#(.*)[<lb\/\>|\s|\n]/U' => function ($m) {
-                list($place, $hand) = self::_addElementDefaults($m[2]);
-                if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
-                    return '<w>' . $m[1] . '<add place="' . $place . '"  hand="' . $hand . '">' . $m[3] . '</add>' . $m[4] . '</w><';
-                } else {
-                    return '<add place="' . $place . '"  hand="' . $hand . '">' . $m[3] . '</add><';
-                }
+            ['/\$([^\p{Zs}\p{P}]*#&amp;\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                return '<w>' . $m[1] . '</w>';
             },
+                '/\$([^\p{Zs}\p{P}]*#del\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                    return '<w>' . $m[1] . '</w>';
+                },
             ],
             $s
         );
         return $s;
 
     }
-    /**
-     * @param string $s
-     * @return string
-     */
-    public static function createDelElement(string $s) {
 
-        $s = preg_replace_callback_array(
-            ['/(.*)#del([@\w]{0,})\{(.*)}#(.*)[<lb\/\>|\s|\n]/U' => function ($m) {
-                $parts = explode('@', $m[2]);
-                $rend = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "crossed_out";
-                if (strlen($m[1]) > 0 or strlen($m[4]) > 4) {
-                    return '<w>' . $m[1] . '<del rend="' . $rend . '">' . $m[3] . '</del>' . $m[4] . '</w><';
-                } else {
-                    return '<del rend="' . $rend . '">' . $m[3] . '</del><';
-                }
-            },
-            ],
-            $s
-        );
-        return $s;
-
-    }
 
 
 

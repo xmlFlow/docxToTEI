@@ -131,27 +131,35 @@
                 <ab type="maintext" corresp="#main_text" key="valEdi">
                     <lb n="1"/>
                     <w>&#x200c;</w>
-                    <lb n="2"/>
-                    <w>सिला
-                        <del rend="overstrike">
-                            <w>पत्रको</w>
-                        </del>
-                    </w>
+                    <lb n="2"/>~
+                    <w>सिला</w>
+                    <del rend="overstrike">
+                        <w>पत्रको</w>
+                    </del>
+                    ~
                     <lb n="3"/>
-                    <w>सिला
-                        <del rend="overstrike">
-                            <w>पत्रको</w>
-                        </del>
-                        सिला
-                    </w>
-                    <lb n="4"/>
-                    <w>
-                        <del rend="overstrike">
-                            <w>पत्रको</w>
-                        </del>
-                        सिला
-                    </w>
-                    <lb n="5"/>English Translation<lb n="6"/>English translation
+                    <lb n="4"/>§
+                    <del rend="overstrike">
+                        <w>पत्रको</w>
+                    </del>
+                    §
+                    <lb n="5"/>
+                    <lb n="6"/>
+                    <lb n="7"/>el@overstrike{
+                    <w>पत्रको</w>
+                    }#$
+                    <lb n="8"/>
+                    <w>सिला</w>
+                    <del rend="overstrike">
+                        <w>पत्रको</w>
+                    </del>
+                    <w>सिला</w>
+                    <lb n="9"/>
+                    <del rend="overstrike">
+                        <w>पत्रको</w>
+                    </del>
+                    <w>सिला</w>
+                    <lb n="10"/>English Translation<lb n="11"/>English translation
                 </ab>
                 <p/>
             </div>
