@@ -145,6 +145,7 @@ class XMLUtils {
     public static function handleWordsWithAdditionAndDeletion(string $s) {
 
         $s = preg_replace_callback_array(
+            //TODO add the attribute handling
             ['/\$([^\p{Zs}\p{P}]*#&amp;\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                 return '<w>' . $m[1] . '</w>';
             },
