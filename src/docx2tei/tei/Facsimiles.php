@@ -1,5 +1,5 @@
 <?php
-
+//This software is  Licensed under GPL 2. See LICESNSE//This software is  Licensed under GPL 2. See License
 namespace docx2tei\tei;
 
 use DOMDocument;

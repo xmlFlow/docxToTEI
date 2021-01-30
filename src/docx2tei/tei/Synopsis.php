@@ -30,7 +30,8 @@ class Synopsis extends DOMDocument {
             foreach ($etSec as $et) {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
-                    $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::<?php
+//This software is  Licensed under GPL 2. See LICESNSE($s);
                     # create spaces
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);

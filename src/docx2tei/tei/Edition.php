@@ -1,5 +1,5 @@
 <?php
-
+//This software is  Licensed under GPL 2. See LICESNSE
 namespace docx2tei\tei;
 
 use docx2tei\XMLUtils;
@@ -56,7 +56,8 @@ class Edition extends DOMDocument {
                     $s = $content->ownerDocument->saveXML($content);
                     $s = XMLUtils::createLBBreakForMinus($s);
 
-                    $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::<?php
+//This software is  Licensed under GPL 2. See LICESNSE($s);
                     $s = XMLUtils::createWords($s);
 
 

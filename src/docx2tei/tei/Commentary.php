@@ -33,7 +33,8 @@ class Commentary extends DOMDocument {
                 if (strlen($et->textContent) > 0) {
                     $s = $et->ownerDocument->saveXML($et);
 
-                    $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::<?php
+//This software is  Licensed under GPL 2. See LICESNSE($s);
 
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);

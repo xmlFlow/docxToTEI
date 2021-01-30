@@ -37,7 +37,8 @@ class FinalDocument extends DOMDocument {
         // String operations
 
         $s = $document->saveXML();
-        $s = XMLUtils::getMarkups($s);
+        $s = XMLUtils::<?php
+//This software is  Licensed under GPL 2. See LICESNSE($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
 
         $this->isComplexStatementsCorrect($s);

@@ -32,7 +32,8 @@ class Abstracts extends DOMDocument {
             foreach ($abstractSec as $abstract) {
                 if (strlen($abstract->textContent) > 0) {
                     $s = $abstract->ownerDocument->saveXML($abstract);
-                    $s = XMLUtils::getMarkups($s);
+                    $s = XMLUtils::<?php
+//This software is  Licensed under GPL 2. See LICESNSE($s);
                     $ab = $this->createDocumentFragment();
                     $ab->appendXML($s);
                     $div->appendChild($ab);
