@@ -56,8 +56,7 @@ class Edition extends DOMDocument {
                     $s = $content->ownerDocument->saveXML($content);
                     $s = XMLUtils::createLBBreakForMinus($s);
 
-                    $s = XMLUtils::<?php
-//This software is  Licensed under GPL 2. See LICESNSE($s);
+                    $s = XMLUtils::getMarkups($s);
                     $s = XMLUtils::createWords($s);
 
 

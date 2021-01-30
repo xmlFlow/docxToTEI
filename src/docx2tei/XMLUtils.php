@@ -16,8 +16,7 @@ class XMLUtils {
      * @param $s
      * @return string|string[]|null
      */
-    public static function <?php
-//This software is  Licensed under GPL 2. See LICESNSE(string $s) {
+    public static function getMarkups(string $s) {
         $s = self::removeZWNJ($s);
 
         # create gaps of illegible and lost characters
