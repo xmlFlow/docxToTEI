@@ -29,6 +29,7 @@ Second and final part of annotation identification is applying global rules for 
 
 | Nr. Status | Fehler | Remarks|
  | ---- | ---- | ---- |
+ Add new things in translation , footnotes and synopsis 
 | 1 :robot: |  ` व- सीis now converted to: <w>व</w> <lb break="no" n="2"/> <w>सी</w> but it have to be: <w>व<lb break="no" n="2"/>सी</w>` | New specific rule written.  | 
 | 2  :robot:|  `<add place="above_the_addline" hand="first"> <w>सल्याना</w> </add>` | `New specific rule written, will work for this structure #&{जीवराज}#राज This is a little complex rule, which deviates from our generic rule  of #content# ` |
 | 3   :robot: | `reverted the default value of the s element` |

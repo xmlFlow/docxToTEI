@@ -1,5 +1,5 @@
 <?php
-//This software is  Licensed under GPL 2. See License
+
 namespace docx2tei;
 
 use DOMDocument;
@@ -169,9 +169,9 @@ class XMLUtils {
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
         $s = preg_replace('/\s+/i', ' ', $s);
-        # Un gready replace, recursive does not work perferct
         $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
 
+        # Ungready is very important
         preg_match_all($pattern, $s, $matches);
         $match = $matches[0];
         if (!is_null($match) && count($match) != 0) {
@@ -179,61 +179,62 @@ class XMLUtils {
                 $hash_count = substr_count($m, XMLUtils::$bnd);
                 if ($hash_count % 2 == 0) {
                     $content = self::createStructuredContent(trim($m, XMLUtils::$bnd));
+                } else if ($hash_count == 3) {
+                    $content =  self::createStructuredContent(substr($m,1));
+                }
+                $parts = explode("{", $content);
+                $suffix1 = str_replace('}', '', $parts[1]);
+                if (count($parts) == 3) {
+                    $suffix2 = str_replace('}', '', $parts[2]);
+                }
+                $prefix = explode('@', $parts[0]);
+                $tagName = $prefix[0];
+                $tagName = self::removeAnnotationsInAttributes($tagName);
+                $elem = new DOMDocument();
+                foreach ($tags as $tag) {
+                    if ($tag["original"] == $tagName) {
+                        $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
+                        $tagElem = $elem->createElement($tagName);
+                        // remove tag from array
+                        array_shift($prefix);
+                        for ($i = 0; $i < count($tag["attributes"]); $i++) {
+                            if ($i < count($tag["attributes"])) {
+                                try {
+                                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                                } catch (Exception $e) {
+                                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                                    echo 'Caught exception: ',  $tag["attributes"], "\n";
+                                }
 
-                    $parts = explode("{", $content);
-                    $suffix1 = str_replace('}', '', $parts[1]);
-                    if (count($parts) == 3) {
-                        $suffix2 = str_replace('}', '', $parts[2]);
-                    }
-                    $prefix = explode('@', $parts[0]);
-                    $tagName = $prefix[0];
-                    $tagName = self::removeUnnecessaryChars($tagName);
-                    $elem = new DOMDocument();
-                    foreach ($tags as $tag) {
-                        if ($tag["original"] == $tagName) {
-                            $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
-                            $tagElem = $elem->createElement($tagName);
-                            // remove tag from array
-                            array_shift($prefix);
-                            for ($i = 0; $i < count($tag["attributes"]); $i++) {
-                                if ($i < count($tag["attributes"])) {
-                                    try {
-                                        $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                                    } catch (Exception $e) {
-                                        echo 'Caught exception: ', $e->getMessage(), "\n";
-                                        echo 'Caught exception: ', $tag["attributes"], "\n";
-                                    }
-
-                                    $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
-                                    if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
-                                        $val = $prefix[$i];
-                                    }
-                                    $attr->value = $val;
-                                    $tagElem->appendChild($attr);
+                                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
+                                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
+                                    $val = $prefix[$i];
                                 }
+                                $attr->value = $val;
+                                $tagElem->appendChild($attr);
                             }
-                            for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
-                                $extraAttrs = explode("=", $prefix[$i]);
-                                if (count($extraAttrs) == 2) {
-                                    $attr = $elem->createAttribute($extraAttrs[0]);
-                                    $attr->value = $extraAttrs[1];
-                                    $tagElem->appendChild($attr);
-                                } else {
-                                    self::print_error('[Error] Attribute with no = sign ' . $prefix[$i]);
-                                }
-                            }
-                            if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
-                                $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
-                                $tagElem->appendChild($suffix1Elem);
-                                if (isset($suffix2)) {
-                                    $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
-                                    $tagElem->appendChild($suffix2Elem);
-                                }
-                            } else {
-                                $tagElem->nodeValue = $suffix1;
-                            }
-                            $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
                         }
+                        for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
+                            $extraAttrs = explode("=", $prefix[$i]);
+                            if (count($extraAttrs) == 2) {
+                                $attr = $elem->createAttribute($extraAttrs[0]);
+                                $attr->value = $extraAttrs[1];
+                                $tagElem->appendChild($attr);
+                            } else {
+                                self::print_error('[Error] Attribute with no = sign ' . $prefix[$i]);
+                            }
+                        }
+                        if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
+                            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+                            $tagElem->appendChild($suffix1Elem);
+                            if (isset($suffix2)) {
+                                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                                $tagElem->appendChild($suffix2Elem);
+                            }
+                        } else {
+                            $tagElem->nodeValue = $suffix1;
+                        }
+                        $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
                     }
                 }
             }
@@ -357,7 +358,7 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
-    public static function removeUnnecessaryChars(string $tag) {
+    public static function removeAnnotationsInAttributes(string $tag) {
         $tag = str_replace('=', '', $tag);
         $tag = str_replace('-', '', $tag);
         return $tag;
