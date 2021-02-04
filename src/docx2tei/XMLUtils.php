@@ -421,17 +421,7 @@ class XMLUtils {
         }
     }
 
-    public static function removeControlledVocabsWordTagging($dom) {
-        $xpath = new DOMXPath($dom);
-        foreach ($xpath->query('//persName/w | //geogName/w | //placeName/w') as $node) {
-            $parent = $node->parentNode;
-            while ($node->hasChildNodes()) {
-                $parent->insertBefore($node->lastChild, $node->nextSibling);
-            }
-            $parent->removeChild($node);
-        }
-        return $dom;
-    }
+
 
     /**
      * @param $s
@@ -529,16 +519,7 @@ class XMLUtils {
         return preg_replace('/<' . $tag . '>(.*)<\/' . $tag . '>/', '<' . $replace . '>$1</' . $replace . '>', $content);
     }
 
-    /**
-     * @param $FIRSTmATCH
-     * @return array
-     */
-    private static function _addElementDefaults($FIRSTmATCH): array {
-        $parts = explode('@', $FIRSTmATCH);
-        $place = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "above_the_line";
-        $hand = (count($parts) > 2 && strlen($parts[2]) > 0) ? $parts[2] : "first";
-        return array($place, $hand);
-    }
+
 
     /**
      * @param $attributes
