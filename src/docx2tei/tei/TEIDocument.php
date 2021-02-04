@@ -27,7 +27,7 @@ class TEIDocument extends DOMDocument {
         $this->getHeaders();
         $this->setStructure();
         $this->isCorrectStructure();
-# Section processing
+        # Section processing
         $this->newDom = new Headers($this, $this->headers);
         $this->newDom = new Facsimiles($this);
         $this->newDom = new Abstracts($this);
@@ -144,7 +144,6 @@ class TEIDocument extends DOMDocument {
             $attrs = $tag->attributes ? iterator_to_array($tag->attributes) : [];
             $subTags = $tag->childNodes ? iterator_to_array($tag->childNodes) : [];
             foreach ($xpath->query('namespace::*', $tag) as $nsNode) {
-                // the only way to get xmlns:*, see https://stackoverflow.com/a/2470433/2750743
                 if ($tag->hasAttribute($nsNode->nodeName)) {
                     $attrs[] = $nsNode;
                 }

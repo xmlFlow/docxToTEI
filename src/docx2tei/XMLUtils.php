@@ -36,26 +36,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createRef($s) {
-
-        $s = preg_replace_callback_array(
-            [
-                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
-                    $url = $match[1];
-                    if (strlen($url) > 0) {
-                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
-                    } else {
-                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
-                    }
-
-                },
-
-            ],
-            $s
-        );
-        return $s;
-    }
-
     /**
      * @param string $s
      * @return string|string[]|null
@@ -138,6 +118,26 @@ class XMLUtils {
         return $s;
     }
 
+    public static function createRef($s) {
+
+        $s = preg_replace_callback_array(
+            [
+                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
+                    $url = $match[1];
+                    if (strlen($url) > 0) {
+                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
+                    } else {
+                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
+                    }
+
+                },
+
+            ],
+            $s
+        );
+        return $s;
+    }
+
     /**
      * @param string $s
      * @return string
@@ -145,7 +145,7 @@ class XMLUtils {
     public static function handleWordsWithAdditionAndDeletion(string $s) {
 
         $s = preg_replace_callback_array(
-            //TODO add the attribute handling
+        //TODO add the attribute handling
             ['/\$([^\p{Zs}\p{P}]*#&amp;\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                 return '<w>' . $m[1] . '</w>';
             },
@@ -158,8 +158,6 @@ class XMLUtils {
         return $s;
 
     }
-
-
 
 
     /**
@@ -179,64 +177,41 @@ class XMLUtils {
                 $hash_count = substr_count($m, XMLUtils::$bnd);
                 if ($hash_count % 2 == 0) {
                     $content = self::createStructuredContent(trim($m, XMLUtils::$bnd));
-                } else if ($hash_count == 3) {
-                    $content =  self::createStructuredContent(substr($m,1));
-                }
-                $parts = explode("{", $content);
-                $suffix1 = str_replace('}', '', $parts[1]);
-                if (count($parts) == 3) {
-                    $suffix2 = str_replace('}', '', $parts[2]);
-                }
-                $prefix = explode('@', $parts[0]);
-                $tagName = $prefix[0];
-                $tagName = self::removeAnnotationsInAttributes($tagName);
-                $elem = new DOMDocument();
-                foreach ($tags as $tag) {
-                    if ($tag["original"] == $tagName) {
-                        $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
-                        $tagElem = $elem->createElement($tagName);
-                        // remove tag from array
-                        array_shift($prefix);
-                        for ($i = 0; $i < count($tag["attributes"]); $i++) {
-                            if ($i < count($tag["attributes"])) {
-                                try {
-                                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                                } catch (Exception $e) {
-                                    echo 'Caught exception: ',  $e->getMessage(), "\n";
-                                    echo 'Caught exception: ',  $tag["attributes"], "\n";
-                                }
-
-                                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
-                                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
-                                    $val = $prefix[$i];
-                                }
-                                $attr->value = $val;
-                                $tagElem->appendChild($attr);
-                            }
-                        }
-                        for ($i = count($tag["attributes"]); $i < count($prefix); $i++) {
-                            $extraAttrs = explode("=", $prefix[$i]);
-                            if (count($extraAttrs) == 2) {
-                                $attr = $elem->createAttribute($extraAttrs[0]);
-                                $attr->value = $extraAttrs[1];
-                                $tagElem->appendChild($attr);
-                            } else {
-                                self::print_error('[Error] Attribute with no = sign ' . $prefix[$i]);
-                            }
-                        }
-                        if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
-                            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
-                            $tagElem->appendChild($suffix1Elem);
-                            if (isset($suffix2)) {
-                                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
-                                $tagElem->appendChild($suffix2Elem);
-                            }
-                        } else {
-                            $tagElem->nodeValue = $suffix1;
-                        }
-                        $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
+                    $parts = explode("{", $content);
+                    $suffix1 = str_replace('}', '', $parts[1]);
+                    if (count($parts) == 3) {
+                        $suffix2 = str_replace('}', '', $parts[2]);
                     }
+                    $prefix = explode('@', $parts[0]);
+                    $tagName = $prefix[0];
+                    // remove = and - signs
+                    $tagName = self::removeAnnotationsInAttributes($tagName);
+                    $elem = new DOMDocument();
+                    foreach ($tags as $tag) {
+                        if ($tag["original"] == $tagName) {
+                            $tagName = str_replace($tag ["original"], $tag["replace"], $tagName);
+                            $tagElem = $elem->createElement($tagName);
+                            // remove tag from array
+                            array_shift($prefix);
+                            self::createDefinedAttributes($tag, $elem, $prefix, $tagElem);
+                            self::createExtraAttributes($tag["attributes"], $prefix, $elem, $tagElem);
+                            if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
+                                $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+                                $tagElem->appendChild($suffix1Elem);
+                                if (isset($suffix2)) {
+                                    $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                                    $tagElem->appendChild($suffix2Elem);
+                                }
+                            } else {
+                                $tagElem->nodeValue = $suffix1;
+                            }
+                            $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
+                        }
+                    }
+                } else if ($hash_count == 3) {
+                    self::createStructuredContent(substr($m, 1));
                 }
+
             }
         }
         return $s;
@@ -278,12 +253,12 @@ class XMLUtils {
                 )
             ),
             /**array(
-                "original" => "ref",
-                "replace" => "ref",
-                "attributes" => array(
-                    array("target"=>"target")
-                )
-            ),*/
+             * "original" => "ref",
+             * "replace" => "ref",
+             * "attributes" => array(
+             * array("target"=>"target")
+             * )
+             * ),*/
             array(
                 "original" => "?",
                 "replace" => "unclear",
@@ -344,6 +319,12 @@ class XMLUtils {
         return $tags;
     }
 
+    public static function removeAnnotationsInAttributes(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
+    }
+
     /**
      * String replace nth occurrence
      *
@@ -358,19 +339,14 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
-    public static function removeAnnotationsInAttributes(string $tag) {
-        $tag = str_replace('=', '', $tag);
-        $tag = str_replace('-', '', $tag);
-        return $tag;
-    }
-
-    public static function removeElementBefore($dom, string $tag , string $remove) {
+    public static function removeElementBefore($dom, string $tag, string $remove) {
         $xpath = new DOMXPath($dom);
 
         foreach ($xpath->evaluate('//' . $tag . '/preceding-sibling::lb') as $node) {
             $node->parentNode->removeChild($node);
         }
     }
+
     public static function removeLastElementOfParent($dom, string $tag) {
         $xpath = new DOMXPath($dom);
         $lastLbs = $xpath->query('//ab/' . $tag . '[last()]');
@@ -571,5 +547,51 @@ class XMLUtils {
         $place = (count($parts) > 1 && strlen($parts[1]) > 0) ? $parts[1] : "above_the_line";
         $hand = (count($parts) > 2 && strlen($parts[2]) > 0) ? $parts[2] : "first";
         return array($place, $hand);
+    }
+
+    /**
+     * @param $attributes
+     * @param array $prefix
+     * @param DOMDocument $elem
+     * @param  $tagElem
+     * @return array
+     */
+    private static function createExtraAttributes($attributes, array $prefix, DOMDocument $elem,  $tagElem): void {
+        for ($i = count($attributes); $i < count($prefix); $i++) {
+            $extraAttrs = explode("=", $prefix[$i]);
+            if (count($extraAttrs) == 2) {
+                $attr = $elem->createAttribute($extraAttrs[0]);
+                $attr->value = $extraAttrs[1];
+                $tagElem->appendChild($attr);
+            } else {
+                self::print_error('[Error] Attribute with no = sign ' . $prefix[$i]);
+            }
+        }
+
+    }
+
+    /**
+     * @param array $tag
+     * @param DOMDocument $elem
+     * @param array $prefix
+     * @param $tagElem
+     */
+    private static function createDefinedAttributes(array &$tag, DOMDocument $elem, array $prefix, $tagElem): void {
+        for ($i = 0; $i < count($tag["attributes"]); $i++) {
+            if ($i < count($tag["attributes"])) {
+                try {
+                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                } catch (Exception $e) {
+                    echo 'Caught exception: ', $tag["attributes"], "\n";
+                }
+
+                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
+                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
+                    $val = $prefix[$i];
+                }
+                $attr->value = $val;
+                $tagElem->appendChild($attr);
+            }
+        }
     }
 }
