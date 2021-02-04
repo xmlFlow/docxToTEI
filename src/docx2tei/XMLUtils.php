@@ -193,18 +193,24 @@ class XMLUtils {
                             $tagElem = $elem->createElement($tagName);
                             // remove tag from array
                             array_shift($prefix);
-                            self::createDefinedAttributes($tag, $elem, $prefix, $tagElem);
-                            self::createExtraAttributes($tag["attributes"], $prefix, $elem, $tagElem);
-                            if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
-                                $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
-                                $tagElem->appendChild($suffix1Elem);
-                                if (isset($suffix2)) {
-                                    $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
-                                    $tagElem->appendChild($suffix2Elem);
+                            for ($i = 0; $i < count($tag["attributes"]); $i++) {
+                                if ($i < count($tag["attributes"])) {
+                                    try {
+                                        $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                                    } catch (Exception $e) {
+                                        echo 'Caught exception: ', $tag["attributes"], "\n";
+                                    }
+
+                                    $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
+                                    if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
+                                        $val = $prefix[$i];
+                                    }
+                                    $attr->value = $val;
+                                    $tagElem->appendChild($attr);
                                 }
-                            } else {
-                                $tagElem->nodeValue = $suffix1;
                             }
+                            self::createExtraAttributes($tag["attributes"], $prefix, $elem, $tagElem);
+                            if(isset($suffix2))    self::createInnerNodes($tag, $elem, $suffix1, $tagElem, $suffix2);
                             $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
                         }
                     }
@@ -571,27 +577,22 @@ class XMLUtils {
     }
 
     /**
-     * @param array $tag
+     * @param $tag
      * @param DOMDocument $elem
-     * @param array $prefix
+     * @param $suffix1
      * @param $tagElem
+     * @param $suffix2
      */
-    private static function createDefinedAttributes(array &$tag, DOMDocument $elem, array $prefix, $tagElem): void {
-        for ($i = 0; $i < count($tag["attributes"]); $i++) {
-            if ($i < count($tag["attributes"])) {
-                try {
-                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                } catch (Exception $e) {
-                    echo 'Caught exception: ', $tag["attributes"], "\n";
-                }
-
-                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
-                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
-                    $val = $prefix[$i];
-                }
-                $attr->value = $val;
-                $tagElem->appendChild($attr);
+    private static function createInnerNodes($tag, DOMDocument $elem, $suffix1, $tagElem, $suffix2): void {
+        if (array_key_exists("innerTags", $tag) && count($tag["innerTags"]) == 2) {
+            $suffix1Elem = $elem->createElement($tag["innerTags"][0], $suffix1);
+            $tagElem->appendChild($suffix1Elem);
+            if (isset($suffix2)) {
+                $suffix2Elem = $elem->createElement($tag["innerTags"][1], $suffix2);
+                $tagElem->appendChild($suffix2Elem);
             }
+        } else {
+            $tagElem->nodeValue = $suffix1;
         }
     }
 }
