@@ -1,76 +1,282 @@
-<?xml version="1.0" encoding="utf-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DNA_0016_0086"> <teiHeader> <fileDesc> <titleStmt> <title type="main">A pañjāpatra from King Rājendra requesting Cautariyā Bhīma Vikrama Śāha etc. to return to Kathmandu (VS 1903)</title> <title type="short">A requesting Cautariyā Bhīma Vikrama Śāha etc. to return to Kathmandu</title> <title type="sub">DNA_0016_0086</title> <author role="issuer">Rājendra Vikrama Śāha</author> <respStmt> <resp>main editor and translator</resp> <name type="main_editor">Rajan Khatiwoda</name> </respStmt> <respStmt> <resp>collaborator</resp> <name type="collaborator">Simon Cubelic and Christof Zotter</name> </respStmt> </titleStmt> <publicationStmt> <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher> <pubPlace>Heidelberg, Germany</pubPlace> <date>2021</date> <availability status="restricted"> <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence> <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).</p> </availability> </publicationStmt> <notesStmt> <note>This file is created for demonstration purpose.</note> </notesStmt> <sourceDesc> <msDesc> <msIdentifier> <settlement>Kathmandu</settlement> <repository>National Archives</repository> <idno>Ms. no. showcase 1/2</idno> <altIdentifier type="microfilm"> <settlement>Kathmandu, Berlin</settlement> <collection>Nepal German Manuscript Preservation Project</collection> <idno>NGMPP DNA 16/86</idno> </altIdentifier> </msIdentifier> <msContents> <textLang mainLang="Nep" otherLangs="San"/> </msContents> <physDesc> <p>For details see <ref target="http://nepalica.hadw-bw.de/nepal/catitems/viewitem/1336/1">entry in database </ref></p> </physDesc> <history> <origin> <p>Issued in <origDate>1846 (VS 1903)</origDate> from <origPlace>Kathmandu</origPlace></p> </origin> </history> </msDesc> </sourceDesc> </fileDesc> <encodingDesc> <editorialDecl> <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p> <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p> </editorialDecl> </encodingDesc> <profileDesc><creation> <date>2021-02-04</date> </creation> </profileDesc> <revisionDesc><listChange> <change type="internal" when="2021-02-04" who="#AUTO">Automatically converted from docx to TEI-XML</change> </listChange> </revisionDesc> </teiHeader> <facsimile> <surface xml:id="surface1" facs=" DNA_0016_0619.png" ulx="0" uly="0" lrx="0" lry="0"> <zone xml:id="signature1" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="signature2" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="seal1" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="margin1" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="space2" ulx="0" uly="0" lrx="0" lry="0"/> <zone xml:id="main_text1" ulx="0" uly="0" lrx="0" lry="0"/> </surface> </facsimile> <text> <body> <div xml:id="abs" type="abstract" xml:lang="eng"> <p>This <foreign>pañjāpatra</foreign> from King Rājendra is an official, albeit reassuring-sounding summons to Cautarīyā Bhīma Vikrama Śāha and Cautarīyā Colonel Vīra Vikrama Śāha, who had fled from the kingdom after the Kot massacre.</p> </div> <div xml:id="ed" type="edition" xml:lang="nep"> <pb n="1r" facs="#surface1"/> <ab type="signature" corresp="#signature1"><lb n="1"/><s> #gen{<w>गडुव</w>
-#orig{<w>़</w>
-}# <w>षोलाको</w>
-}#<lb n="2"/><lb n="3"/>#gen{<w>गडुव</w>
-#orig{<w>़</w>
-}# <w>षोलाको</w>
-}# <w>किनारामा</w>
-</s><lb n="4"/><w>श्रीदुर्गाज्यू</w>
- <w>सहायः</w>
-</ab> <p/> <ab type="signature" corresp="#signature2"><lb n="1"/><w>सही</w>
- <w>कृष्नकुमार</w>
-</ab> <p/> <ab type="invocation" corresp="#invocatio"><lb n="1"/><w>श्रीदुर्गाज्यू</w>
- <w>सहायः</w>
-</ab> <p/> <ab type="seal" corresp="#seal1"><lb n="1"/>[palm-seal of the king]</ab> <p/> <ab type="margin" corresp="#margin1"><lb n="1"/><w>साछी</w>
- <w>सदर</w>
-</ab> <p/> <ab type="space" corresp="#space1"> <lb n="1"/> <w>श्री५पशुपति</w>
- </ab> <p/> <ab type="space" corresp="#space2"> <lb n="1"/> <w>श्री५महाराज्</w>
- </ab> <p/> <ab type="maintext" corresp="#main_text1"><lb n="1"/>$<w>स्वस्ति</w>
-<orig/>$<lb n="2"/>$<w>कालचक्र</w>
-<add place="above_the_line" hand="crossed_out"/><w>राज</w>
-$<lb n="3"/><s xml:lang="san"><w>स्वस्ति</w>
-</s><s xml:lang="san"><w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w>
-<lb break="no" n="4"/><supplied reason="reason"/><w>विरूदावलिविराजमानमानोन्नतश्रीश्रीश्रीश्रीश्रीमहा</w>
-<surplus/><lb break="no" n="5"/><w>राजाधिराज</w>
-<surplus/><w>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्</w>
-<lb n="6"/><w>सदा</w>
- <w>समरविजयीनाम्</w>
-</s><choice><orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig><reg>---</reg></choice><lb n="7"/><s><w>आगे</w>
- <orig><orig>•</orig></orig> <w>चौतरिया</w>
- <orig><orig>•</orig></orig> <persName/> <orig><orig>•</orig></orig> <w>चौतरिया</w>
- <persName/> <w>प्रति</w>
-</s> <orig><orig>•</orig></orig> <s><w>तिमिहरूको</w>
- <w>मँ</w>
- <w>छु</w>
-</s> <s><w>खातिर</w>
- <w>ग</w>
-<supplied reason="lost"/></s> <s><w>पंजा</w>
- <w>प<lb break="no" n="9"/>ठाइबक्स्याको</w>
- <w>गडुव</w>
-<orig/> <w>छ</w>
-</s> <s><w>पंजा</w>
- <w>देखत</w>
- <w>चाँडो</w>
- <w>आउन्या</w>
- <supplied reason="lost"/> <w>गर</w>
-</s> <s><w>इति</w>
-<lb n="10"/><w>सम्वत्</w>
- <w>१९०३</w>
- <w>साल</w>
- <w>मिति</w>
- <w>वैशाख</w>
- <w>वदि</w>
- <gap extent="2 characters" agent="breakage" reason="lost"/> <w>रोज</w>
- <w>३</w>
- <w>शुभम्&#x200c;</w>
- #gen{<w>गडुव</w>
-#orig{<w>़</w>
-}# <w>षोलाको</w>
-}# <w>किनारामा</w>
-</s><lb n="11"/><lb n="12"/><s><w>मेरो</w>
- <add place="below_the_line" hand="second"/> <w>काले</w>
- <add place="above_the_line" hand="first"/> </s><lb n="13"/><s><w>मेरो</w>
- <del rend="erasure"/> <w>काले</w>
- <del rend="crossed_out"/> </s><lb n="14"/><s><w>मेरो</w>
- <del rend="crossed_out"/><w>नाम</w>
- <gap extent="5 characters" agent="ink" reason="illegible"/> <w>काले</w>
- <add place="above_the_line" hand="second"/> </s><lb n="15"/><s> <w>मेरो</w>
- <w>नाम</w>
- <gap extent="3 words" agent="folding" reason="lost"/> <w>हो</w>
- $<w>कालचक्र</w>
-<del rend="crossed_out"/><w>राज</w>
-$</s><lb n="16"/><s> <w>मेरो</w>
- <w>नाम</w>
- $<w>कालचक्र</w>
-<add place="above_the_line" hand="first"/><w>राज</w>
-$</s><lb n="17"/><lb n="18"/></ab> <p/> </div> <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng"><pb n="1r"/> <p>May venerable Durgā help [us].</p> <p>[palm-seal of the king]</p> <p>Hail! [A decree] of him who is shining with manifold rows of eulogy [such as] 'The venerable crest-jewel of the multitude of mountain kings’ and <foreign>naranārāyaṇa</foreign> (an epithet of Kṛṣṇa) etc., high in honour, the venerable supreme king of great kings, the five times venerable great king, <persName/>, the brave swordsman, the divine king always triumphant in war.</p> <p>To Cautarīyā <persName/> [and] Cautarīyā <persName/>.</p> <p>I am [there for] you. We shall honour (<foreign>khātira</foreign>) [you]. The <foreign>pañjā[patra]</foreign> has been sent by [us]. Come [back here] as soon as you receive (lit. see) it.</p> <p>Tuesday, the ...<note place="end"> Text lost in the original.</note> day of the dark fortnight of Vaiśākha in the [Vikrama] era year 1903 (1846 CE). [May it be] auspicious.</p> <p/> </div> <div xml:id="commentary" type="commentary" xml:lang="eng"> <p>A <foreign>pañjāpatra</foreign>, also known as a <foreign>keśarīpañjā</foreign> is a variety of <foreign>lālamohara</foreign>. It is a royal order with the seal of the palm of king. According to Amatya 1988: 2-3, these types of lālamoharas were issued when any executive power, facility etc. was being granted to a person, or else a royal family member was being assigned responsibility to rule over a certain territory of the kingdom or to take on the job of running the government.</p> <p>Cautarīyā Bhīma Vikrama Śāha and Cautarīyā Colonel Vīra Vikrama Śāha were sons of Mukhtiyāra <persName/>. Puṣkara Śāha was appointed as mukhtiyāra by Queen <persName/> in early April 1840. He was soon (1 November 1840) dismissed from the post, however (cf. Acharya 1971: 16). Bhīma Vikrama Śāha, a cousin of Cautarīyā <persName/>, was governor of <placeName/>. When Phatte Jaṅga was killed, along with many of his relatives and followers, the family’s property was confiscated. Some of survivors, including Bhīma Vikrama, fled the kingdom. On 27 August 1847, on his way back to <placeName/> from <placeName/> with 200 or 300 men intent on killing <persName/>, Bhīma Vikrama was defeated by the latter’s troops in <placeName/>, an event called the Alau massacre in Nepalese history. He had no recourse but to flee to <placeName/> (cf. Stiller 1981: 300, 301, 355, 357). This document has been published in the <ref target="https://nepalica.hadw-bw.de/nepalwww/">Abhilekha</ref> site (<ref>https://nepalica.hadw-bw.de/nepal/editions/show/1336</ref>).</p> </div> </body> </text> </TEI>
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="DNA_0016_0086">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">A pañjāpatra from King Rājendra requesting Cautariyā Bhīma Vikrama Śāha etc. to
+                    return to Kathmandu (VS 1903)
+                </title>
+                <title type="short">A requesting Cautariyā Bhīma Vikrama Śāha etc. to return to Kathmandu</title>
+                <title type="sub">DNA_0016_0086</title>
+                <author role="issuer">Rājendra Vikrama Śāha</author>
+                <respStmt>
+                    <resp>main editor and translator</resp>
+                    <name type="main_editor">Rajan Khatiwoda</name>
+                </respStmt>
+                <respStmt>
+                    <resp>collaborator</resp>
+                    <name type="collaborator">Simon Cubelic and Christof Zotter</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
+                    of Pre-modern Nepal
+                </publisher>
+                <pubPlace>Heidelberg, Germany</pubPlace>
+                <date>2021</date>
+                <availability status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
+                        Commons Attribution-ShareAlike 4.0 Unported License
+                    </licence>
+                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile
+                        remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal).
+                    </p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note>This file is created for demonstration purpose.</note>
+            </notesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Kathmandu</settlement>
+                        <repository>National Archives</repository>
+                        <idno>Ms. no. showcase 1/2</idno>
+                        <altIdentifier type="microfilm">
+                            <settlement>Kathmandu, Berlin</settlement>
+                            <collection>Nepal German Manuscript Preservation Project</collection>
+                            <idno>NGMPP DNA 16/86</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="Nep" otherLangs="San"/>
+                    </msContents>
+                    <physDesc>
+                        <p>For details see
+                            <ref target="http://nepalica.hadw-bw.de/nepal/catitems/viewitem/1336/1">entry in database
+                            </ref>
+                        </p>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <p>Issued in <origDate>1846 (VS 1903)</origDate> from
+                                <origPlace>Kathmandu</origPlace>
+                            </p>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
+                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
+                    optionally commentary.
+                </p>
+                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
+                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
+                    features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or
+                    macrons and lines of various shapes, often used as placeholders or structuring elements. The
+                    editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>
+                        reg
+                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
+                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
+                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date>2021-02-04</date>
+            </creation>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change type="internal" when="2021-02-04" who="#AUTO">Automatically converted from docx to TEI-XML
+                </change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="surface1" facs=" DNA_0016_0619.png" ulx="0" uly="0" lrx="0" lry="0">
+            <zone xml:id="signature1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="signature2" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="seal1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="margin1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="space2" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="main_text1" ulx="0" uly="0" lrx="0" lry="0"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <p>This <foreign>pañjāpatra</foreign> from King Rājendra is an official, albeit reassuring-sounding
+                    summons to Cautarīyā Bhīma Vikrama Śāha and Cautarīyā Colonel Vīra Vikrama Śāha, who had fled from
+                    the kingdom after the Kot massacre.
+                </p>
+            </div>
+            <div xml:id="ed" type="edition" xml:lang="nep">
+                <pb n="1r" facs="#surface1"/>
+                <ab type="signature" corresp="#signature1">
+                    <lb n="1"/>
+                    <s>#gen{गडुव#orig{़}# षोलाको}#
+                        <lb n="2"/>
+                        <lb n="3"/>#gen{गडुव#orig{़}# षोलाको}# किनारामा
+                    </s>
+                    <lb n="4"/>श्रीदुर्गाज्यू सहायः
+                </ab>
+                <p/>
+                <ab type="signature" corresp="#signature2"><lb n="1"/>सही कृष्नकुमार
+                </ab>
+                <p/>
+                <ab type="invocation" corresp="#invocatio"><lb n="1"/>श्रीदुर्गाज्यू सहायः
+                </ab>
+                <p/>
+                <ab type="seal" corresp="#seal1"><lb n="1"/>[palm-seal of the king]
+                </ab>
+                <p/>
+                <ab type="margin" corresp="#margin1"><lb n="1"/>साछी सदर
+                </ab>
+                <p/>
+                <ab type="space" corresp="#space1"><lb n="1"/>श्री५पशुपति
+                </ab>
+                <p/>
+                <ab type="space" corresp="#space2"><lb n="1"/>श्री५महाराज्
+                </ab>
+                <p/>
+                <ab type="maintext" corresp="#main_text1"><lb n="1"/>$स्वस्ति<orig/>$<lb n="2"/>$कालचक्र<add
+                        place="above_the_line" hand="crossed_out"/>राज$
+                    <lb n="3"/>
+                    <s xml:lang="san">स्वस्ति</s>
+                    <s xml:lang="san">श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि
+                        <lb break="no" n="4"/>
+                        <supplied reason="reason"/>विरूदावलिविराजमानमानोन्नतश्रीश्रीश्रीश्रीश्रीमहा
+                        <surplus/>
+                        <lb break="no" n="5"/>राजाधिराज<surplus/>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्<lb n="6"/>
+                        सदा समरविजयीनाम्
+                    </s>
+                    <choice>
+                        <orig>¯¯¯¯¯¯¯¯¯¯¯¯</orig>
+                        <reg>---</reg>
+                    </choice>
+                    <lb n="7"/>
+                    <s>आगे
+                        <orig>
+                            <orig>•</orig>
+                        </orig>
+                        चौतरिया
+                        <orig>
+                            <orig>•</orig>
+                        </orig>
+                        <persName/>
+                        <orig>
+                            <orig>•</orig>
+                        </orig>
+                        चौतरिया
+                        <persName/>
+                        प्रति
+                    </s>
+                    <orig>
+                        <orig>•</orig>
+                    </orig>
+                    <s>तिमिहरूको मँ छु</s>
+                    <s>खातिर ग
+                        <supplied reason="lost"/>
+                    </s>
+                    <s>पंजा प<lb break="no" n="9"/>ठाइबक्स्याको गडुव
+                        <orig/>
+                        छ
+                    </s>
+                    <s>पंजा देखत चाँडो आउन्या
+                        <supplied reason="lost"/>
+                        गर
+                    </s>
+                    <s>इति<lb n="10"/>सम्वत् १९०३ साल मिति वैशाख वदि
+                        <gap extent="2 characters" agent="breakage" reason="lost"/>
+                        रोज ३ शुभम्&#x200c; #gen{गडुव#orig{़}# षोलाको}# किनारामा
+                    </s>
+                    <lb n="11"/>
+                    <lb n="12"/>
+                    <s>मेरो
+                        <add place="below_the_line" hand="second"/>
+                        काले
+                        <add place="above_the_line" hand="first"/>
+                    </s>
+                    <lb n="13"/>
+                    <s>मेरो
+                        <del rend="erasure"/>
+                        काले
+                        <del rend="crossed_out"/>
+                    </s>
+                    <lb n="14"/>
+                    <s>मेरो<del rend="crossed_out"/>नाम
+                        <gap extent="5 characters" agent="ink" reason="illegible"/>
+                        काले
+                        <add place="above_the_line" hand="second"/>
+                    </s>
+                    <lb n="15"/>
+                    <s>मेरो नाम
+                        <gap extent="3 words" agent="folding" reason="lost"/>
+                        हो $कालचक्र<del rend="crossed_out"/>राज$
+                    </s>
+                    <lb n="16"/>
+                    <s>मेरो नाम $कालचक्र<add place="above_the_line" hand="first"/>राज$
+                    </s>
+                    <lb n="17"/>
+                    <lb n="18"/>
+                </ab>
+                <p/>
+            </div>
+            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+                <pb n="1r"/>
+                <p>May venerable Durgā help [us].</p>
+                <p>[palm-seal of the king]</p>
+                <p>Hail! [A decree] of him who is shining with manifold rows of eulogy [such as] 'The venerable
+                    crest-jewel of the multitude of mountain kings’ and <foreign>naranārāyaṇa</foreign> (an epithet of
+                    Kṛṣṇa) etc., high in honour, the venerable supreme king of great kings, the five times venerable
+                    great king,<persName/>, the brave swordsman, the divine king always triumphant in war.
+                </p>
+                <p>To Cautarīyā
+                    <persName/>
+                    [and] Cautarīyā<persName/>.
+                </p>
+                <p>I am [there for] you. We shall honour (<foreign>khātira</foreign>) [you]. The <foreign>pañjā[patra]
+                </foreign> has been sent by [us]. Come [back here] as soon as you receive (lit. see) it.
+                </p>
+                <p>Tuesday, the ...<note place="end">Text lost in the original.</note> day of the dark fortnight of
+                    Vaiśākha in the [Vikrama] era year 1903 (1846 CE). [May it be] auspicious.
+                </p>
+                <p/>
+            </div>
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p>A <foreign>pañjāpatra</foreign>, also known as a <foreign>keśarīpañjā</foreign> is a variety
+                    of <foreign>lālamohara</foreign>. It is a royal order with the seal of the palm of king. According
+                    to Amatya 1988: 2-3, these types of lālamoharas were issued when any executive power, facility etc.
+                    was being granted to a person, or else a royal family member was being assigned responsibility to
+                    rule over a certain territory of the kingdom or to take on the job of running the government.
+                </p>
+                <p>Cautarīyā Bhīma Vikrama Śāha and Cautarīyā Colonel Vīra Vikrama Śāha were sons of Mukhtiyāra
+                    <persName/>. Puṣkara Śāha was appointed as mukhtiyāra by Queen
+                    <persName/>
+                    in early April 1840. He was soon (1 November 1840) dismissed from the post, however (cf. Acharya
+                    1971: 16). Bhīma Vikrama Śāha, a cousin of Cautarīyā<persName/>, was governor of<placeName/>. When
+                    Phatte Jaṅga was killed, along with many of his relatives and followers, the family’s property was
+                    confiscated. Some of survivors, including Bhīma Vikrama, fled the kingdom. On 27 August 1847, on his
+                    way back to
+                    <placeName/>
+                    from
+                    <placeName/>
+                    with 200 or 300 men intent on killing<persName/>, Bhīma Vikrama was defeated by the latter’s troops
+                    in<placeName/>, an event called the Alau massacre in Nepalese history. He had no recourse but to
+                    flee to
+                    <placeName/>
+                    (cf. Stiller 1981: 300, 301, 355, 357). This document has been published in the <ref
+                            target="https://nepalica.hadw-bw.de/nepalwww/">Abhilekha
+                    </ref> site (<ref>https://nepalica.hadw-bw.de/nepal/editions/show/1336</ref>).
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -460,6 +460,7 @@ class XMLUtils {
     }
 
     public static function createWords(string $s) {
+        return $s;
         $preg = "(\p{Devanagari}|&amp;#x200c;|&amp;#8205;|&amp;x200c;|&amp;8205;)+"; # # is cleaned already
         if (preg_match("/" . $preg . "/u", $s, $matches)) {
             $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
