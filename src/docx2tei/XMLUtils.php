@@ -149,9 +149,9 @@ class XMLUtils {
             ['/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                 return '<w>' . $m[1] . '</w>';
             },
-                '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
-                    return '<w>' . $m[1] . '</w>';
-                },
+            '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                return '<w>' . $m[1] . '</w>';
+            },
             ],
             $s
         );
@@ -168,6 +168,7 @@ class XMLUtils {
         $tags = self::getTagsList();
         $s = preg_replace('/\s+/i', ' ', $s);
         $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{(.)*\})+' . XMLUtils::$bnd . '/U';
+        //$pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{((?!\#).)*\})+' . XMLUtils::$bnd . '/U';
 
         # Ungready is very important
         preg_match_all($pattern, $s, $matches);
