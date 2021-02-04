@@ -146,8 +146,10 @@
                 <ab type="space" corresp="#space2"><lb n="1"/>श्री५महाराज्
                 </ab>
                 <p/>
-                <ab type="maintext" corresp="#main_text1"><lb n="1"/>$स्वस्ति<orig/>$<lb n="2"/>$कालचक्र<add
-                        place="above_the_line" hand="crossed_out"/>राज$
+                <ab type="maintext" corresp="#main_text1"><lb n="1"/>$स्वस्ति<orig/>$
+                    <lb n="2"/>
+                    <w>कालचक्र<add place="above_the_line" hand="crossed_out"/>राज
+                    </w>
                     <lb n="3"/>
                     <s xml:lang="san">स्वस्ति</s>
                     <s xml:lang="san">श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि
@@ -219,10 +221,14 @@
                     <lb n="15"/>
                     <s>मेरो नाम
                         <gap extent="3 words" agent="folding" reason="lost"/>
-                        हो $कालचक्र<del rend="crossed_out"/>राज$
+                        हो
+                        <w>कालचक्र<del rend="crossed_out"/>राज
+                        </w>
                     </s>
                     <lb n="16"/>
-                    <s>मेरो नाम $कालचक्र<add place="above_the_line" hand="first"/>राज$
+                    <s>मेरो नाम
+                        <w>कालचक्र<add place="above_the_line" hand="first"/>राज
+                        </w>
                     </s>
                     <lb n="17"/>
                     <lb n="18"/>

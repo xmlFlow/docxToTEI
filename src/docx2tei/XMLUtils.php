@@ -146,10 +146,10 @@ class XMLUtils {
 
         $s = preg_replace_callback_array(
         //TODO add the attribute handling
-            ['/\$([^\p{Zs}\p{P}]*#&amp;\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+            ['/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                 return '<w>' . $m[1] . '</w>';
             },
-                '/\$([^\p{Zs}\p{P}]*#del\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                     return '<w>' . $m[1] . '</w>';
                 },
             ],
