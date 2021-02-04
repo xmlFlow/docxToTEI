@@ -193,22 +193,7 @@ class XMLUtils {
                             $tagElem = $elem->createElement($tagName);
                             // remove tag from array
                             array_shift($prefix);
-                            for ($i = 0; $i < count($tag["attributes"]); $i++) {
-                                if ($i < count($tag["attributes"])) {
-                                    try {
-                                        $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
-                                    } catch (Exception $e) {
-                                        echo 'Caught exception: ', $tag["attributes"], "\n";
-                                    }
-
-                                    $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
-                                    if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
-                                        $val = $prefix[$i];
-                                    }
-                                    $attr->value = $val;
-                                    $tagElem->appendChild($attr);
-                                }
-                            }
+                            self::createDefinedAttributes($tag, $elem, $prefix, $tagElem);
                             self::createExtraAttributes($tag["attributes"], $prefix, $elem, $tagElem);
                             if(isset($suffix2))    self::createInnerNodes($tag, $elem, $suffix1, $tagElem, $suffix2);
                             $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
@@ -594,5 +579,32 @@ class XMLUtils {
         } else {
             $tagElem->nodeValue = $suffix1;
         }
+    }
+
+    /**
+     * @param $tag
+     * @param DOMDocument $elem
+     * @param $prefix
+     * @param $tagElem
+
+     */
+    private static function createDefinedAttributes($tag, DOMDocument $elem, $prefix, $tagElem) {
+        for ($i = 0; $i < count($tag["attributes"]); $i++) {
+            if ($i < count($tag["attributes"])) {
+                try {
+                    $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
+                } catch (Exception $e) {
+                    echo 'Caught exception: ', $tag["attributes"], "\n";
+                }
+
+                $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
+                if ((count($prefix) > $i) && (strlen($prefix[$i]) > 0)) {
+                    $val = $prefix[$i];
+                }
+                $attr->value = $val;
+                $tagElem->appendChild($attr);
+            }
+        }
+
     }
 }
