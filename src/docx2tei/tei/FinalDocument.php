@@ -14,10 +14,8 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTitleInBody($document, "title");
 
         # handle choice elements specially
-        XMLUtils::removeElement($document, '//choice/sic/w');
-        XMLUtils::removeElement($document, '//choice/corr/w');
+        XMLUtils::removeElement($document, '//choice/*/w');
         XMLUtils::removeElement($document, '//ab/p');
-        XMLUtils::removeElement($document, '//orig/orig');
         XMLUtils::removeElement($document, "//bold");
         XMLUtils::removeElement($document, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
@@ -26,13 +24,13 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addChildElement($document, "ab", "lb");
         XMLUtils::removeLastElementOfParent($document,'lb');
         XMLUtils::removeElementBefore($document,'table','lb');
-        XMLUtils::enumerateLBs($document);
 
-
+        XMLUtils::removeElement($document, '//orig/orig');
         XMLUtils::removeElement($document, "//w/*/w");
         XMLUtils::removeElement($document, "//w/w");
         XMLUtils::removeElement($document, "//sec");
 
+        XMLUtils::enumerateLBs($document);
         // String operations
 
         $s = $document->saveXML();
