@@ -11,11 +11,11 @@ class Headers extends DOMDocument {
     var $currentDate;
     var $currentYear;
 
-    public function __construct(TEIDocument $document, $headers) {
+    public function __construct(TEIDocument $doc, $headers) {
         parent::__construct('1.0', 'utf-8');
         $this->currentDate = date("Y-m-d");
         $this->currentYear = date("Y");
-        $this->document = $document;
+        $this->document = $doc;
         $this->headers = $headers;
         $this->setHeaders();
     }

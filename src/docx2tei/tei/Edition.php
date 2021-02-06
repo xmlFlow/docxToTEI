@@ -9,9 +9,9 @@ use DOMElement;
 class Edition extends DOMDocument {
     var $document;
 
-    public function __construct(TEIDocument $document) {
+    public function __construct(TEIDocument $doc) {
         parent::__construct('1.0', 'utf-8');
-        $this->document = $document;
+        $this->document = $doc;
         $edition = $this->document->xpath->query('//root/text/sec/title[starts-with(text(),"' . $this->document->cfg->sections->edition . '")]');
         if (count($edition) == 0) {
             XMLUtils::print_error("[Error] Edition section not found");

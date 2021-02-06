@@ -446,7 +446,6 @@ class XMLUtils {
     public static function enumerateLBs($dom) {
         $xpath = new DOMXPath($dom);
         $lbCount = 1;
-        $abCount = 1;
         $abs = $xpath->query('//ab');
         foreach ($abs as $ab) {
             foreach ($xpath->query('lb', $ab) as $ln) {

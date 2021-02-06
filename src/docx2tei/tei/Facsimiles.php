@@ -8,9 +8,9 @@ use DOMElement;
 class Facsimiles extends DOMDocument {
     var $document;
 
-    public function __construct(TEIDocument $document) {
+    public function __construct(TEIDocument $doc) {
         parent::__construct('1.0', 'utf-8');
-        $this->document = $document;
+        $this->document = $doc;
         $this->setFacsimiles();
     }
 

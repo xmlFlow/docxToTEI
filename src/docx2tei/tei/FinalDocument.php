@@ -8,14 +8,32 @@ use DOMDocument;
 class FinalDocument extends DOMDocument {
     var $document;
 
-    public function __construct(TEIDocument $document) {
+    public function __construct(TEIDocument $doc) {
         parent::__construct('1.0', 'utf-8');
 
-        XMLUtils::removeTitleInBody($document, "title");
+        XMLUtils::removeTitleInBody($doc, "title");
 
         # handle choice elements specially
+        XMLUtils::removeElementName($doc, '//choice/*/w');
+        XMLUtils::removeElementName($doc, '//ab/p');
+        XMLUtils::removeElementName($doc, "//bold");
+        XMLUtils::removeElementName($doc, "//table-wrap");
+        XMLUtils::addParagraphsBetweenAnonymousBlocks($doc);
 
-        $s = $document->saveXML();
+        # LBs  adds begin element, enumerate, then remove the last lb.
+        XMLUtils::addChildElement($doc, "ab", "lb");
+        XMLUtils::removeLastElementOfParent($doc,'lb');
+        XMLUtils::removeElementBefore($doc,'table','lb');
+
+        XMLUtils::removeElementName($doc, "//w/w");
+        XMLUtils::removeElementName($doc, "//w/*/w");
+        XMLUtils::removeElementName($doc, "//sec");
+        XMLUtils::removeElementName($doc, '//orig/orig');
+
+        XMLUtils::enumerateLBs($doc);
+        // String operations
+
+        $s = $doc->saveXML();
         $s = XMLUtils::getMarkups($s);
         $s = XMLUtils::removeTagsWithoutContent($s);
 

@@ -91,7 +91,7 @@
       <div xml:id="ed" type="edition" xml:lang="nep">
         <pb n="1r" facs="#surface1"/>
         <ab type="signature" corresp="#signature1">
-          <lb/>
+          <lb n="1"/>
           <s>
             <geogName>
               <w>गडुव</w>
@@ -100,9 +100,9 @@
               </orig>
               <w>षोलाको</w>
             </geogName>
-            <lb/>
-            <lb/>
-            <lb/>
+            <lb n="2"/>
+            <lb n="3"/>
+            <lb n="4"/>
             <geogName>
               <w>गडुव</w>
               <orig>
@@ -112,96 +112,67 @@
             </geogName>
             <w>किनारामा</w>
           </s>
-          <lb/>
+          <lb n="5"/>
           <w>श्रीदुर्गाज्यू</w>
           <w>सहायः</w>
-          <lb/>
         </ab>
         <p/>
         <ab type="signature" corresp="#signature2">
-          <lb/>
+          <lb n="1"/>
           <w>सही</w>
           <w>कृष्नकुमार</w>
-          <lb/>
         </ab>
         <p/>
         <ab type="invocation" corresp="#invocatio">
-          <lb/>
+          <lb n="1"/>
           <w>श्रीदुर्गाज्यू</w>
           <w>सहायः</w>
-          <lb/>
         </ab>
         <p/>
-        <ab type="seal" corresp="#seal1"><lb/>[palm-seal of the king]<lb/></ab>
+        <ab type="seal" corresp="#seal1"><lb n="1"/>[palm-seal of the king]</ab>
         <p/>
         <ab type="margin" corresp="#margin1">
-          <lb/>
+          <lb n="1"/>
           <w>साछी</w>
           <w>सदर</w>
-          <lb/>
         </ab>
         <p/>
         <ab type="space" corresp="#space1">
-          <lb/>
+          <lb n="1"/>
           <w>श्री५पशुपति</w>
-          <lb/>
         </ab>
         <p/>
         <ab type="space" corresp="#space2">
-          <lb/>
+          <lb n="1"/>
           <w>श्री५महाराज्</w>
-          <lb/>
         </ab>
         <p/>
         <ab type="maintext" corresp="#main_text1">
-          <lb/>
+          <lb n="1"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
             <gap extent="3 words" agent="folding" reason="lost"/>
             <w>हो</w>
-            <w>
-              <w>कालचक्र</w>
-              <del rend="crossed_out">
-                <w>तन्त्र</w>
-              </del>
-              <w>राज</w>
-            </w>
+            <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
           </s>
-          <lb/>
+          <lb n="2"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
-            <w>
-              <w>कालचक्र</w>
-              <add place="above_the_line" hand="first">
-                <w>तन्त्र</w>
-              </add>
-              <w>राज</w>
-            </w>
+            <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
           </s>
-          <lb/>
-          <w>
-            <w>स्वस्ति</w>
-            <orig>
-              <w>़</w>
-            </orig>
-          </w>
-          <lb/>
-          <w>
-            <w>कालचक्र</w>
-            <add place="above_the_line" hand="crossed_out">
-              <w>तन्त्र</w>
-            </add>
-            <w>राज</w>
-          </w>
-          <lb/>
+          <lb n="3"/>
+          <w>स्वस्ति<orig>़</orig></w>
+          <lb n="4"/>
+          <w>कालचक्र<add place="above_the_line" hand="crossed_out">तन्त्र</add>राज</w>
+          <lb n="5"/>
           <s xml:lang="san">
             <w>स्वस्ति</w>
           </s>
           <s xml:lang="san">
             <w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w>
-            <lb break="no"/>
+            <lb break="no" n="6"/>
             <supplied reason="reason">
               <w>ध</w>
             </supplied>
@@ -209,13 +180,13 @@
             <surplus>
               <w>हा</w>
             </surplus>
-            <lb break="no"/>
+            <lb break="no" n="7"/>
             <w>राजाधिराज</w>
             <surplus>
               <w>राज</w>
             </surplus>
             <w>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्</w>
-            <lb/>
+            <lb n="8"/>
             <w>सदा</w>
             <w>समरविजयीनाम्</w>
           </s>
@@ -223,7 +194,7 @@
             <orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig>
             <reg>---</reg>
           </choice>
-          <lb/>
+          <lb n="9"/>
           <s>
             <w>आगे</w>
             <orig>
@@ -245,7 +216,7 @@
             <persName>
               <w>कर्णेल</w>
               <w>वीर</w>
-              <lb/>
+              <lb n="10"/>
               <w>विक्रम</w>
               <w>साह</w>
             </persName>
@@ -269,7 +240,7 @@
           <s>
             <w>पंजा</w>
             <w>प</w>
-            <lb break="no"/>
+            <lb break="no" n="11"/>
             <w>ठाइबक्स्याको</w>
             <w>गडुव</w>
             <orig>
@@ -289,7 +260,7 @@
           </s>
           <s>
             <w>इति</w>
-            <lb/>
+            <lb n="12"/>
             <w>सम्वत्</w>
             <w>१९०३</w>
             <w>साल</w>
@@ -309,8 +280,8 @@
             </geogName>
             <w>किनारामा</w>
           </s>
-          <lb/>
-          <lb/>
+          <lb n="13"/>
+          <lb n="14"/>
           <s>
             <w>मेरो</w>
             <add place="below_the_line" hand="second">
@@ -321,7 +292,7 @@
               <w>हो</w>
             </add>
           </s>
-          <lb/>
+          <lb n="15"/>
           <s>
             <w>मेरो</w>
             <del rend="erasure">
@@ -332,7 +303,7 @@
               <w>हो</w>
             </del>
           </s>
-          <lb/>
+          <lb n="16"/>
           <s>
             <w>मेरो</w>
             <del rend="crossed_out">
@@ -345,49 +316,34 @@
               <w>हो</w>
             </add>
           </s>
-          <lb/>
+          <lb n="17"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
             <gap extent="3 words" agent="folding" reason="lost"/>
             <w>हो</w>
-            <w>
-              <w>कालचक्र</w>
-              <del rend="crossed_out">
-                <w>तन्त्र</w>
-              </del>
-              <w>राज</w>
-            </w>
+            <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
           </s>
-          <lb/>
+          <lb n="18"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
-            <w>
-              <w>कालचक्र</w>
-              <add place="above_the_line" hand="first">
-                <w>तन्त्र</w>
-              </add>
-              <w>राज</w>
-            </w>
+            <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
           </s>
-          <lb/>
-          <lb/>
-          <lb/>
+          <lb n="19"/>
+          <lb n="20"/>
         </ab>
         <p/>
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
         <pb n="1r"/>
-        <sec id="sec-5_1">
-          <p>May venerable Durgā help [us].</p>
-          <p>[palm-seal of the king]</p>
-          <p>Hail! [A decree] of him who is shining with manifold rows of eulogy [such as] 'The venerable crest-jewel of the multitude of mountain kings’ and <foreign>naranārāyaṇa</foreign> (an epithet of Kṛṣṇa) etc., high in honour, the venerable supreme king of great kings, the five times venerable great king, <persName>Rājendra Vikrama Śāha</persName>, the brave swordsman, the divine king always triumphant in war.</p>
-          <p>To Cautarīyā <persName>Bhīma Vikrama Śāha</persName> [and] Cautarīyā <persName>Colonel Vīra Vikrama Śāha</persName>.</p>
-          <p>I am [there for] you. We shall honour (<foreign>khātira</foreign>) [you]. The <foreign>pañjā[patra]</foreign> has been sent by [us]. Come [back here] as soon as you receive (lit. see) it.</p>
-          <p>Tuesday, the ...<note place="end"> Text lost in the original.</note> day of the dark fortnight of Vaiśākha in the [Vikrama] era year 1903 (1846 CE). [May it be] auspicious.</p>
-          <p/>
-        </sec>
+        <p>May venerable Durgā help [us].</p>
+        <p>[palm-seal of the king]</p>
+        <p>Hail! [A decree] of him who is shining with manifold rows of eulogy [such as] 'The venerable crest-jewel of the multitude of mountain kings’ and <foreign>naranārāyaṇa</foreign> (an epithet of Kṛṣṇa) etc., high in honour, the venerable supreme king of great kings, the five times venerable great king, <persName>Rājendra Vikrama Śāha</persName>, the brave swordsman, the divine king always triumphant in war.</p>
+        <p>To Cautarīyā <persName>Bhīma Vikrama Śāha</persName> [and] Cautarīyā <persName>Colonel Vīra Vikrama Śāha</persName>.</p>
+        <p>I am [there for] you. We shall honour (<foreign>khātira</foreign>) [you]. The <foreign>pañjā[patra]</foreign> has been sent by [us]. Come [back here] as soon as you receive (lit. see) it.</p>
+        <p>Tuesday, the ...<note place="end"> Text lost in the original.</note> day of the dark fortnight of Vaiśākha in the [Vikrama] era year 1903 (1846 CE). [May it be] auspicious.</p>
+        <p/>
       </div>
       <div xml:id="commentary" type="commentary" xml:lang="eng">
         <p>A <foreign>pañjāpatra</foreign>, also known as a <foreign>keśarīpañjā</foreign> is a variety of <foreign>lālamohara</foreign>. It is a royal order with the seal of the palm of king. According to Amatya 1988: 2-3, these types of lālamoharas were issued when any executive power, facility etc. was being granted to a person, or else a royal family member was being assigned responsibility to rule over a certain territory of the kingdom or to take on the job of running the government.</p>
