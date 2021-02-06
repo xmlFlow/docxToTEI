@@ -200,8 +200,6 @@ class XMLUtils {
                             $s = str_replace($m, $tagElem->ownerDocument->saveXML($tagElem), $s);
                         }
                     }
-                } else if ($hash_count == 3) {
-                    self::createStructuredContent(substr($m, 1));
                 }
 
             }
