@@ -36,26 +36,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createRef($s) {
-
-        $s = preg_replace_callback_array(
-            [
-                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
-                    $url = $match[1];
-                    if (strlen($url) > 0) {
-                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
-                    } else {
-                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
-                    }
-
-                },
-
-            ],
-            $s
-        );
-        return $s;
-    }
-
     /**
      * @param string $s
      * @return string|string[]|null
@@ -138,6 +118,26 @@ class XMLUtils {
         return $s;
     }
 
+    public static function createRef($s) {
+
+        $s = preg_replace_callback_array(
+            [
+                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
+                    $url = $match[1];
+                    if (strlen($url) > 0) {
+                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
+                    } else {
+                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
+                    }
+
+                },
+
+            ],
+            $s
+        );
+        return $s;
+    }
+
     /**
      * @param string $s
      * @return string
@@ -145,21 +145,23 @@ class XMLUtils {
     public static function handleWordsWithAdditionAndDeletion(string $s) {
 
         $s = preg_replace_callback_array(
-            //TODO add the attribute handling
-            ['/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+        //TODO add the attribute handling
+            [/*'/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
                 return '<w>' . $m[1] . '</w>';
             },
-            '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                    return '<w>' . $m[1] . '</w>';
+                },*/
+                '/\$(.*)\$/' => function ($m) {
                     return '<w>' . $m[1] . '</w>';
                 },
+
             ],
             $s
         );
         return $s;
 
     }
-
-
 
 
     /**
@@ -169,6 +171,7 @@ class XMLUtils {
     public static function createStructuredContent(string $s) {
         $tags = self::getTagsList();
         $s = preg_replace('/\s+/i', ' ', $s);
+        // ignore # inside the tag
         $pattern = '/' . XMLUtils::$bnd . '[\w|?|&amp;]+(@(\w)*)*(\{((?!\#).)*\})+' . XMLUtils::$bnd . '/U'; // ungready
 
 
@@ -180,7 +183,7 @@ class XMLUtils {
                 if ($hash_count % 2 == 0) {
                     $content = self::createStructuredContent(trim($m, XMLUtils::$bnd));
                 } else if ($hash_count == 3) {
-                    $content =  self::createStructuredContent(substr($m,1));
+                    $content = self::createStructuredContent(substr($m, 1));
                 }
                 $parts = explode("{", $content);
                 $suffix1 = str_replace('}', '', $parts[1]);
@@ -202,8 +205,7 @@ class XMLUtils {
                                 try {
                                     $attr = $elem->createAttribute($tag["attributes"][$i]['tag']);
                                 } catch (Exception $e) {
-                                    echo 'Caught exception: ',  $e->getMessage(), "\n";
-                                    echo 'Caught exception: ',  $tag["attributes"], "\n";
+                                    echo 'Caught exception: ', $tag["attributes"], "\n";
                                 }
 
                                 $val = (isset($tag["attributes"][$i]['default'])) ? $tag["attributes"][$i]['default'] : '';
@@ -278,12 +280,18 @@ class XMLUtils {
                 )
             ),
             /**array(
-                "original" => "ref",
-                "replace" => "ref",
-                "attributes" => array(
-                    array("target"=>"target")
-                )
-            ),*/
+             * "original" => "ref",
+             * "replace" => "ref",
+             * "attributes" => array(
+             * array("target"=>"target")
+             * )
+             * ),
+             **/
+            array(
+            "original" => "orig",
+            "replace" => "orig",
+            "attributes" => array()
+            ),
             array(
                 "original" => "?",
                 "replace" => "unclear",
@@ -291,11 +299,7 @@ class XMLUtils {
                     array("tag" => "cert", "default" => "high"),
                 )
             ),
-            array(
-                "original" => "orig",
-                "replace" => "orig",
-                "attributes" => array()
-            ),
+
             array(
                 "original" => "sur",
                 "replace" => "surplus",
@@ -344,6 +348,12 @@ class XMLUtils {
         return $tags;
     }
 
+    public static function removeAnnotationsInAttributes(string $tag) {
+        $tag = str_replace('=', '', $tag);
+        $tag = str_replace('-', '', $tag);
+        return $tag;
+    }
+
     /**
      * String replace nth occurrence
      *
@@ -358,19 +368,14 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
-    public static function removeAnnotationsInAttributes(string $tag) {
-        $tag = str_replace('=', '', $tag);
-        $tag = str_replace('-', '', $tag);
-        return $tag;
-    }
-
-    public static function removeElementBefore($dom, string $tag , string $remove) {
+    public static function removeElementBefore($dom, string $tag, string $remove) {
         $xpath = new DOMXPath($dom);
 
         foreach ($xpath->evaluate('//' . $tag . '/preceding-sibling::lb') as $node) {
             $node->parentNode->removeChild($node);
         }
     }
+
     public static function removeLastElementOfParent($dom, string $tag) {
         $xpath = new DOMXPath($dom);
         $lastLbs = $xpath->query('//ab/' . $tag . '[last()]');

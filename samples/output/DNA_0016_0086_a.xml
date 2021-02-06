@@ -147,7 +147,192 @@
           <w>श्री५महाराज्</w>
         </ab>
         <p/>
-        <ab type="maintext" corresp="#main_text1"><lb n="1"/>$<w>स्वस्ति</w><orig><w>़</w></orig>$<lb n="2"/><w>कालचक्र<add place="above_the_line" hand="crossed_out">तन्त्र</add>राज</w><lb n="3"/><s xml:lang="san"><w>स्वस्ति</w></s><s xml:lang="san"><w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w><lb break="no" n="4"/><supplied reason="reason"><w>ध</w></supplied><w>विरूदावलिविराजमानमानोन्नतश्रीश्रीश्रीश्रीश्रीमहा</w><surplus><w>हा</w></surplus><lb break="no" n="5"/><w>राजाधिराज</w><surplus><w>राज</w></surplus><w>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्</w><lb n="6"/><w>सदा</w><w>समरविजयीनाम्</w></s><choice><orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig><reg>---</reg></choice><lb n="7"/><s><w>आगे</w><orig><orig>•</orig></orig><w>चौतरिया</w><orig><orig>•</orig></orig><persName><w>भिम</w><w>विक्रम</w><w>साह</w></persName><orig><orig>•</orig></orig><w>चौतरिया</w><persName><w>कर्णेल</w><w>वीर</w><lb n="8"/><w>विक्रम</w><w>साह</w></persName><w>प्रति</w></s><orig><orig>•</orig></orig><s><w>तिमिहरूको</w><w>मँ</w><w>छु</w></s><s><w>खातिर</w><w>ग</w><supplied reason="lost"><w>रूँला</w></supplied></s><s><w>पंजा</w><w>प<lb break="no" n="9"/>ठाइबक्स्याको</w><w>गडुव</w><orig><w>़</w></orig><w>छ</w></s><s><w>पंजा</w><w>देखत</w><w>चाँडो</w><w>आउन्या</w><supplied reason="lost"><w>काम</w></supplied><w>गर</w></s><s><w>इति</w><lb n="10"/><w>सम्वत्</w><w>१९०३</w><w>साल</w><w>मिति</w><w>वैशाख</w><w>वदि</w><gap extent="2 characters" agent="breakage" reason="lost"/><w>रोज</w><w>३</w><w>शुभम्‌</w><geogName><w>गडुव</w><orig><w>़</w></orig><w>षोलाको</w></geogName><w>किनारामा</w></s><lb n="11"/><lb n="12"/><s><w>मेरो</w><add place="below_the_line" hand="second"><w>नाम</w></add><w>काले</w><add place="above_the_line" hand="first"><w>हो</w></add></s><lb n="13"/><s><w>मेरो</w><del rend="erasure"><w>नाम</w></del><w>काले</w><del rend="crossed_out"><w>हो</w></del></s><lb n="14"/><s><w>मेरो</w><del rend="crossed_out"><w>नाम</w></del><w>नाम</w><gap extent="5 characters" agent="ink" reason="illegible"/><w>काले</w><add place="above_the_line" hand="second"><w>हो</w></add></s><lb n="15"/><s><w>मेरो</w><w>नाम</w><gap extent="3 words" agent="folding" reason="lost"/><w>हो</w><w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w></s><lb n="16"/><s><w>मेरो</w><w>नाम</w><w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w></s><lb n="17"/><lb n="18"/></ab>
+        <ab type="maintext" corresp="#main_text1">
+          <lb n="1"/>
+          <s>
+            <w>मेरो</w>
+            <w>नाम</w>
+            <gap extent="3 words" agent="folding" reason="lost"/>
+            <w>हो</w>
+            <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
+          </s>
+          <lb n="2"/>
+          <s>
+            <w>मेरो</w>
+            <w>नाम</w>
+            <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
+          </s>
+          <lb n="3"/>
+          <w>स्वस्ति<orig>़</orig></w>
+          <lb n="4"/>
+          <w>कालचक्र<add place="above_the_line" hand="crossed_out">तन्त्र</add>राज</w>
+          <lb n="5"/>
+          <s xml:lang="san">
+            <w>स्वस्ति</w>
+          </s>
+          <s xml:lang="san">
+            <w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w>
+            <lb break="no" n="6"/>
+            <supplied reason="reason">
+              <w>ध</w>
+            </supplied>
+            <w>विरूदावलिविराजमानमानोन्नतश्रीश्रीश्रीश्रीश्रीमहा</w>
+            <surplus>
+              <w>हा</w>
+            </surplus>
+            <lb break="no" n="7"/>
+            <w>राजाधिराज</w>
+            <surplus>
+              <w>राज</w>
+            </surplus>
+            <w>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्</w>
+            <lb n="8"/>
+            <w>सदा</w>
+            <w>समरविजयीनाम्</w>
+          </s>
+          <choice>
+            <orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig>
+            <reg>---</reg>
+          </choice>
+          <lb n="9"/>
+          <s>
+            <w>आगे</w>
+            <orig>
+              <orig>•</orig>
+            </orig>
+            <w>चौतरिया</w>
+            <orig>
+              <orig>•</orig>
+            </orig>
+            <persName>
+              <w>भिम</w>
+              <w>विक्रम</w>
+              <w>साह</w>
+            </persName>
+            <orig>
+              <orig>•</orig>
+            </orig>
+            <w>चौतरिया</w>
+            <persName>
+              <w>कर्णेल</w>
+              <w>वीर</w>
+              <lb n="10"/>
+              <w>विक्रम</w>
+              <w>साह</w>
+            </persName>
+            <w>प्रति</w>
+          </s>
+          <orig>
+            <orig>•</orig>
+          </orig>
+          <s>
+            <w>तिमिहरूको</w>
+            <w>मँ</w>
+            <w>छु</w>
+          </s>
+          <s>
+            <w>खातिर</w>
+            <w>ग</w>
+            <supplied reason="lost">
+              <w>रूँला</w>
+            </supplied>
+          </s>
+          <s>
+            <w>पंजा</w>
+            <w>प</w>
+            <lb break="no" n="11"/>
+            <w>ठाइबक्स्याको</w>
+            <w>गडुव</w>
+            <orig>
+              <w>़</w>
+            </orig>
+            <w>छ</w>
+          </s>
+          <s>
+            <w>पंजा</w>
+            <w>देखत</w>
+            <w>चाँडो</w>
+            <w>आउन्या</w>
+            <supplied reason="lost">
+              <w>काम</w>
+            </supplied>
+            <w>गर</w>
+          </s>
+          <s>
+            <w>इति</w>
+            <lb n="12"/>
+            <w>सम्वत्</w>
+            <w>१९०३</w>
+            <w>साल</w>
+            <w>मिति</w>
+            <w>वैशाख</w>
+            <w>वदि</w>
+            <gap extent="2 characters" agent="breakage" reason="lost"/>
+            <w>रोज</w>
+            <w>३</w>
+            <w>शुभम्‌</w>
+            <geogName>
+              <w>गडुव</w>
+              <orig>
+                <w>़</w>
+              </orig>
+              <w>षोलाको</w>
+            </geogName>
+            <w>किनारामा</w>
+          </s>
+          <lb n="13"/>
+          <lb n="14"/>
+          <s>
+            <w>मेरो</w>
+            <add place="below_the_line" hand="second">
+              <w>नाम</w>
+            </add>
+            <w>काले</w>
+            <add place="above_the_line" hand="first">
+              <w>हो</w>
+            </add>
+          </s>
+          <lb n="15"/>
+          <s>
+            <w>मेरो</w>
+            <del rend="erasure">
+              <w>नाम</w>
+            </del>
+            <w>काले</w>
+            <del rend="crossed_out">
+              <w>हो</w>
+            </del>
+          </s>
+          <lb n="16"/>
+          <s>
+            <w>मेरो</w>
+            <del rend="crossed_out">
+              <w>नाम</w>
+            </del>
+            <w>नाम</w>
+            <gap extent="5 characters" agent="ink" reason="illegible"/>
+            <w>काले</w>
+            <add place="above_the_line" hand="second">
+              <w>हो</w>
+            </add>
+          </s>
+          <lb n="17"/>
+          <s>
+            <w>मेरो</w>
+            <w>नाम</w>
+            <gap extent="3 words" agent="folding" reason="lost"/>
+            <w>हो</w>
+            <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
+          </s>
+          <lb n="18"/>
+          <s>
+            <w>मेरो</w>
+            <w>नाम</w>
+            <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
+          </s>
+          <lb n="19"/>
+          <lb n="20"/>
+        </ab>
         <p/>
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">

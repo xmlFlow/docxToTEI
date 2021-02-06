@@ -17,7 +17,6 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeElement($document, '//choice/sic/w');
         XMLUtils::removeElement($document, '//choice/corr/w');
         XMLUtils::removeElement($document, '//ab/p');
-        XMLUtils::removeElement($document, '//w/w');
         XMLUtils::removeElement($document, '//orig/orig');
         XMLUtils::removeElement($document, "//bold");
         XMLUtils::removeElement($document, "//table-wrap");
@@ -30,8 +29,8 @@ class FinalDocument extends DOMDocument {
         XMLUtils::enumerateLBs($document);
 
 
-        XMLUtils::removeElement($document, "//w/del/w");
-        XMLUtils::removeElement($document, "//w/add/w");
+        XMLUtils::removeElement($document, "//w/*/w");
+        XMLUtils::removeElement($document, "//w/w");
         XMLUtils::removeElement($document, "//sec");
 
         // String operations
