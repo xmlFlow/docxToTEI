@@ -427,10 +427,10 @@ class XMLUtils {
 
     /**
      * @param $dom
-     * @param $elementName
+     * @param $str
      * @return mixed
      */
-    public static function removeElement($dom, $str) {
+    public static function removeElementName($dom, $str) {
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query($str) as $node) {
             $parent = $node->parentNode;
