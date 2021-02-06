@@ -189,13 +189,31 @@ class TEIDocument extends DOMDocument {
 
     public function saveToFile(string $pathToFile) {
         $s = $this->newDom->saveXML();
-        $s =  preg_replace('/\n/', '', $s);
         $s = str_replace('</w>','</w>'.PHP_EOL,$s);
         $s = str_replace('&amp;','&',$s);
         $doc = new \DOMDocument("1.0");
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $doc->loadXML($s);
+        XMLUtils::removeElementName($doc, '//choice/*/w');
+        XMLUtils::removeElementName($doc, '//ab/p');
+        XMLUtils::removeElementName($doc, "//bold");
+        XMLUtils::removeElementName($doc, "//table-wrap");
+        XMLUtils::addParagraphsBetweenAnonymousBlocks($doc);
+
+        # LBs  adds begin element, enumerate, then remove the last lb.
+        XMLUtils::addChildElement($doc, "ab", "lb");
+        XMLUtils::removeLastElementOfParent($doc,'lb');
+        XMLUtils::removeElementBefore($doc,'table','lb');
+
+        XMLUtils::removeElementName($doc, "//w/w");
+        XMLUtils::removeElementName($doc, "//w/*/w");
+        XMLUtils::removeElementName($doc, "//sec");
+        XMLUtils::removeElementName($doc, '//orig/orig');
+
+        XMLUtils::enumerateLBs($doc);
+        // String operations
+
         $doc->save($pathToFile);
 
         //file_put_contents($pathToFile, $s);

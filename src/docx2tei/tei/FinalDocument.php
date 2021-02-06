@@ -14,24 +14,6 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeTitleInBody($document, "title");
 
         # handle choice elements specially
-        XMLUtils::removeElementName($document, '//choice/*/w');
-        XMLUtils::removeElementName($document, '//ab/p');
-        XMLUtils::removeElementName($document, "//bold");
-        XMLUtils::removeElementName($document, "//table-wrap");
-        XMLUtils::addParagraphsBetweenAnonymousBlocks($document);
-
-        # LBs  adds begin element, enumerate, then remove the last lb.
-        XMLUtils::addChildElement($document, "ab", "lb");
-        XMLUtils::removeLastElementOfParent($document,'lb');
-        XMLUtils::removeElementBefore($document,'table','lb');
-
-        XMLUtils::removeElementName($document, "//w/w");
-        XMLUtils::removeElementName($document, "//w/*/w");
-        XMLUtils::removeElementName($document, "//sec");
-        XMLUtils::removeElementName($document, '//orig/orig');
-
-        XMLUtils::enumerateLBs($document);
-        // String operations
 
         $s = $document->saveXML();
         $s = XMLUtils::getMarkups($s);
