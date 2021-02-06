@@ -92,6 +92,8 @@
         <pb n="1r" facs="#surface1"/>
         <ab type="signature" corresp="#signature1">
           <lb n="1"/>
+          <lb n="2"/>
+          <lb n="3"/>
           <s>
             <geogName>
               <w>गडुव</w>
@@ -100,9 +102,9 @@
               </orig>
               <w>षोलाको</w>
             </geogName>
-            <lb n="2"/>
-            <lb n="3"/>
             <lb n="4"/>
+            <lb n="5"/>
+            <lb n="6"/>
             <geogName>
               <w>गडुव</w>
               <orig>
@@ -112,7 +114,7 @@
             </geogName>
             <w>किनारामा</w>
           </s>
-          <lb n="5"/>
+          <lb n="7"/>
           <w>श्रीदुर्गाज्यू</w>
           <w>सहायः</w>
         </ab>
@@ -329,6 +331,14 @@
       </div>
       <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
         <pb n="1r"/>
+        <p>
+          <bibl corresp_id="168">Acharya 1971</bibl>
+        </p>
+        <p>
+          <term ref_id="224">pañjā[patra] likhata</term>
+        </p>
+        <p/>
+        <p/>
         <p>May venerable Durgā help [us].</p>
         <p>[palm-seal of the king]</p>
         <p>Hail! [A decree] of him who is shining with manifold rows of eulogy [such as] 'The venerable crest-jewel of the multitude of mountain kings’ and <foreign>naranārāyaṇa</foreign> (an epithet of Kṛṣṇa) etc., high in honour, the venerable supreme king of great kings, the five times venerable great king, <persName>Rājendra Vikrama Śāha</persName>, the brave swordsman, the divine king always triumphant in war.</p>
@@ -338,6 +348,12 @@
         <p/>
       </div>
       <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>
+          <bibl corresp_id="168">Acharya 1971</bibl>
+        </p>
+        <p>
+          <term ref_id="224">pañjā[patra] likhata</term>
+        </p>
         <p>A <foreign>pañjāpatra</foreign>, also known as a <foreign>keśarīpañjā</foreign> is a variety of <foreign>lālamohara</foreign>. It is a royal order with the seal of the palm of king. According to Amatya 1988: 2-3, these types of lālamoharas were issued when any executive power, facility etc. was being granted to a person, or else a royal family member was being assigned responsibility to rule over a certain territory of the kingdom or to take on the job of running the government.</p>
         <p>Cautarīyā Bhīma Vikrama Śāha and Cautarīyā Colonel Vīra Vikrama Śāha were sons of Mukhtiyāra <persName>Puṣkara Śāha</persName>. Puṣkara Śāha was appointed as mukhtiyāra by Queen <persName>Sāmrājyalakṣmī</persName> in early April 1840. He was soon (1 November 1840) dismissed from the post, however (cf. Acharya 1971: 16). Bhīma Vikrama Śāha, a cousin of Cautarīyā <persName>Phatte Jaṅga Śāha</persName>, was governor of <placeName>Doṭī</placeName>. When Phatte Jaṅga was killed, along with many of his relatives and followers, the family’s property was confiscated. Some of survivors, including Bhīma Vikrama, fled the kingdom. On 27 August 1847, on his way back to <placeName>Kathmandu</placeName> from <placeName>Bettiah</placeName> with 200 or 300 men intent on killing <persName>Jaṅga Bahādura</persName>, Bhīma Vikrama was defeated by the latter’s troops in <placeName>Alau</placeName>, an event called the Alau massacre in Nepalese history. He had no recourse but to flee to <placeName>Varāṇasī</placeName> (cf. Stiller 1981: 300, 301, 355, 357). This document has been published in the <ref target="https://nepalica.hadw-bw.de/nepalwww/">Abhilekha</ref> site (<ref>https://nepalica.hadw-bw.de/nepal/editions/show/1336</ref>).</p>
       </div>

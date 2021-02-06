@@ -232,6 +232,20 @@ class XMLUtils {
     private static function getTagsList(): array {
         $tags = [
             array(
+                "original" => "bibl",
+                "replace" => "bibl",
+                "attributes" => array(
+                    array("tag" => "corresp_id")
+                )
+            ),
+            array(
+                "original" => "tt",
+                "replace" => "term",
+                "attributes" => array(
+                    array("tag" => "ref_id")
+                )
+            ),
+            array(
                 "original" => "&amp;",
                 "replace" => "add",
                 "attributes" => array(
@@ -485,7 +499,6 @@ class XMLUtils {
         }
         return $s;
     }
-
 
 
     public static function printPHPErrors(): void {
