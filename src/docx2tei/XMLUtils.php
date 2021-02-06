@@ -29,7 +29,6 @@ class XMLUtils {
 
         $s = XMLUtils::handleWordsWithAdditionAndDeletion($s);
         $s = XMLUtils::createStructuredContent($s);
-        $s = XMLUtils::createDot($s);
 
         #TODO
 

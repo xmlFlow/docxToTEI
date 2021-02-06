@@ -11,11 +11,12 @@ class FinalDocument extends DOMDocument {
     public function __construct(TEIDocument $doc) {
         parent::__construct('1.0', 'utf-8');
 
-        XMLUtils::removeTitleInBody($doc, "title");
 
         # handle choice elements specially
         XMLUtils::removeElementName($doc, '//choice/*/w');
+
         XMLUtils::removeElementName($doc, '//ab/p');
+        XMLUtils::removeTitleInBody($doc, "title");
         XMLUtils::removeElementName($doc, "//bold");
         XMLUtils::removeElementName($doc, "//table-wrap");
         XMLUtils::addParagraphsBetweenAnonymousBlocks($doc);
@@ -24,13 +25,13 @@ class FinalDocument extends DOMDocument {
         XMLUtils::addChildElement($doc, "ab", "lb");
         XMLUtils::removeLastElementOfParent($doc,'lb');
         XMLUtils::removeElementBefore($doc,'table','lb');
+        XMLUtils::enumerateLBs($doc);
 
         XMLUtils::removeElementName($doc, "//w/w");
         XMLUtils::removeElementName($doc, "//w/*/w");
         XMLUtils::removeElementName($doc, "//sec");
-        XMLUtils::removeElementName($doc, '//orig/orig');
+        XMLUtils::removeElementName($doc, "//orig/orig");
 
-        XMLUtils::enumerateLBs($doc);
         // String operations
 
         $s = $doc->saveXML();
@@ -42,6 +43,8 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
         $s = XMLUtils::createSurroundWordForChoice($s);
+        $s = XMLUtils::createDot($s);
+
 
 
         ## Error messages
