@@ -486,15 +486,6 @@ class XMLUtils {
         return $s;
     }
 
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    public static function handleLineBreakNoWords(string $s) {
-        // <w>व<lb break="no" n="2"/>सी</w>
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
-        return $s;
-    }
 
 
     public static function printPHPErrors(): void {

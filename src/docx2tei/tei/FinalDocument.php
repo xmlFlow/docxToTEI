@@ -41,9 +41,9 @@ class FinalDocument extends DOMDocument {
         //removeTagsWithoutContent
         $s = preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
         $this->isComplexStatementsCorrect($s);
-        // createComplexSentence <s>
         $s = preg_replace_callback_array([
             '/#SB(.|\n)*?#SE/' => function ($matches) {
+                // createComplexSentence <s>
                 $s = $matches[0];
                 $s = preg_replace('/#SB@([a-z]{3})@([IMF])/', '<s xml:lang="$1" part="$2">', $s);
                 $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
@@ -51,10 +51,14 @@ class FinalDocument extends DOMDocument {
                 $s = preg_replace('/#SB/', '<s>', $s);
                 $s = preg_replace('/#SE/', '</s>', $s);
                 return $s;
-            }
-        ], $s);
+            },
 
-        $s = XMLUtils::handleLineBreakNoWords($s);
+
+        ], $s);
+         //handleLineBreakNoWords
+        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+
+
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
         $s = XMLUtils::createSurroundWordForChoice($s);
         $s = XMLUtils::createDot($s);
