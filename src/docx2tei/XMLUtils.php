@@ -25,11 +25,19 @@ class XMLUtils {
         # create spaces
         $s = XMLUtils::createGap('space', 'unit', 'quantity', '', $s, 'chars', '\.');
 
-        $s = XMLUtils::createRef($s);
-
-
         $s = preg_replace_callback_array(
-            ['/\$(.*)\$/' => function ($m) {
+            ['/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
+                // create references <ref>
+                $url = $match[1];
+                if (strlen($url) > 0) {
+                    return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
+                } else {
+                    return '<ref>' . ltrim($match[2], '@') . '</ref>';
+                }
+
+            },
+                '/\$(.*)\$/' => function ($m) {
+                    // create words <w>
                     return '<w>' . $m[1] . '</w>';
                 },
 
@@ -127,28 +135,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createRef($s) {
-
-        $s = preg_replace_callback_array(
-            [
-                '/#ref@*(.*){((.|\n)*)}#/U' => function ($match) {
-                    $url = $match[1];
-                    if (strlen($url) > 0) {
-                        return '<ref target="' . ltrim($url, '@') . '">' . $match[2] . '</ref>';
-                    } else {
-                        return '<ref>' . ltrim($match[2], '@') . '</ref>';
-                    }
-
-                },
-
-            ],
-            $s
-        );
-        return $s;
-    }
-
-
-
 
     /**
      * @param string $s
@@ -230,11 +216,6 @@ class XMLUtils {
         return $s;
     }
 
-    public static function createDot(string $s) {
-        $s = preg_replace('/\•/U', '<orig>•</orig>', $s);
-        return $s;
-    }
-
     /**
      * @param $value
      */
@@ -274,9 +255,9 @@ class XMLUtils {
              * ),
              **/
             array(
-            "original" => "orig",
-            "replace" => "orig",
-            "attributes" => array()
+                "original" => "orig",
+                "replace" => "orig",
+                "attributes" => array()
             ),
             array(
                 "original" => "?",
@@ -338,6 +319,11 @@ class XMLUtils {
         $tag = str_replace('=', '', $tag);
         $tag = str_replace('-', '', $tag);
         return $tag;
+    }
+
+    public static function createDot(string $s) {
+        $s = preg_replace('/\•/U', '<orig>•</orig>', $s);
+        return $s;
     }
 
     /**
