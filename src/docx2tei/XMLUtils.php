@@ -27,7 +27,24 @@ class XMLUtils {
 
         $s = XMLUtils::createRef($s);
 
-        $s = XMLUtils::handleWordsWithAdditionAndDeletion($s);
+
+        $s = preg_replace_callback_array(
+        //TODO add the attribute handling
+            [/*'/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                return '<w>' . $m[1] . '</w>';
+            },
+                '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
+                    return '<w>' . $m[1] . '</w>';
+                },*/
+                '/\$(.*)\$/' => function ($m) {
+                    return '<w>' . $m[1] . '</w>';
+                },
+
+            ],
+            $s
+        );
+
+
         $s = XMLUtils::createStructuredContent($s);
 
         #TODO
@@ -137,30 +154,7 @@ class XMLUtils {
         return $s;
     }
 
-    /**
-     * @param string $s
-     * @return string
-     */
-    public static function handleWordsWithAdditionAndDeletion(string $s) {
 
-        $s = preg_replace_callback_array(
-        //TODO add the attribute handling
-            [/*'/\$([^\p{Zs}\p{P}]*#&amp;(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
-                return '<w>' . $m[1] . '</w>';
-            },
-                '/\$([^\p{Zs}\p{P}]*#del(@(\w)*)*\{[^\p{Zs}\p{P}]+}#[^\p{Zs}\p{P}]*)\$/' => function ($m) {
-                    return '<w>' . $m[1] . '</w>';
-                },*/
-                '/\$(.*)\$/' => function ($m) {
-                    return '<w>' . $m[1] . '</w>';
-                },
-
-            ],
-            $s
-        );
-        return $s;
-
-    }
 
 
     /**
