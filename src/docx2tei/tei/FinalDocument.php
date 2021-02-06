@@ -23,8 +23,8 @@ class FinalDocument extends DOMDocument {
 
         # LBs  adds begin element, enumerate, then remove the last lb.
         XMLUtils::addChildElement($doc, "ab", "lb");
-        XMLUtils::removeLastElementOfParent($doc,'lb');
-        XMLUtils::removeElementBefore($doc,'table','lb');
+        XMLUtils::removeLastElementOfParent($doc, 'lb');
+        XMLUtils::removeElementBefore($doc, 'table', 'lb');
         XMLUtils::enumerateLBs($doc);
 
         XMLUtils::removeElementName($doc, "//w/w");
@@ -39,14 +39,25 @@ class FinalDocument extends DOMDocument {
 
         $s = XMLUtils::getMarkups($s);
         //removeTagsWithoutContent
-        $s= preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
+        $s = preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
         $this->isComplexStatementsCorrect($s);
-        $s = XMLUtils::createComplexSentence($s);
+        // createComplexSentence <s>
+        $s = preg_replace_callback_array([
+            '/#SB(.|\n)*?#SE/' => function ($matches) {
+                $s = $matches[0];
+                $s = preg_replace('/#SB@([a-z]{3})@([IMF])/', '<s xml:lang="$1" part="$2">', $s);
+                $s = preg_replace('/#SB@([a-z]{3})/', '<s xml:lang="$1">', $s);
+                $s = preg_replace('/#SB@([IMF])/', '<s part="$1">', $s);
+                $s = preg_replace('/#SB/', '<s>', $s);
+                $s = preg_replace('/#SE/', '</s>', $s);
+                return $s;
+            }
+        ], $s);
+
         $s = XMLUtils::handleLineBreakNoWords($s);
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
         $s = XMLUtils::createSurroundWordForChoice($s);
         $s = XMLUtils::createDot($s);
-
 
 
         ## Error messages
@@ -64,7 +75,6 @@ class FinalDocument extends DOMDocument {
             ],
             $s
         );
-
 
 
 // Create new Dom
