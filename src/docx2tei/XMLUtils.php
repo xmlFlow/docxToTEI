@@ -510,13 +510,6 @@ class XMLUtils {
         return preg_replace('/<choice>\s*<sic>.*<\/sic>\s*<corr>.*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
     }
 
-    /**
-     * @param string $s
-     * @return string|string[]|null
-     */
-    public static function removeTagsWithoutContent(string $s) {
-        return preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
-    }
 
     /**
      * @param $dom

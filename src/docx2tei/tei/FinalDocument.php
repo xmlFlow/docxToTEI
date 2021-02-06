@@ -35,9 +35,11 @@ class FinalDocument extends DOMDocument {
         // String operations
 
         $s = $doc->saveXML();
-        $s = XMLUtils::getMarkups($s);
-        $s = XMLUtils::removeTagsWithoutContent($s);
 
+
+        $s = XMLUtils::getMarkups($s);
+        //removeTagsWithoutContent
+        $s= preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
         $this->isComplexStatementsCorrect($s);
         $s = XMLUtils::createComplexSentence($s);
         $s = XMLUtils::handleLineBreakNoWords($s);
