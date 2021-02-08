@@ -235,14 +235,14 @@ class XMLUtils {
                 "original" => "bibl",
                 "replace" => "bibl",
                 "attributes" => array(
-                    array("tag" => "corresp_id")
+                    array("tag" => "corresp")
                 )
             ),
             array(
                 "original" => "tt",
                 "replace" => "term",
                 "attributes" => array(
-                    array("tag" => "ref_id")
+                    array("tag" => "ref")
                 )
             ),
             array(
