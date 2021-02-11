@@ -60,7 +60,10 @@ class FinalDocument extends DOMDocument {
 
 
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
-        $s = XMLUtils::createSurroundWordForChoice($s);
+        //  choice as one word
+        $s = preg_replace('/<choice>\s*<sic>[^\p{Zs}\p{P}]*<\/sic>\s*<corr>[^\p{Zs}\p{P}]*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
+
+
         $s = XMLUtils::createDot($s);
 
 

@@ -511,10 +511,6 @@ class XMLUtils {
     }
 
 
-    public static function createSurroundWordForChoice(string $s) {
-        $s = preg_replace('/<choice>\s*<sic>[^\p{Zs}\p{P}]*<\/sic>\s*<corr>[^\p{Zs}\p{P}]*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
-        return $s;
-    }
 
 
     /**

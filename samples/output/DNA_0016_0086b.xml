@@ -92,9 +92,21 @@
         <pb n="1r" facs="#surface1"/>
         <ab type="signature" corresp="#signature1">
           <lb n="1"/>
+          <w>
+            <choice>
+              <sic>पुण्येक</sic>
+              <corr>पुण्य</corr>
+            </choice>
+          </w>
+          <w>सदा</w>
+          <choice>
+            <sic>राजधनि</sic>
+            <corr>राजधानी</corr>
+          </choice>
+          <lb n="2"/>
           <w>षेत्&#x200c;वाहेक</w>
           <w>मर्&#8205;यो</w>
-          <lb n="2"/>
+          <lb n="3"/>
           <w>श्रीदुर्गाज्यू</w>
           <w>सहायः</w>
         </ab>
