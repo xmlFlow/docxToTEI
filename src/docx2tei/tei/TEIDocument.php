@@ -189,16 +189,15 @@ class TEIDocument extends DOMDocument {
 
     public function saveToFile(string $pathToFile) {
         $s = $this->newDom->saveXML();
-        $s =  preg_replace('/\n/', '', $s);
-        $s = str_replace('</w>','</w>'.PHP_EOL,$s);
-        $s = str_replace('&amp;','&',$s);
+
         $doc = new \DOMDocument("1.0");
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $doc->loadXML($s);
-        $doc->save($pathToFile);
-
-        //file_put_contents($pathToFile, $s);
+        $s = $doc->saveXML();
+        $s = str_replace('&amp;#x200c;','&#x200c;',$s);
+        $s = str_replace('&amp;#8205;','&#8205;',$s);
+        file_put_contents($pathToFile, $s);
     }
 
 

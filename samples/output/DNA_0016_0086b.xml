@@ -92,6 +92,9 @@
         <pb n="1r" facs="#surface1"/>
         <ab type="signature" corresp="#signature1">
           <lb n="1"/>
+          <w>षेत्&#x200c;वाहेक</w>
+          <w>मर्&#8205;यो</w>
+          <lb n="2"/>
           <w>श्रीदुर्गाज्यू</w>
           <w>सहायः</w>
         </ab>
@@ -198,8 +201,8 @@
             <w>तिमिहरूको</w>
             <w>मँ</w>
             <w>छु</w>
-            <w>षेत्‌वाहेक</w>
-            <w>मर्‍यो</w>
+            <w>षेत्&#x200c;वाहेक</w>
+            <w>मर्&#8205;यो</w>
           </s>
           <s>
             <w>खातिर</w>
@@ -237,7 +240,7 @@
             <gap extent="2 characters" agent="breakage" reason="lost"/>
             <w>रोज</w>
             <w>३</w>
-            <w>शुभम्‌</w>
+            <w>शुभम्&#x200c;</w>
             <geogName>
               <w>गडुव<orig>़</orig></w>
               <w>षोलाको</w>
