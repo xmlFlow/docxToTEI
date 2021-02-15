@@ -354,10 +354,11 @@ class XMLUtils {
         return preg_replace("/^((?:(?:.*?$search){" . --$occurrence . "}.*?))$search/", "$1$replace", $subject);
     }
 
-    public static function removeElementBefore($dom, string $tag, string $remove) {
+    public static function removeElementBefore($dom, string $tag, string $removeNode) {
         $xpath = new DOMXPath($dom);
 
-        foreach ($xpath->evaluate('//' . $tag . '/preceding-sibling::lb') as $node) {
+        $preceedings = $xpath->evaluate('//' . $tag . '/preceding-sibling::'.$removeNode.'[1]');
+        foreach ($preceedings as $node) {
             $node->parentNode->removeChild($node);
         }
     }

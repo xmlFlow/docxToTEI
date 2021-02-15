@@ -274,7 +274,6 @@
             </geogName>
             <w>किनारामा</w>
           </s>
-          <lb n="10"/>
           <table>
             <row>
               <cell> a<lb/> </cell>
@@ -320,7 +319,7 @@
               <w>हो</w>
             </add>
           </s>
-          <lb n="11"/>
+          <lb n="10"/>
           <s>
             <w>मेरो</w>
             <del rend="erasure">
@@ -331,7 +330,7 @@
               <w>हो</w>
             </del>
           </s>
-          <lb n="12"/>
+          <lb n="11"/>
           <s>
             <w>मेरो</w>
             <del rend="crossed_out">
@@ -344,7 +343,7 @@
               <w>हो</w>
             </add>
           </s>
-          <lb n="13"/>
+          <lb n="12"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
@@ -352,14 +351,14 @@
             <w>हो</w>
             <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
           </s>
-          <lb n="14"/>
+          <lb n="13"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
             <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
           </s>
+          <lb n="14"/>
           <lb n="15"/>
-          <lb n="16"/>
         </ab>
         <p/>
       </div>
