@@ -152,6 +152,7 @@
         </ab>
         <p/>
         <ab type="maintext" corresp="#main_text1">
+          <lb n="1"/>
           <s xml:lang="san">
             <w>
               <choice>
@@ -162,6 +163,7 @@
           </s>
           <s xml:lang="san">
             <w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w>
+            <lb break="no" n="2"/>
             <supplied reason="reason">
               <w>ध</w>
             </supplied>
@@ -169,11 +171,13 @@
             <surplus>
               <w>हा</w>
             </surplus>
+            <lb break="no" n="3"/>
             <w>राजाधिराज</w>
             <surplus>
               <w>राज</w>
             </surplus>
             <w>राजेन्द्रविक्रमसाहवाहादूरसम्सेरजङ्गदेवानाम्</w>
+            <lb n="4"/>
             <w>सदा</w>
             <w>समरविजयीनाम्</w>
           </s>
@@ -183,6 +187,7 @@
               <reg>---</reg>
             </choice>
           </w>
+          <lb n="5"/>
           <w>
             <choice>
               <sic>पुण्येक</sic>
@@ -196,6 +201,7 @@
               <corr>राजधानी</corr>
             </choice>
           </w>
+          <lb n="6"/>
           <s>
             <w>आगे</w>
             <orig>•</orig>
@@ -211,6 +217,7 @@
             <persName>
               <w>कर्णेल</w>
               <w>वीर</w>
+              <lb n="7"/>
               <w>विक्रम</w>
               <w>साह</w>
             </persName>
@@ -233,8 +240,7 @@
           </s>
           <s>
             <w>पंजा</w>
-            <w>प</w>
-            <w>ठाइबक्स्याको</w>
+            <w>प<lb break="no" n="8"/>ठाइबक्स्याको</w>
             <w>गडुव<orig>़</orig></w>
             <w>छ</w>
           </s>
@@ -251,6 +257,7 @@
           </s>
           <s>
             <w>इति</w>
+            <lb n="9"/>
             <w>सम्वत्</w>
             <w>१९०३</w>
             <w>साल</w>
@@ -267,6 +274,7 @@
             </geogName>
             <w>किनारामा</w>
           </s>
+          <lb n="10"/>
           <table>
             <row>
               <cell> a<lb/> </cell>
@@ -312,7 +320,7 @@
               <w>हो</w>
             </add>
           </s>
-          <lb n="1"/>
+          <lb n="11"/>
           <s>
             <w>मेरो</w>
             <del rend="erasure">
@@ -323,7 +331,7 @@
               <w>हो</w>
             </del>
           </s>
-          <lb n="2"/>
+          <lb n="12"/>
           <s>
             <w>मेरो</w>
             <del rend="crossed_out">
@@ -336,7 +344,7 @@
               <w>हो</w>
             </add>
           </s>
-          <lb n="3"/>
+          <lb n="13"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
@@ -344,14 +352,14 @@
             <w>हो</w>
             <w>कालचक्र<del rend="crossed_out">तन्त्र</del>राज</w>
           </s>
-          <lb n="4"/>
+          <lb n="14"/>
           <s>
             <w>मेरो</w>
             <w>नाम</w>
             <w>कालचक्र<add place="above_the_line" hand="first">तन्त्र</add>राज</w>
           </s>
-          <lb n="5"/>
-          <lb n="6"/>
+          <lb n="15"/>
+          <lb n="16"/>
         </ab>
         <p/>
       </div>
