@@ -428,6 +428,20 @@ class XMLUtils {
         return $dom;
     }
 
+    public static function addSurroundingNode($dom, $nodeXpath, $parentName) {
+        //return;
+        $xpath = new DOMXPath($dom);
+        foreach ($xpath->query($nodeXpath) as $node) {
+            $parent = $node->parentNode;
+            $newNode = $dom->createElement($parentName);
+            $parent->insertBefore($newNode,$node->nextSibling);
+            $newNode->appendChild($dom->importNode($node,true));
+
+
+        }
+        return $dom;
+    }
+
 
     public static function enumerateLBs($dom) {
         $xpath = new DOMXPath($dom);
@@ -498,7 +512,7 @@ class XMLUtils {
         if (preg_match("/" . $preg . "/u", $s, $matches)) {
             $s = preg_replace('/' . $preg . '/u', '<w>$0</w>', $s);
         }
-         return $s;
+        return $s;
     }
 
 
@@ -509,8 +523,6 @@ class XMLUtils {
             return true;
         }, $errorTypes);
     }
-
-
 
 
     /**

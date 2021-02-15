@@ -62,12 +62,12 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>2021-02-11</date>
+        <date>2021-02-15</date>
       </creation>
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change type="internal" when="2021-02-11" who="#AUTO">Automatically converted from docx to TEI-XML</change>
+        <change type="internal" when="2021-02-15" who="#AUTO">Automatically converted from docx to TEI-XML</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -99,10 +99,12 @@
             </choice>
           </w>
           <w>सदा</w>
-          <choice>
-            <sic>राजधनि</sic>
-            <corr>राजधानी</corr>
-          </choice>
+          <w>
+            <choice>
+              <sic>राजधनि</sic>
+              <corr>राजधानी</corr>
+            </choice>
+          </w>
           <lb n="2"/>
           <w>षेत्&#x200c;वाहेक</w>
           <w>मर्&#8205;यो</w>
@@ -151,10 +153,12 @@
         <p/>
         <ab type="maintext" corresp="#main_text1">
           <s xml:lang="san">
-            <choice>
-              <sic>सस्ति</sic>
-              <corr>स्वस्ति</corr>
-            </choice>
+            <w>
+              <choice>
+                <sic>सस्ति</sic>
+                <corr>स्वस्ति</corr>
+              </choice>
+            </w>
           </s>
           <s xml:lang="san">
             <w>श्रीगिरिराजचक्रचूडामणिनरनारायणेत्त्यादिविवि</w>
@@ -173,10 +177,12 @@
             <w>सदा</w>
             <w>समरविजयीनाम्</w>
           </s>
-          <choice>
-            <orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig>
-            <reg>---</reg>
-          </choice>
+          <w>
+            <choice>
+              <orig>¯¯¯¯¯¯¯¯¯¯¯¯ </orig>
+              <reg>---</reg>
+            </choice>
+          </w>
           <w>
             <choice>
               <sic>पुण्येक</sic>
@@ -184,10 +190,12 @@
             </choice>
           </w>
           <w>सदा</w>
-          <choice>
-            <sic>राजधनि</sic>
-            <corr>राजधानी</corr>
-          </choice>
+          <w>
+            <choice>
+              <sic>राजधनि</sic>
+              <corr>राजधानी</corr>
+            </choice>
+          </w>
           <s>
             <w>आगे</w>
             <orig>•</orig>

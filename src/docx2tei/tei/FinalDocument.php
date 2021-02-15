@@ -14,6 +14,7 @@ class FinalDocument extends DOMDocument {
 
         # handle choice elements specially
         XMLUtils::removeElementName($doc, '//choice/*/w');
+        XMLUtils::addSurroundingNode($doc, '//choice','w');
 
         XMLUtils::removeElementName($doc, '//ab/p');
         XMLUtils::removeTitleInBody($doc, "title");
@@ -61,7 +62,7 @@ class FinalDocument extends DOMDocument {
 
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
         //  choice as one word
-        $s = preg_replace('/<choice>\s*<sic>[^\p{Zs}\p{P}]*<\/sic>\s*<corr>[^\p{Zs}\p{P}]*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
+        //$s = preg_replace('/<choice>\s*<sic>[^\p{Zs}\p{P}]*<\/sic>\s*<corr>[^\p{Zs}\p{P}]*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
 
 
         $s = XMLUtils::createDot($s);
