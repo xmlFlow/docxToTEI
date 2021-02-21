@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="K_0242_0030">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">A copy of a stone inscription listing the rent paid by shops at the Ḍabalī of Asana Ṭol [VS 1961</title>
+        <title type="short">A copy of a stone inscription listing the rent paid by shops at the Ḍabalī of Asana Ṭol</title>
+        <title type="sub">K_0242_0030</title>
+        <author role="issuer">unknown</author>
+        <respStmt>
+          <resp>main editor and translator</resp>
+          <name type="main_editor">Simon Cubelic</name>
+        </respStmt>
+        <respStmt>
+          <resp>collaborator</resp>
+          <name type="collaborator">Manik Bajracharya and Rajan Khatiwoda</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law of Pre-modern Nepal</publisher>
+        <pubPlace>Heidelberg, Germany</pubPlace>
+        <date>2021</date>
+        <availability status="restricted">
+          <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative Commons Attribution-ShareAlike 4.0 Unported License</licence>
+          <p>http://abhilekha.adw.uni-heidelberg.de/nepal/index.php/catitems/viewitem/2675/1</p>
+        </availability>
+      </publicationStmt>
+      <notesStmt>
+        <note>Kathmandu</note>
+      </notesStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <settlement>Kathmandu, Bhadrakālī</settlement>
+            <repository>Guṭhī Saṃsthāna</repository>
+            <idno>3; Annapūrṇā Guthi; Po. 62 Gu. Bam.</idno>
+            <altIdentifier type="microfilm">
+              <settlement>Kathmandu, Berlin</settlement>
+              <collection>Nepal German Manuscript Preservation Project</collection>
+              <idno>NGMPP K 242/30</idno>
+            </altIdentifier>
+          </msIdentifier>
+          <msContents>
+            <textLang mainLang="nep" otherLangs="san"/>
+          </msContents>
+          <physDesc>
+            <p>For details see <ref target="http://abhilekha.adw.uni-heidelberg.de/nepal/index.php/catitems/viewitem/2675/1">entry in database </ref></p>
+          </physDesc>
+          <history>
+            <origin>
+              <p>Issued in <origDate>1839 (VS 1896)</origDate> from <origPlace>Kathmandu</origPlace></p>
+            </origin>
+          </history>
+        </msDesc>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic text below contains the following parts: abstract, edition in Devanāgarī, English translation and optionally commentary.</p>
+        <p>The text as it appears in the original document is reproduced as faithfully as possible, including diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or macrons and lines of various shapes, often used as placeholders or structuring elements. The editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg</gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>). Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents. Furthermore, <gi>s</gi> is employed to indicate sentence like text units.</p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date>2021-02-21</date>
+      </creation>
+    </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change type="internal" when="2021-02-21" who="#AUTO">Automatically converted from docx to TEI-XML</change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <facsimile>
+    <surface xml:id="surface1" facs=" K_0242_0199.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="addition1" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="addition2" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="space" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="seal" ulx="0" uly="0" lrx="0" lry="0"/>
+      <zone xml:id="main_text1" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+    <surface xml:id="surface2" facs=" K_0242_0200.png" ulx="0" uly="0" lrx="0" lry="0">
+      <zone xml:id="code_test" ulx="0" uly="0" lrx="0" lry="0"/>
+    </surface>
+  </facsimile>
+  <text>
+    <body>
+      <div xml:id="abs" type="abstract" xml:lang="eng">
+        <p>This is a copy of a stone inscription listing the rent paid to the Annapūrṇā Guṭhī by 43 shops at the market square of Asana Ṭola, together with an accounting of how the rent is spent by the <foreign>guṭhī</foreign>.</p>
+      </div>
+      <div xml:id="ed" type="edition" xml:lang="nep-san">
+        <pb n="1r" facs="#surface1"/>
+        <ab type="addition" corresp="#addition1">
+          <lb n="1"/>
+          <add place="above_the_line" hand="first">
+            <w>२</w>
+          </add>
+        </ab>
+        <p/>
+        <ab type="addition" corresp="#addition2"><lb n="1"/>[description of the seal here]</ab>
+        <p/>
+        <ab type="space" corresp="#space">
+          <lb n="1"/>
+          <add place="above_the_line" hand="second">
+            <w>सिलापत्रको</w>
+            <w>नकल</w>
+          </add>
+          <choice>
+            <orig>¯¯¯¯¯</orig>
+            <reg>- - -</reg>
+          </choice>
+        </ab>
+        <p/>
+        <ab type="seal" corresp="#seal"><lb n="1"/>[seal of the king with the text: <w>श्रीदुर्गा</w><w>भवानी</w>]</ab>
+        <p/>
+        <ab type="maintext" corresp="#main_text1">
+          <lb n="1"/>
+          <s xml:lang="san">
+            <w>आगे</w>
+          </s>
+          <s>
+            <w>असं</w>
+            <w>टोल</w>
+            <supplied reason="omitted">-<w>१</w>-</supplied>
+            <w>को</w>
+            <w>गुठी</w>
+            <w>भीत्रका</w>
+            <w>जगा</w>
+            <w>हीटीमंगल</w>
+            <w>पुर्व</w>
+            <w>पुलुकीसिको</w>
+            <w>सत्तल्&#x200c;देषी</w>
+            <w>दक्षी<lb break="no" n="2"/>गरूधका</w>
+            <w>
+              <choice>
+                <sic>करमा</sic>
+                <corr>घरमा</corr>
+              </choice>
+            </w>
+            <persName>
+              <w>सिंह</w>
+              <w>स्याहुले</w>
+            </persName>
+            <w>कपडा</w>
+            <w>पसल</w>
+            <w>राष्यादेषी</w>
+            <w>पछीं</w>
+            <persName>
+              <w>असोक</w>
+              <w>राजाको</w>
+            </persName>
+            <w>रानीले</w>
+            <w>वनाया<lb break="no" n="3"/>को</w>
+            <w>सतलदेषी</w>
+            <w>
+              <choice>
+                <sic>उत्तरपनी</sic>
+                <corr>उत्तरपट्टी</corr>
+              </choice>
+            </w>
+            <w>चार</w>
+            <w>कील्लाभीत्र</w>
+            <w>गुठ</w>
+            <w>रैकर</w>
+            <w>तपसिलवमोजिंका</w>
+            <w>पसल</w>
+            <w>४३</w>
+            <w>थीती</w>
+            <lb n="4"/>
+            <w>वाधीवक्स्यावमोजिं</w>
+            <w>घट्वढ</w>
+            <w>नगर्नु</w>
+          </s>
+          <s>
+            <w>वाल</w>
+            <w>दीयासम्म</w>
+            <w>न&#x200c;उठाउनु</w>
+          </s>
+          <lb n="5"/>
+          <table>
+            <row>
+              <cell>
+                <w>उतर</w>
+                <w>पटी</w>
+                <w>सतलके</w>
+                <lb/>
+                <w>पसलका</w>
+                <w>तपसिलवमोजिंको</w>
+                <w>वाल</w>
+                <w>ने</w>
+                <lb break="no"/>
+                <w>वार</w>
+                <w>हलुवाइ</w>
+                <w>१</w>
+                <w>के</w>
+                <lb/>
+              </cell>
+              <cell>
+                <w>१५</w>
+                <lb/>
+              </cell>
+              <cell>
+                <w>मनीराम</w>
+                <w>पसल</w>
+                <w>१</w>
+                <w>के</w>
+                <lb/>
+              </cell>
+              <cell>
+                <w>८</w>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <persName>
+                  <w>फवंजार</w>
+                </persName>
+                <w>अयातनकाइ</w>
+                <lb/>
+              </cell>
+              <cell><w>२</w>॥<lb/> </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+              <cell>
+                <lb/>
+              </cell>
+            </row>
+          </table>
+        </ab>
+        <p/>
+        <pb n="1v" facs="#surface2"/>
+        <ab type="code_test" corresp="#code_test">
+          <lb n="1"/>
+          <w>षेत्&#x200c;वाहेक</w>
+          <w>मर्&#8205;यो</w>
+          <lb n="2"/>
+          <s xml:lang="san">
+            <w>राजेन्द्रकस्य</w>
+            <w>पत्रम्</w>
+          </s>
+          <lb n="3"/>
+          <del rend="overstrike">
+            <w>साल</w>
+            <w>मिति</w>
+            <w>वैशाख</w>
+          </del>
+          <lb n="4"/>
+          <w>वै<del rend="crossed_out">सा</del>शाष</w>
+          <lb n="5"/>
+          <w>
+            <del rend="crossed_out">जाँच</del>
+          </w>
+          <lb n="6"/>
+          <add place="above_the_line" hand="second">
+            <w>जाँच</w>
+            <w>अडावाट</w>
+          </add>
+          <lb n="7"/>
+          <add place="above_the_line" hand="first">
+            <w>जाँच</w>
+            <w>अडावाट</w>
+          </add>
+          <lb n="8"/>
+          <space quantity="3" unit="chars"/>
+          <space quantity="4" unit="lines"/>
+          <lb n="9"/>
+          <gap extent="5 characters" agent="breakage" reason="lost"/>
+          <gap extent="5 characters" agent="breakage" reason="illegible"/>
+          <lb n="10"/>
+          <choice>
+            <orig>¯¯¯¯ ¯¯¯¯ ¯¯¯¯</orig>
+            <reg>---</reg>
+          </choice>
+          <lb n="11"/>
+          <w>श्रावण</w>
+          <w>व<orig>़</orig>दि</w>
+          <w>तृतीया</w>
+          <orig>॥</orig>
+          <lb n="12"/>
+          <unclear cert="high">
+            <w>राजनि</w>
+          </unclear>
+          <lb n="13"/>
+          <w>महा<surplus>रा</surplus>राज</w>
+          <surplus>
+            <w>महाराज</w>
+          </surplus>
+          <w>महाराज</w>
+          <lb n="14"/>
+          <w>राज</w>
+          <supplied reason="omitted">
+            <w>धा</w>
+          </supplied>
+          <w>नी</w>
+          <supplied reason="omitted">
+            <w>राजधानी</w>
+          </supplied>
+          <w>काठमाडौं</w>
+          <supplied reason="lost">
+            <w>राजधानी</w>
+          </supplied>
+          <lb n="15"/>
+          <persName>
+            <w>रंजीत</w>
+            <w>गिरीलाई</w>
+          </persName>
+          <lb n="16"/>
+          <w>गुरु</w>
+          <persName>
+            <w>रङ्गनाथ</w>
+            <w>पौडेलले</w>
+          </persName>
+          <lb n="17"/>
+          <placeName>
+            <w>भक्तपुरवाट</w>
+          </placeName>
+          <w>आउन्या</w>
+          <lb n="18"/>
+          <geogName>
+            <w>गडुव़ाषोलाको</w>
+          </geogName>
+          <w>किनारामा</w>
+          <lb n="19"/>
+          <orig>•</orig>
+          <lb n="20"/>
+          <supplied reason="lost">
+            <w>राजधानी</w>
+          </supplied>
+          <lb n="21"/>
+          <w>श्रावण</w>
+          <w>व<orig>़ ़</orig>दि</w>
+          <w>तृतीया</w>
+          <lb n="22"/>
+          <w>वै<del rend="crossed_out">सा</del>शाष</w>
+          <lb n="23"/>
+          <w>भगाइ<add place="inline" hand="first">उन्या</add></w>
+          <lb n="24"/>
+          <lb n="25"/>
+        </ab>
+        <p/>
+      </div>
+      <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+        <pb n="1r"/>
+        <p>A copy of the stone inscription (<foreign>śīlāpatra</foreign>)</p>
+        <p><foreign>Āge</foreign>: No one shall deviate (<foreign>ghaṭbaḍh</foreign>) from the rules laid down according to the guṭharaikara for the 43 shops on land belonging to the <foreign>guṭhī</foreign> of --- (i.e., <geogName>Annapūrṇā</geogName>) at Asana Ṭola, within the following four boundaries: east from Hīṭīmaṅgala, south from the sattala of Pulukīsī1 , west from the abode of Garuḍa where Siṃ Sāhule’s cloth shop is located, and north from the sattala built by King <persName>Aśoka</persName>’s queen. They [the shopkeepers of the 43 shops] shall not be expelled as long as they pay their rent. If they do not pay their rent, they shall be expelled and [their shops] shall be reassigned (<foreign>pajanī</foreign>). You shall carry out the tasks written down in the stone inscription and celebrate His Majesty’s victories. Whoever out of greed (lobhānī pāpānī) does not fulfill the tasks inscribed will be guilty under [the provisions pertaining to] the five grievous sins (<foreign>pañcamahāpātaka</foreign>) . On contrary, whoever carries out the tasks as inscribed on the stone-slab, will obtain the merit of taking a bath in Venerable Gaṅgā. </p>
+        <p>Apart from the vegetable and fruit [shops], you shall five times a year leave the sattala built by King Aśoka’s queen for the feasts. Whoever does not leave [for these occasions] will be guilty under [the provisions pertaining to] the five grievous sins (see <ref>https://google.com</ref>.</p>
+        <p>
+          <ref target="https://web.de">Pandita Raja Ranganatha</ref>
+        </p>
+        <p>
+          <term ref="2402">valī ahada</term>
+        </p>
+        <p><bibl corresp="168">Acharya 1971</bibl>: 16</p>
+        <pb n="1v"/>
+        <table>
+          <row>
+            <cell>
+              <p>Shops</p>
+            </cell>
+            <cell>
+              <p>Fees</p>
+            </cell>
+            <cell>
+              <p>Table header 3</p>
+            </cell>
+            <cell>
+              <p>Table header 3</p>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>Table<sup><note place="end"> Table content with footnote. See Michaels, Axel. 2005. <foreign>Der Hinduismus</foreign>. C. H. Beck: Munich.</note></sup> <foreign>content</foreign></p>
+            </cell>
+            <cell>
+              <p>3</p>
+            </cell>
+            <cell>
+              <p/>
+            </cell>
+            <cell>
+              <p/>
+            </cell>
+          </row>
+          <row>
+            <cell>
+              <p>
+                <persName>Ranganatha</persName>
+              </p>
+            </cell>
+            <cell>
+              <p>67</p>
+            </cell>
+            <cell>
+              <p/>
+            </cell>
+            <cell>
+              <p/>
+            </cell>
+          </row>
+        </table>
+        <p/>
+        <p/>
+      </div>
+      <div xml:id="commentary" type="commentary" xml:lang="eng">
+        <p>In the original, use is made of lines of differing length to fill the space between the particulars of single entries in order to furnish proper columns. This typical format feature has been reproduced here by using a table. Even though the document contains no date, the date when the stone inscription was set up can be determined on the basis of K_0242_0031 − a long report prepared by the <ref target="https://google.com">Mulukī Aḍḍā</ref> for the <persName>Guṭhī Jā̃ca Aḍḍā</persName> on the administration of the Annapūrṇā Guṭhī from VS 1961 − as Thursday, the 11th of the bright fortnight of Āṣāḍha in VS 1896 (1839 CE). Furthermore, in K_0242_0031 it is mentioned that a transcription of the stone inscription had been submitted as evidence along with the report in order to pass judgement on several disputes which had arisen due to a road enlargement at the market square (ḍabalī) of Asana Ṭol. Of the 43 shops recorded on the stone inscription, 31 had been removed. Although the document clearly specifies the number of shops as 43, as do other documents relating to the same guṭhī (cf. e.g. K_0242_0031), the number of shops listed in the appended details of the documents is 45. The documents contain many other cases of scribal error, and this may be just another example. The corrections in the edition of this document are based on K_0242_0031, where the same description of the four boundaries of Asana Ḍabalī is quoted. </p>
+        <p>
+          <term ref="2402">valī ahada</term>
+        </p>
+        <p><bibl corresp="168">Acharya 1971</bibl>: 16 </p>
+      </div>
+    </body>
+  </text>
+</TEI>

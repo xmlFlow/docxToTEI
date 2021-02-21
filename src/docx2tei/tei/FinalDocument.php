@@ -16,6 +16,7 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeElementName($doc, '//choice/*/w');
         XMLUtils::addSurroundingNode($doc, '//choice','w');
 
+
         XMLUtils::removeElementName($doc, '//ab/p');
         XMLUtils::removeTitleInBody($doc, "title");
         XMLUtils::removeElementName($doc, "//bold");

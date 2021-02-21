@@ -357,7 +357,7 @@ class XMLUtils {
     public static function removeElementBefore($dom, string $tag, string $removeNode) {
         $xpath = new DOMXPath($dom);
 
-        $preceedings = $xpath->evaluate('//' . $tag . '/preceding-sibling::'.$removeNode.'[1]');
+        $preceedings = $xpath->evaluate('//' . $tag . '/preceding-sibling::' . $removeNode . '[1]');
         foreach ($preceedings as $node) {
             $node->parentNode->removeChild($node);
         }
@@ -433,12 +433,12 @@ class XMLUtils {
         //return;
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query($nodeXpath) as $node) {
-            $parent = $node->parentNode;
-            $newNode = $dom->createElement($parentName);
-            $parent->insertBefore($newNode,$node->nextSibling);
-            $newNode->appendChild($dom->importNode($node,true));
-
-
+            if(!preg_match('/(¯)*(-\s)*-/', $node->nodeValue)){
+                $parent = $node->parentNode;
+                $newNode = $dom->createElement($parentName);
+                $parent->insertBefore($newNode, $node->nextSibling);
+                $newNode->appendChild($dom->importNode($node, true));
+            }
         }
         return $dom;
     }
