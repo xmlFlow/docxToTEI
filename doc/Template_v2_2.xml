@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xml:id="DOCUMENT_ID_HERE" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main"></title>
+                <title type="short"></title>
+                <title type="sub"></title>
+
+                <author role="issuer"></author>
+
+                <respStmt>
+                    <resp>main editor and translator</resp>
+                    <name type="main_editor"></name>
+                </respStmt>
+
+                <respStmt>
+                    <resp>collaborator</resp>
+                    <name type="collaborator"></name>
+                </respStmt>
+            </titleStmt>
+
+            <publicationStmt>
+                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of
+                    Religion and Law of Pre-modern Nepal
+                </publisher>
+                <pubPlace>Heidelberg, Germany</pubPlace>
+                <date>2020</date>
+                <availability status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a
+                        Creative Commons Attribution-ShareAlike 4.0 Unported License
+                    </licence>
+                    <p>Published by the courtesy of the National Archives, Kathmandu. The copyright of
+                        the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives,
+                        Government of Nepal).
+                    </p>
+                </availability>
+            </publicationStmt>
+
+            <notesStmt>
+                <note>This file is based on the template v2_2</note>
+                <note/>
+            </notesStmt>
+
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Kathmandu</settlement>
+                        <repository>National Archives</repository>
+                        <idno/>
+
+                        <altIdentifier type="microfilm">
+                            <settlement>Kathmandu, Berlin</settlement>
+                            <collection>Nepal German Manuscript Preservation Project</collection>
+                            <idno>NGMPP</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+
+                    <msContents>
+                        <textLang mainLang="nep" otherLangs="san"/>
+                    </msContents>
+
+                    <physDesc>
+                        <p>For details see
+                            <ref target="...">entry in database</ref>
+                        </p>
+                    </physDesc>
+
+                    <history>
+                        <origin>
+                            <p>Issued in <origDate></origDate> from
+                                <origPlace></origPlace>
+                            </p>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+            <editorialDecl>
+                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
+                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
+                    optionally commentary.
+                </p>
+                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
+                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
+                    features, such as the middle dot (•) sporadically employed to mark word separation, or macrons and
+                    lines of various shapes, often used as placeholders or structuring elements. The editorial
+                    techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>reg
+                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
+                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
+                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+
+        <profileDesc>
+            <creation>
+                <date></date>
+            </creation>
+        </profileDesc>
+
+        <revisionDesc>
+            <listChange>
+                <change type="internal" when="1111-11-11" who="#XX"></change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+
+    <facsimile>
+        <!--The coordinates refer to picture(s) with the shorter side having 1600 pixels. -->
+        <surface xml:id="surface1" facs="URL-TO-THE-FACSIMILE-HERE" ulx="0" uly="0" lrx="0" lry="0">
+            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="space" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="seal" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="main_text" ulx="0" uly="0" lrx="0" lry="0"/>
+        </surface>
+    </facsimile>
+
+    <text>
+        <body>
+
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <ab></ab>
+            </div>
+
+            <div xml:id="ed" type="edition" xml:lang="nep-san">
+                <pb n="1r" facs="#surface1"/>
+                <ab type="invocatio" corresp="#invocatio">
+                    <lb n="1"/>
+                </ab>
+                <p/>
+                <ab type="space" corresp="#space">
+                    <lb n="1"/>
+                </ab>
+                <p/>
+                <ab type="seal" corresp="#seal"/>
+                <p/>
+                <ab type="maintext" corresp="#main_text">
+                    <lb n="1"/>
+                    <lb n="2"/>
+                    <lb n="3"/>
+                    <lb n="4"/>
+                    <lb n="5"/>
+                    <lb n="6"/>
+                    <lb n="7"/>
+                    <lb n="8"/>
+                    <lb n="9"/>
+                    <lb n="10"/>
+                    <lb n="11"/>
+                    <lb n="12"/>
+                </ab>
+            </div>
+
+            <div xml:id="et" type="english_translation" corresp="#ed" xml:lang="eng">
+                <pb n="1r"/>
+                <p></p>
+            </div>
+
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p></p>
+            </div>
+
+        </body>
+    </text>
+</TEI>

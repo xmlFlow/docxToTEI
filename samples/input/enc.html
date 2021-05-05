@@ -1,0 +1,1070 @@
+<h1 id="encoding-guide-for-the-preparation-of-editions-in-docx-format-to-be-published-within-documenta-nepalica">Encoding Guide for the Preparation of Editions in DOCX-Format to Be Published within Documenta Nepalica</h1>
+<p><em>Table of Contents</em></p>
+<blockquote>
+<p><a href="#introduction"><span class="underline">1. Introduction</span></a></p>
+<p><a href="#file-structure"><span class="underline">2. File Structure</span></a></p>
+<p><a href="#overview"><span class="underline">2.1 Overview</span></a></p>
+<p><a href="#metadata"><span class="underline">2.2 Metadata</span></a></p>
+<p><a href="#facsimile"><span class="underline">2.3 Facsimile</span></a></p>
+<p><a href="#abstract"><span class="underline">2.4 Abstract</span></a></p>
+<p><a href="#edition"><span class="underline">2.5 Edition</span></a></p>
+<p><a href="#formal-and-textual-annotation"><span class="underline">2.5.1 Formal and textual annotation</span></a></p>
+<p><a href="#editorial-annotations"><span class="underline">2.5.2 Editorial Annotations</span></a></p>
+<p><a href="#content-annotation"><span class="underline">2.5.3 Content Annotation</span></a></p>
+<p><a href="#translation-synopsis-and-commentary"><span class="underline">2.6 Translation, Synopsis and Commentary</span></a></p>
+<p><a href="#referencing"><span class="underline">2.6.1 Referencing</span></a></p>
+<p><a href="#technical-terms"><span class="underline">Technical terms</span></a></p>
+<p><a href="#bibliographical-references"><span class="underline">Bibliographical references</span></a></p>
+<p><a href="#web-sources"><span class="underline">Web sources</span></a></p>
+<p><a href="#translation"><span class="underline">2.6.2 Translation</span></a></p>
+<p><a href="#page-breaks-and-paragraphs"><span class="underline">Page breaks and paragraphs</span></a></p>
+<p><a href="#synopsis"><span class="underline">2.6.3 Synopsis</span></a></p>
+<p><a href="#commentary"><span class="underline">2.6.4 Commentary</span></a></p>
+<p><a href="#appendix"><span class="underline">Appendix</span></a></p>
+<p><a href="#list-of-selected-document-types"><span class="underline">List of selected document types</span></a></p>
+<p><a href="#list-of-selected-inscription-types"><span class="underline">List of selected inscription types</span></a></p>
+<p><a href="#list-of-pseudo-codes"><span class="underline">List of pseudo-codes</span></a></p>
+<p><a href="#formal-and-textual-annotation-only-for-edition"><span class="underline">Formal and textual annotation (only for edition)</span></a></p>
+<p><a href="#editorial-annotations-only-for-edition"><span class="underline">Editorial annotations (only for edition)</span></a></p>
+<p><a href="#content-annotation-for-edition-translation-synopsis-and-commentary"><span class="underline">Content annotation (for edition, translation, synopsis and commentary)</span></a></p>
+<p><a href="#annotations-specific-for-translation-synopsis-and-commentary"><span class="underline">Annotations specific for translation, synopsis and commentary</span></a></p>
+</blockquote>
+<h2 id="introduction">1. Introduction</h2>
+<p>The purpose of the tool is to enable scholars external to the digital infrastructure of the Research Unit “Documents on the History of Religion and Law of Premodern Nepal” to publish editions, translations or short summaries of historical textual source material such as documents, inscriptions or manuscripts from or pertaining to Nepal through the <a href="https://abhilekha.adw.uni-heidelberg.de/nepal/index.php/"><em><span class="underline">Documenta Nepalica</span></em></a> platform. Another area of usage is for staff members who prefer to carry out certain steps of the editorial process in a word processor. The converter tool transforms semantically annotated MS-word documents (DOCX) into structured TEI-XML documents according to the TEI schema customization of the Research Unit.</p>
+<p>Users store all data relating to their source material (metadata, information about digital images/facsimiles, edition, translation/synopsis and commentary) in a single file based on a preformatted DOCX template. Before input, the user has to choose from two publishing formats: 1) Edition and translation, or 2) Edition and synopsis (extensive summary of the source content). For each of the two formats, a separate template exists:</p>
+<ul>
+<li><blockquote>
+<p>template_trans.docx for edition cum translation</p>
+</blockquote></li>
+<li><blockquote>
+<p>template_syn.docx for edition cum synopsis</p>
+</blockquote></li>
+</ul>
+<p>In order to facilitate the transformation from DOCX to TEI-XML, three different encoding methods are applied in the template:</p>
+<ul>
+<li><blockquote>
+<p>Predefined styles such as headings for structuring the document into divisions</p>
+</blockquote></li>
+<li><blockquote>
+<p>Formattings such as spaces, italics, hyphens or hard paragraph returns for identical or similar usage as in word processing software.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Pseudo-codes substituting TEI-XML tags for formal and textual annotations of the edited text, editorial interventions or content annotation (for an overview see List of pseudo-codes in the Appendix).</p>
+</blockquote></li>
+</ul>
+<p>The tool was developed by Dulip Withanage and funded by the project “Die Anthropologie von Inschriften. Erinnerung und Kulturerbe im öffentlichen Raum” at the Heidelberg Centre for Transcultural Studies (HCTS), University of Heidelberg.</p>
+<p>Note: Please be reminded that the conversion tool only supports the “<strong>.docx</strong>” file format. It is strongly recommended to use MS Word Version 2007 and later to prepare the file. Do not use the symbols <strong>#, @, { }, &lt;, &gt;, $</strong> and <strong>=</strong> except for the annotation purposes prescribed in this tutorial.</p>
+<h2 id="file-structure">2. File Structure</h2>
+<h3 id="overview">2.1 Overview</h3>
+<p>The MS-word documents, saved in the DOCX extension, should include these essential parts:</p>
+<ul>
+<li><blockquote>
+<p>Metadata: a set of data that describes the document in question, such as the title, author, origin, date, language, and archival facts</p>
+</blockquote></li>
+<li><blockquote>
+<p>Facsimile: a basic information of the digital image and text surface of the document</p>
+</blockquote></li>
+<li><blockquote>
+<p>Edition: an annotated edition of the document transliterated in unicode devanagari</p>
+</blockquote></li>
+<li><blockquote>
+<p>English Translation or Synopsis</p>
+</blockquote></li>
+<li><blockquote>
+<p>Commentary</p>
+</blockquote></li>
+</ul>
+<h3 id="metadata">2.2 Metadata</h3>
+<p>The set of data describing the document should be filled into designated fields of the second column in the table “Document metadata”. The information in the table forms the “header” part of the resulting XML document.</p>
+<p>Following are the fields in the table required to be filled:</p>
+<ul>
+<li><blockquote>
+<p><strong>Document ID</strong>: Each document should be given an unique identifier containing three basic blocks joined by an underscore (“_”).</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Block 1: the letter(s) of the series or batch</p>
+</blockquote></li>
+<li><blockquote>
+<p>Block 2: series/batch number in 4 digits</p>
+</blockquote></li>
+<li><blockquote>
+<p>Block 3: document serial number in 4 digits</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p>Examples:</p>
+<blockquote>
+<p>DNA_0001_0012</p>
+<p>NHDP_0001_0001</p>
+<p>Note: If the ID cannot be determined, please leave the default value in the template unchanged.</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Main title of document</strong>: The title of the document should contain following elements, if available, and be composed in this scheme:</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>document type (for a list of common document types, see Appendix)</p>
+</blockquote></li>
+<li><blockquote>
+<p>in case of inscriptions: related monument and locality</p>
+</blockquote></li>
+<li><blockquote>
+<p>by or from sender (person/institution)</p>
+</blockquote></li>
+<li><blockquote>
+<p>to addressee</p>
+</blockquote></li>
+<li><blockquote>
+<p>topic (on or re)</p>
+</blockquote></li>
+<li><blockquote>
+<p>year in original era (in bracket)</p>
+</blockquote></li>
+</ul></li>
+</ul>
+<p>Examples:</p>
+<blockquote>
+<p>“A lālamohara from King Rājendra Vikrama Śāha issued to Cautariyā Bhīma Vikrama Śāha asking him to return to Kathmandu (VS 1903)”</p>
+<p>“A stele inscription at the Karuṇāmaya Mandira in Bungamati on the performance of a <em>bhajana</em> programme by Guru Kavi Prasāda for Kṛṣṇa (VS 2008)”</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Short title of document</strong>: An alternative form of main title without mentioning the sender and year.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>A lālamohara issued to Cautariyā Bhīma Vikrama Śāha asking him to return to Kathmandu</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Author/issuer of document</strong>: Full name of the person or institution who issued the document. Fill in “unknown” if the issuer is unknown. If the name of the issuer can be determined, but is not mentioned in the document, insert the name inside square brackets [ ].</p>
+</blockquote></li>
+</ul>
+<p>Examples:</p>
+<p>Rājendra Vikrama Śāha</p>
+<p>[Jaṅga Bahādura (Kũvara) Rāṇā]</p>
+<blockquote>
+<p>Candra Śamśera Jaṅga Bahādura Rāṇā</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Name of editor(s)</strong>: Full name(s) of the main editor(s) of the current file, surname first and then family name. If more than one person functions as main editor use comma and “and” (N.N. and N.N.; N.N., N.N. and N.N.).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>Manik Bajracharya</p>
+<p>Manik Bajracharya and Simon Cubelic</p>
+<p>Manik Bajracharya, Simon Cubelic and Rajan Khatiwoda</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Name of collaborator(s)</strong>: Full name(s) of other contributor(s) of the current file.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Place of deposit / current location of document</strong>: Place/location where the original document (not its reproduction) is stored.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Document holding institution or person</strong>: Name of institution, organization or person who holds the original document. If it is a person, provide his/her full name. In case the holding institution is not known, e. g. in the case of inscriptions, leave the field blank.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Inventory ID assigned by holding institution</strong>: Provide here the identifier given by the original holder/owner to the document. If no ID is available, leave the field blank.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Type of alternative manifestation</strong>: Mention the alternative medium in which the original document has been replicated.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>microfilm</p>
+<p>digital image</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Location of alternative manifestation</strong>: Place/location where the alternative medium of the document is stored.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>Kathmandu, Berlin (in case of NGMPP microfilms)</p>
+<p>Heidelberg, Patan (in case of NHDP images)</p>
+<p>privat (in case of privately held documents)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Institution holding alternative manifestation</strong>: Name of institution or organization who holds the alternative medium. If it is a person, provide his/her full name.</p>
+</blockquote></li>
+</ul>
+<p>Examples:</p>
+<blockquote>
+<p>Nepal German Manuscript Preservation Project (in case of NGMPP microfilms)</p>
+<p>Nepal Heritage Documentation Project (in case of NHDP inscriptions)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>ID of alternative manifestation</strong>: The identifier given for the alternative medium by the holding person/organization.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>NGMPP DNA 1/21</p>
+<p>NHDP BUN0001_I_001</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Main language of document</strong>: Provide here the <a href="https://de.wikipedia.org/wiki/Listen_der_ISO-639-3-Codes"><span class="underline">ISO 639-3</span></a> code for the main language in which the original text is composed.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>nep</p>
+<p>new</p>
+<p>san</p>
+<p>hin</p>
+<p>eng</p>
+<p>tib</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Other languages</strong>: Mention ISO 639-3 codes for any other language(s) used in the document. In case of multiple additional languages, separate each with a comma.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Link to catalogue entry</strong>: Paste here the full URL of the catalogue entry for this document from the Documenta Nepalica catalogue database (Catalogue database URL is &lt;<a href="https://nepalica.hadw-bw.de/nepal/catitems/"><span class="underline">https://nepalica.hadw-bw.de/nepal/catitems/</span></a>&gt;). Leave open if it does not yet exist.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Date of origin of document</strong>: Give the year when the document was created converted to CE with the original year and era in round brackets. If the date is known, enter “n.d”.</p>
+</blockquote></li>
+</ul>
+<p>Example:</p>
+<blockquote>
+<p>1821 (VS 1878)</p>
+<p>n.d.</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Place of origin of document</strong>: Give place or location where the document was created, but only if explicitly stated in the text itself.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Examples:</p>
+<p>Kathmandu</p>
+<p>Patna</p>
+<p>Kolkata</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Copyright statement</strong>: Status of the utilization and usage rights for the facsimile.</p>
+</blockquote></li>
+</ul>
+<p>Examples:</p>
+<p>(In case of NGMPP documents)</p>
+<blockquote>
+<p>Published by the courtesy of the National Archives, Kathmandu. The copyright of the facsimile remains with the Nepal Rashtriya Abhilekhalaya (National Archives, Government of Nepal)</p>
+</blockquote>
+<p>(In case of NHDP material)</p>
+<blockquote>
+<p>The image(s) on which this edition is based on is/are published under Creative Commons Attribution 4.0 License (CC BY-SA 4.0) and the copyright lies with NHDP.</p>
+<p>(In case of private documents, adapt the phrases to each case, e.g.)</p>
+<p>Published with the support of/by courtesy of N.N. The copyright of the facsimile remains with N.N. All use of the digital facsimiles requires prior written permission by the copyright holder.</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Notes</strong>: Use this field for any additional remarks or to leave notes for the collaborators on the file. This especially pertains to any question or remark concerning the proper annotation of the edited text.</p>
+</blockquote></li>
+</ul>
+<h3 id="facsimile">2.3 Facsimile</h3>
+<p>Give here the file information on the digital images of the document according to the following syntax:</p>
+<p>surface nr.: image-file-name.png: page-number</p>
+<p>The first image is by default surface1 and defined as 1r (1 recto). The backside of a document is surface 2 and defined as 1v (1 verso).</p>
+<p>Examples:</p>
+<p>surface1: DNA_0016_0619.png:1r</p>
+<p>surface2: DNA_0016_0620.png:1v</p>
+<p>surface3: DNA_0016_0621.png:2r</p>
+<p>In case there are several images for one page, the images are further differentiated by part number. Stick to the format: page number-part number</p>
+<p>Examples:</p>
+<p>surface1: NHDP_0001_0001.png:1r-part1</p>
+<p>surface2: NHDP_0001_0002.png:1r-part2</p>
+<p>Note: Each facsimile annotation should be in a <strong>separate line</strong> in the “<strong>Heading 2</strong>” format.</p>
+<h3 id="abstract">2.4 Abstract</h3>
+<p>Brief summary of the text content oriented on the following questions: Who did what, how, where, when, and why? Keep observations which are derived from sources external to the text or inference based on circumstantial evidence out here. Such information falls under Commentary.</p>
+<h3 id="edition">2.5 Edition</h3>
+<p>This section is for the input of the text of the document. Except when the original document is in Roman script, the text should be transcribed using unicode Devanagari.</p>
+<p>If you prefer to type your text in transliteration, please follow the IAST-standard and use an online convertor-tool such as <a href="https://aksharamukha.appspot.com/converter"><span class="underline">Aksharamukha</span></a> to transform your transcription into Devanagari and transfer it into the template.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>In case you would like to use any other script except Roman or Devanagari, please contact the Documenta Nepalica team beforehand. The transcription should adhere to the following basic principles:</p>
+<ul>
+<li><blockquote>
+<p>The text as it appears in the original document should be reproduced as faithfully as possible, including orthography, diacritic marks, format features and graphical features, such as the middle dot (•), or macrons and lines of various shapes.</p>
+</blockquote></li>
+<li><blockquote>
+<p>No interpunctuation such as <em>daṇḍas</em> shall be added.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To ensure that letters which are separated in the original do not form ligatures in the transcription (e. g. to retain <em>virāma</em>), use the Zero width non-joiner (&amp;#x200c;)</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>षेत्&amp;#x200c;वाहेक</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>In order to retain original spellings such as र्‍य (instead of र्य) or ग्‍य (instead of ज्ञ) use the Zero width joiner (&amp;#8205;).</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>मर्&amp;#8205;यो</p>
+</blockquote>
+<p>For the proper transformation into the TEI-XML, the edition has to be annotated in specific ways. These annotations will be described below.</p>
+<p>Note: Please be reminded that <strong>no footnotes</strong> and <strong>no special formatting are allowed</strong> in the Edition section.</p>
+<h4 id="formal-and-textual-annotation">2.5.1 Formal and textual annotation</h4>
+<ul>
+<li><blockquote>
+<p><strong>language(s)</strong> of the text: The language of the original text should be marked inside round brackets next to the heading “Edition”. One should provide the <a href="https://de.wikipedia.org/wiki/Listen_der_ISO-639-3-Codes"><span class="underline">ISO 639-3</span></a> code here just as in the metadata section above. The default language in the template is “nep”. Change if necessary.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>Edition (new)</p>
+<p>If the document consists of multilingual text, provide the ISO codes of the languages separated by a “-”.</p>
+<p>Example:</p>
+<p>Edition (nep-san)</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>page beginning (pb)</strong>: The first element to be annotated in the Edition section is the page beginning (marked by “pb”). The page beginning annotation should be in a <strong>separate line</strong> in the “<strong>Heading 2</strong>” format, and it should be formulated in this way: pb@#facisimile-surface-name@page-number</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>pb@#surface1@1r</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>text blocks (ab)</strong>: A document surface consists of text blocks such as invocatio, marginal notes or the main content. The main part of a text is transcribed under “maintext”. Before each block of text in the document, an annotation specifying the block type in a <strong>separate line</strong> in the “<strong>Heading 2</strong>” format should be provided in this way:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>ab@#correspondence-to-text-block@block-type</p>
+</blockquote>
+<p>Examples:</p>
+<p>ab@#invocatio@invocatio</p>
+<blockquote>
+<p>ab@#seal1@seal</p>
+<p>ab@#marphat1@marphat</p>
+<p>ab@#main_text1@maintext</p>
+<p>The following block-types are permissive:</p>
+<p>invocatio</p>
+<p>seal</p>
+<p>space</p>
+<p>addition</p>
+<p>margin</p>
+<p>signature</p>
+<p>maintext</p>
+<p>In case the block-types mentioned above do not match with the layout of the document you are editing, please contact the Documenta Nepalica team to define a suitable category.</p>
+<p>If the document contains multiple blocks of similar type, attach an incremental number to the correspondence-to-text-block.</p>
+<p>Example:</p>
+<p>ab@#seal1@seal</p>
+<p>ab@#seal2@seal</p>
+</blockquote>
+<p>As a substitute for the reproduction of the seal, a short description and if applicable transcription of the seal text is provided.</p>
+<p>Example:</p>
+<p>[royal seal with the legend: श्रीदुर्गा भवानी]</p>
+<p>The formattings and annotations used for the transcription are:</p>
+<ul>
+<li><blockquote>
+<p><strong>Word separation</strong>: For Nepali and Newari texts, each word should be separated by giving a regular space after it.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>मोकाम­ वाराणसी­ पुरी ­शुभम्‌­</p>
+<p>In Sanskrit texts, compounds are treated as one word.</p>
+<p>Example:</p>
+<p>श्रीमन्महाराजाधिराजकस्य रुक्का</p>
+<p>If a word is split between two lines, give a “-” mark at the end of the first line.</p>
+<p>Example:</p>
+<p>मोकाम­ वारा-</p>
+<p>णसी­ पुरी ­शुभम्‌­</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Spaces within the text</strong>: When the document contains <strong>considerable spaces</strong> between words or lines, they should be marked in this way:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#...#</p>
+<p>each dot (.) in the annotation above represents the space equivalent to one character or one line. If the space unit is line, add @lines in the annotation.</p>
+<p>Example:</p>
+<p>To annotate that there is an empty space equivalent to 4 lines, give:</p>
+<p>#....@lines#</p>
+<p>If no unit is specified, default is “chars” (=characters).</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Line beak:</strong> A line break is marked by <strong>Hard return</strong> (“Enter” key).</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>Middle dot</strong>: use only the mark “•” to transcribe the middle dots.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Example:</p>
+<p>­द्रव्य­विना­ संग्रह­ भै सकिदैन ­• जो ­आज्ञा</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Sentence</strong>: Each sentence should be marked at its beginning and end.</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Mark the beginning of a sentence with “#SB”</p>
+<p>Mark the end of a sentence with “#SE”</p>
+<p>Example:</p>
+<p>#SBमेरो नाम सेते होइन काले हो#SE</p>
+<p>Put a daṇḍa (।) only in the case when it appears in the original and mark it with #orig{।}#. See also <strong>Original interpunctuation / orthographic signs.</strong></p>
+</blockquote>
+<p>Example:</p>
+<blockquote>
+<p>#SBमेरो नाम सेते होइन काले हो #orig{।}##SE</p>
+<p><strong>Language of the sentence</strong>: If the language of the sentence is other than Nepali, the iso code of the language must be included in this forma: #SB@iso-3-code</p>
+<p>Example:</p>
+<p>#SB@sanराजेन्द्रकस्य पत्रम्#SE</p>
+<p>If a sentence is broken across page breaks (pb), give additional annotation @I for the initial part and @F for the final part of the sentence.</p>
+<p>Example:</p>
+<p>#SB@I मेरो नाम सेते होइन#SE</p>
+<p>pb@#surface2@1r-part2</p>
+<p>ab@main_text1@#maintext</p>
+<p>#SB@F तर काले हो#SE</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Original interpunctuation / orthographic signs</strong>: In order to annotate interpunctuations (such as <em>daṇḍas</em> “।”, middle dots, comma-like strokes), use this format:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#orig{string}#</p>
+<p>Example:</p>
+</blockquote>
+<p>#orig{॥}#</p>
+<blockquote>
+<p>For orthographic peculiarities (such as <em>nuktas</em>), the word containing the “orig” annotation should be enclosed within “$” sign:</p>
+<p>$#orig{string}#$</p>
+<p>Example:</p>
+<p>श्रावण $व#orig{़ ़}#दि$ तृतीया</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Scribal deletion</strong>: If one or more words are deleted by a scribe, it should be annotated in this format:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#del@rendition-of-deletion{text-string}#</p>
+<p>Example:</p>
+<p>#del@overstrike{साल मिति वैशाख}#</p>
+<p>If a part of a word is deleted by a scribe, the word containing the “del” annotation should be enclosed with “$” sign. In such case, the annotation format will be:</p>
+<p>$part-of-the-word#del@rendition-of-deletion{deleted-part-of-the-word}#part-of-the-word$</p>
+<p>Example:</p>
+<p>$वै#del@crossed_out{सा}#शाष$</p>
+<p>A list of rendition for deletion:</p>
+<p>adapted</p>
+<p>crossed_out</p>
+<p>erasure</p>
+<p>overdotted</p>
+<p>overstrike</p>
+<p>understrike</p>
+<p>underdotted</p>
+</blockquote>
+<p>Default values are set as rendition-of-deletion=crossed_out.</p>
+<blockquote>
+<p>Example:</p>
+<p>#del@{जाँच}#$ = $#del@crossed_out{जाँच}#</p>
+<p>$वै#del@{सा}#शाष$ = $वै#del@crossed_out{सा}#शाष$</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Scribal addition</strong>: If one or more words are added by the original or a later scribe, it should be annotated in this format:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#&amp;@place@hand{text-string}#</p>
+<p>@place refers to the position of the added text; @hand refers to the scribe (first=original scribe; second=second scribe etc., if unknown, use “uncertain”).</p>
+<p>Example:</p>
+<p>#&amp;@above_the_line@second{जाँच अडावाट}#</p>
+<p>If a part of a word is added by the original or a later scribe, , the word containing the “&amp;” annotation should be enclosed with “$” sign. In such case, the annotation format will be:</p>
+<p>$part-of-the-word#&amp;@place@hand{added-part-of-the-word}#$</p>
+<p>Example:</p>
+<p>$भगाइ#&amp;@inline@first{उन्या}#$</p>
+<p>A list of the position of the scribal addition:</p>
+<p>above_the_line</p>
+<p>below_the_line</p>
+<p>in_the_left_margin</p>
+<p>in_the_right_margin</p>
+<p>in_the_upper_margin</p>
+<p>in_the_lower margin</p>
+<p>inline</p>
+<p>in_the_middle</p>
+<p>Default values are set as place=above_the_line and hand=first.</p>
+<p>Example:</p>
+<p>#&amp;@@{जाँच अडावाट}# = #&amp;@above_the_line@first{जाँच अडावाट}#</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Lacunae or illegible text</strong>: When a document has lost or illegible texts due to damages, it can be annotated in two ways.</p>
+</blockquote></li>
+</ul>
+<ol type="1">
+<li><blockquote>
+<p>If the text is completely lost, it should be annotated as</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>#///@extent@agent#</p>
+<p>Here, each ”/” represents 1 unit of lost text, “extent” is the type of unit (character/word), and “agent” is the cause of the loss (e.g., breakage, folding)</p>
+<p>Example:</p>
+<p>#/////@characters@breakage#</p>
+</blockquote>
+<ol start="2" type="1">
+<li><blockquote>
+<p>If the text is illegible, but not completely lost, it should be annotated as</p>
+</blockquote></li>
+</ol>
+<blockquote>
+<p>#+++@extent@agent#</p>
+<p>Here, each ”+” represents 1 unit of illegible text, “extent” is the type of unit (character/word), and “agent” is the cause of the illegibility (e.g., water, seal)</p>
+<p>Example:</p>
+<p>#+++++@characters@ink#</p>
+<p>A list of the agent of the illegibility:</p>
+<p>water</p>
+<p>seal</p>
+<p>ink</p>
+<p>photo quality</p>
+<p>handwriting</p>
+<p>If no unit (extent) is specified, default is “characters”.</p>
+<p>Example:</p>
+<p>#+++++@@water# = #+++++@characters@water#</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Table</strong>: Tables in the document can be reproduced by inserting basic tables in the MS Word. No special format, such as cell-span, cell-merging, in the table will be properly converted. Hard returns for line breaks are allowed within the table.</p>
+</blockquote></li>
+</ul>
+<h4 id="editorial-annotations">2.5.2 Editorial Annotations</h4>
+<p>Annotations used for editorial interventions are as follows:</p>
+<ul>
+<li><blockquote>
+<p><strong>Regularization</strong>: Editorial standardization of texts and graphical features can be annotated in this format:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#reg{original_string}{standardized_string}#</p>
+<p>Example:</p>
+<p>#reg{¯¯¯¯ ¯¯¯¯ ¯¯¯¯}{---}#</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Editorial corrections</strong>: Use this annotation for editorial interventions such as corrections or emendations:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#cor{original_text}{corrected_text}#</p>
+<p>Example:</p>
+<p>#cor{राजधनि}{राजधानी}#</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Doubtful/unclear reading</strong>: Mark a doubtful reading in this way:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#?certainty_level{original_text}#</p>
+<p>Example:</p>
+<p>#?@low{राजनि}#</p>
+</blockquote>
+<p>Possible values for certainty level are: high / medium / low.</p>
+<p>A default value is set as certainty level=high.</p>
+<p>Example:</p>
+<p>#?@{राजनि}# = #?@high{राजनि}#</p>
+<ul>
+<li><blockquote>
+<p><strong>Superfluous or redundant text</strong>: When the editor considers a word or a part of the original text as superfluous, it can be marked as:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#sur{text}#</p>
+<p>Examples:</p>
+<p>महा#sur{रा}#राज</p>
+</blockquote>
+<p>#sur{महाराज}# महाराज</p>
+<ul>
+<li><blockquote>
+<p><strong>Restored or supplied text</strong>: Editor’s restoration of lost, illegible or omitted text should be annotated as:</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>#sup@reason{supplied_text}#</p>
+<p>Example:</p>
+<p>राज#sup@omitted{धा}#नी</p>
+<p>#sup@omitted{राजधानी}# काठमाडौं</p>
+</blockquote>
+<p>Possible values for reason are: lost / illegible / omitted.</p>
+<p>A default value is set as reason=lost.</p>
+<p>Example:</p>
+<blockquote>
+<p>#sup@{राजधानी}# = #sup@lost{राजधानी}#</p>
+</blockquote>
+<h4 id="content-annotation">2.5.3 Content Annotation</h4>
+<p>Besides formal and linguistic features, also all personal, place and geographical names are annotated in the grammatical form they appear in the text.</p>
+<ul>
+<li><blockquote>
+<p><strong>Personal names</strong>: #pen{person_name}#</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>All personal names of human beings or animals are annotated, but without titles or any other official functions attached to them. Names of deities are not annotated.</p>
+<p>Examples:</p>
+<p>#pen{रंजीत गिरीलाई}#</p>
+<p>गुरु #pen{रङ्गनाथ पौडेलले}#</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Place names</strong>: #pln{place_name}#</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Place names are localities and settlements such as cities, villages, quarters, but also political and administrative entities such as states/countries, provinces or districts.</p>
+<p>Example:</p>
+<p>#pln{भक्तपुरवाट}# आउन्या</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p><strong>Geographical names</strong>: #gen{geographic_name}#</p>
+</blockquote></li>
+</ul>
+<blockquote>
+<p>Names associated with topographical features such as mountains, rivers are annotated.</p>
+</blockquote>
+<p>Example:</p>
+<p>#gen{गडुवाषोलाको}# किनारामा</p>
+<h3 id="translation-synopsis-and-commentary">2.6 Translation, Synopsis and Commentary</h3>
+<p>Text in these sections shall be written in English and typed in roman script. Terms in South Asian languages shall follow established transliteration schemas (e.g. <a href="https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration"><span class="underline">IAST</span></a> for Sanskrit). The original spelling occurring in the document is retained as far as possible. However, in certain cases a standardised or Anglicised spelling is preferred:</p>
+<p>Personal names of well-known historical figures or members of prominent families</p>
+<p>Examples:</p>
+<p>Gīrvāṇayuddha Vikrama Śāha</p>
+<p>Jaṅga Bahādura (Kũvara) Rāṇā</p>
+<p>Candra Śamśera Jaṅga Bahādura Rāṇā</p>
+<p>Titles and office names:</p>
+<p>Examples:</p>
+<p>Captain (for <em>kapatāna</em>)</p>
+<p>Colonel (for <em>karṇela</em>)</p>
+<p>General (for <em>janarala</em>)</p>
+<p>Mulukīkhānā (for <em>mulukīṣānā</em>)</p>
+<p>Place and geographical names: If you can clearly identify a place or topographical entity and a modern Anglicized spelling for it exists, use it. If you cannot identify it, retain the original spelling as in the text.</p>
+<p>Examples:</p>
+<p>Kathmandu (instead of Kāṭhamāḍauṃ)</p>
+<p>Bhaktapur (instead of Bhādagāu)</p>
+<p>Bagmati (instead of Vāgmatī)</p>
+<p>Calcutta (instead of Kalakattā)</p>
+<p>Comments, references and the explanation of non-English language technical terms shall be given in footnotes. The following <strong>formattings</strong> are permissive:</p>
+<ul>
+<li><blockquote>
+<p>Hard paragraph return (“Enter” key) to create a new paragraph</p>
+</blockquote></li>
+<li><blockquote>
+<p>Footnotes for comments, references and the explanation of technical terms.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Italicisation to mark terms from South Asian languages or other non-English technical terms (e.g. <em>guṭhī</em>, <em>saṃkalpa</em>, but also <em>editio princeps</em> or <em>Weltanschauung</em>)</p>
+</blockquote></li>
+</ul>
+<p>All types of content annotation described above under Edition (2.5.3) are mandatory in Translation, Synopsis and Commentary.</p>
+<h4 id="referencing">2.6.1 Referencing</h4>
+<h5 id="technical-terms">Technical terms</h5>
+<p>If a technical term has to be annotated, first check if the term has already been defined in the <a href="https://abhilekha.adw.uni-heidelberg.de/nepal/words/showwords"><span class="underline">Word list</span></a> of the <em>Documenta Nepalica</em> database. If it is available, note down the ID number of the term from the database. Then, annotate the term and provide the ID number in this format:</p>
+<p>#tt@term-id-number{the-term}#</p>
+<p>Example:</p>
+<p>#tt@2402{valī ahada}#</p>
+<p>If no entry is available, define the term in a footnote following this format:</p>
+<p>term: [etymology] var. [variant-spelling]; part of speech. 1) meaning 1. 2) meaning 2.</p>
+<p><strong>term</strong>: The spelling of the terms should be standardised according to widely accepted dictionaries such as in the case of Nepali <em>Nepāli Bṛhat Śabdakośa</em> or for Sanskrit <em>Monier-Williams Sanskrit-English Dictionary</em>.</p>
+<p><strong>[etymology]</strong>: Indicate in square brackets the origin of the word. Use following abbreviations:</p>
+<blockquote>
+<p>[A.] Arabic</p>
+<p>[E.] English</p>
+<p>[H.] Hindi</p>
+<p>[New.] Newari</p>
+<p>[P.] Persian</p>
+<p>[S.] Sanskrit</p>
+</blockquote>
+<p><strong>var.</strong>: If applicable, give here the variant spelling occurring in your document.</p>
+<p><strong>part of speech</strong>: Use the following abbreviations to indicate the word class:</p>
+<blockquote>
+<p>n. (for nouns)</p>
+<p>adj. (for adjectives)</p>
+<p>adv. (for adverbs)</p>
+<p>conj. (for conjunctions)</p>
+<p>ppn. (for postposition)</p>
+<p>v.t. (for transitive verbs)</p>
+<p>v.i. (for intransitive verbs)</p>
+</blockquote>
+<p><strong>meaning</strong>: If a word has more than one meaning use 1) XXX. 2) XXX. etc</p>
+<p>Example:</p>
+<blockquote>
+<p><em>guṭhī</em>: [fr. S. goṣṭhī] var. <em>guṭh</em>, <em>guṭha</em>, <em>guṭhi</em>, <em>guthi</em>; n. 1) a socio-religious organization that manages and finances religious and charitable functions. 2) Endowed lands or other sources of revenue for financing religious and charitable functions.</p>
+</blockquote>
+<h5 id="bibliographical-references">Bibliographical references</h5>
+<p>If a bibliographical reference has to be given, first check if an entry exists in the <a href="https://abhilekha.adw.uni-heidelberg.de/nepal/books"><span class="underline">Bibliography</span></a> of the <em>Documenta Nepalica</em> database. If it is available, note down the ID number of the literature from the database. Then, annotate the bibliographical reference and provide the ID number in this format:</p>
+<p>#bibl@id-number-of-the-reference{Author’s family-name year-of-publication}#: page(s)</p>
+<p>Example:</p>
+<p>#bibl@168{Acharya 1971}#: 16</p>
+<p>If no entry exists, give in a footnote full bibliographical information according to the guidelines of the <a href="https://www.chicagomanualofstyle.org/home.html"><span class="underline">Chicago Manual of Style</span></a>.</p>
+<p>Examples:</p>
+<blockquote>
+<p>Hasrat, Bikrama Jit (ed.). 1970. <em>History of Nepal: As told by its own and contemporary chroniclers</em>. Hoshiarpur: V. V. Research Institute Book Agency.</p>
+<p>Kropf, Marianna. 2003. "In the wake of commercialised entertainment: An</p>
+<p>inquiry into the state of masked dance-dramas in the Kathmandu Valley." <em>Contributions to Nepalese Studies</em> 30 (1): 53-103.</p>
+<p>Lienhard, Siegfried. 1992. "Kṛṣṇaism in Nepal." In: <em>Aspects of Nepalese Tradition</em>, edited by Kölver, Bernhard, 227-234. Stuttgart: Franz Steiner Verlag.</p>
+</blockquote>
+<h5 id="web-sources">Web sources</h5>
+<p>A special case is the referencing of web sources such as URL, DOI for which a pseudo-code is required:</p>
+<ul>
+<li><blockquote>
+<p>For a URI to be completely displayed: #ref{}#</p>
+</blockquote></li>
+</ul>
+<p>Example:</p>
+<p>#ref{https://google.com}# → <a href="https://google.com"><span class="underline">https://google.com</span></a></p>
+<ul>
+<li><blockquote>
+<p>For a URI embedded in a string: #ref@URL{}#</p>
+</blockquote></li>
+</ul>
+<p>Example:</p>
+<p>#ref@https://web.de{Nepal} → <a href="https://web.de"><span class="underline">Nepal</span></a></p>
+<h4 id="translation">2.6.2 Translation</h4>
+<p>The translation should follow the original text as closely as possible, but the translated text should be understandable by itself. Wherever this is not possible, comments or explanations in footnotes are required. In cases where the editor is able to understand the content of the document, but a rendering of all linguistic nuances or details into English proves to be too difficult, a Synopsis can be written instead.</p>
+<h4 id="page-breaks-and-paragraphs">Page breaks and paragraphs</h4>
+<p>It has to be recorded to which page of the original document the translated text refers. This reference has to be identical with the page identifier (such as 1r, 1v) assigned under Facsimile. For that purpose, the following pseudo-code for marking page breaks is used in a in a <strong>separate line</strong> in the “<strong>Heading 2</strong>” format at the beginning of a new page: pb@page-number</p>
+<p>Examples:</p>
+<blockquote>
+<p>pb@1r</p>
+<p>pb@1v</p>
+<p>pb@1r-part1</p>
+</blockquote>
+<p>The translated text can be structured into different paragraphs which should follow the text blocks defined in the Edition. For the sake of readability (e.g. in cases of very long text blocks in the original), subdividing into further paragraphs is permissive.</p>
+<h4 id="synopsis">2.6.3 Synopsis</h4>
+<p>For some cases you may choose to provide a <strong>synopsis instead of a translation</strong>, i.e. an exhaustive summary of the content. Keep in mind following points:</p>
+<ul>
+<li><blockquote>
+<p>try to <strong>cover all what is said</strong> in the document as far as possible, especially names of places, geographical locations and persons and annotate them accordingly.</p>
+</blockquote></li>
+<li><blockquote>
+<p><strong>only cover what is said</strong> in the document, any information you add or say about physical or format features should go to the commentary.</p>
+</blockquote></li>
+</ul>
+<h4 id="commentary">2.6.4 Commentary</h4>
+<p>The commentary is meant to provide further information on the context of the document. You may note down here if the document is part of a series of documents, elucidate its historical background, the monument it is attached to or elaborate on philological or linguistic issues pertaining to the document text. You can also discuss certain aspects of the content of the document or secondary literature where the document is dealt with. Feel free to add here whatever is useful to understand the document.</p>
+<h2 id="appendix">Appendix </h2>
+<h3 id="list-of-selected-document-types">List of selected document types</h3>
+<p><em>ādeśa</em></p>
+<p><em>adhikārapradāna</em></p>
+<p><em>adhikāratyāga</em></p>
+<p><em>adhyādeśa</em></p>
+<p><em>akhtiyāranāmā</em></p>
+<p><em>akhtiyārī</em></p>
+<p><em>bakasa</em></p>
+<p><em>alipatra</em></p>
+<p><em>āmdānī</em></p>
+<p><em>kharca lagata</em></p>
+<p><em>aṃśabaṇḍāpatra</em></p>
+<p><em>amśavibhāga</em></p>
+<p><em>anudeśa</em></p>
+<p><em>anugamanapatra</em></p>
+<p><em>anumatipatra</em></p>
+<p><em>arjī</em></p>
+<p><em>arthavibhājana</em></p>
+<p><em>āyastā</em></p>
+<p><em>lagata</em></p>
+<p><em>āyavivaraṇa</em></p>
+<p><em>āyavyayavivaraṇa</em></p>
+<p><em>bahālīpurjī</em></p>
+<p><em>bakapatra</em></p>
+<p><em>bakasapatra</em></p>
+<p><em>baṇḍāpatra</em></p>
+<p><em>bandhapatra</em></p>
+<p><em>bayāna</em></p>
+<p><em>bhākhāpatra</em></p>
+<p><em>bhanāi</em></p>
+<p><em>bharpāī</em></p>
+<p><em>bhogabandhakapatra</em></p>
+<p><em>bhogabandhakatamasuka</em></p>
+<p><em>bhogabandhakī</em></p>
+<p><em>bhūmānacitra</em></p>
+<p><em>bhūmidānapatra</em></p>
+<p><em>bhūmidartā</em></p>
+<p><em>bhūmivikrayapatra</em></p>
+<p><em>bhūmivivaraṇa</em></p>
+<p><em>bintīpatra</em></p>
+<p><em>bintīpatra</em></p>
+<p><em>birtā bakasa</em></p>
+<p><em>choḍapatra</em></p>
+<p><em>ciṭṭhīpatra</em></p>
+<p><em>prativedana</em></p>
+<p><em>dānapatra</em></p>
+<p><em>darakhāsta</em></p>
+<p><em>darakhāstapatra</em></p>
+<p><em>istihāra</em></p>
+<p><em>kabuliyatanāmā</em></p>
+<p><em>krayapatra</em></p>
+<p><em>lagata</em></p>
+<p><em>lālamohara</em></p>
+<p><em>lālapurjā / jaggādhanī pramāṇapatra</em></p>
+<p>letter</p>
+<p><em>paramabhaṭṭā</em></p>
+<p><em>patra</em></p>
+<p><em>purjī</em></p>
+<p><em>rasida</em></p>
+<p><em>rukkā</em></p>
+<p><em>sanada</em></p>
+<p><em>savāla</em></p>
+<p><em>syāhāmohara</em></p>
+<p><em>tamasuka</em></p>
+<p><em>tirjā/tirjā-purjī</em></p>
+<p><em>vikrayapatra</em></p>
+<h3 id="list-of-selected-inscription-types">List of selected inscription types</h3>
+<p>Beam inscription</p>
+<p>Bell inscription</p>
+<p>Bowl inscription</p>
+<p>Door-jamb inscription</p>
+<p>Pedestal inscription</p>
+<p>Pillar inscription</p>
+<p>Plate inscription</p>
+<p>Portal inscription</p>
+<p>Stele inscription</p>
+<p>Tile inscription</p>
+<p>Wall inscription</p>
+<h3 id="list-of-pseudo-codes">List of pseudo-codes</h3>
+<h4 id="formal-and-textual-annotation-only-for-edition">Formal and textual annotation (only for edition)</h4>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Pseudo-code</strong></th>
+<th><strong>Attribute 1</strong></th>
+<th><strong>Attribute 2</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pb@#facisimile-surface-name@page-number</td>
+<td><p>reference to facsimile</p>
+<p>#surface1</p></td>
+<td><p>page number of document</p>
+<p>1r</p></td>
+<td></td>
+<td>aligning edition with corresponding facsimile</td>
+</tr>
+<tr class="even">
+<td>ab@#correspondence-to-text-block@block-type</td>
+<td><p>correspondent text block</p>
+<p>#invocatio, #seal1</p></td>
+<td><p>type of text block</p>
+<p>invocatio, seal</p></td>
+<td></td>
+<td>representing the structure of a document</td>
+</tr>
+<tr class="odd">
+<td>#SB#SE</td>
+<td><p>language code according to iso-3</p>
+<p>eng, hin, new, san</p></td>
+<td>none</td>
+<td>nep (Nepali)</td>
+<td>marking sentences and recording the language in which they are written</td>
+</tr>
+<tr class="even">
+<td>#del@rendition-of-deletion{text-string}</td>
+<td><p>mode of rendition</p>
+<p>crossed_out</p></td>
+<td></td>
+<td></td>
+<td>marking text deleted by a scribe</td>
+</tr>
+<tr class="odd">
+<td>#&amp;@place@hand{text-string}#</td>
+<td><p>position of the added text</p>
+<p>above_the_line</p></td>
+<td><p>hand</p>
+<p>first, second</p></td>
+<td><p>place=above_the_line</p>
+<p>hand=first</p></td>
+<td>marking text added by a scribe</td>
+</tr>
+<tr class="even">
+<td>#...#@extent</td>
+<td><p>extent unit</p>
+<p>characters, lines</p></td>
+<td></td>
+<td>extent unit=characters</td>
+<td>marking spaces between words or lines</td>
+</tr>
+<tr class="odd">
+<td>#///@extent@agent#</td>
+<td><p>extent unit</p>
+<p>characters, lines</p></td>
+<td><p>reason</p>
+<p>breakage, folding</p></td>
+<td>extent unit=characters</td>
+<td>recording extent and reason of lost text</td>
+</tr>
+<tr class="even">
+<td>#+++@extent@agent#</td>
+<td><p>extent unit</p>
+<p>characters, words</p></td>
+<td><p>reason</p>
+<p>water, seal</p></td>
+<td>extent unit=characters</td>
+<td>recording extent and reason of illegible text</td>
+</tr>
+</tbody>
+</table>
+<h4 id="editorial-annotations-only-for-edition">Editorial annotations (only for edition)</h4>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Pseudo-code</strong></th>
+<th><strong>Attribute 1</strong></th>
+<th><strong>Attribute 2</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#orig{string}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>recording original interpunctuation / orthographic signs</td>
+</tr>
+<tr class="even">
+<td>#reg{original_string}{standardized_string}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>editorial standardization of text and graphical features</td>
+</tr>
+<tr class="odd">
+<td>#cor{original_text}{corrected_text}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>editorial corrections</td>
+</tr>
+<tr class="even">
+<td>#?certainty_level{original_text}#</td>
+<td><p>certainty level</p>
+<p>high, medium, low</p></td>
+<td></td>
+<td>certainty level=high</td>
+<td>marking doubtful reading and recording certainty of reading</td>
+</tr>
+<tr class="odd">
+<td>#sur{text}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>marking superfluous text part</td>
+</tr>
+<tr class="even">
+<td>#sup@reason{supplied_text}#</td>
+<td><p>reason</p>
+<p>lost, illegible, omitted</p></td>
+<td></td>
+<td>reason=lost</td>
+<td>Editorial restoration of lost, illegible or omitted text and recording reason for restoration</td>
+</tr>
+</tbody>
+</table>
+<h4 id="content-annotation-for-edition-translation-synopsis-and-commentary">Content annotation (for edition, translation, synopsis and commentary)</h4>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Pseudo-code</strong></th>
+<th><strong>Attribute 1</strong></th>
+<th><strong>Attribute 2</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#pen{person_name}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>marking personal and proper names</td>
+</tr>
+<tr class="even">
+<td>#pln{place_name}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>marking place names</td>
+</tr>
+<tr class="odd">
+<td>#gen{geographic_name}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>marking geographical names</td>
+</tr>
+</tbody>
+</table>
+<h4 id="annotations-specific-for-translation-synopsis-and-commentary">Annotations specific for translation, synopsis and commentary</h4>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Pseudo-code</strong></th>
+<th><strong>Attribute 1</strong></th>
+<th><strong>Attribute 2</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Purpose</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pb@page-number</td>
+<td><p>page number</p>
+<p>1r, 1v, 1r-part1</p></td>
+<td></td>
+<td></td>
+<td>aligning translation with corresponding page of document</td>
+</tr>
+<tr class="even">
+<td>#ref{}#</td>
+<td></td>
+<td></td>
+<td></td>
+<td>referencing a web source</td>
+</tr>
+<tr class="odd">
+<td>#ref@URL{}#</td>
+<td><p>URL</p>
+<p>https://google.com</p></td>
+<td></td>
+<td></td>
+<td>referencing a web source embedded in string</td>
+</tr>
+</tbody>
+</table>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://aksharamukha.appspot.com/converter"><span class="underline">https://aksharamukha.appspot.com/converter</span></a></p>
+<p>A list of alternative convertors can be found under: <a href="https://www.univie.ac.at/stv-istb/stvwiki/index.php?title=Devanagari_am_Computer"><span class="underline">https://www.univie.ac.at/stv-istb/stvwiki/index.php?title=Devanagari_am_Computer</span></a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
