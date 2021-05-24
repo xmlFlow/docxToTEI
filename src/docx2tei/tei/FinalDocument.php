@@ -4,6 +4,7 @@ namespace docx2tei\tei;
 
 use docx2tei\XMLUtils;
 use DOMDocument;
+use DOMXPath;
 
 class FinalDocument extends DOMDocument {
     var $document;
@@ -28,13 +29,16 @@ class FinalDocument extends DOMDocument {
         XMLUtils::removeLastElementOfParent($doc, 'lb');
         XMLUtils::removeElementBefore($doc, 'table','lb');
 
-        ## Enumerate after cleaning
+
+
+        ## Enumerate  <lb break=""/> after cleaning
         XMLUtils::enumerateLBs($doc);
 
         XMLUtils::removeElementName($doc, "//w/w");
         XMLUtils::removeElementName($doc, "//w/*/w");
         XMLUtils::removeElementName($doc, "//sec");
         XMLUtils::removeElementName($doc, "//orig/orig");
+
 
         // String operations
 

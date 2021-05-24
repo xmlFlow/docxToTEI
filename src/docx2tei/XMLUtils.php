@@ -375,22 +375,24 @@ class XMLUtils {
     }
 
     public static function createLBBreakForMinus(string $s) {
-        $s = preg_replace_callback_array(
-            [
-                '/-\s*(<\/p>|#SE)/U' => function ($match) {
-                    return '<lb break="no"/>' . $match[1];
-                },
-                '/<p>(.*)(?!(-|<lb break=\"no\"\/>))<\/p>/U' => function ($match) {
-                    if (substr_count($match[0], '<lb break="no"/>') > 0) {
-                        return $match[1];
-                    }
-                    return $match[1] . '<lb/>';
+        if (!preg_match('/#pen{.*-<\/p>/', $s)  and !preg_match('/#gen{.*-<\/p>/', $s) and !preg_match('/#pln{.*-<\/p>/', $s)) {
+            $s = preg_replace_callback_array(
+                [
+                    '/-\s*(<\/p>|#SE)/U' => function ($match) {
+                        return '<lb break="no"/>' . $match[1];
+                    },
+                    '/<p>(.*)(?!(-|<lb break=\"no\"\/>))<\/p>/U' => function ($match) {
+                        if (substr_count($match[0], '<lb break="no"/>') > 0) {
+                            return $match[1];
+                        }
+                        return $match[1] . '<lb/>';
 
-                },
+                    },
 
-            ],
-            $s
-        );
+                ],
+                $s
+            );
+        }
         return $s;
     }
 
@@ -433,7 +435,7 @@ class XMLUtils {
         //return;
         $xpath = new DOMXPath($dom);
         foreach ($xpath->query($nodeXpath) as $node) {
-            if(!preg_match('/(¯)*(-\s)*-/', $node->nodeValue)){
+            if (!preg_match('/(¯)*(-\s)*-/', $node->nodeValue)) {
                 $parent = $node->parentNode;
                 $newNode = $dom->createElement($parentName);
                 $parent->insertBefore($newNode, $node->nextSibling);
