@@ -375,7 +375,6 @@ class XMLUtils {
     }
 
     public static function createLBBreakForMinus(string $s) {
-        if (!preg_match('/#pen{.*-<\/p>/', $s)  and !preg_match('/#gen{.*-<\/p>/', $s) and !preg_match('/#pln{.*-<\/p>/', $s)) {
             $s = preg_replace_callback_array(
                 [
                     '/-\s*(<\/p>|#SE)/U' => function ($match) {
@@ -392,7 +391,6 @@ class XMLUtils {
                 ],
                 $s
             );
-        }
         return $s;
     }
 
