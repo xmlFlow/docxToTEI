@@ -49,6 +49,13 @@ class FinalDocument extends DOMDocument {
         //removeTagsWithoutContent
         $s = preg_replace('/<\w+>\s*<\/\w+>/i', ' ', $s);
         $this->isComplexStatementsCorrect($s);
+
+
+        /** handleLineBreakNoWords
+        Eg.  <persName> <w>असोक</w> <lb break="no" n="2"/> <w>राजाको</w> </persName>
+         **/
+
+
         $s = preg_replace_callback_array([
             '/#SB(.|\n)*?#SE/' => function ($matches) {
                 // createComplexSentence <s>
@@ -63,11 +70,16 @@ class FinalDocument extends DOMDocument {
 
 
         ], $s);
-         //handleLineBreakNoWords
-        $s = preg_replace('/<w>(\p{Devanagari}+)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>(\p{Devanagari}+)<\/w>/u', '<w>$1$2$3</w>', $s);
+
 
 
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
+
+        $s = preg_replace_callback_array([
+            '/<w>([^\p{Zs}\p{P}]*)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>([^\p{Zs}\p{P}]*)<\/w>/u' => function ($m) {
+                return  "<w>".$m[1].$m[2].$m[3]."</w>";
+            }
+        ],$s);
         //  choice as one word
         //$s = preg_replace('/<choice>\s*<sic>[^\p{Zs}\p{P}]*<\/sic>\s*<corr>[^\p{Zs}\p{P}]*<\/corr>\s*<\/choice>/', '<w>$0</w>', $s);
 
