@@ -226,7 +226,7 @@ Header implementations are done.
  ### Discussion
  
 
-> `<add>` I propose place="above the line" hand="first" as default. @Dulip: Can we do "@@second" to get place="above the line" hand="second" or would this result in place="" hand="second"? (below in the list the entry "#&&@place:place content#" .... can be deleted)
+> `<add>` I propose place="above the line" hand="first" as default. : Can we do "@@second" to get place="above the line" hand="second" or would this result in place="" hand="second"? (below in the list the entry "#&&@place:place content#" .... can be deleted)
 
  :heavy_check_mark: 
 
@@ -239,14 +239,14 @@ Header implementations are done.
 
 :heavy_check_mark: Changing the default place of # the style will be a little tricky and can be error phone. What about that we support both #SB my sentence SE#. We can #SB{} for special cases.
 
-> --for "edition": <div xml:id="ed" type="edition" xml:lang="nep-san">; @Dulip: since the language can be different here (e.g. new-san) could be have a field for "language" beside "edition" in the template whose content would overwrite the default value in xml:lang?
+> --for "edition": <div xml:id="ed" type="edition" xml:lang="nep-san">; : since the language can be different here (e.g. new-san) could be have a field for "language" beside "edition" in the template whose content would overwrite the default value in xml:lang?
 
 :heavy_check_mark: What about we write the Langauge in brackets for non-default ones ? Edition (isocode of other-language) ?
 
 > What are the special characteristics of tables
 
 
-> `<orig>/<reg>` in `<choice>`, maybe better #reg instead of #orig? @Dulip please change in "Tei example" "corr" to "reg". For for <orig> alone: #orig{}? @Dulip, we mark e.g. the nukta sign ( ़) used inside words as <orig>. If this is done by the editors in the word edition its nasty. Could your tool automatically replace all " ़" in the edition by "<orig> ़</orig>"? That would be a great help!
+> `<orig>/<reg>` in `<choice>`, maybe better #reg instead of #orig?  please change in "Tei example" "corr" to "reg". For for <orig> alone: #orig{}? , we mark e.g. the nukta sign ( ़) used inside words as <orig>. If this is done by the editors in the word edition its nasty. Could your tool automatically replace all " ़" in the edition by "<orig> ़</orig>"? That would be a great help!
 
 :heavy_check_mark: I have changed `orig` to `reg`.  I added a new line to replace `.` with a `<orig>.</orig>` 
 
@@ -284,7 +284,7 @@ Header implementations are done.
 
 :heavy_check_mark:
 
-> @Dulip: the file will have either a translation or a synopsis and depending on what occurs the TEI header needs to be modified (see Simon's list). In DN we simply use two different xml templates, one for edions with translation and another for editions with synopsis. Should we do the same for the word template(s)? Or can you programm that the header is automatically modified according to what div is used?]]
+> : the file will have either a translation or a synopsis and depending on what occurs the TEI header needs to be modified (see Simon's list). In DN we simply use two different xml templates, one for edions with translation and another for editions with synopsis. Should we do the same for the word template(s)? Or can you programm that the header is automatically modified according to what div is used?]]
 --for "commentary": `<div xml:id="commentary" type="commentary" xml:lang="eng">`
 
 :heavy_check_mark: We can work with one template, I can modify the header values, depending on whether translation or synopsis available.
@@ -298,7 +298,7 @@ Header implementations are done.
 
 :heavy_check_mark:
 
-> `<w>` @MANIK: If you have not done so yet, please send Dulip your regex
+> `<w>` @MANIK: If you have not done so yet, please send  your regex
  
 :heavy_check_mark:
  # install
