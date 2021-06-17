@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="NHDP_0001_0137">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">A tablet inscription at the Kvayanā Sataḥ in Chobhar re the renovation of the Sataḥ
+                    by Nārāṃ Govindadāsa (VS 1996)
+                </title>
+                <title type="short">A tablet inscription at the Kvayanā Sataḥ in Chobhar re the renovation of the
+                    Sataḥ
+                </title>
+                <title type="sub">NHDP_0001_0137</title>
+                <author role="issuer">Nārāṃ Govindadāsa</author>
+                <respStmt>
+                    <resp>main editor and translator</resp>
+                    <name type="main_editor">Simon Cubelic and Rajan Khatiwoda</name>
+                </respStmt>
+                <respStmt>
+                    <resp>collaborator</resp>
+                    <name type="collaborator"/>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Heidelberg Academy of Sciences and Humanities: Documents on the History of Religion and Law
+                    of Pre-modern Nepal
+                </publisher>
+                <pubPlace>Heidelberg, Germany</pubPlace>
+                <date>2021</date>
+                <availability status="restricted">
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/">Distributed under a Creative
+                        Commons Attribution-ShareAlike 4.0 Unported License
+                    </licence>
+                    <p>The image(s) on which this edition is based on is/are published under Creative Commons
+                        Attribution 4.0 License (CC BY-SA 4.0) and the copyright lies with NHDP.
+                    </p>
+                </availability>
+            </publicationStmt>
+            <notesStmt>
+                <note/>
+            </notesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement>Kvayanā Sataḥ, Chobhar</settlement>
+                        <repository/>
+                        <idno/>
+                        <altIdentifier type="digital image">
+                            <settlement>Heidelberg, Patan</settlement>
+                            <collection>Nepal Heritage Documentation Project</collection>
+                            <idno>NHDP CHO4030_I_002</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <textLang mainLang="nep" otherLangs=""/>
+                    </msContents>
+                    <physDesc>
+                        <p>For details see
+                            <ref target="https://abhilekha.adw.uni-heidelberg.de/nepal/catitems/viewitem/62155/7">entry
+                                in database
+                            </ref>
+                        </p>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <p>Issued in <origDate>1939 (VS 1996)</origDate> from
+                                <origPlace/>
+                            </p>
+                        </origin>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>The original document from which this e-text was formed is in the Devanāgarī script. The electronic
+                    text below contains the following parts: abstract, edition in Devanāgarī, English translation and
+                    optionally commentary.
+                </p>
+                <p>The text as it appears in the original document is reproduced as faithfully as possible, including
+                    diacritic marks, such as the nukta (़); format features, such as line breaks; and graphical
+                    features, such as the middle dot (<orig>•</orig>) sporadically employed to mark word separation, or
+                    macrons and lines of various shapes, often used as placeholders or structuring elements. The
+                    editorial techniques applied introduce minimally invasive normalizations (by using <gi>orig</gi> and <gi>
+                        reg
+                    </gi> in<gi>choice</gi>) and corrections (by using <gi>sic</gi> and <gi>corr</gi> in<gi>choice</gi>).
+                    Words are separated by <gi>w</gi>, even if scriptura continua is used in the original documents.
+                    Furthermore, <gi>s</gi> is employed to indicate sentence like text units.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <creation>
+                <date>2021-06-17</date>
+            </creation>
+        </profileDesc>
+        <revisionDesc>
+            <listChange>
+                <change type="internal" when="2021-06-17" who="#AUTO">Automatically converted from docx to TEI-XML
+                </change>
+            </listChange>
+        </revisionDesc>
+    </teiHeader>
+    <facsimile>
+        <surface xml:id="surface1" facs=" NHDP_0001_0137.png" ulx="0" uly="0" lrx="0" lry="0">
+            <zone xml:id="figure1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="figure2" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="figure3" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="invocatio" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="space1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="space2" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="main_text1" ulx="0" uly="0" lrx="0" lry="0"/>
+            <zone xml:id="figure4" ulx="0" uly="0" lrx="0" lry="0"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body>
+            <div xml:id="abs" type="abstract" xml:lang="eng">
+                <p>The inscription reports that the Kvayanā Sataḥ suffered damages during the 1934 CE earthquakes, and
+                    the members of the responsible <foreign>guṭhī</foreign> did not want to renovate it except for Nārāṃ
+                    Govindadāsa Bābu Rājavaṃsi, the grandson of the founder of the Sataḥ, Viṣṇudāsa. Therefore, he
+                    lodged a complaint with the government against his fellow <foreign>guṭhī</foreign> members. In
+                    response to this complaint, on the 4th solar day of Kārtika in 1938 CE, the government ordered the
+                    Chebhaḍela office of Lalitpur to have the <foreign>guṭhī</foreign> members to renovate the Sataḥ. To
+                    avoid the obligation imposed by the Chebhaḍela, they left the <foreign>guṭhī</foreign> . Thus, the
+                    complainant, Nārāṃ Govindadāsa Bābu Rājavaṃsi alone took care of the renovation of the Sataḥ funded
+                    from him own wealth. The renovation was completed in 1939 CE.
+                </p>
+            </div>
+            <div xml:id="ed" type="edition" xml:lang="nep">
+                <pb n="1r" facs="#surface1"/>
+                <ab type="figure" corresp="#figure1"><lb n="1"/>[Carving of moon]
+                </ab>
+                <p/>
+                <ab type="figure" corresp="#figure2"><lb n="1"/>[Carving of Gaṇeśa]
+                </ab>
+                <p/>
+                <ab type="figure" corresp="#figure3"><lb n="1"/>[Carving of sun]
+                </ab>
+                <p/>
+                <ab type="invocatio" corresp="#invocatio">
+                    <lb n="1"/>
+                    <s xml:lang="san">
+                        <w>श्रीजलवीनायकगणेशाय</w>
+                        <w>नमो</w>
+                    </s>
+                </ab>
+                <p/>
+                <ab type="space" corresp="#space1">
+                    <lb n="1"/>
+                    <w>श्री</w>
+                    <w>५</w>
+                    <w>सर्कारकी</w>
+                    <w>जये</w>
+                </ab>
+                <p/>
+                <ab type="space" corresp="#space2">
+                    <lb n="1"/>
+                    <w>श्री</w>
+                    <w>३</w>
+                    <w>सरकी</w>
+                    <w>जये</w>
+                </ab>
+                <p/>
+                <ab type="maintext" corresp="#main_text1">
+                    <lb n="1"/>
+                    <s>
+                        <w>उप्रान्त</w>
+                    </s>
+                    <s>
+                        <w>९०</w>
+                        <w>साल</w>
+                        <w>माघ</w>
+                        <w>२</w>
+                        <w>गतेका</w>
+                        <w>भुकंपले</w>
+                        <w>भट्की</w>
+                        <w>वि<lb break="no" n="2"/>ग्रीयो
+                        </w>
+                    </s>
+                    <s>
+                        <w>सतल</w>
+                        <w>वनाऊनेमा</w>
+                        <w>सवै</w>
+                        <w>गुठीयार</w>
+                        <w>मीली</w>
+                        <w>नवनाई</w>
+                        <w>आये<lb break="no" n="3"/>स्तामात्र
+                        </w>
+                        <w>खाने</w>
+                        <w>गरेकाले</w>
+                        <w>मु</w>.
+                        <persName>
+                            <w>विष्णुदासको</w>
+                        </persName>
+                        <w>नाती</w>
+                        <persName>
+                            <w>दे<lb break="no" n="4"/>वीदासको
+                            </w>
+                        </persName>
+                        <w>छोरा</w>
+                        <placeName>
+                            <w>कांतीपुर</w>
+                        </placeName>
+                        <placeName>
+                            <w>लगन</w>
+                            <w>टोल</w>
+                        </placeName>
+                        <w>वस्ने</w>
+                        <persName>
+                            <w>नारां</w>
+                            <w>गोविन्ददासले</w>
+                        </persName>
+                        <lb n="5"/>
+                        <w>ठाडो</w>
+                        <w>विन्ती</w>
+                        <w>चढाऊदा</w>
+                        <w>९५</w>
+                        <w>साल</w>
+                        <w>कार्तीक</w>
+                        <w>४</w>
+                        <w>गते</w>
+                        <w>ल</w>. <w>पु</w>.
+                        <w>छेभडे</w>
+                        <lb break="no" n="6"/>
+                        <add place="above_the_line" hand="first">
+                            <w>लका</w>
+                        </add>
+                        <w>नाऊमा</w>
+                        <w>भयाका</w>
+                        <w>हुकुम्</w>
+                        <w>प्रमाङ्गीवमोजीं</w>
+                        <add place="above_the_line" hand="first">
+                            <w>जाँच</w>
+                            <w>अडावाट</w>
+                        </add>
+                        <w>कारवाई</w>
+                        <w>भै</w>
+                        <lb n="7"/>
+                        <w>अरू</w>
+                        <w>गुठीयारले</w>
+                        <w>मीली</w>
+                        <w>वनाऊन</w>
+                        <w>मन्जुर</w>
+                        <w>नगरी</w>
+                        <w>गुठी</w>
+                        <w>नै</w>
+                        <w>छोडी</w>
+                        <unclear cert="high">
+                            <w>जा</w>
+                        </unclear>
+                        <lb break="no" n="8"/>
+                        <w>दा</w>
+                        <w>निज</w>
+                        <persName>
+                            <w>
+                                <choice>
+                                    <sic>नारा</sic>
+                                    <corr>नारां</corr>
+                                </choice>
+                            </w>
+                            <w>गोविन्ददास</w>
+                            <w>वावु</w>
+                            <w>राजवंसिले</w>
+                        </persName>
+                        <w>य<unclear cert="high">क</unclear>लौटी
+                        </w>
+                        <w>घैघरा<lb break="no" n="9"/>नावाट
+                        </w>
+                        <w>खर्च</w>
+                        <w>गरी</w>
+                        <w>आफ्नु</w>
+                        <w>पुर्खाको</w>
+                        <w>धर्म</w>
+                        <w>कीर्ती</w>
+                        <w>मरमट</w>
+                        <lb n="10"/>
+                        <w>गरी</w>
+                        <w>वनाई</w>
+                        <w>तयार</w>
+                        <w>गरी</w>
+                        <w>जिर्णो</w>
+                        <w>ऊधार</w>
+                        <w>गरेको</w>
+                    </s>
+                    <s>
+                        <w>इति</w>
+                        <w>सम्व<lb break="no" n="11"/>त्
+                        </w>
+                        <w>१९९६</w>
+                        <w>साल</w>
+                        <w>आषाड</w>
+                        <w>७</w>
+                        <w>गते</w>
+                        <w>रोज</w>
+                        <w>४</w>
+                    </s>
+                    <orig>॥ ॥</orig>
+                </ab>
+                <p/>
+                <ab type="figure" corresp="#figure4"><lb n="1"/>[Carving of a raddish]
+                    <lb n="2"/>
+                </ab>
+                <p/>
+            </div>
+            <div xml:id="et" type="english_translation" corresp="#corresp" xml:lang="eng">
+                <pb n="1r"/>
+                <p>[Carving of moon]</p>
+                <p>[Carving of Gaṇeśa]</p>
+                <p>[Carving of sun]</p>
+                <p>Veneration to the Glorious Jalavināyaka Gaṇeśa</p>
+                <p>May the five times venerable <term ref="1963">Sarkāra</term> be victorious!
+                    <note place="end">The reigning king at that time was <persName>Tribhuvan</persName>.
+                    </note>
+                </p>
+                <p>May the three times venerable Sir be victorious!
+                    <note place="end">This honorific refers to the prime minister which at that time was <persName>
+                        Juddha Śamśera</persName>.
+                    </note>
+                </p>
+                <p><term ref="1997">Uprānta</term>: The [<term ref="2634">Sataḥ</term>] was damaged by the earthquake on
+                    the 2nd solar day of Māgha in the [Vikrama era] year [19]90. Concerning the reconstruction of the
+                    Sataḥ, the <term ref="932">guṭhī</term> members did not come together and renovated it, [but] they
+                    kept on enjoying the [<foreign>guṭhī</foreign>] income. Therefore, <persName>Nārāṃ
+                        Govindadāsa</persName>, grandson of Mu. <persName>Viṣṇudāsa</persName> and son of Mu.
+                    <note place="end">Most probably an abbreviated form for <term ref="2079">mukhiyā</term>.
+                    </note>
+                    <persName>Devīdāsa</persName>, a resident of <placeName>Lagana Ṭola</placeName>, <placeName>
+                        Kāntīpura</placeName>, filed a direct complaint (<foreign>ṭhāḍo</foreign>
+                    <foreign>vintī</foreign>) [against his fellow <foreign>guṭhī</foreign> members] and action was taken
+                    according to the <term ref="2438">hukuma</term> and <term ref="1965">pramāṅgī</term> issued to the <term
+                            ref="139">Chebhaḍela
+                    </term> of Lalitpur on the 4th solar day of Kārtika in the [Vikrama era] year [19]95. The other <foreign>
+                        guṭhī
+                    </foreign> members [except for the petitioner] did not come together and agree to reconstruct [the
+                    Sataḥ], but they left even the <foreign>guṭhī</foreign>. The aforementioned <persName>Nārāṃ
+                        Govindadāsa Bābu Rājavaṃsi
+                    </persName> alone and by spending from his own household [wealth] renovated and made [this Sataḥ]—a
+                    good deed (<foreign>dharma</foreign>) and fame (<foreign>kīrti</foreign>) of his forefathers—ready
+                    for use.
+                </p>
+                <p>Wednesday the 7th solar day of Āṣāḍha in the [Vikrama era] year 1996 [1938 CE].</p>
+                <p>[Carving of a raddish]</p>
+            </div>
+            <div xml:id="commentary" type="commentary" xml:lang="eng">
+                <p>This Sataḥ was founded by Viṣṇudāsa, the grandfather of Nārāṃ Govindadāsa Bābu Rājavaṃsi, his family
+                    members and other residents of the Lagana Ṭola, Kathmandu in 1817 CE (NS 937). The inscription
+                    recording the initial construction of the Sataḥ, the establishment of a <foreign>guṭhī</foreign> for
+                    its maintenance and for the ritual obligations on its anniversary is extant and was observed on
+                    2020-06-09 as leaning against the plinth of the Sataḥ (see <ref
+                            target="https://danam.cats.uni-heidelberg.de/report/8ad6f527-a10b-4452-95dc-9d3ed9f9912d">
+                        CHO4030</ref>). In contrast to other donative inscriptions, the present inscription records also
+                    the preceding dispute among the <foreign>guṭhī</foreign> members regarding the renovation of the
+                    Sataḥ which was damaged during the earthquakes of 1934 CE. This dispute not only required the state
+                    intervention but eventually led to the breakup of the <foreign>guṭhī</foreign>. It seems that
+                    inscription not only serves the purpose of advertising the meritorious act of the donor but also of
+                    defaming irresponsible <foreign>guṭhī</foreign> members who, despite, benefiting from the <foreign>
+                        guṭhī
+                    </foreign> income and being ordered by the Chebhaḍela office did not feel obliged to rebuild the
+                    Sataḥ.
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

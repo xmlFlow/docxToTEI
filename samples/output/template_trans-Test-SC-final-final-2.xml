@@ -62,12 +62,12 @@
     </encodingDesc>
     <profileDesc>
       <creation>
-        <date>2021-02-21</date>
+        <date>2021-05-29</date>
       </creation>
     </profileDesc>
     <revisionDesc>
       <listChange>
-        <change type="internal" when="2021-02-21" who="#AUTO">Automatically converted from docx to TEI-XML</change>
+        <change type="internal" when="2021-05-29" who="#AUTO">Automatically converted from docx to TEI-XML</change>
       </listChange>
     </revisionDesc>
   </teiHeader>
@@ -92,6 +92,12 @@
         <pb n="1r" facs="#surface1"/>
         <ab type="addition" corresp="#addition1">
           <lb n="1"/>
+          <s>
+            <persName>
+              <w>असोक<lb break="no" n="2"/>राजाको</w>
+            </persName>
+          </s>
+          <lb n="3"/>
           <add place="above_the_line" hand="first">
             <w>२</w>
           </add>
@@ -113,140 +119,7 @@
         <p/>
         <ab type="seal" corresp="#seal"><lb n="1"/>[seal of the king with the text: <w>श्रीदुर्गा</w><w>भवानी</w>]</ab>
         <p/>
-        <ab type="maintext" corresp="#main_text1">
-          <lb n="1"/>
-          <s xml:lang="san">
-            <w>आगे</w>
-          </s>
-          <s>
-            <w>असं</w>
-            <w>टोल</w>
-            <supplied reason="omitted">-<w>१</w>-</supplied>
-            <w>को</w>
-            <w>गुठी</w>
-            <w>भीत्रका</w>
-            <w>जगा</w>
-            <w>हीटीमंगल</w>
-            <w>पुर्व</w>
-            <w>पुलुकीसिको</w>
-            <w>सत्तल्&#x200c;देषी</w>
-            <w>दक्षी<lb break="no" n="2"/>गरूधका</w>
-            <w>
-              <choice>
-                <sic>करमा</sic>
-                <corr>घरमा</corr>
-              </choice>
-            </w>
-            <persName>
-              <w>सिंह</w>
-              <w>स्याहुले</w>
-            </persName>
-            <w>कपडा</w>
-            <w>पसल</w>
-            <w>राष्यादेषी</w>
-            <w>पछीं</w>
-            <persName>
-              <w>असोक</w>
-              <w>राजाको</w>
-            </persName>
-            <w>रानीले</w>
-            <w>वनाया<lb break="no" n="3"/>को</w>
-            <w>सतलदेषी</w>
-            <w>
-              <choice>
-                <sic>उत्तरपनी</sic>
-                <corr>उत्तरपट्टी</corr>
-              </choice>
-            </w>
-            <w>चार</w>
-            <w>कील्लाभीत्र</w>
-            <w>गुठ</w>
-            <w>रैकर</w>
-            <w>तपसिलवमोजिंका</w>
-            <w>पसल</w>
-            <w>४३</w>
-            <w>थीती</w>
-            <lb n="4"/>
-            <w>वाधीवक्स्यावमोजिं</w>
-            <w>घट्वढ</w>
-            <w>नगर्नु</w>
-          </s>
-          <s>
-            <w>वाल</w>
-            <w>दीयासम्म</w>
-            <w>न&#x200c;उठाउनु</w>
-          </s>
-          <lb n="5"/>
-          <table>
-            <row>
-              <cell>
-                <w>उतर</w>
-                <w>पटी</w>
-                <w>सतलके</w>
-                <lb/>
-                <w>पसलका</w>
-                <w>तपसिलवमोजिंको</w>
-                <w>वाल</w>
-                <w>ने</w>
-                <lb break="no"/>
-                <w>वार</w>
-                <w>हलुवाइ</w>
-                <w>१</w>
-                <w>के</w>
-                <lb/>
-              </cell>
-              <cell>
-                <w>१५</w>
-                <lb/>
-              </cell>
-              <cell>
-                <w>मनीराम</w>
-                <w>पसल</w>
-                <w>१</w>
-                <w>के</w>
-                <lb/>
-              </cell>
-              <cell>
-                <w>८</w>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-            </row>
-            <row>
-              <cell>
-                <persName>
-                  <w>फवंजार</w>
-                </persName>
-                <w>अयातनकाइ</w>
-                <lb/>
-              </cell>
-              <cell><w>२</w>॥<lb/> </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-              <cell>
-                <lb/>
-              </cell>
-            </row>
-          </table>
-        </ab>
+        <ab type="maintext" corresp="#main_text1"><lb n="1"/>#<lb n="2"/><s xml:lang="san"><w>आगे</w></s><s><w>असं</w><w>टोल</w><supplied reason="omitted">-<w>१</w>-</supplied><w>को</w><w>गुठी</w><w>भीत्रका</w><w>जगा</w><w>हीटीमंगल</w><w>पुर्व</w><w>पुलुकीसिको</w><w>सत्तल्&#x200c;देषी</w><w>दक्षी<lb break="no" n="3"/>गरूधका</w><w><choice><sic>करमा</sic><corr>घरमा</corr></choice></w><persName><w>सिंह</w><w>स्याहुले</w></persName><w>कपडा</w><w>पसल</w><w>राष्यादेषी</w><w>पछीं</w><w><persName><w>असोक<lb break="no" n="4"/> राजाको</w></persName></w><w>रानीले</w><w>वनाया<lb break="no" n="5"/>को</w><w>सतलदेषी</w><w><choice><sic>उत्तरपनी</sic><corr>उत्तरपट्टी</corr></choice></w><w>चार</w><w>कील्लाभीत्र</w><w>गुठ</w><w>रैकर</w><w>तपसिलवमोजिंका</w><w>पसल</w><w>४३</w><w>थीती</w><lb n="6"/><w>वाधीवक्स्यावमोजिं</w><w>घट्वढ</w><w>नगर्नु</w></s><s><w>वाल</w><w>दीयासम्म</w><w>न&#x200c;उठाउनु</w></s><lb n="7"/><table><row><cell><w>उतर</w><w>पटी</w><w>सतलके</w><lb/><w>पसलका</w><w>तपसिलवमोजिंको</w><w>वाल</w><w>ने</w><lb break="no"/><w>वार</w><w>हलुवाइ</w><w>१</w><w>के</w><lb/></cell><cell><w>१५</w><lb/></cell><cell><w>मनीराम</w><w>पसल</w><w>१</w><w>के</w><lb/></cell><cell><w>८</w><lb/></cell><cell><lb/></cell><cell><lb/></cell><cell><lb/></cell></row><row><cell><persName><w>फवंजार</w></persName><w>अयातनकाइ</w><lb/></cell><cell><w>२</w>॥<lb/> </cell><cell><lb/></cell><cell><lb/></cell><cell><lb/></cell><cell><lb/></cell><cell><lb/></cell></row></table></ab>
         <p/>
         <pb n="1v" facs="#surface2"/>
         <ab type="code_test" corresp="#code_test">

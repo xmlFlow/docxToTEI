@@ -76,7 +76,7 @@ class FinalDocument extends DOMDocument {
         $s = XMLUtils::createXMLTagsFromUncompatibleTags($s);
 
         $s = preg_replace_callback_array([
-            '/<w>([^\p{Zs}\p{P}]*)<\/w>(\s*<lb\sbreak="no"\sn="\d"\/>\s*)<w>([^\p{Zs}\p{P}]*)<\/w>/u' => function ($m) {
+            '/<w>([^\p{Zs}\p{P}]*)<\/w>(\s*<lb\sbreak="no"\sn="\d+"\/>\s*)<w>([^\p{Zs}\p{P}]*)<\/w>/u' => function ($m) {
                 return  "<w>".$m[1].$m[2].$m[3]."</w>";
             }
         ],$s);
