@@ -5,8 +5,9 @@
 1. php version 7.3  or 7.4 or above in server
 1. php-zip  `apt-get install php-zip` or  `apt-get install php7.4-zip`
 1. php-xml  `apt-get install php-xml` or  `apt-get install php7.4-xml`
-1. Unzip nhdp.zip into Web-server path. e.g. `unzip nhdp.zip` e.g. `/var/www/html/`
-1. Create Folder uploads  e.g. `/var/www/html/nhdp/uploads` 
+1. Change to web directory e.g.  `cd /var/www/html`
+1. git clone https://github.com/xmlFlow/upload nhdp
+1. git submodule update --init --recursive
 1. Secure the `/var/www/html/nhdp/` folder with `.htaccess` and `.htpasswd`  e.g. `/var/www/html/nhdp/.htaccess`
 
 ```apacheconf
